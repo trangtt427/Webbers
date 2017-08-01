@@ -1,0 +1,985 @@
+/* homepage */
+body {
+    -webkit-font-smoothing: subpixel-antialiased; /* antialiased | subpixel-antialiased | none */
+}
+
+
+#homepage {
+  font-family: 'Muli', sans-serif;
+  font-size: 1em;
+  color: black;
+  line-height: 1.4;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+/*energyMeter*/
+#energyMeter {
+  font-family: 'Muli', sans-serif;
+  font-size: 1em;
+  color: #262424;
+  line-height: 1.4;
+  height: 100%;
+  margin: 0;
+
+
+}
+
+.pagename, .year {
+    margin:auto;
+    text-align:center;
+     font-family: "Source Sans Pro", sans-serif;
+    font-weight:200;
+}
+
+.aboutsection1 {
+         background: linear-gradient(90deg, #1868b2, #33a3a0);
+}
+
+.aboutsection2 {
+    background:#fdfdfe;
+}
+
+a.bottomlinks {
+  margin: 25px 25px 5px 25px;
+  color: #E7E6E6;
+    text-decoration: none;
+}
+
+a.menulinks {
+  margin: 25px 25px 5px 25px;
+  color: #676767;
+}
+
+a.smallportlinks {
+ text-decoration:none;
+    letter-spacing: 3px;
+}
+
+.portlink {
+    margin:0px;
+}
+
+/*homepage*/
+.iconbox {
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+    padding-right:20px;
+    padding-left:20px;
+}
+
+
+/*homepage*/
+.blocktext {
+  font-family: "Muli", sans-serif;
+    font-weight:300;
+    max-width:300px;
+  font-size: 15px;
+  color: #94a9ba;
+  display: inline-block;
+     line-height:150%;
+    padding-bottom:25px;
+}
+
+.blocks {
+  //border-top: $pageTopDecrease solid $hrColor;
+  position: relative;
+  //margin-top: -($pageTopDecrease);
+  height: 123.45%;
+      top:650px;
+    z-index:99;
+    overflow:hidden;
+    
+}
+
+.newblocks {
+  //border-top: $pageTopDecrease solid $hrColor;
+  position: relative;
+  //margin-top: -($pageTopDecrease);
+  height: 123.45%;
+      top:670px;
+    overflow:hidden;
+    z-index:99;
+    }
+
+.hline-bottom {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff; /* whichever color you prefer */
+}
+
+
+
+/*homepage*/
+.bluebg{
+  background: -webkit-linear-gradient(90deg, #a0c5db, #4c749f);
+  background: linear-gradient(90deg, #4abcce, #4c749f);
+  position: relative;
+  width: 100%;
+}
+
+ .whitebg {
+  /*background: -webkit-linear-gradient(120deg, #45beee, #0c60b5);*/
+  /*background: linear-gradient(-200deg, #45beee, #0c60b5);*/
+  background: #fdfdfe;
+  position: relative;
+  width: 100%;     
+}
+
+
+
+
+
+.footersvg {
+    width:40px;
+    margin:0;
+      opacity: 0.5;
+     -webkit-transition: opacity .25s ease-in-out;
+}
+
+.footersvg:hover {
+    opacity:1.0;
+
+}
+
+#footergroup {
+    padding-top:35px;
+    width:300px;
+    margin:auto;
+    padding-bottom:18px;
+    
+}
+
+#copyright {
+    font-family: 'Muli', sans-serif; 
+    font-size:13px;
+    font-weight:400;
+    color:#8d949a;
+    width:360px;
+    margin:auto;
+    
+}
+
+
+
+.pinkcontainer, .graycontainer {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+  display: block;
+    text-align: center;
+}
+
+
+
+.bluecontainer, .biocontainer {
+    width:100%;
+    margin:auto;
+    display:block;
+    max-width:850px;
+}
+
+
+
+.whitecontainer {
+    width:100%;
+    margin:auto;
+    display:block;
+    max-width:1000px;
+}
+
+.image {
+    width:90%;
+    margin:auto;
+    display:block;
+    min-width:270px;
+    max-width:850px;
+    padding-right:20px;
+    padding-left:20px;
+    
+}
+
+.imagewithshadow {
+    width:80%;
+    margin:auto;
+    display:block;
+    min-width:270px;
+    max-width:850px;
+    padding-right:20px;
+    padding-left:20px;
+     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    
+}
+
+.image2 {
+    width:500px;
+    margin:auto;
+    display:block;
+     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    
+}
+
+.image3 {
+    width:300px;
+    margin:auto;
+    display:none;
+     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    
+}
+
+
+
+.port {
+    padding-top:50px;
+    width:95%;
+    display:block;
+    margin:auto;
+    text-align:center;
+    max-width:1000px;
+    
+}
+.screenshot {
+    width:375px;
+    height:300px;
+    margin:12px;
+    display:inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.screenshot > * { display: block; }
+
+
+
+
+.screenshot-caption {
+    text-align:center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(34,201,247,0.75), rgba(25,120,209,1));
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+  
+.screenshot:hover .screenshot-caption {
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.screenshot:hover .screenshot-caption > * {
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+  opacity: 1;
+ 
+}
+
+
+
+.screenshot-caption_top {
+  top: -100%;
+  left: 0;
+}
+
+/*homepage*/
+.specialty {
+    width:100%;
+  margin: auto;
+  display: block;
+  padding-top: 30px;
+  text-align: center;
+    max-width:1310px;
+}
+
+#first-section {
+  background: url("/backgrounds/dotonbori.png") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+    
+}
+
+#first-section.kodaro {
+  background: url("/web/web2/backgrounds/water.png") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+
+#first-section.portfolio {
+  /*background: url("https://static.vecteezy.com/system/resources/previews/000/139/604/non_2x/pen-holder-desk-vector.jpg") no-repeat center top;*/
+  position: fixed;
+  margin: auto;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+
+#first-section.energy {
+  background: url("/web/web2/backgrounds/energy.png") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+
+#first-section.lighting {
+  background: url("/web/web2/backgrounds/lighting.png") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+
+#first-section.infomart {
+  background: url("/web/web2/backgrounds/infomart.png") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+
+#first-section.website {
+  background: url("/web/web2/backgrounds/website.png") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+
+
+#first-section.jlwebsite {
+  background: url("/web/web2/backgrounds/jlwebsite.png") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+
+#first-section.bio {
+ background: linear-gradient(180deg, #b50583, #6F25A7);
+height:100%;
+    padding-top:-130px
+}
+
+
+    
+#first-section.energymeter, #energy-section {
+    background:#000000;
+    
+}
+
+.footer, .energyfooter {
+  font-family: 'Muli', sans-serif;
+  font-weight:200;
+  background: linear-gradient(180deg, #22323f, #111d28);
+  color: #9FABA7;
+  margin: auto;
+  padding-bottom: 20px;
+  display: block;
+  text-align: center;
+    height:100px;
+}
+
+
+
+/*homepage*/
+.whiteh1 {
+  font-family: "Muli", sans-serif;
+  font-size: 50px;
+  font-weight: 200;
+  color: white;
+    padding-top:100px;
+    padding-bottom:40px;
+     padding-right:20px;
+    padding-left:20px;
+  margin: 0;
+}
+
+.whiteh2 {
+  font-family: "Muli", sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  color: white;
+    padding-top:170px;
+    padding-bottom:40px;
+     padding-right:20px;
+    padding-left:20px;
+  margin: 0;
+    max-width:650px;
+}
+
+.whiteh3 {
+  font-family: "Muli", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: white;
+    padding-top:40px;
+    max-width:375px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.blackh2 {
+  font-family: "Muli", sans-serif;
+    text-align:center;
+  font-size: 40px;
+  font-weight: 200;
+  color: #262424;
+    padding-top:100px;
+    padding-bottom:40px;
+     padding-right:20px;
+    padding-left:20px;
+  margin: 0;
+}
+
+
+
+.footerh1 {
+  font-family: "Muli", sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+  color: white;
+    padding-top:50px;
+    padding-bottom:30px;
+  margin: 0;
+}
+
+.whiteh1#specialty {
+    color:#1065a5;
+    font-weight:300;
+}
+
+/*energyMeter*/
+.blackh1 {
+  font-family: "Muli", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  color: #262424;
+    padding-top:100px;
+    padding-bottom:40px;
+     padding-right:20px;
+    padding-left:20px;
+  margin: auto;
+    max-width:750px;
+}
+
+
+
+
+.header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  line-height: 70px;
+  color: #fff;
+  background-color: #000000;
+  -webkit-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+}
+
+.icon {
+  width: 90px;
+  margin: auto;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.menu {
+  font-size: 15px;
+    font-family: 'Muli', sans-serif;
+    height:70px;
+    align-content: center;
+    padding-left:20px;
+    color:#6f7884;
+}
+
+.nav-up {
+  top: -70px;
+}
+
+.whitep {
+  font-family: "Muli", sans-serif;
+  font-size: 17px;
+  font-weight:200;
+  color: white;;
+  padding-top: 30px;
+    padding-right:20px;
+    padding-left:20px;
+    margin:auto;
+    max-width:725px;
+    line-height:180%;
+}
+
+.whitep2 {
+  font-family: "Muli", sans-serif;
+  font-size: 17px;
+  font-weight:400;
+  color: white;
+  padding-top: 15px;
+    max-width:325px;
+    line-height:150%;
+    margin:auto;
+}
+ 
+
+
+.blackp {
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #262424;
+    margin:auto;
+    max-width:725px;
+     line-height:180%;
+     padding-right:20px;
+    padding-left:20px;
+    
+}
+
+.smallporttext {
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #262424;
+    margin:auto;
+    max-width:725px;
+     line-height:180%;
+    padding-top:15px;
+    margin-bottom:50px;
+    
+}
+
+.linebreak {
+    width:75%;
+    min-width:100px;
+    margin:auto;
+    opacity:0.5;
+}
+
+.blackp2 {
+  font-family: "Muli", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #262424;
+    margin:auto;
+    max-width:725px;
+     line-height:180%;
+     padding-right:20px;
+    padding-left:20px;
+    
+}
+
+
+.caption {
+  font-family: "Muli", sans-serif;
+  font-size: 14px;
+  color: #777676;
+    margin:auto;
+    max-width:725px;
+     line-height:180%;
+    padding-top:5px;
+    text-align:center;
+     padding-right:20px;
+    padding-left:20px;
+    
+}
+
+.positiontext {
+    color:#939393;
+    font-family: "Muli";
+    font-size:14px;
+    font-weight:100px;
+     letter-spacing: 6px;
+    line-height:30px;
+    max-width:725px;
+    margin: auto;
+    padding-bottom:15px;
+     padding-right:20px;
+    padding-left:20px;
+    
+    
+}
+
+.smallport {
+    display:none;
+     padding-top:65px;
+    width:304px;
+    margin:auto;
+    text-align:center;
+    
+}
+
+.smallportimage {
+    margin:auto;
+    display:block;
+    width:304px;
+}
+
+#positionblackp {
+     letter-spacing: 5px;
+    line-height:30px;
+       
+}
+
+
+.objectivetext {
+    color:#939393;
+    font-family: "Source Sans Pro";
+    font-size:14px;
+    max-width:725px;
+    margin: auto;
+    
+}
+
+
+
+#page-wrapper {
+  width: auto;
+  overflow: hidden;
+  max-width: auto;
+  padding: 0 0;
+}
+
+
+.year {
+    padding-top:15px;
+}
+.pinkbg {
+  /*background: -webkit-linear-gradient(290deg, #8e2270, #510d3d);
+  background: linear-gradient(-200deg, #8e2270, #510d3d);*/
+    background:white;
+  position: relative;
+  width: 100%;
+}
+
+.site-content {
+  position: absolute;
+  width: 100%;
+}
+
+
+.tlogo {
+    width:42px;
+    margin-bottom:-30px;
+    padding-bottom:8px;
+-webkit-filter: brightness(0.85); filter: brightness(0.85);
+ -webkit-transition: all .2s ease-in-out;
+}
+
+.meh {
+    margin:auto;
+    display:inline-block;
+        margin-right:25px;
+    margin-left:25px;
+}
+
+
+
+
+.tlogo:hover {
+   -webkit-filter: brightness(1.1); filter: brightness(1.1);
+  -webkit-transform: scale(1.1); 
+}
+
+
+.svg1 {
+  margin: auto;
+ width:450px;
+  display: block;
+    border-color:white;
+    font-family:"Source Sans Pro";
+    font-size:35px;
+    color:white;
+     letter-spacing: 10px;
+    font-weight:300;
+    padding:20px;
+    background-image:url("/web/web2/backgrounds/overlay.png")
+    /*  text-shadow: 2px 2px 12px black;*/
+}
+
+.svg2 {
+    width:70%;
+    margin:auto;
+    max-width:450px;
+    min-width:270px;
+    display:block;
+}
+
+.svg3 {
+    width:70%;
+    margin:auto;
+    min-width:522px;
+    display:block;
+}
+
+.svg4 {
+    width:175px;
+    margin:auto;
+    display:none;
+}
+
+
+
+
+@media only screen and (max-width: 640px) {
+  .menu {
+    text-align: center;
+    width: 100%;
+        padding-left:0px;
+  }
+    
+        .blackp#positionblackp {
+        width:293px;
+        margin-left:0;
+        
+    }
+    
+     .svg1 {
+    width:250px;
+      font-size:20px;
+        
+    }
+    
+      .svg3 {
+    display:none;
+  }
+    
+    .svg4 {
+        display:block;
+        
+    }
+    
+    
+    
+   
+
+}
+
+@media only screen and (max-width: 450px) {
+ 
+    .port {
+        display:none;
+    }
+    
+    .smallport {
+    display:block;
+}
+    
+    .tlogo {
+    width:30px;
+    left:-5px;
+    margin-bottom:-21px;
+    padding-bottom:8px;
+
+}
+}
+
+@media only screen and (max-width: 719px) {
+     
+    
+    .iconbox {
+        width:100%;
+            padding-bottom:50px;
+    }
+    
+    .blocktext {
+  width:90%;
+        max-width:500px;
+}
+    
+    .icon {
+        width:120px;
+    }
+}
+
+
+    
+
+
+@media only screen and (max-width: 570px) {
+
+    
+     .pagename, .year {
+    margin:auto;
+    text-align:center;
+     font-family: "Source Sans Pro", sans-serif;
+    font-weight:300;
+}
+  
+    
+    .image2 {
+        display:none;
+    }
+    
+    .image3 {
+        display:block;
+        margin:auto;
+        align-content:center;
+    }
+    
+}
+
+
+
+/*for areas of specialty*/
+@media only screen and (max-width: 922px) {
+  .specialty {
+    width: 100%;
+  }
+
+ 
+}
+
+/*SVG FADE*/
+/*.svg1 {
+  margin-top: 25px;
+  text-align: center;
+  -webkit-animation: fadein 1s; */
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Firefox < 16 */
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 
+/* Internet Explorer */
+/* Opera < 12.1 */
+/* HOVER LINK UNDERLINE */
+
+.menulinks {
+  position: relative;
+    letter-spacing:3px;
+    font-weight:400;
+    margin:15px;
+  text-decoration: none;
+    width:81px;
+    height:70px;
+     -webkit-transition: all .2s ease-in-out;
+}
+
+.resumelink {
+    text-decoration: none;
+    font-family: "Muli", sans-serif;
+    font-size: 17px;
+    font-weight:300;
+    color: white;
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 10px 20px 10px 20px;
+     transition: background 0.2s ease-in-out;
+
+    
+}
+
+.resumesection {
+    margin:auto;
+text-align:center;
+    width:200px;
+    height:50px;
+    padding-top:25px;
+}
+
+.resumelink:hover {
+    background-color:#22b9f4;
+    width:200px;
+    color:white;
+    font-weight:300;
+    border: 2px solid #22b9f4;
+}
+
+
+
+
+.shortcutlink {
+    text-decoration: none;
+    font-family: "Muli", sans-serif;
+    font-size: 14px;
+    font-weight:400;
+    width:300px;
+    color: #262424;
+    border-radius: 50px;
+    border: 2px solid #262424;
+    padding: 10px 15px 10px 15px;
+     transition: background 0.2s ease-in-out;
+
+    
+}
+
+.shortcut {
+    margin:auto;
+text-align:center;
+    width:320px;
+    height:50px;
+    padding-top:125px;
+    padding-bottom:100px;
+}
+
+.shortcutlink:hover {
+    background-color:#262424;
+    width:320px;
+    color:white;
+    font-weight:400;
+    border: 2px solid #262424;
+}
+
+
+
+
+
+.menulinks:hover {
+    color:white;
+}

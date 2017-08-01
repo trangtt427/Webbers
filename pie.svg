@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="455px" height="379px" viewBox="0 0 455 379" enable-background="new 0 0 455 379" xml:space="preserve">
+<filter  x="-2.6%" y="-1.8%" width="105.5%" height="105.2%" filterUnits="objectBoundingBox" id="filter-1">
+	<feOffset  dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"></feGaussianBlur>
+	
+		<feColorMatrix  type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0">
+		</feColorMatrix>
+	<feMerge>
+		<feMergeNode  in="shadowMatrixOuter1"></feMergeNode>
+		<feMergeNode  in="SourceGraphic"></feMergeNode>
+	</feMerge>
+</filter>
+<title>pie 2</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="pie">
+		<g id="pie-2017-07-08-07-07-49" transform="translate(92.000000, 59.000000)" filter="url(#filter-1)">
+			<path fill="#91E5B2" d="M136,42V0c14.166,0,28.244,2.229,41.717,6.607l-12.971,39.92C155.693,43.588,146.032,42,136,42z"/>
+			<path fill="#FFEA86" d="M164.746,46.528l12.971-39.92c13.474,4.377,26.174,10.849,37.634,19.175l-24.683,33.973
+				C182.857,54.072,174.129,49.574,164.746,46.528z"/>
+			<path fill="#FFC374" d="M190.668,59.756l24.683-33.973c23.064,16.757,40.232,40.386,49.042,67.5l-39.921,12.971
+				C218.349,87.396,206.364,71.18,190.668,59.756z"/>
+			<g>
+				<path opacity="0.7174" fill="#A4A8FF" d="M224.472,163.746l39.921,12.971c8.81-27.113,8.81-56.32,0-83.434l-39.921,12.971
+					C227.411,115.306,229,124.968,229,135S227.411,154.693,224.472,163.746z"/>
+			</g>
+			<path fill="#24C9F7" d="M81.332,210.244l-24.683,33.973C9.333,209.84-10.466,148.906,7.607,93.283C25.68,37.66,77.515,0,136,0v42
+				c-51.362,0-93,41.638-93,93C43,165.932,58.101,193.336,81.332,210.244z"/>
+			<path fill="#FF6A9E" d="M224.472,163.746l39.921,12.971c-13.354,41.1-45.576,73.322-86.676,86.676
+				c-41.099,13.354-86.107,6.226-121.068-19.176l24.683-33.973C96.677,221.412,115.569,228,136,228
+				C177.33,228,212.363,201.039,224.472,163.746z"/>
+		</g>
+		<text transform="matrix(1 0 0 1 10 166)" font-family="'SourceSansPro-Bold'" font-size="36">40%</text>
+		<text transform="matrix(1 0 0 1 222 45)" font-family="'SourceSansPro-Bold'" font-size="36">5%</text>
+		<text transform="matrix(1 0 0 1 293 59)" font-family="'SourceSansPro-Bold'" font-size="36">5%</text>
+		<text transform="matrix(1 0 0 1 350 110)" font-family="'SourceSansPro-Bold'" font-size="36">10%</text>
+		<text transform="matrix(1 0 0 1 376 211)" font-family="'SourceSansPro-Bold'" font-size="36">10%</text>
+		<text transform="matrix(1 0 0 1 258.5879 369)" font-family="'SourceSansPro-Bold'" font-size="36">30%</text>
+	</g>
+</g>
+</svg>

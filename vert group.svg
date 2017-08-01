@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="197px" height="308px" viewBox="0 0 197 308" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>vert group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="vert-group">
+            <g id="Group-Copy-6">
+                <rect id="Rectangle" fill="#91E5B2" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <text id="Sketching" fill="#000000" font-family="Muli-Regular, Muli" font-size="16" font-weight="normal">
+                    <tspan x="49" y="24">Sketching</tspan>
+                </text>
+            </g>
+            <g id="Group-Copy-9" transform="translate(0.000000, 156.000000)">
+                <rect id="Rectangle" fill="#A4A8FF" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Traveling" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="16">Traveling</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-Copy-7" transform="translate(0.000000, 52.000000)">
+                <rect id="Rectangle" fill="#FFEA86" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Graphic-Design" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <text id="Graphic-design">
+                        <tspan x="0" y="16">Graphic design</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-Copy-10" transform="translate(0.000000, 208.000000)">
+                <rect id="Rectangle" fill="#FF6A9E" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Eating" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="16">Eating</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-Copy-8" transform="translate(0.000000, 104.000000)">
+                <rect id="Rectangle" fill="#FFC374" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Film-&amp;-photography" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <text>
+                        <tspan x="0" y="16">Film &amp; photography</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-Copy-11" transform="translate(0.000000, 260.000000)">
+                <rect id="Rectangle" fill="#24C9F7" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Petting-cats-for-lon" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <text id="Petting-cats-for-long">
+                        <tspan x="0" y="16">Petting cats for long</tspan>
+                    </text>
+                    <text id="periods-of-time">
+                        <tspan x="0" y="36">periods of time</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

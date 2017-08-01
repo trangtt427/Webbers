@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="678px" height="102px" viewBox="0 0 678 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>six group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="six-group">
+            <g id="Group">
+                <rect id="Rectangle" fill="#91E5B2" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <text id="Sketching" fill="#000000" font-family="Muli-Regular, Muli" font-size="16" font-weight="normal">
+                    <tspan x="49" y="24">Sketching</tspan>
+                </text>
+            </g>
+            <g id="Group-Copy-3" transform="translate(0.000000, 54.000000)">
+                <rect id="Rectangle" fill="#A4A8FF" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Traveling" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <g id="Group">
+                        <text id="Traveling">
+                            <tspan x="0" y="16">Traveling</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-Copy" transform="translate(220.000000, 0.000000)">
+                <rect id="Rectangle" fill="#FFEA86" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Graphic-Design" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <g id="Group">
+                        <text id="Graphic-design">
+                            <tspan x="0" y="16">Graphic design</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-Copy-5" transform="translate(220.000000, 54.000000)">
+                <rect id="Rectangle" fill="#FF6A9E" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Eating" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <g id="Group">
+                        <text id="Eating">
+                            <tspan x="0" y="16">Eating</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-Copy-2" transform="translate(481.000000, 0.000000)">
+                <rect id="Rectangle" fill="#FFC374" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Film-&amp;-photography" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <g id="Group">
+                        <text id="Film-&amp;-photography">
+                            <tspan x="0" y="16">Film &amp; photography</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-Copy-4" transform="translate(481.000000, 54.000000)">
+                <rect id="Rectangle" fill="#24C9F7" fill-rule="nonzero" x="0" y="0" width="28" height="28"></rect>
+                <g id="Petting-cats-for-lon" transform="translate(49.000000, 8.000000)" font-size="16" font-family="Muli-Regular, Muli" fill="#000000" font-weight="normal">
+                    <g id="Petting-cats-for-long">
+                        <text>
+                            <tspan x="0" y="16">Petting cats for long</tspan>
+                        </text>
+                    </g>
+                    <g id="periods-of-time" transform="translate(0.000000, 20.000000)">
+                        <text>
+                            <tspan x="0" y="16">periods of time</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
