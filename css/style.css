@@ -310,7 +310,7 @@ a.smallportlinks {
 }
 
 #first-section.kodaro {
-  background: url("/web/web2/backgrounds/water.png") no-repeat center top;
+  background: url("/backgrounds/water.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -332,7 +332,7 @@ a.smallportlinks {
 }
 
 #first-section.energy {
-  background: url("/web/web2/backgrounds/energy.png") no-repeat center top;
+  background: url("/backgrounds/energy.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -343,7 +343,7 @@ a.smallportlinks {
 }
 
 #first-section.lighting {
-  background: url("/web/web2/backgrounds/lighting.png") no-repeat center top;
+  background: url("/backgrounds/lighting.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -354,7 +354,7 @@ a.smallportlinks {
 }
 
 #first-section.infomart {
-  background: url("/web/web2/backgrounds/infomart.png") no-repeat center top;
+  background: url("/backgrounds/infomart.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -365,7 +365,7 @@ a.smallportlinks {
 }
 
 #first-section.website {
-  background: url("/web/web2/backgrounds/website.png") no-repeat center top;
+  background: url("/backgrounds/website.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -729,7 +729,7 @@ height:100%;
      letter-spacing: 10px;
     font-weight:300;
     padding:20px;
-    background-image:url("/web/web2/backgrounds/overlay.png")
+    background-image:url("/backgrounds/overlay.png")
     /*  text-shadow: 2px 2px 12px black;*/
 }
 
