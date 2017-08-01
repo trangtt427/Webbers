@@ -729,7 +729,7 @@ height:100%;
      letter-spacing: 10px;
     font-weight:300;
     padding:20px;
-    background-image:url("/backgrounds/overlay.png")
+    background-image:url("/backgrounds/overlay.png") 
     /*  text-shadow: 2px 2px 12px black;*/
 }
 
