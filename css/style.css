@@ -330,7 +330,7 @@ a.smallportlinks {
 }
 
 #first-section.kodaro {
-  background: url("/images/backgrounds/water.png") no-repeat center top;
+  background: url("/images/backgrounds/water.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -352,7 +352,7 @@ a.smallportlinks {
 }
 
 #first-section.energy {
-  background: url("/images/backgrounds/energy.png") no-repeat center top;
+  background: url("/images/backgrounds/energy.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -363,7 +363,7 @@ a.smallportlinks {
 }
 
 #first-section.lighting {
-  background: url("/images/backgrounds/lighting.png") no-repeat center top;
+  background: url("/images/backgrounds/lighting.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -374,7 +374,7 @@ a.smallportlinks {
 }
 
 #first-section.infomart {
-  background: url("/images/backgrounds/infomart.png") no-repeat center top;
+  background: url("/images/backgrounds/infomart.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -385,7 +385,7 @@ a.smallportlinks {
 }
 
 #first-section.website {
-  background: url("/images/backgrounds/website.png") no-repeat center top;
+  background: url("/images/backgrounds/website.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -397,7 +397,7 @@ a.smallportlinks {
 
 
 #first-section.jlwebsite {
-  background: url("/images/backgrounds/jlwebsite.png") no-repeat center top;
+  background: url("/images/backgrounds/jlwebsite.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
