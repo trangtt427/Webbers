@@ -3,23 +3,6 @@ body {
     -webkit-font-smoothing: subpixel-antialiased; /* antialiased | subpixel-antialiased | none */
 }
 
-.animate-in {
-    -webkit-animation: fadeIn 1.0s ease-in;
-    animation: fadeIn 1.0s ease-in;
-}
-.animate-out {
-    -webkit-transition: opacity 1.0s;
-    transition: opacity 1.0s;
-    opacity: 0;
-}
-@-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
 
 
@@ -319,7 +302,7 @@ a.smallportlinks {
 }
 
 #first-section {
-  background: url("/backgrounds/dotonbori.png") no-repeat center top;
+  background: url("/images/backgrounds/dotonbori.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -340,8 +323,10 @@ a.smallportlinks {
     
 }
 
+
+
 #first-section.portfolio {
-  background: url("https://static.vecteezy.com/system/resources/previews/000/139/604/non_2x/pen-holder-desk-vector.jpg") no-repeat center top;
+  /*background: url("https://static.vecteezy.com/system/resources/previews/000/139/604/non_2x/pen-holder-desk-vector.jpg") no-repeat center top;*/
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -886,39 +871,41 @@ height:100%;
  
 }
 
-/*SVG FADE*/
-/*.svg1 {
-  margin-top: 25px;
-  text-align: center;
-  -webkit-animation: fadein 1s; */
-  /* Safari, Chrome and Opera > 12.1 */
-  /* Firefox < 16 */
-  /* Internet Explorer */
-  /* Opera < 12.1 */
-  animation: fadein 1s;
+
+
+
+
+#page {
+    display: none;
+}
+#loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 1.0);
+    background-image: url("/images/ripple.gif");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.animate-in {
+    -webkit-animation: fadeIn 1.25s ease-in;
+    animation: fadeIn 1.25s ease-in;
+    }
+    
+    @-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
-/* Firefox < 16 */
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-} 
-/* Internet Explorer */
-/* Opera < 12.1 */
-/* HOVER LINK UNDERLINE */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 
 .menulinks {
   position: relative;
