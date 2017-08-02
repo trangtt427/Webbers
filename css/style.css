@@ -302,7 +302,7 @@ a.smallportlinks {
 }
 
 #first-section {
-  /*background: url("/images/backgrounds/dotonbori.png") no-repeat center top;*/
+  background: url("/images/backgrounds/dotonbori.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -348,7 +348,7 @@ a.smallportlinks {
 }
 
 #first-section.lighting {
-  /*background: url("/images/backgrounds/lighting.jpg") no-repeat center top;*/
+  background: url("/images/backgrounds/lighting.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
