@@ -341,7 +341,7 @@ a.smallportlinks {
 }
 
 #first-section.portfolio {
-  /*background: url("https://static.vecteezy.com/system/resources/previews/000/139/604/non_2x/pen-holder-desk-vector.jpg") no-repeat center top;*/
+  background: url("https://static.vecteezy.com/system/resources/previews/000/139/604/non_2x/pen-holder-desk-vector.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
