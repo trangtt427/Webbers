@@ -4,12 +4,12 @@ body {
 }
 
 .animate-in {
-    -webkit-animation: fadeIn .75s ease-in;
-    animation: fadeIn .75s ease-in;
+    -webkit-animation: fadeIn 1.0s ease-in;
+    animation: fadeIn 1.0s ease-in;
 }
 .animate-out {
-    -webkit-transition: opacity .75s;
-    transition: opacity .75s;
+    -webkit-transition: opacity 1.0s;
+    transition: opacity 1.0s;
     opacity: 0;
 }
 @-webkit-keyframes fadeIn {
