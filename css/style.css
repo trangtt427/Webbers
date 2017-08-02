@@ -352,7 +352,7 @@ a.smallportlinks {
 }
 
 #first-section.energy {
-  background: url("/Webbers/backgrounds/energy.png") no-repeat center top;
+  background: url("/images/backgrounds/energy.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -363,7 +363,7 @@ a.smallportlinks {
 }
 
 #first-section.lighting {
-  background: url("/Webbers/backgrounds/lighting.png") no-repeat center top;
+  background: url("/images/backgrounds/lighting.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -374,7 +374,7 @@ a.smallportlinks {
 }
 
 #first-section.infomart {
-  background: url("/Webbers/backgrounds/infomart.png") no-repeat center top;
+  background: url("/images/backgrounds/infomart.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -385,7 +385,7 @@ a.smallportlinks {
 }
 
 #first-section.website {
-  background: url("/Webbers/backgrounds/website.png") no-repeat center top;
+  background: url("/images/backgrounds/website.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -397,7 +397,7 @@ a.smallportlinks {
 
 
 #first-section.jlwebsite {
-  background: url("/Webbers/backgrounds/jlwebsite.png") no-repeat center top;
+  background: url("/images/backgrounds/jlwebsite.png") no-repeat center top;
   position: fixed;
   margin: auto;
   background-size: cover;
@@ -749,7 +749,7 @@ height:100%;
      letter-spacing: 10px;
     font-weight:300;
     padding:20px;
-    background-image:url("/Webbers/backgrounds/overlay.png") 
+    background-image:url("/images/backgrounds/overlay.png") 
     /*  text-shadow: 2px 2px 12px black;*/
 }
 
