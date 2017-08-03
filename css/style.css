@@ -886,8 +886,8 @@ height:100%;
     z-index: 100;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 1.0);
-    background-image: url("/images/ripple.gif");
+    background-color: rgba(255, 255, 255, .50);
+    background-image: url("/images/loading.gif");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -898,11 +898,11 @@ height:100%;
     }
     
     @-webkit-keyframes fadeIn {
-    from { opacity: 0; }
+    from { opacity: .1; }
     to { opacity: 1; }
 }
 @keyframes fadeIn {
-    from { opacity: 0; }
+    from { opacity: .1; }
     to { opacity: 1; }
 }
 
