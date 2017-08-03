@@ -301,11 +301,25 @@ a.smallportlinks {
     max-width:1310px;
 }
 
+
+
+
 #first-section {
   background: url("/images/backgrounds/lighting.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+
+#first-section.homepage {
+  background: url("/images/backgrounds/dotonbori.png") no-repeat center top;
+  position: fixed;
+  margin: auto;
+    background-size:cover;
   height: 100%;
   width: 100%;
   background-color: white;
