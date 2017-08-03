@@ -503,6 +503,10 @@ height:100%;
     max-width:750px;
 }
 
+a.grupo {
+    text-decoration:none;
+    color:#1fbadf;
+}
 
 
 
