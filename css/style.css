@@ -843,7 +843,56 @@ a.grupo {
   background-color: white;
     
 }
+    
+     #first-section.lighting {
+  background: url("/images/backgrounds/lighting.jpg") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+    
+         #first-section.energy {
+  background: url("/images/backgrounds/energy.jpg") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+    
+         #first-section.jlwebsite {
+  background: url("/images/backgrounds/jlwebsite.jpg") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
+    
+    #first-section.website {
+  background: url("/images/backgrounds/website.jpg") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
 
+    #first-section.infomart {
+  background: url("/images/backgrounds/infomart.jpg") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+    
+}
 }
 
 @media only screen and (max-width: 719px) {
