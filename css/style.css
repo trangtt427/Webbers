@@ -893,6 +893,16 @@ a.grupo {
   background-color: #fdfdfe;
     
 }
+    
+    #first-section.portfolio {
+  background: url("/images/backgrounds/portfoliomobile.jpg") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: #fdfdfe;
+    
+}
 }
 
 @media only screen and (max-width: 719px) {
