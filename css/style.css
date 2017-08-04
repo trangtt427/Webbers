@@ -976,7 +976,7 @@ a.grupo {
     z-index: 100;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, .50);
+    background-color: rgba(255, 255, 255, 1.0);
     background-image: url("/images/loading.gif");
     background-repeat: no-repeat;
     background-position: center;
