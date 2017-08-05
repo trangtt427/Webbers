@@ -665,16 +665,18 @@ a.grupo {
 .smallport {
     display:none;
      padding-top:65px;
-    width:95%;
-    margin:auto;
     text-align:center;
-    
-}
-
-.smallportimage {
+     width:90%;
     margin:auto;
     display:block;
+    min-width:270px;
+    max-width:850px;
+    padding-right:20px;
+    padding-left:20px;
+    
 }
+    
+
 
 #positionblackp {
      letter-spacing: 5px;
