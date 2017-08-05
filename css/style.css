@@ -665,7 +665,7 @@ a.grupo {
 .smallport {
     display:none;
      padding-top:65px;
-    width:304px;
+    width:95%;
     margin:auto;
     text-align:center;
     
@@ -674,7 +674,6 @@ a.grupo {
 .smallportimage {
     margin:auto;
     display:block;
-    width:95%;
 }
 
 #positionblackp {
