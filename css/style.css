@@ -913,6 +913,16 @@ a.grupo {
   background-color: #fdfdfe;
     
 }
+    
+       #first-section.tshirt {
+  background: url("/images/backgrounds/tshirtmobile2.jpg") no-repeat center top;
+  position: fixed;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: #fdfdfe;
+    
+}
 }
 
 @media only screen and (max-width: 719px) {
