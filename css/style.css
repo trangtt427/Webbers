@@ -232,6 +232,13 @@ a.smallportlinks {
     
 }
 
+.profilepic {
+    margin:auto;
+    display:block;
+    width:90%;
+    max-width:411px;
+}
+
 
 
 .port {
