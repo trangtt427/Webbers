@@ -330,7 +330,7 @@ a.smallportlinks {
 
 
 #first-section.kodaro {
-  background: url("/images/backgrounds/water.jpg") no-repeat center top;
+  background: url("/images/backgrounds/water2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
     background-size:cover;
@@ -354,7 +354,7 @@ background-size:cover;
 }
 
 #first-section.energy {
-  background: url("/images/backgrounds/energy.jpg") no-repeat center top;
+  background: url("/images/backgrounds/energy2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -365,7 +365,7 @@ background-size:cover;
 }
 
 #first-section.lighting {
-  background: url("/images/backgrounds/grupocinsa.jpg") no-repeat center top;
+  background: url("/images/backgrounds/grupocinsa2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -376,7 +376,7 @@ background-size:cover;
 }
 
 #first-section.infomart {
-  background: url("/images/backgrounds/infomart.jpg") no-repeat center top;
+  background: url("/images/backgrounds/infomart2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -387,7 +387,7 @@ background-size:cover;
 }
 
 #first-section.website {
-  background: url("/images/backgrounds/website.jpg") no-repeat center top;
+  background: url("/images/backgrounds/website2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -399,7 +399,7 @@ background-size:cover;
 
 
 #first-section.jlwebsite {
-  background: url("/images/backgrounds/jlwebsite.jpg") no-repeat center top;
+  background: url("/images/backgrounds/jlwebsite2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -751,8 +751,7 @@ a.grupo {
      letter-spacing: 10px;
     font-weight:300;
     padding:20px;
-    background-image:url("/images/backgrounds/overlay.png") 
-    /*  text-shadow: 2px 2px 12px black;*/
+    background-image:url("/images/backgrounds/overlay.png");
 }
 
 .svg2 {
@@ -831,7 +830,7 @@ a.grupo {
 
 }
    #first-section.kodaro {
-  background: url("/images/backgrounds/watermobile.jpg") no-repeat center top;
+  background: url("/images/backgrounds/watermobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -841,7 +840,7 @@ a.grupo {
 }
     
      #first-section.lighting {
-  background: url("/images/backgrounds/grupocinsamobile.jpg") no-repeat center top;
+  background: url("/images/backgrounds/grupocinsamobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -851,7 +850,7 @@ a.grupo {
 }
     
          #first-section.energy {
-  background: url("/images/backgrounds/energymobile.jpg") no-repeat center top;
+  background: url("/images/backgrounds/energymobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -861,7 +860,7 @@ a.grupo {
 }
     
     #first-section.jlwebsite {
-  background: url("/images/backgrounds/jlwebsitemobile.jpg") no-repeat center top;
+  background: url("/images/backgrounds/jlwebsitemobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -871,7 +870,7 @@ a.grupo {
 }
     
     #first-section.website {
-  background: url("/images/backgrounds/websitemobile.jpg") no-repeat center top;
+  background: url("/images/backgrounds/websitemobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
  height: 100%;
@@ -881,7 +880,7 @@ a.grupo {
 }
 
     #first-section.infomart {
-  background: url("/images/backgrounds/infomartmobile.jpg") no-repeat center top;
+  background: url("/images/backgrounds/infomartmobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
