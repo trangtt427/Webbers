@@ -362,7 +362,7 @@ a.smallportlinks {
 
 
 #first-section.portfolio {
-  background: url("/images/backgrounds/portfolio.jpg") no-repeat center top;
+  background: url("/images/backgrounds/portfolio2.jpg") no-repeat center top;
   position: fixed;
 background-size:cover;
   margin: auto;
@@ -913,7 +913,7 @@ a.grupo {
 }
     
     #first-section.portfolio {
-  background: url("/images/backgrounds/portfoliomobile.jpg") no-repeat center top;
+  background: url("/images/backgrounds/portfoliomobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
