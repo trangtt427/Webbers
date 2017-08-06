@@ -340,6 +340,17 @@ a.smallportlinks {
     
 }
 
+#first-section.tshirt {
+  background: url("/images/backgrounds/tshirt2.jpg") no-repeat center top;
+  position: fixed;
+  margin: auto;
+    background-size:cover;
+  height: 100%;
+  width: 100%;
+  background-color: #fdfdfe;
+    
+}
+
 
 
 #first-section.portfolio {
@@ -869,6 +880,8 @@ a.grupo {
     
 }
     
+    
+    
     #first-section.website {
   background: url("/images/backgrounds/websitemobile2.jpg") no-repeat center top;
   position: fixed;
@@ -878,6 +891,8 @@ a.grupo {
   background-color: #fdfdfe;
     
 }
+    
+      
 
     #first-section.infomart {
   background: url("/images/backgrounds/infomartmobile2.jpg") no-repeat center top;
