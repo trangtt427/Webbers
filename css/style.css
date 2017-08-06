@@ -365,7 +365,7 @@ background-size:cover;
 }
 
 #first-section.lighting {
-  background: url("/images/backgrounds/lighting.jpg") no-repeat center top;
+  background: url("/images/backgrounds/grupocinsa.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -841,7 +841,7 @@ a.grupo {
 }
     
      #first-section.lighting {
-  background: url("/images/backgrounds/lightingmobile.jpg") no-repeat center top;
+  background: url("/images/backgrounds/grupocinsamobile.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
