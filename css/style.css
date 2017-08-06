@@ -608,6 +608,8 @@ a.grupo {
      line-height:180%;
     padding-top:15px;
     margin-bottom:50px;
+     padding-right:20px;
+    padding-left:20px;
     
 }
 
@@ -666,13 +668,6 @@ a.grupo {
     display:none;
      padding-top:65px;
     text-align:center;
-     width:90%;
-    margin:auto;
-    display:block;
-    min-width:270px;
-    max-width:850px;
-    padding-right:20px;
-    padding-left:20px;
     
 }
     
