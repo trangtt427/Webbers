@@ -207,6 +207,14 @@ a.smallportlinks {
     
 }
 
+.trangcover {
+    margin:auto;
+    display:block;
+    width:100%;
+    position:inherit;
+    bottom:0;
+}
+
 .image2 {
     width:90%;
     margin:auto;
@@ -326,13 +334,15 @@ a.smallportlinks {
 }
 
 #first-section.homepage {
-  background: url("/images/backgrounds/dotonbori.png") no-repeat center top;
   position: fixed;
   margin: auto;
     background-size:cover;
   height: 100%;
   width: 100%;
-  background-color: #fdfdfe;
+   background: -webkit-linear-gradient(#CE2ABF, #FD7533); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#CE2ABF, #FD7533); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#CE2ABF, #FD7533); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#CE2ABF, #FD7533); /* Standard syntax */
     
 }
 
@@ -848,8 +858,14 @@ a.grupo {
     left:-5px;
     margin-bottom:-21px;
     padding-bottom:8px;
+        
 
 }
+    
+    
+  
+    
+    
    #first-section.kodaro {
   background: url("/images/backgrounds/watermobile2.jpg") no-repeat center top;
   position: fixed;
@@ -966,6 +982,19 @@ a.grupo {
      font-family: "Source Sans Pro", sans-serif;
     font-weight:300;
 
+    }
+    
+      .trangcover {
+        margin:auto;
+    display:block;
+    width:900px;
+    bottom:0;
+    left:-270px;
+        
+        
+        
+        
+        
     }
   
     
