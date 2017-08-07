@@ -213,6 +213,19 @@ a.smallportlinks {
     width:100%;
     position:inherit;
     bottom:0;
+   
+}
+
+.overlay {
+    width:55%;
+    display:block;
+    top:35%;
+}
+
+.index {
+     position:absolute;
+    margin:auto;
+    display:block;
 }
 
 .image2 {
@@ -785,6 +798,15 @@ a.grupo {
     background-image:url("/images/backgrounds/overlay.png");
 }
 
+.hometitle {
+  margin: auto;
+  display: block;
+    padding:20px;
+    z-index: 99;
+    width:400px;
+    top:4;
+}
+
 .svg2 {
     width:70%;
     margin:auto;
@@ -990,12 +1012,21 @@ a.grupo {
     width:900px;
     bottom:0;
     left:-270px;
+      
         
-        
-        
-        
+      
         
     }
+    
+    
+    .hometitle {
+  margin: auto;
+  display: block;
+    padding:20px;
+    z-index: 99;
+    width:300px;
+    top:4;
+}
   
     
     
