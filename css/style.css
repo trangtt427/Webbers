@@ -213,6 +213,8 @@ a.smallportlinks {
     width:100%;
     position:inherit;
     bottom:0;
+    z-index:60;
+    
    
 }
 
@@ -222,11 +224,7 @@ a.smallportlinks {
     top:35%;
 }
 
-.index {
-     position:absolute;
-    margin:auto;
-    display:block;
-}
+
 
 .image2 {
     width:90%;
@@ -356,7 +354,7 @@ a.smallportlinks {
     background: -o-linear-gradient(#CE2ABF, #FD7533); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#CE2ABF, #FD7533); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#CE2ABF, #FD7533); /* Standard syntax */
-    
+  
 }
 
 
@@ -804,7 +802,8 @@ a.grupo {
     padding:20px;
     z-index: 99;
     width:400px;
-    top:4;
+    bottom:0;
+    position:relative;
 }
 
 .svg2 {
@@ -1012,6 +1011,8 @@ a.grupo {
     width:900px;
     bottom:0;
     left:-270px;
+          z-index:60;
+          position:absolute;
       
         
       
@@ -1024,7 +1025,7 @@ a.grupo {
   display: block;
     padding:20px;
     z-index: 99;
-    width:300px;
+    width:275px;
     top:4;
 }
   
