@@ -205,15 +205,10 @@ a.smallportlinks {
     padding-right:20px;
     padding-left:20px;
     
-}
 
-.trangcover {
-    margin:auto;
-    display:block;
-    width:100%;
-    position:inherit;
-    bottom:0;
-    z-index:60;
+    
+
+    
     
    
 }
@@ -332,6 +327,9 @@ a.smallportlinks {
 
 
 
+    
+
+
 
 #first-section {
   background: url("/images/backgrounds/lighting.jpg") no-repeat center top;
@@ -345,16 +343,16 @@ a.smallportlinks {
 }
 
 #first-section.homepage {
-  position: fixed;
   margin: auto;
-    background-size:cover;
-  height: 120%;
   width: 100%;
    background: -webkit-linear-gradient(#CE2ABF, #FD7533); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#CE2ABF, #FD7533); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#CE2ABF, #FD7533); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#CE2ABF, #FD7533); /* Standard syntax */
+ 
   
+ 
+    
 }
 
 
@@ -800,12 +798,23 @@ a.grupo {
   margin: auto;
   display: block;
     padding-left:40px;
+    padding-top:20px;
     z-index: 99;
     width:400px;
-    bottom:0;
-    position:relative;
+    position:absolute;
     float: left;
 }
+
+.trangcover {
+    width:700px;
+    margin:auto;
+    display:block;
+    position:relative;
+    bottom:-50px;
+    
+}
+
+
 
 .svg2 {
     width:70%;
@@ -866,27 +875,9 @@ a.grupo {
 }
 
 @media only screen and (max-width: 450px) {
+  
     
-       .trangcover {
-        margin:auto;
-    display:block;
-    width:700px;
-    left:-170px;
-          z-index:60;
-          position:relative;  
-           bottom:80px;
-
-    
-}
-    
-    .blocks {
-  //border-top: $pageTopDecrease solid $hrColor;
-  position: relative;
-  //margin-top: -($pageTopDecrease);
-  height: 123.45%;
-      top:570px;
-    z-index:99;
-    overflow:hidden;
+   
     
 }
     
