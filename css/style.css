@@ -95,7 +95,7 @@ a.smallportlinks {
   position: relative;
   //margin-top: -($pageTopDecrease);
   height: 123.45%;
-      top:650px;
+      top:630px;
     z-index:99;
     overflow:hidden;
     
@@ -106,7 +106,7 @@ a.smallportlinks {
   position: relative;
   //margin-top: -($pageTopDecrease);
   height: 123.45%;
-      top:670px;
+      top:570px;
     overflow:hidden;
     z-index:99;
     }
@@ -875,7 +875,9 @@ a.grupo {
           z-index:60;
           position:relative;  
            bottom:-59px;
-    }
+
+    
+}
     
  
     .port {
