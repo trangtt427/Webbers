@@ -866,6 +866,17 @@ a.grupo {
 }
 
 @media only screen and (max-width: 450px) {
+    
+       .trangcover {
+        margin:auto;
+    display:block;
+    width:700px;
+    left:-170px;
+          z-index:60;
+          position:relative;  
+           bottom:-59px;
+    }
+    
  
     .port {
         display:none;
@@ -1007,16 +1018,7 @@ a.grupo {
 
     }
     
-      .trangcover {
-        margin:auto;
-    display:block;
-    width:900px;
-    bottom:0;
-    left:-270px;
-          z-index:60;
-          position:absolute;     
-    }
-    
+   
     
     
             .hometitle {
@@ -1026,6 +1028,7 @@ a.grupo {
     z-index: 99;
     width:275px;
     top:4;
+
 }
   
     
