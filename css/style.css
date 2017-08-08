@@ -874,8 +874,19 @@ a.grupo {
     left:-170px;
           z-index:60;
           position:relative;  
-           bottom:100px;
+           bottom:140px;
 
+    
+}
+    
+    .blocks {
+  //border-top: $pageTopDecrease solid $hrColor;
+  position: relative;
+  //margin-top: -($pageTopDecrease);
+  height: 123.45%;
+      top:570px;
+    z-index:99;
+    overflow:hidden;
     
 }
     
