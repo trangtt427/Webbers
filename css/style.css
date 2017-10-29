@@ -350,10 +350,10 @@ a.smallportlinks {
   margin: auto;
   width: 100%;
     height:100%;
-   background: -webkit-linear-gradient(#CE2ABF, #FD7533); /* For Safari 5.1 to 6.0 */
+   background: -webkit-linear-gradient(#cef1ff, #FD7533); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#CE2ABF, #FD7533); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#CE2ABF, #FD7533); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#CE2ABF, #FD7533); /* Standard syntax */
+    background: linear-gradient(#68d2e8, #ffae5e); /* Standard syntax */
     background-size:cover;
  
   
@@ -482,7 +482,7 @@ height:100%;
 .footer, .energyfooter {
   font-family: 'Muli', sans-serif;
   font-weight:200;
-  background: linear-gradient(180deg, #22323f, #111d28);
+  background: linear-gradient(180deg, #1e1e1e, #1e1e1e);
   color: #9FABA7;
   margin: auto;
   padding-bottom: 20px;
@@ -496,9 +496,10 @@ height:100%;
 /*homepage*/
 .whiteh1 {
   font-family: "Muli", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 200;
   color: white;
+    text-align:center;
     padding-top:100px;
     padding-bottom:40px;
      padding-right:20px;
@@ -507,6 +508,7 @@ height:100%;
 }
 
 .whiteh2 {
+    text-align:center;
   font-family: "Muli", sans-serif;
   font-size: 40px;
   font-weight: 200;
@@ -516,7 +518,7 @@ height:100%;
      padding-right:20px;
     padding-left:20px;
   margin: 0;
-    max-width:650px;
+  
 }
 
 .whiteh3 {
@@ -602,7 +604,7 @@ a.kupo {
 }
 
 .icon {
-  width: 90px;
+  width: 150px;
   margin: auto;
   display: block;
   padding-bottom: 10px;
@@ -883,6 +885,33 @@ a.kupo {
     
 }
     
+    .whiteh1 {
+  font-family: "Muli", sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+  color: white;
+    text-align:center;
+    padding-top:100px;
+    padding-bottom:40px;
+     padding-right:20px;
+    padding-left:20px;
+  margin: 0;
+}
+
+.whiteh2 {
+    text-align:center;
+  font-family: "Muli", sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+  color: white;
+    padding-top:170px;
+    padding-bottom:40px;
+     padding-right:20px;
+    padding-left:20px;
+  margin: 0;
+  
+}
+    
     
     
   
@@ -1052,6 +1081,12 @@ a.kupo {
 }
 
 @media only screen and (max-width: 719px) {
+    
+        a.menulinks {
+  margin: 25px 25px 5px 25px;
+  color: white;
+}
+  
      
     
     .iconbox {
@@ -1065,7 +1100,7 @@ a.kupo {
 }
     
     .icon {
-        width:120px;
+        width:150px;
     }
 }
 
