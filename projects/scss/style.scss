@@ -1,0 +1,382 @@
+/* homepage */
+#homepage {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  color: black;
+  line-height: 1.4;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+/*energyMeter*/
+#energyMeter {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  color: black;
+  line-height: 1.4;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+a {
+  padding: 25px 25px 5px 25px;
+  color: #E7E6E6;
+}
+
+/*homepage*/
+.block {
+    
+    width:25%;
+    display:inline-block;
+    margin: 4%;
+    text-align:center;
+}
+
+/*homepage*/
+.blocktext {
+    font-family: "Roboto", sans-serif;
+    font-size:16px;
+    color:white;
+    display:inline-block;
+}
+
+
+.blocks {
+  //border-top: $pageTopDecrease solid $hrColor;
+  position: relative;
+  //margin-top: -($pageTopDecrease);
+  height: 123.45%;
+      top:770px;
+    
+}
+
+/*homepage*/
+.bluebg {
+    background: -webkit-linear-gradient(120deg, #45beee, #0c60b5);
+  background: linear-gradient(-200deg, #45beee, #0c60b5);
+    position:relative;
+    width:100%;
+}
+
+.whitebg {
+    background: -webkit-linear-gradient(120deg, #45beee, #0c60b5);
+  /*background: linear-gradient(-200deg, #45beee, #0c60b5);*/
+    background:#eff1f2;
+    position:relative;
+    width:100%;
+}
+
+.container {
+    max-width:1300px;
+    width:100%;
+    margin:auto;
+    display:block;
+}
+
+/*homepage*/
+.specialty {
+    width:85%;
+    margin:auto;
+    display:block;
+    padding-top:30px;
+    text-align:center;
+}
+
+#first-section {
+    background: url("/dotonbori.png") no-repeat center top;
+    position:fixed;
+    margin:auto;
+    background-size:cover;
+    height:110%;
+    width:100%;
+    background-color:black;
+}
+.footer {
+    font-family: 'Source Sans Pro', sans-serif;
+    background:black;
+    color:#9FABA7;
+    margin:auto;
+    padding-bottom:20px;
+    display:block;
+    text-align:center;
+    
+}
+
+/*homepage*/
+.graybg {
+    background: linear-gradient(-200deg, #333333, #3F4247);
+}
+
+/*homepage*/
+.whiteh1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  padding: 100px 100px 40px 100px;
+  margin: 0;
+}
+
+/*energyMeter*/
+.blackh1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color:#262424;
+  padding: 100px 100px 40px 100px;
+  margin: 0;
+}
+
+.header {
+    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  line-height: 70px;
+  color: #fff;
+  background-color: #000000;
+  -webkit-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+  width: 100%;
+}
+
+.icon {
+    width:40%;
+    margin:auto;
+    display:block;
+    padding-bottom:10px;
+}
+
+.menu {
+  float: right;
+  font-size: 15px;
+  padding-right: 10px;
+}
+
+.nav-up {
+  top: -70px;
+}
+
+
+
+.whitep {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  padding-top: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+    max-width:1000px;
+}
+
+
+.blackp {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight:400;
+  color: #262424;
+  padding-top: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+    max-width:1000px;
+}
+
+#page-wrapper {
+  width: auto;
+  overflow: hidden;
+  max-width: auto;
+  padding: 0 0;
+}
+
+
+.pinkbg {
+  background: -webkit-linear-gradient(120deg, #c639a1, #841d69);
+  background: linear-gradient(-200deg, #8e2270, #510d3d);
+    position:relative;
+    width:100%;
+}
+
+
+
+.site-content {
+    position:absolute;
+  width: 100%;
+}
+
+
+
+
+.svg1 {
+  margin: auto;
+  min-width: 200px;
+    max-width:650px;
+  display: block;
+    padding-top:150px;
+}
+
+
+
+/*p {
+  color:#E7E6E6;
+  font-size:1em;
+  font-size:20px;
+  padding-left:40px;
+}*/
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 414px) {
+  .whiteh1, .blackh1, .whitep, .blackp {
+    padding-left: 20px;
+    padding-right: 20px;
+      
+  }
+
+}
+
+
+
+@media only screen and (max-width: 640px) {
+    
+     .menu {
+    text-align: center;
+    width: 100%;
+    padding-right: 0px;
+  }
+    
+    .svg1 {
+        padding-top:200px;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .whiteh1, .blackh1, .whitep, .blackp{
+    padding-left: 30px;
+    padding-right: 30px;
+      
+  }
+ 
+}
+
+@media only screen and (max-width:1040px) {
+    
+    .blocks {
+        top:615px;
+    }
+
+    .svg1 {
+    width: 60%;
+  }
+}
+
+
+/*for areas of specialty*/
+@media only screen and (max-width:1165px) {
+    
+   
+}
+
+
+/*for areas of specialty*/
+@media only screen and (max-width:922px) {
+   
+     .specialty {
+    width:100%;
+    }
+    
+    .block {
+        margin:20px;
+        width:200px;
+    }
+}
+
+/*for areas of specialty*/
+@media only screen and (max-width:741px) {
+    
+    .block {
+        width:60%;
+    margin-bottom:50px;
+    }
+}
+
+   
+
+
+    
+    
+/*SVG FADE*/
+.svg1 {
+  margin-top: 25px;
+  text-align: center;
+  -webkit-animation: fadein 3s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Firefox < 16 */
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Internet Explorer */
+/* Opera < 12.1 */
+/* HOVER LINK UNDERLINE */
+a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: #96d8f7;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+a:hover {
+  color: #96d8f7;
+}
