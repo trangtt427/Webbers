@@ -336,7 +336,7 @@ a.smallportlinks {
 
     
 #first-section {
-  background: url("/images/backgrounds/lighting.jpg") no-repeat center top;
+  background: url("../images/backgrounds/lighting.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -362,7 +362,7 @@ a.smallportlinks {
 }
 
 #first-section.weatherdog {
-  background: url("/images/backgrounds/weatherdogwebsite.png") no-repeat center top;
+  background: url("../images/backgrounds/weatherdogwebsite.png") no-repeat center top;
   position: fixed;
   margin: auto;
     background-size:cover;
@@ -376,7 +376,7 @@ a.smallportlinks {
 
 
 #first-section.kodaro {
-  background: url("/images/backgrounds/water2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/water2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
     background-size:cover;
@@ -387,7 +387,7 @@ a.smallportlinks {
 }
 
 #first-section.tshirt {
-  background: url("/images/backgrounds/tshirt2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/tshirt2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
     background-size:cover;
@@ -400,7 +400,7 @@ a.smallportlinks {
 
 
 #first-section.portfolio {
-  background: url("/images/backgrounds/portfolio2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/portfolio2.jpg") no-repeat center top;
   position: fixed;
 background-size:cover;
   margin: auto;
@@ -411,7 +411,7 @@ background-size:cover;
 }
 
 #first-section.energy {
-  background: url("/images/backgrounds/energy2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/energy2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -422,7 +422,7 @@ background-size:cover;
 }
 
 #first-section.lighting {
-  background: url("/images/backgrounds/grupocinsa2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/grupocinsa2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -433,7 +433,7 @@ background-size:cover;
 }
 
 #first-section.infomart {
-  background: url("/images/backgrounds/infomart2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/infomart2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -444,7 +444,7 @@ background-size:cover;
 }
 
 #first-section.website {
-  background: url("/images/backgrounds/website2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/website2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -456,7 +456,7 @@ background-size:cover;
 
 
 #first-section.jlwebsite {
-  background: url("/images/backgrounds/jlwebsite2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/jlwebsite2.jpg") no-repeat center top;
   position: fixed;
     background-size:cover;
   margin: auto;
@@ -815,7 +815,7 @@ a.kupo {
      letter-spacing: 10px;
     font-weight:300;
     padding:20px;
-    background-image:url("/images/backgrounds/overlay.png");
+    background-image:url("../images/backgrounds/overlay.png");
 }
 
 .hometitle {
@@ -983,7 +983,7 @@ a.kupo {
     
     
        #first-section.weatherdog {
-  background: url("/images/backgrounds/weatherdogmobile.jpg") no-repeat center top;
+  background: url("../images/backgrounds/weatherdogmobile.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -996,7 +996,7 @@ a.kupo {
     
     
    #first-section.kodaro {
-  background: url("/images/backgrounds/watermobile2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/watermobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -1006,7 +1006,7 @@ a.kupo {
 }
     
      #first-section.lighting {
-  background: url("/images/backgrounds/grupocinsamobile2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/grupocinsamobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -1016,7 +1016,7 @@ a.kupo {
 }
     
          #first-section.energy {
-  background: url("/images/backgrounds/energymobile2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/energymobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -1026,7 +1026,7 @@ a.kupo {
 }
     
     #first-section.jlwebsite {
-  background: url("/images/backgrounds/jlwebsitemobile2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/jlwebsitemobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -1038,7 +1038,7 @@ a.kupo {
     
     
     #first-section.website {
-  background: url("/images/backgrounds/websitemobile2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/websitemobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
  height: 100%;
@@ -1050,7 +1050,7 @@ a.kupo {
       
 
     #first-section.infomart {
-  background: url("/images/backgrounds/infomartmobile2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/infomartmobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -1060,7 +1060,7 @@ a.kupo {
 }
     
     #first-section.portfolio {
-  background: url("/images/backgrounds/portfoliomobile2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/portfoliomobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -1070,7 +1070,7 @@ a.kupo {
 }
     
        #first-section.tshirt {
-  background: url("/images/backgrounds/tshirtmobile2.jpg") no-repeat center top;
+  background: url("../images/backgrounds/tshirtmobile2.jpg") no-repeat center top;
   position: fixed;
   margin: auto;
   height: 100%;
@@ -1171,7 +1171,7 @@ a.kupo {
     width: 100vw;
     height: 100vh;
     background-color: rgba(255, 255, 255, 1.0);
-    background-image: url("/images/loading.gif");
+    background-image: url("../images/loading.gif");
     background-repeat: no-repeat;
     background-position: center;
 }
