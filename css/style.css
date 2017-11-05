@@ -1204,7 +1204,7 @@ a.kupo {
 #page {
     display: none;
 }
-#loading {
+/*#loading {
     display: block;
     position: fixed;
     top: 0;
@@ -1216,11 +1216,11 @@ a.kupo {
     background-image: url("../images/loading.gif");
     background-repeat: no-repeat;
     background-position: center;
-}
+}*/
 
 .animate-in {
-    -webkit-animation: fadeIn 1.25s ease-in;
-    animation: fadeIn 1.25s ease-in;
+    -webkit-animation: fadeIn 1.0s ease-in;
+    animation: fadeIn 1.0s ease-in;
     }
     
     @-webkit-keyframes fadeIn {
