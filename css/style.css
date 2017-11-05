@@ -558,6 +558,21 @@ height:100%;
 }
 
 
+.blackh3 {
+  font-family: "Muli", sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  color: #262424;
+    padding-top:100px;
+    padding-bottom:40px;
+     padding-right:20px;
+    padding-left:20px;
+    text-align:left;
+    max-width:725px;
+    margin: auto;
+
+}
+
 
 .footerh1 {
   font-family: "Muli", sans-serif;
@@ -878,6 +893,21 @@ a.kupo {
 
 @media only screen and (max-width: 640px) {
     
+    
+    .blackh3 {
+  font-family: "Muli", sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+  color: #262424;
+    padding-top:100px;
+    padding-bottom:40px;
+     padding-right:20px;
+    padding-left:20px;
+    text-align:left;
+    max-width:725px;
+    margin: auto;
+
+}
        .blocks {
   //border-top: $pageTopDecrease solid $hrColor;
   position: relative;
