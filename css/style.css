@@ -212,8 +212,43 @@ a.smallportlinks {
     padding-right:20px;
     padding-left:20px;
     
+}
 
+.image5 {
+    width:300px;
+    margin:auto;
+    display:block;
+    min-width:270px;
+    padding-right:20px;
+    padding-left:20px;
     
+}
+
+
+.imagekitty {
+
+    margin:auto;
+    display:block;
+    max-width:850px;
+    padding-right:20px;
+    padding-left:20px;
+    
+}
+
+.imageorb{
+
+    margin:auto;
+    display:block;
+    min-width:20px;
+    max-width:350px;
+    padding-right:20px;
+    padding-left:20px;
+    
+}
+
+.frameguy {
+    margin:auto;
+    display:block;
 
     
     
