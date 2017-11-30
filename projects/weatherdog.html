@@ -88,40 +88,82 @@
              <p class="blackp" id="positionblackp">WEB DESIGNER</p><br><br><br>
              
                <h3 class="positiontext">TOOLS & SKILLS USED</h3>
-             <p class="blackp" id="positionblackp">SKETCH - ZEPLIN - INVISION</p><br><br><br>
+             <p class="blackp" id="positionblackp">PHOTOSHOP - ILLUSTRATOR - SKETCH - INVISION</p><br><br><br>
              
-             <h3 class="positiontext">OBJECTIVE</h3>
+             <h3 class="positiontext">PROJECT OVERVIEW</h3>
           
             
-        <p class="blackp">During the hurricanes and tropical storms at the end of summer '17, a colleague of mine wanted to develop a weather website where users can find local weather information as well as alerts pertaining to certain locations. The website would be very simple — we didn't want to include a lot of unnecessary information that would convolute the site. We wanted to include information that everyday people care but also to notify them if there are precautions that they need to take.
+        <p class="blackp">During the hurricanes and tropical storms at the end of summer '17, a colleague of mine wanted to develop a weather website where users can find local weather information as well as alerts pertaining to certain locations. The website would be very simple — we didn't want to include a lot of unnecessary information that would convolute the site. We wanted to include the simple information that people care about but we also wanted to let people have access to protocols just in case their area is under harsh conditions.
         </p><br><br>
              <img src="../images/weatherdog1.jpg" class="image"><div class="caption"><i>The colorful and whimsical Weatherdog website.</i></div><br><br><br>
              
-            <h3 class="positiontext">APPROACH</h3>
-             <p class="blackp">The first step in collaborating was deciding what information would need to show. This was done through researching the effectiveness of other weather websites and apps to figure out the most common type of information people care about. My colleague wanted to focus on three ways of weather data: details about the current day, an hourly chart, and a 10-day chart. I worked on figuring out how to create a flow for users to navigate through whiteboard mock-ups. </p> <br><br>
-             <img src="../images/weatherdog2.jpg" class="image"><div class="caption"><i>A very rough whiteboard sketch showing the flow from the splash screen to the homepage.</i></div>
+            <h3 class="positiontext">USE CASES</h3>
+             <p class="blackp">
+                 The first step I took in this project was deciding on what information should I present to the users. More importantly, who are the users? Our intended audience is a wide demographic. Anyone with access to a computer will be a target user. People will be able to check intricate weather details of the day, hourly increments, or through a 10-day period. However, we needed to gather user input to make sure we're presenting ideal information.
+             
+             <br><br><span class="pinkfont">Heuristics: </span> We took a look at a few predecessors to figure out what was similar across the board. Things we looked at include: Weather.com, Wunderground.com, the Weather app on iOS, and AccuWeather.<br><br>
+             <span class="pinkfont">User Research: </span>I held a few informal interviews with colleagues, friends, and friends of friends. I got information about what weather sites and apps they used to follow weather news, and how often they check the weather.<br><br>
+             The conclusion? It turns out most people care about humidity, winds, temperature and sunrise/sunset times for the most part. According to my interviewees, they check the weather at least twice a day in order to plan ahead. Also, the weather detailing varies across different websites. We decided to go with a "10-day", "hourly", and "today" format. We also got a lot of positive remarks about including the alerts on our website. </p>
+            
+             
+             <br><br><br>
+               <h3 class="positiontext">INTERACTION AND FLOW</h3>
+                 
+                 
+                 
+              <p class="blackp"> The next step was to work out a storyboard to show how users will navigate through our website. Once someone visits our website, they will be greeted by a splash screen that will require them to sign up, or log in (my partner demanded to have a login system in order to track how many people are using our site). </p> <br><br>
+             <img src="../images/weatherdoggy.jpg" class="imagewithshadow"><div class="caption"><i>A re-iterated rough sketch showing the concept of the website.</i></div>
             <br><br>
              
-                <img src="../images/weatherdog3.jpg" class="image"><div class="caption"><i>Users can sift through different details via the today, hourly, and 10-day tabs shown in this simple sketch.</i></div>
-            <br><br>
+           
              
              
              
+             <p class="pinkp"><i>What do users expect to see when they first open up a weather website or app?</i></p>
              
-            <p class="blackp">Once we had a clear idea about how the website will be laid out, it was time to focus on the look and feel of the website. This included figuring out a color scheme and fonts to use. My colleague felt strongly about using blue as our main color, so I played around with different shades until I found one that was subtle yet bold enough for our purposes. I also liked the idea of using a little bit of orange to complement the blue. I then started creating a lot of custom digital graphics.
+             <p class="blackp">According to the users I've spoken to, they normally look for the current weather. Usually this is the first thing they do in the morning while getting dressed for work or other outings. This reinforced our idea to have the "today" tab be highlighted upon logging in. The first set of information that users will see include the date, current high and lows, current temperature, details about precipitation, humidity and sun activity. Also on the "today" view, users will see the alert box under the current temperature box. Using these two large boxes act as the focal point, indicating that this set of information is of importance to users. The alerts would use information from existing storm tracker agencies to indicate if weather conditions are too harsh and require protocols. There will be a global search bar on the header which will let users view the weather for any selected location.</p><br><br>
+
+             
+             
+             <img src="../images/hourly.jpg" class="image"><div class="caption"><i>When the "hourly" tab is selected, this table will replace all the information on the today page.</i></div><br><br>
+                
+                 <p class="blackp">
+                
+                
+                The hourly view will give users the ability to see weather details in increments of one hour. Users can only see only 12 hours. If the browser size cuts off the table, then users can scroll within the table. All of this data is extracted through the Wunderland API. </p><br><br>
+                
+                     
+                     <img src="../images/10day.jpg" class="image"><div class="caption"><i>The 10-day view.</i></div><br><br>
+                
+             
+             <p class="blackp">
+                 
+                 The 10-day view will show a maximum of ten days. Just like with the hourly view, if the user's browser cuts off some of the table, then users will be able to scroll within the table.
+             </p><br><br><br>
+             
+                 <h3 class="positiontext">THE VISUAL ASSETS</h3>
+                 <p class="blackp">
+                 
+                 
+                Once I had a clear idea of how the website will be laid out, it was time to focus on the look and feel of the website. This included figuring out what font and color scheme to use. Since there will be a lot of tables and data, I opted for a sans serif font to reduce noise. My colleague felt strongly about using blue as our main color, so I played around with different shades until I found one that was subtle yet bold enough for our purposes. Using my knowledge of the color wheel, I also went with orange to accompany the blue. 
+                     
+                     
+                     
              </p><br><br>
              
              
-             <img src="../images/weatherdogtype.svg" class="image2"><div class="caption"><i>A thin font with a set of soft, playful colors.</i></div>
+             <img src="../images/weatherdogtype.svg" class="image2"><div class="caption"><i>A thin font with a set of soft, playful colors.</i></div><br><br>
              
-             <br><br> <img src="../images/Group2.svg" class="image"><div class="caption"><i>The Weatherdog mascot. Instead of making a high fidelity icon for our logo, we wanted to keep things traditional and cartoonish instead.</i></div>
+             <p class="blackp">What I needed to come up with next was pretty obvious. How can you have a website called "Weatherdog" and not have a dog mascot, am I right? I was initially going to create a scalable image of a simple dog, like an icon. I eventually changed my mind and wanted to give it more personality by hand drawing it. My colleague recommended a dog in a yellow raincoat, so that's what I aimed for. After several revisions, I came up with this guy:</p>
+             
+             <br><br> <img src="../images/Group2.svg" class="image"><div class="caption"><i>The Weatherdog. We wanted to keep it simple and cartoon-y.</i></div>
             <br><br>
              
-             <img src="../images/weat.svg" class="image"><div class="caption"><i>A set of weather icons I created for this website. These icons are used to show the different weather conditions.</i></div>
+             <p class="blackp">Because Weatherdog is our original creation, every asset would have to be created by me. Using Illustrator, I created icons to indicate the different weather conditions. Using the Weather Underground API for our data meant that I had to create an icon for every condition available. These icons will be used for all three views.</p><br><br>
+             <img src="../images/weat.svg" class="image">
             <br><br><br>
              
-             <h3 class="positiontext">FUTURE GOALS</h3>
-             <p class="blackp">The finished design was handed over to my colleague and the project is currently in its beta phase. We will be ready to implement changes and feedback to keep the site updated, but we will also like to work with third party agencies to incorporate disaster relief efforts. We would like to include resources such as links that will provide donation tips during these disasters. </p><br><br>
+        
              
                  <img src="../images/w1.png" class="imagewithshadow2"><br><br>
              
@@ -132,7 +174,10 @@
              <img src="../images/w4.png" class="imagewithshadow2"><br><br>
              
              
-          
+               <h3 class="positiontext">MORE THAN JUST WEATHER</h3>
+             <p class="blackp">Because the project manpower included just my colleague and I, we were the only visible stakeholders. We reviewed the InVision prototype together, and even allowed some users to test it. There were minor modifications such as adjustments to font size and spacing, but overall, we received good remarks about Weatherdog.
+                 <br><br>
+                 The site is currently in its beta phase while being slowly developed. However, we plan to further iterate the project in the future because we want to make Weatherdog accessible through mobile as well. We will be ready to implement changes and feedback to keep the site updated, but we also plan to work with others to provide resources that people can use during emergencies. </p><br><br>
             
             
              

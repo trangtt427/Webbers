@@ -767,6 +767,25 @@ a.kupo {
     
 }
 
+.pinkfont {
+  color:#939393;}
+
+
+.pinkp {
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color:#939393;
+    margin:auto;
+    max-width:625px;
+     line-height:180%;
+     padding-right:20px;
+    padding-left:20px;
+    padding-top:45px;
+    padding-bottom:45px;
+    
+}
+
 .smallporttext {
   font-family: "Muli", sans-serif;
   font-size: 16px;
@@ -818,7 +837,7 @@ a.kupo {
 }
 
 .positiontext {
-    color:#939393;
+    color:#D65489;
     font-family: "Muli";
     font-size:14px;
     font-weight:100px;
