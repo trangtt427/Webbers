@@ -46,7 +46,7 @@ $(document).ready(function () {
 				}
 			}
 			preload(
-				"http://domain.tld/gallery/image-001.jpg",
+				"../images/",
 				"http://domain.tld/gallery/image-002.jpg",
 				"http://domain.tld/gallery/image-003.jpg"
 			)
