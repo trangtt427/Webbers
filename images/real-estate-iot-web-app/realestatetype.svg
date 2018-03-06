@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="342px" height="178px" viewBox="0 0 342 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>va</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="va">
+            <g id="Group" transform="translate(13.000000, 14.000000)" fill="#4C4E4F" font-family="Aileron-SemiBold, Aileron" font-weight="500">
+                <text id="Aileron-SemiBold" font-size="13">
+                    <tspan x="17.0915" y="13">Aileron SemiBold</tspan>
+                </text>
+                <text id="ABCDEFGHIJKLMNOPQRST" font-size="8">
+                    <tspan x="0.784" y="31">ABCDEFGHIJKLMNOPQRSTUVWXYZ</tspan>
+                    <tspan x="14.556" y="41">abcdefghijklmnopqrstuvwxyz</tspan>
+                    <tspan x="45.46" y="51">0123456789</tspan>
+                </text>
+            </g>
+            <g id="Group-Copy" transform="translate(179.000000, 14.000000)" fill="#4C4E4F" font-family="AvenirNextCondensed-Medium, Avenir Next Condensed" font-style="condensed" font-weight="400">
+                <text id="Avenir-Next-Condense" font-size="13">
+                    <tspan x="0.354" y="13">Avenir Next Condensed Regular</tspan>
+                </text>
+                <text id="ABCDEFGHIJKLMNOPQRST" font-size="8">
+                    <tspan x="24.22" y="31">ABCDEFGHIJKLMNOPQRSTUVWXYZ</tspan>
+                    <tspan x="32.976" y="42">abcdefghijklmnopqrstuvwxyz</tspan>
+                    <tspan x="56.22" y="53">0123456789</tspan>
+                </text>
+            </g>
+            <g id="Group_1_1_-Copy-2" transform="translate(41.000000, 99.000000)" fill-rule="nonzero">
+                <g id="Shape_1" fill="#242424">
+                    <rect id="Rectangle-path" x="0.702446281" y="0.662597531" width="52.8209256" height="55.3000691"></rect>
+                </g>
+                <g id="Shape_1_copy" transform="translate(51.000000, 0.000000)" fill="#5BC5EB">
+                    <rect id="Rectangle-path" x="0.604933884" y="0.662597531" width="52.8234917" height="55.3000691"></rect>
+                </g>
+                <g id="Shape_1_copy_2" transform="translate(103.000000, 0.000000)" fill="#FAFAFA">
+                    <rect id="Rectangle-path" x="0.375428571" y="0.662597531" width="52.9302857" height="55.3000691"></rect>
+                </g>
+                <g id="Shape_1_copy_3" transform="translate(155.000000, 0.000000)" fill="#EEEEEE">
+                    <rect id="Rectangle-path" x="0.389380165" y="0.662597531" width="52.8234917" height="55.3000691"></rect>
+                </g>
+                <g id="Shape_1_copy_4" transform="translate(205.000000, 0.000000)" fill="#58B9AE">
+                    <rect id="Rectangle-path" x="0.552857143" y="0.662597531" width="52.9328571" height="55.3000691"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

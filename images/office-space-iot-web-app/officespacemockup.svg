@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3282px" height="5707px" viewBox="0 0 3282 5707" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #8AAEC8;">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="325" height="71"></rect>
+        <rect id="path-2" x="319" y="159" width="802" height="778"></rect>
+        <filter x="-4.3%" y="-2.5%" width="108.6%" height="108.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="15" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="9" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-4" x="0" y="0" width="325" height="71"></rect>
+        <rect id="path-5" x="0" y="0" width="270" height="71"></rect>
+        <rect id="path-6" x="0" y="0" width="270" height="71"></rect>
+        <rect id="path-7" x="0" y="0" width="270" height="71"></rect>
+        <filter x="-3.2%" y="-2.6%" width="106.3%" height="109.2%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="15" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="9" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-9" x="0" y="0" width="729" height="342"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" fill="#FFFFFF">
+            <rect id="Rectangle-16" x="90" y="90" width="1440" height="1024"></rect>
+            <rect id="Rectangle-16-Copy-2" x="90" y="1214" width="1440" height="1024"></rect>
+            <rect id="Rectangle-16-Copy-4" x="90" y="2338" width="1440" height="1024"></rect>
+            <rect id="Rectangle-16-Copy-6" x="90" y="3462" width="1440" height="1024"></rect>
+            <rect id="Rectangle-16-Copy-7" x="90" y="4586" width="1440" height="1024"></rect>
+            <rect id="Rectangle-16-Copy-5" x="1730" y="2338" width="1440" height="1024"></rect>
+            <rect id="Rectangle-16-Copy-3" x="1730" y="1214" width="1440" height="1024"></rect>
+        </g>
+        <g id="Desktop-HD-Copy" transform="translate(90.000000, 90.000000)">
+            <text id="P-R-O-P-E-R-T-Y" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="623.055" y="59">P R O P E R T Y</tspan>
+            </text>
+            <g id="Group" transform="translate(356.000000, 117.000000)" fill="#386C82" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995">
+                <text id="HOME">
+                    <tspan x="0.350000072" y="19">HOM</tspan>
+                    <tspan x="50.9099999" y="19">E</tspan>
+                </text>
+                <text id="HVAC">
+                    <tspan x="137.1" y="19">HVAC</tspan>
+                </text>
+                <text id="SCHEDULE">
+                    <tspan x="269.26" y="19">SCHEDULE</tspan>
+                </text>
+                <text id="ALARMS">
+                    <tspan x="457.37" y="19">ALARMS</tspan>
+                </text>
+                <text id="CHARTING">
+                    <tspan x="618.39" y="19">CHARTING</tspan>
+                </text>
+            </g>
+            <text id="User" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#386C82">
+                <tspan x="1234.3" y="49">User</tspan>
+            </text>
+            <circle id="Oval" fill="#B2DAED" cx="1332.5" cy="45.5" r="29.5"></circle>
+            <path d="M2.5,157.5 L1444.56796,157.5" id="Line-3-Copy" stroke="#71ACC6" stroke-linecap="square"></path>
+            <path d="M2.5,99.5 L1444.56796,99.5" id="Line-3" stroke="#71ACC6" stroke-linecap="square"></path>
+            <rect id="Rectangle" fill="#B2DAED" x="59" y="188" width="391" height="313"></rect>
+            <rect id="Rectangle-Copy" fill="#B2DAED" x="525" y="188" width="391" height="313"></rect>
+            <rect id="Rectangle-Copy-2" fill="#B2DAED" x="991" y="188" width="391" height="313"></rect>
+            <rect id="Rectangle-2" fill="#B2DAED" x="59" y="520" width="1323" height="475"></rect>
+            <g id="Button-Copy" transform="translate(124.000000, 391.000000)">
+                <rect id="Rectangle-3" fill="#71ACC6" x="0" y="0" width="261" height="62" rx="31"></rect>
+                <text id="View-All" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="100" y="38">View All</tspan>
+                </text>
+            </g>
+            <text id="Alarms" font-family="Aileron-Regular, Aileron" font-size="36" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="196.178" y="290">Alarms</tspan>
+            </text>
+            <text id="Central-Plant" font-family="Aileron-Regular, Aileron" font-size="36" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="608.046" y="581">Central Plant</tspan>
+            </text>
+            <text id="Central-Plant-Info" font-family="Aileron-Regular, Aileron" font-size="36" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="187.214" y="793">Central Plant Info</tspan>
+            </text>
+            <text id="Central-Plant-Info-Copy" font-family="Aileron-Regular, Aileron" font-size="36" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="569.214" y="793">Central Plant Info</tspan>
+            </text>
+            <text id="Central-Plant-Info-Copy-2" font-family="Aileron-Regular, Aileron" font-size="36" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="951.214" y="793">Central Plant Info</tspan>
+            </text>
+            <text id="Units-Occupied" font-family="Aileron-Regular, Aileron" font-size="36" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="587.182" y="290">Units Occupied</tspan>
+            </text>
+            <text id="Units-Occupied-Copy" font-family="Aileron-Regular, Aileron" font-size="36" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="1053.182" y="290">Units Occupied</tspan>
+            </text>
+            <g id="Button-Copy-2" transform="translate(590.000000, 391.000000)">
+                <rect id="Rectangle-3" fill="#71ACC6" x="0" y="0" width="261" height="62" rx="31"></rect>
+                <text id="View-All" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="100" y="38">View All</tspan>
+                </text>
+            </g>
+            <g id="Button-Copy-3" transform="translate(1056.000000, 391.000000)">
+                <rect id="Rectangle-3" fill="#71ACC6" x="0" y="0" width="261" height="62" rx="31"></rect>
+                <text id="View-All" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="100" y="38">View All</tspan>
+                </text>
+            </g>
+            <rect id="Rectangle-5" fill="#71ACC6" x="345" y="151" width="87" height="8"></rect>
+        </g>
+        <g id="Desktop-HD-Copy-2" transform="translate(90.000000, 1214.000000)">
+            <text id="P-R-O-P-E-R-T-Y" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="623.055" y="59">P R O P E R T Y</tspan>
+            </text>
+            <g id="Group" transform="translate(356.000000, 117.000000)" fill="#386C82" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995">
+                <text id="HOME">
+                    <tspan x="0.350000072" y="19">HOM</tspan>
+                    <tspan x="50.9099999" y="19">E</tspan>
+                </text>
+                <text id="HVAC">
+                    <tspan x="137.1" y="19">HVAC</tspan>
+                </text>
+                <text id="SCHEDULE">
+                    <tspan x="269.26" y="19">SCHEDULE</tspan>
+                </text>
+                <text id="ALARMS">
+                    <tspan x="457.37" y="19">ALARMS</tspan>
+                </text>
+                <text id="CHARTING">
+                    <tspan x="618.39" y="19">CHARTING</tspan>
+                </text>
+            </g>
+            <text id="User" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#386C82">
+                <tspan x="1234.3" y="49">User</tspan>
+            </text>
+            <circle id="Oval" fill="#B2DAED" cx="1332.5" cy="45.5" r="29.5"></circle>
+            <path d="M2.5,157.5 L1444.56796,157.5" id="Line-3-Copy" stroke="#71ACC6" stroke-linecap="square"></path>
+            <path d="M2.5,99.5 L1444.56796,99.5" id="Line-3" stroke="#71ACC6" stroke-linecap="square"></path>
+            <rect id="Rectangle-5" fill="#71ACC6" x="475" y="151" width="87" height="8"></rect>
+            <g id="Table" opacity="0.35" transform="translate(75.000000, 278.000000)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="115" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="227" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="56" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="171" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="286" width="1290" height="56"></rect>
+            </g>
+            <g id="Table-Copy" opacity="0.35" transform="translate(75.000000, 739.000000)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="115" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="227" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="56" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="171" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="286" width="1290" height="56"></rect>
+            </g>
+            <text id="FLOOR" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="75.2900001" y="220">FLOOR</tspan>
+            </text>
+            <text id="FLOOR-Copy" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="75.2900001" y="692">FLOOR</tspan>
+            </text>
+        </g>
+        <g id="Desktop-HD-Copy-4" transform="translate(90.000000, 2338.000000)">
+            <text id="P-R-O-P-E-R-T-Y" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="623.055" y="59">P R O P E R T Y</tspan>
+            </text>
+            <text id="&lt;-Month-&gt;" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="639.395" y="231">&lt;   Month   &gt;</tspan>
+            </text>
+            <g id="Group" transform="translate(356.000000, 117.000000)" fill="#386C82" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995">
+                <text id="HOME">
+                    <tspan x="0.350000072" y="19">HOM</tspan>
+                    <tspan x="50.9099999" y="19">E</tspan>
+                </text>
+                <text id="HVAC">
+                    <tspan x="137.1" y="19">HVAC</tspan>
+                </text>
+                <text id="SCHEDULE">
+                    <tspan x="269.26" y="19">SCHEDULE</tspan>
+                </text>
+                <text id="ALARMS">
+                    <tspan x="457.37" y="19">ALARMS</tspan>
+                </text>
+                <text id="CHARTING">
+                    <tspan x="618.39" y="19">CHARTING</tspan>
+                </text>
+            </g>
+            <text id="User" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#386C82">
+                <tspan x="1234.3" y="49">User</tspan>
+            </text>
+            <circle id="Oval" fill="#B2DAED" cx="1332.5" cy="45.5" r="29.5"></circle>
+            <path d="M2.5,157.5 L1444.56796,157.5" id="Line-3-Copy" stroke="#71ACC6" stroke-linecap="square"></path>
+            <path d="M2.5,99.5 L1444.56796,99.5" id="Line-3" stroke="#71ACC6" stroke-linecap="square"></path>
+            <rect id="Rectangle-5" fill="#71ACC6" x="636" y="151" width="87" height="8"></rect>
+            <g id="Table" opacity="0.35" transform="translate(75.000000, 278.000000)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="219" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="433" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="107" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="326" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="545" width="1290" height="107"></rect>
+            </g>
+            <g id="Table-Copy" opacity="0.35" transform="translate(719.683148, 603.085020) rotate(-90.000000) translate(-719.683148, -603.085020) translate(397.183148, -42.914980)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="433.739863" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="857.576989" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="211.918563" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="645.658426" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="1079.39829" width="644.683148" height="211.918563"></rect>
+            </g>
+            <g id="Button" transform="translate(1085.000000, 202.000000)">
+                <rect id="Rectangle-3" fill="#71ACC6" x="0" y="0" width="248" height="46" rx="23"></rect>
+                <text id="Add-Event" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="71" y="30">Add Event</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="Desktop-HD-Copy-6" transform="translate(90.000000, 3462.000000)">
+            <text id="P-R-O-P-E-R-T-Y" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="623.055" y="59">P R O P E R T Y</tspan>
+            </text>
+            <g id="Group" transform="translate(356.000000, 117.000000)" fill="#386C82" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995">
+                <text id="HOME">
+                    <tspan x="0.350000072" y="19">HOM</tspan>
+                    <tspan x="50.9099999" y="19">E</tspan>
+                </text>
+                <text id="HVAC">
+                    <tspan x="137.1" y="19">HVAC</tspan>
+                </text>
+                <text id="SCHEDULE">
+                    <tspan x="269.26" y="19">SCHEDULE</tspan>
+                </text>
+                <text id="ALARMS">
+                    <tspan x="457.37" y="19">ALARMS</tspan>
+                </text>
+                <text id="CHARTING">
+                    <tspan x="618.39" y="19">CHARTING</tspan>
+                </text>
+            </g>
+            <text id="User" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#386C82">
+                <tspan x="1234.3" y="49">User</tspan>
+            </text>
+            <circle id="Oval" fill="#B2DAED" cx="1332.5" cy="45.5" r="29.5"></circle>
+            <path d="M2.5,157.5 L1444.56796,157.5" id="Line-3-Copy" stroke="#71ACC6" stroke-linecap="square"></path>
+            <path d="M2.5,99.5 L1444.56796,99.5" id="Line-3" stroke="#71ACC6" stroke-linecap="square"></path>
+            <rect id="Rectangle-5" fill="#71ACC6" x="812" y="151" width="87" height="8"></rect>
+            <text id="Events" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="152.275" y="348">Events</tspan>
+            </text>
+            <text id="Filter" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="828.84" y="348">Filter</tspan>
+            </text>
+            <g id="Table-Copy-6" opacity="0.35" transform="translate(152.000000, 395.000000)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="1136" height="25"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="51" width="1136" height="25"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="101" width="1136" height="25"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="25" width="1136" height="25"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="76" width="1136" height="25"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="127" width="1136" height="25"></rect>
+            </g>
+            <g id="Group-5-Copy" transform="translate(950.000000, 293.000000)">
+                <g id="Group-4-Copy-4" transform="translate(1.000000, 0.000000)">
+                    <g id="Rectangle-11-Copy">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#71ACC6" stroke-width="2" x="1" y="1" width="323" height="69"></rect>
+                    </g>
+                </g>
+                <rect id="Rectangle-13" fill="#B2DAED" x="0" y="0" width="162" height="71"></rect>
+            </g>
+        </g>
+        <g id="Desktop-HD-Copy-7" transform="translate(90.000000, 4586.000000)">
+            <text id="P-R-O-P-E-R-T-Y" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="623.055" y="59">P R O P E R T Y</tspan>
+            </text>
+            <g id="Group" transform="translate(356.000000, 117.000000)" fill="#386C82" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995">
+                <text id="HOME">
+                    <tspan x="0.350000072" y="19">HOM</tspan>
+                    <tspan x="50.9099999" y="19">E</tspan>
+                </text>
+                <text id="HVAC">
+                    <tspan x="137.1" y="19">HVAC</tspan>
+                </text>
+                <text id="SCHEDULE">
+                    <tspan x="269.26" y="19">SCHEDULE</tspan>
+                </text>
+                <text id="ALARMS">
+                    <tspan x="457.37" y="19">ALARMS</tspan>
+                </text>
+                <text id="CHARTING">
+                    <tspan x="618.39" y="19">CHARTING</tspan>
+                </text>
+            </g>
+            <text id="User" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#386C82">
+                <tspan x="1234.3" y="49">User</tspan>
+            </text>
+            <circle id="Oval" fill="#B2DAED" cx="1332.5" cy="45.5" r="29.5"></circle>
+            <path d="M2.5,157.5 L1444.56796,157.5" id="Line-3-Copy" stroke="#71ACC6" stroke-linecap="square"></path>
+            <path d="M2.5,99.5 L1444.56796,99.5" id="Line-3" stroke="#71ACC6" stroke-linecap="square"></path>
+            <rect id="Rectangle-5" fill="#71ACC6" x="990" y="151" width="87" height="8"></rect>
+            <rect id="Rectangle-14" fill="#B2DAED" x="0" y="159" width="319" height="865"></rect>
+            <g id="Table-Copy-7" opacity="0.35" transform="translate(0.000000, 159.000000)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="115" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="227" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="56" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="171" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="286" width="319" height="56"></rect>
+            </g>
+            <g id="Table-Copy-8" opacity="0.35" transform="translate(0.000000, 501.000000)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="115" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="227" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="56" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="171" width="319" height="56"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="286" width="319" height="56"></rect>
+            </g>
+            <text id="Start-Date---End-Dat" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="679.365" y="273">Start Date - End Date</tspan>
+            </text>
+            <text id="Equipment" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="76.205" y="194">Equipment</tspan>
+            </text>
+            <rect id="Rectangle-15" fill="#B2DAED" x="382" y="414" width="970" height="523"></rect>
+            <polyline id="Path-2" stroke="#FFFFFF" stroke-width="6" points="429.046987 863.265567 624.09989 634.499674 742.808583 849.569302 963.931937 470.793938 1145.41614 802.890669"></polyline>
+        </g>
+        <g id="Desktop-HD-Copy-5" transform="translate(1730.000000, 2338.000000)">
+            <text id="P-R-O-P-E-R-T-Y" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="623.055" y="59">P R O P E R T Y</tspan>
+            </text>
+            <text id="&lt;-Month-&gt;" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="639.395" y="231">&lt;   Month   &gt;</tspan>
+            </text>
+            <g id="Group" transform="translate(356.000000, 117.000000)" fill="#386C82" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995">
+                <text id="HOME">
+                    <tspan x="0.350000072" y="19">HOM</tspan>
+                    <tspan x="50.9099999" y="19">E</tspan>
+                </text>
+                <text id="HVAC">
+                    <tspan x="137.1" y="19">HVAC</tspan>
+                </text>
+                <text id="SCHEDULE">
+                    <tspan x="269.26" y="19">SCHEDULE</tspan>
+                </text>
+                <text id="ALARMS">
+                    <tspan x="457.37" y="19">ALARMS</tspan>
+                </text>
+                <text id="CHARTING">
+                    <tspan x="618.39" y="19">CHARTING</tspan>
+                </text>
+            </g>
+            <text id="User" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#386C82">
+                <tspan x="1234.3" y="49">User</tspan>
+            </text>
+            <circle id="Oval" fill="#B2DAED" cx="1332.5" cy="45.5" r="29.5"></circle>
+            <path d="M2.5,157.5 L1444.56796,157.5" id="Line-3-Copy" stroke="#71ACC6" stroke-linecap="square"></path>
+            <path d="M2.5,99.5 L1444.56796,99.5" id="Line-3" stroke="#71ACC6" stroke-linecap="square"></path>
+            <rect id="Rectangle-5" fill="#71ACC6" x="636" y="151" width="87" height="8"></rect>
+            <g id="Table" opacity="0.35" transform="translate(75.000000, 278.000000)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="219" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="433" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="107" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="326" width="1290" height="107"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="545" width="1290" height="107"></rect>
+            </g>
+            <g id="Table-Copy" opacity="0.35" transform="translate(719.683148, 603.085020) rotate(-90.000000) translate(-719.683148, -603.085020) translate(397.183148, -42.914980)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="433.739863" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="857.576989" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="211.918563" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="645.658426" width="644.683148" height="211.918563"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="1079.39829" width="644.683148" height="211.918563"></rect>
+            </g>
+            <g id="Button" transform="translate(1085.000000, 202.000000)">
+                <rect id="Rectangle-3" fill="#71ACC6" x="0" y="0" width="248" height="46" rx="23"></rect>
+                <text id="Add-Event" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="71" y="30">Add Event</tspan>
+                </text>
+            </g>
+            <rect id="Rectangle-7-Copy" fill-opacity="0.6" fill="#B2DAED" x="0" y="-1" width="1440" height="1024"></rect>
+            <g id="Rectangle-10">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+            <g id="Group-5" transform="translate(720.000000, 787.000000)">
+                <g id="Group-4-Copy-4" transform="translate(1.000000, 0.000000)">
+                    <g id="Rectangle-11-Copy">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <rect stroke="#71ACC6" stroke-width="2" x="1" y="1" width="323" height="69"></rect>
+                    </g>
+                </g>
+                <rect id="Rectangle-13" fill="#B2DAED" x="0" y="0" width="162" height="71"></rect>
+            </g>
+            <g id="Group-4" transform="translate(768.000000, 281.000000)">
+                <g id="Rectangle-11-Copy">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <rect stroke="#71ACC6" stroke-width="2" x="1" y="1" width="268" height="69"></rect>
+                </g>
+                <polygon id="Triangle-2" fill="#B2DAED" points="233 48 213 24 253 24"></polygon>
+            </g>
+            <g id="Group-4-Copy" transform="translate(768.000000, 395.000000)">
+                <g id="Rectangle-11-Copy">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-6"></use>
+                    <rect stroke="#71ACC6" stroke-width="2" x="1" y="1" width="268" height="69"></rect>
+                </g>
+                <polygon id="Triangle-2" fill="#B2DAED" points="233 48 213 24 253 24"></polygon>
+            </g>
+            <g id="Group-4-Copy-2" transform="translate(768.000000, 513.000000)">
+                <g id="Rectangle-11-Copy">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    <rect stroke="#71ACC6" stroke-width="2" x="1" y="1" width="268" height="69"></rect>
+                </g>
+                <polygon id="Triangle-2" fill="#B2DAED" points="233 48 213 24 253 24"></polygon>
+            </g>
+            <text id="X" font-family="Aileron-Regular, Aileron" font-size="36" font-weight="normal" letter-spacing="2.33999991" fill="#386C82">
+                <tspan x="1085.08" y="194">X</tspan>
+            </text>
+            <text id="Event-Name" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="383.125" y="324">Event Name</tspan>
+            </text>
+            <text id="Event-Class" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="387.495" y="438">Event Class</tspan>
+            </text>
+            <text id="Event-Type" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="385.145" y="556">Event Type</tspan>
+            </text>
+            <text id="Start-Time-Mode" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="390.39" y="830">Start Time Mode</tspan>
+            </text>
+        </g>
+        <g id="Desktop-HD-Copy-3" transform="translate(1730.000000, 1214.000000)">
+            <text id="P-R-O-P-E-R-T-Y" font-family="Aileron-Regular, Aileron" font-size="30" font-weight="normal" fill="#386C82">
+                <tspan x="623.055" y="59">P R O P E R T Y</tspan>
+            </text>
+            <g id="Group" transform="translate(356.000000, 117.000000)" fill="#386C82" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995">
+                <text id="HOME">
+                    <tspan x="0.350000072" y="19">HOM</tspan>
+                    <tspan x="50.9099999" y="19">E</tspan>
+                </text>
+                <text id="HVAC">
+                    <tspan x="137.1" y="19">HVAC</tspan>
+                </text>
+                <text id="SCHEDULE">
+                    <tspan x="269.26" y="19">SCHEDULE</tspan>
+                </text>
+                <text id="ALARMS">
+                    <tspan x="457.37" y="19">ALARMS</tspan>
+                </text>
+                <text id="CHARTING">
+                    <tspan x="618.39" y="19">CHARTING</tspan>
+                </text>
+            </g>
+            <text id="User" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" fill="#386C82">
+                <tspan x="1234.3" y="49">User</tspan>
+            </text>
+            <circle id="Oval" fill="#B2DAED" cx="1332.5" cy="45.5" r="29.5"></circle>
+            <path d="M2.5,157.5 L1444.56796,157.5" id="Line-3-Copy" stroke="#71ACC6" stroke-linecap="square"></path>
+            <path d="M2.5,99.5 L1444.56796,99.5" id="Line-3" stroke="#71ACC6" stroke-linecap="square"></path>
+            <rect id="Rectangle-5" fill="#71ACC6" x="475" y="151" width="87" height="8"></rect>
+            <g id="Table" opacity="0.35" transform="translate(75.000000, 278.000000)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="115" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="227" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="56" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="171" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="286" width="1290" height="56"></rect>
+            </g>
+            <g id="Table-Copy" opacity="0.35" transform="translate(75.000000, 739.000000)">
+                <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="115" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="227" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="56" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="171" width="1290" height="56"></rect>
+                <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="286" width="1290" height="56"></rect>
+            </g>
+            <text id="FLOOR" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="75.2900001" y="220">FLOOR</tspan>
+            </text>
+            <text id="FLOOR-Copy" font-family="Aileron-Regular, Aileron" font-size="20" font-weight="normal" letter-spacing="1.29999995" fill="#386C82">
+                <tspan x="75.2900001" y="692">FLOOR</tspan>
+            </text>
+            <rect id="Rectangle-7" fill-opacity="0.6" fill="#B2DAED" x="0" y="0" width="1440" height="1024"></rect>
+            <g id="Group-2" filter="url(#filter-8)" transform="translate(173.000000, 175.000000)">
+                <rect id="Rectangle-8" fill="#FFFFFF" x="0" y="0" width="1094" height="750"></rect>
+                <g id="Image-Copy" transform="translate(49.000000, 40.000000)">
+                    <g id="Rectangle-4">
+                        <use fill="#B2DAED" fill-rule="evenodd" xlink:href="#path-9"></use>
+                        <rect stroke="#71ACC6" stroke-width="1" x="0.5" y="0.5" width="728" height="341"></rect>
+                    </g>
+                    <path d="M1.01815642,0.673228346 L727.981844,341.326772" id="Line" stroke="#71ACC6" stroke-linecap="square"></path>
+                    <path d="M1.01820728,341.326087 L725.981793,1.67391304" id="Line-2" stroke="#71ACC6" stroke-linecap="square"></path>
+                </g>
+                <g id="Table-Copy-3" opacity="0.35" transform="translate(49.000000, 419.000000)">
+                    <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="729" height="47"></rect>
+                    <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="98" width="729" height="47"></rect>
+                    <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="192" width="729" height="47"></rect>
+                    <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="47" width="729" height="47"></rect>
+                    <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="145" width="729" height="47"></rect>
+                    <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="243" width="729" height="47"></rect>
+                </g>
+                <g id="Table-Copy-4" opacity="0.35" transform="translate(818.000000, 47.000000)">
+                    <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="261" height="50"></rect>
+                    <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="104" width="261" height="50"></rect>
+                    <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="203" width="261" height="50"></rect>
+                    <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="50" width="261" height="50"></rect>
+                    <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="154" width="261" height="50"></rect>
+                    <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="257" width="261" height="50"></rect>
+                </g>
+                <g id="Table-Copy-5" opacity="0.35" transform="translate(818.000000, 382.000000)">
+                    <rect id="Rectangle-9" fill="#B2DAED" x="0" y="0" width="261" height="53"></rect>
+                    <rect id="Rectangle-9-Copy-2" fill="#B2DAED" x="0" y="111" width="261" height="53"></rect>
+                    <rect id="Rectangle-9-Copy-4" fill="#B2DAED" x="0" y="216" width="261" height="53"></rect>
+                    <rect id="Rectangle-9-Copy" fill="#71ACC6" x="0" y="53" width="261" height="53"></rect>
+                    <rect id="Rectangle-9-Copy-3" fill="#71ACC6" x="0" y="164" width="261" height="53"></rect>
+                    <rect id="Rectangle-9-Copy-5" fill="#71ACC6" x="0" y="274" width="261" height="53"></rect>
+                </g>
+            </g>
+            <text id="X" font-family="Aileron-Regular, Aileron" font-size="36" font-weight="normal" letter-spacing="2.33999991" fill="#386C82">
+                <tspan x="1230.08" y="211">X</tspan>
+            </text>
+        </g>
+        <path d="M1717,2567 L1389,2567 L1389,2563.18182 L1717,2563.18182 L1717,2546 L1815,2567 L1717,2588 L1717,2567 Z" id="Combined-Shape" fill="#B2DAED"></path>
+        <path d="M1696,1785 L1495,1785 L1495,1781 L1696,1781 L1696,1763 L1756,1785 L1696,1807 L1696,1785 Z" id="Combined-Shape" fill="#B2DAED"></path>
+    </g>
+</svg>
