@@ -520,7 +520,7 @@ text-align:center;
 
 
 #header {
-  height:475px;
+  height:490px;
   position:relative;
   background-repeat:no-repeat;
   background-position: center 0;
@@ -685,6 +685,7 @@ img {
 }
 
 .main {
+   
     padding:20px;
     max-width:1000px;
     margin:auto;
