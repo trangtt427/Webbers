@@ -718,7 +718,7 @@ img {
 }
 
 .container:hover .overlay {
-  opacity: 0.7;
+  opacity: 0.85;
         -backface-visibility: hidden;
 -webkit-backface-visibility: hidden;
 -moz-backface-visibility: hidden;
@@ -733,19 +733,17 @@ img {
 }
 
 .text {
-    background: rgba(1, 1, 1, 0.5);
+    background: rgba(1, 1, 1, 0.75);
     font-family: "Assistant", sans-serif;
     font-weight:300;
     letter-spacing:3px;
     z-index:99;
     opacity:1;
     padding:10px;
-    min-width:45%;
-    width:75%;
   color: white;
   font-size: 18px;
   position: absolute;
-  top: 25%;
+  top: 40%;
   left: 50%;
     transition: .55s ease-in-out;
   transform: translate(-50%, -50%);
