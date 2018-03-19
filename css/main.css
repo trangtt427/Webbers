@@ -538,10 +538,6 @@ text-align:center;
     background-image:url('../images/header-backgrounds/powerplug.jpg');
 }
 
-.ggp-iot-mobile-app {
-    background-image:url('../images/header-backgrounds/ggpmobile1.jpg');
-}
-
 .fluppy-cat-mobile-game {
     background-image:url('../images/header-backgrounds/fluppycat.jpg');
 }
@@ -560,6 +556,10 @@ text-align:center;
 
 .ggp-iot-mobile-app {
     background-image:url('../images/header-backgrounds/ggpmobile1.jpg');
+}
+
+.custom-icon-sets {
+    background-image:url('../images/header-backgrounds/icons.jpg');
 }
 
 
@@ -872,7 +872,7 @@ height:105px;
 }
 
 a {
-    color:#D9447B;
+    color:#14a7cc;
     text-decoration:none;
 }
 
