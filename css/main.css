@@ -530,6 +530,13 @@ text-align:center;
   text-shadow:0 5px 6px rgba(0,0,0,.9);
 }
 
+
+
+
+.digital-illustrations {
+    background-image:url('../images/header-backgrounds/artwork.jpg');
+}
+
 .engagio-digital-marketing {
     background-image:url('../images/header-backgrounds/engagio.jpg');
 }
