@@ -24,7 +24,12 @@ body {
         max-width:1200px;
         margin:auto;
 
-    
+}
+
+        .guys {
+            width:100%;
+                background-color:#f2f2f2;
+
     
     }
 
@@ -764,7 +769,7 @@ img {
     left: 0px;
    background: rgba(1, 1, 1, 0.60);
     color: white;
-    padding:10px 20px 10px 20px;
+    padding:15px 20px 10px 20px;
     letter-spacing:2px;
     height:30px;
 }
