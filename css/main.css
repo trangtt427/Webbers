@@ -26,12 +26,12 @@ body {
 
 }
 
-        .guys {
+       /* .guys {
             width:100%;
-                background-color:#f2f2f2;
+                background-color:#f2f2f2;*/
 
     
-    }
+
 
 .experience-space {
         width:100%;
@@ -52,8 +52,8 @@ body {
     height:1px;
     width:60%;
     max-width:550px;
-    background:black;
-    background: linear-gradient(120deg, #55e4ff, #e90d87);
+     background: rgba(150, 150, 150, 0.35);
+    /*background: linear-gradient(120deg, #55e4ff, #e90d87);*/
     
     
 }
