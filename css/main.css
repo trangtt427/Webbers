@@ -642,10 +642,15 @@ ul, ol {
   
 }
 
+.image {
+       box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
 .column {
   width: 30%;
   margin: 1.66666667% 1.66666667%;
   float: left;
+    
 
 }
 
