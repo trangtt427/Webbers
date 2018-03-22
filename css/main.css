@@ -641,7 +641,6 @@ ul, ol {
   width: 30%;
   margin: 1.66666667% 1.66666667%;
   float: left;
-    
 
 }
 
@@ -739,7 +738,7 @@ img {
        background: rgba(1, 1, 1, 0);
 }
 
-.text {
+/*.text {
     background: rgba(1, 1, 1, 0.75);
     font-family: "Assistant", sans-serif;
     font-weight:300;
@@ -757,7 +756,20 @@ img {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
     -webkit-backface-visibility: hidden;
+}*/
+
+.text {
+   position: absolute;
+    top: 0px;
+    left: 0px;
+   background: rgba(1, 1, 1, 0.60);
+    color: white;
+    padding:10px 20px 10px 20px;
+    letter-spacing:2px;
+    height:30px;
 }
+
+
 
 
 
