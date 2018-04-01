@@ -220,7 +220,7 @@ hr {
 
 
 .header-text {
-    text-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+    text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
     text-align:center;
     letter-spacing:1px;
     line-height:1.6;
@@ -235,20 +235,22 @@ hr {
 
     }
 
-.header-text2 {
-    text-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+.shabang {
+    text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
     text-align:center;
     letter-spacing:1px;
     line-height:1.6;
     max-width:550px;
     color: #fff;
-    font-size:18px;
+    font-size:15px;
     font-family: "Assistant";
     font-weight:300;
     margin:auto;
+  padding:0.5em;
     
 
     }
+
     
 
 .bold {
@@ -334,35 +336,7 @@ hr {
    
 }
 
-@media screen and (max-width:600px) {
-     .header-text {
-    text-align:center;
-    letter-spacing:1px;
-    line-height:1.6;
-    max-width:550px;
-    color: #fff;
-    font-size:16px;
-    font-family: "Assistant";
-    font-weight:300;
-    margin:auto;
 
-    
-
-    }
-    
-      .header-text2 {
-    text-align:center;
-    letter-spacing:1px;
-    line-height:1.6;
-    max-width:550px;
-    color: #fff;
-    font-size:16px;
-    font-family: "Assistant";
-    font-weight:300;
-    margin:auto;
-    
-    }
-}
 
 @media only screen and (min-width:701px) {
       .hideme2 {
@@ -422,7 +396,7 @@ hr {
 
 
 
-/*.animate-in {
+.animate-in {
     -webkit-animation: fadeIn 1.0s ease-in;
     animation: fadeIn 1.0s ease-in;
     }
@@ -435,7 +409,7 @@ hr {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}*/
+}
 
 
 
@@ -1149,8 +1123,22 @@ animation-delay: 1.6s;
 @keyframes fadeInUp {
   from { 
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUpHome {
+  from { 
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
   }
 
   to {
@@ -1163,20 +1151,46 @@ animation-delay: 1.6s;
 .project-title {
   
   opacity: 0; 
-    animation: fadeInUp 1s ease-in-out 0s forwards;}
-
-  &.imagedude {
-    animation-delay: 6s;
-  }
+    animation: fadeInUp 0.5s ease-in-out 0s forwards;}
 
 .imagedude {
   
   opacity: 0; 
     animation: fadeInUp 1s ease-in-out 0s forwards;}
 
-  &.imagedude {
-    animation-delay: 6s;
+.shabang {
+  
+  opacity: 0; 
+    animation: fadeInUp 1s ease-in-out 0s forwards;}
+  &.project-title {
+    animation-delay: 1s;
   }
+
+  &.imagedude {
+    animation-delay: 2s;
+  }
+
+.first
+{
+  
+  opacity: 0; 
+    animation: fadeInUpHome 1s ease-in-out 0s forwards;}
+
+.second
+{
+  
+  opacity: 0; 
+    animation: fadeInUpHome 1s ease-in-out 0s forwards;}
+
+  &.first {
+    animation-delay: 1s;
+  }
+
+  &.second {
+    animation-delay: 1s;
+}}
+
+
 
 
 
