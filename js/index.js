@@ -11,7 +11,7 @@ $(window).scroll(function() {
   //make the H1 drift up and get more transparent 
   $("header h1").css({
     "bottom": windowTop * 1,
-    "opacity": 1 - (windowTop/275)
+    "opacity": 1 - (windowTop/175)
   });
   //shift the header background slowly. try a negative windowTop or multiply instead of divide
   $("header").css("background-position-y", windowTop / 3);
@@ -51,3 +51,9 @@ $(document).ready(function () {
 				"http://domain.tld/gallery/image-003.jpg"
 			)
 		//--><!]]>
+
+
+
+
+
+
