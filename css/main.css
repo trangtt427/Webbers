@@ -1147,6 +1147,13 @@ animation-delay: 1.6s;
     transform: none;
   }
 }
+.portfolio-space {
+    
+opacity: 0; 
+    animation: fadeInUpHome 0.5s ease-in-out 0s forwards;}
+
+}
+
 
 .project-title {
   
