@@ -164,6 +164,17 @@ hr {
       color: #494949;
 }
 
+  .titlelogo {
+      display:inline-block;
+      text-align: center;
+      width:100%;
+      font-size:20px;
+      font-family: "Assistant";
+      margin:auto;
+      letter-spacing:3px;
+      color: #494949;
+}
+
 .line {
     width:300px;
 }
@@ -314,7 +325,7 @@ hr {
 
 
 .tlogo {
-    width:130px;
+    width:180px;
     margin:auto;
     align-content:center;
     display:block;
