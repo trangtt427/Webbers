@@ -1159,12 +1159,13 @@ animation-delay: 1.6s;
     transform: none;
   }
 }
+
 .portfolio-space {
     
 opacity: 0; 
     animation: fadeInUpHome 0.5s ease-in-out 0s forwards;}
 
-}
+
 
 
 .project-title {
@@ -1181,13 +1182,7 @@ opacity: 0;
   
   opacity: 0; 
     animation: fadeInUp 1s ease-in-out 0s forwards;}
-  &.project-title {
-    animation-delay: 1s;
-  }
 
-  &.imagedude {
-    animation-delay: 2s;
-  }
 
 .first
 {
@@ -1200,14 +1195,6 @@ opacity: 0;
   
   opacity: 0; 
     animation: fadeInUpHome 1s ease-in-out 0s forwards;}
-
-  &.first {
-    animation-delay: 1s;
-  }
-
-  &.second {
-    animation-delay: 1s;
-}}
 
 
 
