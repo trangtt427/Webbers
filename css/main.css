@@ -1379,6 +1379,21 @@ opacity: 0;
       letter-spacing:3px;
       color: #494949;
 }
+    
+    .titlelogo{
+         display:inline-block;
+      text-align: center;
+      width:100%;
+      font-size:22px;
+      font-family: "Assistant";
+      margin:auto;
+      letter-spacing:2px;
+      color: #494949;
+        
+        
+        
+        
+    }
 
     .hide {
         display:none;
