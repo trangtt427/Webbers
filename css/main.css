@@ -24,7 +24,9 @@
 
 
 
-
+.resumedetails {
+    display:block;
+}
 
 
 
@@ -168,7 +170,7 @@ hr {
       display:inline-block;
       text-align: center;
       width:100%;
-      font-size:20px;
+      font-size:26px;
       font-family: "Assistant";
       margin:auto;
       letter-spacing:3px;
@@ -181,10 +183,10 @@ hr {
 
 .paragraph {
     text-align:center;
-    line-height:35px;
+    line-height:32px;
     max-width:550px;
     color: #494949;
-    font-size:16px;
+    font-size:18px;
     font-family: "Assistant";
     font-weight:400;
     margin:auto;
@@ -201,6 +203,19 @@ hr {
     font-family: "Assistant";
     font-weight:400;
     margin:auto;
+}
+
+.homepage-paragraph {
+    letter-spacing:.5px;
+    line-height:27px;
+    max-width:650px;
+    color: #494949;
+    font-size:16px;
+    font-family: "Assistant";
+    font-weight:400;
+    margin:auto;
+    text-align:center;
+    padding:20px;
 }
 
 .copyright {
@@ -231,7 +246,23 @@ hr {
 
 
 .header-text {
-    text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+    /*text-shadow: 0px 3px 5px rgba(0,0,0,0.5);*/
+    text-align:center;
+    letter-spacing:1px;
+    line-height:1.6;
+    max-width:550px;
+    color: #fff;
+    font-size:18px;
+    font-family: "Assistant";
+    font-weight:300;
+    margin:auto;
+  padding:1em;
+    
+
+    }
+
+.header-textdesktop {
+    /*text-shadow: 0px 3px 5px rgba(0,0,0,0.5);*/
     text-align:center;
     letter-spacing:1px;
     line-height:1.6;
@@ -247,13 +278,13 @@ hr {
     }
 
 .shabang {
-    text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+  /*  text-shadow: 0px 3px 5px rgba(0,0,0,0.5);*/
     text-align:center;
     letter-spacing:1px;
     line-height:1.6;
     max-width:550px;
     color: #fff;
-    font-size:15px;
+    font-size:18px;
     font-family: "Assistant";
     font-weight:300;
     margin:auto;
@@ -335,75 +366,7 @@ hr {
 
 
 
-@media screen and (min-width:600px) {
-        .wrapper {
-        margin-bottom: 40px;
 
-}
-    
-    
-    
-    
-   
-}
-
-
-
-@media only screen and (min-width:701px) {
-      .hideme2 {
-            display:none;
-        }
-       
-    .hideme3 {
-           display:none;
-    }
-    
-     .ministyleguidemobile {
-            display:none;
-        } 
-}
-    
-    @media only screen and (max-width:700px) {
-    
-        
-    
-        .groupguyz2 {
-            display:none;
-        }
-        
-      
-        .groupguyz3 {
-            display:none;
-        }
-        
-        
-  
-            .project-title {
-    font-size: 28px;
-    font-family: "Assistant";
-    font-weight:400;
-    letter-spacing:3px;
-}  
-     
-
-    
-    #column {
-    display:none;
-}
-
-      #single-column {
-        text-align:center;
-        display:inline-block;
-    }
-        
-   
-        .ministyleguide {
-            display:none;
-        }  
- 
-}
-
-   
 
 
 
@@ -448,17 +411,16 @@ hr {
 .btn {
      text-decoration: none;
     font-family: "Assistant";
-     font-size: 13px;
+     font-size: 15px;
     letter-spacing:2px;
-    font-weight:300;
+    font-weight:500;
   margin: 5px;
   padding: 15px 25px 15px 25px;
   transition: 0.7s;
-  background-size: 250% auto;
-  color: white;
- /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
-  box-shadow: 0 0 1px #eee;
-  border-radius: 25px;
+  color: #212730;
+    border-width:2px;
+    border-style: solid;
+    border-color: #212730;
  }
 
 /* Demo Stuff End -> */
@@ -466,13 +428,21 @@ hr {
 /* <- Magic Stuff Start */
 
 .btn:hover {
-  background-position: right center;
-    /* change the direction of the change here */
-}
+     text-decoration: none;
+    background-color:#212730;
+    font-family: "Assistant";
+     font-size: 15px;
+    letter-spacing:2px;
+    font-weight:500;
+  margin: 5px;
+  padding: 15px 25px 15px 25px;
+  transition: 0.7s;
+  color: white;
+    border-width:2px;
+    border-style: solid;
+    border-color: white;
+ }
 
-.btn-1 {
-  background-image: linear-gradient(to right, #55e4ff 0%, #e90d87 51%, #55e4ff 100%);
-}
 
 /*.resumelink {
     text-decoration: none;
@@ -660,6 +630,7 @@ text-align:center;
 .infomart-energy-dashboard {
     background-image:url('../images/header-backgrounds/infomart.jpg');
      background: linear-gradient(200deg, #4ab7ea, #171b22);
+   
     
 }
 
@@ -688,7 +659,7 @@ text-align:center;
 
 
 header h1{
-    text-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+  /*  text-shadow: 0px 3px 5px rgba(0,0,0,0.3);*/
   box-sizing:border-box;
   position:relative;
   width:100%;
@@ -984,7 +955,6 @@ img {
  position:inline-block;
 height:auto;
   padding:0.5rem;
-  background-color: #303335;
      background-color: #212730;
   text-align: center;
     margin-top:-20px;
@@ -1034,6 +1004,7 @@ a {
 
 a.footertextlink {
      color:#E7E6E6;
+    letter-spacing:1.5px;
     opacity:0.5;
      -webkit-transition: opacity .25s ease-in-out;
     -backface-visibility: hidden;
@@ -1197,7 +1168,339 @@ opacity: 0;
     animation: fadeInUpHome 1s ease-in-out 0s forwards;}
 
 
+/*-------------new portfolio blocks---------*/
+
+.portblock {
+    width:100%;
+    height:550px;
+     
+}
+
+.uno {
+     background: linear-gradient(200deg, #007a87, #58bfb8);
+}
+
+.dos {
+      background: linear-gradient(200deg,#2655a4, #3ec0f4);
+  
+     
+}
+.tres {
+      background: linear-gradient(200deg,#60C6E9, #5CB9AE);
+  
+     
+}
+.cuatro {
+        background: linear-gradient(200deg, #2b4060, #4f9bd4);
+  
+     
+}
+
+.cinco {
+          background: linear-gradient(200deg, #4ab7ea, #171b22);
+  
+     
+}
+
+.seis {
+        background: linear-gradient(200deg, #514269, #e77926);
+  
+     
+}
+
+.siete {
+         background: linear-gradient(200deg, #73c0ec, #a6397e);
+  
+     
+}
 
 
+
+
+
+
+
+
+.portblockcontent {
+    max-width:1000px;
+    margin:0 auto;
+    display:flex;
+     padding:25px;
+      
+   
+   
+}
+
+.halfblock1 {
+    background-color:;
+    width:60%;
+    padding:35px;
+    overflow:hidden;
+ 
+   
+   
+    
+   
+    
+    
+}
+
+.halfblock2 {
+    background-color:;
+    width:40%;
+    text-align:center;
+   
+    
+    
+   
+    
+}
+
+
+
+.project-title {
+    color:white;
+}
+
+    .project-titledesktop {
+    font-family: "Assistant";
+    font-weight:400;
+    letter-spacing:3px;
+    color:white;
+}  
+   
+
+.viewproject {
+    font-size:15px;
+   color:white;
+    /* border-style: solid;
+    border-width: 1px;*/
+    width:200px;
+    margin:auto;
+    padding:10px;
+    transition: .4s ease;
+     -backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+ 
+
+}
+
+
+.viewproject:hover {
+  
+      -backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+    transform: scale(1.2);
+
+}
+
+.aboutresume {
+    font-size:15px;
+    font-weight:500;
+    color:#212730;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#212730;
+    width:200px;
+    margin:auto;
+    padding:10px;
+     text-align:center;
+
+}
+
+.intro {
+    height:650px;
+}
+
+.arrow-right { 
+    width:50%;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+    float:right;
+}
+
+.project-button {
+    margin:auto;
+    width:200px;
+
+}
+
+
+@media screen and (min-width:600px) {
+        .wrapper {
+        margin-bottom: 40px;
+
+}
+    
+ 
+  
+    
+    
+    
+   
+}
+
+
+
+@media only screen and (min-width:701px) {
+      .hideme2 {
+            display:none;
+        }
+       
+    .hideme3 {
+           display:none;
+    }
+    
+     .ministyleguidemobile {
+            display:none;
+        } 
+}
+    
+    @media only screen and (max-width:700px) {
+        .paragraph {
+    text-align:center;
+    line-height:35px;
+    max-width:550px;
+    color: #494949;
+    font-size:17px;
+    font-family: "Assistant";
+    font-weight:400;
+    margin:auto;
+    padding:20px; 
+    letter-spacing:1px;
+}
+    
+        
+    
+        .groupguyz2 {
+            display:none;
+        }
+        
+      
+        .groupguyz3 {
+            display:none;
+        }
+        
+        
+  
+            .project-title {
+    font-size: 28px;
+    font-family: "Assistant";
+    font-weight:400;
+    letter-spacing:3px;
+}  
+     
+
+    
+    #column {
+    display:none;
+}
+
+      #single-column {
+        text-align:center;
+        display:inline-block;
+    }
+        
+   
+        .ministyleguide {
+            display:none;
+        }  
+        
+        
+        
+ 
+    
+        
+        
+}
+
+@media only screen and (max-width:840px) {
+    
+    .viewproject {
+    font-size:15px;
+   color:white;
+    /* border-style: solid;
+    border-width: 1px;*/
+    width:155px;
+    margin:auto;
+    transition: .4s ease;
+     -backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+ 
+
+}
+    
+    
+    .portblock {
+    width:100%;
+    height:auto;
+     
+}
+        
+    .header-textdesktop {
+        display:none
+    }
+    
+    .portblockcontent {
+    max-width:1000px;
+    margin:0 auto;
+        display:block;
+     padding:25px;
+   
+   
+}
+    .portimage {
+        width:100%;
+        margin:auto;
+    }
+    
+    
+    
+    .halfblock1 {
+    background-color:;
+    overflow:hidden;
+        margin:auto;
+        display:block;
+        padding-top:20px;
+   
+   
+    
+   
+    
+    
+}
+
+.halfblock2 {
+    background-color:;
+    width:100%;
+    text-align:center;
+    margin:auto;
+    display:block;
+    
+    
+   
+    
+}
+             .project-titledesktop {
+    font-size: 22px;
+    font-family: "Assistant";
+    font-weight:400;
+    letter-spacing:3px;
+                 color:white;
+}  
+    
+    
+     
+
+    
+    
+}
 
 
