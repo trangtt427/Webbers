@@ -25,14 +25,14 @@ $(document).ready(function () {
   $(window).scroll(function () {
     var top =  $(".goto-top");
         if ( $('body').height() <= (    $(window).height() + $(window).scrollTop() + 200 )) {
-  top.animate({"margin-left": "0px"},1500);
+  top.animate({"margin-left": "0px"},1200);
         } else {
-            top.animate({"margin-left": "0px"},1500);
+            top.animate({"margin-left": "0px"},1200);
         }
     });
 
     $(".goto-top").on('click', function () {
-        $("html, body").animate({scrollTop: 0}, 1100);
+        $("html, body").animate({scrollTop: 0}, 1200);
     });
 });
 
@@ -44,7 +44,7 @@ $(function() {
   $('#up').click(function(){
     $('html, body').animate({
         scrollTop: $("#down").offset().top
-    }, 1100);
+    }, 1200);
 });
   
  })
