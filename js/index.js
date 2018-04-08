@@ -38,9 +38,10 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
+/* scroll to a div with the ID "scrollToThis" by clicking a link with the class "scrollLink" */
+$('.scrollLink').click( function() {
+     $('html, body').animate({
+          scrollTop: $('#scrollToThis').offset().top
+     }, 1100);
+});
 
