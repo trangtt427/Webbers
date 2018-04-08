@@ -177,6 +177,17 @@ hr {
       color: #494949;
 }
 
+  .titlelogoname {
+      display:inline-block;
+      text-align: center;
+      width:100%;
+      font-size:46px;
+      font-family: "Assistant";
+      margin:auto;
+      letter-spacing:3px;
+      color: #494949;
+}
+
 .line {
     width:300px;
 }
@@ -865,33 +876,6 @@ img {
 
 /*------end overlay-------*/
 
-@media only screen and (max-width: 1050px){
-  
-  .column {
-    width: 46.6666667%;
-  }
-  
-}
-
-@media only screen and (max-width: 630px){
-  
-  .wrapper{
-    width: 100%;
-      margin: 0 auto;
-      display:block;
-  }
-  
-  .column{
-    float: none;
-    margin: 2.5em auto;
-    width: 100%;
-    
- 
-    }
-    
-  
-  
-}
 
 
 
@@ -1346,6 +1330,68 @@ opacity: 0;
 }
 
 
+@media only screen and (max-width: 630px){
+  
+  .wrapper{
+    width: 100%;
+      margin: 0 auto;
+      display:block;
+  }
+  
+  .column{
+    float: none;
+    margin: 2.5em auto;
+    width: 100%;
+    
+ 
+    }
+    
+    
+.tlogo {
+    width:115px;
+    margin:auto;
+    align-content:center;
+    display:block;
+    padding-bottom:10px;
+  
+}
+    
+    .titlelogoname {
+      display:inline-block;
+      text-align: center;
+      width:100%;
+      font-size:36px;
+      font-family: "Assistant";
+      margin:auto;
+      letter-spacing:3px;
+      color: #494949;
+}
+
+    .hide {
+        display:none;
+    }
+    
+    .footertextlink {
+     color:#E7E6E6;
+    letter-spacing:1.5px;
+        line-height:30px;
+    opacity:0.5;
+     -webkit-transition: opacity .25s ease-in-out;
+    -backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+-webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+    
+    .intro {
+    height:565px;
+}
+    
+}
+
+
+
 
 @media only screen and (min-width:701px) {
       .hideme2 {
@@ -1501,6 +1547,15 @@ opacity: 0;
 
     
     
+}
+
+
+@media only screen and (max-width: 1050px){
+  
+  .column {
+    width: 46.6666667%;
+  }
+  
 }
 
 
