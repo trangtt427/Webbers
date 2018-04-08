@@ -205,6 +205,19 @@ hr {
     letter-spacing:1px;
 }
 
+.singlecolumnparagraph {
+    text-align:center;
+    line-height:32px;
+    max-width:550px;
+    color: #494949;
+    font-size:16px;
+    font-family: "Assistant";
+    font-weight:400;
+    margin:auto;
+    padding:20px; 
+    letter-spacing:1px;
+}
+
 .project-paragraph {
     letter-spacing:.5px;
     line-height:27px;
@@ -1374,7 +1387,8 @@ opacity: 0;
     .footertextlink {
      color:#E7E6E6;
     letter-spacing:1.5px;
-        line-height:30px;
+        line-height:40px;
+        font-size:14px;
     opacity:0.5;
      -webkit-transition: opacity .25s ease-in-out;
     -backface-visibility: hidden;
