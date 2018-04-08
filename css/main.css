@@ -1384,19 +1384,7 @@ opacity: 0;
         display:none;
     }
     
-    .footertextlink {
-     color:#E7E6E6;
-    letter-spacing:1.5px;
-        line-height:40px;
-        font-size:14px;
-    opacity:0.5;
-     -webkit-transition: opacity .25s ease-in-out;
-    -backface-visibility: hidden;
--webkit-backface-visibility: hidden;
--moz-backface-visibility: hidden;
--o-backface-visibility: hidden;
--webkit-transform: translateZ(0) scale(1.0, 1.0);
-}
+   
     
     .intro {
     height:565px;
@@ -1555,6 +1543,20 @@ opacity: 0;
     letter-spacing:3px;
                  color:white;
 }  
+    
+     .footertextlink {
+     color:#E7E6E6;
+    letter-spacing:1.5px;
+        line-height:40px;
+        font-size:14px;
+    opacity:0.5;
+     -webkit-transition: opacity .25s ease-in-out;
+    -backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+-webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
     
     
      
