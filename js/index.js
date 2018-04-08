@@ -39,8 +39,9 @@ $(document).ready(function () {
 
 //scrollanchor
 
-$(document).ready(function(){
+/*$(document).ready(function(){
   // Add smooth scrolling to all links
+
   $("a").on('click', function(event) {
 
     // Prevent default anchor click behavior
