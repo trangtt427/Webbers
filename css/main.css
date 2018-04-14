@@ -626,13 +626,11 @@ text-align:center;
 
 
 .digital-illustrations {
-    background-image:url('../images/header-backgrounds/artwork.jpg');
-     background: linear-gradient(120deg, #55e4ff, #e90d87);
+    background:radial-gradient(circle at top left,#73c0ec,#a6397e 60%);
 }
 
 .engagio-digital-marketing {
-    background-image:url('../images/header-backgrounds/engagio.jpg');
-     background: linear-gradient(200deg, #007a87, #58bfb8);
+     background:radial-gradient(circle at top left,#58bfb8,#007a87 60%);
 }
 
 .power-plug-website-redesign {
@@ -640,37 +638,24 @@ text-align:center;
 }
 
 .fluppy-cat-mobile-game {
-    background-image:url('../images/header-backgrounds/fluppycat.jpg');
-       background: linear-gradient(200deg, #514269, #e77926);
+    background:radial-gradient(circle at top left,#e77926,#514269 60%);
 }
 
 .office-space-iot-web-app {
-    background-image:url('../images/header-backgrounds/officespace.jpg');
-     background: linear-gradient(200deg, #2b4060, #4f9bd4);
-  
-    
+      background:radial-gradient(circle at top left,#4f9bd4,#2b4060 60%);
 }
 
 .infomart-energy-dashboard {
-    background-image:url('../images/header-backgrounds/infomart.jpg');
-     background: linear-gradient(200deg, #4ab7ea, #171b22);
-   
+    background:radial-gradient(circle at top left,#4ab7ea,#171b22 60%);
     
 }
 
 .real-estate-iot-web-app {
-    background-image:url('../images/header-backgrounds/realeastate.jpg');
-    background: linear-gradient(200deg,#60C6E9, #5CB9AE);
+    background:radial-gradient(circle at top left,#60C6E9,#5CB9AE 60%);
 }
 
 .ggp-iot-mobile-app {
-    background-image:url('../images/header-backgrounds/ggpmobile1.jpg');
-     background: linear-gradient(200deg,#2655a4, #3ec0f4);
-}
-
-.custom-icon-sets {
-    background-image:url('../images/header-backgrounds/guy.png');
-      background: linear-gradient(200deg, #73c0ec, #a6397e);
+     background:radial-gradient(circle at top left,#3ec0f4,#2655a4 60%);
 }
 
 
@@ -1173,52 +1158,8 @@ opacity: 0;
      display: flex;
   justify-content: center;
   flex-direction: column;
+     }
      
-}
-
-.uno {
-     background: linear-gradient(200deg, #007a87, #58bfb8);
-}
-
-.dos {
-      background: linear-gradient(200deg,#2655a4, #3ec0f4);
-  
-     
-}
-.tres {
-      background: linear-gradient(200deg,#60C6E9, #5CB9AE);
-  
-     
-}
-.cuatro {
-        background: linear-gradient(200deg, #2b4060, #4f9bd4);
-  
-     
-}
-
-.cinco {
-          background: linear-gradient(200deg, #4ab7ea, #171b22);
-  
-     
-}
-
-.seis {
-        background: linear-gradient(200deg, #514269, #e77926);
-  
-     
-}
-
-.siete {
-         background: linear-gradient(200deg, #73c0ec, #a6397e);
-  
-     
-}
-
-
-
-
-
-
 
 
 .portblockcontent {
