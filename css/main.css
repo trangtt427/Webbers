@@ -796,6 +796,11 @@ img {
 
 }
 
+  .gifguy {
+        display:none;
+    }
+    
+
 
 /*---------------------overlay---------------*/
 .container {
@@ -873,8 +878,6 @@ img {
 
 
 /*------end overlay-------*/
-
-
 
 
 
@@ -1349,7 +1352,11 @@ opacity: 0;
         display:none;
     }
     
-   
+    .gifguy {
+        display:block;
+    }
+    
+  
     
     .intro {
     height:565px;
