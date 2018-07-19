@@ -1,4 +1,3 @@
-
 body {
     overflow-x:hidden;
     margin:0;
@@ -295,7 +294,6 @@ p {
 .my-x{
     z-index:1;
 	margin-top:10px;
-    max-width:900px;
     }
 
 
@@ -1032,8 +1030,6 @@ opacity: 0;
     
 .portblock {
     overflow:hidden;
-    width:100%;
-    height:auto;
     }
     
     
@@ -1102,7 +1098,7 @@ opacity: 0;
     }  
   
     
-.portblockcontent {
+portblockcontent {
     margin:auto;
     display:block;
     height:100%;
