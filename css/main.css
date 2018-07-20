@@ -389,7 +389,13 @@ a {
 
 
 .pibby-paw-org {
-    background:radial-gradient(circle at top left,#fdbb5a,#ff8c46 60%);
+    background:radial-gradient(circle at top left,#ff8c46,#fdbb5a 60%);
+    }
+
+
+
+.vudu-for-web {
+    background:radial-gradient(circle at top left,#144968,#051A27 60%);
     }
 
 
@@ -1087,7 +1093,7 @@ opacity: 0;
     max-width:550px;
     margin:auto;
     color: #1e1e1e;
-    font-size:18px;
+    font-size:16px;
     font-family: "Muli";
     font-weight:300;
     }
