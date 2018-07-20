@@ -52,7 +52,7 @@ p {
     margin:auto;
     font-weight:400;
     letter-spacing:2px;
-    color: ##1e1e1e;
+    color: #494949;
     }
 
 
@@ -64,7 +64,7 @@ p {
     font-size:46px;
     font-family: "Muli";
     margin:auto;
-    color: #1e1e1e;
+    color: #494949;
     letter-spacing:2px;
     display:inline-block;
     }
@@ -93,7 +93,7 @@ p {
     text-align:left;
     line-height:32px;
     max-width:550px;
-    color: #1e1e1e;
+    color: #494949;
     font-size:18px;
     font-family: "Muli";
     font-weight:300;
@@ -103,7 +103,7 @@ p {
 .introparagraph {
     line-height:1.6;
     max-width:800px;
-    color: #1e1e1e;
+    color: #494949;
     font-size:20px;
     font-family: "Muli";
     font-weight:300;
@@ -113,7 +113,7 @@ p {
 .project-paragraph {
     line-height:1.6;
     max-width:800px;
-    color: #1e1e1e;
+    color: #494949;
     font-size:17px;
     font-family: "Muli";
     font-weight:300;
@@ -124,7 +124,7 @@ p {
 .homepage-paragraph {
     line-height:1.6;
     max-width:550px;
-    color: #1e1e1e;
+    color: #494949;
     font-size:17px;
     font-family: "Muli";
     font-weight:300;
@@ -243,7 +243,7 @@ p {
     margin: 5px;
     padding: 15px 25px 15px 25px;
     transition: 0.4s;
-    color: #1e1e1e;
+    color: #494949;
     border-width:2px;
     border-style: solid;
     border-color: #1e1e1e;
@@ -459,7 +459,7 @@ h1 {
     font-family: "Muli";
     letter-spacing:2px;
     margin:auto;
-    color: #1e1e1e;
+    color: #494949;
     line-height:1.6;
     }
 
@@ -468,7 +468,7 @@ ul, ol {
     margin:auto;
     line-height:1.6;
     max-width:600px;
-    color: #1e1e1e;
+    color: #494949;
     font-size:17px;
     font-family: "Muli";
     font-weight:300;
@@ -911,7 +911,7 @@ opacity: 0;
 .aboutresume {
     font-size:15px;
     font-weight:500;
-    color:#1e1e1e;
+    color:#494949;
     border-style: solid;
     border-width: 2px;
     border-color:#1e1e1e;
@@ -1092,7 +1092,7 @@ opacity: 0;
     line-height:1.6;
     max-width:550px;
     margin:auto;
-    color: #1e1e1e;
+    color: #494949;
     font-size:16px;
     font-family: "Muli";
     font-weight:300;
@@ -1186,7 +1186,7 @@ portblockcontent {
     font-family: "Muli";
     letter-spacing:1px;
     margin:auto;
-    color: #1e1e1e;
+    color: #494949;
     }
     
         
@@ -1252,7 +1252,7 @@ ul, ol {
     font-size:30px;
     font-family: "Muli";
     margin:auto;
-    color: #1e1e1e;
+    color: #494949;
     letter-spacing:2px;
     }
     
@@ -1264,7 +1264,7 @@ ul, ol {
     font-size:20px;
     font-family: "Muli";
     margin:auto;
-    color: #1e1e1e;    
+    color: #494949;    
     }
     
     
