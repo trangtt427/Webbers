@@ -211,6 +211,7 @@ p {
 .tlogo {
     width:150px;
     display:inline-block;
+    align-content:left;
     padding-bottom:10px;
     }
 
@@ -1088,10 +1089,8 @@ opacity: 0;
     
  
 .introparagraph {
-    text-align:center;
-    line-height:1.6;
+    text-align:left;
     max-width:550px;
-    margin:auto;
     color: #494949;
     font-size:16px;
     font-family: "Muli";
@@ -1239,15 +1238,13 @@ ul, ol {
     
 .tlogo {
     width:100px;
-    margin:auto;
-    align-content:center;
-    display:block;  
+    align-content:left;
     }
     
     
 .titlelogoname {
     display:inline-block;
-    text-align: center;
+    text-align: left;
     width:100%;
     font-size:30px;
     font-family: "Muli";
