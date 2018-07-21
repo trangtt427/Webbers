@@ -147,7 +147,7 @@ p {
 .caption {
     line-height:1.4;
     padding-top:8px;
-    max-width:550px;
+    max-width:600px;
     color: rgba(48, 51, 53, 0.6);
     font-size:16px;
     font-family: "Muli";
@@ -574,7 +574,7 @@ img {
 
 .footer {
     position:block;
-    height:250px;
+    height:265px;
     background-color: #1e1e1e;
     text-align: center;
     margin-top:-20px;
