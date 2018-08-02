@@ -114,7 +114,7 @@ p {
     line-height:1.6;
     max-width:800px;
     color: #494949;
-    font-size:17px;
+    font-size:16px;
     font-family: "Muli";
     font-weight:300;
     margin:auto;
@@ -125,7 +125,7 @@ p {
     line-height:1.6;
     max-width:550px;
     color: #494949;
-    font-size:17px;
+    font-size:16px;
     font-family: "Muli";
     font-weight:300;
     text-align:left;
@@ -145,11 +145,10 @@ p {
 
 
 .caption {
-    line-height:1.4;
-    padding-top:8px;
+    line-height:1.5;
     max-width:600px;
     color: rgba(48, 51, 53, 0.6);
-    font-size:16px;
+    font-size:14px;
     font-family: "Muli";
     font-weight:300;
     margin:auto;
@@ -162,7 +161,7 @@ p {
     line-height:1.6;
     max-width:450px;
     color: #fff;
-    font-size:17px;
+    font-size:16px;
     font-family: "Muli";
     font-weight:300;
     }
@@ -172,7 +171,7 @@ p {
     line-height:1.6;
     max-width:550px;
     color: #fff;
-    font-size:17px;
+    font-size:16px;
     font-family: "Muli";
     font-weight:300;
     margin:auto;
@@ -470,7 +469,7 @@ ul, ol {
     line-height:1.6;
     max-width:600px;
     color: #494949;
-    font-size:17px;
+    font-size:16px;
     font-family: "Muli";
     font-weight:300;
     }
@@ -1064,8 +1063,7 @@ opacity: 0;
 @media only screen and (max-width:700px) {
     
 .caption {
-    line-height:1.4;
-    padding-top:8px;
+    line-height:1.5;
     max-width:550px;
     color: rgba(48, 51, 53, 0.6);
     font-size:14px;
