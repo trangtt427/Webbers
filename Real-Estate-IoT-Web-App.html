@@ -42,7 +42,7 @@
         <img src="images/header-backgrounds/realestatelaptop.png" class="imagedude fade-in">
        
        <div class="shabang">
-           <div class="bold">Role:</div> UX Designer | Product Designer | Developer<br><div class="bold">Tools:</div> Sketch | Zeplin | InVision | DGLux5 | Niagara N4<br><div class="bold">Processes:</div> Wireframing | Iterative Design | Mockups | Prototyping | Usability Testing<br><div class="bold">Date:</div> August 2017</div>
+           <div class="bold">Role:</div> UX Designer | Product Designer | Developer<br><div class="bold">Tools:</div> Sketch | Zeplin | DGLux5 | Niagara N4<br><div class="bold">Processes:</div> Wireframing | Iterative Design | Mockups | Prototyping | Usability Testing<br><div class="bold">Date:</div> October 2017</div>
        
         <div class="fortyspace"></div>
   </header>
@@ -64,7 +64,7 @@
     <h1 class="project-h1">Project Overview</h1>
       <div class="twentyspace"></div>
     
-    <p class="project-paragraph">A real estate client wanted solution where they can manage the operations of their facilities. The application would also function as a repository for files and documents pertaining to these facilities. They asked for their website to look more like a dashboard where all the important information is shown at first glance.</p>
+    <p class="project-paragraph">A real estate client wanted a way to manage the operations of their facilities. They also needed a feature where they can add files into a repository to share amongst other personnel. We had just begun integrating their data into our cloud, but the client wanted us to start working on building the interface. Unlike the other projects I've done at Controlco, this one didn't have the requirements fleshed out. Instead, we were given a very simple concept that was drawn up by the client team.</p>
       
     
        <div class="fortyspace"></div>
@@ -73,56 +73,91 @@
       
       
       
-     <h1 class="project-h1">Methods</h1>
+     <h1 class="project-h1">Initial Brainstorm and Requirements</h1>
       <div class="twentyspace"></div>
-     <p class="project-paragraph">The project kicked off with a meeting with stakeholders and data modelers. We were given an early stage mockup that represented the vision of our clients. After getting the information we needed, I created a more detailed wireframe that would show the flow between screens.</p>
+     <p class="project-paragraph">The project kicked off with a meeting with the clients as well as the data modelers from our company. We gathered up requirements and brainstormed some ideas on how they wanted the interface designed. The end deliverable for this project would be a functional dashboard. Since we didn't have all the data integrated, we agreed to focus on just the homepage therefore I didn't need to set up a sitemap. The partial requirements included:</p>
+      
+      <div class="twentyspace"></div>
+      
+       <ol>
+            <li>Dashboard homepage that will be an overview of systems</li>
+            <li>Imagery that will help users know which building they're on</li>
+            <li>Functionality where users can download and upload files</li>
+            <li>Set of secondary navigation menu on homepage for building information, operational hours, contact list, as well as document repository</li>
+      </ol>
+      
+      <div class="twentyspace"></div>
+      
+      
+        <p class="project-paragraph">Using the client's mockup, I came up with wireframes to showcase the architecture and flow. The repository functionality was the most important, so I designed for that specific use case.</p>
       
        <div class="fortyspace"></div>
       
-      <img src='images/real-estate-iot-web-app/realestatemockup.jpg' class="project-image"><p class="caption">A simple blueprint of the client's website</p>
+      <img src='images/real-estate-iot-web-app/realestatemockup.png' class="project-image"><p class="caption">Simple mockup of the homepage and repository feature</p>
       
 
       <div class="fortyspace"></div>
         <p class="project-paragraph">
-            The mockup was refined and reiterated using feedback from our clients at every step. After several revisions, we finally compromised on the UI.
+            We held an internal review with the engineers and data modelers to see if the design was feasible. This was the first time that we've introduced this feature, as none of our other clients needed this functionality. These artboards were also shown to the clients to obtain feedback throughout the process.
         </p>   
+      <div class="twentyspace"></div>
+      
+        <p class="project-paragraph">
+            The next step was to craft a design system for this template. The client gave me details about what colors they wanted the dashboard to be. After showcasing some combinations of typography and color guides, we were able to compromise on a palette of greys, as well as the conventional status colors.
+        </p> 
+      
       
     <div class="fortyspace"></div>
       
      
       
-     <div class="ministyleguide"><img src="images/real-estate-iot-web-app/realestatetype.svg" width="750px" class="project-image"><p class="caption">I chose to go with a white UI because it was reminscent of an excel spreadsheet (which was partially what they wanted)</p></div>
-      
-      <div class="ministyleguidemobile"><img src="images/real-estate-iot-web-app/realestatetypemobile.svg" width="550px" class="project-image"><p class="caption">I chose to go with a white UI because it was reminscent of an excel spreadsheet (which was partially what they wanted)</p></div>
-      
+     <img src="images/real-estate-iot-web-app/colorpalette.svg" class="">
       <div class="fortyspace"></div>
       
       
-        <p class="project-paragraph">
-            With the UI design approved by the client team, I went on to building the prototype in DGLux5.
-        </p>   
+      <img src="images/real-estate-iot-web-app/textstyle.svg" class="project-image"><p class="caption">Different text styles used for copy</p>
+      
+      <div class="fortyspace"></div>
+      
+       <img src="images/real-estate-iot-web-app/jllhiresmockup.png" class="">
+      
       
        <div class="fortyspace"></div>
         <span class="sexy_line"></span>
        <div class="fortyspace"></div>
       
      
-      <h1 class="project-h1">The Challenge</h1>
+      <h1 class="project-h1">Tesing</h1>
       
        <div class="twentyspace"></div>
       <p class="project-paragraph">
         
-          The most difficult part of any process is when others don't understand the workflow. The clients had high expectations and didn't know the difference between mockups and prototypes.
+          Instead of using InVision to build out a clickable prototype, we went ahead and used DGLux5 to build a fully responsive and interactive platform. We tested the feature internally, and then allowed the client to access via public link. We successfully created a new feature that could be used for other projects.
           
       </p>
       <div class="twentyspace"></div>
       
-        <p class="project-paragraph">The issue was resolved by creating a PDF of screens for them to see and giving our clients access to the DGLux5 prototype. With those assets presented to them, they then understood the design process and our workflow. The also realized that things couldn't be turn over as quickly as they wanted because a lot of factors were involved.</p>
+        <p class="project-paragraph">To ensure that the design was scalable, we implemented a search feature, a vertical scroll, and sorting carets. If clients are adding a lot of documents to the repository, these features will help them find specific files.</p>
       
        
       <div class="fortyspace"></div>
       
-      <img src="images/real-estate-iot-web-app/realestatefinalscreens.jpg" class="project-image"><p class="caption">The high fidelity mockup that was delivered to the UI engineering team</p>
+       <div class="groupguyz2">
+         
+                    <img src="images/real-estate-iot-web-app/upload.png" class="project-image project-image-multi-2"><p class="caption">The upload CTA appears only after a user chooses a file</p>
+                
+       <img src="images/real-estate-iot-web-app/uploaded.png" class="project-image project-image-multi-2"><p class="caption">Users will be able to download any file from the document library onto their local desktop</p>
+      </div>
+      
+      
+        <div class="hideme2">
+                    <img src="images/real-estate-iot-web-app/upload.png"><p class="caption">The upload CTA appears only after a user chooses a file</p>
+             
+              <div class="fortyspace"></div>
+             
+       <img src="images/real-estate-iot-web-app/uploaded.png"><p class="caption">Users will be able to download any file from the document library onto their local desktop</p>
+      </div>
+      
       
        <div class="fortyspace"></div>
         <span class="sexy_line"></span>
@@ -137,15 +172,21 @@
       
       <p class="project-paragraph">
         
-          While the process was rocky with some misunderstandings along the way, it brought some good news in the end. The clients loved the final design so much that they wanted to use this UI for all of their properties. This meant that over 30 properties will be integrated by Controlco and use this template.
+          This was my last contribution to Controlco, although it was still in the works when I left. I built a modular symbol library in DGLux5 for anyone to come in and pick up where I left off. Along with the source files, there was proper documentation and design guides to help finish the product once the data starts coming in.
       </p>
           
           
-          
+          <div class="twentyspace"></div>
+      
+      
+      <p class="project-paragraph">
+        
+          Internally, we were happy that we got the opportunity to craft a new feature that we can start using for other projects. I felt that I built a pretty robust system to get the product started. The client really liked the platform that we built for them, and as a result, wanted to contract us for several other facilities in their portfolio.
+      </p>
          
-        
-        
-        
+        <div class="fortyspace"></div>
+      
+         <img src="images/header-backgrounds/realestatelaptop.png">
        
         
      
