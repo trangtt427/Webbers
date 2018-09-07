@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="347px" height="785px" viewBox="0 0 347 785" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>vertical timeline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy" transform="translate(-256.000000, -184.000000)">
+            <g id="vertical-timeline" transform="translate(256.000000, 184.000000)">
+                <g id="Group-2">
+                    <circle id="Oval" fill="#CF3F7D" cx="11" cy="11" r="11"></circle>
+                    <g id="Group" transform="translate(52.000000, 0.000000)" fill="#4A4A4A" font-size="17">
+                        <text id="DEFINE-THE-PROBLEM" font-family="Muli-SemiBold, Muli" font-weight="500">
+                            <tspan x="0" y="17">DEFINE THE PROBLEM</tspan>
+                        </text>
+                        <text id="Discussed-with-custo" font-family="Muli-Regular, Muli" font-weight="normal">
+                            <tspan x="0" y="48">Discussed with customers about their </tspan>
+                            <tspan x="0" y="69">needs</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group-3" transform="translate(0.000000, 113.000000)">
+                    <circle id="Oval-Copy" fill="#CF3F7D" cx="11" cy="11" r="11"></circle>
+                    <g id="Group-Copy" transform="translate(52.000000, 0.000000)" fill="#4A4A4A" font-size="17">
+                        <text id="GATHER-INFORMATION" font-family="Muli-SemiBold, Muli" font-weight="500">
+                            <tspan x="0" y="17">GATHER INFORMATION</tspan>
+                        </text>
+                        <text id="Identified-use-case" font-family="Muli-Regular, Muli" font-weight="normal">
+                            <tspan x="0" y="48">Identified use case of respository and </tspan>
+                            <tspan x="0" y="69">gained insights from customers</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group-3-Copy-2" transform="translate(0.000000, 402.000000)">
+                    <circle id="Oval-Copy" fill="#CF3F7D" cx="11" cy="11" r="11"></circle>
+                    <g id="Group-Copy" transform="translate(52.000000, 0.000000)" fill="#4A4A4A" font-size="17">
+                        <text id="CREATE-VISUAL-IDENTI" font-family="Muli-SemiBold, Muli" font-weight="500">
+                            <tspan x="0" y="17">CREATE VISUAL IDENTITY</tspan>
+                        </text>
+                        <text id="Came-up-with-design" font-family="Muli-Regular, Muli" font-weight="normal">
+                            <tspan x="0" y="48">Came up with design guide and </tspan>
+                            <tspan x="0" y="69">created original graphics and </tspan>
+                            <tspan x="0" y="90">reusable symbols</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group-3-Copy-3" transform="translate(0.000000, 536.000000)">
+                    <circle id="Oval-Copy" fill="#CF3F7D" cx="11" cy="11" r="11"></circle>
+                    <g id="Group-Copy" transform="translate(52.000000, 0.000000)" fill="#4A4A4A" font-size="17">
+                        <text id="TEST-AND-EVALUATE" font-family="Muli-SemiBold, Muli" font-weight="500">
+                            <tspan x="0" y="17">TEST AND EVALUATE</tspan>
+                        </text>
+                        <text id="Tested-repository-fe" font-family="Muli-Regular, Muli" font-weight="normal">
+                            <tspan x="0" y="48">Tested repository feature internally </tspan>
+                            <tspan x="0" y="69">with sample files</tspan>
+                            <tspan x="0" y="90"></tspan>
+                            <tspan x="0" y="111">Allowed users to access repository to </tspan>
+                            <tspan x="0" y="132">test</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group-3-Copy-4" transform="translate(0.000000, 712.000000)">
+                    <circle id="Oval-Copy" fill="#CF3F7D" cx="11" cy="11" r="11"></circle>
+                    <g id="Group-Copy" transform="translate(52.000000, 0.000000)" fill="#4A4A4A" font-size="17">
+                        <text id="TURN-OVER-TO-DEVELOP" font-family="Muli-SemiBold, Muli" font-weight="500">
+                            <tspan x="0" y="17">TURN OVER TO DEVELOPMENT</tspan>
+                        </text>
+                        <text id="Handed-over-source-f" font-family="Muli-Regular, Muli" font-weight="normal">
+                            <tspan x="0" y="48">Handed over source files and </tspan>
+                            <tspan x="0" y="69">artboards to engineering team</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group-3-Copy" transform="translate(0.000000, 226.000000)">
+                    <circle id="Oval-Copy" fill="#CF3F7D" cx="11" cy="11" r="11"></circle>
+                    <g id="Group-Copy" transform="translate(52.000000, 0.000000)" fill="#4A4A4A" font-size="17">
+                        <text id="PRESENT-SOLUTIONS" font-family="Muli-SemiBold, Muli" font-weight="500">
+                            <tspan x="0" y="17">PRESENT SOLUTIONS</tspan>
+                        </text>
+                        <text id="Created-small-scale" font-family="Muli-Regular, Muli" font-weight="normal">
+                            <tspan x="0" y="48">Created small-scale sketches to </tspan>
+                            <tspan x="0" y="69">showcase possible solutions</tspan>
+                            <tspan x="0" y="90"></tspan>
+                            <tspan x="0" y="111">Reiterated design based on internal </tspan>
+                            <tspan x="0" y="132">feedback from engineers and PMs</tspan>
+                        </text>
+                    </g>
+                </g>
+                <rect id="Rectangle-2" fill="#CF3F7D" x="9" y="15" width="5" height="716"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

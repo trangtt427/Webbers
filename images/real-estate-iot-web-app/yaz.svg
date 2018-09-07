@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1170px" height="370px" viewBox="0 0 1170 370" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>horizontal timeline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-57.000000, -265.000000)">
+            <g id="horizontal-timeline" transform="translate(57.000000, 260.000000)">
+                <rect id="Rectangle" fill="#CF3F7D" x="10" y="98" width="1013" height="5"></rect>
+                <circle id="Oval" fill="#CF3F7D" cx="11" cy="100" r="11"></circle>
+                <text id="DEFINE-THE-PROBLEM" font-family="Muli-Bold, Muli" font-size="20" font-weight="bold" fill="#4A4A4A">
+                    <tspan x="0" y="20">DEFINE THE </tspan>
+                    <tspan x="0" y="45">PROBLEM</tspan>
+                </text>
+                <text id="Discussed-with-custo" font-family="Muli-Regular, Muli" font-size="20" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="0" y="170">Discussed with </tspan>
+                    <tspan x="0" y="195">customers about </tspan>
+                    <tspan x="0" y="220">their needs</tspan>
+                </text>
+                <text id="Identified-use-case" font-family="Muli-Regular, Muli" font-size="20" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="202" y="170">Identified use case </tspan>
+                    <tspan x="202" y="195">of respository and </tspan>
+                    <tspan x="202" y="220">gained insights </tspan>
+                    <tspan x="202" y="245">from customers</tspan>
+                </text>
+                <text id="Created-small-scale" font-family="Muli-Regular, Muli" font-size="20" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="404" y="170">Created small-</tspan>
+                    <tspan x="404" y="195">scale sketches to </tspan>
+                    <tspan x="404" y="220">showcase possible </tspan>
+                    <tspan x="404" y="245">solutions</tspan>
+                    <tspan x="404" y="270"></tspan>
+                    <tspan x="404" y="295">Reiterated design </tspan>
+                    <tspan x="404" y="320">based on internal </tspan>
+                    <tspan x="404" y="345">feedback from </tspan>
+                    <tspan x="404" y="370">engineers and PMs</tspan>
+                </text>
+                <text id="Came-up-with-design" font-family="Muli-Regular, Muli" font-size="20" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="606" y="170">Came up with </tspan>
+                    <tspan x="606" y="195">design guide and </tspan>
+                    <tspan x="606" y="220">created original </tspan>
+                    <tspan x="606" y="245">graphics and </tspan>
+                    <tspan x="606" y="270">reusable symbols</tspan>
+                </text>
+                <text id="Tested-repository-fe" font-family="Muli-Regular, Muli" font-size="20" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="808" y="170">Tested repository </tspan>
+                    <tspan x="808" y="195">feature internally </tspan>
+                    <tspan x="808" y="220">with sample files</tspan>
+                    <tspan x="808" y="245"></tspan>
+                    <tspan x="808" y="270">Allowed users to </tspan>
+                    <tspan x="808" y="295">access repository </tspan>
+                    <tspan x="808" y="320">to test</tspan>
+                </text>
+                <text id="Handed-over-source-f" font-family="Muli-Regular, Muli" font-size="20" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="1010" y="170">Handed over </tspan>
+                    <tspan x="1010" y="195">source files and </tspan>
+                    <tspan x="1010" y="220">artboards to </tspan>
+                    <tspan x="1010" y="245">engineering team</tspan>
+                </text>
+                <circle id="Oval-Copy" fill="#CF3F7D" cx="213" cy="100" r="11"></circle>
+                <circle id="Oval-Copy-2" fill="#CF3F7D" cx="415" cy="100" r="11"></circle>
+                <circle id="Oval-Copy-3" fill="#CF3F7D" cx="617" cy="100" r="11"></circle>
+                <circle id="Oval-Copy-4" fill="#CF3F7D" cx="819" cy="100" r="11"></circle>
+                <circle id="Oval-Copy-5" fill="#CF3F7D" cx="1021" cy="100" r="11"></circle>
+                <text id="GATHER-INFORMATION" font-family="Muli-Bold, Muli" font-size="20" font-weight="bold" fill="#4A4A4A">
+                    <tspan x="202" y="20">GATHER </tspan>
+                    <tspan x="202" y="45">INFORMATION</tspan>
+                </text>
+                <text id="PRESENT-SOLUTIONS" font-family="Muli-Bold, Muli" font-size="20" font-weight="bold" fill="#4A4A4A">
+                    <tspan x="404" y="20">PRESENT </tspan>
+                    <tspan x="404" y="45">SOLUTIONS</tspan>
+                </text>
+                <text id="CREATE-VISUAL-IDENTI" font-family="Muli-Bold, Muli" font-size="20" font-weight="bold" fill="#4A4A4A">
+                    <tspan x="606" y="20">CREATE VISUAL </tspan>
+                    <tspan x="606" y="45">IDENTITY</tspan>
+                </text>
+                <text id="TEST-AND-EVALUATE" font-family="Muli-Bold, Muli" font-size="20" font-weight="bold" fill="#4A4A4A">
+                    <tspan x="808" y="20">TEST AND </tspan>
+                    <tspan x="808" y="45">EVALUATE</tspan>
+                </text>
+                <text id="TURN-OVER-TO-DEVELOP" font-family="Muli-Bold, Muli" font-size="20" font-weight="bold" fill="#4A4A4A">
+                    <tspan x="1010" y="20">TURN OVER TO </tspan>
+                    <tspan x="1010" y="45">DEVELOPMENT</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
