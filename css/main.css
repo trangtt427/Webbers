@@ -938,7 +938,18 @@ opacity: 0;
     }
 
 
-@media screen and (max-width:447px) {
+@media screen and (max-width:600px) {
+    
+    .footermenu {
+    float:left;
+    color: #888;
+    font-size:13px;
+    font-family: "Muli";
+    font-weight:300;
+    width:100%;
+    line-height:20px;
+    text-align: left;
+    }
     
 .linksncopy {
     float:left;
@@ -950,7 +961,7 @@ opacity: 0;
     
 .footer {
     position:block;
-    height:340px;
+    height:360px;
     padding:0.5rem;
     background-color: #1e1e1e;
     text-align: center;
