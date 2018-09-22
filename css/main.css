@@ -1,3 +1,15 @@
+.behancelink {
+    max-width: 270px;
+    font-size:18px;
+    display:block;
+    float:left;
+    position:relative;
+    transition: all .2s ease-in-out 0s;
+}
+
+.behancelink:hover {
+    transform: translateY(-4px);
+}
 
 .trangy {
     margin-top:-10px;
@@ -1062,5 +1074,9 @@ ul, ol {
     max-width:900px;
     color:#2a353a;
 }  
+
+.behancelink {
+    font-size:16px;
+}
 }
 
