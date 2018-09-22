@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang Tran</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/main.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    
+  <link href="https://fonts.googleapis.com/css?family=Assistant:300,400" rel="stylesheet">
+    
+       <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+      
+     <link rel="preload" href="/images/weatherdogtest.png" as="image">
+     
+    
+</head>
+  
+ 
+    
+  
+     <body id="project">
+     
+    
+        
+    <div class="site-content animate-in">
+    
+           
+           
+     
+            <br><br><br>
+       
+         <img src="tlogo.svg" class="tlogo">
+         <p class="title" style="font-size:36px;">TRANG TRAN</p>
+         <p class="title">VISUAL & UX DESIGN</p><br><br>
+         <p class="paragraph">
+             Preacher of Simplistic Designs. Bringer of User Friendliness. Peacemaker Between Technology and Human. Mother of kittens.
+             
+            
+             
+             </p>
+         <br>
+            
+        
+      
+        <hr>
+        
+        
+        
+      
+          
+
+   
+        <div class="portfolio-space">
+            
+      
+            <br><br>
+<!=================================================================================================================================================================!>            
+            
+       <div class="wrapper">
+     <section class="column"><a href="./projects/Engagio%20Digital%20Marketing%20Designs.html"><div class="container">
+     <div class="overlay"></div> <img src="./images/portfolio-images/engagio.png" class="image" alt="" /><div class="text">Engagio Digital Marketing Designs</div></div></a>
+      </section>
+           
+           
+  
+           
+ <section class="column"><a href="./projects/Power%20Plug%20Website%20Redesign.html"><div class="container">
+     <div class="overlay"></div> <img src="./images/portfolio-images/powerplug.png" class="image" alt="" /><div class="text">Power Plug Website Redesign</div></div></a>
+      </section>
+           
+           
+   <section class="column"><a href="./projects/Office%20Space%20IoT%20Web%20App.html"><div class="container">
+     <div class="overlay"></div> <img src="./images/portfolio-images/officespace.png" class="image" alt="" /><div class="text">Office Space IoT Web App</div></div></a>
+      </section>
+           
+           
+   <section class="column"><a href="./projects/Real%20Estate%20IoT%20Web%20App.html"><div class="container">
+     <div class="overlay"></div> <img src="./images/portfolio-images/realestate.png" class="image" alt="" /><div class="text">Real Estate IoT Web App</div></div></a>
+      </section>
+           
+    
+           <section class="column"><a href="./projects/GGP%20IoT%20Mobile%20App.html"><div class="container">
+     <div class="overlay"></div> <img src="./images/portfolio-images/ggpmobile.png" class="image" alt="" /><div class="text">GGP IoT Mobile App</div></div></a>
+      </section>
+    
+             <section class="column"><a href="./projects/Infomart%20Energy%20Summary%20Dashboard.html"><div class="container">
+     <div class="overlay"></div> <img src="./images/portfolio-images/infomart.png" class="image" alt="" /><div class="text">Infomart Energy Summary Dashboard</div></div></a>
+      </section>
+           
+               <section class="column"><a href="./projects/Fluppy%20Cat%20Mobile%20Game.html"><div class="container">
+     <div class="overlay"></div> <img src="./images/portfolio-images/fluppycat" class="image" alt="" /><div class="text">Fluppy Cat Mobile Game</div></div></a>
+      </section>
+           
+            </div></div>
+        
+    <!--=========================================================================================================================================================================================-->
+         
+           <br><br>
+        <hr style="style12"><br><br>
+        
+        
+        <p class="title">EXPERIENCE</p>
+        <br><br>
+
+        
+        <div id="column">
+        <p class="left-column">January 2018 - Present</p>
+            <p class="right-column"><strong>Engagio </strong> | San Mateo, CA<br>Visual Designer | Marketing</p></div>
+        
+        
+        
+         
+        <div id="column">
+        <p class="left-column">December 2017 - Present</p>
+            <p class="right-column"><strong>SF Hep B Free</strong> | San Francisco, CA<br>Volunteer Visual Designer</p></div>
+        
+        
+        
+        <div id="column">
+        <p class="left-column">September 2016 - October 2017</p>
+            <p class="right-column"><strong>Controlco</strong> | Pleasant Hill, CA<br>UX Designer | Product</p></div>
+        
+         <div id="column">
+        <p class="left-column">August 2012 - Present</p>
+             <p class="right-column"><strong>Freelance</strong><br>Visual/UX Designer</p></div>
+        
+       
+        
+             <div class="experience-space">
+        
+        
+                 <div id="single-column">
+                     <p class="paragraph">January 2018 - Present<br><strong>Engagio</strong> | San Mateo, CA<br>Visual Designer | Marketing<br><br>December 2017 - Present<br><strong>SF Hep B Free</strong> | San Mateo, CA<br>
+                         Visual Designer<br><br>September 2016 - October 2017<br><strong>Controlco</strong> | Pleasant Hill, CA<br>UX Designer | Product<br><br>August 2012 - Present<br><strong>Freelance</strong><br>Visual/UX Designer</p></div>
+        
+        </div>
+        
+          <div class="resumesection"><a href="/trangtranrez.pdf" class="resumelink" target="_blank">DOWNLOAD RESUME</a>
+   
+      </div>
+         </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/index.js"></script>
+        
+      <div class="bottomstuffs"> <span class="goto-top top"></span>
+ <div class="footer">
+  
+    <div class="sociallinks">
+        
+      
+      <a href="https://www.behance.net/trangtt42714e5" target="_blank" class="bottomlinks"><img class="footersvg" src="./behance-logo.svg" alt="svgthang"></a><a href="https://www.linkedin.com/in/trang-tran-377a19a4/" target="_blank" class="bottomlinks"> <img class="footersvg" src="./linkedin-logo.svg" alt="svgthang"></a><a href="https://www.instagram.com/trvngwreck/" target="_blank" class="bottomlinks"> <img class="footersvg" src="./instagram.svg" alt="svgthang"></a>  
+                
+                
+                 
+             </div>
+   
+     
+          </div></div>
+  
+
+</body>
+</html>
