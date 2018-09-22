@@ -1069,6 +1069,7 @@ ul, ol {
 }
 
 .homepage-title {
+    line-height:1.1;
     font-size: 36px;
     font-family: "Muli";
     font-weight:800;
