@@ -224,7 +224,6 @@ img {
     to { opacity: 1; }
 }
 
-
 .btn {
     text-decoration: none;
     display:inline-block;
@@ -239,6 +238,7 @@ img {
     border-radius:25px;
     border-style: solid;
     border-color: #181819;
+    min-width:250px;
 }
 
 .btn:hover {
@@ -1030,6 +1030,7 @@ ul, ol {
 }
 
 @media only screen and (max-width: 630px){
+    
     
 .hide-underline {
     display:none;
