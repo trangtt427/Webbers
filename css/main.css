@@ -224,13 +224,14 @@ img {
     to { opacity: 1; }
 }
 
-.btn {
+/*.btn {
     text-decoration: none;
     display:inline-block;
+    position:relative;
     font-family: "Muli";
     font-size: 13px;
     letter-spacing:2px;
-    font-weight:500;
+    font-weight:400;
     padding: 15px 25px 15px 25px;
     transition: 0.4s;
     color: #2a353a;
@@ -239,20 +240,47 @@ img {
     border-style: solid;
     border-color: #181819;
     min-width:250px;
-}
+}*/
 
-.btn:hover {
+.btn {
+    display:inline-block;
+    position:relative;
     text-decoration: none;
     background-color:#181819;
     font-family: "Muli";
+    letter-spacing:2px;
     font-size: 13px;
-    font-weight:500;
+    font-weight:400;
     padding: 15px 25px 15px 25px;
     transition: 0.4s;
     color: white;
     border-width:2px;
     border-style: solid;
-    border-color: #181819; 
+    border-color: #181819;
+    border-radius:25px;
+    min-width:250px;
+}
+
+.btn:hover {
+   /* text-decoration: none;
+    background-color:#181819;
+    font-family: "Muli";
+    font-size: 13px;
+    font-weight:400;
+    padding: 15px 25px 15px 25px;
+    transition: 0.4s;
+    color: white;
+    border-width:2px;
+    border-style: solid;
+    border-color: #181819; */
+    transform: translateY(-4px);
+    -webkit-box-shadow: 0px 8px 28px 1px rgba(158,172,201,1);
+    -moz-box-shadow: 0px 8px 28px 1px rgba(158,172,201,1);
+    box-shadow: 0px 8px 28px 1px rgba(70,70,90,.4);
+    -backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
 }
 
 .nextsection {
