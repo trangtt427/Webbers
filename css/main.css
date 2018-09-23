@@ -1035,12 +1035,12 @@ a.bottomlinks {
     max-width:900px;
     font-weight:800;
     color:#2a353a;
-    font-size:32px;   
+    font-size:28px;   
     display:block;
 } 
 
     .bio-title {
-    font-size: 32px;
+    font-size: 28px;
     line-height:1.1;
     font-family: "Muli";
     font-weight:800;
@@ -1134,7 +1134,7 @@ ul, ol {
 
 .homepage-title {
     line-height:1.1;
-    font-size: 32px;
+    font-size: 28px;
     font-family: "Muli";
     font-weight:800;
     max-width:900px;
