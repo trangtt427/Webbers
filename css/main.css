@@ -14,7 +14,6 @@
     margin:auto;
     color:#2a353a;
     padding:20px 25px 25px 25px;
-    transition: all .2s ease-in-out 0s;
 }
 
 .behancelink {
@@ -87,7 +86,6 @@ a {
     margin-top:30px;
     margin:auto;
     color:#2a353a;
-    transition: all .2s ease-in-out 0s;
 } 
 
 .homepage-title {
@@ -98,7 +96,6 @@ a {
     max-width:900px;
     color:#2a353a;
     margin-top:20px;
-    transition: all .2s ease-in-out 0s;
 }  
 
 body {
