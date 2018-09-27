@@ -218,11 +218,12 @@ p {
 }
 
 .header-text {
+    padding-top:10px;
     text-align:left;
     line-height:1.6;
     max-width:650px;
     color: #2a353a;
-    font-size:18px;
+    font-size:16px;
     font-family: "Muli";
     font-weight:400;
     }
@@ -1047,7 +1048,7 @@ a.bottomlinks {
     line-height:1.6;
     max-width:450px;
     color: #2a353a;
-    font-size:15px;
+    font-size:14px;
     font-family: "Muli";
     font-weight:400;
 }
