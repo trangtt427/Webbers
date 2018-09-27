@@ -1,3 +1,27 @@
+.nav-up {
+    top:-70px;
+}
+
+.headcontain {
+    max-width:1000px;
+    margin:auto;
+    padding:5px 25px 25px 25px;
+}
+
+header {
+    align-items: center;
+    position:relative;
+    display:block;
+    background-color:white;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width:100%;
+    z-index:99;
+    margin:auto;
+}
+
 #bio {
     width:100%;
     background-color:white;
@@ -41,8 +65,9 @@ a {
 }
 
 .linkthing {
-    width:70px;
-    display:block;
+    top:10px;
+    width:60px;
+    display:inline-block;
     margin:0;
     transition: all .2s ease-in-out 0s;
     position:relative;
@@ -64,6 +89,7 @@ a {
     background-color:white;
     width:100%;
     margin:auto;
+    padding-top:50px;
 }
 
 .introtext {
@@ -201,10 +227,10 @@ p {
     font-weight:400;
     }
 
-.header {
+/*.header {
     max-width:1000px;
     margin:auto;
-}
+} */
 
 img {
     margin:0 auto;
@@ -1025,16 +1051,6 @@ a.bottomlinks {
     font-family: "Muli";
     font-weight:400;
 }
-    
-.project-title {
-    font-family: "Muli";
-    text-align:left;
-    max-width:900px;
-    font-weight:800;
-    color:#2a353a;
-    font-size:28px;   
-    display:block;
-} 
 
     .bio-title {
     font-size: 28px;
@@ -1094,11 +1110,12 @@ ul, ol {
     display:none;
 }
        
-.linkthing {
+/*.linkthing {
+    top:15px;
     width:50px; 
-    display:block;
+    display:inline-block;
     margin:0;
-}
+} */
    
  .singlecolumn{
     width: 100%; 
@@ -1136,7 +1153,16 @@ ul, ol {
     font-weight:800;
     max-width:900px;
     color:#2a353a;
-}  
+} 
+    .project-title {
+    font-family: "Muli";
+    text-align:left;
+    max-width:900px;
+    font-weight:800;
+    color:#2a353a;
+    font-size:28px;   
+    display:block;
+} 
 
 .behancelink {
     font-size:16px;
