@@ -1,68 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 355.373 382.106" enable-background="new 0 0 355.373 382.106" xml:space="preserve">
-<g id="Rectangle_1_1_" enable-background="new    ">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 234.9 303.6" style="enable-background:new 0 0 234.9 303.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{enable-background:new    ;}
+	.st1{display:none;}
+	.st2{display:inline;}
+	.st3{fill:#242424;}
+	.st4{fill:#B53C46;}
+	.st5{fill:#F74F5C;}
+	.st6{fill:#2AAEE4;}
+	.st7{fill:#84CAEA;}
+	.st8{fill:#EF9F17;}
+	.st9{fill:#F7C884;}
+	.st10{fill:#A658B7;}
+	.st11{fill:#D3A5DB;}
+	.st12{fill:#5ABA50;}
+	.st13{fill:#CEEF67;}
+	.st14{fill:#EFB941;}
+	.st15{fill:none;}
+	.st16{fill:#227748;}
+	.st17{fill:#044C27;}
+</style>
+<g id="Rectangle_1_1_" class="st0">
 </g>
-<g id="Group_1_1_">
-	<g id="Rectangle_5" display="none">
-		<g display="inline">
-			<polygon fill="#242424" points="335.732,367.58 334.84,369.064 338.546,371.118 339.437,369.635 			"/>
+<g id="Rectangle_5" class="st1">
+	<g class="st2">
+		<polygon class="st3" points="231.2,300 230.3,301.5 234,303.6 234.9,302.1 		"/>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<rect x="35.1" y="98.4" class="st4" width="32.9" height="181.2"/>
+			<polygon class="st4" points="62.8,99.4 40.3,99.4 47.7,66.5 55.4,66.5 			"/>
 		</g>
+		<rect x="35.1" y="108.8" class="st5" width="32.9" height="181.2"/>
+		<rect x="35.1" y="112.6" class="st4" width="32.9" height="6.1"/>
 	</g>
 	<g>
 		<g>
-			<g>
-				<rect x="94.09" y="125.01" fill="#B53C46" width="32.937" height="181.156"/>
-				<polygon fill="#B53C46" points="121.813,126.037 99.304,126.037 106.699,93.097 114.418,93.097 				"/>
-			</g>
-			<rect x="94.09" y="135.436" fill="#F74F5C" width="32.937" height="181.156"/>
-			<rect x="94.09" y="139.253" fill="#B53C46" width="32.937" height="6.058"/>
+			<rect x="68" y="98.4" class="st6" width="32.9" height="181.2"/>
+			<polygon class="st6" points="95.8,99.4 73.3,99.4 80.7,66.5 88.4,66.5 			"/>
 		</g>
-		<g>
-			<g>
-				<rect x="127.027" y="125.01" fill="#2AAEE4" width="32.937" height="181.156"/>
-				<polygon fill="#2AAEE4" points="154.75,126.037 132.242,126.037 139.636,93.097 147.355,93.097 				"/>
-			</g>
-			<rect x="127.027" y="135.436" fill="#84CAEA" width="32.937" height="181.156"/>
-			<rect x="127.027" y="139.253" fill="#2AAEE4" width="32.937" height="6.058"/>
-		</g>
-		<g>
-			<g>
-				<rect x="159.965" y="125.01" fill="#EF9F17" width="32.937" height="181.156"/>
-				<polygon fill="#EF9F17" points="187.687,126.037 165.179,126.037 172.574,93.097 180.293,93.097 				"/>
-			</g>
-			<rect x="159.965" y="135.436" fill="#F7C884" width="32.937" height="181.156"/>
-			<rect x="159.965" y="139.253" fill="#EF9F17" width="32.937" height="6.058"/>
-		</g>
-		<g>
-			<g>
-				<rect x="225.839" y="125.01" fill="#A658B7" width="32.937" height="181.156"/>
-				<polygon fill="#A658B7" points="253.562,126.037 231.054,126.037 238.449,93.097 246.167,93.097 				"/>
-			</g>
-			<rect x="225.839" y="135.436" fill="#D3A5DB" width="32.937" height="181.156"/>
-			<rect x="225.839" y="139.253" fill="#A658B7" width="32.937" height="6.058"/>
-		</g>
-		<g>
-			<g>
-				<rect x="192.902" y="72.189" fill="#5ABA50" width="32.937" height="181.156"/>
-				<polygon fill="#5ABA50" points="220.625,73.216 198.116,73.216 205.511,40.277 213.23,40.277 				"/>
-			</g>
-			<rect x="192.902" y="82.615" fill="#CEEF67" width="32.937" height="181.156"/>
-			<rect x="192.902" y="86.433" fill="#5ABA50" width="32.937" height="6.058"/>
-		</g>
-		<rect x="94.09" y="151.905" fill="#EFB941" width="164.687" height="164.687"/>
-		<line fill="#5ABA50" x1="165.179" y1="316.592" x2="94.09" y2="316.592"/>
-		<polygon fill="#227748" points="94.09,226.014 94.09,316.592 158.956,316.592 		"/>
-		<polygon fill="#227748" points="169.719,316.592 94.09,210.985 94.09,217.557 165.013,316.592 		"/>
-		<polygon fill="#227748" points="183.147,316.592 258.777,210.985 258.777,217.557 187.854,316.592 		"/>
-		<polygon fill="#227748" points="258.777,226.014 258.777,316.592 193.91,316.592 		"/>
-		<polygon fill="#044C27" points="94.09,253.345 94.09,316.592 139.383,316.592 		"/>
-		<polygon fill="#044C27" points="258.777,253.345 213.483,316.592 258.777,316.592 		"/>
-		
-			<rect x="85.106" y="129.834" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -77.8127 103.6781)" fill="#EFB941" width="2.276" height="31.866"/>
-		
-			<rect x="265.484" y="129.834" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 352.0796 437.3706)" fill="#EFB941" width="2.276" height="31.866"/>
+		<rect x="68" y="108.8" class="st7" width="32.9" height="181.2"/>
+		<rect x="68" y="112.6" class="st6" width="32.9" height="6.1"/>
 	</g>
+	<g>
+		<g>
+			<rect x="101" y="98.4" class="st8" width="32.9" height="181.2"/>
+			<polygon class="st8" points="128.7,99.4 106.2,99.4 113.6,66.5 121.3,66.5 			"/>
+		</g>
+		<rect x="101" y="108.8" class="st9" width="32.9" height="181.2"/>
+		<rect x="101" y="112.6" class="st8" width="32.9" height="6.1"/>
+	</g>
+	<g>
+		<g>
+			<rect x="166.9" y="98.4" class="st10" width="32.9" height="181.2"/>
+			<polygon class="st10" points="194.6,99.4 172.1,99.4 179.5,66.5 187.2,66.5 			"/>
+		</g>
+		<rect x="166.9" y="108.8" class="st11" width="32.9" height="181.2"/>
+		<rect x="166.9" y="112.6" class="st10" width="32.9" height="6.1"/>
+	</g>
+	<g>
+		<g>
+			<rect x="133.9" y="45.5" class="st12" width="32.9" height="181.2"/>
+			<polygon class="st12" points="161.6,46.6 139.1,46.6 146.5,13.6 154.2,13.6 			"/>
+		</g>
+		<rect x="133.9" y="56" class="st13" width="32.9" height="181.2"/>
+		<rect x="133.9" y="59.8" class="st12" width="32.9" height="6.1"/>
+	</g>
+	<rect x="35.1" y="125.3" class="st14" width="164.7" height="164.7"/>
+	<line class="st15" x1="106.2" y1="289.9" x2="35.1" y2="289.9"/>
+	<polygon class="st16" points="35.1,199.4 35.1,289.9 100,289.9 	"/>
+	<polygon class="st16" points="110.7,289.9 35.1,184.3 35.1,190.9 106,289.9 	"/>
+	<polygon class="st16" points="124.2,289.9 199.8,184.3 199.8,190.9 128.9,289.9 	"/>
+	<polygon class="st16" points="199.8,199.4 199.8,289.9 134.9,289.9 	"/>
+	<polygon class="st17" points="35.1,226.7 35.1,289.9 80.4,289.9 	"/>
+	<polygon class="st17" points="199.8,226.7 154.5,289.9 199.8,289.9 	"/>
+	
+		<rect x="26.1" y="103.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -76.2482 54.1632)" class="st14" width="2.3" height="31.9"/>
+	
+		<rect x="191.7" y="118" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -23.4184 181.7127)" class="st14" width="31.9" height="2.3"/>
 </g>
 </svg>
