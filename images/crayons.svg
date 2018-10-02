@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 234.9 303.6" style="enable-background:new 0 0 234.9 303.6;" xml:space="preserve">
+	 viewBox="0 0 219.7 269.9" style="enable-background:new 0 0 219.7 269.9;" xml:space="preserve">
 <style type="text/css">
 	.st0{enable-background:new    ;}
 	.st1{display:none;}
@@ -26,61 +26,61 @@
 </g>
 <g id="Rectangle_5" class="st1">
 	<g class="st2">
-		<polygon class="st3" points="231.2,300 230.3,301.5 234,303.6 234.9,302.1 		"/>
+		<polygon class="st3" points="216,266.4 215.1,267.9 218.8,269.9 219.7,268.5 		"/>
 	</g>
 </g>
 <g>
 	<g>
 		<g>
-			<rect x="35.1" y="98.4" class="st4" width="32.9" height="181.2"/>
-			<polygon class="st4" points="62.8,99.4 40.3,99.4 47.7,66.5 55.4,66.5 			"/>
+			<rect x="27.5" y="85.4" class="st4" width="32.9" height="168"/>
+			<polygon class="st4" points="55.2,86.4 32.7,86.4 40.1,55.8 47.8,55.8 			"/>
 		</g>
-		<rect x="35.1" y="108.8" class="st5" width="32.9" height="181.2"/>
-		<rect x="35.1" y="112.6" class="st4" width="32.9" height="6.1"/>
+		<rect x="27.5" y="95.1" class="st5" width="32.9" height="168"/>
+		<rect x="27.5" y="98.6" class="st4" width="32.9" height="5.6"/>
 	</g>
 	<g>
 		<g>
-			<rect x="68" y="98.4" class="st6" width="32.9" height="181.2"/>
-			<polygon class="st6" points="95.8,99.4 73.3,99.4 80.7,66.5 88.4,66.5 			"/>
+			<rect x="60.4" y="85.4" class="st6" width="32.9" height="168"/>
+			<polygon class="st6" points="88.2,86.4 65.7,86.4 73.1,55.8 80.8,55.8 			"/>
 		</g>
-		<rect x="68" y="108.8" class="st7" width="32.9" height="181.2"/>
-		<rect x="68" y="112.6" class="st6" width="32.9" height="6.1"/>
+		<rect x="60.4" y="95.1" class="st7" width="32.9" height="168"/>
+		<rect x="60.4" y="98.6" class="st6" width="32.9" height="5.6"/>
 	</g>
 	<g>
 		<g>
-			<rect x="101" y="98.4" class="st8" width="32.9" height="181.2"/>
-			<polygon class="st8" points="128.7,99.4 106.2,99.4 113.6,66.5 121.3,66.5 			"/>
+			<rect x="93.4" y="85.4" class="st8" width="32.9" height="168"/>
+			<polygon class="st8" points="121.1,86.4 98.6,86.4 106,55.8 113.7,55.8 			"/>
 		</g>
-		<rect x="101" y="108.8" class="st9" width="32.9" height="181.2"/>
-		<rect x="101" y="112.6" class="st8" width="32.9" height="6.1"/>
+		<rect x="93.4" y="95.1" class="st9" width="32.9" height="168"/>
+		<rect x="93.4" y="98.6" class="st8" width="32.9" height="5.6"/>
 	</g>
 	<g>
 		<g>
-			<rect x="166.9" y="98.4" class="st10" width="32.9" height="181.2"/>
-			<polygon class="st10" points="194.6,99.4 172.1,99.4 179.5,66.5 187.2,66.5 			"/>
+			<rect x="159.3" y="85.4" class="st10" width="32.9" height="168"/>
+			<polygon class="st10" points="187,86.4 164.5,86.4 171.9,55.8 179.6,55.8 			"/>
 		</g>
-		<rect x="166.9" y="108.8" class="st11" width="32.9" height="181.2"/>
-		<rect x="166.9" y="112.6" class="st10" width="32.9" height="6.1"/>
+		<rect x="159.3" y="95.1" class="st11" width="32.9" height="168"/>
+		<rect x="159.3" y="98.6" class="st10" width="32.9" height="5.6"/>
 	</g>
 	<g>
 		<g>
-			<rect x="133.9" y="45.5" class="st12" width="32.9" height="181.2"/>
-			<polygon class="st12" points="161.6,46.6 139.1,46.6 146.5,13.6 154.2,13.6 			"/>
+			<rect x="126.3" y="36.4" class="st12" width="32.9" height="168"/>
+			<polygon class="st12" points="154,37.4 131.5,37.4 138.9,6.8 146.7,6.8 			"/>
 		</g>
-		<rect x="133.9" y="56" class="st13" width="32.9" height="181.2"/>
-		<rect x="133.9" y="59.8" class="st12" width="32.9" height="6.1"/>
+		<rect x="126.3" y="46.1" class="st13" width="32.9" height="168"/>
+		<rect x="126.3" y="49.6" class="st12" width="32.9" height="5.6"/>
 	</g>
-	<rect x="35.1" y="125.3" class="st14" width="164.7" height="164.7"/>
-	<line class="st15" x1="106.2" y1="289.9" x2="35.1" y2="289.9"/>
-	<polygon class="st16" points="35.1,199.4 35.1,289.9 100,289.9 	"/>
-	<polygon class="st16" points="110.7,289.9 35.1,184.3 35.1,190.9 106,289.9 	"/>
-	<polygon class="st16" points="124.2,289.9 199.8,184.3 199.8,190.9 128.9,289.9 	"/>
-	<polygon class="st16" points="199.8,199.4 199.8,289.9 134.9,289.9 	"/>
-	<polygon class="st17" points="35.1,226.7 35.1,289.9 80.4,289.9 	"/>
-	<polygon class="st17" points="199.8,226.7 154.5,289.9 199.8,289.9 	"/>
+	<rect x="27.5" y="119.7" class="st14" width="164.7" height="143.4"/>
+	<line class="st15" x1="98.6" y1="263.1" x2="27.5" y2="263.1"/>
+	<polygon class="st16" points="27.5,172.6 27.5,263.1 92.4,263.1 	"/>
+	<polygon class="st16" points="103.1,263.1 27.5,157.5 27.5,164.1 98.4,263.1 	"/>
+	<polygon class="st16" points="116.6,263.1 192.2,157.5 192.2,164.1 121.3,263.1 	"/>
+	<polygon class="st16" points="192.2,172.6 192.2,263.1 127.3,263.1 	"/>
+	<polygon class="st17" points="27.5,199.9 27.5,263.1 72.8,263.1 	"/>
+	<polygon class="st17" points="192.2,199.9 146.9,263.1 192.2,263.1 	"/>
 	
-		<rect x="26.1" y="103.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -76.2482 54.1632)" class="st14" width="2.3" height="31.9"/>
+		<rect x="18.5" y="96.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -73.6526 46.7979)" class="st14" width="2.3" height="31.9"/>
 	
-		<rect x="191.7" y="118" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -23.4184 181.7127)" class="st14" width="31.9" height="2.3"/>
+		<rect x="184.1" y="111.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -20.8228 174.3474)" class="st14" width="31.9" height="2.3"/>
 </g>
 </svg>
