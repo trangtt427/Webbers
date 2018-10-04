@@ -753,6 +753,7 @@ ul, ol {
 }
 
 .rightblock {
+    background-color:#FFE9AD;
     background-image:url('../images/portfolio-images/bao2.png');
     background-size:cover;
     background-position:center;
