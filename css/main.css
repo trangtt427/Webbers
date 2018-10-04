@@ -696,13 +696,17 @@ ul, ol {
 }
 
 .rightblock {
-    background-color:#FFE9AD;
-    background-image:url('../images/portfolio-images/bao2.png');
+    background-color:#FFE8AD;
+   /* background-image:url('../images/portfolio-images/bao2.png');
     background-size:cover;
-    background-position:center;
+    background-position:center;*/
     display:inline-block;
     width:50%;
     height:100%;
+     display:flex;
+  align-items:center;
+  justify-content:center;
+    overflow:hidden;
 }
 
 .leftblock {
