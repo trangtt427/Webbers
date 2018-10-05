@@ -36,6 +36,21 @@ body {
     max-width:700px;
 }
 
+.card {
+    max-width:340px;
+    margin:auto;
+    display:block;
+    /* Add shadows to create the "card" effect */
+     box-shadow: 0px 3px 8px 0px rgba(70,70,90,0.15);
+    transition: 0.3s;
+}
+
+/* Add some padding inside the card container */
+.cardcontainer {
+    padding: 16px;
+    text-align:center;
+}
+
 
 .container1 {
    width: 100%;
