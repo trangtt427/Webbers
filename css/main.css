@@ -764,24 +764,13 @@ ul, ol {
     position: relative;
 }
 
-.titleguy {
+.titleguy, .titleguy2{
     margin:1.66666667%;
-    padding-bottom:10px;
     width: 96.666666%;
     color: #b4b2b7;
     letter-spacing:2px;
     font-size:14px;
-}
-
-.titleguy2 {
-    margin-top:1.66666667%;
-     margin-right:1.66666667%;
-     margin-left:1.66666667%;
-    padding-bottom:10px;
-    width: 96.666666%;
-    color: #b4b2b7;
-    letter-spacing:2px;
-    font-size:14px;
+    padding-bottom:5px;
 }
 
 .featurecontainer:hover {
@@ -1338,9 +1327,6 @@ ul, ol {
 @media only screen and (max-width: 630px){
     
     
-.hide-underline {
-    display:none;
-}
        
 /*.linkthing {
     top:15px;
@@ -1391,17 +1377,19 @@ ul, ol {
     font-size:16px;
 }
 
-.titleguy2 {
-    margin-bottom:5.66666667%;
-    margin-top: 20px;
+.titleguy, .titleguy2 {
+    margin-left:0px;
+    margin-right:0px;
     }
-    
-.titleguy {
-    margin-bottom:5.66666667%;
-    }
-  
 }
 
+@media only screen and (min-width: 631px) {
+     
+    .titleguy2 {
+        margin-bottom:0px;
+    
+    }
+}
 
 @media only screen and (max-width: 768px){
 
