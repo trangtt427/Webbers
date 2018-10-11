@@ -771,6 +771,7 @@ ul, ol {
     letter-spacing:2px;
     font-size:14px;
     padding-bottom:5px;
+    font-weight:400;
 }
 
 .featurecontainer:hover {
@@ -924,6 +925,11 @@ ul, ol {
 }
 
 @media screen and (max-width:600px) {
+
+.bio-image {
+    width:200px;
+    }
+    
     
 .footermenu {
     float:left;
@@ -1241,6 +1247,7 @@ a.bottomlinks {
 
 @media only screen and (max-width:700px) {
     
+    
 .hidetimeline {
     display:none;
 }
@@ -1325,7 +1332,6 @@ ul, ol {
 }
 
 @media only screen and (max-width: 630px){
-    
     
        
 /*.linkthing {
