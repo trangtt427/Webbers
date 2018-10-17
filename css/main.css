@@ -924,38 +924,6 @@ ul, ol {
 }
 }
 
-@media screen and (max-width:600px) {
-
-.bio-image {
-    width:200px;
-    }
-    
-    
-.footermenu {
-    float:left;
-    color: #97a3b3;
-    font-size:13px;
-    font-weight:400;
-    width:100%;
-    line-height:20px;
-    text-align: left;
-}
-    
-.linksncopy {
-    float:left;
-    display:inline-block;
-    position:relative;
-    margin:auto;
-    }
-    
-.footer {
-    position:block;
-    height:360px;
-    background-color: #181819;
-    text-align: center;
-    margin-top:-20px;
-}
-}
 
 .top {
     display: inline-block;
@@ -1205,10 +1173,6 @@ a.bottomlinks {
 @media screen and (max-width:600px) {
     
 .footermenu {
-    float:left;
-    color: #888;
-    font-size:13px;
-    font-weight:400;
     width:100%;
     line-height:20px;
     text-align: left;
