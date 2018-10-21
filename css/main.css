@@ -579,6 +579,7 @@ img {
     font-weight: 700;
     margin:0;
     margin-bottom: 0.75rem;
+    font-size:16px;
 }
 
 .feature-card-title {
@@ -820,8 +821,7 @@ ul, ol {
 }
 
 .rightblock {
-    background-color:#ffe8ad;
-   /*background-color:#262626;*/
+   background-color:#262626;
     display:inline-block;
     width:50%;
     height:100%;
@@ -1275,6 +1275,14 @@ a.bottomlinks {
     color: #2a353a;
 }
     
+.homepage-title {
+    line-height:1.1;
+    font-size: 32px;
+    font-weight:800;
+    max-width:900px;
+    color:#2a353a;
+} 
+    
 .center-h1 {
     font-size: 18px;
 }
@@ -1357,14 +1365,6 @@ ul, ol {
     margin:auto;
     background-color: #181819;
 }
-
-.homepage-title {
-    line-height:1.1;
-    font-size: 28px;
-    font-weight:800;
-    max-width:900px;
-    color:#2a353a;
-} 
 
 .behancelink {
     font-size:16px;
