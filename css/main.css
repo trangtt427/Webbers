@@ -810,10 +810,7 @@ ul, ol {
 }
 
 .rightblock {
-    background-color:#FFE8AD;
-   /* background-image:url('../images/portfolio-images/bao2.png');
-    background-size:cover;
-    background-position:center;*/
+   background-color:#FFE8AD;
     display:inline-block;
     width:50%;
     height:100%;
@@ -822,6 +819,8 @@ ul, ol {
   justify-content:center;
     overflow:hidden;
 }
+
+
 
 .leftblock {
     float:left;
@@ -997,6 +996,10 @@ ul, ol {
     min-width:200px;
     line-height:20px;
     text-align: left;
+}
+
+.projectlinkthing {
+    display:block;
 }
 
 .footerbg {
