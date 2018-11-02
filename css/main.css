@@ -253,17 +253,6 @@ header {
     display:block;   
 }
 
-.bio-title {
-    font-size: 46px;
-    line-height:1.1;
-    font-weight:800;
-    max-width:1100px;
-    margin-top:30px;
-    margin:auto;
-    color:#2a353a;
-    padding:20px 25px 25px 25px;
-}
-
 .aboutlink {
     font-weight:400;
     letter-spacing:2px;
@@ -328,14 +317,16 @@ a {
     background-color:white;
     width:100%;
     margin:auto;
-    padding-top:40px;
+   
+     padding:0px 25px 25px 25px;
+     padding-top:40px;
 }
 
 .introtext {
-    max-width:1100px;
+    max-width:800px;
     margin:auto;
     display:block;
-    padding:0px 25px 25px 25px;
+   
 }
 
 #projectsection {
@@ -348,8 +339,9 @@ a {
     line-height:1.1;
     font-size: 46px;
     font-weight:800;
-    max-width:900px;
+    max-width:800px;
     color:#2a353a;
+    margin:auto;
     margin-top:20px;
 }  
 
@@ -1179,11 +1171,6 @@ a.bottomlinks {
   opacity: 0; 
     animation: fadeInUpHome 1s ease-in-out 0s forwards;}
 
-.intro2 {
-    max-width:1200px;
-    margin:auto;
-}
-
 @media screen and (max-width:600px) {
     
 .footermenu {
@@ -1258,16 +1245,6 @@ a.bottomlinks {
     font-weight:400;
 }
 
-.bio-title {
-    font-size: 28px;
-    line-height:1.1;
-    font-weight:800;
-    max-width:1100px;
-    margin-top:30px;
-    margin:auto;
-    color:#2a353a;
-}
-
 .project-h1 {
     display:inline-block;
     font-size:20px;
@@ -1279,7 +1256,6 @@ a.bottomlinks {
     line-height:1.1;
     font-size: 32px;
     font-weight:800;
-    max-width:900px;
     color:#2a353a;
 } 
     
@@ -1358,13 +1334,6 @@ ul, ol {
     font-size:16px;
     padding:0px;
 } 
-    
-.footerbg {
-    max-width:1100px;
-    padding:20px;
-    margin:auto;
-    background-color: #181819;
-}
 
 .behancelink {
     font-size:16px;
