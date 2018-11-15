@@ -535,7 +535,11 @@ img {
 
 .card-img-top {
     width: 100%;
+border-top-left-radius: calc(10px - 1px);
+    border-top-right-radius: calc(10px - 1px);
 }
+
+
 
 .card-img-left {
     width: 50%;
