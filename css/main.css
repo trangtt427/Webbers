@@ -223,7 +223,7 @@ header.active {
 
 .headcontain {
     font-size:0;
-    max-width:1100px;
+    max-width:900px;
     margin:auto;
     padding:5px 25px 5px 25px;
 }
@@ -264,7 +264,7 @@ header {
 }
 .behancelink {
     font-weight:400;
-    font-size:18px;
+    font-size:16px;
     display:block;
     float:left;
     position:relative;
@@ -285,6 +285,7 @@ header {
 a {
     text-decoration: none;
     color: palevioletred;
+    font-weight:300;
 }
 
 .linkthing {
@@ -313,10 +314,26 @@ a {
     background-color:white;
     width:100%;
     margin:auto;
-
-     padding:0px 25px 25px 25px;
-     padding-top:40px;
 }
+
+.fullblock {
+    width:100%;
+    padding-top:2em;
+    padding-bottom:2em;
+}
+
+.fullgrayblock {
+    background:#f4f2f4;
+    width:100%;
+    padding-top:2em;
+    padding-bottom:2em;
+}
+
+.extraspacetop {padding-top:6em;}
+.extraspacebottom {padding-bottom:6em;}
+
+.spacetop {padding-top:2em;}
+.spacebottom {padding-bottom:2em;}
 
 .introtext {
     max-width:800px;
@@ -326,14 +343,13 @@ a {
 }
 
 #projectsection {
-    background-color:#f4f2f4;
-    width:100%;
-    margin:0;
+    max-width:1000px;
+    margin:auto;
 }
 
 .homepage-title {
-    line-height:1.1;
-    font-size: 46px;
+    line-height:1.2;
+    font-size: 60px;
     font-weight:800;
     max-width:800px;
     color:#2a353a;
@@ -390,18 +406,26 @@ p {
 .paragraph {
     line-height:1.6;
     max-width:650px;
-    color: #2a353a;
-    font-size:18px;
-    font-weight:400;
+    color: #757682;
+    font-size:16px;
+    font-weight:300;
     }
 
 .project-paragraph {
     line-height:1.6;
     max-width:800px;
-    color: #2a353a;
+    color: #757682;
     font-size:16px;
-    font-weight:400;
+    font-weight:300;
     margin:auto;
+}
+
+.subhead {
+    max-width:800px;
+    margin:auto;
+    font-weight:800;
+    font-size:20px;
+    color:#2a353a;
 }
 
 .copyright {
@@ -416,10 +440,10 @@ p {
 
 .caption {
     line-height:1.6;
-    color: rgba(48, 51, 53, 0.6);
+    color: #757682;
     font-size:14px;
     font-style:italic;
-    font-weight:400;
+    font-weight:300;
     margin:auto;
     text-align:center;
 }
@@ -477,7 +501,7 @@ img {
     background-color:#181819;
     letter-spacing:2px;
     font-size: 13px;
-    font-weight:400;
+    font-weight:300;
     padding: 15px 25px 15px 25px;
     transition: 0.4s;
     color: white;
@@ -571,7 +595,7 @@ img {
 }
 
 .feature-card-title {
-    line-height: 1.1;
+    line-height: 1.2;
     color: #2a353a;
     font-weight: 700;
     margin:0;
@@ -580,9 +604,9 @@ img {
 }
 
 .feature-card-text {
-    color: #b4b2b7;
+    color: #757682;
     font-size:16px;
-    font-weight: 400;
+    font-weight: 300;
     margin:0;
     margin-bottom: 0.75rem;
     padding: 0px 30px 30px 30px;
@@ -594,10 +618,10 @@ img {
 }
 
 .card-type {
-    color: #b4b2b7;
+    color: #757682;
     line-height:1.6;
     font-size:13px;
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 10px;
     margin-bottom:0px;
     text-align: left;
@@ -693,7 +717,7 @@ h1 {
 
 .project-h1 {
     font-weight:800;
-    font-size: 24px;
+    font-size: 36px;
     color:#2a353a;
     font-weight:800;
     width:100%;
@@ -725,10 +749,10 @@ h1 {
 ul, ol {
     margin:auto;
     line-height:27px;
-    max-width:600px;
-    color: #2a353a;
+    max-width:800px;
+    color: #757682;
     font-size:16px;
-    font-weight:400;
+    font-weight:300;
 }
 
 .wrapper {
@@ -766,11 +790,11 @@ ul, ol {
 .titleguy, .titleguy2{
     margin:1.66666667%;
     width: 96.666666%;
-    color: #b4b2b7;
+    color: #757682;
     letter-spacing:2px;
     font-size:14px;
     padding-bottom:5px;
-    font-weight:400;
+    font-weight:300;
 }
 
 .featurecontainer:hover {
@@ -857,7 +881,11 @@ ul, ol {
 .main {
     display:block;
     padding:20px 25px 25px 25px;
-    max-width:1100px;
+    margin:auto;
+}
+
+.mainblock {
+    max-width:750px;
     margin:auto;
 }
 
@@ -964,7 +992,7 @@ ul, ol {
     display:block;
     text-align: center;
     position:relative;
-   /* background-color:white;*/
+   background-color:#f4f2f4;
 }
 
 .footer {
@@ -984,11 +1012,12 @@ ul, ol {
 
 .sociallinks{
     height:30px;
+    float:left;
 }
 
 .footermenu {
     float:left;
-    color: #97a3b3;
+    color: #757682;
     font-size:13px;
     font-weight:400;
     width:25%;
@@ -1002,7 +1031,7 @@ ul, ol {
 }
 
 .footerbg {
-    max-width:1100px;
+    max-width:900px;
     padding:20px;
     margin:auto;
     background-color: #181819;
@@ -1243,35 +1272,42 @@ a.bottomlinks {
 
 .project-h1 {
     display:inline-block;
-    font-size:20px;
+    font-size:24px;
     margin:auto;
     color: #2a353a;
 }
 
 .homepage-title {
-    line-height:1.1;
-    font-size: 32px;
+    line-height:1.2;
+    font-size: 36px;
     font-weight:800;
     color:#2a353a;
 }
 
 .center-h1 {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .project-paragraph {
     line-height:1.6;
-    max-width:900px;
-    color: #2a353a;
+    max-width:800px;
+    color: #757682;
     font-size:15px;
-    font-weight:400;
+    font-weight:300;
+}
+    
+.subhead {
+    max-width:800px;
+    margin:auto;
+    font-weight:800;
+    font-size:16px;
 }
 
 ul, ol {
     margin:auto;
     line-height:1.6;
     max-width:600px;
-    color: #2a353a;
+    color: #757682;
     font-size:15px;
     font-weight:400;
 }
@@ -1287,6 +1323,13 @@ ul, ol {
 .ministyleguide {
     display:none;
 }
+
+.extraspacetop {padding-top:3em;}
+.extraspacebottom {padding-bottom:3em;}
+
+.spacetop {padding-top:1em;}
+.spacebottom {padding-bottom:1em;}
+
 }
 
 @media only screen and (max-width: 630px){
@@ -1327,12 +1370,12 @@ ul, ol {
 }
 
 .paragraph {
-    font-size:16px;
+    font-size:15px;
     padding:0px;
 }
 
 .behancelink {
-    font-size:16px;
+    font-size:15px;
 }
 
 .titleguy, .titleguy2 {
@@ -1382,12 +1425,12 @@ ul, ol {
 
 .timeline-content p {
    font-size: 15px;
-   color: #2a353a;
+   color: #757682;
 }
 
 .timeline-content2 p {
    font-size: 15px;
-   color: #2a353a;
+   color: #757682;
 }
 
 .marker{
@@ -1400,7 +1443,7 @@ ul, ol {
 
 .timeline-h1 {
     font-weight:800;
-    font-size: 18px;
+    font-size: 16px;
     color:#2a353a;
     font-weight:800;
     width:100%;
