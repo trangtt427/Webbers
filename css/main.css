@@ -29,9 +29,6 @@ body {
    outline: none;
 }
 
-.gif {
-    max-width:700px;
-}
 
 .card {
     max-width:340px;
@@ -160,7 +157,7 @@ body {
 
 }
 .timeline2-h1 {
-    font-weight:800;
+     font-weight:800;
     font-size: 20px;
     color:#2a353a;
     width:100%;
@@ -310,6 +307,10 @@ a {
     }*/
 }
 
+.col {
+    min-width:200px;
+}
+
 #introsection {
     background-color:white;
     width:100%;
@@ -328,6 +329,8 @@ a {
     padding-top:2em;
     padding-bottom:2em;
 }
+
+
 
 .extraspacetop {padding-top:6em;}
 .extraspacebottom {padding-bottom:6em;}
@@ -349,7 +352,7 @@ a {
 
 .homepage-title {
     line-height:1.2;
-    font-size: 60px;
+    font-size: 56px;
     font-weight:800;
     max-width:800px;
     color:#2a353a;
@@ -372,7 +375,7 @@ a {
     color:white;
     height:1px;
     width:60%;
-    max-width:550px;
+    max-width:250px;
      background: rgba(155, 150, 150, 0.35);
     /*background: linear-gradient(120deg, #55e4ff, #e90d87);*/
 }
@@ -421,11 +424,11 @@ p {
 }
 
 .subhead {
-    max-width:800px;
-    margin:auto;
-    font-weight:800;
-    font-size:20px;
-    color:#2a353a;
+ color: #757682;
+    letter-spacing:2px;
+    font-size:14px;
+    padding-bottom:5px;
+    font-weight:300;
 }
 
 .copyright {
@@ -716,30 +719,27 @@ h1 {
 }
 
 .project-h1 {
-    font-weight:800;
+     font-weight:800;
     font-size: 36px;
     color:#2a353a;
-    font-weight:800;
     width:100%;
     max-width:800px;
     margin:auto;
 }
 
 .timeline-h1 {
-    font-weight:800;
+     font-weight:800;
     font-size: 22px;
     color:#2a353a;
-    font-weight:800;
     width:100%;
     max-width:800px;
     margin:auto;
 }
 
 .center-h1 {
-    font-weight:800;
+     font-weight:800;
     font-size: 24px;
     color:#2a353a;
-    font-weight:800;
     width:100%;
     max-width:800px;
     margin:auto;
@@ -857,7 +857,7 @@ ul, ol {
     display: block;
     max-width: 100%;
     margin: 5px auto;
-    box-shadow: 0px 3px 8px 0px rgba(70,70,90,0.15);
+    box-shadow: 0px 6px 30px 0px rgba(70,70,90,0.15);
 }
 
 .gifguy {
@@ -880,14 +880,16 @@ ul, ol {
 
 .main {
     display:block;
-    padding:20px 25px 25px 25px;
+    padding:0px 25px 0px 25px;
     margin:auto;
 }
 
 .mainblock {
-    max-width:750px;
+    max-width:800px;
     margin:auto;
 }
+
+
 
 .container {
     transition: all .2s ease-in-out 0s;
@@ -939,7 +941,7 @@ ul, ol {
    /*background: rgba(1, 1, 1, 0.60);*/
     color: #555555;
     padding:15px 20px 15px 20px;
-    font-weight:700;
+     font-weight:800;
     font-size:17px;
 }
 
@@ -1077,12 +1079,12 @@ a.bottomlinks {
 
 .groupguyz2 {
     column-count:2;
-    column-gap:30px;
+    column-gap:2em;
 }
 
 .groupguyz3 {
     column-count:3;
-    column-gap:30px;
+    column-gap:2em;
 }
 
 .hideme2 {
@@ -1236,6 +1238,10 @@ a.bottomlinks {
 }
 
 @media only screen and (max-width:700px) {
+    
+    .col {
+        width:100%;
+    }
 
 
 .hidetimeline {
@@ -1297,10 +1303,11 @@ a.bottomlinks {
 }
     
 .subhead {
-    max-width:800px;
-    margin:auto;
-    font-weight:800;
-    font-size:16px;
+    color: #757682;
+    letter-spacing:2px;
+    font-size:13px;
+    padding-bottom:5px;
+    font-weight:300;
 }
 
 ul, ol {
@@ -1309,11 +1316,11 @@ ul, ol {
     max-width:600px;
     color: #757682;
     font-size:15px;
-    font-weight:400;
+    font-weight:300;
 }
 
 .groupguyz2 {
-    display:none;
+   column-count:1;
 }
 
 .groupguyz3 {
@@ -1329,6 +1336,8 @@ ul, ol {
 
 .spacetop {padding-top:1em;}
 .spacebottom {padding-bottom:1em;}
+.marginspacetop {margin-top:1em;}
+.marginspacebottom {margin-bottom:1em;}
 
 }
 
@@ -1442,20 +1451,18 @@ ul, ol {
     }
 
 .timeline-h1 {
-    font-weight:800;
+     font-weight:800;
     font-size: 16px;
     color:#2a353a;
-    font-weight:800;
     width:100%;
     max-width:800px;
     margin:auto;
 }
 
 .timeline2-h1 {
-    font-weight:800;
+     font-weight:800;
     font-size: 16px;
     color:#2a353a;
-    font-weight:800;
     width:100%;
     max-width:800px;
     margin:auto;
