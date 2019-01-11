@@ -307,6 +307,9 @@ a {
     }*/
 }
 
+.col {
+    min-width:200px;
+}
 
 #introsection {
     background-color:white;
@@ -348,11 +351,12 @@ a {
 
 .homepage-title {
     line-height:1.2;
-    font-size: 56px;
-    font-weight:800;
+    font-size: 60px;
+    font-weight:750;
     color:#2a353a;
     margin:auto;
     margin-top:20px;
+    transition: all .2s ease-in-out 0s;
 }
 
 .fortyspace {
@@ -411,6 +415,7 @@ p {
 
 .project-paragraph {
     line-height:1.6;
+    max-width:800px;
     color: #757682;
     font-size:16px;
     font-weight:300;
@@ -532,7 +537,13 @@ img {
 
 .card {
     position: relative;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
@@ -553,6 +564,9 @@ img {
 }
 
 .card-box {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
     padding: 20px 20px;
     background-color:white;
     margin-top:-5px;
@@ -560,6 +574,9 @@ img {
 }
 
 .card-box2 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
     padding: 20px 20px;
     background-color:white;
     margin-top:-5px;
@@ -706,6 +723,7 @@ h1 {
     color:#2a353a;
     width:100%;
     margin:auto;
+    transition: all .2s ease-in-out 0s;
 }
 
 .timeline-h1 {
@@ -733,11 +751,6 @@ ul, ol {
     color: #757682;
     font-size:16px;
     font-weight:300;
-}
-
-.mid-align {
-    vertical-align: middle;
-
 }
 
 .wrapper {
@@ -822,10 +835,15 @@ ul, ol {
     display:inline-block;
     width:50%;
     height:100%;
-     display:block;
-  align-items:center;
-  justify-content:center;
-    overflow:hidden;
+    
+}
+
+.kitties {
+    width:99%;
+    position: relative;
+  top: 50.5%;
+  left: 49.5%;
+  transform: translate(-50%,-50%);
 }
 
 
@@ -841,7 +859,7 @@ ul, ol {
 .project-image {
     display: block;
     max-width: 100%;
-    margin: auto;
+    margin: 5px auto;
     box-shadow: 0px 6px 30px 0px rgba(70,70,90,0.15);
 }
 
@@ -853,13 +871,13 @@ ul, ol {
     box-shadow: 0px 3px 8px 0px rgba(70,70,90,0.15);
     display: inline-block;
     max-width: 100%;
-    margin: auto;
+    margin: 5px auto;
 }
 
 .project-image-multi-2 {
     display: inline-block;
     max-width: 100%;
-    margin: auto;
+    margin: 5px auto;
     box-shadow: 0px 3px 8px 0px rgba(70,70,90,0.15);
 }
 
@@ -870,7 +888,7 @@ ul, ol {
 }
 
 .mainblock {
-    max-width:750px;
+    max-width:800px;
     margin:auto;
 }
 
@@ -882,6 +900,7 @@ ul, ol {
     display: block;
     max-width: 100%;
     margin: 0 auto;
+    background-color:#757682;
 }
 
 .container:hover {
@@ -973,6 +992,10 @@ ul, ol {
     left:50px;
 }
 
+.card-image {
+    background-color:lightgray;
+}
+
 .bottomstuffs {
     padding-top:50px;
     margin:auto;
@@ -1062,13 +1085,15 @@ a.bottomlinks {
     opacity:1;
 }
 
-.row {
+.groupguyz2 {
     column-count:2;
     column-gap:2em;
-    display:inline-block;
-    width:100%;
 }
 
+.groupguyz3 {
+    column-count:3;
+    column-gap:2em;
+}
 
 .hideme2 {
     width:100%;
@@ -1301,15 +1326,13 @@ ul, ol {
     font-weight:300;
 }
 
-.row {
+.groupguyz2 {
    column-count:1;
 }
 
-    .row:after {
-  content: "";
-  display: table;
-  clear: both;
-    }
+.groupguyz3 {
+    display:none;
+}
 
 .ministyleguide {
     display:none;
@@ -1335,12 +1358,16 @@ ul, ol {
     margin:0;
 } */
  .card-box {
-
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
     padding: 20px 20px;
     background-color:white;
     margin-top:-5px;
     height:auto;
 }
+    
+
 
  .singlecolumn{
     width: 100%;
@@ -1359,10 +1386,6 @@ ul, ol {
     margin-top:0px;
     width: 100%;
 }
-    
-.col {
-    width:50%;
-    }
 
 .paragraph {
     font-size:15px;
