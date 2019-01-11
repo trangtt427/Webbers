@@ -415,7 +415,6 @@ p {
 
 .project-paragraph {
     line-height:1.6;
-    max-width:800px;
     color: #757682;
     font-size:16px;
     font-weight:300;
@@ -888,7 +887,7 @@ ul, ol {
 }
 
 .mainblock {
-    max-width:800px;
+    max-width:750px;
     margin:auto;
 }
 
