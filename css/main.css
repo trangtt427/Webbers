@@ -307,9 +307,6 @@ a {
     }*/
 }
 
-.col {
-    min-width:200px;
-}
 
 #introsection {
     background-color:white;
@@ -339,7 +336,6 @@ a {
 .spacebottom {padding-bottom:2em;}
 
 .introtext {
-    max-width:800px;
     margin:auto;
     display:block;
 
@@ -354,7 +350,6 @@ a {
     line-height:1.2;
     font-size: 56px;
     font-weight:800;
-    max-width:800px;
     color:#2a353a;
     margin:auto;
     margin-top:20px;
@@ -416,7 +411,6 @@ p {
 
 .project-paragraph {
     line-height:1.6;
-    max-width:800px;
     color: #757682;
     font-size:16px;
     font-weight:300;
@@ -538,13 +532,7 @@ img {
 
 .card {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    display: block;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
@@ -565,9 +553,6 @@ img {
 }
 
 .card-box {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
     padding: 20px 20px;
     background-color:white;
     margin-top:-5px;
@@ -575,9 +560,6 @@ img {
 }
 
 .card-box2 {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
     padding: 20px 20px;
     background-color:white;
     margin-top:-5px;
@@ -723,7 +705,6 @@ h1 {
     font-size: 36px;
     color:#2a353a;
     width:100%;
-    max-width:800px;
     margin:auto;
 }
 
@@ -749,10 +730,14 @@ h1 {
 ul, ol {
     margin:auto;
     line-height:27px;
-    max-width:800px;
     color: #757682;
     font-size:16px;
     font-weight:300;
+}
+
+.mid-align {
+    vertical-align: middle;
+
 }
 
 .wrapper {
@@ -837,15 +822,10 @@ ul, ol {
     display:inline-block;
     width:50%;
     height:100%;
-    
-}
-
-.kitties {
-    width:99%;
-    position: relative;
-  top: 50.5%;
-  left: 49.5%;
-  transform: translate(-50%,-50%);
+     display:block;
+  align-items:center;
+  justify-content:center;
+    overflow:hidden;
 }
 
 
@@ -861,7 +841,7 @@ ul, ol {
 .project-image {
     display: block;
     max-width: 100%;
-    margin: 5px auto;
+    margin: auto;
     box-shadow: 0px 6px 30px 0px rgba(70,70,90,0.15);
 }
 
@@ -873,13 +853,13 @@ ul, ol {
     box-shadow: 0px 3px 8px 0px rgba(70,70,90,0.15);
     display: inline-block;
     max-width: 100%;
-    margin: 5px auto;
+    margin: auto;
 }
 
 .project-image-multi-2 {
     display: inline-block;
     max-width: 100%;
-    margin: 5px auto;
+    margin: auto;
     box-shadow: 0px 3px 8px 0px rgba(70,70,90,0.15);
 }
 
@@ -890,7 +870,7 @@ ul, ol {
 }
 
 .mainblock {
-    max-width:800px;
+    max-width:750px;
     margin:auto;
 }
 
@@ -902,7 +882,6 @@ ul, ol {
     display: block;
     max-width: 100%;
     margin: 0 auto;
-    background-color:#757682;
 }
 
 .container:hover {
@@ -994,10 +973,6 @@ ul, ol {
     left:50px;
 }
 
-.card-image {
-    background-color:lightgray;
-}
-
 .bottomstuffs {
     padding-top:50px;
     margin:auto;
@@ -1087,15 +1062,13 @@ a.bottomlinks {
     opacity:1;
 }
 
-.groupguyz2 {
+.row {
     column-count:2;
     column-gap:2em;
+    display:inline-block;
+    width:100%;
 }
 
-.groupguyz3 {
-    column-count:3;
-    column-gap:2em;
-}
 
 .hideme2 {
     width:100%;
@@ -1306,7 +1279,6 @@ a.bottomlinks {
 
 .project-paragraph {
     line-height:1.6;
-    max-width:800px;
     color: #757682;
     font-size:15px;
     font-weight:300;
@@ -1329,13 +1301,15 @@ ul, ol {
     font-weight:300;
 }
 
-.groupguyz2 {
+.row {
    column-count:1;
 }
 
-.groupguyz3 {
-    display:none;
-}
+    .row:after {
+  content: "";
+  display: table;
+  clear: both;
+    }
 
 .ministyleguide {
     display:none;
@@ -1361,16 +1335,12 @@ ul, ol {
     margin:0;
 } */
  .card-box {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+
     padding: 20px 20px;
     background-color:white;
     margin-top:-5px;
     height:auto;
 }
-    
-
 
  .singlecolumn{
     width: 100%;
@@ -1389,6 +1359,10 @@ ul, ol {
     margin-top:0px;
     width: 100%;
 }
+    
+.col {
+    width:50%;
+    }
 
 .paragraph {
     font-size:15px;
