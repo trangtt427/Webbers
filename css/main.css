@@ -111,14 +111,14 @@ body {
    margin-top: 5px;
    margin-bottom: 5px;
    font-size: 25px;
-   font-weight: 800;
+    font-weight:800;
 }
 
 
 .timeline-content p {
    font-size: 16px;
    line-height: 1.6;
-   color: #2a353a;
+     color: #757682;
 }
 
 /**********Timeline V2 ****/
@@ -273,7 +273,6 @@ header {
 }
 
 .trangy {
-    margin-top:-20px;
     position:relative;
     display:block;
     z-index:1;
@@ -351,11 +350,11 @@ a {
 
 .homepage-title {
     line-height:1.2;
-    font-size: 60px;
-    font-weight:750;
+    font-size: 56px;
+    font-weight:800;
     color:#2a353a;
-    margin:auto;
     margin-top:20px;
+    margin-bottom:0px;
     transition: all .4s ease-in-out 0s;
 }
 
@@ -364,7 +363,11 @@ a {
 }
 
 .twentyspace {
-    height:20px;
+    height:3em;
+}
+
+.tenspace {
+    height:1em;
 }
 
 .sexy_line{
@@ -392,7 +395,8 @@ a {
 }
 
 p {
-    font-weight:400;
+    font-weight:300;
+    color: #757682;
 }
 
 .title {
@@ -402,16 +406,17 @@ p {
     font-size:22px;
     margin:auto;
     color: #2a353a;
-    font-weight:800;
+     font-weight:800;
 }
 
 .paragraph {
     line-height:1.6;
-    max-width:650px;
     color: #757682;
     font-size:16px;
     font-weight:300;
+    max-width:750px;
     }
+
 
 .project-paragraph {
     line-height:1.6;
@@ -419,10 +424,11 @@ p {
     font-size:16px;
     font-weight:300;
     margin:auto;
+    max-width:750px;
 }
 
 .subhead {
- color: #757682;
+ color: #94959e;
     letter-spacing:2px;
     font-size:14px;
     padding-bottom:5px;
@@ -430,12 +436,11 @@ p {
 }
 
 .copyright {
-    padding-top:10px;
     color: #888;
-    font-size:12px;
-    font-weight:400;
+    font-size:13px;
+    font-weight:300;
     text-align:left;
-    line-height:15px;
+    line-height:20px;
     width:100%;
     }
 
@@ -447,6 +452,7 @@ p {
     font-weight:300;
     margin:auto;
     text-align:center;
+    padding-top:5px;
 }
 
 .header-text {
@@ -467,11 +473,7 @@ img {
 
 @media only screen and (min-width:701px) {
 
-.hideme2 {
-    display:none;
-}
-
-.hideme3 {
+.hideme2, .hideme3{
     display:none;
 }
 
@@ -530,9 +532,77 @@ img {
     margin:auto;
     min-width:150px;
     text-align:center;
-    padding-top:85px;
-    padding-bottom:5px;
+    padding-top:40px;
 }
+
+/** start timeline**/
+.process-container {
+  margin: 0 auto;
+}
+#process-timeline {
+  position: relative;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 3px;
+  background: #d7e4ed;
+}
+.process-timeline-block {
+  position: relative;
+  margin: 1em 0;
+}
+.process-timeline-block:first-child {
+  margin-top: 0;
+}
+.process-timeline-block:last-child {
+  margin-bottom: 0;
+}
+.process-timeline-cat {
+  position: absolute;
+  top: 0px;
+  left: 9px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.process-timeline-cat.process-circle {
+  background: #DF5F96;
+}
+.process-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  background-color:#f4f2f4;
+  padding: 1em;
+   
+}
+.process-timeline-content .process-timeline-content {
+  display: inline-block;
+}
+.process-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 0px solid #f4f2f4;
+}
+
+.process-p {
+    margin-bottom:0px;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/**end timeline**/
+
 
 .card {
     position: relative;
@@ -589,7 +659,7 @@ img {
 
 .card-title {
     color: #2a353a;
-    font-weight: 700;
+    font-weight: 800;
     margin:0;
     margin-bottom: 0.75rem;
     font-size:16px;
@@ -598,7 +668,7 @@ img {
 .feature-card-title {
     line-height: 1.2;
     color: #2a353a;
-    font-weight: 700;
+    font-weight: 800;
     margin:0;
     margin-bottom: 0.75rem;
     padding: 30px 30px 0px 30px;
@@ -614,7 +684,7 @@ img {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-weight: 800;
+    font-weight:800;
     line-height: 1.6;
 }
 
@@ -718,7 +788,7 @@ h1 {
 
 .project-h1 {
      font-weight:800;
-    font-size: 36px;
+    font-size:32px;
     color:#2a353a;
     width:100%;
     margin:auto;
@@ -726,7 +796,7 @@ h1 {
 }
 
 .timeline-h1 {
-     font-weight:800;
+      font-weight:800;
     font-size: 22px;
     color:#2a353a;
     width:100%;
@@ -735,7 +805,7 @@ h1 {
 }
 
 .center-h1 {
-     font-weight:800;
+      font-weight:800;
     font-size: 24px;
     color:#2a353a;
     width:100%;
@@ -787,7 +857,7 @@ ul, ol {
 .titleguy, .titleguy2{
     margin:1.66666667%;
     width: 96.666666%;
-    color: #757682;
+    color: #94959e;
     letter-spacing:2px;
     font-size:14px;
     padding-bottom:5px;
@@ -859,7 +929,7 @@ ul, ol {
     display: block;
     max-width: 100%;
     margin: 5px auto;
-    box-shadow: 0px 6px 30px 0px rgba(70,70,90,0.15);
+    box-shadow: 0px 6px 20px 0px rgba(0,0,0,.2);
 }
 
 .gifguy {
@@ -867,7 +937,7 @@ ul, ol {
 }
 
 .project-image-multi {
-    box-shadow: 0px 3px 8px 0px rgba(70,70,90,0.15);
+    box-shadow: 0px 3px 20px 0px rgba(0,0,0,.2);
     display: inline-block;
     max-width: 100%;
     margin: 5px auto;
@@ -877,7 +947,7 @@ ul, ol {
     display: inline-block;
     max-width: 100%;
     margin: 5px auto;
-    box-shadow: 0px 3px 8px 0px rgba(70,70,90,0.15);
+    box-shadow: 0px 3px 20px 0px rgba(0,0,0,.2);
 }
 
 .main {
@@ -1004,11 +1074,20 @@ ul, ol {
    background-color:#f4f2f4;
 }
 
+.bottomstuffswhite {
+    padding-top:50px;
+    margin:auto;
+    display:block;
+    text-align: center;
+    position:relative;
+   background-color:#fff;
+}
+
 .footer {
     position:block;
     height:275px;
     background-color: #181819;
-    text-align: center;
+
     margin-top:-20px;
 }
 
@@ -1022,6 +1101,7 @@ ul, ol {
 .sociallinks{
     height:30px;
     float:left;
+    padding-top:10px;
 }
 
 .footermenu {
@@ -1041,7 +1121,7 @@ ul, ol {
 
 .footerbg {
     max-width:900px;
-    padding:20px;
+    padding:25px;
     margin:auto;
     background-color: #181819;
 }
@@ -1086,7 +1166,7 @@ a.bottomlinks {
 
 .groupguyz2 {
     column-count:2;
-    column-gap:2em;
+    column-gap:1em;
 }
 
 .groupguyz3 {
@@ -1218,6 +1298,7 @@ a.bottomlinks {
     display:inline-block;
     position:relative;
     margin:auto;
+    padding-top:20px;
 }
 
 .footer {
@@ -1245,6 +1326,12 @@ a.bottomlinks {
 }
 
 @media only screen and (max-width:700px) {
+    
+    
+    .process-p {
+    margin-bottom:0px;
+    font-size:13px;
+}
     
     .col {
         width:100%;
@@ -1293,10 +1380,42 @@ a.bottomlinks {
 .homepage-title {
     line-height:1.2;
     font-size: 36px;
+    padding-bottom:0.5em;
     font-weight:800;
     color:#2a353a;
 }
+    
+    .aboutlink {
+    font-size:12px;
 
+}
+
+    .linkthing {
+    top:10px;
+    width:40px;
+    display:inline-block;
+    margin:0;
+    margin-right:20px;
+    transition: all .2s ease-in-out 0s;
+    position:relative;
+}
+    
+    header {
+    position:relative;
+    display:block;
+    background-color:white;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+    width:100%;
+    z-index:99;
+    margin:auto;
+}
+
+    
 .center-h1 {
     font-size: 16px;
 }
@@ -1306,12 +1425,12 @@ a.bottomlinks {
     color: #757682;
     font-size:15px;
     font-weight:300;
+    max-width:750px;
 }
     
 .subhead {
     letter-spacing:2px;
     font-size:13px;
-    padding-bottom:5px;
     font-weight:300;
 }
 
@@ -1324,22 +1443,18 @@ ul, ol {
     font-weight:300;
 }
 
-.groupguyz2 {
+.groupguyz2, .groupguyz3 {
    column-count:1;
-}
-
-.groupguyz3 {
-    display:none;
 }
 
 .ministyleguide {
     display:none;
 }
 
-.extraspacetop {padding-top:3em;}
-.extraspacebottom {padding-bottom:3em;}
-.extramarginspacetop {margin-top:3em;}
-.extramarginspacebottom {margin-bottom:3em}
+.extraspacetop {padding-top:4em;}
+.extraspacebottom {padding-bottom:4em;}
+.extramarginspacetop {margin-top:4em;}
+.extramarginspacebottom {margin-bottom:4em}
 
 .spacetop {padding-top:1em;}
 .spacebottom {padding-bottom:1em;}
@@ -1469,7 +1584,7 @@ ul, ol {
 }
 
 .timeline2-h1 {
-     font-weight:800;
+      font-weight:800;
     font-size: 16px;
     color:#2a353a;
     width:100%;
