@@ -1,5 +1,6 @@
-
-
+/*eslint no-undef: "warn"*/
+/*eslint no-console: "warn"*/
+/*eslint no-unused-vars: "warn"*/
 
 // This .ready() function means that the document is ready. 
 // If anything is outside of this, the code will run before the document is ready.
@@ -117,24 +118,24 @@ $(document).ready(function () {
 	// Wait for window load
 	$(window).load(function() {
 		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");;
+		$(".se-pre-con").fadeOut("slow");
 	});
 
 //replace blurry images
-(() => {
+(function() {
   'use strict';
   // Page is loaded
-  const objects = document.getElementsByClassName('asyncImage');
-  Array.from(objects).map((item) => {
+  var objects = document.getElementsByClassName('asyncImage');
+  Array.prototype.forEach.call(objects, function(item) {
     // Start loading image
-    const img = new Image();
+    var img = new Image();
     img.src = item.dataset.src;
     // Once image is loaded replace the src of the HTML element
-    img.onload = () => {
+    img.onload = function() {
       item.classList.remove('asyncImage');
       return item.nodeName === 'IMG' ? 
         item.src = item.dataset.src :        
-        item.style.backgroundImage = `url(${item.dataset.src})`;
+        item.style.backgroundImage = "url(" + item.dataset.src + ")";
     };
   });
 })();
