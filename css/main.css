@@ -923,7 +923,7 @@ ul, ol {
 }
 
 .rightblock {
-   background-color:#262626;
+   background-color:#83c3f8;
     display:inline-block;
     width:50%;
     height:100%;
@@ -952,7 +952,7 @@ ul, ol {
     display: block;
     max-width: 100%;
     margin: 5px auto;
-    box-shadow: 0px 6px 20px 0px rgba(0,0,0,.2);
+    box-shadow: 0px 3px 13px 0px rgba(0,0,0,.2);
 }
 
 .gifguy {
@@ -960,7 +960,7 @@ ul, ol {
 }
 
 .project-image-multi {
-    box-shadow: 0px 3px 20px 0px rgba(0,0,0,.2);
+    box-shadow: 0px 3px 13px 0px rgba(0,0,0,.2);
     display: inline-block;
     max-width: 100%;
     margin: 5px auto;
@@ -1110,7 +1110,6 @@ ul, ol {
     position:block;
     height:275px;
     background-color: #181819;
-
     margin-top:-20px;
 }
 
