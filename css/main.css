@@ -1089,21 +1089,19 @@ ul, ol {
 }
 
 .bottomstuffs {
-    padding-top:50px;
     margin:auto;
     display:block;
     text-align: center;
     position:relative;
-   background-color:#f4f2f4;
+
 }
 
 .bottomstuffswhite {
-    padding-top:50px;
     margin:auto;
     display:block;
     text-align: center;
     position:relative;
-   background-color:#fff;
+
 }
 
 .footer {
