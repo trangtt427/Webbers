@@ -117,8 +117,8 @@ body {
 
 .timeline-content p {
    font-size: 16px;
-   line-height: 1.6;
-     color: #757682;
+   line-height: 2;
+     color:#0B0E0F;
 }
 
 /**********Timeline V2 ****/
@@ -201,7 +201,7 @@ body {
 
 .timeline-content2 p {
     font-size: 16px;
-   line-height: 1.6;
+   line-height: 2;
    color: #0B0E0F;
 
 }
@@ -417,7 +417,7 @@ p {
 }
 
 .paragraph {
-    line-height:1.6;
+    line-height:2;
     color: #0B0E0F;
     font-size:20px;
     font-weight:400;
@@ -426,7 +426,7 @@ p {
 
 
 .project-paragraph {
-    line-height:1.6;
+    line-height:2;
     color: #0B0E0F;
     font-size:16px;
     font-weight:400;
@@ -438,7 +438,7 @@ p {
  color: #94959e;
     letter-spacing:2px;
     font-size:14px;
-    line-height:1.6;
+    line-height:2;
     padding-bottom:5px;
     font-weight:400;
 }
@@ -446,7 +446,7 @@ p {
     .headerintro {
  color: #94959e;
     font-size:14px;
-    line-height:1.6;
+    line-height:2;
     padding-bottom:5px;
    font-weight:400;
 }
@@ -461,7 +461,7 @@ p {
     }
 
 .caption {
-    line-height:1.6;
+    line-height:2;
     color: #757682;
     font-size:14px;
     font-style:italic;
@@ -474,7 +474,7 @@ p {
 .header-text {
     padding-top:10px;
     text-align:left;
-    line-height:1.6;
+    line-height:2;
     max-width:650px;
     color: #0B0E0F;
     font-size:16px;
@@ -613,7 +613,7 @@ img {
 
 .process-p {
     margin-bottom:0px;
-    line-height:1.6;
+    line-height:2;
     font-size:14px;
 }
 
@@ -701,12 +701,12 @@ img {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-weight:700;
-    line-height: 1.6;
+    line-height: 2;
 }
 
 .card-type {
     color: #94959e;
-    line-height:1.6;
+    line-height:2;
     font-size:13px;
     font-weight:400;
     margin-top: 10px;
@@ -812,9 +812,9 @@ h1 {
 }
 
 .thought {
-     font-weight:700;
+     font-weight:400;
     font-size:24px;
-    color:#0B0E0F;
+    color: #94959e;
     max-width:500px;
     margin:auto;
     line-height:1.5;
@@ -1402,7 +1402,7 @@ a.bottomlinks {
 }
 
 .caption {
-    line-height:1.6;
+    line-height:2;
     color: rgba(48, 51, 53, 0.6);
     font-size:14px;
     font-weight:400;
@@ -1414,7 +1414,7 @@ a.bottomlinks {
 
 .header-text {
     text-align:left;
-    line-height:1.6;
+    line-height:2;
     max-width:450px;
     color: #0B0E0F;
     font-size:14px;
@@ -1472,12 +1472,17 @@ a.bottomlinks {
 }
 
 .project-paragraph {
-    line-height:1.6;
+    line-height:2;
     color: #0B0E0F;
     font-size:15px;
     font-weight:400;
     max-width:750px;
 }
+    
+    .thought {
+     font-weight:400;
+    font-size:18px;
+    }
     
 .subhead {
     letter-spacing:2px;
@@ -1492,7 +1497,7 @@ a.bottomlinks {
 
 ul, ol {
     margin:auto;
-    line-height:1.6;
+    line-height:2;
     max-width:600px;
     color: #0B0E0F;
     font-size:15px;
@@ -1614,12 +1619,12 @@ ul, ol {
 
 .timeline-content p {
    font-size: 15px;
-   color: #757682;
+   color: #0B0E0F;
 }
 
 .timeline-content2 p {
    font-size: 15px;
-   color: #757682;
+   color: #0B0E0F;
 }
 
 .marker{
