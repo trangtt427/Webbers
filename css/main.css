@@ -102,7 +102,7 @@ body {
    width: 16px;
    height: 16px;
    border-radius: 50%;
-   border: 2px solid #F5F7FA;
+   border: 2px solid #DF5F96;
    background: #DF5F96;
    margin-top: 11px;
    z-index: 9999;
@@ -250,6 +250,10 @@ header {
     width:100%;
     background-color:white;
     display:block;
+}
+
+.bio-image {
+    width:50%;
 }
 
 
