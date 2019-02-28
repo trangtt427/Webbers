@@ -346,17 +346,22 @@ a {
     padding-bottom:2em;
 }
 
+.nopadtopbottom {padding-top:0px; padding-bottom:0px;}
 
 
-.extraspacetop {padding-top:6em;}
-.extraspacebottom {padding-bottom:6em;}
+.extraspacetop {padding-top:4em;}
+.extraspacebottom {padding-bottom:4em;}
+.extramarginspacetop {margin-top:4em;}
+.extramarginspacebottom {margin-bottom:4em}
 
-.spacetop {padding-top:1em;}
-.spacebottom {padding-bottom:1em;}
+
+.spacetop {padding-top:1.5em;}
+.spacebottom {padding-bottom:1.5em;}
 
 .introtext {
     margin:auto;
     display:block;
+    max-width:750px;
 
 }
 
@@ -380,7 +385,7 @@ a {
 }
 
 .twentyspace {
-    height:3em;
+    height:1.5em;
 }
 
 .tenspace {
@@ -581,6 +586,7 @@ img {
   position: relative;
   margin-top: 2em;
   margin-bottom: 2em;
+  max-width:750px;
 }
 #process-timeline::before {
   content: '';
@@ -832,6 +838,7 @@ h1 {
     width:100%;
     margin:auto;
     transition: all .4s ease-in-out 0s;
+     max-width:750px;
   
 }
 
@@ -843,6 +850,7 @@ h1 {
     width:100%;
     margin:auto;
     transition: all .4s ease-in-out 0s;
+     max-width:750px;
   
 }
 
@@ -886,6 +894,7 @@ ul, ol {
     color: #0B0E0F;
     font-size:17px;
     font-weight:400;
+     max-width:750px;
 }
 
 .wrapper {
@@ -914,7 +923,10 @@ ul, ol {
   width: 53%;
     float:right;
 }
-
+.row {
+    max-width:750px;
+    margin:auto;
+}
 .row:after {
   content: "";
   display: table;
@@ -1046,7 +1058,7 @@ ul, ol {
 }
 
 .mainblock {
-    max-width:750px;
+    max-width:950px;
     margin:auto;
 }
 
@@ -1525,7 +1537,7 @@ a.bottomlinks {
     color: #0B0E0F;
     font-size:15px;
     font-weight:400;
-    max-width:750px;
+   
 }
     
     .thought {
@@ -1548,7 +1560,6 @@ a.bottomlinks {
 ul, ol {
     margin:auto;
     line-height:1.8;
-    max-width:600px;
     color: #0B0E0F;
     font-size:15px;
     font-weight:400;
@@ -1561,11 +1572,6 @@ ul, ol {
 .ministyleguide {
     display:none;
 }
-
-.extraspacetop {padding-top:4em;}
-.extraspacebottom {padding-bottom:4em;}
-.extramarginspacetop {margin-top:4em;}
-.extramarginspacebottom {margin-bottom:4em}
 
 
 
