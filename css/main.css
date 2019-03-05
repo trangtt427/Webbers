@@ -378,6 +378,7 @@ a {
     margin-top:20px;
     margin-bottom:0px;
     transition: all .4s ease-in-out 0s;
+    max-width:700px;
 }
 
 .fortyspace {
@@ -1217,6 +1218,13 @@ ul, ol {
     display:block;
 }
 
+projectlinkthing .current {
+  background:red;
+  color:white;
+}
+
+
+
 .footerbg {
     max-width:1050px;
     padding:25px;
@@ -1255,11 +1263,15 @@ a.footertextlink:hover {
 a.bottomlinks {
     color: #E7E6E6;
     text-decoration: none;
+    cursor:auto;
 }
+
+
 
 .footersvg:hover {
     display:inline-block;
     opacity:1;
+    cursor:pointer;
 }
 
 .groupguyz2 {
