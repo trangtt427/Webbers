@@ -1002,7 +1002,8 @@ ul, ol {
 }
 
 .rightblock {
-   background-color:#83c3f8;
+    background-color: #262626;
+  /* background-color:#83c3f8; */
     display:inline-block;
     width:50%;
     height:100%;
@@ -1185,7 +1186,7 @@ ul, ol {
 
 .footer {
     position:block;
-    height:275px;
+    height:205px;
     background-color: #181819;
     margin-top:-20px;
 }
@@ -1414,7 +1415,7 @@ a.bottomlinks {
 
 .footer {
     position:block;
-    height:360px;
+    height:315px;
     background-color: #181819;
     text-align: center;
     margin-top:-20px;
