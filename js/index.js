@@ -2,9 +2,31 @@
 /*eslint no-console: "warn"*/
 /*eslint no-unused-vars: "warn"*/
 
-// This .ready() function means that the document is ready. 
+// This .ready() function means that the document is ready.
 // If anything is outside of this, the code will run before the document is ready.
 $(document).ready(function () {
+  function hashCode(s) {
+    var h = 0, l = s.length, i = 0;
+    if ( l > 0 )
+      while (i < l)
+        h = (h << 5) - h + s.charCodeAt(i++) | 0;
+    return h;
+  };
+  function isValid(p) {
+    if (!p) {
+      return null;
+    }
+    return hashCode(p) === "";
+  }
+
+  var p = window.prompt("Psst what's the password?");
+  console.log(hashCode(p));
+  if (!p || !p.isValid()) {
+    // Send the user back to their last history page
+    // NOTE: This might break if they're opening the page from a new tab, with no history
+    window.history.back();
+  }
+
   $(window).scroll(function () {
     var top =  $(".goto-top");
         if ( $('body').height() <= (    $(window).height() + $(window).scrollTop() + 200 )) {
@@ -73,7 +95,7 @@ $(document).ready(function () {
          $element.removeClass(className);
        }
      });
-    
+
     // On page load, check the $document.scrollTop().
     // If scrollTop() is >= 5, then add the class 'box-shadow' to $('header')
     // This is a fix for the box-shadow not appearing on refresh.
@@ -81,7 +103,6 @@ $(document).ready(function () {
         console.log('happens exactly once');
         $element.addClass(className);
     }
-
 });
 
 
@@ -133,8 +154,8 @@ $(document).ready(function () {
     // Once image is loaded replace the src of the HTML element
     img.onload = function() {
       item.classList.remove('asyncImage');
-      return item.nodeName === 'IMG' ? 
-        item.src = item.dataset.src :        
+      return item.nodeName === 'IMG' ?
+        item.src = item.dataset.src :
         item.style.backgroundImage = "url(" + item.dataset.src + ")";
     };
   });
