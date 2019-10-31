@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trang Tran | Incorta: Data File Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" type="text/css" href="css/fonts/fonts.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+      <link rel="stylesheet" href="css/main.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135452467-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135452467-1');
+</script>
+
+
+</head>
+
+<body id="project">
+
+
+
+      <header class="header nav-down"><div class="headcontain">
+
+             <div class="linkthing"><a href="http://trangerthings.com"><img src="images/lotus.svg"></a></div>
+
+             <div class="aboutlink"><a href="biography">About</a></div>
+
+              <div class="aboutlink"><a href="mailto:trangtt427@gmail.com?subject=I'm Here To Talk About Cats. And Maybe Design.">Email</a></div>
+
+
+            </div></header>
+
+
+
+    <div class="site-content animate-in first">
+
+
+
+
+
+
+
+        <div class="fullblock extraspacetop">
+    <div class="main">
+    <div class="mainblock">
+
+   <!-- <a href="http://trangerthings.com" class="x">
+<i class="fa fa-plus my-x"></i>
+</a>-->
+
+           <div class="row">
+  <div class="unequal-column left">
+   <h1 class="homepage-title">Incorta: Data File Directory
+        </h1>
+
+       <div class="headerintro extraspacebottom">A design solution allowing for better file management in the Incorta app</div>
+  </div>
+            <div class="unequal-column middle"></div>
+  <div class="unequal-column right">
+
+
+               <img src="images/header-backgrounds/incortadatafilesdirectory-min.png" class="asyncImage" class="" width="500px" data-src="images/header-backgrounds/incortadatafilesdirectory.png" alt="Office Space IoT Web App"  class="" width="500px"/>
+
+
+
+        <!-- <img src="images/header-backgrounds/officespace.jpg" class="" width="500px"> -->
+  </div>
+</div>
+
+
+
+        </div></div></div>
+
+         <div class="fullblock">
+    <div class="main">
+    <div class="mainblock">
+
+
+
+              <h2 class="project-h2">Project Background</h2>
+
+
+
+   <p class="project-paragraph spacetop spacebottom">In the Data Tab of Incorta's app, users can provide data in two ways: upload CSV/XML files straight into their instance or connect to a database. One of the biggest issues that users are facing is that they are adding hundreds of data files into a root location, without capabilities of creating nested folder structures. Our current design lacked any basic directory support of renaming files, sharing, and editing.</p>
+
+
+              <img class="project-image" src="images/incorta-data-file-directory/datafiles.png">
+              <p class="caption">The old Data Tab had two issues: it has not been migrated to React and did not provide a way for users to fully customize their environment.</p>
+
+
+
+
+        </div></div></div>
+
+          <span class="sexy_line"></span>
+
+<div class="fullblock">
+    <div class="main">
+    <div class="mainblock">
+
+     <h1 class="project-h2">Role</h1>
+
+
+      <p class="project-paragraph spacetop">I led the UX design efforts for this feature. I worked with the PM, the engineering team, server team, and collaborated with the lead UX designer occasionally for brainstorming and feedback.</p>
+
+
+
+
+
+
+
+
+
+
+        </div></div></div>
+        <span class="sexy_line"></span>
+      <div class="fullblock">
+    <div class="main">
+    <div class="mainblock">
+              <h2 class="project-h2">Learning About the User</h2>
+
+
+      <p class="project-paragraph spacetop">
+  The personas of this app are schema developers. They are a technical bunch and are responsible for bringing the data into their systems in order to create schemas. Once they build the schemas, business users can analyze their data and build visualizations.</p>
+
+
+
+        <p class="project-paragraph spacetop">
+      I worked with the PMs and a few solutions architects who speak directly to these power users to learn about their struggles and frustrations. Users have trouble locating their files because there's no way to search, although we provide that ability with our other pages that have already migrated from Angular to React.</p>
+
+
+      <p class="project-paragraph spacetop">
+        Users simply want to save time and effort by having organized files for easy sharing, finding, editing, etc.
+</p>
+
+
+        </div></div></div>
+
+
+
+
+        <span class="sexy_line"></span>
+     <div class="fullblock">
+    <div class="main">
+    <div class="mainblock">
+
+      <h1 class="project-h2">Project Goals</h1>
+
+
+
+      <p class="project-paragraph spacetop spacebottom">
+
+
+      The only part of our app that utilizes a directory is the Content Tab, where dashboards can be grouped into folders. However, the feature was poorly designed as we don't provide a way for users to traverse through folders and back. A breadcrumb navigation was important for this feature.</p>
+
+
+      <img class="project-image" src="images/incorta-data-file-directory/oldbreadcrumb.png">
+      <p class="caption">Our current navigation does not allow users to traverse through previous folders. There is also no way to get to the root destination in one click.</p>
+
+
+
+
+
+
+        </div></div></div>
+
+
+        <span class="sexy_line"></span>
+     <div class="fullblock">
+    <div class="main">
+    <div class="mainblock">
+
+      <h1 class="project-h2">Planning</h1>
+
+
+
+      <p class="project-paragraph spacetop spacebottom">
+  The ability to support folder structures was a huge ask from a customer. The PM wrote up the user story and specified that this feature would span across two releases. The first release would focus on the basic functions of a directory:</p>
+
+  <ol>
+  <li>Creating, uploading, and renaming folders</li>
+    <li>Sharing files</li>
+    <li>Searching</li>
+    <li>Breadcrumb navigation</li>
+    <li>Managing permissions to overwrite</li>
+</ol>
+
+<p class="project-paragraph spacetop">
+The second release will address folder-specific permissions, sharing and moving of folders/files, along with other enhancements as-needed.</p>
+
+        </div></div></div>
+
+        <span class="sexy_line"></span>
+      <div class="fullblock">
+    <div class="main">
+    <div class="mainblock">
+              <h2 class="project-h2">Prototyping the Solution</h2>
+
+
+      <p class="project-paragraph spacetop">
+The proposal involves redesigning the existing Data Tab to provide better support for folder structures and searching. We already have a list component as well as a search component used in the newer React pages of our app, so I implemented those to make sure we are consistent. </p>
+
+
+<p class="project-paragraph spacetop spacebottom">
+The problem with our current navigation is that users are unable to go back to a previous folder they were in, nor can they see the root location. Users would have to click the left caret each time if they wanted to go back a step. Our solution to that was to show the path leading up to the current location.</p>
+
+<img class="project-image" src="images/incorta-data-file-directory/createfolder.png">
+<p class="caption spacebottom">V1: The wireframe demonstrates the new breadcrumb navigation as well as the nested folders.</p>
+
+
+<img class="project-image" src="images/incorta-data-file-directory/uploadfolder.png">
+<p class="caption spacebottom">Users will be able to upload individual data files or whole folders.</p>
+
+<img class="project-image" src="images/incorta-data-file-directory/successfulupload.png">
+<p class="caption spacebottom"></p>
+
+<img class="project-image" src="images/incorta-data-file-directory/renamefolder.png">
+<p class="caption spacebottom">The new design will support renaming of folders and various other functions.</p>
+
+
+
+<p class="project-paragraph spacetop spacebottom">
+After the implementation, we reviewed the functionality and design it in our test build. We weren't too crazy about the title of the page being the last item shown in the breadcrumb. After some feedback and brainstorm sessions, we decided to separate the title of the page from the rest of the breadcrumb path, so that it stays prominent in one location. While it seemed minor, this was an important call as we would be using this breadcrumb design to replace our half-baked on in the Content Tab and for future directories within the app.</p>
+
+
+<img class="project-image" src="images/incorta-data-file-directory/newbreadcrumb.png">
+<p class="caption">V2: Second version with the improved breadcrumb.</p>
+
+        </div></div></div>
+
+        <span class="sexy_line"></span>
+      <div class="fullblock">
+    <div class="main">
+    <div class="mainblock">
+              <h2 class="project-h2">Evaluating the Usability</h2>
+
+
+      <p class="project-paragraph spacetop spacebottom">
+This feature was a huge ask from one of our most engaged customers. They were very pleased with the enhancement as it led to a more organized file structure and customization. This helped save time because they could now share folders containing appropriate files for other users. They were made aware about the enhancements to this feature that would be in the next release.</p>
+
+<img class="project-image" src="images/incorta-data-file-directory/finalscreen1.png">
+<p class="caption spacebottom">V2: Second version with the improved breadcrumb.</p>
+
+<img class="project-image" src="images/incorta-data-file-directory/finalscreen2.png">
+<p class="caption">V2: Second version with the improved breadcrumb.</p>
+
+<img class="project-image" src="images/incorta-data-file-directory/finalscreen3.png">
+<p class="caption">V2: Second version with the improved breadcrumb.</p>
+
+
+
+        </div></div></div>
+
+
+        <span class="sexy_line"></span>
+      <div class="fullblock">
+    <div class="main">
+    <div class="mainblock">
+
+
+       <h1 class="project-h2">Process Overview</h1>
+               	<div id="process-timeline" class="process-container">
+								<div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+								<div class="process-timeline-content">
+										<div class="card-title">Define the problem</div>
+										<p class="process-p">
+										What actions are users trying to take with their data files?
+										</p>
+
+									</div>
+								<div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+								<div class="process-timeline-content">
+										<div class="card-title">Gather information</div>
+										<p class="process-p">
+								   Researched current trends in designing directories, and worked with PMs to learn about user needs
+										</p>
+
+									</div>
+
+								</div>
+
+                                    <div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+									<div class="process-timeline-content">
+										<div class="card-title">Ideation</div>
+										<p class="process-p">
+											Researched current trends in designing directories, and worked with PMs to learn about user needs
+										</p>
+									</div>
+
+								</div>
+                                    <div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+									<div class="process-timeline-content">
+										<div class="card-title">Iteration</div>
+										<p class="process-p">
+											Changed breadcrumb design based on feedback
+										</p>
+									</div>
+
+								</div>
+                                    <div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+									<div class="process-timeline-content">
+										<div class="card-title">Implementation</div>
+										<p class="process-p">
+									Took 2 months of design, development, and testing
+										</p>
+									</div>
+
+								</div>
+                                     <div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+									<div class="process-timeline-content">
+										<div class="card-title">Evaluate</div>
+										<p class="process-p">
+											PM met with customer and got positive feedback
+										</p>
+									</div>
+
+								</div>
+								</div>
+							</div>
+
+
+        </div></div></div>
+      <div class="fullblock extraspacebottom">
+    <div class="main">
+    <div class="mainblock">
+
+
+       <h1 class="project-h2">The Outcome</h1>
+
+
+      <p class="project-paragraph spacetop">
+        The users were delighted with the first phase. The design is consistent with the rest of our React pages and allowed users to quickly sort and share their files.</p>
+
+        <p class="project-paragraph spacetop">
+        The next steps for this project is currently in the works. I am currently in the midst of designing for bulk actions and addressing folder-specific permissions.</p>
+
+
+
+
+
+
+
+        <div class="nextsection"><a href="incorta-dark-mode" class="btn btn-1">Incorta: Dark Mode &#8594;</a></div>
+
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script  src="js/index.js"></script>
+        </div></div></div>
+
+<div class="bottomstuffs "> <!--<span class="goto-top top"></span>-->
+<div class="footer">
+
+     <div class="footerbg">
+       <div class="footermenu">
+
+         <div class="projectlinkthing">
+           <a href="controlco-iot-web-app" class="footertextlink">Controlco: IoT Web App</a>
+         </div>
+         <div class="projectlinkthing">
+           <a href="incorta-data-file-directory" class="footertextlink">Incorta: Data File Directory</a>
+         </div>
+         <div class="projectlinkthing">
+           <a href="incorta-dark-mode" class="footertextlink">Incorta: Dark Mode</a>
+         </div>
+         <div class="projectlinkthing">
+           <a href="bio-rad-marcom-designs" class="footertextlink">Bio-Rad: Marcom Designs</a>
+         </div>
+         <div class="projectlinkthing">
+           <a href="controlco-energy-dashboard" class="footertextlink">Controlco: Energy Dashboard</a>
+         </div>
+         <div class="projectlinkthing">
+           <a href="personal-projects" class="footertextlink">Personal Projects</a>
+         </div>
+       </div>
+
+     <div class="linksncopy">
+   <div class="copyright">© 2019 <a href="http://www.trangerthings.com">Trangerthings</a><br>Designed and built by yours truly</div>
+
+     <div class="sociallinks">
+       <a href="https://www.behance.net/trangerthings" target="_blank" class="bottomlinks"><img class="footersvg" src="behanceround.svg" alt="Behance"></a><a href="https://www.linkedin.com/in/trangerthings/" target="_blank" class="bottomlinks"><img class="footersvg" src="linkedinround.svg" alt="LinkedIn"></a><a href="mailto:trangtt427@gmail.com?subject=I'm Here To Talk About Cats. And Maybe Design."  class="bottomlinks"><img class="footersvg" src="emailround.svg" alt="Email"></a>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

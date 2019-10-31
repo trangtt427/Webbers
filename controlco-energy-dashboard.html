@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trang Tran | Controlco: Energy Dashboard </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" type="text/css" href="css/fonts/fonts.css">
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+      <link rel="stylesheet" href="css/main.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135452467-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135452467-1');
+</script>
+
+
+</head>
+
+<body id="project">
+
+
+     <header class="header nav-down"><div class="headcontain">
+
+             <div class="linkthing"><a href="http://trangerthings.com"><img src="images/lotus.svg"></a></div>
+
+             <div class="aboutlink"><a href="biography">About</a></div>
+
+              <div class="aboutlink"><a href="mailto:trangtt427@gmail.com?subject=I'm Here To Talk About Cats. And Maybe Design.">Email</a></div>
+
+
+            </div></header>
+
+     <div class="site-content animate-in first">
+
+
+
+
+
+
+
+
+   <!-- <a href="http://trangerthings.com" class="x">
+<i class="fa fa-plus my-x"></i>
+</a>-->
+
+
+      <div class="fullblock extraspacetop">
+    <div class="main">
+    <div class="mainblock">
+
+
+        <div class="row">
+  <div class="unequal-column left">
+   <h1 class="homepage-title">Controlco: Energy Dashboard
+        </h1>
+       <div class="headerintro extraspacebottom">UI for real time energy analytics servicing data centers</div>
+  </div>
+            <div class="unequal-column middle"></div>
+  <div class="unequal-column right">
+
+           <img src="images/header-backgrounds/datacenter-min.png" class="asyncImage" class="" width="500px" data-src="images/header-backgrounds/datacenter.jpg" alt="Controlco: Energy Dashboard"  class="" width="500px"/>
+
+
+
+
+      <!--   <img src="images/header-backgrounds/datacenter.jpg" class="" width="500px"> -->
+  </div>
+</div>
+
+        </div></div></div>
+
+
+<div class="fullblock">
+    <div class="main">
+    <div class="mainblock">
+
+    <h1 class="project-h2">Project Background</h1>
+
+
+    <p class="project-paragraph spacetop">Controlco was tasked to work on one of the largest data centers in the Pacific Northwest. We provided a masters systems integration so that they could maintain desirable conditions within their facility. Data centers need constant monitoring of energy circulation because they host data for many tenants. One of our roadmap items is a dashboard feature that summarizes and tracks the overall energy and health of the facility.</p>
+
+
+
+
+</div>
+    </div></div>
+
+
+         <div class="fullblock">
+        <div class="main">
+        <div class="mainblock">
+
+     <h1 class="project-h2">Role</h1>
+
+
+
+     <p class="project-paragraph spacetop">I took on this project as my first autonomous UX design role. I worked with a data modeler, a PM, and the front-end team. </p>
+
+
+
+            </div></div></div>
+        <span class="sexy_line"></span>
+
+         <div class="fullblock">
+        <div class="main">
+        <div class="mainblock">
+
+        <h1 class="project-h2">Learning About the User</h1>
+
+
+
+
+
+       <p class="project-paragraph spacetop">I collaborated with the PM and data modeler to learn more about the users and their goals. The end users are data center technicians who operate directly on the power distribution units located in the racks. Their goal is to quickly assess the status of their units so that they can troubleshoot any faulty devices.</p>
+
+
+<p class="project-paragraph spacetop spacebottom">To help the users, we needed to design a read-only UI that allows users to track the energy consumption of the data center. A few required data points include the energy and phases of various meters, UPSs, PDUs, as well as data points for Apparent and Real power. My concern was that according to the PM, users absolutely needed to see Apparent and Real power, kVA and kW, at once. The reason for that was because the values are part of some formula that helps them calculate the total power consumed.</p>
+
+
+<img class="project-image" src="images/controlco-energy-dashboard/pfpowertriangle.png" width="750px"><p class="caption">This math is way over my head, but I'm sure it's helpful to the users.</p>
+
+</div></div></div>
+
+<div class="fullblock">
+<div class="main">
+<div class="mainblock">
+
+  <h2 class="project-h2">Planning</h2>
+
+<p class="project-paragraph spacetop">Do users truly need to see both units of power at once? I was absolutely against the idea of displaying both units of power at once. Showing two power units for every phase of every meter would result in a brutal experience for users as it would make it hard to find data points on the UI and slow the app to crawl. As much as they claimed it would be a "nice to have" in our meetings, I felt that foregoing that option was the user-friendlier choice.</p>
+
+<p class="project-paragraph spacetop">I came up with a proposal that challenged the requirements, which involved:</p>
+<ol>
+    <li>A toggle to switch between kVA and kW to optimize performance and help users find data points quickly.</li>
+    <li>Easy to spot KPIs.</li>
+    <li>Familiar interaction patterns found in tables.</li>
+</ol>
+
+</div></div></div>
+
+
+<div class="fullblock">
+<div class="main">
+<div class="mainblock">
+
+<h1 class="project-h2">Prototyping</h1>
+
+
+
+
+<p class="project-paragraph spacetop spacebottom">I wireframed the concept of the table for each device. This would include the meter names, phases, total power, and a toggle to switch between Apparent and Real power. The wireframe was shown to the PM and engineering team, who agreed that the toggle was actually a valid suggestion as it would result in faster load times.</p>
+
+
+<img class="project-image" src="images/controlco-energy-dashboard/mockup.png"><p class="caption">The component that would be used for each data rack. There would be logic in the back-end that autopopulates the values for each of these components.</p>
+
+
+</div></div></div>
+
+<div class="fullblock">
+<div class="main">
+<div class="mainblock">
+
+
+<h1 class="project-h2">Visual Design</h1>
+
+
+<p class="project-paragraph spacetop spacebottom">I wanted to stay consistent with the colors of the customer's brand, so we used various blues upon a dark interface (data centers are fairly dim, so this would help their eyes adjust). Since we didn't have a design guide in place, I took the liberty to come up with a style guide to indicate a hierarchy of important information. We chose Roboto as it was an easy font to scan within rows of data.</p>
+
+
+       <div class="ministyleguide"><img src="images/controlco-energy-dashboard/type.svg" width="750px" class="project-image"><p class="caption"></p></div>
+
+      <div class="ministyleguidemobile"><img src="images/controlco-energy-dashboard/mobiletype.svg" width="750px" class="project-image"></div><p class="caption spacebottom"></p>
+
+
+
+      <img src="images/controlco-energy-dashboard/switch.gif" class="" width="750px"><p class="caption spacebottom"></p>
+
+
+      <img src="images/controlco-energy-dashboard/finalscreen.jpg" class=""><p class="caption">The final design.</p>
+
+
+
+
+
+
+             </div></div></div>
+        <span class="sexy_line"></span>
+
+
+ <div class="fullblock">
+        <div class="main">
+        <div class="mainblock">
+      <h1 class="project-h1">Process Overview</h1>
+
+
+
+                    	<div id="process-timeline" class="process-container">
+								<div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+								<div class="process-timeline-content">
+										<div class="card-title">Define the problem</div>
+										<p class="process-p">
+											"How do I help users find data easily and quickly?"
+										</p>
+
+									</div>
+								<div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+								<div class="process-timeline-content">
+										<div class="card-title">Gather information</div>
+										<p class="process-p">
+								  Reviewed past energy dashboards from other customers and spoke to PMs about customer requests.
+										</p>
+									</div>
+
+								</div>
+
+                                    <div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+									<div class="process-timeline-content">
+										<div class="card-title">Ideation</div>
+										<p class="process-p">
+											Came up with concept of toggling between powers.
+										</p>
+									</div>
+
+								</div>
+                                    <div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+									<div class="process-timeline-content">
+										<div class="card-title">Visual design</div>
+										<p class="process-p">
+											Aligned UI aesthetic with customer brand.
+										</p>
+									</div>
+
+								</div>
+                                    <div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+									<div class="process-timeline-content">
+										<div class="card-title">Implementation</div>
+										<p class="process-p">
+										Took one month to build directly on DGLux5 platform.
+										</p>
+									</div>
+
+								</div>
+                                     <div class="process-timeline-block">
+									<div class="process-timeline-cat process-circle">
+									</div>
+
+									<div class="process-timeline-content">
+										<div class="card-title">Evaluate</div>
+										<p class="process-p">
+											Internal users tested as well as end users and claimed feature was useful in helping complete their tasks.
+										</p>
+									</div>
+
+								</div>
+								</div>
+							</div>
+
+      </div>
+        </div>
+         </div>
+
+           <div class="fullblock extraspacebottom">
+             <div class="main">
+                 <div class="mainblock">
+
+
+
+
+      <h1 class="project-h2">The Outcome</h1>
+
+
+  <p class="project-paragraph spacetop">The feature outperformed previous dashboards that we had in the past. The customer loved the customized toggle and ultimately chose to use this interface as the standard for their other data centers in North America. I was especially honored and delighted that I was able to come up with this solution which was the direct result of putting our users at the forefront of planning. In some instances, customers might claim that they "want" something because it's something they're used to, without rationale. As a UX designer, it is my resolve to navigate through their basic needs and provide an optimal experience at every point of their journey.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="nextsection"><a href="personal-projects" class="btn btn-1">Personal Projects &#8594;</a></div>
+
+
+
+
+
+
+
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script  src="js/index.js"></script>
+ </div>
+         </div>
+</div>
+<div class="bottomstuffs "> <!--<span class="goto-top top"></span>-->
+<div class="footer">
+
+
+       <div class="footerbg">
+         <div class="footermenu">
+
+           <div class="projectlinkthing">
+             <a href="controlco-iot-web-app" class="footertextlink">Controlco: IoT Web App</a>
+           </div>
+           <div class="projectlinkthing">
+             <a href="incorta-data-file-directory" class="footertextlink">Incorta: Data File Directory</a>
+           </div>
+           <div class="projectlinkthing">
+             <a href="incorta-dark-mode" class="footertextlink">Incorta: Dark Mode</a>
+           </div>
+           <div class="projectlinkthing">
+             <a href="bio-rad-marcom-designs" class="footertextlink">Bio-Rad: Marcom Designs</a>
+           </div>
+           <div class="projectlinkthing">
+             <a href="controlco-energy-dashboard" class="footertextlink">Controlco: Energy Dashboard</a>
+           </div>
+           <div class="projectlinkthing">
+             <a href="personal-projects" class="footertextlink">Personal Projects</a>
+           </div>
+         </div>
+
+     <div class="linksncopy">
+   <div class="copyright">© 2019 <a href="http://www.trangerthings.com">Trangerthings</a><br>Designed and built by yours truly</div>
+
+     <div class="sociallinks">
+       <a href="https://www.behance.net/trangerthings" target="_blank" class="bottomlinks"><img class="footersvg" src="behanceround.svg" alt="Behance"></a><a href="https://www.linkedin.com/in/trangerthings/" target="_blank" class="bottomlinks"><img class="footersvg" src="linkedinround.svg" alt="LinkedIn"></a><a href="mailto:trangtt427@gmail.com?subject=I'm Here To Talk About Cats. And Maybe Design."  class="bottomlinks"><img class="footersvg" src="emailround.svg" alt="Email"></a>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,9 +1,8 @@
 
-@import url(//fonts.googleapis.com/css?family=Muli);
 
 
 body {
-    font-family: "Muli", sans-serif;
+    font-family: 'Proxima Nova', Georgia, sans-serif;
     margin:0;
     -webkit-font-smoothing: subpixel-antialiased; /* antialiased | subpixel-antialiased | none */
 }
@@ -34,7 +33,7 @@ body {
 .namee {
     padding-top:1em;
     text-align: left;
-    font-size:16px;
+    font-size:17px;
 }
 
 .card {
@@ -111,7 +110,7 @@ body {
 .timeline-content {
    width: 95%;
    padding: 0 15px;
-   color: #0B0E0F;
+   color: #494c4c;
 }
 
 .timeline-content h3 {
@@ -123,9 +122,9 @@ body {
 
 
 .timeline-content p {
-   font-size: 16px;
+   font-size: 17px;
    line-height: 2;
-     color:#0B0E0F;
+     color:#494c4c;
 }
 
 /**********Timeline V2 ****/
@@ -166,7 +165,7 @@ body {
 .timeline2-h1 {
      font-weight:700;
     font-size: 20px;
-    color:#0B0E0F;
+    color:#494c4c;
     width:100%;
     max-width:800px;
     margin:auto;
@@ -191,7 +190,7 @@ body {
 .timeline-content2 {
    width: 95%;
    padding: 0 15px;
-    color: #0B0E0F;
+    color: #494c4c;
 }
 
 .timeline-content2 {
@@ -207,9 +206,9 @@ body {
 }
 
 .timeline-content2 p {
-    font-size: 16px;
+    font-size: 17px;
    line-height: 2;
-   color: #0B0E0F;
+   color: #494c4c;
 
 }
 
@@ -260,7 +259,7 @@ header {
 a {
     text-decoration: none;
     color: palevioletred;
-    font-weight:400;
+    font-weight:300;
 }
 
 .aboutlink > a {
@@ -268,21 +267,37 @@ a {
 }
 
 .aboutlink  {
-    font-weight:400;
+    font-weight:300;
     letter-spacing:2px;
     font-size:11px;
     text-transform: uppercase;
     margin:15px;
     display:inline-block;
     position:relative;
-    transition: all .2s ease-in-out 0s;
+    transition: all .1s ease-in-out 0s;
 }
 
-.aboutlink:hover {
-    transform: translateY(-4px);
+
+.aboutlink:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -6px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background:palevioletred;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
+.aboutlink:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
 .behancelink {
-    font-weight:400;
+    font-weight:;
     font-size:20px;
     display:block;
     float:left;
@@ -311,17 +326,7 @@ a {
     position:relative;
 }
 
-.linkthing:hover {
-    transform: translateY(-4px);
-    /* -webkit-box-shadow: 0px 8px 28px 1px rgba(158,172,201,1);
-    -moz-box-shadow: 0px 8px 28px 1px rgba(158,172,201,1);
-    box-shadow: 0px 8px 28px 1px rgba(70,70,90,0.35);
-    -backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    }*/
-}
+
 
 .col {
     min-width:200px;
@@ -336,7 +341,7 @@ a {
 .fullblock {
     width:100%;
     padding-top:2em;
-    padding-bottom:2em;
+    padding-bottom:1em;
 }
 
 .fullgrayblock {
@@ -372,8 +377,8 @@ a {
 
 .homepage-title {
     line-height:1.2;
-    font-size: 52px;
-    font-weight:700;
+    font-size: 48px;
+    font-weight:400;
     color:#0B0E0F;
     margin-top:20px;
     margin-bottom:0px;
@@ -404,7 +409,7 @@ a {
     /*background: linear-gradient(120deg, #55e4ff, #e90d87);*/
 }
 
-.sexy_line{
+/*.sexy_line{
     display:block;
     margin:auto;
     border:none;
@@ -413,7 +418,7 @@ a {
     width:60%;
     max-width:250px;
      background: rgba(155, 150, 150, 0.35);
-    /*background: linear-gradient(120deg, #55e4ff, #e90d87);*/
+    background: linear-gradient(120deg, #55e4ff, #e90d87);
 }
 
 .sexy_linefooter{
@@ -422,14 +427,14 @@ a {
     border:none;
     color:white;
     height:1px;
-    width:300px;
+    width:400px;
     max-width:550px;
      background: rgba(150, 150, 150, 0.35);
     /*background: linear-gradient(120deg, #55e4ff, #e90d87);*/
 }
 
 p {
-    font-weight:400;
+    font-weight:300;
     color: #757682;
 }
 
@@ -446,8 +451,8 @@ p {
 .paragraph {
     line-height:1.8;
     color: #0B0E0F;
-    font-size:20px;
-    font-weight:400;
+    font-size:18px;
+    font-weight:300;
     max-width:750px;
     }
 
@@ -456,7 +461,7 @@ p {
     line-height:1.8;
     color: #0B0E0F;
     font-size:17px;
-    font-weight:400;
+    font-weight:300;
     margin:auto;
     max-width:750px;
 }
@@ -467,22 +472,22 @@ p {
     font-size:14px;
     line-height:1.8;
     padding-bottom:5px;
-    font-weight:400;
+    font-weight:300;
 }
 
     .headerintro {
    padding-top: 1em;
     color: #94959e;
-    font-size:14px;
+    font-size:15px;
     line-height:1.8;
     padding-bottom:5px;
-   font-weight:400;
+   font-weight:300;
 }
 
 .copyright {
     color: #888;
     font-size:13px;
-    font-weight:400;
+    font-weight:;
     text-align:left;
     line-height:20px;
     width:100%;
@@ -491,12 +496,12 @@ p {
 .caption {
     line-height:1.8;
     color: #757682;
-    font-size:14px;
+    font-size:15px;
     font-style:italic;
-    font-weight:400;
+    font-weight:;
     margin:auto;
-    text-align:center;
     padding-top:5px;
+
 }
 
 .header-text {
@@ -505,8 +510,8 @@ p {
     line-height:1.8;
     max-width:650px;
     color: #0B0E0F;
-    font-size:16px;
-    font-weight:400;
+    font-size:17px;
+    font-weight:;
     }
 
 img {
@@ -546,9 +551,8 @@ img {
     position:relative;
     text-decoration: none;
     background-color:#181819;
-    letter-spacing:2px;
-    font-size: 13px;
-    font-weight:400;
+    font-size: 15px;
+    font-weight:;
     padding: 15px 25px 15px 25px;
     transition: 0.4s;
     color: white;
@@ -624,7 +628,7 @@ img {
   margin-left: 60px;
   background-color:#F5F7F8;
   padding: 1em;
-   
+
 }
 .process-timeline-content .process-timeline-content {
   display: inline-block;
@@ -697,23 +701,22 @@ img {
 }
 
 .card-box > .card-title {
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 0;
     text-align: left;
 }
 
 .card-title {
     color: #0B0E0F;
-    font-weight:700;
+    font-weight:400;
     margin:0;
-    margin-bottom: 0.75rem;
-    font-size:16px;
+    font-size:17px;
 }
 
 .feature-card-title {
     line-height: 1.2;
     color: #0B0E0F;
-    font-weight: 700;
+    font-weight: 400;
     margin:0;
     margin-bottom: 0.75rem;
     padding: 30px 30px 0px 30px;
@@ -721,8 +724,8 @@ img {
 
 .feature-card-text {
     color: #94959e;
-    font-size:16px;
-    font-weight:400;
+    font-size:17px;
+    font-weight:300;
     margin:0;
     margin-bottom: 0.75rem;
     padding: 0px 30px 30px 30px;
@@ -737,8 +740,8 @@ img {
     color: #94959e;
     line-height:1.8;
     font-size:13px;
-    font-weight:400;
-    margin-top: 10px;
+    font-weight:300;
+    margin-top: 5px;
     margin-bottom:0px;
     text-align: left;
 }
@@ -828,11 +831,11 @@ header h1{
 
 h1 {
     font-size: 34px;
-    font-weight:400;
+    font-weight:;
 }
 
 .project-h1 {
-     font-weight:700;
+     font-weight:400;
     line-height:1.8;
     font-size:30px;
     color:#0B0E0F;
@@ -840,23 +843,23 @@ h1 {
     margin:auto;
     transition: all .4s ease-in-out 0s;
      max-width:750px;
-  
+
 }
 
 .project-h2 {
-     font-weight:700;
+     font-weight:400;
     line-height:1.8;
-    font-size:22px;
+    font-size:24px;
     color:#0B0E0F;
     width:100%;
     margin:auto;
     transition: all .4s ease-in-out 0s;
      max-width:750px;
-  
+
 }
 
 .thought {
-     font-weight:400;
+     font-weight:;
     font-size:19px;
     padding-left:1em;
     color: #94959e;
@@ -894,7 +897,7 @@ ul, ol {
     line-height:1.8;
     color: #0B0E0F;
     font-size:17px;
-    font-weight:400;
+    font-weight:300;
      max-width:750px;
 }
 
@@ -957,13 +960,19 @@ ul, ol {
 }
 
 .titleguy, .titleguy2{
-    margin:1.66666667%;
-    width: 96.666666%;
-    color: #94959e;
-    letter-spacing:2px;
+    letter-spacing:1px;
     font-size:14px;
-    padding-bottom:5px;
-    font-weight:400;
+    padding-bottom:3px;
+    font-weight:;
+    background: #39b6ba;
+  color: #fff;
+  width: 80px;
+  padding-left: 6.5px;
+  padding-right: 6.5px;
+  padding-top:3px;
+  position: relative;
+  margin-bottom:10px;
+  text-align:center;
 }
 
 .featurecontainer:hover {
@@ -1002,12 +1011,13 @@ ul, ol {
 }
 
 .rightblock {
-    background-color: #262626;
+    /*background-color: #2e2e2e;*/
+    background-image: linear-gradient(34deg, rgba(67,149,90,1) 0%, rgba(197,226,100,1) 100%);
   /* background-color:#83c3f8; */
     display:inline-block;
     width:50%;
     height:100%;
-    
+
 }
 
 .kitties {
@@ -1030,9 +1040,8 @@ ul, ol {
 
 .project-image {
     display: block;
-    max-width: 100%;
     margin: 5px auto;
-    box-shadow: 0px 3px 13px 0px rgba(0,0,0,.2);
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,.1));
 }
 
 .gifguy {
@@ -1042,13 +1051,13 @@ ul, ol {
 .project-image-multi {
     box-shadow: 0px 3px 13px 0px rgba(0,0,0,.2);
     display: inline-block;
-    max-width: 100%;
+    max-width: 600px;
     margin: 5px auto;
 }
 
 .project-image-multi-2 {
     display: inline-block;
-    max-width: 100%;
+    max-width: 600px;
     margin: 5px auto;
     box-shadow: 0px 3px 20px 0px rgba(0,0,0,.2);
 }
@@ -1060,7 +1069,7 @@ ul, ol {
 }
 
 .mainblock {
-    max-width:950px;
+    max-width:750px;
     margin:auto;
 }
 
@@ -1072,7 +1081,7 @@ ul, ol {
     display: block;
     max-width: 100%;
     margin: 0 auto;
-    background-color:#0B0E0F;
+    background-image: linear-gradient(34deg, rgba(67,149,90,1) 0%, rgba(197,226,100,1) 100%);
 }
 
 .container:hover {
@@ -1208,7 +1217,7 @@ ul, ol {
     float:left;
     color: #757682;
     font-size:13px;
-    font-weight:400;
+    font-weight:;
     width:25%;
     min-width:200px;
     line-height:20px;
@@ -1397,7 +1406,7 @@ a.bottomlinks {
     animation: fadeInUpHome 1s ease-in-out 0s forwards;}
 
 @media screen and (max-width:600px) {
-    
+
 
 .footermenu {
     width:100%;
@@ -1420,21 +1429,7 @@ a.bottomlinks {
     text-align: center;
     margin-top:-20px;
 }
-}
 
-@media only screen and (min-width:701px) {
-
-.hideme2 {
-    display:none;
-}
-
-.hideme3 {
-    display:none;
-}
-
-.ministyleguidemobile {
-    display:none;
-}
 }
 
 @media only screen and (max-width:700px) {
@@ -1442,12 +1437,12 @@ a.bottomlinks {
     width:100%;
     }
 
-    
+
     .process-p {
     margin-bottom:0px;
     font-size:13px;
 }
-    
+
     .col {
         width:100%;
     }
@@ -1469,9 +1464,10 @@ a.bottomlinks {
     line-height:1.8;
     color: rgba(48, 51, 53, 0.6);
     font-size:14px;
-    font-weight:400;
+    font-weight:;
     margin:auto;
-    text-align:center;
+
+
 }
 
 
@@ -1480,36 +1476,34 @@ a.bottomlinks {
     text-align:left;
     line-height:1.8;
     max-width:450px;
-    color: #0B0E0F;
+    color: #494c4c;
     font-size:14px;
-    font-weight:400;
+    font-weight:;
 }
 
 .project-h1 {
     display:inline-block;
     font-size:24px;
     margin:auto;
-    color: #0B0E0F;
+    color: #494c4c;
 }
-    
+
     .project-h2 {
     font-size:18px;
     color:#0B0E0F;
-  
+
 }
-    
+
     .namee {
     font-size:14px;
 }
 
 .homepage-title {
     line-height:1.2;
-    font-size: 36px;
+    font-size: 30px;
     padding-bottom:0.5em;
-    font-weight:700;
-    color:#0B0E0F;
 }
-    
+
     .aboutlink {
     font-size:10px;
 
@@ -1524,7 +1518,7 @@ a.bottomlinks {
     transition: all .2s ease-in-out 0s;
     position:relative;
 }
-    
+
     header {
     position:relative;
     display:block;
@@ -1540,43 +1534,43 @@ a.bottomlinks {
     margin:auto;
 }
 
-    
+
 .center-h1 {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .project-paragraph {
     line-height:1.8;
     color: #0B0E0F;
-    font-size:15px;
-    font-weight:400;
-   
+    font-size:16px;
+    font-weight:;
+
 }
-    
+
     .thought {
-     font-weight:400;
+     font-weight:;
     font-size:15px;
     }
-    
+
 .subhead {
     letter-spacing:2px;
     font-size:13px;
-    font-weight:400;
+    font-weight:;
 }
-    
+
     .headerintro {
     padding-top:0;
-    font-size:13px;
-    font-weight:400;
+    font-size:14px;
+    font-weight:;
         padding-bottom:20px;
 }
 
 ul, ol {
     margin:auto;
     line-height:1.8;
-    color: #0B0E0F;
+    color: #494c4c;
     font-size:15px;
-    font-weight:400;
+    font-weight:;
 }
 
 .groupguyz2, .groupguyz3 {
@@ -1607,7 +1601,7 @@ ul, ol {
     margin-top:-5px;
     height:auto;
 }
-    
+
 
 
  .singlecolumn{
@@ -1684,12 +1678,12 @@ ul, ol {
 
 .timeline-content p {
    font-size: 15px;
-   color: #0B0E0F;
+   color: #494c4c;
 }
 
 .timeline-content2 p {
    font-size: 15px;
-   color: #0B0E0F;
+   color: #494c4c;
 }
 
 .marker{
@@ -1702,8 +1696,8 @@ ul, ol {
 
 .timeline-h1 {
      font-weight:700;
-    font-size: 16px;
-    color:#0B0E0F;
+    font-size: 17px;
+    color:#494c4c;
     width:100%;
     max-width:800px;
     margin:auto;
@@ -1711,8 +1705,8 @@ ul, ol {
 
 .timeline2-h1 {
       font-weight:700;
-    font-size: 16px;
-    color:#0B0E0F;
+    font-size: 17px;
+    color:#494c4c;
     width:100%;
     max-width:800px;
     margin:auto;
