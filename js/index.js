@@ -16,16 +16,16 @@ $(document).ready(function () {
     if (!p) {
       return null;
     }
-    return hashCode(p) === "";
+    return hashCode(p) === "-802263448";
   }
 
-  var p = window.prompt("Psst what's the password?");
-  console.log(hashCode(p));
-  if (!p || !p.isValid()) {
-    // Send the user back to their last history page
-    // NOTE: This might break if they're opening the page from a new tab, with no history
-    window.history.back();
-  }
+  // var p = window.prompt("Psst what's the password?");
+  //
+  // if (!p || !p.isValid()) {
+  //   // Send the user back to their last history page
+  //   // NOTE: This might break if they're opening the page from a new tab, with no history
+  //   window.history.back();
+  // }
 
   $(window).scroll(function () {
     var top =  $(".goto-top");
