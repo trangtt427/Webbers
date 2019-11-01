@@ -12,8 +12,15 @@ function isValid(p) {
   return hashCode(p) === -1307947986;
 }
 
-var p = window.prompt("Psst what's the password?");
+var isVerified = sessionStorage.getItem("isVerified");
 
-if (!isValid(p)) {
-  window.location.replace("https://trangerthings.com/401.html");
+if (!isVerified || isVerified === "false") {
+  var p = window.prompt("Psst what's the password?");
+
+  if (!isValid(p)) {
+    sessionStorage.setItem("isVerified", "false");
+    window.location.replace("https://trangerthings.com/401.html");
+  } else {
+    sessionStorage.setItem("isVerified", "true");
+  }
 }
