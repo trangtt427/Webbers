@@ -398,6 +398,10 @@ a {
     height:1em;
 }
 
+.nospacemobile {
+  height:1em;
+}
+
 .line{
     display:block;
     border:none;
@@ -1641,8 +1645,9 @@ ul, ol {
 
     .titleguy2 {
         margin-bottom:0px;
-
     }
+
+    
 }
 
 @media only screen and (max-width: 768px){
