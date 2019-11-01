@@ -9,14 +9,11 @@ function isValid(p) {
   if (!p) {
     return null;
   }
-  return hashCode(p) === "-1307947986";
+  return hashCode(p) === -1307947986;
 }
 
 var p = window.prompt("Psst what's the password?");
-// console.log(hashCode(p));
 
-if (!p || !isValid(p)) {
-  // Send the user back to their last history page
-  // NOTE: This might break if they're opening the page from a new tab, with no history
-  window.history.back();
+if (!isValid(p)) {
+  window.location.replace("https://trangerthings.com/401");
 }
