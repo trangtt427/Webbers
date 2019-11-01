@@ -15,5 +15,5 @@ function isValid(p) {
 var p = window.prompt("Psst what's the password?");
 
 if (!isValid(p)) {
-  window.location.replace("https://trangerthings.com/401");
+  window.location.replace("https://trangerthings.com/401.html");
 }
