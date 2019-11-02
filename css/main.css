@@ -36,6 +36,7 @@ body {
     font-size:17px;
 }
 
+
 .card {
     max-width:340px;
     margin:auto;
@@ -51,6 +52,57 @@ body {
     text-align:center;
 }
 
+/*persona start*/
+
+
+.wrapper{
+    width: 100%;
+}
+.profile-card{
+    max-width:650px;
+    height: auto;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow:0px 4px 8px rgba(0,0,0,.1);
+}
+
+.persona-text {
+    font-size:15px;
+}
+
+.profile-card .profile-body{
+    background-color: var(--white);
+    padding: 20px 40px 20px 40px;
+}
+
+.profile-card .profile-body .author-img{
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.profile-header {
+    background:lightcoral;
+    height:10px;
+}
+.profile-card .profile-body .author-img img{
+    border-radius: 50%; 
+    border:8px solid lightcoral;
+    background-color: var(--white);
+    margin-top:25px;
+}
+
+
+.profile-card .profile-body .intro{
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 1.6;
+   margin: 20px  0px 30px  0px;
+  text-align: left;
+
+}
+
+
+/*persona end*/
 
 .container1 {
    width: 100%;
@@ -526,9 +578,9 @@ img {
 
 @media only screen and (min-width:701px) {
 
-    .column2{
-        display:none;
-    }    
+.column2{
+     display:none;
+}    
 
 .hideme2, .hideme3{
     display:none;
@@ -661,6 +713,7 @@ img {
 /**end timeline**/
 
 
+
 .card {
     position: relative;
     display: -webkit-box;
@@ -741,7 +794,7 @@ img {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-weight:700;
-    line-height: 2;
+    line-height: 1;
 }
 
 .card-type {
@@ -867,11 +920,11 @@ h1 {
 }
 
 .thought {
-     font-weight:;
-    font-size:19px;
+    font-size:16px;
+    font-style: italic;
     padding-left:1em;
-    color: #94959e;
-    border-left: 2px solid palevioletred;
+    color: #757682;
+    border-left: 1px solid #757682;
     max-width:550px;
     margin:auto;
     line-height:1.8;
@@ -1583,8 +1636,7 @@ a.bottomlinks {
 ul, ol {
     margin:auto;
     line-height:1.8;
-    color: #494c4c;
-    font-size:15px;
+    font-size:16px;
     font-weight:;
 }
 
