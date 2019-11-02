@@ -526,6 +526,10 @@ img {
 
 @media only screen and (min-width:701px) {
 
+    .column2{
+        display:none;
+    }    
+
 .hideme2, .hideme3{
     display:none;
 }
@@ -947,6 +951,12 @@ ul, ol {
     float: left;
 }
 
+.column2 {
+    width: 30%;
+    margin: 1.66666667% 1.66666667%;
+    float: left;
+}
+
 .singlecolumn {
     width: 96.666666%;
     margin:auto;
@@ -1139,6 +1149,7 @@ ul, ol {
 .column {
     width: 46.6666667%;
 }
+
 }
 
 
@@ -1626,6 +1637,13 @@ ul, ol {
     width: 100%;
 }
 
+.column2{
+    float: none;
+    margin: 2.5em auto;
+    margin-top:0px;
+    width: 100%;
+}
+
 .paragraph {
     font-size:15px;
     padding:0px;
@@ -1646,7 +1664,10 @@ ul, ol {
     .titleguy2 {
         margin-bottom:0px;
     }
-
+    
+    .column2{
+        display:none;
+    }
     
 }
 
@@ -1720,17 +1741,4 @@ ul, ol {
 
 
 
-
 }
-
-/*.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url("../images/Eclipse-1s-200px.svg") center no-repeat #fff;
-} */
