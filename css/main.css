@@ -12,6 +12,7 @@ body {
         visibility: hidden;
 }
 
+
  .fadeIn {
         -webkit-animation: animat_show 0.8s;
         animation: animat_show 0.8s;
@@ -809,6 +810,7 @@ img {
 
 #project {
     margin:auto;
+    display:none;
     background-color:white;
     height:100%;
     width:100%;

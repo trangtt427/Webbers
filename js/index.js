@@ -2,6 +2,8 @@
 /*eslint no-console: "warn"*/
 /*eslint no-unused-vars: "warn"*/
 
+document.getElementById("project").style.display = "block";
+
 // This .ready() function means that the document is ready.
 // If anything is outside of this, the code will run before the document is ready.
 $(document).ready(function() {
