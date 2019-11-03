@@ -106,8 +106,8 @@
             <h1 class="project-h2">Role</h1>
 
             <p class="project-paragraph spacetop">
-              I took on this project as my first autonomous UX design role. I
-              worked with a data modeler, a PM, and the front-end team.
+              I was tasked with this project as my first autonomous UX design
+              role. I worked with a data modeler, a PM, and the front-end team.
             </p>
           </div>
         </div>
@@ -119,13 +119,56 @@
           <div class="mainblock">
             <h1 class="project-h2">Learning About the User</h1>
 
-            <p class="project-paragraph spacetop">
+            <p class="project-paragraph spacetop spacebottom">
               I collaborated with the PM and data modeler to learn more about
               the users and their goals. The end users are data center
               technicians who operate directly on the power distribution units
-              located in the racks. Their goal is to quickly assess the status
-              of their units so that they can troubleshoot any faulty devices.
+              located in the racks. Their goal is to quickly resolve data center
+              facility energy issues.
             </p>
+
+            <div class="wrapper">
+              <div class="profile-card">
+                <div class="profile-header"></div>
+                <div class="profile-body">
+                  <div class="author-img">
+                    <img
+                      src="images/controlco-energy-dashboard/data-man.png"
+                      alt=""
+                    />
+                  </div>
+                  <h3>Jason Gibbs</h3>
+                  <p>37 years old</p>
+                  <div class="persona_line"></div>
+                  <div class="intro">
+                    <h3>Occupation</h3>
+                    <p class="persona-text">
+                      Data Center Operations Technician
+                    </p>
+                    <h3>Story</h3>
+                    <p class="persona-text">
+                      Jason is responsible for triaging and repairing data
+                      center fiber optic cabling/systems. In order to make sure
+                      everything is working in the data center, he first needs
+                      to know which systems he needs to fix. He needs a source
+                      of truth where he can find out the energy output and
+                      status of all of the units.
+                    </p>
+                    <h3>Goals</h3>
+                    <p class="persona-text">
+                      Wants to quickly get information about the best products
+                      all in one place. Does not want to rely on brochures and
+                      print collateral.
+                    </p>
+                    <h3>Behaviors and Beliefs</h3>
+                    <p class="persona-text">
+                      Very meticulous and crafty, and hates wasting time. Wants
+                      to be able to do his job quickly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <p class="project-paragraph spacetop spacebottom">
               To help the users, we needed to design a read-only UI that allows
@@ -144,8 +187,8 @@
               width="750px"
             />
             <p class="caption">
-              This math is way over my head, but I'm sure it's helpful to the
-              users.
+              Some complicated math that shows why both kVA and kW are
+              important. ¯\_(ツ)_/¯
             </p>
           </div>
         </div>
@@ -154,16 +197,23 @@
       <div class="fullblock">
         <div class="main">
           <div class="mainblock">
-            <h2 class="project-h2">Planning</h2>
+            <h2 class="project-h2 spacebottom">Planning</h2>
+
+            <div class="thought">
+              It's important to see the power in both units, but does it really
+              help users to see both at once?
+              <div class="tenspace"></div>
+              - My inner thoughts
+            </div>
 
             <p class="project-paragraph spacetop">
-              Do users truly need to see both units of power at once? I was
-              absolutely against the idea of displaying both units of power at
-              once. Showing two power units for every phase of every meter would
-              result in a brutal experience for users as it would make it hard
-              to find data points on the UI and slow the app to crawl. As much
-              as they claimed it would be a "nice to have" in our meetings, I
-              felt that foregoing that option was the user-friendlier choice.
+              I was absolutely against the idea of displaying both units of
+              power at once. Showing two power units for every phase of every
+              meter would result in a brutal experience for users as it would
+              make it hard to find data points on the UI and slow the app to
+              crawl. As much as they claimed it would be a "nice to have" in our
+              meetings, I felt that foregoing that option was the
+              user-friendlier choice.
             </p>
 
             <p class="project-paragraph spacetop">
@@ -172,11 +222,11 @@
             </p>
             <ol>
               <li>
-                A toggle to switch between kVA and kW to optimize performance
-                and help users find data points quickly.
+                A toggle to switch between kVA and kW to limit the data points
+                that users see so that they can find numbers quickly
               </li>
-              <li>Easy to spot KPIs.</li>
-              <li>Familiar interaction patterns found in tables.</li>
+              <li>KPIs</li>
+              <li>Familiar interaction patterns found in tables</li>
             </ol>
           </div>
         </div>
@@ -219,9 +269,8 @@
               brand, so we used various blues upon a dark interface (data
               centers are fairly dim, so this would help their eyes adjust).
               Since we didn't have a design guide in place, I took the liberty
-              to come up with a style guide to indicate a hierarchy of important
-              information. We chose Roboto as it was an easy font to scan within
-              rows of data.
+              to come up with a one off. We chose Roboto as it is an easy font
+              to scan within rows of data.
             </p>
 
             <div class="ministyleguide">
@@ -338,17 +387,29 @@
           <div class="mainblock">
             <h1 class="project-h2">The Outcome</h1>
 
+            <p class="project-paragraph spacetop spacebottom">
+              The feature outperformed old energy summary pages that we had with
+              other facilities. The customer loved the customized toggle and
+              ultimately chose to use this interface as the standard for their
+              other data centers in North America.
+            </p>
+
+            <div class="thought">
+              The summary is very sleek. I also like the little bounce animation
+              you guys put in for the toggle. We work in a really unsexy
+              industry so I appreciate little fun things like this.
+              <div class="tenspace"></div>
+              - Data center technician
+            </div>
+
             <p class="project-paragraph spacetop">
-              The feature outperformed previous dashboards that we had in the
-              past. The customer loved the customized toggle and ultimately
-              chose to use this interface as the standard for their other data
-              centers in North America. I was especially honored and delighted
-              that I was able to come up with this solution which was the direct
-              result of putting our users at the forefront of planning. In some
-              instances, customers might claim that they "want" something
-              because it's something they're used to, without rationale. As a UX
-              designer, it is my resolve to navigate through their basic needs
-              and provide an optimal experience at every point of their journey.
+              I was especially honored and delighted that I was able to come up
+              with this solution which was the direct result of putting our
+              users at the forefront of planning. In some instances, customers
+              might claim that they "want" something because it's something
+              they're used to, without rationale. As a UX designer, it is my
+              resolve to navigate through their basic needs and provide an
+              optimal experience at every point of their journey.
             </p>
 
             <div class="nextsection">
