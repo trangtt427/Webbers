@@ -90,11 +90,12 @@
             <h2 class="project-h2">Project Background</h2>
 
             <p class="project-paragraph spacetop">
-              One of Incorta's most engaged customers had a valid request for
-              dark mode. Compared to the other roadmap items we had, this
-              feature was considered a small effort for a huge return. Since it
-              did not rely on the server team, it was something that could be
-              turned over quickly in the next release.
+              One of Incorta's most engaged customers had a request for dark
+              mode. Compared to the other roadmap items we had, this feature was
+              considered a small effort for a huge return. Since it did not rely
+              on the server team but close collaboration with the front-end
+              team, it was something that could be turned over quickly for the
+              next release as a feature bit.
             </p>
           </div>
         </div>
@@ -121,21 +122,28 @@
           <div class="mainblock">
             <h2 class="project-h2">Learning About the User</h2>
 
-            <p class="project-paragraph spacetop">
+            <p class="project-paragraph spacetop spacebottom">
               The customers that wanted this feature are business users, the
               ones who produce the dashboards and insights to present to the
               execs. We learned that this particular customer holds many
-              training sessions in their conference room, where the walls are
-              painted a charcoal color. We've received feedback that anytime
-              they present decks and visualizations that are white, the audience
-              gets disoriented due to the walls.
+              sessions in their conference room, where the walls are painted a
+              charcoal color. We've received feedback that anytime they present
+              decks and visualizations that are white, the audience gets a
+              rather rude awakening.
             </p>
+
+            <img
+              class="project-image"
+              src="images/incorta-dark-mode/default.png"
+            />
+            <p class="caption"></p>
 
             <p class="project-paragraph spacetop">
               The users said it would be nice to have the option to switch to a
               dark mode, because for some schema developers, they're spending
-              hours looking through the app and would prefer to look at a darker
-              interface.
+              hours looking through hundreds of rows of data. This hit pretty
+              close to home for me because when I use code editors, I prefer
+              using a dark interface as well. My eyes can relate.
             </p>
           </div>
         </div>
@@ -147,28 +155,46 @@
           <div class="mainblock">
             <h1 class="project-h2">Planning</h1>
 
-            <p class="project-paragraph spacetop">
+            <p class="project-paragraph spacetop spacebottom">
               The Dark Mode UI was going to be a lab feature where we test in
-              our Incorta Labs before rolling it out the public. We had planned
-              for it to span across a few releases as we add more features that
-              had to be thought out in Dark Mode.
+              our Incorta UX research sessions before rolling it out the public.
+              It was planned to be enhanced further in upcoming releases as we
+              created new designs for new features. Initially, I thought that
+              creating a dark mode for anything was going to be easy.
+            </p>
+
+            <div class="thought">
+              How hard can making a dark mode be? You just invert the whites to
+              blacks, and blacks to whites. And then on work on scale for all
+              the in between colors. Right?
+              <div class="tenspace"></div>
+              - My inner thoughts
+            </div>
+
+            <p class="project-paragraph spacetop">
+              <strong>Absolutely wrong.</strong> I was only poking around the
+              current UI with the inspection tool to test said invert changes,
+              only to realize that there are so many styles on light interfaces
+              that don't do well in a dark mode.
             </p>
 
             <p class="project-paragraph spacetop">
-              Things that I had to keep in mind while creating for Dark Mode:
+              Some nuances that needed careful thinking when creating Dark Mode:
             </p>
 
             <ol>
-              <li>Elevation doesn't work quite as well in dark mode.</li>
-              <li>Had to make sure that there was good contrast.</li>
-              <li>Searching</li>
-              <li>Overlays can't be too dim.</li>
+              <li>
+                Elevation doesn't work quite as well with a black background
+              </li>
+              <li>Contrast is harder to achieve</li>
+              <li>Brighter variants of current Incorta colors are needed</li>
+              <li>Overlays can't be too dim</li>
             </ol>
 
             <p class="project-paragraph spacetop">
-              Before jumping into designs, I spent a few hours researching best
-              practices in dark mode and looked for examples of great
-              implementation, on both desktop and mobile.
+              I spent a few hours researching best practices in dark mode and
+              looked for examples of great implementation, on both desktop and
+              mobile. I tried to map out every scenario in Dark Mode.
             </p>
           </div>
         </div>
@@ -181,10 +207,11 @@
             <h2 class="project-h2">Prototyping the Solution</h2>
 
             <p class="project-paragraph spacetop spacebottom">
-              Using existing wireframes, I explored variations of dark colors to
-              accommodate all the components. The most effective way was to
-              invert the colors. I inspected the Incorta App and made live edits
-              to see if things were readable.
+              Using the Incorta Design Library, I explored variations of dark
+              colors to accommodate all the components. The most effective way
+              was to invert the colors and then modifying them slightly. Our
+              goal for Dark Mode was to make sure everything is consistent,
+              accessible, and pleasant.
             </p>
 
             <img
@@ -241,7 +268,7 @@
             <p class="project-paragraph spacebottom">
               The Dark Mode was then updated to address the use of blues on grey
               backgrounds. The feature was made available internally first, and
-              made as a feature bit in the upcoming release.
+              then as a feature bit in the upcoming release.
             </p>
 
             <img
@@ -329,8 +356,8 @@
                   <div class="process-timeline-content">
                     <div class="card-title">Evaluate</div>
                     <p class="process-p">
-                      Dark Mode was with positive feedback from customer and
-                      internal users.
+                      Dark Mode was met with positive feedback from customer and
+                      many various users of the Incorta app.
                     </p>
                   </div>
                 </div>
@@ -350,8 +377,18 @@
               feature and ended up using that mode as they said it helped their
               eyes adjust to the lists, tables, and data visualizations. Other
               customers began using the feature as well. Now that the feature is
-              successful and has a decent amount of users, we can then enhance
-              it for our upcoming releases if needed.
+              successful and has a decent amount of users, we can now solicit a
+              lot of feedback in the next few months.
+            </p>
+
+            <p class="project-paragraph spacetop">
+              I was surprised that Incorta wanted to hop on the Dark Mode train
+              because we rarely prioritize any efforts into designing things
+              that are not directly related to complex customer problems. But
+              this feature made our app look very "cool" as many have mentioned.
+              I wasn't sold on the whole dark UI when it was introduced years
+              ago, but now I have a better understanding of what it can do for
+              our users after this project.
             </p>
 
             <div class="nextsection">

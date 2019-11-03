@@ -466,6 +466,17 @@ a {
     /*background: linear-gradient(120deg, #55e4ff, #e90d87);*/
 }
 
+.persona_line{
+    display:block;
+    margin:auto;
+    border:none;
+    color:white;
+    height:1px;
+    width:60%;
+    max-width:50px;
+     background:#F08080;
+}
+
 /*.sexy_line{
     display:block;
     margin:auto;
