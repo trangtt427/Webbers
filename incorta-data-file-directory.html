@@ -91,13 +91,13 @@
             <h2 class="project-h2">Project Background</h2>
 
             <p class="project-paragraph spacetop spacebottom">
-              In the Data Tab of Incorta's app, users can provide data in two
-              ways: upload CSV/XML files straight into their instance or connect
-              to a database. One of the biggest issues that users are facing is
-              that they are adding hundreds of data files into a root location,
-              without capabilities of creating nested folder structures. Our
-              current design lacked any basic directory support of renaming
-              files, sharing, and editing.
+              In the Incorta app, users can provide data in two ways: upload
+              CSV/XML files straight into their instance or connect to a
+              database. One of the biggest issues that users are facing is that
+              they are adding hundreds of files into a root location, without
+              capabilities of organizing any of them. The customer ask was that
+              we provide a solution that allows basic directory capabilities
+              instead of a flat level.
             </p>
 
             <img
@@ -105,9 +105,8 @@
               src="images/incorta-data-file-directory/datafiles.png"
             />
             <p class="caption">
-              The old Data Tab had two issues: it has not been migrated to React
-              and did not provide a way for users to fully customize their
-              environment.
+              The old Data UI. It has not been migrated to React and did not
+              provide a way for users to fully customize their environment.
             </p>
           </div>
         </div>
@@ -121,8 +120,8 @@
             <h1 class="project-h2">Role</h1>
 
             <p class="project-paragraph spacetop">
-              I led the UX design efforts for this feature. I worked with the
-              PM, the engineering team, server team, and collaborated with the
+              I led the UX design efforts for this feature. I worked with a PM,
+              the engineering team, the server team, and collaborated with the
               lead UX designer occasionally for brainstorming and feedback.
             </p>
           </div>
@@ -135,24 +134,35 @@
             <h2 class="project-h2">Learning About the User</h2>
 
             <p class="project-paragraph spacetop">
-              The personas of this app are schema developers. They are a
-              technical bunch and are responsible for bringing the data into
-              their systems in order to create schemas. Once they build the
-              schemas, business users can analyze their data and build
-              visualizations.
+              The persona of this feature is the business analyst. They are
+              responsible for bringing the data into their systems in order to
+              create schemas. Once all the data is there and usable, business
+              users can then build visualizations.
             </p>
 
             <p class="project-paragraph spacetop">
-              I worked with the PMs and a few solutions architects who speak
+              I worked with the PM and a few solutions architects who speak
               directly to these power users to learn about their struggles and
-              frustrations. Users have trouble locating their files because
-              there's no way to search, although we provide that ability with
-              our other pages that have already migrated from Angular to React.
+              frustrations. Some of their pain points include:
             </p>
+            <ol>
+              <li>No ability to group files into folders</li>
+              <li>Difficulty finding files because there's no way to search</li>
+              <li>
+                The "New" button is confusing because it has different actions
+                depending on which tab you're on and there's no way for users to
+                know that
+              </li>
+              <li>Want to upload whole directories</li>
+            </ol>
 
             <p class="project-paragraph spacetop">
-              Users simply want to save time and effort by having organized
-              files for easy sharing, finding, editing, etc.
+              We realized that the user's goal is to save time and effort. If
+              they can spend less time searching for files, then they can use
+              that time to do other productive things within the app. Users have
+              expressed their frustration when handling this part of the Incorta
+              app. This solution will empower users to able to customize their
+              environment in the Incorta app.
             </p>
           </div>
         </div>
@@ -165,24 +175,33 @@
             <h1 class="project-h2">Planning</h1>
 
             <p class="project-paragraph spacetop spacebottom">
-              The ability to support folder structures was a huge ask from a
-              customer. The PM wrote up the user story and specified that this
-              feature would span across two releases. The first release would
-              focus on the basic functions of a directory:
+              The PM wrote up the user story and specified that this feature
+              would span across two releases. The first release would focus on
+              these basic functions:
             </p>
 
             <ol>
               <li>Creating, uploading, and renaming folders</li>
               <li>Sharing files</li>
               <li>Searching</li>
-              <li>Breadcrumb navigation</li>
               <li>Managing permissions to overwrite</li>
+              <li>
+                Allow "New" button to combine actions for data file and data
+                source
+              </li>
             </ol>
 
             <p class="project-paragraph spacetop">
-              The second release will address folder-specific permissions,
-              sharing and moving of folders/files, along with other enhancements
-              as needed.
+              The second release will address folder-specific permissions and
+              how that experience will be for the users.
+            </p>
+
+            <p class="project-paragraph spacetop">
+              This feature would also require an enhancement in our navigation.
+              Now that users will be able to nest folders, they'll need a way to
+              traverse through previous folders. We currently don't show
+              breadcrumb paths anywhere in our app, so this navigation would be
+              an important component.
             </p>
           </div>
         </div>
@@ -195,18 +214,18 @@
             <h2 class="project-h2">Prototyping the Solution</h2>
 
             <p class="project-paragraph spacetop">
-              The proposal involves redesigning the existing Data Tab to provide
-              better support for folder structures and searching. We already
-              have list and searchbar components used in the newer React pages
-              of our app, so I simply added those to the new design.
+              The proposal involves redesigning the existing Data tab to provide
+              better support for folder structures and searching. At the time, I
+              had already started up a design library for Incorta including the
+              list and searchbar components. I used these components for the
+              Data tab.
             </p>
 
             <p class="project-paragraph spacetop spacebottom">
-              The only part of our app that utilizes a directory is the Content
-              Tab, where dashboards can be grouped into folders. However, the
-              feature was poorly designed as we don't provide a way for users to
-              traverse through folders and back. A breadcrumb navigation was
-              important for this feature.
+              The only part of our app that utilizes a (half-baked) directory is
+              the Content tab, where dashboards and folders can be grouped into
+              further folders. However, the feature was poorly designed as there
+              was no way for users to go back to the folders within a path.
             </p>
 
             <img
@@ -216,11 +235,12 @@
             <p class="caption">Our current half-baked breadcrumb design.</p>
 
             <p class="project-paragraph spacetop spacebottom">
-              The problem with our current navigation is that users are unable
-              to go back to a previous folder they were in, nor can they see the
-              root location. Users would have to click the left caret each time
-              if they wanted to go back a step. Our solution to that was to show
-              the path leading up to the current location.
+              Users couldn't see the previous folder, but also couldn't access
+              the root location easily without clicking on the left carets each
+              time. We've had complaints from customers and internal users about
+              this scenario. I designed the breadcrumb to show the root
+              location, an ellipsis revealing multiple folders, the folder right
+              before, and the current folder that the user is in.
             </p>
 
             <img
@@ -229,7 +249,7 @@
             />
             <p class="caption spacebottom">
               V1: The wireframe demonstrates the new breadcrumb navigation and
-              directory design..
+              directory design.
             </p>
 
             <img
@@ -258,13 +278,11 @@
 
             <p class="project-paragraph spacetop spacebottom">
               After the implementation, we reviewed it in our test build. We
-              weren't too crazy about the title of the page being the last item
-              shown in the breadcrumb. After some feedback and brainstorm
+              didn't really like the idea that the title of the page was styled
+              like the breadcrumb path. After some feedback and brainstorm
               sessions, we decided to separate the title of the page from the
-              rest of the breadcrumb path, so that it stays prominent in one
-              location. While it seemed minor, this was an important call as we
-              would be using this breadcrumb design to replace our half-baked on
-              in the Content Tab and for future directories within the app.
+              rest of the breadcrumb path, so that it is more obvious to the
+              users.
             </p>
 
             <img
@@ -285,13 +303,12 @@
             <h2 class="project-h2">Evaluating the Usability</h2>
 
             <p class="project-paragraph spacetop spacebottom">
-              This feature was a huge ask from one of our most engaged
-              customers. They were very pleased with the enhancement because it
-              was a huge time and effort saver. They could now share folders
-              containing appropriate files for other users without having to
-              manually go search for each and every file. Our customers were
-              excited to hear that we were expanding on that design in the
-              future release.
+              This feature was a huge ask from multiple customers. After the
+              feature was released, users were very pleased with the enhancement
+              because it was a huge time and effort saver. They could now share
+              folders containing appropriate files and search for files using a
+              searchbar. Our customers were excited to hear that we were
+              expanding on that design in the next release.
             </p>
 
             <img
@@ -348,8 +365,7 @@
                   <div class="process-timeline-content">
                     <div class="card-title">Ideation</div>
                     <p class="process-p">
-                      Researched current trends in designing directories, and
-                      worked with PMs to learn about user needs.
+                      Brainstormed all user scenarios to design experience.
                     </p>
                   </div>
                 </div>
@@ -379,7 +395,7 @@
                   <div class="process-timeline-content">
                     <div class="card-title">Evaluate</div>
                     <p class="process-p">
-                      Many other customers were happy with the upgrade.
+                      Customers shared feedback with us during PM visits.
                     </p>
                   </div>
                 </div>
@@ -394,15 +410,15 @@
             <h1 class="project-h2">The Outcome</h1>
 
             <p class="project-paragraph spacetop">
-              The users were delighted with the first phase. The design is
-              consistent with the rest of our React pages and allowed users to
-              quickly sort and share their files.
+              The users were delighted with the first phase. The Data page was
+              also one of the last pages that needed to be migrated to React, so
+              it was a big accomplishment to get that done along with this
+              directory enhancement.
             </p>
 
             <p class="project-paragraph spacetop">
-              The next steps for this project is currently in the works. I am
-              currently in the midst of designing for bulk actions and
-              addressing folder-specific permissions.
+              The next steps for this project is currently in the works, which
+              includes folder-specific permissions and bulk actions.
             </p>
 
             <div class="nextsection">
