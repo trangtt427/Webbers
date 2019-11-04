@@ -60,7 +60,7 @@ body {
     width: 100%;
 }
 .profile-card{
-    max-width:650px;
+    max-width:600px;
     height: auto;
     text-align: center;
     margin: 20px auto;
@@ -73,7 +73,7 @@ body {
 
 .profile-card .profile-body{
     background-color: var(--white);
-    padding: 20px 40px 20px 40px;
+    padding: 20px 20px 20px 20px;
 }
 
 .profile-card .profile-body .author-img{
@@ -720,7 +720,7 @@ img {
 .process-p {
     margin-bottom:0px;
     line-height:1.8;
-    font-size:14px;
+    font-size:15px;
 }
 
 /**end timeline**/
@@ -1523,7 +1523,7 @@ a.bottomlinks {
 
     .process-p {
     margin-bottom:0px;
-    font-size:13px;
+    font-size:14px;
 }
 
     .col {
