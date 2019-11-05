@@ -488,6 +488,17 @@ a {
      background:rgb(170, 170, 170, 0.35);
 }
 
+.top_line{
+    display:block;
+    margin:auto;
+    margin-bottom:1em;
+    border:none;
+    color:white;
+    height:1px;
+    width:100%;
+     background:rgb(170, 170, 170, 0.35);
+}
+
 /*.sexy_line{
     display:block;
     margin:auto;
