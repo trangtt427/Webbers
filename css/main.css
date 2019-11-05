@@ -1194,10 +1194,8 @@ ul, ol {
 }
 
 .mainblock {
-    max-width:1050px;
+    max-width:1000px;
     margin:auto;
-    padding-left: 25px;
-    padding-right:25px;
 }
 
 
