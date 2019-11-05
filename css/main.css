@@ -60,7 +60,6 @@ body {
     width: 100%;
 }
 .profile-card{
-    max-width:600px;
     height: auto;
     text-align: center;
     margin: 20px auto;
@@ -420,7 +419,7 @@ a {
 .introtext {
     margin:auto;
     display:block;
-    max-width:750px;
+
 
 }
 
@@ -478,6 +477,17 @@ a {
      background:#F08080;
 }
 
+.section_line{
+    display:block;
+    margin:auto;
+    margin-top:1em;
+    border:none;
+    color:white;
+    height:1px;
+    width:100%;
+     background:rgb(170, 170, 170, 0.35);
+}
+
 /*.sexy_line{
     display:block;
     margin:auto;
@@ -532,7 +542,14 @@ p {
     font-size:17px;
     font-weight:300;
     margin:auto;
-    max-width:750px;
+}
+
+.pre-paragraph {
+    line-height:1.8;
+    color: #3a3a3a;
+    font-size:20px;
+    font-weight:700;
+    margin:auto;
 }
 
 .subhead {
@@ -918,7 +935,6 @@ h1 {
     width:100%;
     margin:auto;
     transition: all .4s ease-in-out 0s;
-     max-width:750px;
 
 }
 
@@ -930,7 +946,6 @@ h1 {
     width:100%;
     margin:auto;
     transition: all .4s ease-in-out 0s;
-     max-width:750px;
 
 }
 
@@ -1003,8 +1018,35 @@ ul, ol {
   width: 53%;
     float:right;
 }
+
+.section-left {
+    width: 25%;
+  }
+  
+  .section-middle {
+    width:  4%;
+  }
+  
+  .section-right {
+    width: 71%;
+      float:right;
+  }
+
+  .bio-left {
+    width: 40%;
+  }
+  
+  .bio-middle {
+    width:  4%;
+  }
+  
+  .bio-right {
+    width: 56%;
+      float:right;
+  }
+
 .row {
-    max-width:750px;
+    max-width:1050px;
     margin:auto;
 }
 .row:after {
@@ -1146,13 +1188,16 @@ ul, ol {
 
 .main {
     display:block;
-    padding:0px 25px 0px 25px;
     margin:auto;
+    padding-left:25px;
+    padding-right:25px;
 }
 
 .mainblock {
-    max-width:750px;
+    max-width:1050px;
     margin:auto;
+    padding-left: 25px;
+    padding-right:25px;
 }
 
 
@@ -1572,7 +1617,7 @@ a.bottomlinks {
 }
 
     .project-h2 {
-    font-size:18px;
+    font-size:20px;
     color:#3a3a3a;
 
 }
@@ -1628,6 +1673,15 @@ a.bottomlinks {
     font-size:16px;
     font-weight:;
 
+}
+
+
+.pre-paragraph {
+    line-height:1.8;
+    color: #3a3a3a;
+    font-size:17px;
+    font-weight:700;
+    margin:auto;
 }
 
     .thought {
@@ -1796,7 +1850,7 @@ ul, ol {
     margin:auto;
 }
 
-.timeline2-h1 {
+.timeline2-h1 {persona
       font-weight:700;
     font-size: 17px;
     color:#494c4c;
@@ -1809,3 +1863,4 @@ ul, ol {
 
 
 }
+

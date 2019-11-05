@@ -87,323 +87,426 @@
       <div class="fullblock">
         <div class="main">
           <div class="mainblock">
-            <h2 class="project-h2">Project Background</h2>
-
-            <p class="project-paragraph spacetop">
-              One of Incorta's most engaged customers had a request for dark
-              mode. Compared to the other roadmap items we had, this feature was
-              considered a small effort for a huge return. Since it did not rely
-              on the server team but instead, close collaboration with the
-              front-end team, it was something that could be turned over quickly
-              for the next release.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <span class="sexy_line"></span>
-
-      <div class="fullblock">
-        <div class="main">
-          <div class="mainblock">
-            <h1 class="project-h2">Role</h1>
-
-            <p class="project-paragraph spacetop">
-              I was the only UX designer in a team of two front-end engineers
-              and one PM for this feature. This role allowed me to tap into my
-              visual design skills and knowledge of web accessibility.
-            </p>
-          </div>
-        </div>
-      </div>
-      <span class="sexy_line"></span>
-      <div class="fullblock">
-        <div class="main">
-          <div class="mainblock">
-            <h2 class="project-h2">Learning About the User</h2>
-
-            <p class="project-paragraph spacetop spacebottom">
-              The customers that wanted this feature are business users, the
-              ones who produce the dashboards and insights to present to the
-              execs. We learned that this particular customer holds many
-              sessions in their conference room, where the walls are painted a
-              charcoal color. We received feedback that any time they present
-              decks and visualizations that are white, the audience gets a
-              rather rude awakening.
-            </p>
-
-            <img
-              class="project-image"
-              src="images/incorta-dark-mode/default.png"
-            />
-            <p class="caption"></p>
-
-            <p class="project-paragraph spacetop">
-              The users said it would be nice to have the option to switch to a
-              dark mode, because for some schema developers, they're spending
-              hours looking through hundreds of rows of data. This hit pretty
-              close to home for me because when I use code editors, I prefer
-              using a dark interface as well. My eyes can relate.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <span class="sexy_line"></span>
-      <div class="fullblock">
-        <div class="main">
-          <div class="mainblock">
-            <h1 class="project-h2">Planning</h1>
-
-            <p class="project-paragraph spacetop spacebottom">
-              The Dark Mode UI was going to be a lab feature where we test in
-              our Incorta UX research sessions before rolling it out the public.
-              We would maintain and improve it in upcoming releases as we
-              created new designs for new features. Initially, I thought that
-              creating a dark mode wasn't going to be that difficult.
-            </p>
-
-            <div class="thought">
-              How hard can making a dark mode be? You just invert the whites to
-              blacks, and blacks to whites. And then work on a scale for all the
-              in between colors. Right?
-              <div class="tenspace"></div>
-              - My inner thoughts
+            <div class="row">
+              <div class="unequal-column section-left">
+                <h1 class="project-h2 spacebottom">
+                  Project Background
+                </h1>
+              </div>
+              <div class="unequal-column section-middle"></div>
+              <div class="unequal-column section-right">
+                <p class="project-paragraph spacebottom">
+                  One of Incorta's most engaged customers had a request for dark
+                  mode. Compared to the other roadmap items we had, this feature
+                  was considered a small effort for a huge return. Since it did
+                  not rely on the server team but instead, close collaboration
+                  with the front-end team, it was something that could be turned
+                  over quickly for the next release.
+                </p>
+              </div>
             </div>
 
-            <p class="project-paragraph spacetop">
-              <strong>Absolutely wrong.</strong> I was only poking around the
-              current UI with the inspection tool to test said invert changes,
-              only to realize that there are so many styles on light interfaces
-              that don't do well in a dark mode.
-            </p>
-
-            <p class="project-paragraph spacetop">
-              Some nuances that needed careful thinking when creating Dark Mode:
-            </p>
-
-            <ol>
-              <li>
-                Elevation doesn't work quite as well with a black background
-              </li>
-              <li>Contrast is harder to achieve</li>
-              <li>Brighter variants of current Incorta colors are needed</li>
-              <li>Overlays can't be too dim</li>
-            </ol>
-
-            <p class="project-paragraph spacetop">
-              I spent a few hours researching best practices in Dark Mode and
-              looked for examples of great implementation, on both desktop and
-              mobile. I tried to map out every possible Incorta scenario in Dark
-              Mode.
-            </p>
+            <div class="section_line"></div>
           </div>
         </div>
       </div>
 
-      <span class="sexy_line"></span>
       <div class="fullblock">
         <div class="main">
           <div class="mainblock">
-            <h2 class="project-h2">Prototyping the Solution</h2>
+            <div class="row">
+              <div class="unequal-column section-left">
+                <h1 class="project-h2 spacebottom">
+                  Role
+                </h1>
+              </div>
+              <div class="unequal-column section-middle"></div>
+              <div class="unequal-column section-right">
+                <p class="project-paragraph spacebottom">
+                  I was the only UX designer in a team of two front-end
+                  engineers and one PM for this feature. This role allowed me to
+                  tap into my visual design skills and knowledge of web
+                  accessibility.
+                </p>
+              </div>
+            </div>
 
-            <p class="project-paragraph spacetop spacebottom">
-              Using the Incorta Design Library, I explored variations of dark
-              colors to accommodate all the components. The most effective way
-              was to invert the colors and then modifying them slightly. Our
-              goal for Dark Mode was to make sure everything is consistent,
-              accessible, and pleasant to use.
-            </p>
-
-            <img
-              class="project-image"
-              src="images/incorta-dark-mode/idea1.png"
-            />
-            <p class="caption spacebottom">
-              I tried testing out the colors and styles with every interaction
-              and user case possible.
-            </p>
-
-            <img
-              class="project-image"
-              src="images/incorta-dark-mode/idea2.png"
-            />
-            <p class="caption spacebottom">
-              The scrim had to be the perfect opacity and color to show the
-              layer underneath.
-            </p>
-
-            <img
-              class="project-image"
-              src="images/incorta-dark-mode/idea3.png"
-            />
-            <p class="caption"></p>
+            <div class="section_line"></div>
           </div>
         </div>
       </div>
 
-      <span class="sexy_line"></span>
       <div class="fullblock">
         <div class="main">
           <div class="mainblock">
-            <h2 class="project-h2">Evaluating the Usability</h2>
+            <div class="row">
+              <div class="unequal-column section-left">
+                <h1 class="project-h2 spacebottom">
+                  Learning About the User
+                </h1>
+              </div>
+              <div class="unequal-column section-middle"></div>
+              <div class="unequal-column section-right">
+                <p class="pre-paragraph spacebottom">
+                  How does having a dark UI help our customers?
+                </p>
+                <p class="project-paragraph spacebottom">
+                  The customers that wanted this feature are business users, the
+                  ones who produce the dashboards and insights to present to the
+                  execs. We learned that this particular customer holds many
+                  sessions in their conference room, where the walls are painted
+                  a charcoal color. We received feedback that any time they
+                  present decks and visualizations that are white, the audience
+                  gets a rather rude awakening.
+                </p>
 
-            <p class="project-paragraph spacetop spacebottom">
-              The front-end team implemented Dark Mode in a test build. As we
-              were testing out the interface, we came across some overlooked
-              scenarios where the proposed colors were difficult to read. For
-              example, the usual Incorta blue hyperlink was hard to make out on
-              a grey background. There were only a few of these types of
-              instances.
-            </p>
+                <img
+                  class="project-image"
+                  src="images/incorta-dark-mode/default.png"
+                />
+                <p class="caption"></p>
 
-            <img
-              class="project-image"
-              src="images/incorta-dark-mode/iteration.jpg"
-            />
-            <p class="caption spacebottom">
-              The grey was changed to darker shade in order to show the
-              hyperlink.
-            </p>
+                <p class="project-paragraph spacetop spacebottom">
+                  The users said it would be nice to have the option to switch
+                  to a dark mode, because for some schema developers, they're
+                  spending hours looking through hundreds of rows of data. This
+                  hit pretty close to home for me because when I use code
+                  editors, I prefer using a dark interface as well. My eyes can
+                  relate.
+                </p>
+              </div>
+            </div>
 
-            <p class="project-paragraph spacebottom">
-              The Dark Mode was then updated to address the use of blues on grey
-              backgrounds. We incorporated the feature into our UX research labs
-              where participants were able to test it out. We didn't come across
-              any inconsistencies, so it was then rolled out to all users in the
-              latest release as a feature bit (users would rely on their admins
-              to make the option availabe).
-            </p>
-
-            <img
-              class="project-image"
-              src="images/incorta-dark-mode/palette.png"
-            />
-            <p class="caption spacebottom">Our current dark mode palette.</p>
-
-            <img
-              class="project-image"
-              src="images/incorta-dark-mode/finalscreens.png"
-            />
-            <p class="caption spacebottom"></p>
+            <div class="section_line"></div>
           </div>
         </div>
       </div>
 
-      <span class="sexy_line"></span>
       <div class="fullblock">
         <div class="main">
           <div class="mainblock">
-            <h1 class="project-h2">Process Overview</h1>
-            <div id="process-timeline" class="process-container">
-              <div class="process-timeline-block">
-                <div class="process-timeline-cat process-circle"></div>
+            <div class="row">
+              <div class="unequal-column section-left">
+                <h1 class="project-h2 spacebottom">
+                  Planning
+                </h1>
+              </div>
+              <div class="unequal-column section-middle"></div>
+              <div class="unequal-column section-right">
+                <p class="project-paragraph spacebottom">
+                  The Dark Mode UI was going to be a lab feature where we test
+                  in our Incorta UX research sessions before rolling it out the
+                  public. We would maintain and improve it in upcoming releases
+                  as we created new designs for new features. Initially, I
+                  thought that creating a dark mode wasn't going to be that
+                  difficult.
+                </p>
 
-                <div class="process-timeline-content">
-                  <div class="card-title">Define the problem</div>
-                  <p class="process-p">
-                    Figure out a Dark Mode palette that will work for all
-                    components in the Incorta app.
-                  </p>
+                <div class="thought">
+                  How hard can making a dark mode be? You just invert the whites
+                  to blacks, and blacks to whites. And then work on a scale for
+                  all the in between colors. Right?
+                  <div class="tenspace"></div>
+                  - My inner thoughts
                 </div>
-                <div class="process-timeline-block">
-                  <div class="process-timeline-cat process-circle"></div>
 
-                  <div class="process-timeline-content">
-                    <div class="card-title">Gather information</div>
-                    <p class="process-p">
-                      Researched current trends in various dark mode trends in
-                      different apps.
-                    </p>
+                <p class="project-paragraph spacetop">
+                  <strong>Absolutely wrong.</strong> I was only poking around
+                  the current UI with the inspection tool to test said invert
+                  changes, only to realize that there are so many styles on
+                  light interfaces that don't do well in a dark mode.
+                </p>
+
+                <p class="project-paragraph spacetop">
+                  Some nuances that needed careful thinking when creating Dark
+                  Mode:
+                </p>
+
+                <ol>
+                  <li>
+                    Elevation doesn't work quite as well with a black background
+                  </li>
+                  <li>Contrast is harder to achieve</li>
+                  <li>
+                    Brighter variants of current Incorta colors are needed
+                  </li>
+                  <li>Overlays can't be too dim</li>
+                </ol>
+
+                <p class="project-paragraph spacebottom spacetop">
+                  I spent a few hours researching best practices in Dark Mode
+                  and looked for examples of great implementation, on both
+                  desktop and mobile. I tried to map out every possible Incorta
+                  scenario in Dark Mode.
+                </p>
+              </div>
+            </div>
+
+            <div class="section_line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fullblock">
+        <div class="main">
+          <div class="mainblock">
+            <div class="row">
+              <div class="unequal-column section-left">
+                <h1 class="project-h2 spacebottom">
+                  The Design Process
+                </h1>
+              </div>
+              <div class="unequal-column section-middle"></div>
+              <div class="unequal-column section-right">
+                <p class="pre-paragraph spacebottom">
+                  Prototyping and Lots of Exploration
+                </p>
+                <p class="project-paragraph spacebottom">
+                  Using the Incorta Design Library, I explored variations of
+                  dark colors to accommodate all the components. The most
+                  effective way was to invert the colors and then modifying them
+                  slightly. Our goal for Dark Mode was to make sure everything
+                  is consistent, accessible, and pleasant to use.
+                </p>
+                <img
+                  class="project-image"
+                  src="images/incorta-dark-mode/idea1.png"
+                />
+                <p class="caption spacebottom">
+                  I tried testing out the colors and styles with every
+                  interaction and user case possible.
+                </p>
+
+                <img
+                  class="project-image"
+                  src="images/incorta-dark-mode/idea2.png"
+                />
+                <p class="caption spacebottom">
+                  The scrim had to be the perfect opacity and color to show the
+                  layer underneath.
+                </p>
+
+                <img
+                  class="project-image"
+                  src="images/incorta-dark-mode/idea3.png"
+                />
+                <p class="caption spacebottom"></p>
+
+                <p class="pre-paragraph spacetop spacebottom">
+                  Reiterating
+                </p>
+
+                <p class="project-paragraph spacebottom">
+                  The front-end team implemented Dark Mode in a test build. As
+                  we were testing out the interface, we came across some
+                  overlooked scenarios where the proposed colors were difficult
+                  to read. For example, the usual Incorta blue hyperlink was
+                  hard to make out on a grey background. There were only a few
+                  of these types of instances.
+                </p>
+
+                <img
+                  class="project-image"
+                  src="images/incorta-dark-mode/iteration.jpg"
+                />
+                <p class="caption spacebottom">
+                  The grey was changed to darker shade in order to show the
+                  hyperlink.
+                </p>
+
+                <img
+                  class="project-image"
+                  src="images/incorta-dark-mode/palette.png"
+                />
+                <p class="caption spacebottom">
+                  Our current dark mode palette.
+                </p>
+
+                <img
+                  class="project-image"
+                  src="images/incorta-dark-mode/finalscreens.png"
+                />
+                <p class="caption spacebottom"></p>
+              </div>
+            </div>
+
+            <div class="section_line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fullblock">
+        <div class="main">
+          <div class="mainblock">
+            <div class="row">
+              <div class="unequal-column section-left">
+                <h1 class="project-h2 spacebottom">
+                  Evaluating the Usability
+                </h1>
+              </div>
+              <div class="unequal-column section-middle"></div>
+              <div class="unequal-column section-right">
+                <p class="project-paragraph spacebottom">
+                  The Dark Mode was then updated to address the use of blues on
+                  grey backgrounds. We incorporated the feature into our UX
+                  research labs where participants were able to test it out.
+                  Throughout the sessions, users were able to still continue
+                  carrying out ordinary tasks. Surprisingly, users didn't give
+                  any negative feedback besides the fact that the design was not
+                  available for the remaining pages in Angular. The feature was
+                  then rolled out to all users in the latest release as a
+                  feature bit (users would rely on their admins to make the
+                  option available). We also specified that it is a lab feature
+                  and is still in the works, and that users are free to play
+                  around with it and provide feedback.
+                </p>
+              </div>
+            </div>
+
+            <div class="section_line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fullblock">
+        <div class="main">
+          <div class="mainblock">
+            <div class="row">
+              <div class="unequal-column section-left">
+                <h1 class="project-h2 spacebottom">
+                  Process Overview
+                </h1>
+              </div>
+              <div class="unequal-column section-middle"></div>
+              <div class="unequal-column section-right">
+                <div id="process-timeline" class="process-container">
+                  <div class="process-timeline-block">
+                    <div class="process-timeline-cat process-circle"></div>
+
+                    <div class="process-timeline-content">
+                      <div class="card-title">Define the problem</div>
+                      <p class="process-p">
+                        Figure out a Dark Mode palette that will work for all
+                        components in the Incorta app.
+                      </p>
+                    </div>
+                    <div class="process-timeline-block">
+                      <div class="process-timeline-cat process-circle"></div>
+
+                      <div class="process-timeline-content">
+                        <div class="card-title">Gather information</div>
+                        <p class="process-p">
+                          Researched current trends in various dark mode trends
+                          in different apps.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="process-timeline-block">
+                      <div class="process-timeline-cat process-circle"></div>
+
+                      <div class="process-timeline-content">
+                        <div class="card-title">Ideation</div>
+                        <p class="process-p">
+                          Explored and tested different colors in each use case
+                          of the app.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process-timeline-block">
+                      <div class="process-timeline-cat process-circle"></div>
+                    </div>
+                    <div class="process-timeline-block">
+                      <div class="process-timeline-cat process-circle"></div>
+
+                      <div class="process-timeline-content">
+                        <div class="card-title">Implementation</div>
+                        <p class="process-p">
+                          Developed and reviewed in test build.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="process-timeline-block">
+                      <div class="process-timeline-cat process-circle"></div>
+
+                      <div class="process-timeline-content">
+                        <div class="card-title">Iteration</div>
+                        <p class="process-p">
+                          Redesign some components where hyperlinks were hard to
+                          see.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="process-timeline-block">
+                      <div class="process-timeline-cat process-circle"></div>
+
+                      <div class="process-timeline-content">
+                        <div class="card-title">Evaluate</div>
+                        <p class="process-p">
+                          Dark Mode was met with positive feedback from customer
+                          and many various users of the Incorta app.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
 
-                <div class="process-timeline-block">
-                  <div class="process-timeline-cat process-circle"></div>
+            <div class="section_line"></div>
+          </div>
+        </div>
+      </div>
 
-                  <div class="process-timeline-content">
-                    <div class="card-title">Ideation</div>
-                    <p class="process-p">
-                      Explored and tested different colors in each use case of
-                      the app.
-                    </p>
-                  </div>
-                </div>
-                <div class="process-timeline-block">
-                  <div class="process-timeline-cat process-circle"></div>
-                </div>
-                <div class="process-timeline-block">
-                  <div class="process-timeline-cat process-circle"></div>
+      <div class="fullblock">
+        <div class="main">
+          <div class="mainblock">
+            <div class="row">
+              <div class="unequal-column section-left">
+                <h1 class="project-h2 spacebottom">
+                  The Outcome
+                </h1>
+              </div>
+              <div class="unequal-column section-middle"></div>
+              <div class="unequal-column section-right">
+                <p class="project-paragraph spacebottom">
+                  The customer who requested the feature was impressed with the
+                  new look. Many of their users enjoyed the feature and said it
+                  helped their eyes adjust to the lists, tables, and data
+                  visualizations. Other customers began using the feature as
+                  well. Now that the feature is successful and has a decent
+                  amount of users, we can now solicit feedback from a larger
+                  sample about how we can improve it.
+                </p>
 
-                  <div class="process-timeline-content">
-                    <div class="card-title">Implementation</div>
-                    <p class="process-p">
-                      Developed and reviewed in test build.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="process-timeline-block">
-                  <div class="process-timeline-cat process-circle"></div>
-
-                  <div class="process-timeline-content">
-                    <div class="card-title">Iteration</div>
-                    <p class="process-p">
-                      Redesign some components where hyperlinks were hard to
-                      see.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="process-timeline-block">
-                  <div class="process-timeline-cat process-circle"></div>
-
-                  <div class="process-timeline-content">
-                    <div class="card-title">Evaluate</div>
-                    <p class="process-p">
-                      Dark Mode was met with positive feedback from customer and
-                      many various users of the Incorta app.
-                    </p>
-                  </div>
-                </div>
+                <p class="project-paragraph">
+                  I was surprised that Incorta wanted to hop on the Dark Mode
+                  train because we rarely prioritize any efforts into designing
+                  things that are not directly related to complex customer
+                  problems. But this feature made our app look very "cool" as
+                  many have mentioned. I wasn't sold on the whole dark UI when
+                  it was introduced years ago, but now I have a better
+                  understanding of situations where it can truly help our
+                  customers health.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="fullblock extraspacebottom">
-        <div class="main">
-          <div class="mainblock">
-            <h1 class="project-h2">The Outcome</h1>
 
-            <p class="project-paragraph spacetop">
-              The customer who requested the feature was impressed with the new
-              look. Many of their users enjoyed the feature and said it helped
-              their eyes adjust to the lists, tables, and data visualizations.
-              Other customers began using the feature as well. Now that the
-              feature is successful and has a decent amount of users, we can now
-              solicit feedback from a larger sample about how we can improve it.
-            </p>
-
-            <p class="project-paragraph spacetop">
-              I was surprised that Incorta wanted to hop on the Dark Mode train
-              because we rarely prioritize any efforts into designing things
-              that are not directly related to complex customer problems. But
-              this feature made our app look very "cool" as many have mentioned.
-              I wasn't sold on the whole dark UI when it was introduced years
-              ago, but now I have a better understanding of situations where it
-              can truly help our customers health.
-            </p>
-
-            <div class="nextsection">
-              <a href="bio-rad-marcom-designs" class="btn btn-1"
-                >Bio&#8209;Rad: Marcom Designs &#8594;</a
-              >
-            </div>
-
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-            <script src="js/index.js"></script>
+      <div class="main extraspacebottom">
+        <div class="mainblock">
+          <div class="nextsection">
+            <a href="bio-rad-marcom-designs" class="btn btn-1"
+              >Bio&#8209;Rad: Marcom Designs &#8594;</a
+            >
           </div>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+          <script src="js/index.js"></script>
         </div>
       </div>
 
