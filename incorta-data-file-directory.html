@@ -99,13 +99,21 @@
               <div class="unequal-column section-middle"></div>
               <div class="unequal-column section-right">
                 <p class="project-paragraph spacebottom">
-                  In the Incorta app, users can provide data in two ways: upload
-                  CSV/XML files straight into their instance or connect to a
-                  database. One of the biggest issues that users are facing is
-                  that they are adding hundreds of files into a root location,
-                  without capabilities of organizing any of them. The customer
-                  ask was that we provide a solution that allows basic directory
-                  capabilities instead of a flat level.
+                  Incorta is a hyper-converged analytics app that removes the
+                  ETL process in data warehousing and lets users make use of
+                  their data fast. In the Incorta desktop app, users can provide
+                  data in two ways: upload CSV/XML files straight into their
+                  instance or connect to a database. From this information,
+                  tables can be joined to create schemas in then ultimately,
+                  data visualizations.
+                </p>
+                <p class="pre-paragraph spacetop">The Problem Today</p>
+                <p class="project-paragraph spacetop spacebottom">
+                  One of the biggest issues that users are facing is that they
+                  are adding hundreds of files into a root location, without
+                  capabilities of organizing any of them. The customer ask was
+                  that we provide a solution that allows basic directory
+                  capabilities.
                 </p>
                 <img
                   class="project-image"
@@ -160,14 +168,19 @@
               <div class="unequal-column section-middle"></div>
               <div class="unequal-column section-right">
                 <p class="pre-paragraph spacebottom">
-                  Who are the users? What are their current frustrations and
-                  goals?
+                  Gathering User Feedback
                 </p>
                 <p class="project-paragraph spacebottom">
-                  The persona of this feature is the business analyst. They are
-                  responsible for bringing the data into their systems in order
-                  to create schemas. Once all the data is there and usable,
-                  business users can then build visualizations.
+                  I spent some time discussing with internal
+                  <strong>solutions architects, PMs, and pre-sales</strong> who
+                  gave me all the details about the type of users, as well as
+                  the complaints they had.The main user of this feature is the
+                  Data Analyst because they are the power users responsible for
+                  bringing the data into their systems in order to create
+                  schemas.
+                </p>
+                <p class="pre-paragraph spacetop">
+                  Persona: The Data Analyst (Power User)
                 </p>
                 <div class="wrapper">
                   <div class="profile-card">
@@ -214,30 +227,30 @@
                 </div>
 
                 <p class="project-paragraph spacetop">
-                  I worked with the PM and a few solutions architects who speak
-                  directly to these power users to learn about their struggles
-                  and frustrations. Some of their pain points include:
+                  Some of the Data Analyst's pain points include:
                 </p>
                 <ol>
-                  <li>No ability to group files into folders</li>
+                  <li>Can't group files for organization</li>
                   <li>
-                    Difficulty finding files because there's no way to search
+                    Difficulty finding files because there is no way to search
                   </li>
                   <li>
                     The "New" button is confusing because it has different
                     actions depending on which tab you're on and there's no way
                     for users to know that
                   </li>
-                  <li>Want to upload whole directories</li>
+                  <li>Want to upload whole folders</li>
                 </ol>
 
                 <p class="project-paragraph spacetop spacebottom">
-                  We realized that the user's goal is to save time and effort.
+                  We realized that the
+                  <strong
+                    >Data Analyst's goal is to save time and effort.</strong
+                  >
                   If they can spend less time searching for files, then they can
-                  use that time to do other productive things within the app.
-                  Users have expressed their frustration when handling this part
-                  of the Incorta app. This solution will empower users to able
-                  to customize their environment in the Incorta app.
+                  use that time to do other productive things. This solution
+                  will empower users to able to customize their environment
+                  within Incorta.
                 </p>
               </div>
             </div>
@@ -259,31 +272,33 @@
               <div class="unequal-column section-middle"></div>
               <div class="unequal-column section-right">
                 <p class="pre-paragraph spacebottom">
-                  Key Things to Help Users Perform Their Jobs Effortlessly
+                  Brainstorming the Enhancements
                 </p>
                 <p class="project-paragraph spacebottom">
-                  The PM wrote up the user story and specified that this feature
-                  would span across two releases. The first release would focus
-                  on these basic functions:
+                  In another sync, the PM and I brainstormed ways to upgrade the
+                  Data tab. On a whiteboard, we listed user actions and
+                  prioritized them based on how related they are to the urgent
+                  asks. Here are the tasks we came up with for quick wins:
                 </p>
 
                 <ol>
-                  <li>Creating, uploading, and renaming folders</li>
-                  <li>Sharing files</li>
-                  <li>Searching</li>
+                  <li>The ability to create folders and rename folders</li>
+                  <li>Uploading folders</li>
+                  <li>Searching and sorting</li>
                   <li>Managing permissions to overwrite</li>
                   <li>
                     Allow "New" button to combine actions for data file and data
                     source
                   </li>
+                  <li>
+                    Folder permissions
+                  </li>
+                  <li>
+                    Move files/folders
+                  </li>
                 </ol>
 
-                <p class="project-paragraph spacetop">
-                  The second release will address folder-specific permissions
-                  and how that experience will be for the users.
-                </p>
-
-                <p class="project-paragraph spacetop">
+                <p class="project-paragraph spacetop spacebottom">
                   This feature would also require an enhancement in our
                   navigation. Now that users will be able to nest folders,
                   they'll need a way to traverse through previous folders. We
@@ -310,22 +325,16 @@
               <div class="unequal-column section-middle"></div>
               <div class="unequal-column section-right">
                 <p class="pre-paragraph spacebottom">
-                  Prototyping the Solution
-                </p>
-                <p class="project-paragraph spacebottom">
-                  The proposal involves redesigning the existing Data tab to
-                  provide better support for folder structures and searching. At
-                  the time, I had already started up a design library for
-                  Incorta including the list and searchbar components. I used
-                  these components for the Data tab.
+                  Breadcrumb Navigation Lo-fi Wireframe
                 </p>
                 <p class="project-paragraph spacebottom">
                   The only part of our app that utilizes a (half-baked)
                   directory is the Content tab, where dashboards and folders can
                   be grouped into further folders. However, the feature was
-                  poorly designed as there was no way for users to go back to
-                  the folders within a path.
+                  poorly designed as there was no way for users to navigate back
+                  to folders in a path.
                 </p>
+
                 <img
                   class="project-image"
                   src="images/incorta-data-file-directory/oldbreadcrumb.png"
@@ -335,36 +344,44 @@
                 <p class="project-paragraph spacetop spacebottom">
                   Users couldn't see the previous folder, but also couldn't
                   access the root location easily without clicking on the left
-                  carets each time. We've had complaints from customers and
-                  internal users about this scenario. I designed the breadcrumb
+                  carets each time. We've had ongoing complaints from customers
+                  and internal users about this experience. My solutiondesigned
+                  a breadcrumb navigation to show the root location, an ellipsis
+                  revealing multiple folders on click, the previous folder, and
+                  the current folder that the user is in.
+                </p>
+                <p class="project-paragraph spacebottom">
+                  <strong>Solution:</strong> I designed a breadcrumb navigation
                   to show the root location, an ellipsis revealing multiple
-                  folders, the folder right before, and the current folder that
-                  the user is in.
+                  folders on click, the previous folder, and the current folder
+                  that the user is in.
                 </p>
 
                 <img
                   class="project-image"
-                  src="images/incorta-data-file-directory/createfolder.png"
+                  src="images/incorta-data-file-directory/breadcrumblofi.png"
                 />
                 <p class="caption spacebottom">
-                  V1: The wireframe demonstrates the new breadcrumb navigation
-                  and directory design.
+                  The breadcrumb navigation in the instance of many folders in a
+                  path
                 </p>
 
                 <img
                   class="project-image"
-                  src="images/incorta-data-file-directory/uploadfolder.png"
+                  src="images/incorta-data-file-directory/uploadfiles.png"
                 />
                 <p class="caption spacebottom">
-                  Users will be able to upload individual data files or whole
-                  folders.
+                  The design demonstrates the concept of adding both files and
+                  folders in one dialog
                 </p>
 
                 <img
                   class="project-image"
                   src="images/incorta-data-file-directory/successfulupload.png"
                 />
-                <p class="caption spacebottom"></p>
+                <p class="caption spacebottom">
+                  Screen showing successful upload
+                </p>
 
                 <img
                   class="project-image"
@@ -376,16 +393,78 @@
                 </p>
 
                 <p class="pre-paragraph spacetop spacebottom">
-                  Reiteration
+                  Reiterating on the Initial Proposal
+                </p>
+
+                <p class="project-paragraph">
+                  In a sync with the server team and front-end team, we found
+                  out that some of our tasks would not be able to fit in the
+                  upcoming release.
+                </p>
+                <ol class="spacebottom">
+                  <li>
+                    The back-end team cannot support the relocating of folders
+                    because it was a huge engineering effort and they were
+                    slammed with higher priority tasks
+                  </li>
+                  <li>
+                    The back-end team cannot support folder-specific
+                    permissions.
+                  </li>
+                  <li>
+                    The front-end team cannot allow the UI to upload folders and
+                    files in one upload prompt. They would have to be separated.
+                  </li>
+                </ol>
+
+                <div class="thought">
+                  What if a user doesn't have access to a certain folder, but
+                  has access to the file within it?
+                  <div class="tenspace"></div>
+                  - A Back-end Engineer
+                </div>
+
+                <p class="project-paragraph spacetop spacebottom">
+                  We realized the complexity of folders and permissions after
+                  meeting with other teams. As a result of our discussion, we
+                  removed some of the enhancements and agreed to push it into
+                  the next release. Not having those enhancements won't hinder
+                  the users so I updated my design to limit the scope of actions
+                  and handed it off to Engineering.
+                </p>
+
+                <img
+                  class="project-image"
+                  src="images/incorta-data-file-directory/editonly.png"
+                />
+                <p class="caption spacebottom">
+                  The "move to" icon was removed in the newest design since we
+                  didn't have enough engineering resources to work on that
+                  back-end support
+                </p>
+
+                <img
+                  class="project-image"
+                  src="images/incorta-data-file-directory/datafilesfolders.png"
+                />
+                <p class="caption spacebottom">
+                  Uploading data files and folders have been separated into two
+                  actions since engineering could not support a single dialog
+                </p>
+
+                <p class="pre-paragraph spacetop spacebottom">
+                  Reiterating on the Breadcrumb Navigation
                 </p>
 
                 <p class="project-paragraph spacebottom">
-                  After the implementation, we reviewed it in our test build. We
+                  After implementation, we reviewed it in our test build. The
+                  other designers reviewed the breadcrumb and collectively, we
                   didn't really like the idea that the title of the page was
-                  styled like the breadcrumb path. After some feedback and
-                  brainstorm sessions, we decided to separate the title of the
-                  page from the rest of the breadcrumb path, so that it is more
-                  obvious to the users.
+                  styled like the breadcrumb path. We agreed that the page title
+                  should assume its own identity, thus it was decided to move
+                  the title of the page to the next line. It would also be
+                  helpful to users if the page title stayed in one spot, for
+                  consistency.
                 </p>
 
                 <img
@@ -393,7 +472,8 @@
                   src="images/incorta-data-file-directory/newbreadcrumb.png"
                 />
                 <p class="caption spacebottom">
-                  What the second version of the breadcrumb looks like.
+                  The newest version of the breadcrumb that shows the title page
+                  in a separate style
                 </p>
 
                 <img
@@ -403,6 +483,21 @@
                 <p class="caption spacebottom">
                   The new structure for the Data tab along with the enhanced
                   breadcrumb.
+                </p>
+
+                <p class="pre-paragraph spacetop spacebottom">
+                  Evaluating the Usability
+                </p>
+
+                <p class="project-paragraph spacebottom">
+                  After it was QA'd and approved, the feature was rolled out to
+                  all users. To see how the feature fared, PMs went onsite to
+                  solicit feedback from engaged data analysts. We had positive
+                  feedback from customers, despite not being able to truly treat
+                  the Data tab like a directory yet. We were told that as a
+                  result of the feature, they were able to limit the time spent
+                  finding and sharing files. They also expressed their
+                  excitement for the upcoming enhancements in the second phase.
                 </p>
               </div>
             </div>
@@ -507,18 +602,9 @@
               </div>
               <div class="unequal-column section-middle"></div>
               <div class="unequal-column section-right">
-                <p class="project-paragraph spacebottom">
-                  This support for data files was a long awaited wish for the
-                  customers. PMs have received direct feedback from customers
-                  claiming that they're relieved that they could now share whole
-                  folders of files instead of finding and selecting files in
-                  bulk. Our customers were excited to hear that we are expanding
-                  on that feature in the next release.
-                </p>
-
                 <img
                   class="project-image"
-                  src="images/incorta-data-file-directory/finalscreen2.png"
+                  src="images/incorta-data-file-directory/finalflow.png"
                 />
                 <p class="caption spacebottom"></p>
 
@@ -529,18 +615,21 @@
                 <p class="caption spacebottom"></p>
 
                 <div class="thought">
-                  I'm glad that I can finally share whole folders with users
-                  instead of finding and selecting individual CSVs. It has saved
-                  us time.
+                  First, we've been waiting for a long time just to be able to
+                  search and sort. Second, I'm glad that I can finally share
+                  whole folders with users instead of finding and selecting
+                  individual CSVs. It has saved us time.
                   <div class="tenspace"></div>
                   - A Business analyst
                 </div>
 
                 <p class="project-paragraph spacetop">
-                  The breadcrumb design is going to be the standard
-                  implementation for the other pages in Incorta. The next phase
-                  for this project is currently in the works, which includes
-                  folder-specific permissions and bulk actions.
+                  This support for data files was a long-awaited wish for the
+                  customers. Moving forward, the breadcrumb design is going to
+                  be the standard implementation for the other pages in Incorta
+                  whenever applicable. The next phase for this project is
+                  currently in the works, which includes folder-specific
+                  permissions and relocating folders.
                 </p>
               </div>
             </div>
