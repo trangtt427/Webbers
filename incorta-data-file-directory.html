@@ -104,7 +104,7 @@
                   their data fast. In the Incorta desktop app, users can provide
                   data in two ways: upload CSV/XML files straight into their
                   instance or connect to a database. From this information,
-                  tables can be joined to create schemas in then ultimately,
+                  tables can be joined to create schemas and then ultimately,
                   data visualizations.
                 </p>
                 <p class="pre-paragraph spacetop">The Problem Today</p>
@@ -344,10 +344,7 @@
                   Users couldn't see the previous folder, but also couldn't
                   access the root location easily without clicking on the left
                   carets each time. We've had ongoing complaints from customers
-                  and internal users about this experience. My solutiondesigned
-                  a breadcrumb navigation to show the root location, an ellipsis
-                  revealing multiple folders on click, the previous folder, and
-                  the current folder that the user is in.
+                  and internal users about this experience.
                 </p>
                 <p class="project-paragraph spacebottom">
                   <strong>Solution:</strong> I designed a breadcrumb navigation
@@ -370,8 +367,8 @@
                   src="images/incorta-data-file-directory/uploadfiles.png"
                 />
                 <p class="caption spacebottom">
-                  The design demonstrates the concept of adding both files and
-                  folders in one dialog
+                  The design demonstrates the concept of uploading both files
+                  and folders in one dialog
                 </p>
 
                 <img
@@ -387,8 +384,8 @@
                   src="images/incorta-data-file-directory/renamefolder.png"
                 />
                 <p class="caption spacebottom">
-                  The new design will support renaming of folders and various
-                  other functions.
+                  The new design will support renaming of folders amongst other
+                  various functions
                 </p>
 
                 <p class="pre-paragraph spacetop spacebottom">
@@ -402,13 +399,12 @@
                 </p>
                 <ol class="spacebottom">
                   <li>
-                    The back-end team cannot support the relocating of folders
+                    The server team cannot support the relocating of folders
                     because it was a huge engineering effort and they were
                     slammed with higher priority tasks
                   </li>
                   <li>
-                    The back-end team cannot support folder-specific
-                    permissions.
+                    The server team cannot support folder-specific permissions.
                   </li>
                   <li>
                     The front-end team cannot allow the UI to upload folders and
@@ -428,8 +424,8 @@
                   meeting with other teams. As a result of our discussion, we
                   removed some of the enhancements and agreed to push it into
                   the next release. Not having those enhancements won't hinder
-                  the users so I updated my design to limit the scope of actions
-                  and handed it off to Engineering.
+                  the users, so I updated my design to limit the scope of
+                  actions and handed it off to Engineering.
                 </p>
 
                 <img
@@ -481,7 +477,7 @@
                 />
                 <p class="caption spacebottom">
                   The new structure for the Data tab along with the enhanced
-                  breadcrumb.
+                  breadcrumb
                 </p>
 
                 <p class="pre-paragraph spacetop spacebottom">
@@ -628,7 +624,16 @@
                   be the standard implementation for the other pages in Incorta
                   whenever applicable. The next phase for this project is
                   currently in the works, which includes folder-specific
-                  permissions and relocating folders.
+                  permissions and moving folders around.
+                </p>
+                <p class="project-paragraph spacetop">
+                  Working on this feature was a reminder that different teams
+                  have different priorities. While this feature is an important
+                  one to the users, we were limited by scope because the
+                  engineering teams were unable to support everything we had
+                  asked for. It was a strategic course of action to give the
+                  users what they asked for along with easy improvements,
+                  followed by bigger enhancements in the next release.
                 </p>
               </div>
             </div>
