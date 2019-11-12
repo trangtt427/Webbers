@@ -311,7 +311,7 @@ header {
     width:50%;
 }
 
-.full-width {
+/*.full-width {
 	left: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
@@ -319,7 +319,7 @@ header {
 	position: relative;
 	right: 50%;
 	width: 100vw;
-}
+}*/
 
 
 a {
