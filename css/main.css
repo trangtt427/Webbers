@@ -311,7 +311,7 @@ header {
     width:50%;
 }
 
-/*.full-width {
+.full-width {
 	left: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
@@ -319,7 +319,16 @@ header {
 	position: relative;
 	right: 50%;
 	width: 100vw;
-}*/
+}
+
+.highlight {
+    color:#3a3a3a !important;
+}
+
+.highlight-footer {
+    color:#E7E6E6 !important;
+    opacity: 1 !important;
+}
 
 
 a {
@@ -380,6 +389,7 @@ a {
     position:relative;
     display:block;
     z-index:1;
+    max-width:550px;
 }
 
 
