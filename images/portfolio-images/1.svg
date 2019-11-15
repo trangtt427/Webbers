@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="722px" height="420px" viewBox="0 0 722 420" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="4.18976815%" y1="51.2568059%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#209CC9" offset="0%"></stop>
+            <stop stop-color="#21AEE2" stop-opacity="0.360276442" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13.1612798%" y1="50.2859666%" x2="115.381909%" y2="49.3889363%" id="linearGradient-2">
+            <stop stop-color="#096797" stop-opacity="0.12" offset="0%"></stop>
+            <stop stop-color="#0062A3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="blue-stripes" transform="translate(0.000000, -106.000000)">
+            <path d="M-1.42108547e-14,109.827086 L724,15 L724,400.172914 L1.13686838e-13,495 L0,109.827086 Z" id="Combined-Shape" fill-opacity="0.67" fill="#029EC8"></path>
+            <path d="M7.10542736e-15,457.036492 L792,353 L792,516.963508 L1.13686838e-13,621 L0,457.036492 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+            <path d="M7.10542736e-15,104.036492 L792,0 L792,163.963508 L1.13686838e-13,268 L0,104.036492 Z" id="Combined-Shape-Copy" fill="url(#linearGradient-1)"></path>
+            <path d="M820,30 L820,414.762866 L0,522 L0,137.237134 L820,30 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+        </g>
+    </g>
+</svg>

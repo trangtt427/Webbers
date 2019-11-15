@@ -918,6 +918,7 @@ img {
     margin:0;
     margin-bottom: 0.75rem;
     padding: 0px 30px 30px 30px;
+    max-width:550px;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -1173,11 +1174,16 @@ ul, ol {
 
 .featurecontainer {
     transition: all .2s ease-in-out 0s;
-    margin:1.66666667%;
-    width: 96.666666%;
-    height:278px;
+    margin:auto;
+    max-width: 1150px;
+    height:300px;
     display:block;
     position: relative;
+    margin-bottom:40px;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 .titleguy, .titleguy2{
@@ -1231,15 +1237,62 @@ ul, ol {
     color:white;
 }
 
-.rightblock {
-    /*background-color: #2e2e2e;*/
-    background-image: linear-gradient(34deg, rgba(67,149,90,1) 0%, rgba(197,226,100,1) 100%);
-  /* background-color:#83c3f8; */
+.rightblock1 {
+   background-image: linear-gradient(34deg, rgba(67,149,90,1) 0%, rgba(197,226,100,1) 100%);
+   /*background-image: url("../images/1.svg");*/
+   background-position: center;
     display:inline-block;
     width:50%;
     height:100%;
 
 }
+
+.rightblock2 {
+    background-image: linear-gradient(34deg, rgba(67,149,90,1) 0%, rgba(197,226,100,1) 100%);
+    background-image: url("../images/portfolio-images/1.svg");
+    background-position: center;
+     display:inline-block;
+     width:50%;
+     height:100%;
+ 
+ }
+
+ .rightblock3 {
+    background: radial-gradient(circle, rgba(68,68,68,1) 0%, rgba(23,23,23,1) 100%);
+    /*background-image: url("../images/portfolio-images/1.svg");*/
+    background-position: center;
+     display:inline-block;
+     width:50%;
+     height:100%;
+ }
+
+ .rightblock4 {
+    background: radial-gradient(circle, rgba(68,68,68,1) 0%, rgba(23,23,23,1) 100%);
+    background-image: url("../images/portfolio-images/2.png");
+    background-position: center;
+     display:inline-block;
+     width:50%;
+     height:100%;
+ }
+
+ .rightblock5 {
+    background: radial-gradient(circle, rgba(68,68,68,1) 0%, rgba(23,23,23,1) 100%);
+    background-image: url("../images/portfolio-images/datacenterbg.png");
+    background-position: center;
+     display:inline-block;
+     width:50%;
+     height:100%;
+ }
+
+ .rightblock6 {
+    background: radial-gradient(circle, rgba(68,68,68,1) 0%, rgba(23,23,23,1) 100%);
+    background-image: url("../images/portfolio-images/personalproj.png");
+    background-position: center;
+     display:inline-block;
+     width:50%;
+     height:100%;
+ }
+ 
 
 .kitties {
     width:99%;
@@ -1247,6 +1300,7 @@ ul, ol {
   top: 50.5%;
   left: 49.5%;
   transform: translate(-50%,-50%);
+  max-width:550px;
 }
 
 
@@ -1303,7 +1357,40 @@ ul, ol {
     display: block;
     max-width: 100%;
     margin: 0 auto;
+}
+
+.project-one {
+       background-image: linear-gradient(34deg, rgba(67,149,90,1) 0%, rgba(197,226,100,1) 100%);
+}
+
+.project-two {
     background-image: linear-gradient(34deg, rgba(67,149,90,1) 0%, rgba(197,226,100,1) 100%);
+     background-image: url("../images/portfolio-images/1.svg");
+     background-position: center;
+}
+
+.project-three {
+    background: radial-gradient(circle, rgba(68,68,68,1) 0%, rgba(23,23,23,1) 100%);
+     /*background-image: url("../images/portfolio-images/1.svg");*/
+     background-position: center;
+}
+
+.project-four {
+    background: radial-gradient(circle, rgba(68,68,68,1) 0%, rgba(23,23,23,1) 100%);
+     background-image: url("../images/portfolio-images/2.png");
+     background-position: center;
+}
+
+.project-five {
+    background: radial-gradient(circle, rgba(68,68,68,1) 0%, rgba(23,23,23,1) 100%);
+     background-image: url("../images/portfolio-images/datacenterbg.png");
+     background-position: center;
+}
+
+.project-six {
+    background: radial-gradient(circle, rgba(68,68,68,1) 0%, rgba(23,23,23,1) 100%);
+     background-image: url("../images/portfolio-images/personalproj.png");
+     background-position: center;
 }
 
 .container:hover {
