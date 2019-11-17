@@ -12,6 +12,41 @@ body {
         visibility: hidden;
 }
 
+.project-card {
+    display:flex;
+    flex-grow:1;
+    height:350px;
+    width:100%;
+    margin-bottom:40px;
+    transition: all .2s ease-in-out 0s;
+   }
+   
+   .project-preview {
+     flex-basis:50%;
+     flex-shrink:0;
+     overflow:hidden;
+     position:relative;
+     background-color:lightgrey;
+   }
+   
+   .project-card .project-preview img {
+     position:absolute;
+     object-fit:cover;
+     width:100%;
+     height:100%;
+     }
+     
+     .project-card .project-description {
+         background-color:white;
+         padding:20px;
+         box-sizing: border-box;
+         display:block;
+         width:100%;
+
+     }
+     
+   
+
 
  .fadeIn {
         -webkit-animation: animat_show 0.8s;
@@ -1202,7 +1237,7 @@ ul, ol {
   text-align:center;
 }
 
-.featurecontainer:hover {
+.featurecontainer, .project-card:hover {
 	transform: translateY(-4px);
     -webkit-box-shadow: 0px 8px 28px 1px rgba(158,172,201,1);
     -moz-box-shadow: 0px 8px 28px 1px rgba(158,172,201,1);
@@ -1213,7 +1248,7 @@ ul, ol {
     -o-backface-visibility: hidden;
 }
 
-.featurecontainer:active {
+.featurecontainer, .project-card:active {
 	transform: translateY(0);
     box-shadow: 4px 4px 16px 4px rgba(0,0,0,.2);
     -backface-visibility: hidden;
@@ -1222,7 +1257,7 @@ ul, ol {
     -o-backface-visibility: hidden;
 }
 
-.featurecontainer:hover .overlay {
+.featurecontainer, .project-card:hover .overlay {
     opacity: 0.5;
     -backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -1748,6 +1783,12 @@ a.bottomlinks {
 }
 
 @media only screen and (max-width:700px) {
+
+    .featurecontainer, .project-card {
+        display:none;
+    
+    }
+
  .unequal-column {
     width:100%;
     }
@@ -1933,10 +1974,7 @@ ul, ol {
     display:block;
 }
 
-.featurecontainer {
-    display:none;
 
-}
 
 .column{
     float: none;
@@ -1945,12 +1983,7 @@ ul, ol {
     width: 100%;
 }
 
-.column2{
-    float: none;
-    margin: 2.5em auto;
-    margin-top:0px;
-    width: 100%;
-}
+
 
 .paragraph {
     font-size:16px;
@@ -1978,6 +2011,25 @@ ul, ol {
     }
     
 }
+
+@media only screen and (max-width: 700px){
+
+    .container1 {
+       width: 100%;
+        max-width:600px;
+       margin:25px auto;
+       position: relative;
+       overflow: hidden;
+    }
+
+    .column2{
+        float: none;
+        display:block;
+        margin: 2.5em auto;
+        margin-top:0px;
+        width: 100%;
+    }
+}    
 
 @media only screen and (max-width: 768px){
 
