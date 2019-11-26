@@ -191,7 +191,7 @@ body {
    border: 2px solid #DF5F96;
    background: #DF5F96;
    margin-top: 11px;
-   z-index: 9999;
+   z-index: 99;
 }
 
 .timeline-content {
