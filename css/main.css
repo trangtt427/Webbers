@@ -554,7 +554,18 @@ a {
     margin-top:20px;
     margin-bottom:0px;
     transition: all .4s ease-in-out 0s;
-    max-width:700px;
+    max-width:750px;
+}
+
+.blog-title {
+    line-height:1.2;
+    font-size: 40px;
+    font-weight:400;
+    color:#3a3a3a;
+    margin-top:20px;
+    margin-bottom:0px;
+    margin:auto;
+    transition: all .4s ease-in-out 0s;
 }
 
 .fortyspace {
@@ -674,6 +685,15 @@ p {
     font-size:17px;
     font-weight:300;
     margin:auto;
+}
+
+.blog-paragraph {
+    line-height:1.8;
+    color: #3a3a3a;
+    font-size:17px;
+    font-weight:300;
+    margin:auto;
+
 }
 
 .pre-paragraph {
@@ -927,6 +947,7 @@ img {
     font-size: 17px;
     margin-bottom: 0;
     text-align: left;
+    line-height:1.6;
 }
 
 .card-title {
@@ -960,6 +981,8 @@ img {
     font-weight:700;
     line-height: 1;
 }
+
+
 
 .card-type {
     color: #94959e;
@@ -1381,6 +1404,11 @@ ul, ol {
 
 .mainblock {
     max-width:1150px;
+    margin:auto;
+}
+
+.blogblock {
+    max-width:800px;
     margin:auto;
 }
 
@@ -1860,6 +1888,12 @@ a.bottomlinks {
     padding-bottom:0.25em;
 }
 
+.blog-title {
+    line-height:1.2;
+    font-size: 26px;
+    padding-bottom:0.25em;
+}
+
     .aboutlink {
     font-size:10px;
 
@@ -1896,6 +1930,14 @@ a.bottomlinks {
 }
 
 .project-paragraph {
+    line-height:1.8;
+    color: #3a3a3a;
+    font-size:16px;
+    font-weight:;
+
+}
+
+.blog-paragraph {
     line-height:1.8;
     color: #3a3a3a;
     font-size:16px;
