@@ -557,16 +557,6 @@ a {
     max-width:750px;
 }
 
-.blog-title {
-    line-height:1.2;
-    font-size: 40px;
-    font-weight:400;
-    color:#3a3a3a;
-    margin-top:20px;
-    margin-bottom:0px;
-    margin:auto;
-    transition: all .4s ease-in-out 0s;
-}
 
 .fortyspace {
     height:40px;
