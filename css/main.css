@@ -706,7 +706,7 @@ p {
     .headerintro {
    padding-top: 1em;
     color: #94959e;
-    font-size:15px;
+    font-size:17px;
     line-height:1.8;
     padding-bottom:5px;
    font-weight:300;
@@ -879,7 +879,7 @@ img {
 .process-p {
     margin-bottom:0px;
     line-height:1.8;
-    font-size:15px;
+    font-size:16px;
 }
 
 /**end timeline**/
@@ -1901,7 +1901,7 @@ a.bottomlinks {
 
     .headerintro {
     padding-top:0;
-    font-size:14px;
+    font-size:15px;
     font-weight:;
         padding-bottom:20px;
 }
