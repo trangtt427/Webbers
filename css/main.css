@@ -69,7 +69,7 @@ body {
 .namee {
     padding-top:1em;
     text-align: left;
-    font-size:17px;
+    font-size:18px;
 }
 
 
@@ -102,7 +102,7 @@ body {
 }
 
 .persona-text {
-    font-size:15px;
+    font-size:16px;
 }
 
 .profile-card .profile-body{
@@ -209,7 +209,7 @@ body {
 
 
 .timeline-content p {
-   font-size: 17px;
+   font-size: 18px;
    line-height: 2;
      color:#494c4c;
 }
@@ -293,7 +293,7 @@ body {
 }
 
 .timeline-content2 p {
-    font-size: 17px;
+    font-size: 18px;
    line-height: 2;
    color: #494c4c;
 
@@ -672,7 +672,7 @@ p {
 .project-paragraph {
     line-height:1.8;
     color: #3a3a3a;
-    font-size:17px;
+    font-size:18px;
     font-weight:300;
     margin:auto;
 }
@@ -680,7 +680,7 @@ p {
 .blog-paragraph {
     line-height:1.8;
     color: #3a3a3a;
-    font-size:17px;
+    font-size:18px;
     font-weight:300;
     margin:auto;
 
@@ -738,7 +738,7 @@ p {
     line-height:1.8;
     max-width:650px;
     color: #3a3a3a;
-    font-size:17px;
+    font-size:18px;
     font-weight:;
     }
 
@@ -934,7 +934,7 @@ img {
 }
 
 .card-box > .card-title {
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 0;
     text-align: left;
     line-height:1.6;
@@ -944,7 +944,7 @@ img {
     color: #3a3a3a;
     font-weight:400;
     margin:0;
-    font-size:17px;
+    font-size:18px;
 }
 
 .feature-card-title {
@@ -958,7 +958,7 @@ img {
 
 .feature-card-text {
     color: #94959e;
-    font-size:17px;
+    font-size:18px;
     font-weight:300;
     line-height:1.6;
     margin:0;
@@ -992,65 +992,7 @@ img {
     width:100%;
 }
 
-/* .my-x{
-    z-index:1;
-	margin-top:10px;
-}
 
-.x {
-    background-color:rgba(0,0,0,.45);
-    border: 0px solid #000;
-    border-radius:50px;
-    padding:10px;
-    z-index:1;
-    color:black;
-    position: fixed;
-    right: 17px;
-    top: 10px;
-    width: 10px;
-    height: 10px;
-    transition: transform .25s ease-in-out;
-}
-
-.x:hover {
-    transform: rotate(180deg);
-}
-
-.x:before {
-    content: "";
-    position: absolute;
-    display: block;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 16px;
-    height: 0;
-    border-top: 2px solid rgba(255,255,255,1);
-    border-radius:25px;
-    transform: rotate(45deg);
-    transform-origin: center;
-}
-
-.x:after {
-    content: "";
-    position: absolute;
-    display: block;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 16px;
-    height: 0;
-    border-top: 2px solid rgba(255,255,255,1);
-    border-radius:25px;
-    transform: rotate(-45deg);
-    transform-origin: center;
-}
-
-*/
 
 .digital-illustrations {
     background-image:url('../images/header-backgrounds/artwork.jpg');
@@ -1133,7 +1075,7 @@ ul, ol {
     margin:auto;
     line-height:1.8;
     color: #3a3a3a;
-    font-size:17px;
+    font-size:18px;
     font-weight:300;
      max-width:750px;
 }
@@ -1398,7 +1340,7 @@ ul, ol {
 }
 
 .blogblock {
-    max-width:800px;
+    max-width:750px;
     margin:auto;
 }
 
@@ -1489,7 +1431,7 @@ ul, ol {
     color: #555555;
     padding:15px 20px 15px 20px;
      font-weight:700;
-    font-size:17px;
+    font-size:18px;
 }
 
 @media only screen and (max-width: 950px){
@@ -1843,7 +1785,9 @@ a.bottomlinks {
 
 
 }
-
+.persona-text {
+    font-size:15px;
+}
 
 
 .header-text {
@@ -1916,7 +1860,7 @@ a.bottomlinks {
 
 
 .center-h1 {
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .project-paragraph {
@@ -1939,7 +1883,7 @@ a.bottomlinks {
 .pre-paragraph {
     line-height:1.8;
     color: #3a3a3a;
-    font-size:17px;
+    font-size:18px;
     font-weight:400;
     margin:auto;
 }
@@ -2114,16 +2058,16 @@ ul, ol {
 
 .timeline-h1 {
      font-weight:700;
-    font-size: 17px;
+    font-size: 18px;
     color:#494c4c;
     width:100%;
     max-width:800px;
     margin:auto;
 }
 
-.timeline2-h1 {persona
+.timeline2-h1 {
       font-weight:700;
-    font-size: 17px;
+    font-size: 18px;
     color:#494c4c;
     width:100%;
     max-width:800px;
