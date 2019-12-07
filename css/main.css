@@ -15,7 +15,7 @@ body {
 .project-card {
     display:flex;
     flex-grow:1;
-    height:350px;
+    height:325px;
     width:100%;
     margin-bottom:40px;
     transition: all .2s ease-in-out 0s;
@@ -958,7 +958,7 @@ img {
 
 .feature-card-text {
     color: #94959e;
-    font-size:18px;
+    font-size:17px;
     font-weight:300;
     line-height:1.6;
     margin:0;
