@@ -1019,6 +1019,7 @@ h1 {
 }
 
 .project-h1 {
+    font-family: "Merriweather";
      font-weight:400;
     line-height:1.8;
     font-size:30px;
@@ -1805,6 +1806,7 @@ a.bottomlinks {
 }
 
 .project-h1 {
+    font-family: "Merriweather";
     display:inline-block;
     font-size:24px;
     margin:auto;
@@ -1812,6 +1814,7 @@ a.bottomlinks {
 }
 
     .project-h2 {
+    font-family: "Merriweather";
     font-size:20px;
     color:#222328;
 
@@ -1822,6 +1825,7 @@ a.bottomlinks {
 }
 
 .homepage-title {
+    font-family: "Merriweather";
     line-height:1.2;
     font-size: 30px;
     padding-bottom:0.25em;
