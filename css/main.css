@@ -943,6 +943,7 @@ img {
 }
 
 .card-title {
+    font-family: "Merriweather";
     color: #222328;
     font-weight:400;
     margin:0;
