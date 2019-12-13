@@ -548,7 +548,7 @@ a {
 
 .homepage-title {
     font-family: "Merriweather";
-    line-height:1.2;
+    line-height:1.4;
     font-size: 48px;
     font-weight:700;
     color:#222328;
@@ -1827,7 +1827,6 @@ a.bottomlinks {
 
 .homepage-title {
     font-family: "Merriweather";
-    line-height:1.2;
     font-size: 30px;
     padding-bottom:0.25em;
 }
