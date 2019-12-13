@@ -939,7 +939,7 @@ img {
     font-size: 18px;
     margin-bottom: 0;
     text-align: left;
-    line-height:1.6;
+    line-height:1.4;
 }
 
 .card-title {
@@ -948,11 +948,12 @@ img {
     font-weight:400;
     margin:0;
     font-size:18px;
+    line-height:1.4;
 }
 
 .feature-card-title {
     font-family: "Merriweather";
-    line-height: 1.2;
+    line-height: 1.4;
     color: #222328;
     font-weight: 400;
     margin:0;
@@ -1804,6 +1805,10 @@ a.bottomlinks {
     color: #494c4c;
     font-size:14px;
     font-weight:;
+}
+
+.card-title {
+    font-size:16px;
 }
 
 .project-h1 {
