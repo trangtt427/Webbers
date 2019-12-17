@@ -1468,6 +1468,17 @@ ul, ol {
 
 }
 
+.maincontainer {
+    max-width:1150px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.footer-content {
+    display:flex;
+    justify-content: space-between;
+}
+
 @media only screen and (max-width: 950px){
 
 .column {
