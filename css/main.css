@@ -1004,7 +1004,7 @@ img {
 }
 
 /*header h1{*/
-    h1 {}
+    h1 {
     box-sizing:border-box;
     position:relative;
     width:100%;
