@@ -1452,31 +1452,9 @@ ul, ol {
 
 
 /* NEW FOOTER */
-
 .newfooter {
-    background-color:darkolivegreen;
-    color:white;
-    bottom:0;
-    left:0;
-    width:100%;
-    z-index:-1;
-    padding:25px 0;
-    font-size:14px;
-    font-weight:700;
-    margin-top:0;
+    background-color:grey;
     display:block;
-
-}
-
-.maincontainer {
-    max-width:1150px;
-    margin: 0 auto;
-    padding: 25px;
-}
-
-.footer-content {
-    display:flex;
-    justify-content: space-between;
 }
 
 @media only screen and (max-width: 950px){
