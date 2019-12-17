@@ -1537,7 +1537,6 @@ ul, ol {
 }
 
 .footermenu {
-    
     color: #757682;
     font-size:13px;
     font-weight:;
@@ -1750,7 +1749,6 @@ a.bottomlinks {
 
 .footer {
     position:block;
-    height:315px;
     background-color: #181819;
     text-align: center;
     margin-top:-20px;
