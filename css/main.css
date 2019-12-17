@@ -991,7 +991,7 @@ img {
 
 #project {
     margin:auto;
-    display:none;
+    display:block;
     background-color:white;
     height:100%;
     width:100%;
