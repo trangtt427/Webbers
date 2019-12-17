@@ -323,12 +323,17 @@ header.active {
 }
 
 header {
- 
+    position:relative;
+    display:block;
     background-color:white;
+    height: 60px;
+    position: fixed;
+    top: 0;
     transition: .5s;
   -moz-transition: .5s;
   -webkit-transition: .5s;
     width:100%;
+   /* z-index:9999;*/
     margin:auto;
     padding-left:25px;
     padding-right:25px;
@@ -999,12 +1004,12 @@ img {
     background: linear-gradient(200deg, #9ec3d4, #2e444f);
 }
 
-/*header h1{*/
-    h1 {
+header h1{
     box-sizing:border-box;
     position:relative;
     width:100%;
     left:0;
+   
     text-align: left;
     padding-top: 2.5em;
     margin:auto;
@@ -1869,11 +1874,14 @@ a.bottomlinks {
     position:relative;
     display:block;
     background-color:white;
+    height: 50px;
+    position: fixed;
+    top: 0;
     transition: .5s;
   -moz-transition: .5s;
   -webkit-transition: .5s;
     width:100%;
-    z-index:99;
+    /*z-index:99;*/
     margin:auto;
 }
 
