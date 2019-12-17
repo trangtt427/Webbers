@@ -993,6 +993,7 @@ img {
     margin:auto;
     display:none;
     background-color:white;
+    height:100%;
     width:100%;
 }
 
