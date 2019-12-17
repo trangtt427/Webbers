@@ -333,7 +333,7 @@ header {
   -moz-transition: .5s;
   -webkit-transition: .5s;
     width:100%;
-   /* z-index:9999;*/
+    z-index:9999;
     margin:auto;
     padding-left:25px;
     padding-right:25px;
@@ -991,7 +991,7 @@ img {
 
 #project {
     margin:auto;
-    display:block;
+    display:none;
     background-color:white;
     height:100%;
     width:100%;
@@ -1004,14 +1004,12 @@ img {
     background: linear-gradient(200deg, #9ec3d4, #2e444f);
 }
 
-
-
-/*header h1*/
-h1{
+header h1{
     box-sizing:border-box;
     position:relative;
     width:100%;
     left:0;
+    top:-60px;
     text-align: left;
     padding-top: 2.5em;
     margin:auto;
@@ -1883,7 +1881,7 @@ a.bottomlinks {
   -moz-transition: .5s;
   -webkit-transition: .5s;
     width:100%;
-    /*z-index:99;*/
+    z-index:99;
     margin:auto;
 }
 
