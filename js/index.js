@@ -38,7 +38,7 @@ $(document).ready(function() {
       hasScrolled();
       didScroll = false;
     }
-  }, 50);
+  }, 250);
 
   function hasScrolled() {
     var st = $(this).scrollTop();
