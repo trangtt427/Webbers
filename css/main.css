@@ -1873,9 +1873,6 @@ a.bottomlinks {
     position:relative;
     display:block;
     background-color:white;
-    height: 50px;
-    position: fixed;
-    top: 0;
     transition: .5s;
   -moz-transition: .5s;
   -webkit-transition: .5s;
