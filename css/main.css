@@ -1453,8 +1453,19 @@ ul, ol {
 
 /* NEW FOOTER */
 
-.footerprojects {
-    
+.newfooter {
+    background-color:darkolivegreen;
+    color:white;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:-1;
+    padding:25px 0;
+    font-size:14px;
+    font-weight:700;
+    margin-top:0;
+    display:block;
+
 }
 
 @media only screen and (max-width: 950px){
