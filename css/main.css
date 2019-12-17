@@ -1347,6 +1347,14 @@ ul, ol {
     margin:auto;
 }
 
+.footerblock {
+    width:100%;
+    color:blue;
+    margin:auto;
+    display:block;
+    position:relative;
+}
+
 .blogblock {
     max-width:750px;
     margin:auto;
