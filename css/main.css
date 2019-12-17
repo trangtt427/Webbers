@@ -1528,10 +1528,11 @@ ul, ol {
     margin-top:-20px;
     padding-left:25px;
     padding-right:25px;
+    height:205px;
 }
 
 .linksncopy {
-   /* float:right;*/
+   float:right;
     display:inline-block;
     position:relative;
     margin:auto;
@@ -1544,6 +1545,7 @@ ul, ol {
 }
 
 .footermenu {
+    float:left;
     color: #757682;
     font-size:13px;
     font-weight:;
@@ -1755,6 +1757,7 @@ a.bottomlinks {
 }
 
 .footer {
+    height:315px;
     position:block;
     background-color: #181819;
     text-align: center;
