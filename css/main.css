@@ -1454,6 +1454,7 @@ ul, ol {
 /* NEW FOOTER */
 .newfooter {
     background-color:grey;
+    width:100%;
     display:block;
 }
 
