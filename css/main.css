@@ -328,7 +328,6 @@ header {
     background-color:white;
     height: 60px;
     position: fixed;
-    top: 0;
     transition: .5s;
   -moz-transition: .5s;
   -webkit-transition: .5s;
