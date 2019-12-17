@@ -1003,12 +1003,12 @@ img {
     background: linear-gradient(200deg, #9ec3d4, #2e444f);
 }
 
-header h1{
+/*header h1{*/
+    h1 {}
     box-sizing:border-box;
     position:relative;
     width:100%;
     left:0;
-   
     text-align: left;
     padding-top: 2.5em;
     margin:auto;
