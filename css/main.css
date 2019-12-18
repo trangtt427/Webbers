@@ -1729,17 +1729,7 @@ a.bottomlinks {
   opacity: 0;
     animation: fadeInUp 0.5s ease-in-out 0s forwards;}
 
-.first
-{
 
-  opacity: 0;
-    animation: fadeInUpHome 1s ease-in-out 0s forwards;}
-
-.second
-{
-
-  opacity: 0;
-    animation: fadeInUpHome 1s ease-in-out 0s forwards;}
 
 @media screen and (max-width:600px) {
 
