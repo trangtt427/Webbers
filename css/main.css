@@ -666,15 +666,16 @@ p {
     color: #222328;
     font-size:18px;
     font-weight:300;
-    max-width:750px;
+    max-width:600px;
     }
 
 
 .project-paragraph {
     line-height:1.8;
-    color: #222328;
+    color: #555555;
     font-size:18px;
     font-weight:300;
+    max-width:600px;
     margin:auto;
 }
 
@@ -694,6 +695,7 @@ p {
     font-size:20px;
     font-weight:700;
     margin:auto;
+    max-width:600px;
 }
 
 .subhead {
@@ -707,7 +709,7 @@ p {
 
     .headerintro {
    padding-top: 1em;
-    color: #94959e;
+   color: #555555;
     font-size:17px;
     line-height:1.8;
     padding-bottom:5px;
@@ -731,6 +733,7 @@ p {
     font-weight:;
     margin:auto;
     padding-top:5px;
+    text-align:center;
 
 }
 
@@ -962,7 +965,7 @@ img {
 }
 
 .feature-card-text {
-    color: #94959e;
+    color: #757682;
     font-size:17px;
     font-weight:300;
     line-height:1.6;
@@ -980,7 +983,7 @@ img {
 
 
 .card-type {
-    color: #94959e;
+    color: #757682;
     line-height:1.8;
     font-size:13px;
     font-weight:300;
@@ -1033,7 +1036,7 @@ h1 {
 }
 
 .project-h2 {
-    font-family:"Merriweather";
+   /* font-family:"Merriweather";
      font-weight:700;
     line-height:1.8;
     font-size:24px;
@@ -1041,6 +1044,18 @@ h1 {
     width:100%;
     margin:auto;
     transition: all .4s ease-in-out 0s;
+    text-align:right;*/
+    font-family:"Proxima Nova";
+     font-weight:300;
+    line-height:1.8;
+    font-size:15px;
+    color:#757682;
+    width:100%;
+    margin:auto;
+    transition: all .4s ease-in-out 0s;
+    text-align:right;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
 
 }
 
@@ -1828,9 +1843,9 @@ a.bottomlinks {
 }
 
     .project-h2 {
-    font-family: "Merriweather";
-    font-size:20px;
-    color:#222328;
+    font-size:14px;
+    text-align:left;
+    max-width:600px;
 
 }
 
@@ -1887,7 +1902,7 @@ a.bottomlinks {
 
 .project-paragraph {
     line-height:1.8;
-    color: #222328;
+    color: #555555;
     font-size:16px;
     font-weight:;
 
@@ -1895,7 +1910,7 @@ a.bottomlinks {
 
 .blog-paragraph {
     line-height:1.8;
-    color: #222328;
+    color: #555555;
     font-size:16px;
     font-weight:;
 
