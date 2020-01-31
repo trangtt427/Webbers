@@ -664,7 +664,7 @@ p {
 
 .paragraph {
     line-height:1.8;
-    color: #222328;
+    color: #555555;
     font-size:18px;
     font-weight:300;
     max-width:600px;
@@ -682,10 +682,11 @@ p {
 
 .blog-paragraph {
     line-height:1.8;
-    color: #222328;
+    color: #555555;
     font-size:18px;
     font-weight:300;
     margin:auto;
+    max-width:650px;
 
 }
 
@@ -697,6 +698,35 @@ p {
     font-weight:700;
     margin:auto;
     max-width:600px;
+}
+
+.blog-pre-paragraph {
+    font-family: "Merriweather";
+    line-height:1.8;
+    color: #222328;
+    font-size:20px;
+    font-weight:700;
+    margin:auto;
+    max-width:650px;
+}
+
+.blog-headline {
+    font-family: "Merriweather";
+    line-height:1.8;
+    color: #222328;
+    font-size:20px;
+    font-weight:700;
+    margin:auto;
+}
+
+.major-section {
+    font-family: "Merriweather";
+    line-height:1.8;
+    color: #222328;
+    font-size:24px;
+    font-weight:700;
+    margin:auto;
+    max-width:650px;
 }
 
 .subhead {
@@ -1901,15 +1931,7 @@ a.bottomlinks {
     font-size: 18px;
 }
 
-.project-paragraph {
-    line-height:1.8;
-    color: #555555;
-    font-size:16px;
-    font-weight:;
-
-}
-
-.blog-paragraph {
+.project-paragraph, .blog-paragraph {
     line-height:1.8;
     color: #555555;
     font-size:16px;
@@ -1918,10 +1940,23 @@ a.bottomlinks {
 }
 
 
-.pre-paragraph {
+.pre-paragraph, .blog-pre-paragraph {
     line-height:1.8;
     color: #222328;
     font-size:18px;
+    font-weight:700;
+    margin:auto;
+}
+
+
+.blog-headline {
+    font-size:18px;
+}
+
+.major-section {
+    line-height:1.8;
+    color: #222328;
+    font-size:22px;
     font-weight:700;
     margin:auto;
 }
