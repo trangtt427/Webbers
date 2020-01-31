@@ -103,6 +103,7 @@ body {
 
 .persona-text {
     font-size:16px;
+    color: #555555;
 }
 
 .profile-card .profile-body{
@@ -985,7 +986,7 @@ img {
 .card-type {
     color: #757682;
     line-height:1.8;
-    font-size:13px;
+    font-size:15px;
     font-weight:300;
     margin-top: 5px;
     margin-bottom:0px;
@@ -1096,10 +1097,10 @@ h1 {
 ul, ol {
     margin:auto;
     line-height:1.8;
-    color: #222328;
+    color: #555555;
     font-size:18px;
     font-weight:300;
-     max-width:750px;
+     max-width:600px;
 }
 
 .wrapper {
