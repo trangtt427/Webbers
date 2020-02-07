@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="275px" height="45px" viewBox="0 0 275 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>Group 7</title>
+    <title>Group 2</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="20.3970609%" y1="48.3870194%" x2="62.9658168%" y2="50.7419595%" id="linearGradient-1">
@@ -26,8 +26,8 @@
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-7" fill-rule="nonzero">
-            <g id="Group-6-Copy-2" opacity="0.5">
+        <g id="Group-2" fill-rule="nonzero">
+            <g id="Group-6-Copy-2" fill-opacity="0.5">
                 <g id="Group-5" transform="translate(0.000000, 6.000000)">
                     <g id="Group" transform="translate(0.000000, 0.025127)">
                         <path d="M36.1568627,13.1490119 C31.6705882,5.98102767 19.7019608,0.215810277 15.3098039,0.123320158 C13.427451,4.02332016 13.3176471,17.1106719 17.8196078,24.2632411 C17.8352941,24.2786561 17.8509804,24.3094862 17.8666667,24.3249012 C17.8823529,24.3403162 17.8980392,24.3711462 17.9137255,24.4019763 C22.4156863,31.5545455 34.3686275,37.3351779 38.7607843,37.412253 C40.6431373,33.512253 40.7529412,20.4249012 36.2509804,13.272332 C36.2352941,13.256917 36.2196078,13.226087 36.2039216,13.2106719 C36.1882353,13.1952569 36.172549,13.1644269 36.1568627,13.1490119 Z" id="Path" fill="url(#linearGradient-1)"></path>
