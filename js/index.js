@@ -23,48 +23,6 @@ $(document).ready(function() {
     $("html, body").animate({ scrollTop: 0 }, 1100);
   });
 
-  // Hide Header on on scroll down
-  var didScroll;
-  var lastScrollTop = 0;
-  var delta = 5;
-  var navbarHeight = $("header").outerHeight();
-
-  $(window).scroll(function(event) {
-    didScroll = true;
-  });
-
-  setInterval(function() {
-    if (didScroll) {
-      hasScrolled();
-      didScroll = false;
-    }
-  }, 250);
-
-  function hasScrolled() {
-    var st = $(this).scrollTop();
-
-    // Make sure they scroll more than delta
-    if (Math.abs(lastScrollTop - st) <= delta) return;
-
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight) {
-      // Scroll Down
-      $("header")
-        .removeClass("nav-down")
-        .addClass("nav-up");
-    } else {
-      // Scroll Up
-      if (st + $(window).height() < $(document).height()) {
-        $("header")
-          .removeClass("nav-up")
-          .addClass("nav-down");
-      }
-    }
-
-    lastScrollTop = st;
-  }
-
   var $document = $(document),
     $element = $("header"),
     className = "box-shadow";
@@ -90,6 +48,27 @@ $(document).ready(function() {
   }
 });
 
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $(".myImg");
+var modalImg = $("#img01");
+var captionText = document.getElementById("caption");
+$(".myImg").click(function() {
+  modal.style.display = "block";
+  var newSrc = this.src;
+  modalImg.attr("src", newSrc);
+  captionText.innerHTML = this.alt;
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+myModal.onclick = function() {
+  modal.style.display = "none";
+};
 // Fade bio pictures in
 function showImages(el) {
   var windowHeight = jQuery(window).height();
@@ -118,6 +97,17 @@ $(window).scroll(function() {
 $(window).load(function() {
   // Animate loader off screen
   $(".se-pre-con").fadeOut("slow");
+});
+
+//hamburger
+
+$(document).ready(function() {
+  $("#nav-icon").click(function() {
+    $(this).toggleClass("open");
+    $(".hamoverlay").toggleClass("open");
+    $(".hamoverlay a").toggleClass("open");
+    $(".hamoverlay p").toggleClass("open");
+  });
 });
 
 //replace blurry images
