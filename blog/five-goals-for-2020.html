@@ -18,44 +18,42 @@
   />
 
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-135452467-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-135452467-1");
-    </script>
+    
     <script src="../js/prompt.js"></script>
 
-    <meta
-      name="google-site-verification"
-      content="MKEfY8QjzJxGIh-v2fcMFGf9E5u01wOeteQKoN9gYTk"
-    />
+    
   </head>
 
   <body id="project" class="animate-in">
     <header class="header nav-down">
       <div class="headcontain">
         <div class="linkthing">
-          <a href="http://trangerthings.com"
-            ><img src="../images/lotus.svg"
-          /></a>
+          <p>Trang Tran</p>
+          <a href="http://trangerthings.com"><img src="images/lotus.svg"/></a>
         </div>
-        <div class="navguys">
+
+        <div class="right-ham hideme2">
+          <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="hamoverlay">
+            <div class="overlayContent">
+              <a href="http://www.trangerthings.com" id="">Work</a>
+              <a href="blog" id="">Blog</a>
+              <a href="biography" id="">About</a>
+            </div>
+          </div>
+        </div>
+        <div class="navguys hide">
           <div class="aboutlink">
-            <a href="http://trangerthings.com" class="">Work</a>
+            <a href="http://www.trangerthings.com">Work</a>
           </div>
           <div class="aboutlink">
-            <a href="../blog">Blog</a>
+            <a href="blog">Blog</a>
           </div>
-          <div class="aboutlink"><a href="../biography">About</a></div>
+          <div class="aboutlink"><a href="biography">About</a></div>
         </div>
       </div>
     </header>
@@ -157,67 +155,13 @@
         <!--<span class="goto-top top"></span>-->
         <div class="footer">
           <div class="footerbg">
-            <div class="footermenu">
-              <div class="projectlinkthing">
-                <a
-                  href="../controlco-iot-web-app"
-                  class="bottomlink footertextlink"
-                  >Controlco: IoT Web App</a
-                >
-              </div>
-              <div class="projectlinkthing">
-                <a
-                  href="../incorta-data-file-directory"
-                  class="bottomlink footertextlink"
-                  >Incorta: Data File Directory</a
-                >
-              </div>
-              <div class="projectlinkthing">
-                <a
-                  href="../incorta-design-library"
-                  class="bottomlink footertextlink"
-                  >Incorta: Design Library</a
-                >
-              </div>
-              <div class="projectlinkthing">
-                <a href="../incorta-dark-mode" class="bottomlink footertextlink"
-                  >Incorta: Dark Mode</a
-                >
-              </div>
-              <div class="projectlinkthing">
-                <a
-                  href="../bio-rad-marcom-designs"
-                  class="bottomlink footertextlink"
-                  >Bio-Rad: Marcom Designs</a
-                >
-              </div>
-               <div class="projectlinkthing">
-                <a
-                  href="../fluppy-cat-mobile-game"
-                  class="bottomlink footertextlink"
-                  >Fluppy Cat Mobile Game</a
-                >
-              </div>
-              <div class="projectlinkthing">
-                <a
-                  href="../controlco-energy-dashboard"
-                  class="bottomlink footertextlink"
-                  >Controlco: Energy Dashboard</a
-                >
-              </div>
-              <div class="projectlinkthing">
-                <a href="../illustrations" class="bottomlink footertextlink"
-                  >Illustrations</a
-                >
-              </div>
-            </div>
-
+            <div class="bottom_line"></div>
             <div class="linksncopy">
               <div class="copyright">
                 © 2020 <a href="http://www.trangerthings.com">Trangerthings</a
-                ><br />Designed and built by yours truly
+                ><br />Made from scratch with my atrocious code
               </div>
-
+  
               <div class="sociallinks">
                 <a
                   href="https://www.behance.net/trangerthings"
@@ -225,7 +169,7 @@
                   class="bottomlinks"
                   ><img
                     class="footersvg"
-                    src="../behanceround.svg"
+                    src="behanceround.svg"
                     alt="Behance"/></a
                 ><a
                   href="https://www.linkedin.com/in/trangerthings/"
@@ -233,17 +177,34 @@
                   class="bottomlinks"
                   ><img
                     class="footersvg"
-                    src="../linkedinround.svg"
+                    src="linkedinround.svg"
                     alt="LinkedIn"/></a
                 ><a
                   href="mailto:trangtt427@gmail.com?subject=I'm Here To Talk About Cats. And Maybe Design."
                   class="bottomlinks"
-                  ><img class="footersvg" src="../emailround.svg" alt="Email"
+                  ><img class="footersvg" src="emailround.svg" alt="Email"
                 /></a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+  
+      <!-- The Modal juujjjujujujujjuj-->
+      <div id="myModal" class="modal">
+        <!-- The Close Button -->
+  
+        <span
+          class="close"
+          onclick="document.getElementById('myModal').style.display='none'"
+          >&times;</span
+        >
+  
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+  
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01" />
       </div>
   </body>
 </html>

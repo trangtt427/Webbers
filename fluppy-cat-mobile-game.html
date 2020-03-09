@@ -10,7 +10,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
     <link
-      href="https://fonts.googleapis.com/css?family=Merriweather:700,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
@@ -25,7 +25,22 @@
           <p>Trang Tran</p>
           <a href="http://trangerthings.com"><img src="images/lotus.svg"/></a>
         </div>
-        <div class="navguys">
+
+        <div class="right-ham hideme2">
+          <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="hamoverlay">
+            <div class="overlayContent">
+              <a href="http://www.trangerthings.com" id="">Work</a>
+              <a href="blog" id="">Blog</a>
+              <a href="biography" id="">About</a>
+            </div>
+          </div>
+        </div>
+        <div class="navguys hide">
           <div class="aboutlink">
             <a href="http://www.trangerthings.com">Work</a>
           </div>
@@ -36,10 +51,6 @@
         </div>
       </div>
     </header>
-
-    <!-- <a href="http://trangerthings.com" class="x">
-<i class="fa fa-plus my-x"></i>
-</a>-->
 
     <div class="fullblock extraspacetop">
       <div class="main">
@@ -92,7 +103,8 @@
                 experimenting with addicting mobile games, we were inspired to
                 make our own. We were particularly influenced by Flappy Bird and
                 Doodle Jump because we enjoyed the simple gameplay and whimsical
-                visuals. I've been wanting to work on mobile devices for a while now.
+                visuals. I've been wanting to work on mobile devices for a while
+                now.
               </p>
             </div>
           </div>
@@ -114,7 +126,9 @@
             <div class="unequal-column section-middle"></div>
             <div class="unequal-column section-right">
               <p class="project-paragraph spacebottom">
-                I was the visual and UX designer for this app, creating all the assets and working out the interactions. I worked with one other developer.
+                I was the visual and UX designer for this app, creating all the
+                assets and working out the interactions. I worked with one other
+                developer.
               </p>
             </div>
           </div>
@@ -221,7 +235,9 @@
               </p>
 
               <p class="project-paragraph spacetop spacebottom">
-                We did some whiteboard doodling and brainstormed how the objects would look. We agreed on the sketches and using Photoshop and Illustrator, I created the high fidelity versions.
+                We did some whiteboard doodling and brainstormed how the objects
+                would look. We agreed on the sketches and using Photoshop and
+                Illustrator, I created the high fidelity versions.
               </p>
 
               <img src="images/fluppy-cat/designs.png" />
@@ -257,14 +273,14 @@
                 Testing Fluppy Cat with friends and colleagues
               </p>
               <p class="project-paragraph spacebottom">
-                Using Xcode, the game was developed using the assets we
-                put together. We even got the sound bit of the chime whenever
-                Pibby collects a fish orb. We installed it on both our iPhones
-                (6 and 7S) to test it out. There was also an incredible lag
-                during the gameplay. It turns out that the the lag was caused by
-                the spike shapes. Triangles are difficult to generate and tend
-                to take longer to load. I realized that it was also difficult to
-                see the sharp points of the the tapered columns, making the game
+                Using Xcode, the game was developed using the assets we put
+                together. We even got the sound bit of the chime whenever Pibby
+                collects a fish orb. We installed it on both our iPhones (6 and
+                7S) to test it out. There was also an incredible lag during the
+                gameplay. It turns out that the the lag was caused by the spike
+                shapes. Triangles are difficult to generate and tend to take
+                longer to load. I realized that it was also difficult to see the
+                sharp points of the the tapered columns, making the game
                 extremely hard. It was back to the drawing board to come up with
                 a new idea.
               </p>
@@ -370,90 +386,60 @@
         <script src="js/index.js"></script>
       </div>
     </div>
-    <div class="bottomstuffs ">
-    <!--<span class="goto-top top"></span>-->
-    <div class="footer">
-      <div class="footerbg">
-        <div class="footermenu">
-          <div class="projectlinkthing">
-            <a href="controlco-iot-web-app" class="bottomlink footertextlink"
-              >Controlco: IoT Web App</a
-            >
-          </div>
-          <div class="projectlinkthing">
-            <a
-              href="incorta-data-file-directory"
-              class="bottomlink footertextlink"
-              >Incorta: Data File Directory</a
-            >
-          </div>
-          <div class="projectlinkthing">
-            <a
-              href="incorta-design-library"
-              class="bottomlink footertextlink"
-              >Incorta: Design Library</a
-            >
-          </div>
-          <div class="projectlinkthing">
-            <a href="incorta-dark-mode" class="bottomlink footertextlink"
-              >Incorta: Dark Mode</a
-            >
-          </div>
-          <div class="projectlinkthing">
-            <a href="bio-rad-marcom-designs" class="bottomlink footertextlink"
-              >Bio-Rad: Marcom Designs</a
-            >
-          </div>
-          <div class="projectlinkthing">
-            <a
-              href="fluppy-cat-mobile-game"
-              class="bottomlink footertextlink highlight-footer"
-              >Fluppy Cat Mobile Game</a
-            >
-          </div>
-          <div class="projectlinkthing">
-            <a
-              href="controlco-energy-dashboard"
-              class="bottomlink footertextlink"
-              >Controlco: Energy Dashboard</a
-            >
-          </div>
-          <div class="projectlinkthing">
-            <a href="illustrations" class="bottomlink footertextlink"
-              >Illustrations</a
-            >
-          </div>
-        </div>
+    <div class="bottomstuffs">
+      <!--<span class="goto-top top"></span>-->
+      <div class="footer">
+        <div class="footerbg">
+          <div class="bottom_line"></div>
+          <div class="linksncopy">
+            <div class="copyright">
+              © 2020 <a href="http://www.trangerthings.com">Trangerthings</a
+              ><br />Made from scratch with my atrocious code
+            </div>
 
-        <div class="linksncopy">
-          <div class="copyright">
-            © 2020 <a href="http://www.trangerthings.com">Trangerthings</a
-            ><br />Designed and built by yours truly
-          </div>
-
-          <div class="sociallinks">
-            <a
-              href="https://www.behance.net/trangerthings"
-              target="_blank"
-              class="bottomlinks"
-              ><img class="footersvg" src="behanceround.svg" alt="Behance"/></a
-            ><a
-              href="https://www.linkedin.com/in/trangerthings/"
-              target="_blank"
-              class="bottomlinks"
-              ><img
-                class="footersvg"
-                src="linkedinround.svg"
-                alt="LinkedIn"/></a
-            ><a
-              href="mailto:trangtt427@gmail.com?subject=I'm Here To Talk About Cats. And Maybe Design."
-              class="bottomlinks"
-              ><img class="footersvg" src="emailround.svg" alt="Email"
-            /></a>
+            <div class="sociallinks">
+              <a
+                href="https://www.behance.net/trangerthings"
+                target="_blank"
+                class="bottomlinks"
+                ><img
+                  class="footersvg"
+                  src="behanceround.svg"
+                  alt="Behance"/></a
+              ><a
+                href="https://www.linkedin.com/in/trangerthings/"
+                target="_blank"
+                class="bottomlinks"
+                ><img
+                  class="footersvg"
+                  src="linkedinround.svg"
+                  alt="LinkedIn"/></a
+              ><a
+                href="mailto:trangtt427@gmail.com?subject=I'm Here To Talk About Cats. And Maybe Design."
+                class="bottomlinks"
+                ><img class="footersvg" src="emailround.svg" alt="Email"
+              /></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    </body>
+
+    <!-- The Modal juujjjujujujujjuj-->
+    <div id="myModal" class="modal">
+      <!-- The Close Button -->
+
+      <span
+        class="close"
+        onclick="document.getElementById('myModal').style.display='none'"
+        >&times;</span
+      >
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01" />
+    </div>
   </body>
 </html>

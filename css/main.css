@@ -1512,7 +1512,7 @@ h1 {
     width:100%;
     margin:auto;
     transition: all .4s ease-in-out 0s;
-    text-align:right;
+    text-align:left;
     text-transform:uppercase;
     letter-spacing:1.5px;
 
