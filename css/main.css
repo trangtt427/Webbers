@@ -1110,7 +1110,7 @@ p {
 }
 
 .pre-paragraph {
-    font-family: "Merriweather";
+    font-family: 'Noto Serif', serif;
     line-height:1.8;
     color: #222328;
     font-size:20px;
@@ -1120,7 +1120,7 @@ p {
 }
 
 .blog-pre-paragraph {
-    font-family: "Merriweather";
+    font-family: 'Noto Serif', serif;
     line-height:1.8;
     color: #222328;
     font-size:20px;
@@ -1130,7 +1130,7 @@ p {
 }
 
 .blog-headline {
-    font-family: "Merriweather";
+    font-family: 'Noto Serif', serif;
     line-height:1.8;
     color: #222328;
     font-size:20px;
@@ -1139,7 +1139,7 @@ p {
 }
 
 .major-section {
-    font-family: "Merriweather";
+    font-family: 'Noto Serif', serif;
     line-height:1.8;
     color: #222328;
     font-size:24px;
@@ -1149,7 +1149,7 @@ p {
 }
 
 .about-major-section {
-    font-family: "Merriweather";
+    font-family: 'Noto Serif', serif;
     line-height:1.8;
     color: #222328;
     font-size:24px;
@@ -1483,7 +1483,7 @@ h1 {
 }
 
 .project-h1 {
-    font-family: "Merriweather";
+    font-family: 'Noto Serif', serif;
      font-weight:400;
     line-height:1.8;
     font-size:30px;
@@ -2275,7 +2275,7 @@ a.bottomlinks {
 }
 
 .project-h1 {
-    font-family: "Merriweather";
+    font-family: 'Noto Serif', serif;
     display:inline-block;
     font-size:24px;
     margin:auto;
