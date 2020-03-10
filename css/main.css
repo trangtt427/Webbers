@@ -1113,7 +1113,7 @@ p {
     font-family: 'Source Serif Pro', serif;
     line-height:1.8;
     color: #222328;
-    font-size:20px;
+    font-size:22px;
     font-weight:700;
     margin:auto;
     max-width:600px;
@@ -1123,7 +1123,7 @@ p {
     font-family: 'Source Serif Pro', serif;
     line-height:1.8;
     color: #222328;
-    font-size:20px;
+    font-size:22px;
     font-weight:700;
     margin:auto;
     max-width:650px;
@@ -2270,9 +2270,6 @@ a.bottomlinks {
     font-weight:;
 }
 
-.card-title {
-    font-size:20px;
-}
 
 .project-h1 {
     font-family: 'Source Serif Pro', serif;
@@ -2348,7 +2345,7 @@ a.bottomlinks {
 .pre-paragraph, .blog-pre-paragraph {
     line-height:1.8;
     color: #222328;
-    font-size:18px;
+    font-size:20px;
     font-weight:700;
     margin:auto;
 }
