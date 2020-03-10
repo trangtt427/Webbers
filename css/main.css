@@ -404,9 +404,7 @@ body {
 
 /*hamburger*/
 
-.card-title {
-    font-size:20px;
-}
+
 
 .nav {
     width: 100%;
@@ -1411,7 +1409,7 @@ img {
     color: #222328;
     font-weight:400;
     margin:0;
-    font-size:22px;
+    font-size:20px;
     line-height:1.6;
 }
 
