@@ -558,7 +558,7 @@ body {
   }
   
   .hamoverlay a {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     color: white;
     font-size: 30px;
     text-decoration: none;
@@ -707,8 +707,8 @@ header.active {
     font-size:0;
     max-width:1150px;
     margin:auto;
-    padding-top:12px;
-    padding-bottom:5px;
+    padding-top:9px;
+
 }
 
 .navguys {
@@ -948,7 +948,7 @@ a {
 }
 
 .homepage-title {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     line-height:1.4;
     font-size: 48px;
     font-weight:700;
@@ -1110,7 +1110,7 @@ p {
 }
 
 .pre-paragraph {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     line-height:1.8;
     color: #222328;
     font-size:20px;
@@ -1120,7 +1120,7 @@ p {
 }
 
 .blog-pre-paragraph {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     line-height:1.8;
     color: #222328;
     font-size:20px;
@@ -1130,7 +1130,7 @@ p {
 }
 
 .blog-headline {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     line-height:1.8;
     color: #222328;
     font-size:20px;
@@ -1139,7 +1139,7 @@ p {
 }
 
 .major-section {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     line-height:1.8;
     color: #222328;
     font-size:24px;
@@ -1149,7 +1149,7 @@ p {
 }
 
 .about-major-section {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     line-height:1.8;
     color: #222328;
     font-size:24px;
@@ -1404,7 +1404,7 @@ img {
 }
 
 .card-title {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     color: #222328;
     font-weight:400;
     margin:0;
@@ -1413,7 +1413,7 @@ img {
 }
 
 .feature-card-title {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     line-height: 1.6;
     font-size:26px;
     color: #222328;
@@ -1483,7 +1483,7 @@ h1 {
 }
 
 .project-h1 {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
      font-weight:400;
     line-height:1.8;
     font-size:30px;
@@ -2275,7 +2275,7 @@ a.bottomlinks {
 }
 
 .project-h1 {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     display:inline-block;
     font-size:24px;
     margin:auto;
@@ -2294,7 +2294,7 @@ a.bottomlinks {
 }
 
 .homepage-title {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Source Serif Pro', serif;
     font-size: 30px;
     padding-bottom:0.25em;
 }
