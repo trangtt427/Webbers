@@ -773,6 +773,8 @@ a {
     text-decoration: none;
     color: palevioletred;
     font-weight:300;
+    -webkit-tap-highlight-color: transparent;
+        
 }
 
 .aboutlink > a {
