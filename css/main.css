@@ -2001,6 +2001,16 @@ ul, ol {
     margin-top:-20px;
     padding-left:25px;
     padding-right:25px;
+    height:282px;
+    text-align:left;
+}
+
+.greypagefooter {
+    position:block;
+    background-color: #ffffff;
+    margin-top:-20px;
+    padding-left:25px;
+    padding-right:25px;
     height:225px;
     text-align:left;
 }
