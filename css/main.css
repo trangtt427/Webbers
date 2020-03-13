@@ -385,12 +385,12 @@ span {
 
 
 .close {
-    position: absolute;
+   position: absolute;
     top: 15px;
     right: 25px;
     color: #f1f1f1;
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 300;
     transition: 0.3s;
 
 }
