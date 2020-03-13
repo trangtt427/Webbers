@@ -2,7 +2,7 @@
 
 
 body {
-    font-family: 'Proxima Nova', Georgia, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     margin:0;
     -webkit-font-smoothing: subpixel-antialiased; /* antialiased | subpixel-antialiased | none */
 }
@@ -104,7 +104,7 @@ body {
 
 .persona-text {
     font-size:16px;
-    color: #555555;
+    color: #222328;
 }
 
 .profile-card .profile-body{
@@ -564,7 +564,7 @@ body {
   }
   
   .hamoverlay a {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     color: white;
     font-size: 30px;
     text-decoration: none;
@@ -776,7 +776,7 @@ header {
 a {
     text-decoration: none;
     color: palevioletred;
-    font-weight:300;
+    font: weight 400;
     -webkit-tap-highlight-color: transparent;
         
 }
@@ -787,7 +787,7 @@ a {
 }
 
 .aboutlink  {
-    font-weight:300;
+    font-weight:400;
     letter-spacing:1px;
     font-size:13px;
     text-transform: uppercase;
@@ -956,7 +956,7 @@ a {
 }
 
 .homepage-title {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     line-height:1.4;
     font-size: 48px;
     font-weight:700;
@@ -1083,42 +1083,42 @@ p {
 
 .paragraph {
     line-height:1.8;
-    color: #555555;
-    font-size:18px;
-    font-weight:300;
+    color: #222328;
+    font-size:17px;
+    font-weight:400;
     max-width:600px;
     }
 
 
 .project-paragraph {
     line-height:1.8;
-    color: #555555;
-    font-size:18px;
-    font-weight:300;
+    color: #222328;
+    font-size:17px;
+    font-weight:400;
     max-width:600px;
     margin:auto;
 }
 
 .about-paragraph {
     line-height:1.8;
-    color: #555555;
-    font-size:18px;
-    font-weight:300;
+    color: #222328;
+    font-size:17px;
+    font-weight:400;
     margin:auto;
 }
 
 .blog-paragraph {
     line-height:1.8;
-    color: #555555;
-    font-size:18px;
-    font-weight:300;
+    color: #222328;
+    font-size:17px;
+    font-weight:400;
     margin:auto;
     max-width:650px;
 
 }
 
 .pre-paragraph {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     line-height:1.8;
     color: #222328;
     font-size:22px;
@@ -1128,7 +1128,7 @@ p {
 }
 
 .blog-pre-paragraph {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     line-height:1.8;
     color: #222328;
     font-size:22px;
@@ -1138,16 +1138,16 @@ p {
 }
 
 .blog-headline {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     line-height:1.8;
     color: #222328;
-    font-size:20px;
+    font-size:26px;
     font-weight:700;
     margin:auto;
 }
 
 .major-section {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     line-height:1.8;
     color: #222328;
     font-size:24px;
@@ -1157,7 +1157,7 @@ p {
 }
 
 .about-major-section {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     line-height:1.8;
     color: #222328;
     font-size:24px;
@@ -1176,11 +1176,11 @@ p {
 
     .headerintro {
    padding-top: 1em;
-   color: #555555;
+   color: #222328;
     font-size:17px;
     line-height:1.8;
     padding-bottom:5px;
-   font-weight:300;
+   font-weight:400;
 }
 
 .copyright {
@@ -1412,7 +1412,7 @@ img {
 }
 
 .card-title {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     color: #222328;
     font-weight:400;
     margin:0;
@@ -1421,7 +1421,7 @@ img {
 }
 
 .feature-card-title {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     line-height: 1.6;
     font-size:26px;
     color: #222328;
@@ -1434,7 +1434,7 @@ img {
 .feature-card-text {
     color: #757682;
     font-size:17px;
-    font-weight:300;
+    font-weight:400;
     line-height:1.6;
     margin:0;
     margin-bottom: 0.75rem;
@@ -1453,7 +1453,7 @@ img {
     color: #757682;
     line-height:1.8;
     font-size:15px;
-    font-weight:300;
+    font-weight:400;
     margin-top: 5px;
     margin-bottom:0px;
     text-align: left;
@@ -1490,30 +1490,10 @@ h1 {
     font-weight:;
 }
 
-.project-h1 {
-    font-family: 'Source Serif Pro', serif;
-     font-weight:400;
-    line-height:1.8;
-    font-size:30px;
-    color:#222328;
-    width:100%;
-    margin:auto;
-    transition: all .4s ease-in-out 0s;
 
-}
 
 .project-h2 {
-   /* font-family:"Merriweather";
-     font-weight:700;
-    line-height:1.8;
-    font-size:24px;
-    color:#222328;
-    width:100%;
-    margin:auto;
-    transition: all .4s ease-in-out 0s;
-    text-align:right;*/
-    font-family:"Proxima Nova";
-     font-weight:300;
+     font-weight:400;
     line-height:1.8;
     font-size:15px;
     color:#757682;
@@ -1530,7 +1510,7 @@ h1 {
     font-size:16px;
     font-style: italic;
     padding-left:1em;
-    color: #757682;
+    color:#757682;
     border-left: 1px solid #757682;
     max-width:550px;
     margin:auto;
@@ -1563,9 +1543,9 @@ h1 {
 ul, ol {
     margin:auto;
     line-height:1.8;
-    color: #555555;
-    font-size:18px;
-    font-weight:300;
+    color: #222328;
+    font-size:17px;
+    font-weight:400;
      max-width:600px;
 }
 
@@ -2279,23 +2259,8 @@ a.bottomlinks {
 }
 
 
-.header-text {
-    text-align:left;
-    line-height:1.8;
-    max-width:450px;
-    color: #494c4c;
-    font-size:14px;
-    font-weight:;
-}
 
 
-.project-h1 {
-    font-family: 'Source Serif Pro', serif;
-    display:inline-block;
-    font-size:24px;
-    margin:auto;
-    color: #494c4c;
-}
 
     .project-h2 {
     font-size:14px;
@@ -2309,7 +2274,7 @@ a.bottomlinks {
 }
 
 .homepage-title {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Merriweather', serif;
     font-size: 30px;
     padding-bottom:0.25em;
 }
@@ -2353,7 +2318,7 @@ a.bottomlinks {
 
 .project-paragraph, .blog-paragraph, .paragraph, .about-paragraph {
     line-height:1.8;
-    color: #555555;
+    color: #222328;
     font-size:16px;
     font-weight:;
 
@@ -2370,7 +2335,7 @@ a.bottomlinks {
 
 
 .blog-headline {
-    font-size:18px;
+    font-size:20px;
 }
 
 .major-section, .about-major-section {
