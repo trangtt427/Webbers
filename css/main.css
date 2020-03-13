@@ -467,6 +467,7 @@ body {
     transition: .5s ease-in-out;
     cursor: pointer;
     margin-top:-25px;
+    -webkit-tap-highlight-color: transparent;
   }
   
   #nav-icon span {
