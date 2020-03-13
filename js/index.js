@@ -68,7 +68,7 @@ $(document).ready(function() {
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
 
-  modal.addEventListener("click", function() {
+  span.addEventListener("click", function() {
     modal.style.display = "none";
   });
 
