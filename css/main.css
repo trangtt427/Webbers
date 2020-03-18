@@ -1546,6 +1546,7 @@ h1 {
 ul, ol {
     margin:auto;
     line-height:1.8;
+    padding-top:1em;
     color: #222328;
     font-size:19px;
     font-weight:400;

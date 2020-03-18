@@ -114,13 +114,13 @@
                 joined to create schemas and then ultimately, data
                 visualizations.
               </p>
-              <p class="pre-paragraph spacetop">The problem today</p>
+              <p class="pre-paragraph spacetop">The Problem Today</p>
               <p class="project-paragraph spacetop spacebottom">
                 The PM came to us with a huge customer issue: Incorta users are
-                adding hundreds of files into a root location, without
+                adding hundreds of files into a root location without
                 capabilities of organizing any of them. The customer ask was
-                that we provide a solution that allows actions like so
-                searching, sorting, and renaming.
+                that we provide a solution that allows actions like so creating
+                folders, searching, sorting, and renaming.
               </p>
 
               <img
@@ -178,15 +178,15 @@
             <div class="unequal-column section-middle"></div>
             <div class="unequal-column section-right">
               <p class="pre-paragraph spacebottom">
-                The User's story
+                The User Story
               </p>
               <p class="project-paragraph spacebottom">
                 I spent some time discussing with internal
                 <strong>solutions architects, PMs, and pre-sales</strong> who
-                gave me all the details about the type of users and their
-                complaints. The main user of this feature is the Data Analyst
-                because they are the power users responsible for bringing the
-                data into their systems in order to create schemas.
+                informed me with details about our users and their complaints.
+                The main user of this feature is the Data Analyst because they
+                are the power users responsible for bringing the data into their
+                systems in order to create schemas.
               </p>
               <p class="pre-paragraph spacetop">
                 Persona: The Data Analyst (Power User)
@@ -221,14 +221,14 @@
                       <h3>Goals</h3>
                       <p class="persona-text">
                         Wants personalization. Wants to be able to customize her
-                        environment so that files are grouped so that way
-                        they're easier to find and easier to share amongst
-                        others in her company.
+                        environment in a way where files are grouped into
+                        folders so that they're easier to to find and share
+                        amongst others in her company.
                       </p>
                       <h3>Behaviors and Beliefs</h3>
                       <p class="persona-text">
-                        Very technical and as a power user, loves being able to
-                        customize everything.
+                        Very technical and loves being able to customize
+                        everything.
                       </p>
                     </div>
                   </div>
@@ -256,8 +256,7 @@
                 <strong>Data Analyst's goal is to save time and effort.</strong>
                 If they can spend less time searching for files, then they can
                 use that time to do other productive things. This solution will
-                empower users to able to customize their environment within
-                Incorta.
+                empower users to customize their environment within Incorta.
               </p>
             </div>
           </div>
@@ -279,13 +278,14 @@
             <div class="unequal-column section-middle"></div>
             <div class="unequal-column section-right">
               <p class="pre-paragraph spacebottom">
-                Brainstorming the enhancements
+                Brainstorming the Enhancements
               </p>
-              <p class="project-paragraph spacebottom">
-                In another sync, the PM and I brainstormed ways to upgrade the
-                Data tab. On a whiteboard, we listed user actions and
-                prioritized them based on how related they are to the urgent
-                asks. Here are the tasks we came up with for quick wins:
+              <p class="project-paragraph">
+                The PM and I brainstormed ways to upgrade the Data tab so that
+                it answers the user's needs. On a whiteboard, we listed user
+                actions and prioritized them based on how related they are to
+                the urgent asks. Here are the tasks we came up with for quick
+                wins:
               </p>
 
               <ol>
@@ -332,13 +332,13 @@
             <div class="unequal-column section-middle"></div>
             <div class="unequal-column section-right">
               <p class="pre-paragraph spacebottom">
-                New folder structure = better navigation
+                Designing the New Breadcrumb
               </p>
               <p class="project-paragraph spacebottom">
                 The only part of our app that utilizes a (half-baked) directory
                 is the Content tab, where dashboards and folders can be grouped
-                into further folders. However, the feature was poorly designed
-                as there was no way for users to navigate back to folders in a
+                into further folders. However, the current implementation
+                doesn't provide a way for users to navigate back to folders in a
                 path.
               </p>
 
@@ -358,9 +358,9 @@
                 internal users about this experience.
               </p>
               <p class="project-paragraph spacebottom">
-                <strong>Solution:</strong> I designed a breadcrumb navigation to
-                show the root location, an ellipsis revealing multiple folders
-                on click, the previous folder, and the current folder that the
+                <strong>Solution:</strong> I designed a breadcrumb component to
+                show the root location, an option to look at multiple folders in
+                that path, the previous folder, and the current folder that the
                 user is in.
               </p>
 
@@ -376,12 +376,13 @@
               </p>
 
               <p class="pre-paragraph spacetop spacebottom">
-                Designing for the user scenarios
+                Wireframes to Show the Possible User Scenarios
               </p>
 
               <p class="project-paragraph spacebottom">
-                I created wireframes to demonstrate the flows of files/folders,
-                creating folders, alerts, renaming, sorting, and searching.
+                I prototyped the flows a user would go through as they create
+                folders, upload files/folders, rename, search, sort, as well as
+                showing notification alerts.
               </p>
 
               <img
@@ -416,7 +417,7 @@
               </p>
 
               <p class="pre-paragraph spacetop spacebottom">
-                Realizing the constraints
+                The Engineering Constraints
               </p>
 
               <p class="project-paragraph">
@@ -428,14 +429,14 @@
                 <li>
                   The server team cannot support the relocating of folders
                   because it was a huge engineering effort and they were slammed
-                  with higher priority tasks
+                  with higher priority tasks.
                 </li>
                 <li>
                   The server team cannot support folder-specific permissions.
                 </li>
                 <li>
-                  The front-end team cannot allow the UI to upload folders and
-                  files in one upload prompt. They would have to be separated.
+                  The front-end team is unable to merge the upload folders and
+                  files into one prompt.
                 </li>
               </ol>
 
@@ -448,12 +449,12 @@
 
               <p class="project-paragraph spacetop spacebottom">
                 We realized the complexity of folders and permissions after
-                meeting with other teams. As a result of our discussion, we
-                agreed to remove some of the enhancements (moving folders and
-                folder-specific permissions) and will include them in the
-                release. For the first release, we are only attaching
-                permissions to files, not folders. I updated the wireframes to
-                limit the scope of actions and handed it off to Engineering.
+                meeting with the teams. As a result of our discussion, we agreed
+                to remove some of the enhancements (moving folders and
+                folder-specific permissions) to include them in the release. For
+                the first release, we are only attaching permissions to files
+                instead of folders. I updated the wireframes to limit the scope
+                of actions and handed it off to Engineering.
               </p>
 
               <img
@@ -491,17 +492,17 @@
               </p>
 
               <p class="pre-paragraph spacetop spacebottom">
-                Redesigning the breadcrumb
+                Touching Up the Breadcrumb Again
               </p>
 
               <p class="project-paragraph spacebottom">
-                After implementation, we reviewed it in our test build. The
-                other designers reviewed the breadcrumb and collectively, we
-                didn't really like the idea that the title of the page was
-                styled like the breadcrumb path. We agreed that the page title
-                should assume its own identity, thus it was decided to move the
-                title of the page to the next line. It would also be helpful to
-                users if the page title stayed in one spot, for consistency.
+                After implementation, we reviewed the feature in our dev
+                environment. In a design sync, we eventually agreed that the
+                title of the page shouldn't styled like the breadcrumb path. The
+                feeback was that the page title should assume its own identity,
+                thus it was decided to move the title of the page to the next
+                line. It would also be helpful to users if the page title stayed
+                in one spot, for consistency.
               </p>
 
               <img
@@ -545,7 +546,7 @@
             <div class="unequal-column section-middle"></div>
             <div class="unequal-column section-right">
               <p class="pre-paragraph spacebottom">
-                Qualitative feedback
+                Feedback After Rolling Out the Feature
               </p>
               <p class="project-paragraph spacebottom">
                 After it was QA'd and approved, the feature was rolled out to
@@ -581,7 +582,7 @@
                   <div class="process-timeline-cat process-circle"></div>
 
                   <div class="process-timeline-content">
-                    <div class="card-title">Define the problem</div>
+                    <div class="card-title">Define the Problem</div>
                     <p class="process-p">
                       How can we help users do their job with the least amount
                       of labor and time?
@@ -591,7 +592,7 @@
                     <div class="process-timeline-cat process-circle"></div>
 
                     <div class="process-timeline-content">
-                      <div class="card-title">Gather information</div>
+                      <div class="card-title">Gather Information</div>
                       <p class="process-p">
                         Worked with PM and solutions architects to learn about
                         specific user needs, pain points, and researched current
@@ -685,12 +686,11 @@
               </p>
 
               <div class="thought">
-                First, we've been waiting for a long time just to be able to
-                search and sort. Second, I'm glad that I can finally share whole
-                folders with users instead of finding and selecting individual
-                CSVs. It has saved us time.
+                We've been waiting for a long time to get searching and sorting
+                on this page, and now it saves me so much time. I'm also glad
+                that I can create folders to keep everything tidy.
                 <div class="tenspace"></div>
-                - A Business analyst
+                - Business analyst
               </div>
 
               <p class="project-paragraph spacetop spacebottom">
@@ -703,7 +703,7 @@
               </p>
 
               <p class="pre-paragraph spacetop">
-                The takeaway: thoughts and lessons
+                The Takeaway: Thoughts and Lessons
               </p>
               <p class="project-paragraph spacetop">
                 Working on this feature was a reminder that different teams have
