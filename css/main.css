@@ -107,7 +107,7 @@ span {
 }
 
 .persona-text {
-    font-size:16px;
+    font-size:17px;
     color: #222328;
 }
 
@@ -1353,7 +1353,7 @@ img {
 .process-p {
     margin-bottom:0px;
     line-height:1.8;
-    font-size:16px;
+    font-size:17px;
 }
 
 /**end timeline**/
@@ -1510,7 +1510,7 @@ h1 {
 }
 
 .thought {
-    font-size:16px;
+    font-size:17px;
     font-style: italic;
     padding-left:1em;
     color:#757682;
@@ -2322,7 +2322,7 @@ a.bottomlinks {
 .project-paragraph, .blog-paragraph, .paragraph, .about-paragraph {
     line-height:1.8;
     color: #222328;
-    font-size:16px;
+    font-size:17px;
     font-weight:;
 
 }
@@ -2363,7 +2363,7 @@ a.bottomlinks {
 
     .headerintro {
         padding-top:0;
-    font-size:16px;
+    font-size:17px;
     font-weight:;
         padding-bottom:20px;
 }
