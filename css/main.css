@@ -1098,7 +1098,7 @@ p {
 .project-paragraph {
     line-height:1.8;
     color: #222328;
-    font-size:17px;
+    font-size:18px;
     font-weight:400;
     max-width:600px;
     margin:auto;
@@ -1107,7 +1107,7 @@ p {
 .about-paragraph {
     line-height:1.8;
     color: #222328;
-    font-size:17px;
+    font-size:18px;
     font-weight:400;
     margin:auto;
 }
@@ -1115,7 +1115,7 @@ p {
 .blog-paragraph {
     line-height:1.8;
     color: #222328;
-    font-size:17px;
+    font-size:18px;
     font-weight:400;
     margin:auto;
     max-width:650px;
@@ -1126,7 +1126,7 @@ p {
     font-family: 'Source Serif Pro', serif;
     line-height:1.8;
     color: #222328;
-    font-size:22px;
+    font-size:24px;
     font-weight:700;
     margin:auto;
     max-width:600px;
@@ -1136,7 +1136,7 @@ p {
     font-family: 'Source Serif Pro', serif;
     line-height:1.8;
     color: #222328;
-    font-size:22px;
+    font-size:24px;
     font-weight:700;
     margin:auto;
     max-width:650px;
@@ -1182,7 +1182,7 @@ p {
     .headerintro {
    padding-top: 1em;
    color: #757682;
-    font-size:17px;
+    font-size:18px;
     line-height:1.8;
     padding-bottom:5px;
    font-weight:400;
@@ -1438,7 +1438,7 @@ img {
 
 .feature-card-text {
     color: #757682;
-    font-size:17px;
+    font-size:18px;
     font-weight:400;
     line-height:1.6;
     margin:0;
@@ -1549,7 +1549,7 @@ ul, ol {
     margin:auto;
     line-height:1.8;
     color: #222328;
-    font-size:17px;
+    font-size:18px;
     font-weight:400;
      max-width:600px;
 }
