@@ -951,10 +951,17 @@ a {
 .introtext {
     margin:auto;
     display:block;
-    max-width:800px;
+   
 
 
 }
+
+.blog-introtext {
+    margin:auto;
+    display:block;
+    max-width:800px;
+}
+
 
 #projectsection {
     max-width:1240px;
