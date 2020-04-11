@@ -1584,7 +1584,7 @@ ul, ol {
 }
 
 .left {
-  width: 43%;
+  width: 40%;
 }
 
 .middle {
@@ -1592,21 +1592,23 @@ ul, ol {
 }
 
 .right {
-  width: 53%;
+  width: 56%;
     float:right;
+  
 }
 
 .section-left {
-    width: 29%;
+    width: 21%;
   }
   
   .section-middle {
-    width:  4%;
+    width:  2%;
   }
   
   .section-right {
-    width: 67%;
+    width: 79%;
       float:right;
+      padding-left:30px;
   }
 
   .bio-left {
@@ -2226,6 +2228,13 @@ a.bottomlinks {
 }
 
 @media only screen and (max-width:700px) {
+
+
+    .section-right {
+        width: 79%;
+          float:right;
+          padding-left:0px;
+      }
 
     .turnmeintoablock {
     display:block;
