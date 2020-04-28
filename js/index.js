@@ -2,7 +2,7 @@
 /*eslint no-console: "warn"*/
 /*eslint no-unused-vars: "warn"*/
 
-$(document).ready(function() {
+$(document).ready(function () {
   "use strict";
   // Once the document is ready (usually means loaded)
   // Execute the code inside here
@@ -11,7 +11,7 @@ $(document).ready(function() {
 
   // This .ready() function means that the document is ready.
   // If anything is outside of this, the code will run before the document is ready.
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var top = $(".goto-top");
     if (
       $("body").height() <=
@@ -23,31 +23,31 @@ $(document).ready(function() {
     }
   });
 
-  $(".goto-top").on("click", function() {
+  $(".goto-top").on("click", function () {
     $("html, body").animate({ scrollTop: 0 }, 1100);
   });
 
   var $document = $(document),
     $element = $("header"),
-    className = "box-shadow";
+    classNames = "box-shadow sticky";
 
   // Start listening for the 'scroll' event
-  $document.scroll(function() {
+  $document.scroll(function () {
     console.log($document.scrollTop());
     if ($document.scrollTop() >= 5) {
       // Change 50 to the value you require
       // for the event to trigger
-      $element.addClass(className);
+      $element.addClass(classNames);
     } else {
-      $element.removeClass(className);
+      $element.removeClass(classNames);
     }
 
     // On page load, check the $document.scrollTop().
     // If scrollTop() is >= 5, then add the class 'box-shadow' to $('header')
     // This is a fix for the box-shadow not appearing on refresh.
-    if ($document.scrollTop() >= 5) {
+    if ($document.scrollTop() >= 55) {
       console.log("happens exactly once");
-      $element.addClass(className);
+      $element.addClass(classNames);
     }
   });
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
   var img = $(".myImg");
   var modalImg = $("#img01");
   var captionText = document.getElementById("caption");
-  $(".myImg").click(function() {
+  $(".myImg").click(function () {
     modal.style.display = "block";
     var newSrc = this.src;
     modalImg.attr("src", newSrc);
@@ -68,7 +68,7 @@ $(document).ready(function() {
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
 
-  myModal.addEventListener("click", function() {
+  myModal.addEventListener("click", function () {
     modal.style.display = "none";
   });
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
   // Fade bio pictures in
   function showImages(el) {
     var windowHeight = jQuery(window).height();
-    $(el).each(function() {
+    $(el).each(function () {
       var thisPos = $(this).offset().top;
 
       var topOfWindow = $(window).scrollTop();
@@ -90,7 +90,7 @@ $(document).ready(function() {
   showImages(".star");
 
   // if the image in the window of browser when scrolling the page, show that image
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     showImages(".star");
   });
 
@@ -100,7 +100,7 @@ $(document).ready(function() {
   $(".se-pre-con").fadeOut("slow");
 
   //hamburger
-  $("#nav-icon").click(function() {
+  $("#nav-icon").click(function () {
     $(this).toggleClass("open");
     $(".hamoverlay").toggleClass("open");
     $(".hamoverlay a").toggleClass("open");
@@ -111,12 +111,12 @@ $(document).ready(function() {
 
   // Page is loaded
   var objects = document.getElementsByClassName("asyncImage");
-  Array.prototype.forEach.call(objects, function(item) {
+  Array.prototype.forEach.call(objects, function (item) {
     // Start loading image
     var img = new Image();
     img.src = item.dataset.src;
     // Once image is loaded replace the src of the HTML element
-    img.onload = function() {
+    img.onload = function () {
       item.classList.remove("asyncImage");
       return item.nodeName === "IMG"
         ? (item.src = item.dataset.src)

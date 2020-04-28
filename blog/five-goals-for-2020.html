@@ -27,11 +27,14 @@
   </head>
 
   <body id="project" class="animate-in">
+    <div class="empty-top-div"></div>
     <header class="header nav-down">
       <div class="headcontain">
         <div class="linkthing">
           <p>Trang Tran</p>
-          <a href="http://trangerthings.com"><img src="../images/lotus.svg"/></a>
+          <a href="http://trangerthings.com"
+          ><img class="logo" src="../images/newt2.svg"
+        /></a>
         </div>
 
         <div class="right-ham hideme2">
@@ -55,38 +58,39 @@
           <div class="aboutlink">
             <a href="../blog">Blog</a>
           </div>
-          <div class="aboutlink"><a href="../biography">About</a></div>
+          <div class="aboutlink1"><a href="../biography">About</a></div>
         </div>
       </div>
     </header>
 
  
-      <div id="introsection">
-        <div class="fullblock extraspacetop">
+      
+        <div class="fullblock extraspacebottom spacetop">
           <div class="main">
             <div class="mainblock">
           
               <div class="twentyspace hide"></div>
 
-              <div class="blog-introtext">
+            
                 <h1 class="homepage-title">
                   Five Goals For 2020
                 </h1>
-                <h1 class="blog-headline">
-                 
-                </h1>
-                <p class="headerintro">
+                <p class="role">
                   December 31, 2019
                 </p>
-              </div>
+          
 
-              <img src="../images/blog-images/2020_1.png" width="900px" class="" />
-              <p class="caption">Image source: original illustration</p>
+              <div class="big-image-wrapper spacetop">
+                <img
+                  class="grumpy-image lazy"
+                  data-original="../images/blog-images/2020_1.png"
+                />
+              </div>
            
             </div>
           </div>
         </div>
-      </div>
+      
 
       <div class="fullblock">
         <div class="main">
@@ -208,5 +212,8 @@
         <!-- Modal Content (The Image) -->
         <img class="modal-content" id="img01" />
       </div>
+
+      <script src="../js/lib/lazyload.js"></script>
+      <script src="../js/script.js"></script>
   </body>
 </html>
