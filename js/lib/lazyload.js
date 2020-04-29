@@ -30,7 +30,7 @@
       appear: null,
       load: null,
       placeholder:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUCB1j+A8EAAn7A/0Mu1vnAAAAAElFTkSuQmCC",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAAXNSR0IArs4c6QAAAB9JREFUCB1j/Pjx438GIGBiYkpnYWRkDABxWFhYLgAAZAEFdGY1vIQAAAAASUVORK5CYII",
     };
 
     function update() {
