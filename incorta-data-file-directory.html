@@ -97,26 +97,20 @@
            
               <p class="pre-paragraph">About Incorta</p>
               <p class="project-paragraph spacetop spacebottom">
-                Incorta is a hyper-converged data analytics app that removes the
+                Incorta is a hyper-converged data analytics platform that removes the
                 ETL process in data warehousing and lets users make use of their
                 data fast. In the Incorta desktop app, users can provide data in
                 two ways: upload CSV/XML files straight into their instance or
-                connect to a database. From this information, tables can be
-                joined to create schemas and then ultimately, data
-                visualizations.
+                connect to a database. From this information, relationships can be created in order to make dashboard visualizations and tabular reports.
               </p>
-              <p class="pre-paragraph spacetop">The Problem Today</p>
+              <p class="pre-paragraph spacetop">The Villain of This Story: A Poor File Management System</p>
               <p class="project-paragraph spacetop spacebottom">
-                The PM came to us with a huge customer issue: Incorta users are
-                adding hundreds of files into a root location without
-                capabilities of organizing any of them. The customer ask was
-                that we provide a solution that allows actions like so creating
-                folders, searching, sorting, and renaming.
+                The current Incorta Data Files tab was one of the few remnants of the Angular framework which the platform was built on a few years ago. While it was time to port it over to React, there were other requested features in the roadmap calling for its enhancements. Currently, users were unable to create folders to group their files. They also couldn't sort and search, which are common capabilities you'd expect from a file management system. I partnered closely with Product Management to work through the user pain points and define the requirements needed in order to make this a robust data management system.
               </p>
 
              
 
-              <div class="big-image-wrapper">
+              <div class="big-image-wrapper spacetop">
                 <img
                   class="grumpy-image lazy"
                   data-original="images/incorta-data-file-directory/datafiles.png" alt="The old Data UI has not yet been migrated to React and did not
@@ -135,42 +129,22 @@
       </div>
     </div>
 
-    <div class="fullblock">
-      <div class="main">
-        <div class="mainblock">
-       
-         
-              <p class="project-paragraph spacebottom">
-                I led the UX design efforts for this feature. I worked with a
-                PM, the engineering team, the server team, and collaborated with
-                the lead UX designer occasionally for brainstorming and
-                feedback.
-              </p>
-           
-         
-
-        
-        </div>
-      </div>
-    </div>
+ 
 
     <div class="fullblock">
       <div class="main">
         <div class="mainblock">
         
               <p class="pre-paragraph spacebottom">
-                The User Story
+                Understanding the Incorta Users' Workflow
               </p>
-              <p class="project-paragraph spacebottom">
-                I spent some time discussing with internal
-                <strong>solutions architects, PMs, and pre-sales</strong> who
-                informed me with details about our users and their complaints.
-                The main user of this feature is the Data Analyst because they
-                are the power users responsible for bringing the data into their
-                systems in order to create schemas.
+              <p class="project-paragraph spacebottom"> 
+                While I worked mainly with the PM, I also had insights from stakeholders like solutions architects. They provided me with details about our users, which aligned with the pain points mentioned in the user stories.
+                Our target persona, the Data Analysts, are the Business Users responsible for bringing data into their
+                systems in order to create relationships between objects.
               </p>
               <p class="pre-paragraph spacetop">
-                Persona: The Data Analyst (Power User)
+                Persona: The Data Analyst
               </p>
               <div class="wrapper">
                 <div class="profile-card">
@@ -236,7 +210,7 @@
                 We realized that the
                 <strong>Data Analyst's goal is to save time and effort.</strong>
                 If they can spend less time searching for files, then they can
-                use that time to do other productive things. This solution will
+                use that time to create joins between tables and rows or connecting to data sources. This solution will
                 empower users to customize their environment within Incorta.
               </p>
          
@@ -252,8 +226,7 @@
                 Brainstorming the Enhancements
               </p>
               <p class="project-paragraph">
-                The PM and I brainstormed ways to upgrade the Data tab so that
-                it answers the user's needs. On a whiteboard, we listed user
+                The PM and I brainstormed ways to translate the requirements into features. On a whiteboard, we listed user
                 actions and prioritized them based on how related they are to
                 the urgent asks. Here are the tasks we came up with for quick
                 wins:
@@ -298,7 +271,7 @@
               <p class="project-paragraph spacebottom">
                 The only part of our app that utilizes a (half-baked) directory
                 is the Content tab, where dashboards and folders can be grouped
-                into further folders. However, the current implementation
+                into folders. However, the current implementation
                 doesn't provide a way for users to navigate back to folders in a
                 path.
               </p>
@@ -397,7 +370,7 @@
               </p>
 
               <p class="project-paragraph">
-                In a sync with the server team and front-end team, we found out
+                In a sync with the server and front-end teams, we found out
                 that some of our tasks would not be able to fit in the upcoming
                 release.
               </p>
@@ -412,7 +385,7 @@
                 </li>
                 <li>
                   The front-end team is unable to merge the upload folders and
-                  files into one prompt.
+                  files into one prompt (their current technology doesn't support that).
                 </li>
               </ol>
 
@@ -427,7 +400,7 @@
                 We realized the complexity of folders and permissions after
                 meeting with the teams. As a result of our discussion, we agreed
                 to remove some of the enhancements (moving folders and
-                folder-specific permissions) to include them in the release. For
+                folder-specific permissions) to include them in the later release. For
                 the first release, we are only attaching permissions to files
                 instead of folders. I updated the wireframes to limit the scope
                 of actions and handed it off to Engineering.
@@ -476,11 +449,11 @@
               <p class="project-paragraph spacebottom">
                 After implementation, we reviewed the feature in our dev
                 environment. In a design sync, we eventually agreed that the
-                title of the page shouldn't styled like the breadcrumb path. The
-                feeback was that the page title should assume its own identity,
+                title of the page shouldn't be styled like the breadcrumb path. The
+                feedback was that the page title should assume its own identity,
                 thus it was decided to move the title of the page to the next
                 line. It would also be helpful to users if the page title stayed
-                in one spot, for consistency.
+                in one spot and not having to jump around depending on how nested the file is.
               </p>
 
               <img
@@ -520,16 +493,14 @@
         <div class="mainblock">
        
               <p class="pre-paragraph spacebottom">
-                Feedback After Rolling Out the Feature
+                Rolling Out the Feature
               </p>
               <p class="project-paragraph spacebottom">
                 After it was QA'd and approved, the feature was rolled out to
-                all users. To see how the feature fared, PMs went onsite to
-                solicit feedback from engaged data analysts. We had positive
-                feedback from customers, despite not being able to truly treat
+                all users. We had positive
+                feedback from users, despite not being able to truly treat
                 the Data tab like a directory yet. We were told that as a result
-                of the feature, they were able to limit the time spent finding
-                and sharing files. They also expressed their excitement for the
+                of the feature, it made a huge difference in their data management workflow. They also expressed their excitement for the
                 upcoming enhancements in the second phase.
               </p>
          
@@ -596,8 +567,8 @@
               <p class="project-paragraph spacetop">
                 Working on this feature was a reminder that different teams have
                 different priorities. While this feature is an important one to
-                the users, we were limited by scope because the engineering
-                teams were unable to support everything we had asked for. It was
+                the users, we were limited by constraints because the engineering
+                teams were unable to support everything in the design. It was
                 a strategic course of action to give the users what they asked
                 for along with easy improvements, followed by bigger
                 enhancements in the next release.
