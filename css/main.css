@@ -217,7 +217,7 @@ span {
 }
 .profile-card{
     height: auto;
-    max-width:600px;
+    max-width:700px;
     text-align: center;
     margin: 20px auto;
     box-shadow:0px 4px 8px rgba(0,0,0,.1);
@@ -1183,7 +1183,7 @@ a {
 .blog-introtext {
     margin:auto;
     display:block;
-    max-width:600px;
+    max-width:700px;
 }
 
 
@@ -1352,7 +1352,7 @@ p {
     color: #222328;
     font-size:19px;
     font-weight:400;
-    max-width:600px;
+    max-width:700px;
     margin:auto;
 }
 
@@ -1381,7 +1381,7 @@ p {
     font-size:24px;
     font-weight:700;
     margin:auto;
-    max-width:600px;
+    max-width:700px;
 }
 
 .blog-pre-paragraph {
@@ -1791,7 +1791,7 @@ img {
     margin-bottom:0px;
     margin:auto;
     text-align: left;
-    max-width:600px;
+    max-width:700px;
 }
 
 #project {
@@ -1882,7 +1882,7 @@ ul, ol {
     color: #222328;
     font-size:19px;
     font-weight:400;
-     max-width:600px;
+     max-width:700px;
 }
 
 .bio-list {
@@ -2126,13 +2126,13 @@ ul, ol {
 .project-image-multi {
     box-shadow: 0px 3px 13px 0px rgba(0,0,0,.2);
     display: inline-block;
-    max-width: 600px;
+    max-width: 700px;
     margin: 5px auto;
 }
 
 .project-image-multi-2 {
     display: inline-block;
-    max-width: 600px;
+    max-width: 700px;
     margin: 5px auto;
     box-shadow: 0px 3px 20px 0px rgba(0,0,0,.2);
 }
@@ -2626,7 +2626,7 @@ a.bottomlinks {
     .project-h2 {
     font-size:14px;
     text-align:left;
-    max-width:600px;
+    max-width:700px;
 
 }
 
