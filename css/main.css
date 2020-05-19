@@ -1145,6 +1145,7 @@ a {
     background-color:white;
     width:100%;
     margin:auto;
+
 }
 
 .fullblock {
@@ -1689,7 +1690,21 @@ img {
 
 /**end timeline**/
 
+/*parallax*/
 
+#first-section {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  .blocks {
+    position: relative;
+    height: 100%;
+    margin-top: 500px;
+  }
+
+  /*end parallax*/
 
 .card {
     position: relative;

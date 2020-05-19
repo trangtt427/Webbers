@@ -33,7 +33,6 @@ $(document).ready(function () {
 
   // Start listening for the 'scroll' event
   $document.scroll(function () {
-    console.log($document.scrollTop());
     if ($document.scrollTop() >= 5) {
       // Change 50 to the value you require
       // for the event to trigger
@@ -46,10 +45,23 @@ $(document).ready(function () {
     // If scrollTop() is >= 5, then add the class 'box-shadow' to $('header')
     // This is a fix for the box-shadow not appearing on refresh.
     if ($document.scrollTop() >= 55) {
-      console.log("happens exactly once");
       $element.addClass(classNames);
     }
   });
+
+  // added this in for parallax
+  $(document).scroll(function () {
+    var st = $(this).scrollTop();
+    $("header").css({
+      "background-position-y": -st / 20,
+    });
+    $("#first-section").css({
+      "margin-top": -st / 5,
+      "margin-bottom": st / 5,
+    });
+  });
+
+  // end parallax thing
 
   // Get the modal
   var modal = document.getElementById("myModal");
