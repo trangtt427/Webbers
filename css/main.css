@@ -106,7 +106,8 @@ span {
 
 .index-image-wrapper {
     height: 0;
-    padding-bottom:44%;
+    padding-bottom:50%;
+    /*padding-bottom:44%;*/
    /* padding-bottom: 46.7%;*/
    /* border: 2px solid white;*/
     position: relative;
