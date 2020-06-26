@@ -1230,13 +1230,13 @@ a {
 .homepage-title {
     font-family: 'Source Serif Pro', serif;
     line-height:1.4;
-    font-size: 48px;
+    font-size: 44px;
     font-weight:700;
     color:#222328;
     margin-top:20px;
     margin-bottom:0px;
     transition: all .4s ease-in-out 0s;
-    max-width:750px;
+    max-width:850px;
 }
 
 
