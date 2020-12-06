@@ -4,12 +4,24 @@ body {
   color: #1a1b1f;
   margin: 0;
   -webkit-font-smoothing: subpixel-antialiased; /* antialiased | subpixel-antialiased | none */
-  text-rendering: optimizeLegibility;
+  /* -ms-overflow-style: none; 
+  scrollbar-width: none;  */
 }
+
+/* body::-webkit-scrollbar {
+  display: none;
+} */
 
 .inbodylink {
   text-decoration: none;
   color: #ef536d;
+  display: inline-block;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -69,6 +81,18 @@ ul .menu {
   width: 0;
 }
 
+.inbodylink:after {
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  background: #ef536d;
+  transition: 0.3s all ease-in-out;
+  width: 0;
+}
+
 .menu li a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -111,6 +135,15 @@ ul .menu {
 li a:hover:after {
   width: 100%;
   left: 0;
+}
+
+.inbodylink:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.hidingblog {
+  visibility: hidden;
 }
 
 .navlist {
@@ -162,7 +195,7 @@ li a:hover:after {
   letter-spacing: 0.15em;
   font-size: 13px;
   display: inline-block;
-  margin: 16px 30px;
+  margin: 0px 30px;
   margin-left: 0px;
   position: relative;
 }
@@ -291,13 +324,14 @@ img {
 .persona-pic {
   width: 100%;
   display: block;
+  margin-bottom: 20px;
 }
 
 .project-row {
   max-width: 1200px;
   padding-right: 35px;
   padding-left: 35px;
-  padding-top: 100px;
+  padding-top: 80px;
   margin: auto;
 }
 
@@ -368,68 +402,35 @@ img {
   float: left;
 }
 
-.unequal-column-right {
-  float: right;
-  max-width: 650px;
-}
-
 .thirtyleft {
-  width: 30%;
+  width: 31.5%;
 }
 
 .personathirtyleft {
-  width: 30%;
+  width: 31.5%;
 }
 
 .sixtytworight {
-  width: 62%;
-  float: right;
-}
-
-.fortytwoleft {
-  width: 42%;
-}
-
-.fiftyright,
-.fiftyrightindex {
-  width: 50%;
+  width: 63.5%;
   float: right;
 }
 
 .halfleft {
-  width: 46%;
+  width: 47.5%;
 }
 
-.halfright {
-  width: 46%;
-  float: right;
-}
-
-.fiftyleft {
-  width: 50%;
-}
-
-.fortytworight,
-.fortytworightindex {
-  width: 42%;
-  float: right;
-}
-
-.fiftytwoleft {
-  width: 52%;
-}
-
-.fortyright {
-  width: 40%;
+.halfright,
+.halfrightindex {
+  width: 47.5%;
   float: right;
 }
 
 .sixtytwoleft {
-  width: 62%;
+  width: 63.5%;
 }
 
 .thirtyright {
-  width: 30%;
+  width: 31.5%;
   float: right;
 }
 
@@ -463,22 +464,8 @@ img {
   border-bottom: 15px solid transparent;
 }
 
-.thirtythreeright {
-  width: 33%;
-  float: right;
-}
-
 .middle {
-  width: 8%;
-}
-
-.thirtythreemiddle {
-  width: 33%;
-}
-
-.thirtythreeleft {
-  width: 33%;
-  float: left;
+  width: 5%;
 }
 
 section {
@@ -487,9 +474,6 @@ section {
   margin: auto;
   color: #333;
   border-radius: 0.25em;
-}
-
-section {
   width: 300px;
 }
 
@@ -521,7 +505,7 @@ section {
   font-family: "DM Serif Text", serif;
   -webkit-font-smoothing: subpixel-antialiased;
   line-height: 1.4;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 0px;
@@ -554,7 +538,7 @@ section {
   font-family: "DM Serif Text", serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 400;
-  color: #ff6982;
+  color: #ef536d;
   line-height: 0.1;
 }
 
@@ -564,6 +548,13 @@ section {
   font-size: 19px;
   padding: 20px;
   text-align: center;
+}
+
+.blog-container-box-text {
+  font-family: "DM Serif Text", serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 24px;
+  padding: 20px;
 }
 
 .container-line {
@@ -578,7 +569,8 @@ section {
 }
 
 .project-paragraph,
-ol {
+ol,
+ul {
   -webkit-font-smoothing: antialiased;
   font-size: 19px;
   max-width: 750px;
@@ -696,15 +688,26 @@ a.button {
   border-left-color: transparent;
 }
 
-.projectnames {
-  font-family: "DM Serif Text", serif;
-  font-size: 32px;
+.nomarginbottom {
+  margin-bottom: 0px;
+}
+
+.nomargintop {
+  margin-top: 0px;
+}
+
+.nopaddingtop {
+  padding-top: 0px;
+}
+
+.nopaddingbottom {
+  padding-bottom: 0px;
 }
 
 .headcontain {
   font-size: 0;
   max-width: 1200px;
-  height: 70px;
+  height: 80px;
   /* padding: 8px 20px;*/
   margin: auto;
   display: flex;
@@ -714,7 +717,7 @@ a.button {
 
 .footerbg {
   max-width: 1200px;
-  padding: 30px 35px;
+  padding: 30px 35px 0px;
   margin: auto;
   background-color: #ffffff;
 }
@@ -743,7 +746,7 @@ a.button {
 .pre-paragraph {
   font-family: "DM Serif Text", serif;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-size: 28px;
+  font-size: 32px;
   max-width: 750px;
 }
 
@@ -756,6 +759,17 @@ a.button {
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 24px;
   max-width: 750px;
+}
+
+.copyright {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.blog-date {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  padding: 0px 20px;
 }
 
 .impact {
@@ -793,13 +807,6 @@ a.button {
   margin: auto;
 }
 
-.casestudyblock {
-  background-color: white;
-  padding-bottom: 0px;
-  padding-top: 75px;
-  margin: auto;
-}
-
 .fullblock {
   background-color: white;
   padding-top: 100px;
@@ -824,7 +831,7 @@ a.button {
 .introaboutblock {
   background-color: white;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .fullincortablock {
@@ -835,10 +842,14 @@ a.button {
   border: 2px;
 }
 
-.image-shadow {
+.persona-shadow {
   -webkit-box-shadow: 0 2px 3px rgba(158, 172, 201, 0.25);
   -moz-box-shadow: 0 2px 3px rgba(158, 172, 201, 0.25);
-  box-shadow: 0 10px 50px rgba(158, 172, 201, 0.25);
+  box-shadow: 0 10px 40px rgba(158, 172, 201, 0.25);
+}
+
+.image-shadow {
+  filter: drop-shadow(0px 10px 20px rgba(158, 172, 201, 0.25));
 }
 
 .container-box,
@@ -846,9 +857,25 @@ a.button {
   height: auto;
   -webkit-box-shadow: 0 2px 3px rgba(158, 172, 201, 0.25);
   -moz-box-shadow: 0 2px 3px rgba(158, 172, 201, 0.25);
-  box-shadow: 0 10px 50px rgba(158, 172, 201, 0.25);
+  box-shadow: 0 10px 40px rgba(158, 172, 201, 0.25);
   margin-top: 50px;
   width: 22%;
+  justify-content: space-between;
+  border: 0px solid rgb(231, 156, 175);
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+
+.blog-container-box,
+.blog-container-topbox {
+  height: auto;
+  -webkit-box-shadow: 0 2px 3px rgba(158, 172, 201, 0.25);
+  -moz-box-shadow: 0 2px 3px rgba(158, 172, 201, 0.25);
+  box-shadow: 0 10px 40px rgba(158, 172, 201, 0.25);
+  margin-top: 50px;
+  width: 31%;
   justify-content: space-between;
   border: 0px solid rgb(231, 156, 175);
   border-radius: 5px;
@@ -872,7 +899,6 @@ a.button {
   display: -ms-flexbox;
   display: flex;
   z-index: 99;
-
   position: relative;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -910,7 +936,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 80px;
   background-color: white;
   -webkit-transition: top 0.2s ease-in-out;
   transition: all 0.3s ease 0s;
@@ -948,6 +974,10 @@ header {
 }
 
 @media only screen and (max-width: 800px) {
+  .hidingblog {
+    display: none;
+  }
+
   .nav {
     text-align: center;
   }
@@ -961,7 +991,7 @@ header {
     list-style: none;
     font-family: "DM Serif Text", serif;
     -webkit-font-smoothing: subpixel-antialiased;
-    font-size: 28px;
+    font-size: 32px;
     max-width: 750px;
     margin: 50px;
     color: #1a1b1f;
@@ -1001,7 +1031,7 @@ header {
     opacity: 1;
     right: 0;
     transition: 0.3s opacity ease-in-out;
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.95);
   }
 
   .nav__container {
@@ -1032,6 +1062,7 @@ header {
   }
 
   .container-box,
+  .blog-container-box,
   .container-topbox,
   .container-columns {
     margin: auto;
@@ -1050,7 +1081,7 @@ header {
   }
 
   .project-row {
-    padding-top: 50px;
+    padding-top: 40px;
   }
 
   .unequal-column {
@@ -1107,15 +1138,8 @@ header {
     font-size: 20px;
   }
 
-  .impact {
-    font-size: 19px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-top: 0px;
-  }
-
-  .projectnames {
-    font-size: 26px;
+  .blog-container-box-text {
+    font-size: 20px;
   }
 
   .persona-pic {
@@ -1139,5 +1163,9 @@ header {
   .caption-bubble-right:before,
   .caption-bubble-left:before {
     display: none;
+  }
+
+  .halfright {
+    margin-top: 40px;
   }
 }

@@ -2,7 +2,7 @@
 <html id="energyMeter">
   <head>
     <meta charset="UTF-8" />
-    <title>Controlco</title>
+    <title>Incorta - Trang Tran | UX Portfolio</title>
 
     <link rel="stylesheet" href="css/style.css" />
     <meta
@@ -25,51 +25,61 @@
     <div id="homepage-section">
       <header class="header">
         <div class="headcontain">
-          <a href="http://trangerthings.com"
-            ><img class="logo" src="images/newt2.svg"
-          /></a>
-
-          <div class="right-ham hideme2">
-            <div id="nav-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="hamoverlay">
-              <div class="overlayContent">
-                <a href="http://www.trangerthings.com" id="">Work</a>
-                <a href="blog" id="">Blog</a>
-                <a href="biography" id="">About</a>
-              </div>
-            </div>
+          <div class="logo">
+            <a href="http://trangtran.design/"
+              ><img class="logo" src="images/newt2.svg"
+            /></a>
           </div>
 
-          <ul class="navlist hide">
-            <li class=""><a href="#">work</a></li>
-            <li class=""><a href="#">blog</a></li>
-            <li class=""><a href="#">about</a></li>
-          </ul>
+          <nav class="nav">
+            <div class="nav__container">
+              <ul class="navlist hide">
+                <li class="menu-item">
+                  <a href="http://trangtran.design/">Work</a>
+                </li>
+                <li class="menu-item"><a href="writing">Writing</a></li>
+                <li class="menu-item"><a href="about">About</a></li>
+              </ul>
+              <ul class="menu hideme2">
+                <li class="menu-item">
+                  <a href="http://trangtran.design/">Work</a>
+                </li>
+                <li class="menu-item"><a href="writing">Writing</a></li>
+                <li class="menu-item"><a href="about">About</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <button class="hamburger__container mobile">
+            <div class="hamburger">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </button>
+
+          <!-- start ip nav-->
+
+          <!--end ip nav-->
         </div>
       </header>
     </div>
 
     <div id="header">
       <div id="first-section">
-        <div class="introfullblock">
-          <div class="row">
-            <div class="introtext">
-              <h1 class="main-index-title">Controlco</h1>
-              <p class="index-subject">Product Design | Visual Design</p>
+        <div class="introaboutblock">
+          <div class="project-row">
+            <h1 class="main-index-title">Incorta</h1>
+            <p class="pre-paragraph">Data File Directory</p>
+            <p class="index-subject">Product Design | Visual Design</p>
 
-              <p class="index-paragraph">
-                The Controlco web app is a systems integration platform that
-                lets facility technicians harness the full potential of their
-                IoT data to ease through day to day operations. I took part in
-                an ambitious redesign initiative that not only delivered an
-                intuitive and empowering experience that users raved about, but
-                also made a business impact in gaining more industry attention.
-              </p>
-            </div>
+            <p class="index-paragraph">
+              Users of the Incorta Data Analytics Platform were adding large
+              amounts of data files into a single location with limited file
+              management capabilities. I introduced a feature enhancement to
+              store files within a directory, solving a longstanding issue for
+              users&#8212; poor data management.
+            </p>
           </div>
         </div>
       </div>
@@ -77,10 +87,10 @@
     </div>
 
     <div class="newblocks">
-      <div class="ro">
+      <div class="row">
         <img
           class="header-image"
-          src="images/controlco-iot-web-app/index-header.png"
+          src="images/incorta-data-file-directory/data.png"
         />
       </div>
 
@@ -98,26 +108,30 @@
         <div class="row">
           <p class="subject">opportunity</p>
 
-          <p class="pre-paragraph">High Time for a Redesign</p>
+          <p class="pre-paragraph">
+            The Villain of this Story: A Poor File Management System
+          </p>
           <p class="project-paragraph">
-            Controlco integrates IoT systems to provide a platform for field
-            technicians to manage HVAC, lighting, energy, and other data.
-            However, the product was piecemealed together without design or a
-            deep understanding of user behaviors and needs, resulting in a
-            Frankenstein app that users griped about.
+            The current Incorta Data Files page was one of the few remnants of
+            the outdated Angular framework which the platform was built on a few
+            years ago. One of the outstanding company roadmap items was to port
+            the Data Files page over to React, but enhancing this part of the
+            platform was also a long-awaited user request.
           </p>
 
           <p class="project-paragraph">
-            One of our customers was integrating lighting control panels, which
-            meant a new feature was to be added in product to utilize that data.
-            The VP of Product wanted to also use that opportunity for a redesign
-            that would finally address all the current product flaws.
+            Users have complained about the lack of support for data file
+            management in the Incorta platform. They needed a scalable solution
+            for the increasing amount of files.
           </p>
         </div>
 
         <div class="project-row">
-          <img src="images/controlco-iot-web-app/oldui.png" class="" />
-          <p class="caption">The state of the Controlco web app at the time</p>
+          <img
+            src="images/incorta-data-file-directory/datafiles.png"
+            class=""
+          />
+          <p class="caption">The Angular build of the Data Files page</p>
         </div>
       </div>
 
@@ -126,17 +140,15 @@
           <p class="subject">the role of design</p>
 
           <p class="pre-paragraph">
-            As the design lead, I helped us shift towards a user-first approach
-            and introduced industry-standard design tools for prototyping and
-            collaboration.
+            I was the lead designer for this feature, working closely with
+            Product Management and solutions architects to find ways to optimize
+            for a better data management.
           </p>
 
           <p class="project-paragraph">
-            I partnered with a fullstack engineer and a project manager, and led
-            the project from end to end. I conducted user research, proposed
-            solutions through mockups and iterating, owned the visual design,
-            and measured our successes after implementation. I brought Sketch,
-            Zeplin, and InVision into our tech stack.
+            I met with the solutions architects regularly, and later on, looped
+            in engineering to discuss scope. I led this project from start to
+            finish, including the handoff of high fidelity prototypes.
           </p>
         </div>
       </div>
@@ -144,95 +156,72 @@
       <div class="fullblock">
         <div class="row">
           <p class="subject">research and discoveries</p>
-          <p class="pre-paragraph">Interviewing the Experts</p>
+          <p class="pre-paragraph">
+            Understanding How Incorta Users Manage Data
+          </p>
 
           <p class="project-paragraph">
-            The users are facility technicians (also called controls/BAS
-            technicians) and have a vast and blended knowledge of HVAC,
-            lighting, mechanical, and systems programming. I conducted
-            interviews with three technicians to capture their sentiments and
-            frustrations about the app, understand their workflow, and find
-            areas of improvement.
+            We learned about the users' workflows and their challenges directly
+            from the interactions they had with Product Management and the
+            solution architects. The end users are data analysts who are
+            responsible for bringing data into their team's Incorta instance.
+            From there, relationships are mapped from these data objects to
+            provide meaningful insights through data visualizations.
           </p>
         </div>
         <div class="project-row">
-          <p class="pre-paragraph">Meet Phil, the Technician</p>
+          <p class="pre-paragraph">The Data Analyst</p>
 
-          <div class="persona-row image-shadow">
+          <div class="persona-row persona-shadow">
             <div class="unequal-column personathirtyleft">
               <img
-                src="images/controlco-iot-web-app/iot-man.png"
+                src="images/incorta-data-file-directory/humaninterest.jpg"
                 class="persona-pic"
               />
 
               <p class="eyebrow">Age</p>
-              <p class="persona-text">40</p>
+              <p class="persona-text">33</p>
 
               <p class="eyebrow">Job Title</p>
-              <p class="persona-text">Facility Technician</p>
+              <p class="persona-text">Data Analyst</p>
             </div>
             <div class="unequal-column middle"></div>
             <div class="unequal-column sixtytworight">
               <p class="eyebrow">Role</p>
               <p class="persona-text">
-                Responsible for preventative maintenance work on equipment,
-                troubleshooting malfunctions via programming, and making sure
-                everything is in homeostasis.
+                Responsible for bringing data into Incorta to use. Day to day
+                includes joining objects to create schemas and ultimately, data
+                visualizations to understand business challenges.
               </p>
 
               <p class="eyebrow">Challenges</p>
               <ul class="personalist">
-                <li>No high level view of facility's health</li>
-                <li>Simple tasks feel tedious</li>
-                <li>Error prone interface</li>
-                <li>Current interface is not intuitive to new hires</li>
+                <li>Unable to categorize data files into groups</li>
+                <li>Uploading files is tedious</li>
+                <li>Prefers modifying files within Incorta</li>
+                <li>Finding files is almost impossible</li>
               </ul>
 
               <p class="eyebrow">Behaviors</p>
               <p class="persona-text">
-                Detail-oriented, optimizes for time, and does not consider
-                himself as "tech-savvy".
+                Incredibly tech savvy and and learns things quickly. Likes
+                customization.
               </p>
             </div>
           </div>
         </div>
-
         <div class="project-row">
-          <div class="unequal-column fortytwoleft">
-            <p class="pre-paragraph">
-              A Day in the Life of a Facility Technician
-            </p>
-            <p class="project-paragraph">
-              The technician's product touchpoint begins when they log into the
-              Controlco web app to access their facility's data. They oversee
-              equipment statuses, fan speeds, damper positions, temperatures,
-              airflows, and other important information.
-            </p>
-          </div>
-          <div class="unequal-column middle"></div>
-          <div class="unequal-column fiftyright">
-            <img src="images/controlco-iot-web-app/officespace1.jpg" />
-            <p class="caption">
-              The "Home" and "HVAC" screen. The homepage for any IoT product is
-              usually where users would see an overall summary of their
-              facility, which was something that Controlco didn't supply.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-row">
+          <p class="pre-paragraph">
+            The Nuances of Bringing Data Files Into Incorta
+          </p>
           <p class="project-paragraph">
-            The technicians play an important role in ensuring that their
-            facilities are running smoothly in an optimal environment. Through
-            the UI, they can change setpoints and positions for equipment as
-            well as set up one-off events to override the current schedule.
-            Controlco also provides reporting so they can keep track of the
-            analytics. While the app helped get the job done, technicians had a
-            bone to pick with the current interface and were quick to point out
-            the areas of friction.
+            There are two ways of bringing data into Incorta. First is by
+            connecting to a database, and second, is through uploading CSV or
+            Excel files. However, if users decided to go with the file route,
+            there was no concept of folders to organize the files to their
+            liking. This was one of several issues that users had with the app.
           </p>
         </div>
-
         <div class="project-row">
           <p class="eyebrow">Pain Points</p>
 
@@ -240,41 +229,53 @@
             <!-- <div class="container-line"></div> -->
             <div class="container-topbox">
               <div class="container-box-text">
-                Information displayed was not prioritized to help users see what
-                was important.
+                Files cannot be renamed once uploaded into Incorta
               </div>
             </div>
 
             <div class="container-box">
               <div class="container-box-text">
-                Whenever a user made an update on the frontend, there was no
-                confirmation to indicate that the change took place.
+                Finding files was difficult as there was no way to search and
+                filter
               </div>
             </div>
             <div class="container-box">
               <div class="container-box-text">
-                There were too many small interactions needed for simple tasks
-                such as setting up an equipment schedule.
+                The "New" button corresponded to different actions depending on
+                the tab that the user was on
               </div>
             </div>
             <div class="container-box">
               <div class="container-box-text">
-                Basic table functionalities were lacking, such as sorting and
-                filtering in tables.
+                Uploading one file at a time was time consuming
               </div>
             </div>
           </div>
         </div>
 
         <div class="project-row">
+          <p class="pre-paragraph">
+            Users came up with a workaround to make locating files a little
+            easier
+          </p>
           <p class="project-paragraph">
-            The most pressing area of concern was that users lacked a "health
-            dashboard". It was important for users to see how their system is
-            running at a high level so they can drill down into the areas that
-            warrant attention. Additionally, users didn't enjoy the look and
-            feel of the app, specifically pointing out that there were different
-            fonts being used all over and that each page looked wildly different
-            from one other.
+            To ensure that relevant files are clumped together in the listing
+            page, users adhered to a naming convention before uploading. For
+            example, files that were used together were named in alphanumeric
+            order. It was extra work upfront, but it allowed files to be easier
+            to organize.
+          </p>
+        </div>
+
+        <div class="project-row">
+          <p class="pre-paragraph">
+            Data Analysts wanted to save time and effort
+          </p>
+          <p class="project-paragraph">
+            Users wanted to customize their Incorta instance so that they can
+            spend less time and effort on managing data sources and files. If
+            users can spend less time doing so, they can use that time to create
+            data visualizations that can inform company decisions.
           </p>
         </div>
 
@@ -294,23 +295,23 @@
           <p class="subject">Vision</p>
 
           <p class="pre-paragraph">
-            Our goal was to redesign the Controlco web app to increase
-            efficiencies through an improved experience.
+            Our goal was to enhance the Data Files tab so that users can
+            customize and better manage their data.
           </p>
         </div>
 
         <div class="row">
           <p class="eyebrow">Criteria for Success</p>
           <ol>
+            <li>The ability to create folders and rename folders</li>
+            <li>Uploading folders</li>
+            <li>Managing permissions to overwrite</li>
             <li>
-              Provide a homepage dashboard that guide users towards what actions
-              they should take in regards to the overall system
+              Allow "New" button to combine actions for data file and data
+              source
             </li>
-            <li>
-              Revamp the product to have a cohesive visual identity to make for
-              a better experience
-            </li>
-            <li>Improvement in user workflow</li>
+            <li>Folder permissions</li>
+            <li>Move files/folders</li>
           </ol>
         </div>
       </div>
@@ -318,199 +319,242 @@
       <div class="fullblock">
         <div class="row">
           <p class="subject">design</p>
+          <p class="pre-paragraph">Ideation</p>
+          <p class="project-paragraph">
+            In addition to what users said they wanted, I did some research on a
+            few industry leaders to get an idea on how each of them handled
+            storage. I looked to Google Drive, Dropbox, and Egnyte to name a
+            few. I created wireframes to communicate what the new file structure
+            and functionalities would look like.
+          </p>
+        </div>
+
+        <div class="project-row">
           <p class="pre-paragraph">
-            Technicians wanted an overview of how their facility is doing.
+            Along the way, I realized we needed a better navigation to support
+            the new file structure.
           </p>
           <p class="project-paragraph">
-            Insights from the interviews showed that users were interested in
-            things like:
+            Introducing the concept of folders would mean nesting. Now that
+            users will be able to nest folders, they'll need a way to traverse
+            through the file path. The only part of our app that utilizes
+            somewhat of a directory structure is the Content tab, where
+            dashboards and folders can be grouped into folders. However, the
+            current implementation doesn't provide a way for users to navigate
+            back to folders in a path.
           </p>
-          <ol>
-            <li>How many units are on/offline?</li>
-            <li>What alarms were activated?</li>
-            <li>What's the status of the central plant components?</li>
-          </ol>
+        </div>
+
+        <div class="project-row">
+          <img src="images/incorta-data-file-directory/oldbc.png" />
+          <p class="caption">
+            The current navigation pattern only showed the current file
+            location.
+          </p>
+        </div>
+
+        <div class="project-row">
           <p class="project-paragraph">
-            My vision was to make our product easy to use, starting with
-            reducing the amount of "processing" that people had to do when
-            consuming heavy data. I created wireframes for a dashboard that
-            captures the important KPIs to help users determine their next move.
+            Users couldn't see the previous folder and were limited to going
+            back one level. We've had ongoing complaints from customers and
+            internal users about this experience not being intuitive. Users
+            wanted the transparency of knowing their location in the
+            hierarchical structure so they can browse back to higher levels.
+          </p>
+          <p class="project-paragraph">
+            I redesigned the breadcrumb component to show the root location, an
+            option to look at multiple folders in that path, the previous
+            folder, and the current folder that the user is in.
           </p>
         </div>
 
         <div class="project-row">
           <div class="unequal-column thirtyright blackbg image-shadow">
             <div class="caption-bubble-right">
-              <p class="white eyebrow">Homepage Wireframe</p>
+              <p class="white eyebrow">Navigation v1</p>
               <p class="white project-paragraph">
-                The homepage would serve as the northstar for our users. Upon
-                logging in, they'd be able to identify areas of interest and
-                then dive into each system if needed.
+                I redesigned the breadcrumb component to allow access to
+                multiple folders in the path of the current file.
               </p>
             </div>
           </div>
           <div class="unequal-column middle"></div>
           <div class="unequal-column sixtytwoleft">
             <img
-              src="images/controlco-iot-web-app/homepagev1.png"
+              src="images/incorta-data-file-directory/breadcrumblofi.png"
               class="image-shadow"
             />
           </div>
         </div>
-        <div class="project-row">
-          <p class="pre-paragraph">
-            There were several "quality of life" improvements that we wanted to
-            address in the app.
-          </p>
-          <p class="project-paragraph">
-            Some improvements include functionalities that would help users
-            navigate through dense tables, toggle inputs instead of dropdowns
-            when appropriate, confirmation messages, and improved modal
-            implementation.
-          </p>
-        </div>
-        <div class="project-row">
-          <img src="images/controlco-iot-web-app/lofi.png" />
-        </div>
 
-        <!-- <div class="project-row">
+        <div class="project-row">
+          <p class="project-paragraph">
+            In a design sync, we eventually agreed that the title of the page
+            shouldn't be styled like the breadcrumb path. The feedback was that
+            the page title should assume its own identity, thus it was decided
+            to move the title of the page to the next line. It would also be
+            helpful to users if the page title stayed in one spot and not having
+            to jump around depending on how nested the file is.
+          </p>
+        </div>
+        <div class="project-row">
           <div class="unequal-column thirtyleft blackbg">
             <div class="caption-bubble-left">
-              <h3 class="white">Homepage Wireframe V2</h3>
+              <p class="eyebrow white">Navigation v2</p>
               <p class="white project-paragraph">
-                For V2, I grouped KPIs to indicate they were related points. I
-                also introduced icons and visualizations to help users quickly
-                understand the data.
+                I iterated on the navigation so that the current page was
+                separate from the breadcrumb path.
               </p>
             </div>
           </div>
           <div class="unequal-column middle"></div>
           <div class="unequal-column sixtytworight">
-            <img src="images/homepagev1.png" class="image-shadow" />
+            <img
+              src="images/incorta-data-file-directory/newbreadcrumb.png"
+              class="image-shadow"
+            />
           </div>
-        </div> -->
-
-        <!-- <div class="project-row">
-          <p class="pre-paragraph">
-            Improving the Interaction Patterns and Behaviors
-          </p>
         </div>
-        <div class="row">
-          <div class="container-flex">
-            <div class="container-columns">
-              <img src="images/Desktop-1.png" />
-              <p class="caption">
-                Confirmation messages to indicate that changes have been made to
-                the system.
-              </p>
-            </div>
-
-            <div class="container-columns">
-              <img src="images/Desktop-1.png" />
-              <p class="caption">Simple buttons</p>
-            </div>
-            <div class="container-columns">
-              <img src="images/Desktop-1.png" />
-              <p class="caption">
-                Tables were improved with basic capabilities like sorting and
-                filtering.
-              </p>
-            </div>
-          </div>
-        </div> -->
 
         <div class="project-row">
-          <div class="unequal-column thirtyleft">
-            <p class="pre-paragraph">Visual Design</p>
-            <p class="project-paragraph">
-              We ventured away from our dark palette of blues and blacks. I
-              played around with different color combinations and eventually
-              captured a set of colors that were versatile and user-approved.
-            </p>
-            <p class="project-paragraph">
-              In spirit of making sure everything is digestible for users, we
-              got rid of the serif fonts and went with Avenir for its nicely
-              rounded shapes and readability.
-            </p>
-          </div>
-          <div class="unequal-column middle"></div>
-          <div class="unequal-column sixtytworight">
-            <img src="images/controlco-iot-web-app/visualdesign.png" class="" />
-            <p class="caption">
-              A few newly redesigned components to bear our new aesthetic
-            </p>
-          </div>
+          <p class="pre-paragraph">Enhancing the File Storage System</p>
+          <p class="project-paragraph">
+            After brainstorming the new navigation pattern, I created wireframes
+            for the following scenarios:
+          </p>
+          <ul>
+            <li>Uploading files/folders</li>
+            <li>Renaming files/folders</li>
+            <li>Searching</li>
+            <li>Sorting</li>
+            <li>Notification alerts</li>
+          </ul>
+          <p class="project-paragraph">
+            You can get a better view of the prototype
+            <a
+              href="https://projects.invisionapp.com/share/SMZKHSNY67W#/screens/439037341_Support_Directory_In_Data_Tab"
+              target="_blank"
+              class="inbodylink"
+              >here</a
+            >
+            on InVision.
+          </p>
+        </div>
+
+        <div class="project-row">
+          <img src="images/incorta-data-file-directory/sketchwireframe.png" />
+          <p class="caption">
+            Sketch wireframes showing all scenarios. Click
+            <a
+              href="https://projects.invisionapp.com/share/SMZKHSNY67W#/screens/439037341_Support_Directory_In_Data_Tab"
+              target="_blank"
+              class="inbodylink"
+              >here</a
+            >
+            for InVision prototype.
+          </p>
+        </div>
+
+        <div class="project-row">
+          <p class="pre-paragraph">
+            The Product Team aligned with the proposed designs, until we were
+            met with engineering constraints.
+          </p>
+          <p class="project-paragraph">
+            In a sync with the server and front-end teams, we found out that
+            some of our tasks would not be able to fit in the upcoming release.
+          </p>
+          <ul>
+            <li>
+              The server team cannot support the relocating of folders because
+              it was a huge engineering effort and they were slammed with higher
+              priority tasks.
+            </li>
+            <li>
+              The front-end team is unable to merge the upload folders and files
+              into one prompt (their current tech stack doesn't support that).
+            </li>
+            <li>The server team cannot support folder-specific permissions.</li>
+          </ul>
+          <p class="eyebrow">
+            "What if a user doesn't have permission to a certain folder, but has
+            access to the file within it?"
+          </p>
+          <p class="project-paragraph">
+            We realized the complexity of folders and permissions after meeting
+            with the teams. As a result of our discussion, we agreed to remove
+            some of the enhancements (moving folders and folder-specific
+            permissions) to include them in the later release. For the first
+            release, we are only attaching permissions to files instead of
+            folders. I updated the wireframes to limit the scope of actions and
+            handed it off to Engineering.
+          </p>
         </div>
       </div>
 
       <div class="fullblock">
         <div class="row">
           <p class="subject">the delivery</p>
-          <p class="pre-paragraph">A New Look for Controlco</p>
-        </div>
-
-        <!-- <div class="project-row">
-          <div class="unequal-column sixtytwoleft">
-            <img src="images/controlco-iot-web-app/hifi1.png" />
-          </div>
+          <p class="pre-paragraph">
+            A Proper Repository for Data Files, Built in React
+          </p>
         </div>
 
         <div class="project-row">
-          <div class="unequal-column sixtytworight">
-            <img src="images/controlco-iot-web-app/hifi1.png" />
-          </div>
+          <img src="images/incorta-data-file-directory/longfinalscreens.png" />
         </div>
-        <div class="project-row">
-          <img src="images/controlco-iot-web-app/hifi2.png" />
-        </div> -->
-        <div class="project-row">
-          <img src="images/controlco-iot-web-app/long.png" />
-        </div>
-        <div class="project-row">
-          <video width="100%" class="image-shadow">
-            <source src="images/testing.mp4" type="video/mp4" />
-          </video>
-        </div>
+
         <div class="project-row">
           <p class="pre-paragraph">
-            The app looks good, but <i>is it better?</i>
+            Small feature enhancements, huge increase in productivity
           </p>
 
           <p class="project-paragraph">
-            After its launch, the new Controlco app garnered a lot of positive
-            feedback from users and internal stakeholders alike. In order to
-            quantify the impact of our efforts, we went ahead and recorded the
-            time it took for users to set up schedules to compare with the times
-            they initially spent with the old interface. We managed to reduce
-            the time users were spending on this task.
+            We had positive feedback from users, despite not being able to truly
+            treat the Data tab like a directory yet. We were told that as a
+            result of the feature, it made a huge difference in their data
+            management workflow. They also expressed their excitement for the
+            upcoming enhancements in the second phase.
           </p>
           <p class="project-paragraph">
-            As a result of the redesign, one of our customers wanted to use
-            Controlco as the systems integrator for a few other facilities in
-            their portfolio. My biggest personal achievement, however, was
-            helping the company pivot towards being design-oriented and
-            user-centric, which was reflected in how we proceeded with
-            subsequent projects.
+            This support for data files was a long-awaited wish for the
+            customers. Moving forward, the breadcrumb design is going to be the
+            standard implementation for the other pages in Incorta whenever
+            applicable. The next phase for this project is currently in the
+            works, which includes folder-specific permissions and moving folders
+            around.
+          </p>
+        </div>
+        <div class="project-row">
+          <p class="pre-paragraph">The Takeaway: Thoughts and Lessons</p>
+
+          <p class="project-paragraph">
+            Working on this feature was a reminder that it's not uncommon that
+            teams are not aligned on priorities. While this feature was an
+            important one to the users, we were constrained by limited
+            resources. In hindsight, things may have been more efficient had
+            Engineering been a part of our early alignment meetings or kickoff
+            to help identify what was possible and what wasn't.
           </p>
         </div>
       </div>
       <div class="fullincortablock">
         <div class="row">
-          <div class="unequal-column fiftyleft">
+          <div class="unequal-column halfleft">
             <p class="subject-white">next project</p>
-            <p class="pre-paragraph white">Human Interest</p>
-
-            <p class="project-paragraph white">
-              Currently leading design for an internal 401(k) recordkeeping
-              platform.
+            <p class="projectnames nomarginbottom white">Controlco</p>
+            <p class="eyebrow nomargintop white">
+              Web Solution for Smart Buildings
             </p>
-            <a href="humaninterest" class="button nextproject">
-              View Case Study</a
-            >
+            <p class="project-paragraph white">
+              Introduced industry-standard tools and processes to design cutting
+              edge IoT software for facility operations.
+            </p>
+            <a href="controlco" class="button nextproject"> View Case Study</a>
           </div>
           <div class="unequal-column middle"></div>
 
-          <div class="unequal-column fortytworight">
+          <div class="unequal-column halfright">
             <!-- <img
               src="images/human-interest/hi-header.png"
               class="extraspacetop spacebottom hide"
@@ -525,22 +569,26 @@
           <!-- <div class="bottom_line"></div> -->
 
           <p class="eyebrow">Copyright © 2020 Trang Tran</p>
-          <p class="">Made from scratch with love and my atrocious code.</p>
+          <p class="copyright">
+            Made from scratch with love and my atrocious code.
+          </p>
 
           <ul class="svglist">
             <li class="one">
-              <a href="#"
-                ><img class="footersvg" src="behanceround.svg" alt="Behance"
+              <a href="mailto:trangtt427@gmail.com"
+                ><img class="footersvg" src="emailround.svg" alt="Email"
               /></a>
             </li>
             <li class="">
-              <a href="#"
+              <a
+                href="https://www.linkedin.com/in/trangerthings/"
+                target="_blank"
                 ><img class="footersvg" src="linkedinround.svg" alt="LinkedIn"
               /></a>
             </li>
             <li class="">
-              <a href="#"
-                ><img class="footersvg" src="emailround.svg" alt="Email"
+              <a href="https://www.behance.net/trangerthings" target="_blank"
+                ><img class="footersvg" src="behanceround.svg" alt="Behance"
               /></a>
             </li>
           </ul>
