@@ -762,7 +762,6 @@ a.button {
 }
 
 .animation-element.slide-left.in-view,
-.animation-element.slide-right.in-view,
 .animation-element.slide-up.in-view,
 .animation-element.appear.in-view {
   opacity: 1;
