@@ -1099,6 +1099,7 @@ header {
   .project-paragraph,
   .index-paragraph,
   .index-project-paragraph,
+  .container-box-text,
   li {
     font-size: 17px;
   }
