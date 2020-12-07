@@ -906,8 +906,8 @@ a.button {
 }
 
 .animate-in {
-  -webkit-animation: fadeIn 0.75s ease-in;
-  animation: fadeIn 0.75s ease-in;
+  -webkit-animation: fadeIn 0.5s ease-in;
+  animation: fadeIn 0.5s ease-in;
 }
 
 @-webkit-keyframes fadeIn {
