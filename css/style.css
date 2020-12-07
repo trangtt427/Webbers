@@ -934,7 +934,7 @@ header {
   z-index: 100;
   position: fixed;
   padding-left: 35px;
-  padding-right: 35px;
+  padding-right: 25px;
   top: 0;
   left: 0;
   right: 0;
@@ -1016,6 +1016,7 @@ header {
     position: relative;
     z-index: 9999;
     background: white;
+    padding: 10px;
   }
 
   .nav {
