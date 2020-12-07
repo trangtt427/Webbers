@@ -547,7 +547,7 @@ section {
   -webkit-font-smoothing: antialiased;
   font-size: 19px;
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .blog-container-box-text {
