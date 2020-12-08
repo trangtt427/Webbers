@@ -115,7 +115,7 @@ $("#nav-icon").click(function () {
 /*Interactivity to determine when an animated element in in view. In view elements trigger our animation*/
 $(document).ready(function () {
   //window and animation items
-  var animation_elements = $.find(".anim");
+  var animation_elements = $.find(".animation-element");
   var web_window = $(window);
 
   //check to see if any animation containers are currently in view
