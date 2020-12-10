@@ -1044,6 +1044,16 @@ header {
   .nav {
     text-align: center;
   }
+
+  .headcontain,
+  header {
+    height: 60px;
+  }
+
+  .logo {
+    width: 35px;
+  }
+
   .menu {
     margin: 0 0 80px;
     padding-inline-start: 0px;
