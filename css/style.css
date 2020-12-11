@@ -859,6 +859,11 @@ a.button {
   transition: all 0.3s ease;
 }
 
+.pixeltrang {
+  margin-top: 250px;
+  max-width: 220px;
+}
+
 .navlist li,
 .svglist li {
   display: inline-block;
@@ -1039,6 +1044,10 @@ header {
 @media only screen and (max-width: 800px) {
   .hidingblog {
     display: none;
+  }
+
+  .pixeltrang {
+    margin-top: 80px;
   }
 
   .nav {
