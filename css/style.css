@@ -1,7 +1,8 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.6;
-  color: #1a1b1f;
+  /* color: #1a1b1f; */
+  color: #2a3031;
   margin: 0;
   -webkit-font-smoothing: subpixel-antialiased; /* antialiased | subpixel-antialiased | none */
   /* -ms-overflow-style: none; 
@@ -27,7 +28,7 @@ a {
 ul {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
-  font-size: 19px;
+  font-size: 17px;
   transition: 0s all ease-in-out;
 }
 
@@ -53,7 +54,7 @@ ul .menu {
 
 .navlist li a {
   text-transform: uppercase;
-  color: #1a1b1f;
+  color: #2a3031;
   text-decoration: none;
   letter-spacing: 0.15em;
   font-size: 13px;
@@ -76,7 +77,7 @@ ul .menu {
   height: 1px;
   left: 0;
   position: absolute;
-  background: #1a1b1f;
+  background: #2a3031;
   transition: 0.2s all ease-in-out;
   width: 0;
 }
@@ -101,7 +102,7 @@ ul .menu {
   height: 1px;
   left: 0;
   position: absolute;
-  background: #1a1b1f;
+  background: #2a3031;
   transition: 0.2s all ease-in-out;
   width: 0;
 }
@@ -114,7 +115,7 @@ ul .menu {
   height: 1px;
   left: 0;
   position: absolute;
-  background: #1a1b1f;
+  background: #2a3031;
   transition: 0.3s all ease-in-out;
   width: 100%;
 }
@@ -127,7 +128,7 @@ ul .menu {
   height: 1px;
   left: 0;
   position: absolute;
-  background: #1a1b1f;
+  background: #2a3031;
   transition: 0.3s all ease-in-out;
   width: 100%;
 }
@@ -189,7 +190,7 @@ li a:hover:after {
 }
 
 .svglist li a img {
-  color: #1a1b1f;
+  color: #2a3031;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
@@ -255,7 +256,7 @@ button:focus {
   position: absolute;
   width: 100%;
   height: 1px;
-  background: #1a1b1f;
+  background: #2a3031;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -354,8 +355,9 @@ img {
 }
 
 .caption {
-  color: #7b7f8e;
-  font-size: 16px;
+  color: #97989e;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
   margin: auto;
   padding-top: 20px;
   text-align: center;
@@ -515,13 +517,14 @@ section {
 .index-paragraph {
   font-family: "Source Sans Pro";
   -webkit-font-smoothing: antialiased;
-  font-size: 19px;
-  max-width: 750px;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 700px;
   margin-top: 60px;
 }
 
 .subject:after {
-  background-color: #1a1b1f;
+  background-color: #2a3031;
   content: "";
   display: inline-block;
   height: 1px;
@@ -534,7 +537,6 @@ section {
 
 .projectnumber {
   font-size: 60px;
-  margin-bottom: -5px;
   font-family: "DM Serif Text", serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 400;
@@ -545,7 +547,7 @@ section {
 .container-box-text {
   font-family: "Source Sans Pro";
   -webkit-font-smoothing: antialiased;
-  font-size: 19px;
+  font-size: 17px;
   padding: 20px;
   text-align: left;
 }
@@ -572,15 +574,16 @@ section {
 ol,
 ul {
   -webkit-font-smoothing: antialiased;
-  font-size: 19px;
-  max-width: 750px;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 700px;
   margin: 40px 0;
 }
 
 .persona-text {
   -webkit-font-smoothing: antialiased;
-  font-size: 19px;
-  max-width: 750px;
+  font-size: 17px;
+  max-width: 700px;
   margin: 20px 0;
 }
 
@@ -589,45 +592,39 @@ ul {
 }
 
 .index-project-paragraph {
-  line-height: 1.6;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
-  font-size: 19px;
+  font-size: 17px;
   margin: 30px 0;
 }
 
 .thought {
-  font-family: "Source Sans Pro";
-  font-style: italic;
-  font-size: 24px;
-  padding-left: 1em;
-  border-left: 1px solid #757682;
-  max-width: 550px;
-  margin: auto;
-  transition: all 0.3s ease-in-out 0s;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  padding-left: 2em;
+  border-left: 1px solid #c6c7cc;
+  max-width: 700px;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 2em;
 }
 
 .quote {
-  margin: auto;
-  padding-top: 32px;
-  font-size: 18px;
-  max-width: 550px;
-  float: right;
+  max-width: 500px;
+  -webkit-font-smoothing: antialiased;
+  text-align: right;
 }
+
 a.button {
   background: white;
-  color: #1a1b1f;
+  color: #2a3031;
   padding: 12px 85px 12px 25px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 3em;
   max-width: 550px;
   transition: 0.5s;
   position: relative;
   border: solid;
-  border-color: #1a1b1f;
+  border-color: #2a3031;
   border-width: 1.1px;
   text-decoration: none;
 }
@@ -694,7 +691,6 @@ a.button {
   opacity: 0;
   position: relative;
 }
-/*animation element sliding left*/
 
 .anim.slide-up {
   opacity: 0;
@@ -807,8 +803,8 @@ a.button {
 .pre-paragraph {
   font-family: "DM Serif Text", serif;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-size: 32px;
-  max-width: 750px;
+  font-size: 30px;
+  max-width: 700px;
 }
 
 .white {
@@ -819,7 +815,7 @@ a.button {
   font-family: "DM Serif Text", serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 24px;
-  max-width: 750px;
+  max-width: 700px;
 }
 
 .copyright {
@@ -838,7 +834,7 @@ a.button {
   font-family: "Source Sans Pro";
   font-style: italic;
   font-size: 26px;
-  max-width: 750px;
+  max-width: 700px;
   padding-top: 100px;
   margin: auto;
 }
@@ -884,6 +880,14 @@ a.button {
 
 .fullgrayblock {
   background-color: #f7f8fc;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  margin: auto;
+}
+
+.fullblueblock {
+  background-color: #1138a9;
   padding-top: 100px;
   padding-bottom: 100px;
   width: 100%;
@@ -1074,13 +1078,13 @@ header {
     font-family: "DM Serif Text", serif;
     -webkit-font-smoothing: subpixel-antialiased;
     font-size: 32px;
-    max-width: 750px;
+    max-width: 700px;
     margin: 50px;
-    color: #1a1b1f;
+    color: #2a3031;
   }
   .menu-item a {
     text-decoration: none;
-    color: #1a1b1f;
+    color: #2a3031;
   }
 
   html.noscroll {
@@ -1135,7 +1139,8 @@ header {
     padding-bottom: 50px;
   }
 
-  .fullgrayblock {
+  .fullgrayblock,
+  .fullblueblock {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -1185,7 +1190,7 @@ header {
   .container-box-text,
   .persona-text,
   li {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   a.button {
@@ -1194,7 +1199,6 @@ header {
 
   .projectnumber {
     font-size: 40px;
-    margin-bottom: -5px;
   }
 
   .subject {
@@ -1216,7 +1220,7 @@ header {
   }
 
   .pre-paragraph {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .eyebrow {
