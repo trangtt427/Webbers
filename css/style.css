@@ -334,6 +334,7 @@ img {
   padding-left: 30px;
   padding-top: 80px;
   margin: auto;
+  transition: none;
 }
 
 .row:after {
