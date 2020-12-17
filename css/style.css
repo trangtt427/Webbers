@@ -332,7 +332,7 @@ img {
   max-width: 1200px;
   padding-right: 30px;
   padding-left: 30px;
-  padding-top: 80px;
+  padding-top: 40px;
   margin: auto;
   transition: none;
 }
@@ -1167,10 +1167,6 @@ header {
 
   .container-flex {
     flex-direction: column;
-  }
-
-  .project-row {
-    padding-top: 40px;
   }
 
   .unequal-column {
