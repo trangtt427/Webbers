@@ -116,15 +116,16 @@
           outdated Angular framework which the platform was built on a few years
           ago. One of the outstanding company roadmap items was to port the Data
           Files page over to React, but enhancing the data functionalities was
-          more important to users.
+          the more anticipated feature for users.
         </p>
 
         <p class="project-paragraph">
           Users have long complained about the lack of support for data file
           management in the Incorta platform. Files could only be uploaded in a
           flat location, with no grouping or customization. There was also no
-          bulk upload concept as well. They needed a scalable solution for the
-          increasing amount of files.
+          bulk upload concept. Users wanted to spend less time
+          managing/finding/uploading files so they can proceed with their other
+          functions within Incorta.
         </p>
       </div>
 
@@ -158,12 +159,12 @@
         <p class="pre-paragraph">Understanding How Incorta Users Manage Data</p>
 
         <p class="project-paragraph">
-          We learned about the users' workflows and their challenges directly
-          from the interactions they had with Product Management and the
-          solution architects. The end users are data analysts who are
-          responsible for bringing data into their team's Incorta instance. From
-          there, relationships are mapped from these data objects to provide
-          meaningful insights through data visualizations.
+          The PM and Solutions Architects frequently visited customers and users
+          onsite. I synced up with them to gather intel on our users. I was able
+          to get a good picture of our users' challenges and needs. The end
+          users are data analysts, and are responsible for bringing data into
+          their team's Incorta instance. From there, schemas are built to create
+          a visualization layer that provide key insights into their business.
         </p>
       </div>
       <div class="project-row anim appear">
@@ -215,9 +216,8 @@
         <p class="project-paragraph">
           There are two ways of bringing data into Incorta. First is by
           connecting to a database, and second, is through uploading CSV or
-          Excel files. However, if users decided to go with the file route,
-          there was no concept of folders to organize the files to their liking.
-          This was one of several issues that users had with the app.
+          Excel files. However, users were met with a few challenges when going
+          with the file route.
         </p>
       </div>
       <div class="project-row anim appear">
@@ -227,31 +227,33 @@
           <!-- <div class="container-line"></div> -->
           <div class="container-topbox">
             <div class="container-box-text">
-              <p class="eyebrow">"I can't group my files."</p>
-              This was a major challenge for users because they were unable to
-              categorize related files.
+              <p class="eyebrow">
+                "The 'New' button wasn't obvious to me at first."
+              </p>
+              Users would click here to add a data file or data source, but they
+              overlooked the fact that they were on the wrong tab before adding.
             </div>
           </div>
 
           <div class="container-box">
             <div class="container-box-text">
-              <p class="eyebrow">"There's no search feature to find files."</p>
-              Users had dozens of pages that contained files, but no searchbar.
-              Their trick was to hit Ctrl+F on each page, or find the file name
-              on their local desktop.
-            </div>
-          </div>
-          <div class="container-box">
-            <div class="container-box-text">
-              <p class="eyebrow">"The 'New' button wasn't obvious to me."</p>
-              The 'New' button had different actions depending on the tab that
-              users were on, but that wasn't communicated to users.
-            </div>
-          </div>
-          <div class="container-box">
-            <div class="container-box-text">
               <p class="eyebrow">"I can only upload one file at a time."</p>
-              Users were frustrated that they didn't have a bulk upload feature.
+              Users were frustrated that they couldn't save time with a bulk
+              upload.
+            </div>
+          </div>
+          <div class="container-box">
+            <div class="container-box-text">
+              <p class="eyebrow">"There's no search feature to find files."</p>
+              There could be hundreds of data files, but there was no built-in
+              searchbar to locate them.
+            </div>
+          </div>
+          <div class="container-box">
+            <div class="container-box-text">
+              <p class="eyebrow">"I can't group my files."</p>
+              Users were annoyed that there was no way to group files for better
+              discoverability.
             </div>
           </div>
         </div>
@@ -259,26 +261,60 @@
 
       <div class="project-row anim appear">
         <p class="pre-paragraph">
-          Users had a workaround to locate files more easily.
+          It was revealed that users have been asking for a better navigation
+          structure for a while.
         </p>
         <p class="project-paragraph">
-          To ensure that relevant files are clumped together in the listing
-          page, users adhered to a naming convention before uploading. For
-          example, files that were used together were named in alphanumeric
-          order. It was extra work upfront, but it allowed files to be easier to
-          organize.
+          I realized if we introduced the concept of folders in this
+          enhancement, we would be allowing users to nest folders inside one
+          another. Users will need a way to traverse through the file path. The
+          only part of our app that utilizes somewhat of a directory structure
+          is the Content tab, where dashboards and folders can be grouped into
+          folders. Users complained about our current implementation of the
+          breadcrumb in the Content tab because it didn't provide a way for them
+          to navigate back to folders in a path. Users wanted the transparency
+          of knowing their location in the hierarchical structure so they can
+          browse back to higher levels.
+        </p>
+      </div>
+      <div class="project-row anim appear">
+        <img src="images/incorta-data-file-directory/oldbc.png" />
+        <p class="caption">
+          The current navigation pattern only showed the current file location.
         </p>
       </div>
 
       <div class="project-row anim appear">
         <p class="pre-paragraph">
-          Data Analysts wanted to save time and effort.
+          Users had a few workarounds for some of these challenges.
         </p>
         <p class="project-paragraph">
-          Users wanted to customize their Incorta instance so that they can
-          spend less time and effort on managing data sources and files. If
-          users can spend less time doing so, they can use that time to create
-          data visualizations that can inform company decisions.
+          To ensure that relevant files are clumped together in the listing
+          page, users adhered to a naming convention before uploading. For
+          example, files that were used together were named in alphanumeric
+          order. It helped greatly for them, but it was extra work upfront.
+        </p>
+        <p class="project-paragraph">
+          There was no concept of pagination on this page and because everything
+          was loading at once, it would take over five seconds for all data to
+          appear. Users resorted to Ctrl+F to find what they're looking for, but
+          this would be a challenge for users who can't recall the exact name of
+          these files.
+        </p>
+      </div>
+
+      <div class="project-row anim appear">
+        <p class="pre-paragraph">
+          Data Analysts wanted to spend less time on menial tasks like
+          uploading, finding, and sharing data files.
+        </p>
+        <p class="project-paragraph">
+          A Data Analyst's job requires them to interpret data so they can
+          deliver key insights on how the business is doing. They spend their
+          time identifying trends and patterns in data. What they don't want to
+          do is spend a lot of time bringing in data and locating them. Users
+          want to be able to customize their Incorta instance so that these
+          files can be shared with other users who may need that same data.
         </p>
       </div>
 
@@ -298,8 +334,9 @@
         <p class="subject">Vision</p>
 
         <p class="pre-paragraph">
-          Our goal was to enhance the Data Files tab so that users can customize
-          and better manage their data.
+          Our goal was to rethink the Data Files to be more like a directory so
+          that users can manage their files for better discoverability and
+          shareability.
         </p>
       </div>
 
@@ -314,6 +351,7 @@
           </li>
           <li>Folder permissions</li>
           <li>Move files/folders</li>
+          <li>Improved file navigation</li>
         </ol>
       </div>
     </div>
@@ -321,50 +359,16 @@
     <div class="fullblock">
       <div class="row anim appear">
         <p class="subject">design</p>
-        <p class="pre-paragraph">Ideation</p>
+        <p class="pre-paragraph">Redesigning the Breadcrumb Concept</p>
         <p class="project-paragraph">
-          In addition to what users said they wanted, I did some research on a
-          few industry leaders to get an idea on how each of them handled
-          storage. I looked to Google Drive, Dropbox, and Egnyte to name a few.
-          I created wireframes to communicate what the new file structure and
-          functionalities would look like.
-        </p>
-      </div>
-
-      <div class="project-row anim appear">
-        <p class="pre-paragraph">
-          Along the way, I realized we needed a better navigation to support the
-          new file structure.
-        </p>
-        <p class="project-paragraph">
-          Introducing the concept of folders would mean nesting. Now that users
-          will be able to nest folders, they'll need a way to traverse through
-          the file path. The only part of our app that utilizes somewhat of a
-          directory structure is the Content tab, where dashboards and folders
-          can be grouped into folders. However, the current implementation
-          doesn't provide a way for users to navigate back to folders in a path.
-        </p>
-      </div>
-
-      <div class="project-row anim appear">
-        <img src="images/incorta-data-file-directory/oldbc.png" />
-        <p class="caption">
-          The current navigation pattern only showed the current file location.
-        </p>
-      </div>
-
-      <div class="project-row anim appear">
-        <p class="project-paragraph">
-          Users couldn't see the previous folder and were limited to going back
-          one level. We've had ongoing complaints from customers and internal
-          users about this experience not being intuitive. Users wanted the
-          transparency of knowing their location in the hierarchical structure
-          so they can browse back to higher levels.
-        </p>
-        <p class="project-paragraph">
-          I redesigned the breadcrumb component to show the root location, an
-          option to look at multiple folders in that path, the previous folder,
-          and the current folder that the user is in.
+          I looked at a few industry leaders to get an idea on how each of them
+          handled file storage and navigation. Google Drive, Onedrive, Dropbox,
+          and Egnyte were a few that I drew ideas from. I created wireframes to
+          communicate what the new file structure and functionalities would look
+          like. The new breadcrumb component would show the root location, an
+          option to look at multiple filders in that path, the previous folder,
+          and the current level that the user is in. This would solve the issue
+          of users not knowing their location in the hiearchical structure.
         </p>
       </div>
 
@@ -389,7 +393,7 @@
         </div>
       </div>
 
-      <div class="project-row hideme2 anim slide-up">
+      <div class="project-row hideme2 anim appear">
         <div class="unequal-column thirtyright blackbg image-shadow">
           <div class="caption-bubble-right">
             <p class="white eyebrow">Navigation v1</p>
@@ -400,7 +404,7 @@
           </div>
         </div>
         <div class="unequal-column middle"></div>
-        <div class="unequal-column sixtytwoleft anim slide-up">
+        <div class="unequal-column sixtytwoleft">
           <img
             src="images/incorta-data-file-directory/breadcrumblofi.png"
             class="image-shadow"
@@ -410,7 +414,7 @@
 
       <div class="project-row anim appear">
         <p class="project-paragraph">
-          In a design sync, we eventually agreed that the title of the page
+          In a design sync, we came to an agreement that the title of the page
           shouldn't be styled like the breadcrumb path. The feedback was that
           the page title should assume its own identity, thus it was decided to
           move the title of the page to the next line. It would also be helpful
@@ -419,6 +423,24 @@
         </p>
       </div>
       <div class="project-row hide">
+        <div class="unequal-column thirtyleft blackbg anim slide-left">
+          <div class="caption-bubble-left">
+            <p class="eyebrow white">Navigation v2</p>
+            <p class="white project-paragraph">
+              I iterated on the navigation so that the current page was separate
+              from the breadcrumb path.
+            </p>
+          </div>
+        </div>
+        <div class="unequal-column middle"></div>
+        <div class="unequal-column sixtytworight anim slide-up">
+          <img
+            src="images/incorta-data-file-directory/newbreadcrumb.png"
+            class="image-shadow"
+          />
+        </div>
+      </div>
+      <div class="project-row anim appear hideme2">
         <div class="unequal-column thirtyleft blackbg">
           <div class="caption-bubble-left">
             <p class="eyebrow white">Navigation v2</p>
@@ -436,30 +458,11 @@
           />
         </div>
       </div>
-      <div class="project-row hideme2">
-        <div class="unequal-column thirtyleft blackbg anim slide-up">
-          <div class="caption-bubble-left">
-            <p class="eyebrow white">Navigation v2</p>
-            <p class="white project-paragraph">
-              I iterated on the navigation so that the current page was separate
-              from the breadcrumb path.
-            </p>
-          </div>
-        </div>
-        <div class="unequal-column middle"></div>
-        <div class="unequal-column sixtytworight anim slide-up">
-          <img
-            src="images/incorta-data-file-directory/newbreadcrumb.png"
-            class="image-shadow"
-          />
-        </div>
-      </div>
 
       <div class="project-row anim appear">
         <p class="pre-paragraph">Enhancing the File Storage System</p>
         <p class="project-paragraph">
-          After brainstorming the new navigation pattern, I created wireframes
-          for the following scenarios:
+          I created wireframes for the following scenarios:
         </p>
         <ul>
           <li>Uploading files/folders</li>
@@ -496,83 +499,73 @@
 
       <div class="project-row anim appear">
         <p class="pre-paragraph">
-          The Product Team aligned with the proposed designs, until we were met
+          The proposed designs aligned with the requirements, but we were met
           with engineering constraints.
         </p>
         <p class="project-paragraph">
-          In a sync with the server and front-end teams, we found out that some
-          of our tasks would not be able to fit in the upcoming release.
+          In a sync with the Server and Front-end teams, we learned that they
+          couldn't accommodate some of the solutions. They had already allocated
+          resources to some of the higher priority backend projects. Some of the
+          things they couldn't deliver in time include:
         </p>
         <ul>
           <li>
-            The server team cannot support the relocating of folders because it
-            was a huge engineering effort and they were slammed with higher
-            priority tasks.
+            Functionality to move folders because there was not enough time to
+            do any engineering spikes to figure out technical deficits
           </li>
           <li>
-            The front-end team is unable to merge the upload folders and files
-            into one prompt (their current tech stack doesn't support that).
+            Merging the upload folders and files actions into one prompt because
+            the current endpoints don't support that
           </li>
-          <li>The server team cannot support folder-specific permissions.</li>
+          <li>Folder-level permissions</li>
         </ul>
+
         <p class="eyebrow">
           "What if a user doesn't have permission to a certain folder, but has
           access to the file within it?"
         </p>
         <p class="project-paragraph">
-          We realized the complexity of folders and permissions after meeting
-          with the teams. As a result of our discussion, we agreed to remove
-          some of the enhancements (moving folders and folder-specific
-          permissions) to include them in the later release. For the first
-          release, we are only attaching permissions to files instead of
-          folders. I updated the wireframes to limit the scope of actions and
+          We realized the complexity of folders and permissions. There wasn't
+          enough investigation around the edge cases. As a result of our
+          discussion, we agreed to move some of the enhancements to a V2. For
+          the first release, we are only attaching permissions to files instead
+          of folders. I updated the wireframes to limit the scope of actions and
           handed it off to Engineering.
         </p>
+      </div>
+      <div class="project-row anim appear">
+        <p class="pre-paragraph">The Final Design</p>
+      </div>
+      <div class="project-row anim appear">
+        <img src="images/incorta-data-file-directory/hifi.png" />
       </div>
     </div>
 
     <div class="fullblock">
       <div class="row anim appear">
-        <p class="subject">the delivery</p>
+        <p class="subject">the delivery and impact</p>
         <p class="pre-paragraph">
-          A Proper Repository for Data Files, Built in React
-        </p>
-      </div>
-
-      <div class="project-row anim appear">
-        <img src="images/incorta-data-file-directory/longfinalscreens.png" />
-      </div>
-
-      <div class="project-row anim appear">
-        <p class="pre-paragraph">
-          Small feature enhancements, huge increase in productivity
+          Small Feature Enhancements, Huge Increase in Productivity
         </p>
 
         <p class="project-paragraph">
-          We had positive feedback from users, despite not being able to truly
-          treat the Data tab like a directory yet. We were told that as a result
-          of the feature, it made a huge difference in their data management
-          workflow. They also expressed their excitement for the upcoming
-          enhancements in the second phase.
+          The Data File enhancements were delivered in the Incorta 4.6 release
+          (check out the
+          <a href="https://docs.incorta.com/4.6/rns/" class="inbodylink"
+            >release notes</a
+          >). After the launch, PMs evaluated the enhancements when meeting with
+          customers. Users shared positive feedback, saying that there was a
+          sizable difference in the experience of their workflow. They were able
+          to share top-level folders with peers and cut down time by a lot. They
+          also appreciated that the Data Files page was finally redesigned to
+          match the rest of the platform. Finally, they also expressed their
+          excitement for the upcoming enhancements in the second phase.
         </p>
         <p class="project-paragraph">
-          This support for data files was a long-awaited wish for the customers.
-          Moving forward, the breadcrumb design is going to be the standard
-          implementation for the other pages in Incorta whenever applicable. The
-          next phase for this project is currently in the works, which includes
-          folder-specific permissions and moving folders around.
-        </p>
-      </div>
-      <div class="project-row anim appear">
-        <p class="pre-paragraph">The Takeaway: Thoughts and Lessons</p>
-
-        <p class="project-paragraph">
-          Working on this feature was a reminder that it's not uncommon that
-          teams are not aligned on priorities. While this feature was an
-          important one to the users, we were constrained by limited resources.
-          In hindsight, things may have been more efficient had Engineering been
-          a part of our early alignment meetings or kickoff to help identify
-          what was possible and what wasn't.
+          Another achievement from this was that the breadcrumb design is going
+          to be the standard implementation. The next phase for this project is
+          currently in the works, which includes folder-specific permissions and
+          moving folders around.
         </p>
       </div>
     </div>
