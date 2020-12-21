@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html id="energyMeter">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Incorta Design Library - Trang Tran | UX Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=2.5, user-scalable=1"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="project" class="animate-in">
+    <div id="homepage-section">
+      <header class="header">
+        <div class="headcontain">
+          <div class="logo">
+            <a href="http://trangtran.design/"
+              ><img class="logo" src="images/newt2.svg"
+            /></a>
+          </div>
+
+          <nav class="nav">
+            <div class="nav__container">
+              <ul class="navlist hide">
+                <li class="menu-item">
+                  <a href="http://trangtran.design/">Work</a>
+                </li>
+                <li class="menu-item"><a href="writing">Writing</a></li>
+                <li class="menu-item"><a href="about">About</a></li>
+              </ul>
+              <ul class="menu hideme2">
+                <li class="menu-item">
+                  <a href="http://trangtran.design/">Work</a>
+                </li>
+                <li class="menu-item"><a href="writing">Writing</a></li>
+                <li class="menu-item"><a href="about">About</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <button class="hamburger__container mobile">
+            <div class="hamburger">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </button>
+
+          <!-- start ip nav-->
+
+          <!--end ip nav-->
+        </div>
+      </header>
+    </div>
+
+    <div id="header">
+      <div id="first-section">
+        <div class="introaboutblock">
+          <div class="project-row">
+            <h1 class="main-index-title">Incorta</h1>
+            <p class="pre-paragraph nomargintop">
+              Design Library and Dark Mode
+            </p>
+            <p class="index-subject">
+              visual design | product design | design systems
+            </p>
+
+            <p class="index-paragraph">
+              A pain point of engineers and designers alike is that there isn't
+              a single source of truth for all of our UI styles and components.
+              With the promise of delivering a Dark Mode for the next release,
+              it was important to first nail down our design system. I was
+              tasked with creating a living design library to unify all of our
+              assets, while coming up with a fully accessible dark theme for our
+              platform.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--first-section-->
+    </div>
+
+    <div class="project-row">
+      <img
+        class="header-image"
+        src="images/incorta-design-library/lightvsdark.png"
+      />
+    </div>
+
+    <!-- <div class="fullblock">
+        <div class="row">
+          <p class="impact">
+            My contributions not only led to a radically enhanced experience for
+            users, but also led us to more contracts with real estate companies
+            and an adoption of industry-standard design processes at Controlco.
+          </p>
+        </div>
+      </div> -->
+
+    <div class="fullblock">
+      <div class="row anim appear">
+        <p class="subject">opportunity</p>
+        <p class="pre-paragraph">
+          An Incorta Dark Mode was a roadmap item for the next release.
+        </p>
+        <p class="project-paragraph">
+          One of our longest tenured customers requested a dark version of the
+          Incorta platform. We learned that they were interested in the feature
+          for a very specific reason: the visualizations were a bit hard to see
+          when presenting them in meetings with other key business members. A
+          few of their users also expressed interest in a dark mode because
+          their system preferences are set to a dark mode, so most of their apps
+          followed suit. Having to switch over to the light UI of Incorta was a
+          bit jarring to their eyes.
+        </p>
+        <p class="project-paragraph">
+          Product felt that it was an easy task to deliver but the issue at the
+          time was that we hadn't yet codified a design system. Without one, it
+          would be difficult to even begin thinking about a dark equivalent.
+        </p>
+      </div>
+      <div class="project-row anim appear">
+        <img src="images/incorta-design-library/antlib2.png" />
+        <p class="caption">
+          We used the Ant Design as building blocks for our components. We also
+          had to alter some of the assets to align with Incorta-specific
+          concepts and use cases.
+        </p>
+      </div>
+      <div class="project-row anim appear">
+        <p class="pre-paragraph">
+          "Hey, where can I find the right [insert component here]?"
+        </p>
+        <p class="project-paragraph">
+          In order to start working on an Incorta Dark Mode, we needed to first
+          put together a design system. This was appropriately timed because we
+          currently had problems that threatened the way designers and engineers
+          collaborated: no alignment on where to store all of our design assets.
+          Icons, fonts, and colors were scattered between Ant Design components,
+          dozens of Sketch files and people's local desktops. There were a few
+          issues with this:
+        </p>
+        <ol>
+          <li>
+            Engineers were not being informed of where to find certain assets,
+            so they were implementing things outside of our Incorta colors and
+            icons.
+          </li>
+          <li>
+            The codebase became convoluted because we had too many variances of
+            certain colors. It was easy to get colors and text styles mixed up.
+          </li>
+          <li>
+            Designers were spending more time than necessary to create
+            wireframes because we didn't have a master component library.
+          </li>
+        </ol>
+
+        <p class="project-paragraph">
+          By finally cleaning up our design system and creating a symbol
+          library, I'd be able to craft a dark theme for users while making
+          processes efficient for both designers and engineers.
+        </p>
+      </div>
+    </div>
+
+    <div class="fullgrayblock">
+      <div class="row anim appear">
+        <p class="subject">the role of design</p>
+
+        <p class="pre-paragraph">
+          I led the initiative of building up our design library and creating
+          Incorta Dark Mode.
+        </p>
+
+        <p class="project-paragraph">
+          I unified all text styles, colors, created icons, and built modular
+          components for our Sketch library based on the Ant React Library. I
+          worked alongside a front-end engineer to provide design direction for
+          Incorta Dark Mode and to make sure that their codebase reflected our
+          current design styles.
+        </p>
+      </div>
+    </div>
+
+    <div class="fullblock">
+      <div class="row anim appear">
+        <p class="subject">research and discoveries</p>
+        <p class="pre-paragraph">Auditing the Incorta Platform</p>
+
+        <p class="project-paragraph">
+          I first went through the desktop app to tease apart the
+          inconsistencies. I documented all the text styles, colors, border
+          widths and radii, drop-shadows, and icons. One other thing to note was
+          that Engineering was in the middle of migrating everything over from
+          Angular to React in parallel of building new features.
+        </p>
+      </div>
+
+      <div class="project-row anim appear">
+        <p class="pre-paragraph">Design Inconsistencies in the Incorta UI</p>
+
+        <div class="container-flex">
+          <!-- <div class="container-line"></div> -->
+          <div class="container-topbox">
+            <div class="container-box-text">
+              <p class="eyebrow">We had about 15 different shades of grey.</p>
+            </div>
+          </div>
+
+          <div class="container-box">
+            <div class="container-box-text">
+              <p class="eyebrow">
+                There were multiple icons being used for the same action.
+              </p>
+            </div>
+          </div>
+          <div class="container-box">
+            <div class="container-box-text">
+              <p class="eyebrow">
+                Too many font styles with subtle differences.
+              </p>
+            </div>
+          </div>
+          <div class="container-box">
+            <div class="container-box-text">
+              <p class="eyebrow">Inconsistent border widths and shadows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row anim appear">
+        <p class="thought">
+          "The amount of grays in our app is depressing." - Design Manager's
+          response when finding out that we were using so many grays.
+        </p>
+        <p class="thought">
+          "Why are we using 3 different search icons?" - VP of Product
+        </p>
+      </div>
+
+      <div class="project-row anim appear">
+        <p class="project-paragraph">
+          We accumulated so many variations of styles because some high fidelity
+          mock-ups used incorrect hex codes and ended up going through
+          development without being questioned We accumulated so many styles
+          because we didn't have proper documentation and guidelines in place.
+          Sometimes Design was not communicating to Engineering what icons
+          should be used, so Engineering would have to resort to similar icons
+          from the Ant library. These styles ended up going through development
+          without being questioned.
+        </p>
+      </div>
+    </div>
+
+    <div class="fullgrayblock">
+      <div class="row anim appear">
+        <p class="subject">Vision</p>
+
+        <p class="pre-paragraph">
+          The vision was to improve workflow between teams with a robust design
+          system, and to help alleviate visual discomfort for users with a dark
+          interface.
+        </p>
+      </div>
+
+      <div class="row anim appear">
+        <p class="eyebrow">Criteria for Success</p>
+        <ol>
+          <li>Design Library complete with a Master Sketch file</li>
+          <li>Flexible Dark Mode components</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="fullblock">
+      <div class="row anim appear">
+        <p class="subject">design</p>
+        <p class="pre-paragraph">Typography</p>
+        <p class="project-paragraph">
+          The approach was to first focus on the basic building blocks, starting
+          with text. After collecting all of our styles, I shared the findings
+          with the Design team to determine which we wanted to keep. I wrote
+          guidelines on how to implement the text, such as spacing, height,
+          alignment, and casing.
+        </p>
+      </div>
+
+      <div class="project-row anim appear">
+        <img src="images/incorta-design-library/type.png" />
+      </div>
+
+      <div class="project-row anim appear">
+        <p class="pre-paragraph">Colors</p>
+        <p class="project-paragraph">
+          We investigated where certain colors were being used and which ones
+          should be omitted. After getting a consensus on which ones we should
+          keep, I wrote up some guidelines on how to use them. Between similar
+          colors, we tested which colors had better web contrast ratios.
+        </p>
+      </div>
+
+      <div class="project-row anim appear">
+        <img src="images/incorta-design-library/colors2.png" />
+        <p class="caption">
+          The plan was to make sure whatever colors we picked for the main
+          content of Dark Mode would have to accommodate this set of colors.
+        </p>
+      </div>
+
+      <div class="project-row anim appear">
+        <p class="pre-paragraph">Icons</p>
+        <p class="project-paragraph">
+          In our design sync, we narrowed down some of the icons we wanted to
+          proceed with. In some instances, we didn't have Ant icons to represent
+          some Incorta concepts. I had to find existing icons and redesign them
+          in Illustrator to accommodate our use. I also altered several icons to
+          make them appear as if they came from a family of icons.
+        </p>
+      </div>
+
+      <div class="project-row anim appear">
+        <img src="images/incorta-design-library/icons2.png" />
+        <p class="caption">
+          The plan was to make sure whatever colors we picked for the main
+          content of Dark Mode would have to accommodate this set of colors.
+        </p>
+      </div>
+
+      <div class="project-row anim appear">
+        <p class="pre-paragraph">Building the Components</p>
+        <p class="project-paragraph">
+          The last phase of the design library was to create the components. I
+          collected the UI patterns in our app and created Sketch symbols using
+          our updated colors, fonts, and icons. They were categorized by their
+          usage, whether they were navigation-specific symbols, table
+          components, or used globally.
+        </p>
+      </div>
+      <div class="project-row anim appear">
+        <img src="images/incorta-design-library/components2.png" />
+        <p class="caption">
+          The master Sketch file was shared amongst the other designers to use
+          for building prototypes quickly.
+        </p>
+      </div>
+      <div class="project-row anim appear">
+        <p class="pre-paragraph">Going to the Dark Side</p>
+        <p class="project-paragraph">
+          With the design system completed and approved, it was time to start
+          building out the dark UI. I mapped out every possible Incorta scenario
+          so I can explore various colors to ensure that everything sat well.
+          Things I noticed during my exploration:
+        </p>
+        <ul>
+          <li>Elevation doesn't work quite as well with a black background</li>
+          <li>Overlays can't be too dim</li>
+          <li>You can't simply just invert colors</li>
+        </ul>
+      </div>
+
+      <div class="project-row anim appear">
+        <img src="images/incorta-design-library/darkpalette.png" />
+        <p class="caption"></p>
+      </div>
+      <div class="project-row anim appear">
+        <img src="images/incorta-design-library/sampledark.png" />
+        <p class="caption"></p>
+      </div>
+    </div>
+
+    <div class="fullblock">
+      <div class="row anim appear">
+        <p class="subject">the delivery and impact</p>
+        <p class="pre-paragraph">
+          Introducing the Incorta Design Library and Incorta Dark Mode
+        </p>
+      </div>
+      <div class="project-row anim appear">
+        <img src="images/incorta-design-library/dumplings.png" />
+        <p class="caption">
+          Internally, we referred to our design system as "Dumplings".
+        </p>
+      </div>
+      <div class="project-row anim appear">
+        <img src="images/incorta-design-library/finaldarkui.png" />
+        <p class="caption"></p>
+      </div>
+      <div class="project-row anim appear">
+        <p class="project-paragraph">
+          The design system helped control consistency between teams. Engineers
+          now had a codebase that was updated with our new design styles. Having
+          the design system readily available as a Sketch library saved time as
+          we were able to pull the assets directly into our prototypes. We were
+          no longer opening separate Sketch files to find out how something was
+          designed, where to find an icon, or what color to use.
+        </p>
+        <p class="project-paragraph">
+          Dark Mode was rolled out to all customers as an Incorta Lab Feature in
+          Incorta 4.6 (check out
+          <a
+            href="https://docs.incorta.com/4.6/rns/"
+            class="inbodylink"
+            target="_blank"
+            >release notes</a
+          >). Despite being created to support one customer request, plenty of
+          users began using Incorta in Dark Mode. Users applauded the theme as
+          refreshing. The Incorta desktop app now sat nicely with the rest of
+          other dark mode apps.
+        </p>
+      </div>
+      <div class="project-row anim appear">
+        <p class="thought">
+          "🔥🔥🔥" - A customer's reaction during our feature demo
+        </p>
+      </div>
+    </div>
+    <div class="nextblock">
+      <div class="row">
+        <div class="unequal-column halfleft">
+          <p class="subject-white">next project</p>
+          <p class="pre-paragraph nomarginbottom white">Controlco</p>
+          <p class="eyebrow nomargintop white">
+            Web Solution for Smart Buildings
+          </p>
+          <p class="project-paragraph white">
+            Introduced industry-standard tools and processes to design cutting
+            edge IoT software for facility operations.
+          </p>
+          <a href="controlco" class="button nextproject"> View Case Study</a>
+        </div>
+        <div class="unequal-column middle"></div>
+
+        <div class="unequal-column halfright">
+          <!-- <img
+              src="images/human-interest/hi-header.png"
+              class="extraspacetop spacebottom hide"
+            /> -->
+          <div class="fortyspace"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shortblock">
+      <div class="footerbg">
+        <!-- <div class="bottom_line"></div> -->
+
+        <p class="eyebrow">Copyright © 2020 Trang Tran</p>
+        <p class="copyright">
+          Made from scratch with love and my atrocious code.
+        </p>
+
+        <ul class="svglist">
+          <li class="one">
+            <a href="mailto:trangtt427@gmail.com"
+              ><img class="footersvg" src="emailround.svg" alt="Email"
+            /></a>
+          </li>
+          <li class="">
+            <a href="https://www.linkedin.com/in/trangerthings/" target="_blank"
+              ><img class="footersvg" src="linkedinround.svg" alt="LinkedIn"
+            /></a>
+          </li>
+          <li class="">
+            <a href="https://www.behance.net/trangerthings" target="_blank"
+              ><img class="footersvg" src="behanceround.svg" alt="Behance"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <script src="js/script.js"></script>
+</html>
