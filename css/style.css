@@ -505,6 +505,13 @@ section {
   background-color: red;
 }
 
+.center-text {
+  margin: auto;
+}
+
+.align-center {
+  text-align: center;
+}
 .main-index-title {
   font-family: "DM Serif Text", serif;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -858,8 +865,8 @@ a.button {
 }
 
 .pixeltrang {
-  margin-top: 250px;
-  max-width: 220px;
+  margin-top: 60px;
+  max-width: 200px;
 }
 
 .navlist li,
@@ -1053,7 +1060,8 @@ header {
   }
 
   .pixeltrang {
-    margin-top: 80px;
+    margin-top: 30px;
+    max-width: 150px;
   }
 
   .nav {
