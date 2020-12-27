@@ -14,7 +14,8 @@ body {
 } */
 
 #bodymovin-ac {
-  max-width: 300px;
+  padding-top: 60px;
+  max-width: 200px;
   margin: 0 auto;
 }
 
@@ -1064,9 +1065,10 @@ header {
     display: none;
   }
 
-  .pixeltrang {
-    margin-top: 30px;
+  #bodymovin-ac {
+    padding-top: 60px;
     max-width: 160px;
+    margin: 0 auto;
   }
 
   .nav {
