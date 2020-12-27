@@ -815,6 +815,10 @@ a.button {
   background: rgb(170, 170, 170, 0.35);
 }
 
+.aboutpic {
+  margin-top: 20px;
+}
+
 .pre-paragraph {
   font-family: "DM Serif Text", serif;
   -webkit-font-smoothing: subpixel-antialiased;
