@@ -158,6 +158,6 @@ $(document).ready(function () {
     renderer: "svg",
     loop: true,
     autoplay: true,
-    path: "js/actrang.json",
+    path: "actrang.json",
   });
 });
