@@ -1,3 +1,8 @@
+#bodymovin-ac {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.6;

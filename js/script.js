@@ -6,7 +6,7 @@ var $document = $(document),
   classNames = "box-shadow sticky";
 
 // Hide Header on on scroll down
-// var didScroll;
+var didScroll;
 // var lastScrollTop = 0;
 // var delta = 5;
 // var navbarHeight = $("header").outerHeight();
@@ -152,4 +152,12 @@ $(document).ready(function () {
   });
   //trigger our scroll event on initial load
   $(window).trigger("scroll");
+
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById("bodymovin-ac"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "js/actrang.json",
+  });
 });
