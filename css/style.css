@@ -372,6 +372,7 @@ img {
 
 .subject {
   font-family: "Source Sans Pro";
+  -webkit-font-smoothing: antialiased;
   font-size: 13px;
   text-transform: uppercase;
   overflow: hidden;
@@ -383,6 +384,7 @@ img {
 
 .title-subject {
   font-family: "Source Sans Pro";
+  -webkit-font-smoothing: antialiased;
   font-size: 13px;
   text-transform: uppercase;
   overflow: hidden;
@@ -392,6 +394,7 @@ img {
 
 .subject-white {
   font-family: "Source Sans Pro";
+  -webkit-font-smoothing: antialiased;
   font-size: 13px;
   text-transform: uppercase;
   overflow: hidden;
@@ -870,6 +873,7 @@ a.button {
 
 .index-subject {
   font-family: "Source Sans Pro";
+  -webkit-font-smoothing: antialiased;
   font-size: 13px;
   line-height: 1.6;
   text-transform: uppercase;
