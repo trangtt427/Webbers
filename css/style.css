@@ -62,7 +62,7 @@ ul .menu {
   text-transform: uppercase;
   color: #2a3031;
   text-decoration: none;
-  letter-spacing: 0.15em;
+  letter-spacing: 2px;
   font-size: 13px;
   display: inline-block;
   padding: 8px 0px;
@@ -373,7 +373,7 @@ img {
 
 .subject {
   font-family: "Source Sans Pro";
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   overflow: hidden;
   text-align: left;
@@ -382,9 +382,18 @@ img {
   margin: auto;
 }
 
+.title-subject {
+  font-family: "Source Sans Pro";
+  font-size: 13px;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 2px;
+  max-width: 1200px;
+}
+
 .subject-white {
   font-family: "Source Sans Pro";
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   overflow: hidden;
   text-align: left;
@@ -538,7 +547,8 @@ section {
   margin-top: 60px;
 }
 
-.subject:after {
+.subject:after,
+.title-subject:after {
   background-color: #2a3031;
   content: "";
   display: inline-block;
@@ -861,7 +871,7 @@ a.button {
 
 .index-subject {
   font-family: "Source Sans Pro";
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
   text-transform: uppercase;
   overflow: hidden;
@@ -1217,24 +1227,6 @@ header {
 
   .projectnumber {
     font-size: 40px;
-  }
-
-  .subject {
-    font-size: 13px;
-  }
-
-  .index-subject {
-    font-size: 13px;
-  }
-
-  .index-subject-white {
-    font-family: "Source Sans Pro";
-    font-size: 13px;
-    text-transform: uppercase;
-    overflow: hidden;
-    text-align: left;
-    color: white;
-    letter-spacing: 2px;
   }
 
   .pre-paragraph {
