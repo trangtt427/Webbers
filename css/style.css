@@ -519,7 +519,6 @@ section {
   background-size: cover;
   height: 100%;
   width: 100%;
-  background-color: red;
 }
 
 .center-text {
@@ -936,7 +935,22 @@ a.button {
 .introaboutblock {
   background-color: white;
   margin: auto;
-  padding-top: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#incorta {
+  background: rgb(37, 49, 117);
+  background: linear-gradient(
+    142deg,
+    rgba(37, 49, 117, 1) 0%,
+    rgba(59, 72, 147, 1) 49%,
+    rgba(59, 72, 147, 1) 100%
+  );
+}
+
+.header-image {
+  padding-top: 100px;
 }
 
 .nextblock {
@@ -1098,8 +1112,15 @@ header {
     height: 60px;
   }
 
-  .logo {
-    width: 35px;
+  .introaboutblock {
+    background-color: white;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .header-image {
+    padding-top: 0px;
   }
 
   .menu {
