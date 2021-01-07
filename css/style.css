@@ -1067,12 +1067,12 @@ header {
   transition: all 0.3s ease 0s;
 }
 
-.box-shadow {
+/* .box-shadow {
   -webkit-box-shadow: 0 2px 3px rgba(158, 172, 201, 0.35);
   -moz-box-shadow: 0 2px 3px rgba(158, 172, 201, 0.35);
   box-shadow: 0 2px 5px rgba(158, 172, 201, 0.35);
   transition: all 0.3s ease 0s;
-}
+} */
 
 .nav-up {
   top: -95px;
