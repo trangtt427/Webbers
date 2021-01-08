@@ -1162,7 +1162,6 @@ header {
     position: relative;
     z-index: 9999;
     background: white;
-    padding: 10px;
   }
 
   .nav {
