@@ -624,19 +624,23 @@ ul {
   margin: 30px 0;
 }
 
-.thought {
+.testimony {
   padding-left: 2em;
   border-left: 1px solid #c6c7cc;
   max-width: 700px;
   -webkit-font-smoothing: antialiased;
   margin-top: 2em;
-  font-style: italic;
 }
 
 .quote {
-  max-width: 500px;
-  -webkit-font-smoothing: antialiased;
-  text-align: right;
+  font-style: italic;
+  text-align: left;
+}
+
+.author {
+  max-width: 700px;
+  text-align: left;
+  font-weight: 700;
 }
 
 a.button {
