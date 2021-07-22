@@ -13,7 +13,6 @@ body {
 } */
 
 #bodymovin-ac {
-  padding-top: 60px;
   max-width: 200px;
   margin: 0 auto;
 }
@@ -340,6 +339,7 @@ img {
   padding-top: 50px;
   margin: auto;
   transition: none;
+  
 }
 
 .row:after {
@@ -672,7 +672,11 @@ a.button {
 .nextproject:hover {
   background: #1a1b1f;
   color: white;
-  border-color: white;
+  border-color: #1a1b1f;
+}
+
+.nextproject {
+  
 }
 
 .button::before {
