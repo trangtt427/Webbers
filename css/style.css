@@ -32,7 +32,7 @@ a {
 ul {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
+  font-size: 17px;
   transition: 0s all ease-in-out;
 }
 
@@ -339,7 +339,6 @@ img {
   padding-top: 50px;
   margin: auto;
   transition: none;
-  
 }
 
 .row:after {
@@ -542,7 +541,7 @@ section {
 .index-paragraph {
   font-family: "Source Sans Pro";
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.8;
   max-width: 700px;
   margin-top: 60px;
@@ -573,7 +572,7 @@ section {
 .container-box-text {
   font-family: "Source Sans Pro";
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
+  font-size: 17px;
   padding: 20px;
   text-align: left;
 }
@@ -600,7 +599,7 @@ section {
 ol,
 ul {
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.8;
   max-width: 700px;
   margin: 40px 0;
@@ -608,7 +607,7 @@ ul {
 
 .persona-text {
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
+  font-size: 17px;
   max-width: 700px;
   margin: 20px 0;
 }
@@ -620,7 +619,7 @@ ul {
 .index-project-paragraph {
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
+  font-size: 17px;
   margin: 30px 0;
 }
 
@@ -669,7 +668,6 @@ a.button {
   color: #ffffff;
   border: solid;
   border-width: 1.1px;
-  
 }
 
 .nextproject:hover {
@@ -680,7 +678,7 @@ a.button {
 }
 
 .nextproject {
-  border-color:white;
+  border-color: white;
 }
 
 .button::before {
