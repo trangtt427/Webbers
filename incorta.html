@@ -79,8 +79,7 @@
             <p class="index-subject">Product Design</p>
 
             <p class="index-paragraph">
-              The Incorta software allows realtime data analytics without needing any transformation or data warehousing. Unfortunately, the data analysts using Incorta were dealing with lackluster file management which made their job more grueling than it needed to be. I led the design of several features to help users better manage
-              their data files and sources so that they can focus on their actual job: uncovering important business insights. 
+              The Incorta platform allows realtime data analytics without the need of data warehousing or manipulation. Despite its utility, data analysts using Incorta were dealing with lackluster file management and tedious workflows. I led the designs for an initiative that empowered data analysts to significantly improve their day to day functions.
             </p>
           </div>
         </div>
@@ -119,13 +118,11 @@
           The Villain of this Story: A Poor File Management System
         </p>
         <p class="project-paragraph">
-          Users have long complained about Incorta's lack of
-          support for data file management. There was no concept of a folder directory, data files could only be uploaded one at a time (and couldn't be edited once brought in), and
-          finding files was a nightmare (no native searching functionality). A workflow for users to tailor their Incorta environment was missing entirely.
+          Incorta users have long complained about the product limitations around data support. There were several things missing to help them manage their data, such as organizing files into folders, editing files, and searching. Users couldn't tailor their Incorta environment to their liking.
         </p>
 
         <p class="project-paragraph">
-          The current Data page was one of the last pieces that needed to port over from Angular to React. The duality of this opportunity meant tackling an engineering initiative and a highly requested user ask in parallel. 
+          The current Data page was one of the last pieces that needed to be ported over from Angular to React. The duality of this opportunity meant tackling an engineering initiative and a highly requested user ask in parallel. 
         </p>
       </div>
 
@@ -136,7 +133,7 @@
           <div class="caption-bubble-right">
             <p class="eyebrow white">Ye Olde Data File Design</p>
             <p class="white project-paragraph">
-              Refactoring the Data page was the driver of this project for Engineering, but Design took on the opportunity to improve the experience.
+              Refactoring the Data page was the driver of this project for Engineering, but Design took on the opportunity to address the concerns from users and elevate the experience.
             </p>
           </div>
         </div>
@@ -183,10 +180,9 @@
 
         <p class="project-paragraph">
           The PM and Solutions Architects frequently visited customers onsite
-          and were the gateway to my learning about our users, the data
-          analysts. Internally, these data analysts were considered our "power users". They use
-          advanced analytical tools to dive into their data, working to create visualizations for their stakeholders. However, before that happens, data needs to be brought into their Incorta instance
-          first.
+          and were the gateway to learning about our users, the data
+          analysts (known internally as the "power users"). These users leverage
+          advanced analytical tools to dive into their data, working to create visualizations for their stakeholders. Before any of that happens, data first needs to be brought into their Incorta instance through one of two ways. The first way is by connecting the platform to a database and second, is by uploading data files. Going with the former meant users would have to do some extra upfront work if they're looking to customize their data.
         </p>
       </div>
       <div class="project-row anim appear">
@@ -233,17 +229,12 @@
         <p class="pre-paragraph">User Story Map</p>
         <img src="images/incorta-data-file-directory/userstory.png" />
         <p class="caption">
-          These are the pathways of how data can be brought into one's Incorta environment.
+          The pathways of how data can be brought into one's Incorta environment.
         </p>
       </div>
+   
       <div class="project-row anim appear">
-        <p class="project-paragraph">
-          There are two ways of bringing data into Incorta. First is by connecting
-          to a database. Second is by uploading a data file. If going with the file upload route, users would have to go through a few hurdles if they're looking to manipulate their files.
-        </p>
-      </div>
-      <div class="project-row anim appear">
-        <p class="pre-paragraph">The Frustrations of Data Files</p>
+        <p class="pre-paragraph">We uncovered a few frustrations that users had regarding the platform's file capabilities</p>
 
         <div class="container-flex">
           <!-- <div class="container-line"></div> -->
@@ -265,13 +256,13 @@
           <div class="container-box">
             <div class="container-box-text">
               <p class="eyebrow">No native search functionality.</p>
-             The Workaround: cmd+F or ctrl+F. The Catch: a user would scroll down to load more files on the page. Using the search shortcut would only scan what's currently loaded on the page.
+             The Workaround: cmd+F or ctrl+F. The Catch: a user would scroll down to populate the page with more files. Using the search shortcut would only scan what's currently loaded on the page.
             </div>
           </div>
           <div class="container-box">
             <div class="container-box-text">
               <p class="eyebrow">Files are laid out on one level. Folders are not supported.</p>
-              The Workaround: name related files in a way where they can be near each other once uploaded. The Catch: extra upfront user effort.
+              The Workaround: name related files in a way where they can be near each other once uploaded. The Catch: extra upfront effort needed.
             </div>
           </div>
         </div>
@@ -279,12 +270,10 @@
 
       <div class="project-row anim appear">
         <p class="pre-paragraph">
-          Users have been asking for better navigation
-          throughout the platform for a while.
+          Users wanted better navigation since the product's inception
         </p>
         <p class="project-paragraph">
-          Folders and file directory support were already implemented in the new React parts of the software, but users still had trouble traversing through folder levels. This was due to our poorly built navigation patterns. Users griped about our
-          existing breadcrumb in the Content page (the only other page that contained files) because it didn't provide a way to browse through the hierarchy of folders.
+          Some semblance of a file directory was already implemented in the newer parts of the software, but users still had trouble getting to where they need. Users complained about the existing breadcrumb in the Content page (the only other page that contained files) because it didn't provide a way to browse through different folder levels.
         </p>
       </div>
       <div class="project-row anim appear">
@@ -314,7 +303,7 @@
         <p class="subject">Vision</p>
 
         <p class="pre-paragraph">
-          We envisioned the Data Files as a directory with intuitive navigation.
+          We envisioned the Data Files as a directory, complete with intuitive navigation and features for file support.
         </p> 
       </div>
 
@@ -341,8 +330,8 @@
         <p class="subject">design</p>
         <p class="pre-paragraph">Revisiting the Breadcrumb Navigation</p>
         <p class="project-paragraph">
-          I looked to a few big names in the storage service space like Google Drive,
-          Onedrive, and Dropbox to see which use cases can be applied to our own. We recommended the common breadcrumb with a clear distinction of a user's location in a path, a pattern that users of modern day technology would recognize.
+          We looked to a few big names in the storage service space like Google Drive,
+          Onedrive, and Dropbox to see which use cases can be applied to our own. We leaned towards the common breadcrumb with a clear distinction of a user's path location, a pattern that users of most modern day technology would recognize.
         </p>
       </div>
 
@@ -388,7 +377,7 @@
 
       <div class="project-row anim appear">
         <p class="project-paragraph">
-         Some feedback we got for the initial version of the breadcrumb was that the terminal folder location should be clearer. People were saying that it should be immediate to them where they are on the website, alluding to having an emphasized page title.
+         Some feedback we got for the initial version of the breadcrumb was that the terminal folder location could be clearer. People were saying that it should be immediate to them where they are on the website, alluding to having it emphasized as the title.
          
         </p>
       </div>
@@ -427,29 +416,11 @@
         </div>
       </div>
 
-      <div class="project-row anim appear">
-        <p class="pre-paragraph">I started prototyping the scenarios that would enable users to have full control of their Data Files.</p>
-
-        <ul>
-          <li>Uploading files/folders</li>
-          <li>Renaming files/folders</li>
-          <li>Searching</li>
-          <li>Sorting</li>
-          <li>Confirmation dialogs</li>
-        </ul>
-        <p class="project-paragraph">
-          You can get a better view of the prototype
-          <a
-            href="https://projects.invisionapp.com/share/SMZKHSNY67W#/screens/439037341_Support_Directory_In_Data_Tab"
-            target="_blank"
-            class="inbodylink"
-            >here</a
-          >
-          on InVision.
-        </p>
-      </div>
+ 
 
       <div class="project-row anim appear">
+        <p class="pre-paragraph">Prototypes</p>
+
         <img src="images/incorta-data-file-directory/sketchwireframe.png" />
         <p class="caption">
           Sketch wireframes showing all scenarios. Click
@@ -473,12 +444,11 @@
         <p class="subject">Scoping</p>
 
         <p class="pre-paragraph">
-          The proposed designs satisfied user goals, but we were met with
-      resourcing constraints.
+          While we aligned on the design proposals as being valuable to users, we were limited on resources.
         </p>
         <p class="project-paragraph">
-          In a sync with the Server and Front-end teams, we learned that they
-          couldn't commit to some of our asks. Resources have been allocated to higher priority backend projects. The things they
+          We learned that our Front End and Server teams
+          couldn't commit to some of the asks because resources have been allocated to higher priority projects in parallel. The things they
           couldn't accommodate in the next two sprints included:
         </p>
         <ul>
@@ -503,15 +473,13 @@
 
     <div class="fullblock">
       <div class="row anim appear">
-        <p class="subject">the delivery and impact</p>
-        <p class="pre-paragraph">The Final Design</p>
+        <p class="subject">delivery and impact</p>
+        <p class="pre-paragraph">Incorta 4.6 and the Big Increase in Productivity</p>
         <img src="images/incorta-data-file-directory/highfidelitydata.png" /></div>
 
         
         <div class="row anim appear">
-        <p class="pre-paragraph">
-          Small Feature Enhancements, Big Increase in Productivity
-        </p>
+       
 
         <p class="project-paragraph">
           After about a month, the Data File enhancements were shipped in the
@@ -521,10 +489,8 @@
             class="inbodylink"
             target="_blank"
             >release notes</a
-          >). Our customers don't usually upgrade right away to the newest
-          Incorta platform as it does take a bit of work. But they were
-          willing to switch to Incorta 4.6 after hearing that Data File upgrades were a part of the package.
-          After the release, we received feedback from users about how they can finally cut down some time around maintaining their data.
+          >). Historically, customers don't usually upgrade right away to the latest version as it does take a bit of work, but they were
+          willing to switch to Incorta 4.6 after being promised the Data File upgrades. The release was met with success and praise from our users. Many shared that they were able to save time and be more efficient in their day to day.
         </p>
       </div>
     </div>
