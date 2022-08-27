@@ -808,6 +808,7 @@ a.nextproject {
   padding: 0px 30px 0px;
   margin: auto;
   background-color: #ffffff;
+
 }
 
 .footersvg {
@@ -967,7 +968,7 @@ a.nextproject {
   background: #1a1b1f;
   width: 100%;
   padding: 60px 0;
-  border: 2px;
+  border-bottom: 1px solid #1a1b1f;
 }
 
 .persona-shadow {
