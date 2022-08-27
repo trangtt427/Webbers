@@ -407,12 +407,12 @@ img {
   background-color: #fff;
   content: "";
   display: inline-block;
-  height: 1px;
   position: relative;
   vertical-align: middle;
   width: 40px;
   margin-left: 10px;
   margin-bottom: 4px;
+   border-bottom: 1px solid white;
 }
 
 .blackbg {
@@ -669,7 +669,8 @@ a.button {
   border-width: 1.0px;
 }
 
-.nextproject {
+
+a.nextproject {
   border-color: white;
   border-width:1.0px;
 }
