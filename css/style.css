@@ -444,7 +444,7 @@ img {
 .halfrightindex {
   width: 47.5%;
   float: right;
-  margin-top:30px;
+  margin-top:0px;
 }
 
 .sixtytwoleft {
@@ -1283,7 +1283,7 @@ header {
   }
 
   .footerbg {
-    padding-top: 30px;
+    padding-top: 0px;
   }
 
   .blackbg {
@@ -1296,7 +1296,5 @@ header {
     display: none;
   }
 
-  .halfright {
-    margin-top: 40px;
-  }
+  
 }
