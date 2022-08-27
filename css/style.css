@@ -823,11 +823,10 @@ a.button {
 .bottom_line {
   display: block;
   margin: auto;
-  border: none;
+  border-bottom: 1px solid #1a1b1f;
   color: white;
-  height: 1px;
   width: 100%;
-  background: #1a1b1f;
+  /*background: #1a1b1f; */
 }
 
 .aboutpic {
