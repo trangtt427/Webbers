@@ -542,15 +542,14 @@ section {
 
 .subject:after,
 .title-subject:after {
-  background-color: #1a1b1f;
   content: "";
   display: inline-block;
-  height: 1px;
   position: relative;
   vertical-align: middle;
   width: 40px;
   margin-left: 10px;
   margin-bottom: 4px;
+  border-bottom: 1px solid #1a1b1f;
 }
 
 .projectnumber {
