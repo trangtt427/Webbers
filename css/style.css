@@ -647,7 +647,7 @@ a.button {
   transition: 0.5s;
   position: relative;
   border: solid;
-  border-width: 1.1px;
+  border-width: 1.0px;
   text-decoration: none;
 }
 
@@ -658,19 +658,20 @@ a.button {
 .button:hover {
   background: #1a1b1f;
   color: #ffffff;
-  border: solid;
-  border-width: 1.1px;
+  border-color: #1a1b1f;
+  border-width: 1.0px;
 }
 
 .nextproject:hover {
   background: #1a1b1f;
   color: white;
   border-color: white;
-  border-width: 1.1px;
+  border-width: 1.0px;
 }
 
 .nextproject {
   border-color: white;
+  border-width:1.0px;
 }
 
 .button::before {
