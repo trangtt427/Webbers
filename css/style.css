@@ -12,11 +12,14 @@ body {
   display: none;
 } */
 
-#bodymovin-ac {
-  max-width: 350px;
+#bodymovin-ac{
+  max-width: 300px;
   margin: 0 auto;
   padding-bottom:20px;
 }
+
+
+
 
 .inbodylink {
   text-decoration: none;
