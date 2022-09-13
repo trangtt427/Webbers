@@ -310,14 +310,14 @@ img {
 
 
 .row {
-  max-width: 1200px;
+  max-width: 1100px;
   padding-right: 30px;
   padding-left: 30px;
   margin: auto;
 }
 
 .persona-row {
-  max-width: 1200px;
+  max-width: 1100px;
   margin-top: 30px;
   /* background-color: #d6ecf7; */
   /* border: 1px solid rgb(170, 170, 170, 0.35); */
@@ -338,7 +338,7 @@ img {
 }
 
 .project-row {
-  max-width: 1200px;
+  max-width: 1100px;
   padding-right: 30px;
   padding-left: 30px;
   padding-top: 50px;
@@ -382,7 +382,7 @@ img {
   overflow: hidden;
   text-align: left;
   letter-spacing: 2px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -393,7 +393,7 @@ img {
   text-transform: uppercase;
   overflow: hidden;
   letter-spacing: 2px;
-  max-width: 1200px;
+  max-width: 1100px;
 }
 
 .subject-white {
@@ -797,7 +797,7 @@ a.nextproject {
 
 .headcontain {
   font-size: 0;
-  max-width: 1200px;
+  max-width: 1100px;
   height: 80px;
   /* padding: 8px 20px;*/
   margin: auto;
@@ -808,7 +808,7 @@ a.nextproject {
 }
 
 .footerbg {
-  max-width: 1200px;
+  max-width: 1100px;
   padding: 0px 30px 0px;
   margin: auto;
   background-color: #ffffff;
