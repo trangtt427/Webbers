@@ -25,6 +25,10 @@ body {
   padding-bottom:20px;
 }
 
+.section {
+  background-color:#ffffff;
+}
+
 
 
 
@@ -499,6 +503,18 @@ img {
 
 .middle {
   width: 5%;
+}
+
+.homemiddle {
+  width: 5%;
+}
+
+.homehalfleft {
+  width:35%;
+}
+
+.homehalfright {
+  width: 60%;
 }
 
 section {
@@ -1125,6 +1141,7 @@ header {
   #bodymovin-ac {
     padding-top: 20px;
     margin: 0 auto;
+    max-width:200px;
   }
 
   .nav {
