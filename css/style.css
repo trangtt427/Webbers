@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "quincy-cf";
+  src: url(/fonts/QuincyCF-Bold.ttf)
+}
+
+
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.6;
@@ -525,7 +532,7 @@ section {
   text-align: center;
 }
 .main-index-title {
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
   line-height: 1.4;
   font-size: 60px;
@@ -558,7 +565,7 @@ section {
 
 .projectnumber {
   font-size: 60px;
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 400;
   color: #ef536d;
@@ -574,7 +581,7 @@ section {
 }
 
 .blog-container-box-text {
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 24px;
   padding: 20px;
@@ -844,7 +851,7 @@ a.nextproject {
 }
 
 .pre-paragraph {
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 40px;
   max-width: 700px;
@@ -855,7 +862,7 @@ a.nextproject {
 }
 
 .eyebrow {
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 24px;
   max-width: 700px;
@@ -1148,7 +1155,7 @@ header {
     font-size: 22px;
     font-weight: 300;
     list-style: none;
-    font-family: "DM Serif Text", serif;
+    font-family: 'quincy-cf', serif;
     -webkit-font-smoothing: subpixel-antialiased;
     font-size: 32px;
     max-width: 700px;
