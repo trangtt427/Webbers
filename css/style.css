@@ -1144,6 +1144,9 @@ header {
     max-width:200px;
   }
 
+  .eyebrow {
+    font-size: 20px;}
+
   .nav {
     text-align: center;
   }
