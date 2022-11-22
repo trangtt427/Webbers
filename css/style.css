@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "quincy-cf";
+  src: url(/fonts/QuincyCF-Bold.ttf)
+}
+
+
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.6;
@@ -12,10 +19,18 @@ body {
   display: none;
 } */
 
-#bodymovin-ac {
-  max-width: 200px;
+#bodymovin-ac{
+  max-width: 300px;
   margin: 0 auto;
+  padding-bottom:20px;
 }
+
+.section {
+  background-color:#ffffff;
+}
+
+
+
 
 .inbodylink {
   text-decoration: none;
@@ -304,15 +319,16 @@ img {
   width: 100%;
 }
 
+
 .row {
-  max-width: 1000px;
+  max-width: 1100px;
   padding-right: 30px;
   padding-left: 30px;
   margin: auto;
 }
 
 .persona-row {
-  max-width: 1000px;
+  max-width: 1100px;
   margin-top: 30px;
   /* background-color: #d6ecf7; */
   /* border: 1px solid rgb(170, 170, 170, 0.35); */
@@ -333,7 +349,7 @@ img {
 }
 
 .project-row {
-  max-width: 1000px;
+  max-width: 1100px;
   padding-right: 30px;
   padding-left: 30px;
   padding-top: 50px;
@@ -377,7 +393,7 @@ img {
   overflow: hidden;
   text-align: left;
   letter-spacing: 2px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -388,7 +404,7 @@ img {
   text-transform: uppercase;
   overflow: hidden;
   letter-spacing: 2px;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .subject-white {
@@ -406,12 +422,12 @@ img {
   background-color: #fff;
   content: "";
   display: inline-block;
-  height: 1px;
   position: relative;
   vertical-align: middle;
   width: 40px;
   margin-left: 10px;
   margin-bottom: 4px;
+   border-bottom: 1px solid white;
 }
 
 .blackbg {
@@ -443,6 +459,7 @@ img {
 .halfrightindex {
   width: 47.5%;
   float: right;
+
 }
 
 .sixtytwoleft {
@@ -488,6 +505,18 @@ img {
   width: 5%;
 }
 
+.homemiddle {
+  width: 5%;
+}
+
+.homehalfleft {
+  width:35%;
+}
+
+.homehalfright {
+  width: 60%;
+}
+
 section {
   background: #ccc;
   padding: 1em;
@@ -510,15 +539,6 @@ section {
   background-color: white;
 }
 
-#first-section {
-  background: url("/images/header-backgrounds/fluppycat.jpg") no-repeat center
-    top;
-  position: relative;
-  margin: auto;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
 
 .center-text {
   margin: auto;
@@ -528,7 +548,7 @@ section {
   text-align: center;
 }
 .main-index-title {
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
   line-height: 1.4;
   font-size: 60px;
@@ -549,20 +569,19 @@ section {
 
 .subject:after,
 .title-subject:after {
-  background-color: #1a1b1f;
   content: "";
   display: inline-block;
-  height: 1px;
   position: relative;
   vertical-align: middle;
   width: 40px;
   margin-left: 10px;
   margin-bottom: 4px;
+  border-bottom: 1px solid #1a1b1f;
 }
 
 .projectnumber {
   font-size: 60px;
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 400;
   color: #ef536d;
@@ -578,7 +597,7 @@ section {
 }
 
 .blog-container-box-text {
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 24px;
   padding: 20px;
@@ -655,7 +674,7 @@ a.button {
   transition: 0.5s;
   position: relative;
   border: solid;
-  border-width: 1.1px;
+  border-width: 1.0px;
   text-decoration: none;
 }
 
@@ -666,19 +685,21 @@ a.button {
 .button:hover {
   background: #1a1b1f;
   color: #ffffff;
-  border: solid;
-  border-width: 1.1px;
+  border-color: #1a1b1f;
+  border-width: 1.0px;
 }
 
 .nextproject:hover {
   background: #1a1b1f;
   color: white;
   border-color: white;
-  border-width: 1.1px;
+  border-width: 1.0px;
 }
 
-.nextproject {
+
+a.nextproject {
   border-color: white;
+  border-width:1.0px;
 }
 
 .button::before {
@@ -799,20 +820,22 @@ a.button {
 
 .headcontain {
   font-size: 0;
-  max-width: 1000px;
+  max-width: 1100px;
   height: 80px;
   /* padding: 8px 20px;*/
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #1a1b1f;
 }
 
 .footerbg {
-  max-width: 1000px;
-  padding: 30px 30px 0px;
+  max-width: 1100px;
+  padding: 0px 30px 0px;
   margin: auto;
   background-color: #ffffff;
+
 }
 
 .footersvg {
@@ -829,11 +852,14 @@ a.button {
 .bottom_line {
   display: block;
   margin: auto;
-  border: none;
+  border-bottom: 1px solid #1a1b1f;
   color: white;
-  height: 1px;
   width: 100%;
-  background: rgb(170, 170, 170, 0.35);
+  /*background: #1a1b1f; */
+}
+
+.port {
+  margin-top:40px;
 }
 
 .aboutpic {
@@ -841,9 +867,9 @@ a.button {
 }
 
 .pre-paragraph {
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-size: 30px;
+  font-size: 40px;
   max-width: 700px;
 }
 
@@ -852,7 +878,7 @@ a.button {
 }
 
 .eyebrow {
-  font-family: "DM Serif Text", serif;
+  font-family: 'quincy-cf', serif;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 24px;
   max-width: 700px;
@@ -915,7 +941,7 @@ a.button {
 .fullblock {
   background-color: white;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom:100px;
   margin: auto;
 }
 
@@ -945,7 +971,7 @@ a.button {
   background-color: white;
   margin: auto;
   padding-top: 100px;
-  padding-bottom: 100px;
+
 }
 
 .introwriteblock {
@@ -973,7 +999,7 @@ a.button {
   background: #1a1b1f;
   width: 100%;
   padding: 60px 0;
-  border: 2px;
+  border-bottom: 1px solid #1a1b1f;
 }
 
 .persona-shadow {
@@ -983,7 +1009,7 @@ a.button {
 }
 
 .image-shadow {
-  filter: drop-shadow(0px 10px 20px rgba(35, 36, 37, 0.15));
+  filter: drop-shadow(0px 2px 5px rgba(35, 36, 37, 0.15));
 }
 
 .container-box,
@@ -1114,9 +1140,12 @@ header {
 
   #bodymovin-ac {
     padding-top: 20px;
-    max-width: 160px;
     margin: 0 auto;
+    max-width:200px;
   }
+
+  .eyebrow {
+    font-size: 20px;}
 
   .nav {
     text-align: center;
@@ -1146,7 +1175,7 @@ header {
     font-size: 22px;
     font-weight: 300;
     list-style: none;
-    font-family: "DM Serif Text", serif;
+    font-family: 'quincy-cf', serif;
     -webkit-font-smoothing: subpixel-antialiased;
     font-size: 32px;
     max-width: 700px;
@@ -1241,6 +1270,10 @@ header {
   .unequal-column {
     width: 100%;
   }
+  
+  .halfleft {
+    padding-bottom:40px;
+  }
 
   .caption {
     font-size: 15px;
@@ -1268,12 +1301,9 @@ header {
   }
 
   .pre-paragraph {
-    font-size: 24px;
+    font-size: 30px;
   }
 
-  .eyebrow {
-    font-size: 20px;
-  }
 
   .blog-container-box-text {
     font-size: 20px;
@@ -1289,7 +1319,7 @@ header {
   }
 
   .footerbg {
-    padding-top: 30px;
+    padding-top: 0px;
   }
 
   .blackbg {
@@ -1302,7 +1332,5 @@ header {
     display: none;
   }
 
-  .halfright {
-    margin-top: 40px;
-  }
+  
 }
