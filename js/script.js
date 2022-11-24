@@ -147,15 +147,7 @@ $(document).ready(function () {
   }
 
 
-  // if the image in the window of browser when the page is loaded, show that image
-$(document).ready(function() {
-  showImages(".star");
-});
 
-// if the image in the window of browser when scrolling the page, show that image
-$(window).scroll(function() {
-  showImages(".star");
-});
 
   //on or scroll, detect elements in view
   $(window).on("scroll resize", function () {
