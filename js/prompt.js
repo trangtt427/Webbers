@@ -19,7 +19,7 @@ if (!isVerified || isVerified === "false") {
 
   if (!isValid(p)) {
     sessionStorage.setItem("isVerified", "false");
-    window.location.replace("https://trangerthings.com/401.html");
+    window.location.replace("https://trangtran.design/passwordprotected.html");
   } else {
     sessionStorage.setItem("isVerified", "true");
   }
