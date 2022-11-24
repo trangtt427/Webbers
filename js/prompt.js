@@ -9,7 +9,7 @@ function isValid(p) {
   if (!p) {
     return null;
   }
-  return hashCode(p) === 208921110;
+  return hashCode(p) === -1307947986;
 }
 
 var isVerified = sessionStorage.getItem("isVerified");
