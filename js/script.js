@@ -146,9 +146,6 @@ $(document).ready(function () {
     });
   }
 
-
-
-
   //on or scroll, detect elements in view
   $(window).on("scroll resize", function () {
     check_if_in_view();
