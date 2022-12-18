@@ -106,42 +106,41 @@
           <div class="line-width">
               <p class="subject">opportunity</p>
               <h4 class="mb-4">A Baby is Born</h4>
-              <p>A design system is a carefully crafted collection of reusable components and guidelines that help companies create products with velocity, consistency, and quality. Instead of reinventing the wheel each time they design new features, designers use patterns and components they've already established and validated. At one company, we had a design system in place that was used to develop one of our products, but once multiple designers started leveraging it for different products, we learned that the system wasn't battle-tested for managing design at scale.</p>
+              <p>A design system is a carefully crafted collection of reusable components and guidelines that tells designers what, how, and when to use certain patterns. Instead of reinventing the wheel each time a new feature comes along, designers can use what’s already been validated and established, ensuring quality and consistency across different products. This also saves internal teams a whole lot of time when building. At one company, we had a design system in place that was used to develop one of our products, but once multiple designers started leveraging it for their respective projects, we learned that the system wasn't battle-tested for managing design at scale.</p>
 
             </div>
           </div>
 
           <div class="container pt-3">
             <div class="line-width">
-                <p class="">I was spending a lot of time hunting for components in this system and trying to make sense of what I was supposed to use. I questioned why the components were constructed and organized in the way that they were and thought about what I would've done differently. This compelled me to take up the challenge. I decided that I was going to create a personal design system from scratch; one that is loaded with the essentials, clearly documented, and sufficient enough for people to use right off the bat. For a month, I dedicated a dozen hours a week towards this new design system&mdash;which I lovingly named Baby Design System.</p>
+                <p class="">I spent a lot of time hunting for components in this system and trying to make sense of what I was allowed to use. I questioned why the components were constructed and organized in the way that they were and thought about what I would have done differently. This compelled me to take up the challenge. I was going to create a personal design system from scratch; one that is loaded with the essentials, clearly documented, and easy to customize. For a month, I dedicated a dozen hours a week towards this new design system&mdash;which I lovingly named "Baby Design System".
+                </p>
               </div>
             </div>
 
             <div class="container pt-5">
               <div class="line-width">
                   <p class="subject">solutions</p>
-                  <h4 class="mb-4">Accessibility is always on the brain</h4>
-                  <p>As I was starting with the basics of the design system&mdash;fonts, colors, icons&mdash;I wanted to make sure everything would have enough contrast and pose no accessibility issues. I've always had trouble coming up with color palettes (I used to not pay attention to hue, saturation, etc.), so I was happy that a Figma plugin called Foundation: Color Generator existed. I simply entered a color I wanted to use, and the plugin would generate different color profiles based on that color, including their color contrast ratios.</p>
-              </div></div>
-
-              <div class="container pt-5">
-                <img src="./images/baby design system/colors.png" class="shadow-sm img-fluid">
-             </div>
-
-             <div class="container pt-5">
-              <div class="line-width">
-                  <h4 class="mb-4">Customizable Components</h4>
-                  <p>Instead of having multiple components for each of the permutations, I simply created a single master component, and then allowed flexibility to switch between the different types, sizes, states, icon visibility, etc. This makes it easy for designers to prototype. When searching within assets for a button, only one component will appear. </p>
+                  <h4 class="mb-4">Flexible Components For All Your Needs</h4>
+                  <p>In the design system I used at my company, there was an excess of components; separate components existed for different styles. If I wanted to use a larger button, I would need to search and see if that option was even available. This was something I wanted to correct in Baby Design System; more visibility into what permutations exist and being able to change them easily, all in one place. For every component, I've introduced multiple customizable properties. Don't like rectangle buttons? You can use round buttons! Want to change the primary color? Change it upstream to the color of your choice and watch it proliferate for all buttons! Using just a single component, you can tailor it to fit your needs, including changing the states and styles.</p>
               </div></div>
               <div class="container pt-5">
                 <video width="100%" class="shadow-sm" autoplay muted loop playsinline>
                   <source
-                    src="./images/baby design system/button-variant.mp4"
+                    src="./images/baby design system/button-change.mp4"
                     type="video/mp4"
                   />
                 </video>
-                <p class="figure-caption">The one button component to rule them all!</p>
+                <p class="figure-caption">All you need is a single component for all your buttons</p>
              </div>
+
+             <div class="container pt-3">
+              <div class="line-width">
+                  <p class="">For more complex components that have nested components, I've exposed the ability to change those properties at the parent level. In addition to changing the table, you'll be able to easily change what the row items are and swap between the variants.
+                  </p>
+                </div>
+              </div>
+
              <div class="container pt-5">
               <video width="100%" class="shadow-sm" autoplay muted loop playsinline>
                 <source
@@ -149,17 +148,39 @@
                   type="video/mp4"
                 />
               </video>
-              <p class="figure-caption">The one button component to rule them all!</p>
+              <p class="figure-caption">Fine-tune complex components like tables</p>
            </div>
+            
+
+             <div class="container pt-5">
+              <div class="line-width">
+                  <h4 class="mb-4">Documentation to Help You Find Your Way</h4>
+                  <p>My experience with my company's design system inspired me to take design documentation seriously. It wasn't immediately clear to me if I was looking at a master component or one of its instances. I was bouncing around the Figma file trying to locate guidelines and what options were available to me. With Baby Design System, I've organized everything in a way where users can see right off the bat what the different customizations are. Also included are anchors to help users jump to the master components. I've had a little help along the way for documentation. I took a lot of inspiration from Ant Design, a popular enterprise-grade design system that I've used extensively in the past. I also used a plugin called Foundation: Color Generator to assemble some neat color palettes that show the contrast ratios for my colors.</p>
+              </div></div>
+              <div class="container pt-5">
+                <img src="./images/baby design system/colors.png" class="shadow-sm img-fluid">
+                <p class="figure-caption">Foundation: Color Generator has a feature that nicely plots your color profiles and their contrast ratios</p>
+             </div>
+
+             <div class="container pt-5">
+              <img src="./images/baby design system/field.png" class="shadow-sm img-fluid">
+              <p class="figure-caption">Variants are shown for each component and users can navigate to master components</p>
+           </div>
+             
+            
 
            <div class="container pt-5">
             <div class="line-width">
-                <h4 class="mb-4">Documentation</h4>
-                <p>As I was starting with the basics of the design system&mdash;fonts, colors, icons&mdash;I wanted to make sure everything would have enough contrast and pose no accessibility issues. I've always had trouble coming up with color palettes (I used to not pay attention to hue, saturation, etc.), so I was happy that a Figma plugin called Foundation: Color Generator existed. I simply entered a color I wanted to use, and the plugin would generate different color profiles based on that color, including their color contrast ratios.</p>
+                <h4 class="mb-4">Learnings</h4>
+                <p>Is Baby Design System comprehensive? Not yet, but if you're someone who wants to get started with prototyping and needs just the basics&mdash;buttons, forms, alerts, tabs, even tables&mdash;this design system will have you covered. Building and even using a design system requires a lot of discipline and planning, no different from building a product. Through this endeavor, I've gained insights on when to create variants and got to visualize designers as my own users.</p>
             </div></div>
-            <div class="container pt-5">
-              <img src="./images/baby design system/field.png" class="shadow-sm img-fluid">
-           </div>
+            <div class="container pt-3 mb-6">
+              <div class="line-width">
+                  <p class="">What started off as a personal experiment is now a living, breathing, asset on Figma Community. I'm still adding more to Baby Design System, but it's ready to be used by anyone!
+                  </p>
+                </div>
+              </div>
+          
          
 
   
