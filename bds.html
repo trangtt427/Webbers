@@ -106,37 +106,57 @@
           <div class="line-width">
               <p class="subject">opportunity</p>
               <h4 class="mb-4">A Baby is Born</h4>
-              <p>A design system is a collection of a company's reusable components and guidelines that tells designers what, how, and when to use certain patterns. Instead of reinventing the wheel each time a new feature comes along, designers can use what's already been validated and established, ensuring quality and consistency across the different products offered by the company. This also saves internal teams a whole lot of time when building. At one company, we had a design system in place that was used to develop one of our products, but once multiple designers started leveraging it for their respective projects, we soon learned that the system was limited when designing at scale.</p>
+              <p>A design system is a collection of reusable components and guidelines that tells designers what, how, and when to use certain patterns when designing. Instead of reinventing the wheel each time a new feature comes along, designers can use what’s already been validated for the appropriate use cases, ensuring quality and consistency across different products. This helps designers prototype and deliver solutions faster.</p>
 
             </div>
           </div>
 
           <div class="container pt-3">
             <div class="line-width">
-                <p class="">I spent a lot of time hunting for components in this system and trying to make sense of what I was allowed to use. I was curious about the thought process that led to the components being constructed and organized in the way that they were and thought about what I would have done differently. This inspired me. I wanted to try my hand at creating a personal design system from scratch; one that is equipped with the essentials, clearly documented, and easy to customize. For a month, I dedicated a dozen hours a week towards this new design system&mdash;which I lovingly named "Baby Design System".
+                <p class="">One of my companies started a design system as part of a huge product redesign initiative, but once multiple designers started working out of it, we soon learned that it wasn't tested for managing design at scale. A huge chunk of my time was spent finding my way around and creating custom components that the design system was supposed to supply. At the same time, I was trying to make sense of why components were built a certain way and why we settled on decisions without evaluating them for our entire ecosystem of products. Suddenly, I was inspired.
                 </p>
               </div>
             </div>
+            <div class="container pt-3">
+              <div class="line-width">
+                  <h5 class=""><i>What's it like to be in the trenches building a design system? </i>
+                  </h5>
+                </div>
+              </div>
+
+              <div class="container pt-5">
+                <img src="./images/baby design system/toggle.png" class="shadow-sm img-fluid">
+                <p class="figure-caption">In the company design system, there were separate components for different styles. This toggle has multiple components for size, but nothing for the different states.</p>
+             </div>
+
+            <div class="container pt-3">
+              <div class="line-width">
+                  <p class=""> I was compelled to explore ideas for some of the problems that my team and I encountered. I was going to create a personal design system from scratch; one that would help designers design quickly, is easy to customize, and has clear guidelines. For a month, I dedicated a dozen hours a week towards this new design system&mdash;which I lovingly dubbed <i>Baby Design System.</i> 
+                  </p>
+                </div>
+              </div>
+
+           
 
             <div class="container pt-5">
               <div class="line-width">
                   <p class="subject">solutions</p>
                   <h4 class="mb-4">Flexible Components For All Your Needs</h4>
-                  <p>The design system at my company was overloaded with redundancy; similar but  separate components existed for their different styles. If I had a small button component in front of me but wanted to use a larger size, I'd naturally look to see if there were any variants. If not, I would search and see if that option was even available. This was the workflow I wanted to avoid in Baby Design System. I wanted to offer more visibility into what permutations exist through a single master component and make it easy to swap between them. Don't like rectangle buttons? Toggle to round buttons. Want to change the primary color of your button? Change it upstream to the color of your choice and watch it proliferate for all buttons. With just a single component, users have all the controls.</p>
+                  <p>The design system we had fell short when it came to switching component styles. Separate components existed for their different styles and interaction states like disabled were shown in the documentation but didn't existed as a usable permutation. It was trial and error at times because of the inconsistency. Some styles were variants. Some styles were their own components. For Baby Design System, I wanted to offer more visibility into what permutations exist and be able to change them on a whim. Don't like rectangle buttons? Change them to round buttons. Want to change the primary color of your button? Change it upstream to the color of your choice and watch it proliferate for all buttons. With just a single component, users have all the controls.</p>
               </div></div>
               <div class="container pt-5">
                 <video width="100%" class="shadow-sm" autoplay muted loop playsinline>
                   <source
-                    src="./images/baby design system/button-change.mp4"
+                    src="./images/baby design system/button-movie.mp4"
                     type="video/mp4"
                   />
                 </video>
-                <p class="figure-caption">All you need is a single component for all your buttons</p>
+                <p class="figure-caption">Only a single component is needed for all your buttons</p>
              </div>
 
              <div class="container pt-3">
               <div class="line-width">
-                  <p class="">For more complex components like tables, I exposed the ability to change the nested component properties at the parent level. In addition to changing the table, you'll be able to easily customize what the row items are and swap between the variants.
+                  <p class="">For more complex components like tables, I exposed the ability to change the nested component properties at the parent level. In addition to changing the table, you'll be able to easily change the row items and swap between the variants.
                   </p>
                 </div>
               </div>
@@ -144,7 +164,7 @@
              <div class="container pt-5">
               <video width="100%" class="shadow-sm" autoplay muted loop playsinline>
                 <source
-                  src="./images/baby design system/customizable-table.mp4"
+                  src="./images/baby design system/table-movie.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -155,7 +175,7 @@
              <div class="container pt-5">
               <div class="line-width">
                   <h4 class="mb-4">Documentation to Help You Find Your Way</h4>
-                  <p>My experience with my company's design system compelled me to take design documentation seriously. It wasn't immediately clear to me if I was looking at a master component or one of its instances. I was bouncing around the Figma file trying to locate guidelines and what options were available to me. With Baby Design System, I've organized everything in a way where users can instantly see what the different customizations are. Also included are anchors to help users jump to the master components. My documentation took a page from Ant Design, a popular enterprise-grade design system that I've enjoyed and used extensively in the past. Another helpful tool for documentation was a plugin called Foundation: Color Generator, which I used to assemble some neat color palettes that show the contrast ratios for each color.</p>
+                  <p>My exposure to the company's design system was also learning experience to take design documentation seriously. I was bouncing around the Figma file trying to locate guidelines and options available to me. With Baby Design System, I've organized everything in a way where users can see instantly what the different customizations are and included anchors to help users jump to master components. I took a page out of Ant Design, a popular enterprise-grade design system that does a wonderful job with their Figma file way-finding. I also used a plugin called Foundation: Color Generator to assemble some neat color palettes and documentation that show the contrast ratios for my colors.</p>
               </div></div>
               <div class="container pt-5">
                 <img src="./images/baby design system/colors.png" class="shadow-sm img-fluid">
@@ -173,7 +193,7 @@
             <div class="line-width">
               <p class="subject">learnings</p>
                 <h4 class="mb-4">A Growing Baby</h4>
-                <p>Nothing I've done here is groundbreaking; it's the typical thinking and method that goes into creating a design system. Getting hands on with building Baby Design System was still a rewarding experience though. Is it a comprehensive system? Not at all! There are plenty of free design systems out there that are far more mature with thousands of variants. But if you're someone who wants to focus on prototyping instead of building custom components and needs just the basics&mdash;buttons, forms, alerts, tabs, even tables&mdash;this design system will have you covered.
+                <p>Nothing I've done here is groundbreaking; this is typically what how a design system is crafted. Getting hands on with building Baby Design System was still a rewarding experience though. Is it a comprehensive system? Not at all! There are plenty of free design systems out there that are far more mature with thousands of variants. But if you don't want to create custom components and need just the basics&mdash;buttons, forms, alerts, tabs, even tables&mdash;this design system will have you covered.
 
 
 
