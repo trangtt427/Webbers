@@ -136,7 +136,7 @@ font-family: 'quincy-cf', serif;
 
 
 h5, .h5 {
-  color: var(--bs-gray);
+  color: var(--bs-body-color);
 }
 
 
