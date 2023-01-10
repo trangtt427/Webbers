@@ -2034,7 +2034,9 @@ progress {
      flex:none;
    }
 
-
+p {
+  font-size: 16px;
+}
  
 
   h1, .h1 {
