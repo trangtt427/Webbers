@@ -135,9 +135,6 @@ font-family: 'quincy-cf', serif;
 
 
 
-h5, .h5 {
-  color: var(--bs-body-color);
-}
 
 
 
@@ -175,7 +172,7 @@ h4, .h4 {
 } */
 
 h5, .h5 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -711,7 +708,7 @@ progress {
 
 
   .h4, h4 {
-    font-size:1.75rem;
+    font-size:24px;
   }
 
   .container-md, .container-sm, .container {
@@ -2047,8 +2044,10 @@ progress {
 
 
   .h4, h4 {
-    font-size:1.5rem;
+    font-size:22px;
   }
+
+
 
 
   .col {
