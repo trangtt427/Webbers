@@ -129,7 +129,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 -o-transition: all 0.3s ease;
 -ms-transition: all 0.3s ease;
 -webkit-font-smoothing: subpixel-antialiased; 
-font-family: 'quincy-cf', serif;
+font-family: 'freight', serif;
 }
 
 
@@ -2083,7 +2083,7 @@ p {
     font-size: 22px;
     font-weight: 300;
     list-style: none;
-    font-family: 'quincy-cf', serif;
+    font-family: 'freight', serif;
     -webkit-font-smoothing: subpixel-antialiased;
     font-size: 32px;
     max-width: 700px;
