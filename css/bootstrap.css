@@ -129,7 +129,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 -o-transition: all 0.3s ease;
 -ms-transition: all 0.3s ease;
 -webkit-font-smoothing: subpixel-antialiased; 
-font-family: 'freight', serif;
+font-family: 'dm serif display', serif;
 }
 
 
@@ -695,11 +695,11 @@ progress {
   }
 
   .h1, h1 {
-    font-size:2.75rem;
+    font-size:2.6rem;
   }
 
   h2, .h2 {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
   }
 
 
@@ -2083,7 +2083,7 @@ p {
     font-size: 22px;
     font-weight: 300;
     list-style: none;
-    font-family: 'freight', serif;
+    font-family: 'dm serif display', serif;
     -webkit-font-smoothing: subpixel-antialiased;
     font-size: 32px;
     max-width: 700px;
