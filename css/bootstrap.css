@@ -11,9 +11,11 @@
  /*custom trang*/
  #bodymovin-ac{
    margin:0 auto;
-  max-width:60px;
+  max-width:55px;
 }
 /*end custom trang*/
+
+
 
 :root {
   --bs-blue: #0d6efd;
@@ -38,7 +40,7 @@
   --bs-gray-600: #6c757d;
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
-  --bs-gray-900: #212529;
+  --bs-gray-900: #16181a;
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
@@ -66,7 +68,7 @@
   --bs-body-font-size: 17px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.8;
-  --bs-body-color: #212529;
+  --bs-body-color: #142358;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -104,7 +106,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color:#eef4fc;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   
@@ -146,7 +148,7 @@ font-family: 'tiempos', serif;
 
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size:32px;
 }
 /* @media (min-width: 1200px) {
   h3, .h3 {
@@ -637,6 +639,8 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  display:block;
+  margin:auto;
 }
 
 .img-thumbnail {
@@ -660,8 +664,8 @@ progress {
 .figure-caption {
   padding-top:10px;
   font-size: 0.875em;
-  text-align:left;
-  color: #6c757d;
+  text-align:center;
+  color: #6c779a;
 }
 
 .container,
@@ -678,6 +682,7 @@ progress {
   padding-left:30px;
   padding-right:30px;
   margin:auto;
+
 }
 
 
@@ -689,6 +694,16 @@ progress {
   }
 } */
 @media (min-width: 768px) {
+  .headcontain {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:var(--bs-body-color);
+    height:95px;
+    max-width:1080px;
+    margin:auto;
+  }
 
   .image-bottom-gap {
     margin-bottom:auto;
@@ -699,11 +714,11 @@ progress {
   }
 
   .h1, h1 {
-    font-size:2.55rem;
+    font-size:48px;
   }
 
   h2, .h2 {
-    font-size: 2.1rem;
+    font-size: 40px;
   }
 
 
@@ -765,10 +780,7 @@ progress {
   margin-top: var(--bs-gutter-y);
 }
 
-.col {
-  flex: 1 0 0%;
-  /*border: 1px solid red;*/
-}
+
 
 .row-cols-auto > * {
   flex: 0 0 auto;
@@ -832,8 +844,7 @@ progress {
 
 .col-5 {
   flex: 0 0 auto;
-  width: 41.66666667%;
-}
+  width: 41.66666667%;}
 
 .col-6 {
   flex: 0 0 auto;
@@ -2020,6 +2031,18 @@ progress {
 }
 @media (max-width: 767.98px) {
 
+  .headcontain {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:var(--bs-body-color);
+    height:75px;
+    max-width:1080px;
+    margin:auto;
+  }
+ 
+
   .image-bottom-gap {
     margin-bottom:3rem;
   }
@@ -2035,7 +2058,7 @@ progress {
    }
 
    .bigp {
-    font-size: 19px;
+    font-size: 18px;
   }
 
 p {
@@ -2047,17 +2070,25 @@ p {
   padding:1.5rem !important;
 }
 
+.p-8 {
+  padding:2.5rem !important;
+}
+
   h1, .h1 {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
 
   h2, .h2 {
-    font-size: 1.75rem;
+    font-size: 28px;
+  }
+
+  h3, .h3 {
+    font-size:24px;
   }
 
 
   .h4, h4 {
-    font-size:22px;
+    font-size:20px;
   }
 
   .col {
@@ -2097,11 +2128,14 @@ p {
     font-size: 32px;
     max-width: 700px;
     margin: 50px;
-    color: var(--bs-gray-900);
+    color:  var(--bs-body-color);
   }
+
+
+
   .menu-item a {
     text-decoration: none;
-    color: var(--bs-gray-900);
+    color:  var(--bs-body-color);
   }
 
   html.noscroll {
@@ -2116,7 +2150,7 @@ p {
   .hamburger__container {
     position: relative;
     z-index: 9999;
-    background: white;
+    background: none;
     cursor:pointer;
   }
 
@@ -6949,7 +6983,7 @@ textarea.form-control-lg {
 
 .text-bg-dark {
   color: #fff !important;
-  background-color: #1a1b1f !important;
+  background-color: var(--bs-body-color); !important;
 }
 
 .link-primary {
@@ -7889,6 +7923,13 @@ textarea.form-control-lg {
 .mt-6 {
   margin-top: 6rem !important;
 }
+.mt-7 {
+  margin-top: 9rem !important;
+}
+
+.overlap {
+  margin-top: -13rem !important;
+}
 
 .mt-auto {
   margin-top: auto !important;
@@ -8002,12 +8043,20 @@ textarea.form-control-lg {
   padding: 1.5rem !important;
 }
 
-.p-4-5 {
+.p-5 {
   padding:2rem;
 }
 
-.p-5 {
-  padding: 3rem !important;
+.p-6 {
+  padding: 2.5rem;
+}
+
+.p-7 {
+  padding:3rem;
+}
+
+.p-8 {
+  padding:4rem;
 }
 
 .px-0 {
