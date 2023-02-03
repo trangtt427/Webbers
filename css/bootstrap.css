@@ -715,6 +715,7 @@ progress {
 
   .h1, h1 {
     font-size:48px;
+    line-height:1.2 !important;
   }
 
   h2, .h2 {
