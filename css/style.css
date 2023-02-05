@@ -497,9 +497,10 @@ a.cta {
   text-transform: uppercase;
   overflow: hidden;
   text-align: left;
-  color: var(--bs-body-color-rgb);
+  color: #6c779a;
   letter-spacing: 2px;
   line-height:1.4;
+  margin-bottom:4px !important;
 
 }
 
