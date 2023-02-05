@@ -12,6 +12,7 @@
  #bodymovin-ac{
    margin:0 auto;
   max-width:55px;
+  padding-top:2px;
 }
 /*end custom trang*/
 
@@ -2102,6 +2103,7 @@ p, li {
   #bodymovin-ac{
     width:60px;
     margin: 0 auto;
+    padding-top:1px;
   }
 
   .table-responsive-md {
