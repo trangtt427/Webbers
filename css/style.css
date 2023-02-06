@@ -164,11 +164,15 @@
 
 /* start nav*/
 
+.whitebg {
+  background-color:white;
+}
+
 .quote {
-  font-size: 20px;
   border-left: 3px solid #E9BA43;
   padding-left:16px;
   font-style:italic;
+  line-height:1.6;
 }
 
 .inbodylink {
