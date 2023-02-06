@@ -166,13 +166,11 @@ h6, .h6 {
 font-size: 16px;
 }
 
-
-
-
 p {
   margin-top: 0;
   margin-bottom: 1rem;
   -webkit-font-smoothing: antialiased;
+  font-style:normal;
 }
 
 abbr[title] {
