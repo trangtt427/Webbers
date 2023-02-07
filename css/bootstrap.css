@@ -147,6 +147,7 @@ font-family: 'tiempos', serif;
 
 h2, .h2 {
   font-size: 40px;
+  line-height: 1.2 !important;
 }
 
 h3, .h3 {
