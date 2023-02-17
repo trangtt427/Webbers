@@ -3,6 +3,11 @@
   src: url(/fonts/TiemposHeadline-Medium.otf)
 }
 
+@font-face {
+  font-family: "akkurat";
+  src: url(/fonts/AkkuratPro-Regular.otf)
+}
+
 
 .animate-in {
   -webkit-animation: fadeIn 0.5s ease-in;
@@ -200,7 +205,7 @@ ul .navlist {
   margin: 0px;
   list-style: none;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   padding-inline-start: 0px;
   transition: 0.3s all ease-in-out;
@@ -210,7 +215,7 @@ ul .menu {
   margin: 0px;
   list-style: none;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   padding-inline-start: 0px;
   transition: 0.3s all ease-in-out;
@@ -221,7 +226,7 @@ ul .menu {
   color: white;
   text-decoration: none;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 12px;
   display: inline-block;
   padding: 8px 0px;
   margin: 20px;
@@ -496,7 +501,7 @@ a.cta {
 }
 .subject-no-line {
   -webkit-font-smoothing: antialiased;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: var(--bs-body-font-weight);
   text-transform: uppercase;
   overflow: hidden;
@@ -510,7 +515,7 @@ a.cta {
 
 .subject {
   -webkit-font-smoothing: antialiased;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: var(--bs-body-font-weight);
   text-transform: uppercase;
   overflow: hidden;
@@ -533,7 +538,7 @@ a.cta {
 }
 
 .header-name {  -webkit-font-smoothing: antialiased;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: var(--bs-body-font-weight);
   text-transform: uppercase;
   overflow: hidden;
@@ -555,7 +560,7 @@ a.cta {
 
 .subject-white {
   -webkit-font-smoothing: antialiased;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: var(--bs-body-font-weight);
   text-transform: uppercase;
   overflow: hidden;
@@ -596,7 +601,7 @@ a.cta {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-  font-size: 13px;
+  font-size: 12px;
   display: inline-block;
   margin: 0px 20px;
   margin-left: 0px;

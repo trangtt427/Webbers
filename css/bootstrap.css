@@ -62,13 +62,13 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Source Sans Pro", sans-serif;
+  --bs-font-sans-serif: "akkurat", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 17px;
   --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.8;
+  --bs-body-line-height: 2;
   --bs-body-color: #142358;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
@@ -137,7 +137,7 @@ font-family: 'tiempos', serif;
 
 
 .bigp {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .h1, h1 {
