@@ -197,7 +197,7 @@ a {
 ul {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
-  font-size: 17px;
+  font-size: 16px;
   transition: 0s all ease-in-out;
 }
 
@@ -449,11 +449,13 @@ button:focus {
 
 a.cta {
   background: var(--bs-body-color);
+  font-weight: var(--bs-body-font-weight);
+  -webkit-font-smoothing: antialiased;
   color:white;
   padding: 12px 85px 12px 25px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 3em;
   max-width: 550px;
   transition: 0.3s;
@@ -551,7 +553,6 @@ a.cta {
     content: "";
     display: inline-block;
     position: relative;
-    vertical-align: middle;
     width: 40px;
     margin-left: 10px;
     margin-bottom: 4px;

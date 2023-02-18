@@ -12,7 +12,6 @@
  #bodymovin-ac{
    margin:0 auto;
   max-width:55px;
-  padding-top:2px;
 }
 /*end custom trang*/
 
@@ -66,7 +65,7 @@
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 17px;
+  --bs-body-font-size: 16px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 2;
   --bs-body-color: #142358;
@@ -2095,7 +2094,6 @@ p, li {
   #bodymovin-ac{
     width:60px;
     margin: 0 auto;
-    padding-top:1px;
   }
 
   .table-responsive-md {

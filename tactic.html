@@ -127,7 +127,7 @@
           <div class="line-width">
               <p class="subject">opportunity</p>
               <h3 class="mb-2">Helping Accountants and Finance Teams Close Their Books</h3>
-              <p>Crypto was starting to appear on more company balance sheets, so that meant more regulations and guidelines around how to report its income. Not too many solutions were in the market yet, especially for companies that handle about 1,000+ transactions a month. Tactic, a start-up with just the 4 of us at the time, aimed to solve this. I joined as a design consultant, and with my partner-in-crime&mdash;the lead product manager, we delivered elaborate end-to-end solutions for b2b companies to manage crypto taxes in a clean, compliant way.
+              <p>Crypto was starting to appear on more company balance sheets, so that meant more regulations and guidelines around how to report taxes. Not too many solutions were in the market yet, especially for companies that handle about 1,000+ transactions a month. Tactic, a start-up with just the 4 of us at the time, aimed to solve this. I joined the team as a design consultant, and with my partner-in-crime&mdash;the lead product manager, we delivered elaborate end-to-end solutions for b2b companies to manage crypto taxes in a clean, compliant way.
               </p>
             </div>
           </div>
@@ -137,7 +137,7 @@
               <div class="line-width mb-4">
                   <p class="subject">research</p>
                   <h3 class="mb-2">Learning About Taxes and Crypto</h3>
-                  <p> In the beginning, we poked around at what other companies were doing (mainly Cryptio, Koinly, and CryptoTaxCalculator) and identified the problems they were solving&mdash;and for what types of customers. We were constrained with resources, but had our own accountant and a few customer friendlies to learn from. I held Q+A sessions to better understand what accountants and finance stakeholders do ahead of tax season.
+                  <p> In the beginning, we poked around at what other companies were doing (mainly Cryptio, Koinly, and CryptoTaxCalculator) and identified the problems they were solving&mdash;and for what types of customers. We were constrained on resources, but had our own accountant and a few customer friendlies to learn from. I held Q+A sessions to better understand what accountants and finance stakeholders do ahead of tax season.
                 </p>
               </div>
 
@@ -156,14 +156,14 @@
 
 
                 <div class="line-width mt-4 mb-5">
-                    <p>One user, a Head of Finance, had his engineers pull transactions across different wallets and exchanges to manually calculate their cost-basis and fees. This tedious workflow took away valuable development time from engineers. Users made it clear that a treasury view of their data would be helpful.</p>
+                    <p>We learned that one user, a Head of Finance, had his engineers pull transactions across different wallets and exchanges to manually calculate their cost-basis and fees. This tedious workflow took away valuable development time from the engineers. Multiple customers made it clear that a treasury view of their data would be helpful.</p>
                   </div>
 
 
 
                   <div class="line-width mb-4">
                       <h4 class="mb-2">Users reached out to the support team for certain workflows because there was no way to do it in the product yet</h4>
-                      <p>While users were able to connect their exchanges and wallets through a barebones interface, they didn't have product solutions to do more of the nuanced accounting tasks, like mapping their Quickbooks chart of accounts. Much of this was done by contacting Tactic and having the Product and Engineering teams handle this in the backend. It was manageable with the number of customers we had at the time, but would obviously not be sustainable as we grow.</p>
+                      <p>While users were able to carry out some tasks through the barebones interface, they didn't have product solutions to do more of the nuanced accounting tasks, like mapping their Quickbooks chart of accounts. This could only be done by contacting Tactic and having the Product and Engineering teams handle this in the backend. It was manageable with the number of customers we had at the time, but would obviously not be sustainable for growth.</p>
                   </div>
 
                     <div class="blurb-container mb-4">
@@ -221,12 +221,9 @@
 
 
 
-                <div class="line-width">
-                    <p>One thing we learned was that users were often tidying up their transactions. Each transaction must be mapped to a category, usually based on directionality, so that it gets properly accounted for in their journals. Since this is a high frequency touchpoint, I designed a lightweight interaction where users can apply categories efficiently by doing it inline or via bulk.</p>
-                </div>
-
                 <div class="line-width mb-5">
-                    <p>In addition to directional categories, there are also sub-categories. For example, a transaction's direction could be considered "money in", but "buy", "income", and "airdrop" are sub-categories that fall under that. Since the system can only detect the direction, we made it easier for users to categorize by showing only the sub-categories based on that direction. If they really wanted to, users could also overwrite these in an advanced workflow.</p>
+                    <p>One thing we were informed of later was that users were often tidying up their transactions. Each transaction must be mapped to a category, usually based on directionality, so that it gets properly accounted for in their journals. Since this is a high frequency touchpoint, I designed a lightweight interaction where users can apply categories efficiently by doing it inline or via bulk.</p>
+                    <p class="pt-3">In addition to directional categories, there are also sub-categories. For example, a transaction's direction could be considered "money in", but "buy", "income", and "airdrop" are sub-categories that fall under that. Since the system can only detect the direction, we made it easier for users to categorize by showing only the sub-categories based on that direction. If they really wanted to, users could also overwrite these in an advanced workflow.</p>
                   </div>
 
 
@@ -238,7 +235,7 @@
 
                 <div class="line-width mt-5">
                     <h4 class="mb-2">Save hours by automating with rules</h4>
-                    <p class="mb-5">For customers with lots of transactions, categorizing each one would be a nightmare. We enhanced this feature even further, and came up with a way to automate this step based on conditions. I designed a Rules feature where the system performs an action (i.e. categorizing transactions or attaching a memo) if a transaction fulfills a certain criteria. Users have the choice to apply the rules retroactively as well, giving them full control of how they want to manage their transactions.</p>
+                    <p class="mb-5">For customers with lots of transactions, categorizing them as they come in was still a chore. We solved for this, and came up with a way to automate this step based on conditions. I designed a Rules feature where the system performs an action (i.e. categorizing transactions or attaching a memo) if a transaction fulfills a certain criteria. Users have the choice to apply the rules retroactively as well, giving them full control of how they want to manage their transactions.</p>
                 </div>
 
                 <img class="shadow-xs img-fluid" src="./images/tactic/newrules.gif"
@@ -253,7 +250,7 @@
 
               <div class="line-width mt-5">
                   <h4 class="mb-2">Guided Flows to Connect Wallets and Exchanges</h4>
-                  <p> Connecting to a source is the first step to towards populating transaction data. We designed an easy wallet setup process; bite-sized and has helpful instructions.</p>
+                  <p> Connecting to a source is the first step to towards populating transaction data. I designed an easy wallet setup process; bite-sized and helpful.</p>
               </div>
               <img src="./images/tactic/sources.png" class="img-fluid mt-5 shadow-xs">  <p class="figure-caption">Bite-sized steps to help users connect their data with low stress.</p>
 
@@ -300,15 +297,15 @@
 
                   <div class="quote mb-5"><h5 class="mt-4">"There is very little, if any, clean up required and the UI and dashboard are something our accountants love too."</h5></div>
 
-                  <p>The features demoed well in sales calls, winning over a few customers who were impressed with the level of automation. After months of working heads down and thinking through more complex accounting challenges, we hit a string of milestones. We <a
+                  <p>The features demoed well in sales calls, winning over a few customers who were impressed with the level of automation. After months of working heads down and thinking through more complex accounting challenges, we hit a string of milestones. Tactic <a
                     href="https://techcrunch.com/2022/05/04/tactic-raises-2-6m-from-founders-fund-ramp-to-make-it-easier-for-businesses-to-transact-in-cryptocurrency/"
                     target="_blank"
                     class="inbodylink"
-                    >emerged from stealth</a> in May 2022 with a seed funding of 2.6 million. In September, we <a
+                    >emerged from stealth</a> in May 2022 with a seed funding of 2.6 million In September, the team <a
                     href="https://techcrunch.com/2022/05/04/tactic-raises-2-6m-from-founders-fund-ramp-to-make-it-easier-for-businesses-to-transact-in-cryptocurrency/"
                     target="_blank"
                     class="inbodylink"
-                    >raised 11 million in funding</a>. The team has grown rapidly and is now serving dozens of customers across many different industries. Check out the Tweet below to see some of the recent features we've released!</p>
+                    >raised 11 million in funding.</a> Today, dozens of customers across different industries are being served on the platform. Check out the Tweet below to see some of the recent features released!</p>
               </div>
 
 
