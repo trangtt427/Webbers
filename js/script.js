@@ -92,6 +92,9 @@ $("#nav-icon").click(function () {
 //     var scrollVar = $(window).scrollTop();
 //     $('.top').css("opacity", 1 - scrollVar/300);
 // })
+
+
+
 (function ($) {
   $(document).ready(function () {
     $(".hamburger__container").click(function () {
