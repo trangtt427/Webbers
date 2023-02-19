@@ -452,7 +452,7 @@ a.cta {
   font-weight: var(--bs-body-font-weight);
   -webkit-font-smoothing: antialiased;
   color:white;
-  padding: 12px 85px 12px 25px;
+  padding: 16px 85px 16px 25px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;

@@ -2132,7 +2132,8 @@ p, li {
   }
 
   html.noscroll {
-    overflow: hidden;
+    position: fixed; 
+    overflow-y:scroll;
   }
 
   body.noscroll {
