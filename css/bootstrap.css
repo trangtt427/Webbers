@@ -136,7 +136,7 @@ font-family: 'tiempos', serif;
 
 
 .bigp {
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .h1, h1 {
@@ -155,7 +155,7 @@ h3, .h3 {
 
 .h4, h4 {
   font-size:24px;
-}
+} 
 
 h5, .h5 {
 font-size: 20px;
@@ -2034,13 +2034,13 @@ progress {
      flex:none;
    }
 
-   .bigp {
+   /*.bigp {
     font-size: 17px;
-  }
+   }
 
 p, li {
   font-size: 16px;
-}
+} */
 
 
 .p-4-5 {
@@ -2059,19 +2059,19 @@ p, li {
     font-size: 32px;
   }
 
-  h3, .h3 {
+  /*h3, .h3 {
     font-size:28px;
   }
 
 
   .h4, h4 {
     font-size:20px;
-  }
+  } 
 
   h5, .h5 {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    }
+    } */
     
     h6, .h6 {
     font-size: 16px;
