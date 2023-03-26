@@ -1,12 +1,26 @@
 @font-face {
-  font-family: "tiempos";
-  src: url(/fonts/TiemposHeadline-Medium.otf)
+  font-family: "quicksand";
+  src: url(/fonts/Quicksand-VariableFont_wght.ttf)
 }
 
-@font-face {
-  font-family: "akkurat";
-  src: url(/fonts/AkkuratPro-Regular.otf)
+
+.box-shadow {
+  -webkit-box-shadow: 0 1px 3px rgba(158,172,201,0.5);
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+
+  -moz-box-shadow: 0 1px 3px rgba(158,172,201,0.5);
+  /* Firefox 3.5 - 3.6 */
+
+  box-shadow: 0 1px 5px rgba(158,172,201,0.5);
+  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
+
+
+/* make keyframes that tell the start state and the end state of our object */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 
 .animate-in {
@@ -174,7 +188,7 @@
 }
 
 .quote {
-  border-left: 3px solid #E9BA43;
+  border-left: 3px solid #1BB5A3;
   padding-left:16px;
   font-style:italic;
   line-height:1.6;
@@ -197,16 +211,14 @@ a {
 ul {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 19px;
   transition: 0s all ease-in-out;
 }
 
 ul .navlist {
   margin: 0px;
   list-style: none;
-  letter-spacing: 2px;
-  font-size: 12px;
-  text-transform: uppercase;
+  font-size: 19px;
   padding-inline-start: 0px;
   transition: 0.3s all ease-in-out;
 }
@@ -214,19 +226,15 @@ ul .navlist {
 ul .menu {
   margin: 0px;
   list-style: none;
-  letter-spacing: 2px;
   font-size: 12px;
-  text-transform: uppercase;
   padding-inline-start: 0px;
   transition: 0.3s all ease-in-out;
 }
 
 .navlist li a {
-  text-transform: uppercase;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 12px;
+  font-size: 17px;
   display: inline-block;
   padding: 8px 0px;
   margin: 20px;
@@ -246,7 +254,7 @@ ul .menu {
   height: 1px;
   left: 0;
   position: absolute;
-  background: white;
+  background: rgb(0, 0, 0);
   transition: 0.2s all ease-in-out;
   width: 0;
 }
@@ -284,7 +292,7 @@ ul .menu {
   height: 1px;
   left: 0;
   position: absolute;
-  background: white;
+  background: rgb(0, 0, 0);
   transition: 0.3s all ease-in-out;
   width: 100%;
 }
@@ -371,7 +379,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--bs-body-color);
+  background-color: var(--bs-white);
   -webkit-transition: top 0.2s ease-in-out;
   transition: all 0.3s ease 0s;
 }
@@ -409,7 +417,7 @@ button:focus {
   position: absolute;
   width: 100%;
   height: 1px;
-  background: white;
+  background: rgb(0, 0, 0);
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -453,14 +461,12 @@ a.cta {
   -webkit-font-smoothing: antialiased;
   color:white;
   padding: 16px 85px 16px 25px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 3em;
-  max-width: 550px;
   transition: 0.3s;
   position: relative;
   text-decoration: none;
+  border-radius:100px;
 }
 
 .cta-border-white{
@@ -483,7 +489,7 @@ a.cta {
   border-top-color: transparent;
   border-left-color: transparent;
   position: absolute;
-  top: 35%;
+  top: 38%;
   right: 32px;
   transform: rotate(-45deg);
   transition: 0.3s;
@@ -505,11 +511,9 @@ a.cta {
   -webkit-font-smoothing: antialiased;
   font-size: 12px;
   font-weight: var(--bs-body-font-weight);
-  text-transform: uppercase;
   overflow: hidden;
   text-align: left;
   color: #6c779a;
-  letter-spacing: 2px;
   line-height:1.4;
   margin-bottom:4px !important;
 
@@ -517,13 +521,11 @@ a.cta {
 
 .subject {
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: var(--bs-body-font-weight);
-  text-transform: uppercase;
   overflow: hidden;
   text-align: left;
-  color: var(--bs-body-color-rgb);
-  letter-spacing: 2px;
+  color: #6c779a;
   line-height:1.4;
 
 }
@@ -536,17 +538,14 @@ a.cta {
   width: 40px;
   margin-left: 10px;
   margin-bottom: 4px;
-  border-bottom: 1px solid var(--bs-gray-900);
+  border-bottom: 1px solid #6c779a;
 }
 
 .header-name {  -webkit-font-smoothing: antialiased;
-  font-size: 12px;
-  font-weight: var(--bs-body-font-weight);
-  text-transform: uppercase;
+  font-size: 32px;
   overflow: hidden;
   text-align: left;
-  color: white;
-  letter-spacing: 2px;
+  color: rgb(0, 0, 0);
   line-height:4.5;}
 
   .header-name:after {
@@ -561,13 +560,11 @@ a.cta {
 
 .subject-white {
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: var(--bs-body-font-weight);
-  text-transform: uppercase;
   overflow: hidden;
   text-align: left;
   color: var(--bs-body-color-rgb);
-  letter-spacing: 2px;
   line-height:1.4;
 
 }
