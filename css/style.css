@@ -370,19 +370,7 @@ li a:hover:after {
   display: inline-block;
 }
 
-header {
-  margin:0 auto;
-  z-index: 100;
-  position: fixed;
-  padding-left: 30px;
-  padding-right: 30px;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--bs-white);
-  -webkit-transition: top 0.2s ease-in-out;
-  transition: all 0.3s ease 0s;
-}
+
 /*
 .nav-up {
   top: -95px;

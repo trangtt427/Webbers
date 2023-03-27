@@ -16,6 +16,19 @@
 }
 /*end custom trang*/
 
+header {
+  margin:0 auto;
+  z-index: 100;
+  position: fixed;
+  padding-left: 30px;
+  padding-right: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bs-white);
+  -webkit-transition: top 0.2s ease-in-out;
+  transition: all 0.3s ease 0s;
+}
 
 
 :root {
@@ -150,6 +163,7 @@ h3, .h3 {
 
 .h4, h4 {
   font-size:24px;
+  line-height: 1.6 !important;
 } 
 
 h5, .h5 {
@@ -220,7 +234,7 @@ strong {
 }
 
 small, .small {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 mark, .mark {
@@ -2009,6 +2023,28 @@ progress {
   }
 }
 @media (max-width: 767.98px) {
+
+  .container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  /*background-color:beige;*/
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  max-width:1140px;
+  padding-left:20px;
+  padding-right:20px;
+  margin:auto;
+}
+
+header {
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
 
   .headcontain {
     font-size: 0;
