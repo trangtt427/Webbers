@@ -725,6 +725,12 @@ progress {
     display: none;
   }
 
+  .mb-5-desktop {
+    margin-bottom: 0;
+  }
+
+  
+
 
   .navlist {
     display: -ms-flexbox;
@@ -2023,6 +2029,10 @@ progress {
   }
 }
 @media (max-width: 767.98px) {
+
+  .mb-5-desktop {
+    margin-bottom: 3rem;
+  }
 
   .container,
 .container-fluid,
@@ -8024,6 +8034,7 @@ textarea.form-control-lg {
 .mb-5 {
   margin-bottom: 3rem !important;
 }
+
 
 .mb-6 {
   margin-bottom: 5rem !important;
