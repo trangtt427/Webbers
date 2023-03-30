@@ -669,6 +669,10 @@ progress {
   color: #6c779a;
 }
 
+.bigp {
+  font-size: 22px;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -2093,7 +2097,9 @@ p, li {
   font-size: 17px;
 } 
 
-
+.bigp {
+  font-size: 20px;
+}
 
 .p-4-5 {
   padding:1.5rem !important;
