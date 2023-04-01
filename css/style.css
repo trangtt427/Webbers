@@ -499,13 +499,12 @@ a.cta {
 }
 .subject-no-line {
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
   color: #6c779a;
   line-height:1.4;
-  margin-bottom:4px !important;
 
 }
 
