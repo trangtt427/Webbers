@@ -499,23 +499,27 @@ a.cta {
 }
 .subject-no-line {
   -webkit-font-smoothing: antialiased;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
   color: #6c779a;
   line-height:1.4;
+  letter-spacing:2px;
+  text-transform:uppercase;
 
 }
 
 .subject {
   -webkit-font-smoothing: antialiased;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
   color: #6c779a;
   line-height:1.4;
+  letter-spacing:2px;
+  text-transform:uppercase;
 
 }
 
@@ -526,7 +530,7 @@ a.cta {
   vertical-align: middle;
   width: 40px;
   margin-left: 10px;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   border-bottom: 1px solid #6c779a;
 }
 
@@ -549,12 +553,14 @@ a.cta {
 
 .subject-white {
   -webkit-font-smoothing: antialiased;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
   color: var(--bs-body-color-rgb);
   line-height:1.4;
+  letter-spacing:2px;
+  text-transform:uppercase;
 
 }
 
@@ -565,8 +571,10 @@ a.cta {
   vertical-align: middle;
   width: 40px;
   margin-left: 10px;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   border-bottom: 1px solid white;
+  letter-spacing:2px;
+  text-transform:uppercase;
 }
 
 .bottom_line {
