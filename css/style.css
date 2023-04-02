@@ -499,26 +499,26 @@ a.cta {
 }
 .subject-no-line {
   -webkit-font-smoothing: antialiased;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
   color: #6c779a;
   line-height:1.4;
-  letter-spacing:2px;
+  letter-spacing:1.5px;
   text-transform:uppercase;
 
 }
 
 .subject {
   -webkit-font-smoothing: antialiased;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
   color: #6c779a;
   line-height:1.4;
-  letter-spacing:2px;
+  letter-spacing:1.5px;
   text-transform:uppercase;
 
 }
@@ -553,13 +553,13 @@ a.cta {
 
 .subject-white {
   -webkit-font-smoothing: antialiased;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
   color: var(--bs-body-color-rgb);
   line-height:1.4;
-  letter-spacing:2px;
+  letter-spacing:1.5px;
   text-transform:uppercase;
 
 }
