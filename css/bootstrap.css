@@ -701,13 +701,13 @@ progress {
   justify-content: space-between;
   background-color:var(--bs-white);
   /*border-bottom: 2px solid var(--bs-gray-900);*/
-  height:90px;
+  height:80px;
   max-width:1080px;
   margin:auto;
 }
 
 .logotrang {
-  width:200px;
+  width:180px;
 }
 
 
@@ -2129,13 +2129,13 @@ progress {
     justify-content: space-between;
     background-color:var(--bs-white);
     /*border-bottom: 2px solid var(--bs-gray-900);*/
-    height:70px;
+    height:60px;
     max-width:1080px;
     margin:auto;
   }
 
   .logotrang {
-    width:160px;
+    width:150px;
   }
 
   .image-bottom-gap {
