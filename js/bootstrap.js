@@ -1299,7 +1299,7 @@
     [ARROW_RIGHT_KEY$1]: DIRECTION_LEFT
   };
   const Default$b = {
-    interval: 6000,
+    interval: 5500,
     keyboard: true,
     pause: 'false',
     ride: false,
