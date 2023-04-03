@@ -3,7 +3,7 @@
 
 $(window).scroll(function() {     
   var scroll = $(window).scrollTop();
-  if (scroll > 80) {
+  if (scroll > 24) {
       $("header").addClass("box-shadow");
   }
   else {

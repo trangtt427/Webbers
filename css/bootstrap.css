@@ -7,7 +7,49 @@
  */
 
 
+/*carousel*/
+.carousel-bottom-right-text {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  color: white;
+  background-color:rgba(0, 0, 0, .65);
+  padding: 12px;
+  font-size: 17px;
+ 
+}
 
+.c1 {
+  background: url("../images/tactic/tactic-header.png") no-repeat scroll center;
+   background-size: cover;
+   height:400px;
+}
+
+.c2 
+{
+  background: url("../images/drawing.webp") no-repeat scroll center;
+   background-size: cover;
+   height:400px;
+}
+
+.c3 
+{
+  background: url("../images/the-isle-of-skye/quiraing.webp") no-repeat scroll center;
+   background-size: cover;
+   height:400px;
+}
+
+
+
+.c4 
+{
+  background: url("../images/chaca.webp") no-repeat scroll center;
+   background-size: cover;
+   height:400px;
+}
+
+
+/*carousel*/
 
  /*custom trang*/
  #bodymovin-ac{
@@ -370,7 +412,11 @@ label {
 
 button {
   border-radius: 0;
+  cursor:pointer;
 }
+
+
+
 
 button:focus:not(:focus-visible) {
   outline: 0;
@@ -2032,6 +2078,14 @@ progress {
 }
 
 @media (max-width: 575.98px) {
+
+  .carousel-bottom-right-text {
+    display:none; }
+     
+
+  .c1, .c2, .c3, .c4 {
+    height:400px;
+  }
   .table-responsive-sm {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -2254,6 +2308,9 @@ progress {
 
   .hide-on-mobile {
     display:none;
+  }
+
+
   }
 }
 @media (max-width: 991.98px) {
@@ -6220,13 +6277,13 @@ textarea.form-control-lg {
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 35%;
+  /*bottom: 0;*/
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 5%;
   padding: 0;
   color: #fff;
   text-align: center;
@@ -6285,31 +6342,29 @@ textarea.form-control-lg {
 }
 
 .carousel-indicators {
-  position: absolute;
+  position: relative;
   right: 0;
-  bottom: 0;
+  bottom: 8px;
   left: 0;
   z-index: 2;
   display: flex;
   justify-content: center;
   padding: 0;
-  margin-right: 15%;
   margin-bottom: 1rem;
-  margin-left: 15%;
   list-style: none;
 }
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
   flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
+  width: 24px;
+  height: 4px;
   padding: 0;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #fff;
-  background-clip: padding-box;
+  background-color:var(--bs-link-color);
+  background-clip: padding-box;     
   border: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
@@ -6326,13 +6381,10 @@ textarea.form-control-lg {
 }
 
 .carousel-caption {
-  position: absolute;
-  right: 15%;
+  position:relative;
   bottom: 1.25rem;
-  left: 15%;
   padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  color: #fff;
+  color: var(--bs-body-color);
   text-align: center;
 }
 
