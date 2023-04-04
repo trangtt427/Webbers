@@ -52,6 +52,10 @@
   max-width: 700px;
 }
 
+.smol-line-width {
+  max-width: 450px;
+}
+
 .vid {
   border: 1px solid grey;
 }
