@@ -1,6 +1,11 @@
 @font-face {
-  font-family: "quicksand";
-  src: url(/fonts/Quicksand-VariableFont_wght.ttf)
+  font-family: "proxima";
+  src: url(/fonts/ProximaNovaRegular.otf)
+}
+
+@font-face {
+  font-family: "proxima-bold";
+  src: url(/fonts/ProximaNovaBold.otf)
 }
 /*-----*/
 
@@ -454,7 +459,7 @@ a.cta {
   font-weight: var(--bs-body-font-weight);
   -webkit-font-smoothing: antialiased;
   color:white;
-  padding: 12px 85px 12px 25px;
+  padding: 16px 85px 16px 25px;
   font-size: 16px;
   line-height: 3em;
   transition: 0.3s;

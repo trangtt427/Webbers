@@ -122,11 +122,11 @@ header {
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "quicksand", sans-serif;
+  --bs-font-sans-serif: "proxima", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 19px;
+  --bs-body-font-size: 20px;
   --bs-body-font-weight: 500;
   --bs-body-line-height: 1.6;
   --bs-body-color: #171a1d;
@@ -192,7 +192,13 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 -o-transition: all 0.3s ease;
 -ms-transition: all 0.3s ease;
 -webkit-font-smoothing: subpixel-antialiased; 
-font-family: 'quicksand', sans-serif;
+font-family: 'proxima', sans-serif;
+}
+
+.headline {
+  font-size: 72px;
+  line-height: 1.2;
+  font-family: 'proxima-bold', sans-serif;
 }
 
 
@@ -721,7 +727,7 @@ progress {
 }
 
 .bigp {
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .container,
@@ -2111,6 +2117,12 @@ progress {
   
   .p-8 {
     padding:2rem !important;
+  }
+
+  .headline {
+    font-size: 44px;
+    line-height: 1.2;
+    font-family: 'proxima-bold', sans-serif;
   }
   
     h1, .h1 {
