@@ -203,7 +203,8 @@ font-family: 'proxima', sans-serif;
 
 
 .h1, h1 {
-  font-size:44px;
+  font-size:48px;
+  font-family: 'proxima-bold', sans-serif;
 }
 
 h2, .h2 {
