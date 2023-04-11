@@ -222,14 +222,14 @@ a {
 ul {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
-  font-size: 19px;
+  font-size: 20px;
   transition: 0s all ease-in-out;
 }
 
 ul .navlist {
   margin: 0px;
   list-style: none;
-  font-size: 19px;
+  font-size: 20px;
   padding-inline-start: 0px;
   transition: 0.3s all ease-in-out;
 }
