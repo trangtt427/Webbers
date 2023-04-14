@@ -198,13 +198,13 @@ font-family: 'proxima', sans-serif;
 .headline {
   font-size: 72px;
   line-height: 1.2;
-  font-family: 'proxima-bold', sans-serif;
+  font-family: 'proxima', sans-serif;
 }
 
 
 .h1, h1 {
   font-size:48px;
-  font-family: 'proxima-bold', sans-serif;
+  font-family: 'proxima', sans-serif;
 }
 
 h2, .h2 {
@@ -2123,7 +2123,7 @@ progress {
   .headline {
     font-size: 44px;
     line-height: 1.2;
-    font-family: 'proxima-bold', sans-serif;
+    font-family: 'proxima', sans-serif;
   }
   
     h1, .h1 {
