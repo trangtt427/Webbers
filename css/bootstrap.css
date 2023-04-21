@@ -144,6 +144,9 @@ font-family: 'quincy-cf', serif;
   }
 } */
 
+h2, .h2 {
+  font-size: 2rem;
+}
 
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
@@ -699,7 +702,7 @@ progress {
   }
 
   h2, .h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
 
@@ -2040,7 +2043,7 @@ p {
   }
 
   h2, .h2 {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 
 
