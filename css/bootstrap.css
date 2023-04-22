@@ -2090,6 +2090,10 @@ progress {
 
 @media (max-width: 575.98px) {
 
+  .hide-on-xs {
+    display:none !important;
+  }
+
   .carousel-bottom-right-text {
     display:none; }
      
@@ -2321,11 +2325,11 @@ progress {
 
 
   .hide-on-mobile {
-    display:none;
+    display:none !important;
   }
 
 
-  }
+  
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
