@@ -198,20 +198,17 @@ font-weight:normal;
 
 .headline {
   font-size: 64px;
-  font-weight:bold;
   line-height: 1.2;
-  font-family: 'graphik', sans-serif;
+  font-family: 'graphikmedium', sans-serif;
 }
 
 
 .h1, h1 {
   font-size:48px;
-  font-weight:bold;
 }
 
 h2, .h2 {
   font-size: 38px;
-  font-weight:bold;
 }
 
 h3, .h3 {
@@ -2131,7 +2128,7 @@ progress {
   .headline {
     font-size: 44px;
     line-height: 1.2;
-    font-family: 'graphik', sans-serif;
+    font-family: 'graphikmedium', sans-serif;
   }
   
     h1, .h1 {
