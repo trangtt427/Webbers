@@ -207,7 +207,8 @@
 }
 
 .inbodylink {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 6px;
   color:var(--bs-link-color);
   display: inline-block;
   position: relative;
@@ -271,7 +272,7 @@ ul .menu {
   width: 0;
 }
 
-.inbodylink:after {
+/*.inbodylink:after {
   bottom: 0;
   content: "";
   display: inline-block;
@@ -282,6 +283,7 @@ ul .menu {
   transition: 0.3s all ease-in-out;
   width: 0;
 }
+*/
 
 .menu li a:after {
   background: none repeat scroll 0 0 transparent;

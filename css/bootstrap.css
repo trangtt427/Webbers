@@ -84,7 +84,7 @@ header {
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
-  --bs-red: #dc3545;
+  --bs-red: #d56a75;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
   --bs-green: #198754;
@@ -185,6 +185,10 @@ hr {
 
 .teal {
   color: var(--bs-link-color);
+}
+
+.red {
+  color: var(--bs-red);
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
