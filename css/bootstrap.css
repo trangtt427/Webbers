@@ -183,6 +183,7 @@ hr {
   opacity: 0.25;
 }
 
+/*
 .teal {
   color: var(--bs-link-color);
 }
@@ -190,6 +191,8 @@ hr {
 .red {
   color: var(--bs-red);
 }
+
+*/
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
