@@ -208,11 +208,12 @@
 
 .inbodylink {
   text-decoration: underline;
-  text-underline-offset: 6px;
+  text-underline-offset: 8px;
   color:var(--bs-link-color);
   display: inline-block;
   position: relative;
-}
+  }
+
 
 a {
   text-decoration: none;
