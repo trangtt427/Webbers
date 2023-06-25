@@ -127,7 +127,7 @@ header {
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 20px;
+  --bs-body-font-size: 19px;
   --bs-body-font-weight: 300;
   --bs-body-line-height: 1.7;
   --bs-body-color: #171a1d;
@@ -204,7 +204,7 @@ font-weight:normal;
 }
 
 .headline {
-  font-size: 64px;
+  font-size: 56px;
   line-height: 1.2;
   font-family: 'graphikmedium', sans-serif;
 }
@@ -735,7 +735,7 @@ progress {
 }
 
 .bigp {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .container,

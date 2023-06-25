@@ -225,14 +225,14 @@ a {
 ul {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
-  font-size: 20px;
+  font-size: 19px;
   transition: 0s all ease-in-out;
 }
 
 ul .navlist {
   margin: 0px;
   list-style: none;
-  font-size: 20px;
+  font-size: 19px;
   padding-inline-start: 0px;
   transition: 0.3s all ease-in-out;
 }
@@ -251,7 +251,7 @@ ul .menu {
   font-size: 17px;
   display: inline-block;
   padding: 8px 0px;
-  margin: 20px;
+  margin: 19px;
   position: relative;
 }
 
