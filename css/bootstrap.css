@@ -204,7 +204,7 @@ font-weight:normal;
 }
 
 .headline {
-  font-size: 56px;
+  font-size: 48px;
   line-height: 1.2;
   font-family: 'graphikmedium', sans-serif;
 }
@@ -215,7 +215,7 @@ font-weight:normal;
 }
 
 h2, .h2 {
-  font-size: 38px;
+  font-size: 32px;
 }
 
 h3, .h3 {
