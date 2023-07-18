@@ -199,14 +199,14 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-bottom: 0;
   line-height: 1.4;
 -webkit-font-smoothing: subpixel-antialiased; 
-font-family: 'graphik', sans-serif;
-font-weight:normal;
+font-family: 'tiempo', serif;
+font-weight:500;
 }
 
 .headline {
   font-size: 48px;
   line-height: 1.2;
-  font-family: 'graphikmedium', sans-serif;
+  font-family: 'tiempo', serif;
 }
 
 
@@ -767,7 +767,7 @@ progress {
 }
 
 .logotrang {
-  width:180px;
+  width:160px;
 }
 
 
@@ -2135,7 +2135,7 @@ progress {
   .headline {
     font-size: 44px;
     line-height: 1.2;
-    font-family: 'graphikmedium', sans-serif;
+    font-family: 'tiempo', serif;
   }
   
     h1, .h1 {

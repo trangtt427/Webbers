@@ -1,11 +1,12 @@
+
 @font-face {
   font-family: "graphik";
   src: url(/fonts/GraphikRegular.otf)
 }
 
 @font-face {
-  font-family: "graphikmedium";
-  src: url(/fonts/GraphikMedium.otf)
+  font-family: "tiempo";
+  src: url(/fonts/TiemposHeadline-Regular.otf)
 }
 
 /*-----*/
