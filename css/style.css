@@ -259,6 +259,8 @@ ul .menu {
 .menu li a {
   display: inline-block;
   position: relative;
+  font-family: 'tiempo', serif;
+  font-weight:500;
 }
 
 .navlist li a:after {
