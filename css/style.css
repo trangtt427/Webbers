@@ -466,13 +466,13 @@ a.cta {
   font-weight: var(--bs-body-font-weight);
   -webkit-font-smoothing: antialiased;
   color:white;
-  padding: 16px 85px 16px 25px;
+  padding: 14px 85px 14px 25px;
   font-size: 16px;
   line-height: 3em;
   transition: 0.3s;
   position: relative;
   text-decoration: none;
-  border-radius:100px;
+  border-radius:4px;
 }
 
 .cta-border-white{
