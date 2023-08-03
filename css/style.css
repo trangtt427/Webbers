@@ -227,7 +227,6 @@ ul {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
   font-size: 19px;
-  transition: 0s all ease-in-out;
 }
 
 ul .navlist {
@@ -235,7 +234,6 @@ ul .navlist {
   list-style: none;
   font-size: 19px;
   padding-inline-start: 0px;
-  transition: 0.3s all ease-in-out;
 }
 
 ul .menu {
