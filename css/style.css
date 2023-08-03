@@ -355,9 +355,7 @@ li a:hover:after {
   visibility: visible;
 }
 
-.navlist > li > a {
-  transition: 0.3s all ease-in-out;
-}
+
 
 .menu > li > a {
   transition: 0.3s all ease-in-out;
