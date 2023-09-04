@@ -1,6 +1,6 @@
 
 @font-face {
-  font-family: "graphik";
+  font-family: "source";
   src: url(/fonts/SourceSansPro-Regular.ttf)
 }
 
@@ -8,6 +8,17 @@
   font-family: "tiempo";
   src: url(/fonts/TiemposHeadline-Regular.otf)
 }
+
+@font-face {
+  font-family: "graphik";
+  src: url(/fonts/GraphikRegular.otf)
+}
+
+@font-face {
+  font-family: "akkurat";
+  src: url(/fonts/AkkuratPro-Regular.otf)
+}
+
 
 
 
