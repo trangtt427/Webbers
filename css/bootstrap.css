@@ -2206,7 +2206,6 @@ progress {
     justify-content: space-between;
     background-color:var(--bs-white);
     /*border-bottom: 2px solid var(--bs-gray-900);*/
-    height:60px;
     max-width:1080px;
     margin:auto;
   }
@@ -2292,6 +2291,7 @@ progress {
     z-index: 9999;
     background: none;
     cursor:pointer;
+    transition: 0.3s opacity ease-in-out;
   }
 
   .nav {
