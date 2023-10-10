@@ -175,6 +175,7 @@ body {
   
 }
 
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -760,7 +761,7 @@ progress {
   align-items: center;
   justify-content: space-between;
   background-color:var(--bs-white);
-  /*border-bottom: 2px solid var(--bs-gray-900);*/
+  border-bottom: 2px solid var(--bs-gray-900);
   height:80px;
   max-width:1080px;
   margin:auto;
@@ -837,7 +838,7 @@ progress {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
-  max-width:1400px;
+  max-width:1080px;
   margin:auto;
 }
 .row > * {

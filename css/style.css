@@ -22,11 +22,10 @@
 
 
 
-/*-----*/
 
+/*box shadow has been commented out with an "f" at the end of it. Remove it to enable it*/
 
-    /*---------------------------*/
-.box-shadow {
+.box-shadowf {
   -webkit-box-shadow: 0 1px 3px rgba(158,172,201,0.5);
   /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
 
@@ -38,7 +37,7 @@
   -webkit-transition: top 0.2s ease-in-out;
   transition: all 0.3s ease 0s;
   
-}
+} 
 
 
 /* make keyframes that tell the start state and the end state of our object */
@@ -186,6 +185,15 @@
     -o-backface-visibility: hidden;
 }
 /* end cards */
+
+
+/* blurred bg */
+.grad 
+{background-size: 100% 100%;
+  background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+  background-image: radial-gradient(49% 81% at 27% 5%, #FFE2033B 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #F7F1FFFF 2%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #D8F4FFFF 1%, #FF000000 99%),radial-gradient(142% 91% at 7% 67%, #D5FCD5FF 1%, #FF000000 99%),radial-gradient(142% 91% at 76% 49%, #F8A9367D 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #FFDCC03B 0%, #FFCDCDFF 100%),linear-gradient(0deg, #FFFFFFFF 0%, #FFFFFFFF 100%);}
+
+/* blurred bg */
 
 
 
