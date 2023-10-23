@@ -10,12 +10,12 @@
 /*carousel*/
 .carousel-bottom-right-text {
   position: absolute;
-  bottom: 20%;
-  right: 5%;
+  bottom: 15%;
+  right: 1%;
   color: white;
   background-color:rgba(0, 0, 0, .65);
-  padding: 12px;
-  font-size: 17px;
+  padding: 10px;
+  font-size: 15px;
  
 }
 
@@ -2099,9 +2099,10 @@ progress {
     display:none !important;
   }
 
-  .carousel-bottom-right-text {
-    display:none; }
-     
+
+    .carousel-bottom-right-text {
+    display:none;
+    }
 
   .c1, .c2, .c3, .c4 {
     height:400px;
