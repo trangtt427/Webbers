@@ -205,7 +205,7 @@ font-weight:500;
 }
 
 .headline {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1.2;
   font-family: 'tiempo', serif;
 }
@@ -2136,7 +2136,7 @@ progress {
   }
 
   .headline {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 1.2;
     font-family: 'tiempo', serif;
   }
