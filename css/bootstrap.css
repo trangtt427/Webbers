@@ -128,8 +128,8 @@ header {
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 18px;
-  --bs-body-font-weight: 300;
-  --bs-body-line-height: 1.7;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.9;
   --bs-body-color: #171a1d;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
@@ -200,7 +200,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-bottom: 0;
   line-height: 1.4;
 -webkit-font-smoothing: subpixel-antialiased; 
-font-family: 'tiempo', serif;
+font-family: 'graphik', serif;
 font-weight:500;
 }
 
@@ -224,7 +224,7 @@ h3, .h3 {
 }
 
 .h4, h4 {
-  font-size:24px;
+  font-size:28px;
   line-height: 1.6 !important;
 } 
 
@@ -768,7 +768,7 @@ progress {
 }
 
 .logotrang {
-  width:60px;
+  width:200px;
 }
 
 
@@ -8072,7 +8072,7 @@ textarea.form-control-lg {
 }
 
 .mt-10 {
-  margin-top: 10rem !important;
+  margin-top: 12rem !important;
 }
 
 .mt-auto {
