@@ -69,7 +69,6 @@ header {
   left: 0;
   right: 0;
   background-color: var(--bs-white);
-
  
 }
 
@@ -205,7 +204,7 @@ font-weight:500;
 }
 
 .headline {
-  font-size: 40px;
+  font-size: 48px;
   line-height: 1.2;
   font-family: 'tiempo', serif;
 }
@@ -216,15 +215,16 @@ font-weight:500;
 }
 
 h2, .h2 {
-  font-size: 32px;
+  font-size: 36px;
+  font-family: 'tiempo';
 }
 
 h3, .h3 {
-  font-size:32px;
+  font-size:30px;
 }
 
 .h4, h4 {
-  font-size:28px;
+  font-size:24px;
   line-height: 1.6 !important;
 } 
 
@@ -731,7 +731,7 @@ progress {
 
 .figure-caption {
   padding-top:10px;
-  font-size: 17px;
+  font-size: 16px;
   color: #6c779a;
 }
 
@@ -838,7 +838,7 @@ progress {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
-  max-width:1080px;
+  max-width:1140px;
   margin:auto;
 }
 .row > * {
@@ -2208,7 +2208,7 @@ progress {
     justify-content: space-between;
     background-color:var(--bs-white);
     /*border-bottom: 2px solid var(--bs-gray-900);*/
-    max-width:1080px;
+    max-width:1140px;
     margin:auto;
   }
 
