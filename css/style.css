@@ -1,10 +1,5 @@
 
 @font-face {
-  font-family: "source";
-  src: url(/fonts/SourceSansPro-Regular.ttf)
-}
-
-@font-face {
   font-family: "tiempo";
   src: url(/fonts/TiemposHeadline-Regular.otf)
 }
@@ -15,9 +10,14 @@
 }
 
 @font-face {
-  font-family: "akkurat";
-  src: url(/fonts/AkkuratPro-Regular.otf)
+  font-family: "graphik-semibold";
+  src: url(/fonts/GraphikSemibold.otf)
 }
+@font-face {
+  font-family: "graphik-italics";
+  src: url(/fonts/GraphikSemiboldItalic.otf)
+}
+
 
 
 
@@ -289,7 +289,7 @@ ul .menu {
 .navlist li a {
   color:  var(--bs-body-color);
   text-decoration: none;
-  font-size: 12px;
+  font-size: 13px;
   display: inline-block;
   padding: 8px 0px;
   margin: 19px;
@@ -590,7 +590,7 @@ a.cta {
 
 .home-link {
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;

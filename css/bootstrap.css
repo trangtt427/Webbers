@@ -765,7 +765,7 @@ progress {
   align-items: center;
   justify-content: space-between;
   background-color:var(--bs-white);
-  border-bottom: 2px solid var(--bs-gray-900);
+  /*border-bottom: 2px solid var(--bs-gray-900);*/
   height:80px;
   max-width:1080px;
   margin:auto;
