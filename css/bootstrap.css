@@ -213,6 +213,9 @@ font-weight:500;
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
+.mt-10 {
+  margin-top: 12rem !important;
+}
 
 .h1, h1 {
   font-size:48px;
@@ -2153,7 +2156,7 @@ progress {
   }
 
   .mt-10 {
-    margin-top: 4rem !important;
+    margin-top: 8rem !important;
   }
 
  
@@ -8095,9 +8098,7 @@ textarea.form-control-lg {
   margin-top: 7rem !important;
 }
 
-.mt-10 {
-  margin-top: 12rem !important;
-}
+
 
 .mt-auto {
   margin-top: auto !important;
