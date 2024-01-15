@@ -227,14 +227,10 @@ margin:auto;
 
 .whitebg {
   background-color:white;
-  padding-top:125px;
-  padding-bottom:125px;
 }
 
 .greybg {
   background-color:#f3f6fa;
-  padding-top:125px;
-  padding-bottom:125px;
 }
 
 .quote {
@@ -252,6 +248,14 @@ margin:auto;
   display: inline-block;
   position: relative;
   }
+
+  .home-link {
+    /*text-decoration: underline;
+    text-underline-offset: 8px;*/
+    color:var(--bs-body-color);
+    display: inline-block;
+    position: relative;
+    }
 
 
 a {
@@ -285,7 +289,7 @@ ul .menu {
 .navlist li a {
   color:  var(--bs-body-color);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 12px;
   display: inline-block;
   padding: 8px 0px;
   margin: 19px;
@@ -325,6 +329,18 @@ ul .menu {
   left: 0;
   position: absolute;
   background: var(--bs-link-color);
+  transition: 0.2s all ease-in-out;
+  width: 0;
+}
+
+.home-link:after {
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  background: var(--bs-body-color);
   transition: 0.2s all ease-in-out;
   width: 0;
 }
@@ -375,6 +391,12 @@ li a:hover:after {
 }
 
 .inbodylink:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.home-link:hover:after {
+  background: var(--bs-body-color);
   width: 100%;
   left: 0;
 }
@@ -506,7 +528,7 @@ a.cta {
   font-weight: var(--bs-body-font-weight);
   -webkit-font-smoothing: antialiased;
   color:white;
-  padding: 14px 85px 14px 25px;
+  padding: 18px 85px 18px 25px;
   font-size: 16px;
   line-height: 3em;
   transition: 0.3s;
@@ -563,6 +585,21 @@ a.cta {
   line-height:1.4;
   letter-spacing:1.5px;
   text-transform:uppercase;
+
+}
+
+.home-link {
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  font-weight: var(--bs-body-font-weight);
+  overflow: hidden;
+  text-align: left;
+  color: var(--bs-body-color);
+  line-height:1.4;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:8px 0px;
+  margin-left:16px;
 
 }
 

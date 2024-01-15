@@ -209,6 +209,10 @@ font-weight:500;
   font-family: 'tiempo', serif;
 }
 
+.py-7 {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
 
 .h1, h1 {
   font-size:48px;
@@ -325,9 +329,9 @@ a {
   text-decoration: underline;
 }
 
-a:hover {
+/*a:hover {
   color: var(--bs-link-hover-color);
-}
+} */
 
 a > .inactive, .inactive:hover {
   color: inherit;
@@ -768,9 +772,17 @@ progress {
 }
 
 .logotrang {
-  width:200px;
+  width:60px;
 }
 
+.homelogo {
+  display:inline-block;
+}
+
+.logothing {
+  display:inline-block;
+  vertical-align: middle;
+}
 
 
 /*
@@ -2135,6 +2147,14 @@ progress {
     padding:2rem !important;
   }
 
+  .py-7 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+ 
+  
+
   .headline {
     font-size: 32px;
     line-height: 1.2;
@@ -2183,7 +2203,7 @@ progress {
         margin:auto;
       }
   
-
+  
 
 
 }
@@ -8267,6 +8287,8 @@ textarea.form-control-lg {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
+
+
 
 .pt-0 {
   padding-top: 0 !important;
