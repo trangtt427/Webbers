@@ -407,7 +407,6 @@ caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   color: #6c757d;
-  text-align: left;
 }
 
 th {
@@ -740,6 +739,7 @@ progress {
   padding-top:10px;
   font-size: 16px;
   color: #6c779a;
+  text-align:center;
 }
 
 .bigp {
