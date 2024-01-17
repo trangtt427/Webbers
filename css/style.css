@@ -268,13 +268,14 @@ a {
 ul {
   margin: 0px;
   -webkit-font-smoothing: antialiased;
-  font-size: 19px;
+  font-size: 18px;
+
 }
 
 ul .navlist {
   margin: 0px;
   list-style: none;
-  font-size: 19px;
+  font-size: 18px;
   padding-inline-start: 0px;
 }
 
@@ -292,7 +293,7 @@ ul .menu {
   font-size: 13px;
   display: inline-block;
   padding: 8px 0px;
-  margin: 19px;
+  margin: 18px;
   position: relative;
   line-height:1.4;
   letter-spacing:1.5px;
