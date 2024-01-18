@@ -10,8 +10,8 @@
 /*carousel*/
 .carousel-bottom-right-text {
   position: absolute;
-  bottom: 15%;
-  right: 1%;
+  bottom: 20%;
+  right: 2%;
   color: white;
   background-color:rgba(0, 0, 0, .65);
   padding: 10px;
@@ -6265,6 +6265,7 @@ textarea.form-control-lg {
   position: relative;
   width: 100%;
   overflow: hidden;
+
 }
 .carousel-inner::after {
   display: block;
@@ -6437,9 +6438,10 @@ textarea.form-control-lg {
 .carousel-caption {
   position:relative;
   bottom: 1.25rem;
-  padding-top: 1.25rem;
+  margin-top: 1.25rem;
   color: var(--bs-body-color);
   text-align: center;
+  background-color: var(--bs-beige);
 }
 
 .carousel-dark .carousel-control-prev-icon,
@@ -8093,6 +8095,10 @@ textarea.form-control-lg {
   margin-top: 1.5rem !important;
 }
 
+.mt-4-5 {
+  margin-top: 2rem !important;
+}
+
 .mt-5 {
   margin-top: 3rem !important;
 }
@@ -8690,8 +8696,9 @@ textarea.form-control-lg {
 }
 
 .bg-body {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
+  /*--bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;*/
+  background-color: var(--bs-beige);
 }
 
 .bg-transparent {
