@@ -10,6 +10,11 @@
 }
 
 @font-face {
+  font-family: "graphik-medium";
+  src: url(/fonts/GraphikMedium.otf)
+}
+
+@font-face {
   font-family: "graphik-semibold";
   src: url(/fonts/GraphikSemibold.otf)
 }
