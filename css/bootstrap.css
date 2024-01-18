@@ -130,7 +130,7 @@ header {
   --bs-body-font-size: 18px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.9;
-  --bs-body-color: #3c3f49;
+  --bs-body-color: #393b42;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -2206,7 +2206,7 @@ progress {
       .container-lg,
       .container-md,
       .container-sm {
-        background-color:var(--bs-beige);
+        /*background-color:var(--bs-beige);*/
         --bs-gutter-x: 0;
         --bs-gutter-y: 0;
         max-width:1140px;
