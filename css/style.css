@@ -230,8 +230,13 @@ margin:auto;
 
 /* start nav*/
 
+.purewhitebg {
+  background-color:white;
+}
+
 .whitebg {
   background-color:var(--bs-beige);
+  /*this is actually for the beige*/
 }
 
 .greybg {
@@ -673,7 +678,7 @@ a.cta {
   width: 40px;
   margin-left: 10px;
   margin-bottom: 3px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #393b42;
   letter-spacing:2px;
   text-transform:uppercase;
 }
