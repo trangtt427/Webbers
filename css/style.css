@@ -231,11 +231,11 @@ margin:auto;
 /* start nav*/
 
 .whitebg {
-  background-color:white;
+  background-color:var(--bs-beige);
 }
 
 .greybg {
-  background-color:#f3f6fa;
+  background-color:#eeeceb;
 }
 
 .quote {

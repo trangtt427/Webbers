@@ -68,7 +68,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--bs-white);
+  background-color: var(--bs-beige);
  
 }
 
@@ -91,6 +91,7 @@ header {
   --bs-cyan: #0dcaf0;
   --bs-black: #000;
   --bs-white: #fff;
+  --bs-beige:#F6F3F4;
   --bs-gray: #6f7687;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
@@ -129,7 +130,7 @@ header {
   --bs-body-font-size: 18px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.9;
-  --bs-body-color: #171a1d;
+  --bs-body-color: #3c3f49;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -167,7 +168,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color:white;
+  background-color:var(--bs-beige);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   
@@ -771,7 +772,7 @@ progress {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:var(--bs-white);
+  background-color:var(--bs-beige);
   /*border-bottom: 2px solid var(--bs-gray-900);*/
   height:80px;
   max-width:1080px;
@@ -2205,7 +2206,7 @@ progress {
       .container-lg,
       .container-md,
       .container-sm {
-        /*background-color:beige;*/
+        background-color:var(--bs-beige);
         --bs-gutter-x: 0;
         --bs-gutter-y: 0;
         max-width:1140px;
@@ -2237,7 +2238,7 @@ progress {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:var(--bs-white);
+    background-color:var(--bs-beige);
     /*border-bottom: 2px solid var(--bs-gray-900);*/
     max-width:1140px;
     margin:auto;
