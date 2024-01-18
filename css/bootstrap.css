@@ -2356,6 +2356,7 @@ progress {
     /* These 2 below are all the magic: */
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    background-color: var(--bs-beige);
   }
 
 
