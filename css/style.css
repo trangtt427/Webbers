@@ -686,7 +686,7 @@ a.cta {
 .bottom_line {
   display: block;
   margin: auto;
-  border-bottom: 2px solid var(--bs-body-color);
+  border-bottom: 1px solid var(--bs-body-color);
   color: white;
   width: 100%;
   /*background: var(--bs-gray-900); */
