@@ -535,12 +535,14 @@ a.cta {
   -webkit-font-smoothing: antialiased;
   color:white;
   padding: 18px 85px 18px 25px;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 3em;
   transition: 0.3s;
   position: relative;
   text-decoration: none;
   border-radius:4px;
+  letter-spacing:1.5px;
+  text-transform: uppercase;
 }
 
 .cta-border-white{
