@@ -91,7 +91,7 @@ header {
   --bs-cyan: #0dcaf0;
   --bs-black: #000;
   --bs-white: #fff;
-  --bs-beige:#F6F3F4;
+  --bs-beige:#f6f3f1;
   --bs-gray: #6f7687;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
@@ -130,7 +130,7 @@ header {
   --bs-body-font-size: 18px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.9;
-  --bs-body-color: #393b42;
+  --bs-body-color: #413c3c;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -142,8 +142,8 @@ header {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #079484;
-  --bs-link-hover-color: #079484;
+  --bs-link-color: #CD8371;
+  --bs-link-hover-color: #CD8371;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
