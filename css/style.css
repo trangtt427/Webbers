@@ -622,7 +622,7 @@ a.cta {
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
-  color: #a77265;
+  color: #675e5c;
   line-height:1.4;
   letter-spacing:1.5px;
   text-transform:uppercase;
@@ -637,7 +637,7 @@ a.cta {
   width: 40px;
   margin-left: 10px;
   margin-bottom: 3px;
-  border-bottom: 1px solid #a77265;
+  border-bottom: 1px solid #675e5c;
 }
 
 .header-name {  -webkit-font-smoothing: antialiased;
