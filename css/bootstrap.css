@@ -2161,8 +2161,9 @@ progress {
   }
 
   p, li {
-    font-size: 16px;
+    font-size: 19px;
   } 
+   /*---paragraph---*/
   
   .bigp {
     font-size: 24px;
