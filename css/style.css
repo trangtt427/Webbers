@@ -100,7 +100,7 @@ margin:auto;
 .page-wrapper 
 
 .radii {
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 /* bullets */
@@ -176,7 +176,7 @@ margin:auto;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
-    border-radius: 20px;
+    border-radius: 16px;
 }
 
 .casestudy:active {
