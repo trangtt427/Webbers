@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "graphik";
-  src: url(/fonts/GraphikRegular.otf)
+  src: url(/fonts/NeueMontreal-Regular.otf)
 }
 
 @font-face {
@@ -176,6 +176,7 @@ margin:auto;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
+    border-radius: 20px;
 }
 
 .casestudy:active {
@@ -277,15 +278,14 @@ a {
 
 ul {
   margin: 0px;
-  -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 19px;
 
 }
 
 ul .navlist {
   margin: 0px;
   list-style: none;
-  font-size: 16px;
+  font-size: 19px;
   padding-inline-start: 0px;
 }
 
@@ -589,12 +589,11 @@ a.cta {
   border-left-color: transparent;
 }
 .subject-no-line {
-  -webkit-font-smoothing: antialiased;
   font-size: 12px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
-  color: #6c779a;
+  color: #2f2f2f;
   line-height:1.4;
   letter-spacing:1.5px;
   text-transform:uppercase;
@@ -602,7 +601,6 @@ a.cta {
 }
 
 .home-link {
-  -webkit-font-smoothing: antialiased;
   font-size: 13px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
@@ -617,7 +615,6 @@ a.cta {
 }
 
 .subject {
-  -webkit-font-smoothing: antialiased;
   font-size: 12px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
@@ -658,7 +655,6 @@ a.cta {
   }
 
 .subject-white {
-  -webkit-font-smoothing: antialiased;
   font-size: 12px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
@@ -686,7 +682,7 @@ a.cta {
 .bottom_line {
   display: block;
   margin: auto;
-  border-bottom: 1px solid var(--bs-body-color);
+  border-bottom: 1px solid #cecccc;
   color: white;
   width: 100%;
   /*background: var(--bs-gray-900); */

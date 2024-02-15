@@ -10,12 +10,13 @@
 /*carousel*/
 .carousel-bottom-right-text {
   position: absolute;
-  bottom: 20%;
-  right: 2%;
-  color: white;
-  background-color:rgba(0, 0, 0, .65);
-  padding: 10px;
+  bottom: 82%;
+  right: 20px;
+  color: rgb(0, 0, 0);
+  background-color:rgba(255, 255, 255, 1);
+  padding: 10px 20px;
   font-size: 15px;
+  border-radius:100px;
  
 }
 
@@ -127,9 +128,9 @@ header {
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 16px;
+  --bs-body-font-size: 19px;
   --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.9;
+  --bs-body-line-height: 1.5;
   --bs-body-color: #413c3c;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
@@ -249,11 +250,22 @@ h6, .h6 {
 font-size: 16px;
 }
 
-p {
+
+ /*---paragraph---*/
+ p {
   margin-top: 0;
   margin-bottom: 0;
-  -webkit-font-smoothing: antialiased;
+  /*-webkit-font-smoothing: antialiased; */
   font-style:normal;
+}
+
+.subtext {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style:normal;
+  color:#7b7d72;
+  font-size:var(--bs-body-font-size);
+  line-height:1.5;
 }
 
 abbr[title] {
@@ -743,12 +755,21 @@ progress {
 .figure-caption {
   padding-top:10px;
   font-size: 16px;
-  color: #827d7d;
+  color: #9c9d96;
   text-align:center;
 }
 
+.bigsubtext {
+  font-size: 32px;
+  color:#9c9d96;
+  line-height:125%;
+  max-width:650px;
+}
+
 .bigp {
-  font-size: 22px;
+  font-size: 32px;
+  color:black;
+  line-height:125%;
 }
 
 .container,
@@ -2144,7 +2165,11 @@ progress {
   } 
   
   .bigp {
-    font-size: 20px;
+    font-size: 24px;
+  }
+
+  .bigsubtext {
+    font-size: 24px;
   }
   
   .p-4-5 {
