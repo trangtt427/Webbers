@@ -124,14 +124,14 @@ header {
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "graphik", sans-serif;
+  --bs-font-sans-serif: "neuemontreal", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 19px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #413c3c;
+  --bs-body-color: #322e2e;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -197,7 +197,7 @@ hr {
 */
 
 .bold {
-  font-family:'graphik-medium';
+  font-family:'neuemontreal-medium';
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -205,7 +205,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-bottom: 0;
   line-height: 1.4;
 -webkit-font-smoothing: subpixel-antialiased; 
-font-family: 'graphik', serif;
+font-family: 'neuemontreal', serif;
 font-weight:500;
 }
 
@@ -263,7 +263,7 @@ font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
   font-style:normal;
-  color:#7b7d72;
+  color:#92938e;
   font-size:var(--bs-body-font-size);
   line-height:1.5;
 }
@@ -755,13 +755,13 @@ progress {
 .figure-caption {
   padding-top:10px;
   font-size: 16px;
-  color: #7b7d72;
+  color: #92938e;
   text-align:center;
 }
 
 .bigsubtext {
   font-size: 32px;
-  color:#7b7d72;
+  color:#92938e;
   line-height:125%;
   max-width:650px;
 }

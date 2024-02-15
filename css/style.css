@@ -5,13 +5,13 @@
 }
 
 @font-face {
-  font-family: "graphik";
+  font-family: "neuemontreal";
   src: url(/fonts/NeueMontreal-Regular.otf)
 }
 
 @font-face {
-  font-family: "graphik-medium";
-  src: url(/fonts/GraphikMedium.otf)
+  font-family: "neuemontreal-medium";
+  src: url(/fonts/PPNeueMontreal-Medium.otf)
 }
 
 @font-face {
