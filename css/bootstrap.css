@@ -21,23 +21,23 @@
 }
 
 .c1 {
-  background: url("../images/baby design/bd-header.webp") no-repeat scroll center;
+  background: url("../images/hi/fasttrackheader.png") no-repeat scroll center;
    background-size: cover;
-   height:400px;
+   height:450px;
 }
 
 .c2 
 {
-  background: url("../images/drawing.webp") no-repeat scroll center;
+  background: url("../images/tactic/tacticheader.png") no-repeat scroll center;
    background-size: cover;
-   height:400px;
+   height:450px;
 }
 
 .c3 
 {
   background: url("../images/the-isle-of-skye/quiraing.webp") no-repeat scroll center;
    background-size: cover;
-   height:400px;
+   height:450px;
 }
 
 
@@ -46,7 +46,7 @@
 {
   background: url("../images/chaca.webp") no-repeat scroll center;
    background-size: cover;
-   height:400px;
+   height:450px;
 }
 
 
