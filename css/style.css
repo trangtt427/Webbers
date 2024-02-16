@@ -97,7 +97,8 @@ margin:auto;
   height:330px;
 }
 
-.page-wrapper 
+.page-wrapper {
+}
 
 .radii {
   border-radius: 16px;
@@ -282,14 +283,14 @@ a {
 
 ul {
   margin: 0px;
-  font-size: 19px;
+  font-size: 18px;
 
 }
 
 ul .navlist {
   margin: 0px;
   list-style: none;
-  font-size: 19px;
+  font-size: 18px;
   padding-inline-start: 0px;
 }
 
@@ -623,7 +624,7 @@ a.cta {
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
-  color: #8d6156;
+  color:#7a7a7a;
   line-height:1.4;
   letter-spacing:1.3px;
   text-transform:uppercase;
@@ -638,7 +639,7 @@ a.cta {
   width: 40px;
   margin-left: 10px;
   margin-bottom: 3px;
-  border-bottom: 1px solid #8d6156;
+  border-bottom: 1px solid #7a7a7a;
 }
 
 .header-name {  -webkit-font-smoothing: antialiased;
