@@ -131,7 +131,7 @@ header {
   --bs-body-font-size: 19px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #322e2e;
+  --bs-body-color: #3f3e3e;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -200,11 +200,11 @@ hr {
   font-family:'neuemontreal-medium';
 }
 
+
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.4;
--webkit-font-smoothing: subpixel-antialiased; 
 font-family: 'neuemontreal', serif;
 font-weight:500;
 }
@@ -756,7 +756,6 @@ progress {
   padding-top:10px;
   font-size: 16px;
   color: #92938e;
-  text-align:center;
 }
 
 .bigsubtext {
@@ -2217,7 +2216,6 @@ progress {
   
     h5, .h5 {
       font-size: 18px;
-      -webkit-font-smoothing: antialiased;
       } 
       
       h6, .h6 {

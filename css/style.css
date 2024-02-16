@@ -103,6 +103,10 @@ margin:auto;
   border-radius: 16px;
 }
 
+.wireframe {
+  border: 1px solid rgba(105, 105, 105, 0.25);
+}
+
 /* bullets */
 
 .bullet-item {
@@ -292,7 +296,7 @@ ul .navlist {
 ul .menu {
   margin: 0px;
   list-style: none;
-  font-size: 12px;
+  font-size: 13px;
   padding-inline-start: 0px;
   transition: 0.3s all ease-in-out;
 }
@@ -589,7 +593,7 @@ a.cta {
   border-left-color: transparent;
 }
 .subject-no-line {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
@@ -615,7 +619,7 @@ a.cta {
 }
 
 .subject {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
@@ -655,7 +659,7 @@ a.cta {
   }
 
 .subject-white {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
@@ -698,7 +702,7 @@ a.cta {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-  font-size: 12px;
+  font-size: 13px;
   display: inline-block;
   margin: 0px 10px;
   margin-left: 0px;
