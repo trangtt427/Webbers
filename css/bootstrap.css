@@ -263,7 +263,7 @@ font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
   font-style:normal;
-  color:#92938e;
+  color:#7a7a7a;
   font-size:var(--bs-body-font-size);
   line-height:1.5;
 }
@@ -755,12 +755,12 @@ progress {
 .figure-caption {
   padding-top:10px;
   font-size: 16px;
-  color: #92938e;
+  color: #7a7a7a;
 }
 
 .bigsubtext {
   font-size: 32px;
-  color:#92938e;
+  color:#7a7a7a;
   line-height:125%;
 }
 
