@@ -597,9 +597,9 @@ a.cta {
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
-  color: #2f2f2f;
+  color: #7a7a7a;
   line-height:1.4;
-  letter-spacing:1.5px;
+  letter-spacing:1.3px;
   text-transform:uppercase;
 
 }
@@ -611,7 +611,7 @@ a.cta {
   text-align: left;
   color: var(--bs-body-color);
   line-height:1.4;
-  letter-spacing:1.5px;
+  letter-spacing:1.3px;
   text-transform:uppercase;
   padding:8px 0px;
   margin-left:16px;
@@ -625,7 +625,7 @@ a.cta {
   text-align: left;
   color: #8d6156;
   line-height:1.4;
-  letter-spacing:1.5px;
+  letter-spacing:1.3px;
   text-transform:uppercase;
 
 }
@@ -665,7 +665,7 @@ a.cta {
   text-align: left;
   color: var(--bs-body-color-rgb);
   line-height:1.4;
-  letter-spacing:1.5px;
+  letter-spacing:1.3px;
   text-transform:uppercase;
 
 }
