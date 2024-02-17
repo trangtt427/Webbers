@@ -783,10 +783,10 @@ progress {
   /*background-color:beige;*/
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
+  padding-left: 30px;
+  padding-right: 30px;
   max-width:1140px;
   margin:auto;
-  padding-left: 30px;
-  padding-right:30px;
 
 }
 .headcontain {
