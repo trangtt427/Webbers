@@ -1098,10 +1098,7 @@ progress {
   --bs-gutter-y: 3rem;
 }
 
-.g-6,
-.gx-6 {
-  --bs-gutter-x: 7rem;
-}
+
 
 @media (min-width: 576px) {
   .col-sm {
