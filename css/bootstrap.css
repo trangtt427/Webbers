@@ -283,6 +283,7 @@ address {
 ol,
 ul {
   padding-left: 1.5rem;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 ol,
