@@ -304,14 +304,13 @@ ul .menu {
 .navlist li a {
   color:  var(--bs-body-color);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
   display: inline-block;
   padding: 8px 0px;
   margin: 16px;
   position: relative;
   line-height:1.4;
   letter-spacing:1.5px;
-  text-transform:uppercase;
   font-weight:500;
   
 }
@@ -605,14 +604,13 @@ a.cta {
 }
 
 .home-link {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
   color: var(--bs-body-color);
   line-height:1.4;
   letter-spacing:1.3px;
-  text-transform:uppercase;
   padding:8px 0px;
   margin-left:16px;
 
