@@ -310,7 +310,7 @@ ul .menu {
   margin: 18px;
   position: relative;
   line-height:1.4;
-  letter-spacing:1.3px;
+  letter-spacing:1.1px;
   font-weight:500;
   
 }
@@ -610,7 +610,7 @@ a.cta {
   text-align: left;
   color: var(--bs-body-color);
   line-height:1.4;
-  letter-spacing:1.3px;
+  letter-spacing:1.1px;
   padding:8px 0px;
   margin-left:16px;
 
