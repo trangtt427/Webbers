@@ -23,6 +23,11 @@
   src: url(/fonts/GraphikSemiboldItalic.otf)
 }
 
+@font-face {
+  font-family: "neuemontreal-book";
+  src: url(/fonts/ppneuemontreal-book.otf)
+}
+
 
 
 

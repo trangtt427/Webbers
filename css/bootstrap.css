@@ -127,8 +127,8 @@ header {
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 18px;
-  --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.5;
+  /*--bs-body-font-weight: 400; */
+  --bs-body-line-height: 1.6;
   --bs-body-color: #3f3e3e;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
@@ -246,6 +246,7 @@ h3, .h3 {
 
 h5, .h5 {
 font-size: 24px;
+font-family: 'neuemontreal-medium', serif;
 -webkit-font-smoothing: antialiased;
 }
 
@@ -4665,7 +4666,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #fff;
+  --bs-card-bg: #f6f3f1;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
