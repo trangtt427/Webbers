@@ -792,7 +792,7 @@ progress {
   --bs-gutter-y: 0;
   padding-left: 30px;
   padding-right: 30px;
-  max-width:1200px;
+  max-width:1300px;
   margin:auto;
 
 }
@@ -806,7 +806,7 @@ progress {
   height:70px;
   padding-left: 30px;
   padding-right: 30px;
-  max-width:1200px;
+  max-width:1300px;
   margin:auto;
 }
 
@@ -839,7 +839,7 @@ progress {
 
 
   .container-md, .container-sm, .container {
-    max-width: 1200px;
+    max-width: 1300px;
   }
 
   .hide-on-desktop {
@@ -2244,7 +2244,7 @@ progress {
         /*background-color:var(--bs-beige);*/
         --bs-gutter-x: 0;
         --bs-gutter-y: 0;
-        max-width:1200px;
+        max-width:1300px;
         margin:auto;
       }
   
@@ -2273,7 +2273,7 @@ progress {
     justify-content: space-between;
     background-color:var(--bs-beige);
     /*border-bottom: 2px solid var(--bs-gray-900);*/
-    max-width:1200px;
+    max-width:1300px;
     margin:auto;
   }
 

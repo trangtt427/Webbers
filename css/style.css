@@ -28,6 +28,16 @@
   src: url(/fonts/ppneuemontreal-book.otf)
 }
 
+@font-face {
+  font-family: "graphik-regular";
+  src: url(/fonts/GraphikRegular.otf)
+}
+
+@font-face {
+  font-family: "graphik-medium";
+  src: url(/fonts/GraphikMedium.otf)
+}
+
 
 
 
