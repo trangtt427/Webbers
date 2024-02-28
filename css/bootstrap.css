@@ -208,9 +208,9 @@ font-weight:500;
 }
 
 .headline {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1.2;
-  font-family: 'merriweather-bold', serif;
+  font-family: 'merriweather-regular', serif;
 }
 
 .py-7 {
@@ -232,7 +232,7 @@ font-weight:500;
 
 h2, .h2 {
   font-size: 36px;
-  font-family: 'merriweather-bold';
+  font-family: 'merriweather-regular';
 }
 
 h3, .h3 {
@@ -765,7 +765,7 @@ progress {
   padding-top:10px;
   font-size: 16px;
   color: #7a7a7a;
-  font-family: 'neuemontreal-regular';
+  font-family: 'neuemontreal-medium';
 }
 
 .bigsubtext {
@@ -2206,7 +2206,7 @@ progress {
   .headline {
     font-size: 32px;
     line-height: 1.2;
-    font-family: 'tiempo', serif;
+    font-family: 'merriweather-regular', serif;
   }
   
     h1, .h1 {
