@@ -194,7 +194,7 @@ hr {
 
 */
 
-.bold {
+.p.bold {
   font-family:'neuemontreal-medium';
 }
 
@@ -203,14 +203,14 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.4;
-font-family: 'neuemontreal', serif;
+font-family: 'merriweather-regular', serif;
 font-weight:500;
 }
 
 .headline {
   font-size: 48px;
   line-height: 1.2;
-  font-family: 'tiempo', serif;
+  font-family: 'merriweather-bold', serif;
 }
 
 .py-7 {
@@ -232,7 +232,7 @@ font-weight:500;
 
 h2, .h2 {
   font-size: 36px;
-  font-family: 'tiempo';
+  font-family: 'merriweather-bold';
 }
 
 h3, .h3 {
@@ -245,9 +245,8 @@ h3, .h3 {
 } 
 
 h5, .h5 {
-font-size: 24px;
-font-family: 'neuemontreal-medium', serif;
--webkit-font-smoothing: antialiased;
+font-size: 22px;
+font-family: 'merriweather-regular';
 }
 
 h6, .h6 {
@@ -766,6 +765,7 @@ progress {
   padding-top:10px;
   font-size: 16px;
   color: #7a7a7a;
+  font-family: 'neuemontreal-regular';
 }
 
 .bigsubtext {

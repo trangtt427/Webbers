@@ -5,14 +5,15 @@
 }
 
 @font-face {
-  font-family: "neuemontreal";
-  src: url(/fonts/NeueMontreal-Regular.otf)
+  font-family: "graphik-regular";
+  src: url(/fonts/GraphikRegular.otf)
 }
 
 @font-face {
-  font-family: "neuemontreal-medium";
-  src: url(/fonts/PPNeueMontreal-Medium.otf)
+  font-family: "graphik-medium";
+  src: url(/fonts/GraphikMedium.otf)
 }
+
 
 @font-face {
   font-family: "graphik-semibold";
@@ -29,14 +30,21 @@
 }
 
 @font-face {
-  font-family: "graphik-regular";
-  src: url(/fonts/GraphikRegular.otf)
+  font-family: "neuemontreal";
+  src: url(/fonts/NeueMontreal-Regular.otf)
 }
 
 @font-face {
-  font-family: "graphik-medium";
-  src: url(/fonts/GraphikMedium.otf)
+  font-family: "merriweather-regular";
+  src: url(/fonts/Merriweather-Regular.ttf)
 }
+
+@font-face {
+  font-family: "merriweather-bold";
+  src: url(/fonts/Merriweather-Bold.ttf)
+}
+
+
 
 
 
@@ -293,6 +301,36 @@ a {
   color: inherit;
 }
 
+.bullet-list {
+  counter-reset:bulletList;
+}
+
+.list-point {
+  align-items: flex-start;
+  /*border-bottom: 1px solid #cecccc; */
+  column-gap: 2rem;
+  display: flex;
+  margin-bottom: clamp(1rem,0.72vw + 0.83rem,1.5rem);
+  margin-top: clamp(1rem,0.72vw + 0.83rem,1.5rem);
+  padding-bottom: clamp(1rem,0.72vw + 0.83rem,1.5rem);
+  position: relative;
+}
+
+.list-point:before {
+  align-items: center;
+  background-color: #ECE7E4;
+  box-sizing: border-box;
+  color: var(--bs-link-color);
+  content: counter(bulletList);
+  counter-increment:bulletList;
+  display: grid;
+  flex: 0 0 4rem;
+  font-family: 'merriweather-regular';
+  font-size: 3rem;
+  justify-content: space-around;
+  text-align: center;
+  width: 4rem;
+}
 
 
 ul {
