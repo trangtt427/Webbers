@@ -372,7 +372,7 @@ ul .menu {
 .menu li a {
   display: inline-block;
   position: relative;
-  font-family: 'tiempo', serif;
+  font-family: 'merriweather-regular', serif;
   font-weight:500;
 }
 
