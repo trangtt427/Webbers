@@ -127,8 +127,8 @@ header {
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 18px;
-  --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.5;
+  /*--bs-body-font-weight: 400; */
+  --bs-body-line-height: 1.6;
   --bs-body-color: #3f3e3e;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
@@ -194,8 +194,8 @@ hr {
 
 */
 
-.bold {
-  font-family:'neuemontreal-medium';
+.p.bold {
+  font-family:'neuemontreal';
 }
 
 
@@ -203,20 +203,25 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.4;
-font-family: 'neuemontreal', serif;
+font-family: 'merriweather-regular', serif;
 font-weight:500;
 }
 
 .headline {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1.2;
-  font-family: 'tiempo', serif;
+  font-family: 'merriweather-regular', serif;
 }
 
 .py-7 {
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
+
+.mt-9 {
+  margin-top:8rem !important;
+}
+
 .mt-10 {
   margin-top: 12rem !important;
 }
@@ -227,7 +232,7 @@ font-weight:500;
 
 h2, .h2 {
   font-size: 36px;
-  font-family: 'tiempo';
+  font-family: 'merriweather-regular';
 }
 
 h3, .h3 {
@@ -240,8 +245,8 @@ h3, .h3 {
 } 
 
 h5, .h5 {
-font-size: 24px;
--webkit-font-smoothing: antialiased;
+font-size: 22px;
+font-family: 'merriweather-regular';
 }
 
 h6, .h6 {
@@ -254,7 +259,6 @@ font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
   /*-webkit-font-smoothing: antialiased; */
-  font-style:normal;
 }
 
 .subtext {
@@ -786,7 +790,7 @@ progress {
   --bs-gutter-y: 0;
   padding-left: 30px;
   padding-right: 30px;
-  max-width:1140px;
+  max-width:1300px;
   margin:auto;
 
 }
@@ -797,15 +801,15 @@ progress {
   justify-content: space-between;
   background-color:var(--bs-beige);
   /*border-bottom: 2px solid var(--bs-gray-900);*/
-  height:80px;
+  height:70px;
   padding-left: 30px;
   padding-right: 30px;
-  max-width:1140px;
+  max-width:1300px;
   margin:auto;
 }
 
 .logotrang {
-  width:60px;
+  width:55px;
 }
 
 .homelogo {
@@ -833,7 +837,7 @@ progress {
 
 
   .container-md, .container-sm, .container {
-    max-width: 1140px;
+    max-width: 1300px;
   }
 
   .hide-on-desktop {
@@ -2186,6 +2190,10 @@ progress {
     padding-bottom: 4rem;
   }
 
+  .mt-9 {
+    margin-top: 6rem !important;
+  }
+
   .mt-10 {
     margin-top: 8rem !important;
   }
@@ -2196,7 +2204,7 @@ progress {
   .headline {
     font-size: 32px;
     line-height: 1.2;
-    font-family: 'tiempo', serif;
+    font-family: 'merriweather-regular', serif;
   }
   
     h1, .h1 {
@@ -2234,7 +2242,7 @@ progress {
         /*background-color:var(--bs-beige);*/
         --bs-gutter-x: 0;
         --bs-gutter-y: 0;
-        max-width:1140px;
+        max-width:1300px;
         margin:auto;
       }
   
@@ -2263,7 +2271,7 @@ progress {
     justify-content: space-between;
     background-color:var(--bs-beige);
     /*border-bottom: 2px solid var(--bs-gray-900);*/
-    max-width:1140px;
+    max-width:1300px;
     margin:auto;
   }
 
@@ -4656,7 +4664,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #fff;
+  --bs-card-bg: #f6f3f1;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
