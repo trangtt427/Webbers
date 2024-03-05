@@ -19,34 +19,6 @@ $("#nav-icon").click(function () {
   $(".hamoverlay p").toggleClass("open");
 });
 
-// parallax scrolling
-
-// $(document).scroll(function () {
-//   var st = $(this).scrollTop();
-//   $("header").css({
-//     "background-position-y": -st / 20,
-//   });
-//   $("#first-section").css({
-//     top: -st / 5,
-//     bottom: st / 5,
-//   });
-// });
-
-// fade as you scroll
-
-// $(window).scroll(function () {
-//   $(".introtext").css("opacity", 1 - $(window).scrollTop() / 500);
-// });
-
-// win.scroll(function(){
-//   scrollPosition = win.scrollTop();
-//   scrollRatio = 1 - scrollPosition / 300;
-//   $(".top").css("opacity", scrollRatio);
-
-// $(window).scroll(function(){
-//     var scrollVar = $(window).scrollTop();
-//     $('.top').css("opacity", 1 - scrollVar/300);
-// })
 
 
 
