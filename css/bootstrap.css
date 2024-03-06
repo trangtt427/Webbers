@@ -68,6 +68,7 @@ header {
   left: 0;
   right: 0;
   background-color: var(--bs-beige);
+  transition: all 0.3s ease 0s;
  
 }
 
@@ -2357,7 +2358,7 @@ progress {
     background: none;
     cursor:pointer;
     transition: 0.3s opacity ease-in-out;
-    padding:0;
+    padding:8px;
   }
 
   .nav {
