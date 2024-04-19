@@ -313,6 +313,7 @@ a {
   margin-top: clamp(1rem,0.72vw + 0.83rem,1.5rem);
   padding-bottom: clamp(1rem,0.72vw + 0.83rem,1.5rem);
   position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
 .list-point:before {

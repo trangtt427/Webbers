@@ -860,6 +860,7 @@ progress {
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center;
+    -webkit-font-smoothing: antialiased;
   }
   }
 
