@@ -20,20 +20,26 @@
  
 }
 
-.c1 {
+.c-fast-track {
   background: url("../images/hi/fasttrackheader.png") no-repeat scroll center;
    background-size: cover;
    height:450px;
 }
 
-.c2 
+.c-squarespace {
+  background: url("../images/squarespace/acuity-header-alternate.png") no-repeat scroll center;
+   background-size: cover;
+   height:450px;
+}
+
+.c-tactic
 {
   background: url("../images/tactic/tacticheader.png") no-repeat scroll center;
    background-size: cover;
    height:450px;
 }
 
-.c3 
+.c-baby-design
 {
   background: url("../images/baby design/babydesign-cover.png") no-repeat scroll center;
    background-size: cover;
