@@ -10,7 +10,7 @@
 /*carousel*/
 .carousel-bottom-right-text {
   position: absolute;
-  bottom: 82%;
+  bottom: 87%;
   right: 20px;
   color: rgb(0, 0, 0);
   background-color:rgba(255, 255, 255, 1);
@@ -23,27 +23,23 @@
 .c-fast-track {
   background: url("../images/hi/fasttrackheader.png") no-repeat scroll center;
    background-size: cover;
-   height:450px;
 }
 
 .c-squarespace {
   background: url("../images/squarespace/acuity-header-alternate.png") no-repeat scroll center;
    background-size: cover;
-   height:450px;
 }
 
 .c-tactic
 {
   background: url("../images/tactic/tacticheader.png") no-repeat scroll center;
    background-size: cover;
-   height:450px;
 }
 
 .c-baby-design
 {
   background: url("../images/baby design/babydesign-cover.png") no-repeat scroll center;
    background-size: cover;
-   height:450px;
 }
 
 
@@ -52,7 +48,10 @@
 {
   background: url("../images/chaca.webp") no-repeat scroll center;
    background-size: cover;
-   height:450px;
+}
+
+.project-cover-height {
+  height:450px;
 }
 
 
@@ -2162,9 +2161,14 @@ progress {
     font-size: 13px;
     }
 
-  .c1, .c2, .c3, .c4 {
-    height:400px;
+    .project-cover-height {
+    height:350px;
   }
+
+  .carousel-bottom-right-text {
+    bottom: 83%;   
+  }
+
   .table-responsive-sm {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
