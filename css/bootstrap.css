@@ -74,6 +74,9 @@ header {
   right: 0;
   background-color: var(--bs-beige);
   transition: all 0.3s ease 0s;
+  padding-right: 30px;
+  padding-left: 30px;
+  max-width:1300px;
  
 }
 
@@ -806,10 +809,8 @@ progress {
   align-items: center;
   justify-content: space-between;
   background-color:var(--bs-beige);
-  /*border-bottom: 2px solid var(--bs-gray-900);*/
-  height:70px;
-  padding-left: 30px;
-  padding-right: 30px;
+  border-bottom: 1px solid #cecccc;
+  height:90px;
   max-width:1300px;
   margin:auto;
 }
@@ -2285,6 +2286,7 @@ progress {
     /*border-bottom: 2px solid var(--bs-gray-900);*/
     max-width:1300px;
     margin:auto;
+    height: 70px;
   }
 
   .image-bottom-gap {
