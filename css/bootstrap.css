@@ -10,7 +10,7 @@
 /*carousel*/
 .carousel-bottom-right-text {
   position: absolute;
-  bottom: 87%;
+  bottom: 84%;
   right: 20px;
   color: rgb(0, 0, 0);
   background-color:rgba(255, 255, 255, 1);
@@ -51,7 +51,7 @@
 }
 
 .project-cover-height {
-  height:450px;
+  height:400px;
 }
 
 
