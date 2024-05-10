@@ -598,14 +598,12 @@ a.cta {
   -webkit-font-smoothing: antialiased;
   color:white;
   padding: 18px 85px 18px 25px;
-  font-size: 13px;
+  font-size: 18px;
   line-height: 3em;
   transition: 0.3s;
   position: relative;
   text-decoration: none;
-  border-radius:4px;
-  letter-spacing:1.5px;
-  text-transform: uppercase;
+  border-radius:10px;
 }
 
 .cta-border-white{
@@ -628,8 +626,8 @@ a.cta {
   border-top-color: transparent;
   border-left-color: transparent;
   position: absolute;
-  top: 38%;
-  right: 32px;
+  top: 41%;
+  right: 50px;
   transform: rotate(-45deg);
   transition: 0.3s;
 }
@@ -640,7 +638,7 @@ a.cta {
 }
 
 .cta:hover:after {
-  right: 21px;
+  right: 35px;
   border: 1px solid;
   border-color: white;
   border-top-color: transparent;

@@ -782,9 +782,8 @@ progress {
 }
 
 .bigp {
-  font-size: 32px;
-  color:black;
-  line-height:125%;
+  font-size: 24px;
+  color:var(--bs-body-color);
 }
 
 .container,
@@ -855,6 +854,7 @@ progress {
     margin-bottom: 0;
   }
 
+ 
 
   
 
@@ -2183,7 +2183,7 @@ progress {
    /*---paragraph---*/
   
   .bigp {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .bigsubtext {
@@ -8135,7 +8135,7 @@ textarea.form-control-lg {
 }
 
 .mt-3 {
-  margin-top: 1rem !important;
+  margin-top: 1rem;
 }
 
 .mt-4 {
@@ -9790,7 +9790,7 @@ textarea.form-control-lg {
     padding-right: 1rem !important;
   }
   .pe-md-4 {
-    padding-right: 1.5rem !important;
+    padding-right: 2.5rem !important;
   }
   .pe-md-5 {
     padding-right: 3rem !important;
