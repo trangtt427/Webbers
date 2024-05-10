@@ -135,7 +135,7 @@ header {
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 24px;
+  --bs-body-font-size: 22px;
   /*--bs-body-font-weight: 400; */
   --bs-body-line-height: 1.5;
   --bs-body-color: #3b3838;
@@ -782,7 +782,7 @@ progress {
 }
 
 .bigp {
-  font-size: 24px;
+  font-size: 22px;
   color:var(--bs-body-color);
 }
 
@@ -2153,6 +2153,7 @@ progress {
 
 @media (max-width: 575.98px) {
 
+
   .hide-on-xs {
     display:none !important;
   }
@@ -2177,18 +2178,12 @@ progress {
   
 
 
-  p, li {
-    font-size: 20px;
+  p, li, .bigp, .bigsubtext, .subtext {
+    font-size: 19px;
   } 
    /*---paragraph---*/
   
-  .bigp {
-    font-size: 20px;
-  }
-
-  .bigsubtext {
-    font-size: 24px;
-  }
+  
   
   .p-4-5 {
     padding:1.5rem !important;
