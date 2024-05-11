@@ -850,7 +850,7 @@ progress {
     display: none;
   }
 
-  .mb-5-desktop {
+  .mb-5-hide-on-desktop {
     margin-bottom: 0;
   }
 
@@ -2183,7 +2183,7 @@ progress {
   } 
    /*---paragraph---*/
   
-  
+ 
   
   .p-4-5 {
     padding:1.5rem !important;
@@ -2260,6 +2260,10 @@ progress {
 }
 @media (max-width: 820.98px) {
 
+  .mt-3-hide-on-desktop {
+    margin-top: 1rem;
+  }
+
   .banner {
     width: 100%;
     height: auto !important;
@@ -2267,7 +2271,7 @@ progress {
   }
 
 
-  .mb-5-desktop {
+  .mb-5-hide-on-desktop {
     margin-bottom: 3rem;
   }
 
@@ -8132,6 +8136,8 @@ textarea.form-control-lg {
 .mt-3 {
   margin-top: 1rem;
 }
+
+
 
 .mt-4 {
   margin-top: 1.5rem !important;
