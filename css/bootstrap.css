@@ -13,24 +13,22 @@
   font-weight:500;
   position: absolute;
   bottom: 12%;
-  left: 20px;
   color: white;
   /*background-color:rgba(255, 255, 255, 1);*/
-  padding: 10px 20px;
   font-size: 26px;
   border-radius:100px;
+  padding:24px 32px;
 }
 
 .carousel-bottom-header {
   font-family: 'merriweather-regular', serif;
   position: absolute;
   bottom: 5%;
-  left: 20px;
   color: white;
   /*background-color:rgba(255, 255, 255, 1);*/
-  padding: 10px 20px;
   font-size: 18px;
   border-radius:100px;
+  padding: 16px 32px;
 }
 
 
@@ -2201,10 +2199,7 @@ progress {
       font-size:16px;
     }
 
-    .project-cover-height {
-    height:350px;
-  }
-
+  
 
 
   .table-responsive-sm {
