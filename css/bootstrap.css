@@ -33,6 +33,12 @@
 
 
 /*<-----adventures -----> */
+
+.c-yosemite {
+  background: url("../images/yosemite/yosemite.JPG") no-repeat scroll center;
+   background-size: cover;
+}
+
 .c-arizona {
   background: url("../images/arizona/antelope4.webp") no-repeat scroll center;
    background-size: cover;
@@ -47,6 +53,8 @@
   background: url("../images/the-isle-of-skye/quiraing.webp") no-repeat scroll center;
    background-size: cover;
 }
+
+
 
 /*<-----real carousel -----> */
 .c1 {
