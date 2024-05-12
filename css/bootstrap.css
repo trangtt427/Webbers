@@ -49,37 +49,33 @@
 }
 
 /*<-----real carousel -----> */
-.c-fast-track {
-  background: url("../images/hi/fasttrackheader.png") no-repeat scroll center;
+.c1 {
+  background: url("../images/carousel/fortbragg.jpg") no-repeat scroll center;
    background-size: cover;
+   height:400px;
 }
 
-.c-fast-track {
-  background: url("../images/hi/fasttrackheader.png") no-repeat scroll center;
-   background-size: cover;
-}
 
-.c-squarespace {
-  background: url("../images/squarespace/acuity-header-alternate.png") no-repeat scroll center;
-   background-size: cover;
-}
-
-.c-tactic
+.c2
 {
-  background: url("../images/tactic/tacticheader.png") no-repeat scroll center;
+  background: url("../images/carousel/babyme.jpg") no-repeat scroll center;
    background-size: cover;
+   height:400px;
 }
 
-.c-baby-design
+.c3 
 {
-  background: url("../images/baby design/babydesign-cover.png") no-repeat scroll center;
+  background: url("../images/carousel/drawing.webp") no-repeat scroll center;
    background-size: cover;
+   height:400px;
 }
+
 
 .c4 
 {
-  background: url("../images/chaca.webp") no-repeat scroll center;
+  background: url("../images/carousel/chaca.webp") no-repeat scroll center;
    background-size: cover;
+   height:400px;
 }
 
 .project-cover-height {
