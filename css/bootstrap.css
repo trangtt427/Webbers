@@ -9,15 +9,51 @@
 
 /*carousel*/
 .carousel-bottom-right-text {
+  font-family: 'merriweather-regular', serif;
+  font-weight:500;
   position: absolute;
-  bottom: 84%;
-  right: 20px;
-  color: rgb(0, 0, 0);
-  background-color:rgba(255, 255, 255, 1);
+  bottom: 12%;
+  left: 20px;
+  color: white;
+  /*background-color:rgba(255, 255, 255, 1);*/
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: 26px;
   border-radius:100px;
- 
+}
+
+.carousel-bottom-header {
+  font-family: 'merriweather-regular', serif;
+  position: absolute;
+  bottom: 5%;
+  left: 20px;
+  color: white;
+  /*background-color:rgba(255, 255, 255, 1);*/
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius:100px;
+}
+
+
+/*<-----adventures -----> */
+.c-arizona {
+  background: url("../images/arizona/antelope4.webp") no-repeat scroll center;
+   background-size: cover;
+}
+
+.c-zion {
+  background: url("../images/zion-national-park/canyonoverlooktrail.webp") no-repeat scroll center;
+   background-size: cover;
+}
+
+.c-scotland {
+  background: url("../images/the-isle-of-skye/quiraing.webp") no-repeat scroll center;
+   background-size: cover;
+}
+
+/*<-----real carousel -----> */
+.c-fast-track {
+  background: url("../images/hi/fasttrackheader.png") no-repeat scroll center;
+   background-size: cover;
 }
 
 .c-fast-track {
@@ -42,8 +78,6 @@
    background-size: cover;
 }
 
-
-
 .c4 
 {
   background: url("../images/chaca.webp") no-repeat scroll center;
@@ -51,7 +85,7 @@
 }
 
 .project-cover-height {
-  height:400px;
+  height:350px;
 }
 
 
@@ -2160,16 +2194,18 @@ progress {
 
 
     .carousel-bottom-right-text {
-    font-size: 13px;
+    font-size: 20px;
+    }
+
+    .carousel-bottom-header {
+      font-size:16px;
     }
 
     .project-cover-height {
     height:350px;
   }
 
-  .carousel-bottom-right-text {
-    bottom: 83%;   
-  }
+
 
   .table-responsive-sm {
     overflow-x: auto;
