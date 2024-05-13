@@ -58,7 +58,7 @@
 
 /*<-----real carousel -----> */
 .c1 {
-  background: url("../images/carousel/fortbragg.jpg") no-repeat scroll center;
+  background: url("../images/carousel/babyme.jpg") no-repeat scroll center;
    background-size: cover;
    height:400px;
 }
@@ -66,14 +66,14 @@
 
 .c2
 {
-  background: url("../images/carousel/babyme.jpg") no-repeat scroll center;
+  background: url("../images/carousel/fortbragg.jpg") no-repeat scroll center;
    background-size: cover;
    height:400px;
 }
 
 .c3 
 {
-  background: url("../images/carousel/drawing.webp") no-repeat scroll center;
+  background: url("../images/carousel/sf.JPG") no-repeat scroll center;
    background-size: cover;
    height:400px;
 }
@@ -82,6 +82,13 @@
 .c4 
 {
   background: url("../images/carousel/chaca.webp") no-repeat scroll center;
+   background-size: cover;
+   height:400px;
+}
+
+.c5 
+{
+  background: url("../images/carousel/drawing.webp") no-repeat scroll center;
    background-size: cover;
    height:400px;
 }
