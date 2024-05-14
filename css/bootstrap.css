@@ -178,7 +178,7 @@ header {
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 22px;
+  --bs-body-font-size: 20px;
   /*--bs-body-font-weight: 400; */
   --bs-body-line-height: 1.5;
   --bs-body-color: #3b3838;
@@ -825,7 +825,7 @@ progress {
 }
 
 .bigp {
-  font-size: 22px;
+  font-size: 20px;
   color:var(--bs-body-color);
 }
 
@@ -2203,7 +2203,7 @@ progress {
 
 
     .carousel-bottom-right-text {
-    font-size: 22px;
+    font-size: 20px;
     }
 
     .carousel-bottom-header {
@@ -2379,7 +2379,7 @@ progress {
     padding-inline-start: 0px;
   }
   .menu-item {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     list-style: none;
     -webkit-font-smoothing: subpixel-antialiased;
