@@ -115,7 +115,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--bs-beige);
+  background-color: var(--theme-bg-color);
   transition: all 0.3s ease 0s;
   padding-right: 30px;
   padding-left: 30px;
@@ -143,17 +143,17 @@ header {
   --bs-black: #000;
   --bs-white: #fff;
   --bs-beige:#f6f3f1;
-  --bs-gray: #6f7687;
+  --bs-gray: #7a7a7a;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
-  --bs-gray-400: #ced4da;
+  --bs-gray-400: #cecccc;
   --bs-gray-500: #adb5bd;
-  --bs-gray-600: #6c757d;
-  --bs-gray-700: #495057;
+  --bs-gray-600: #716b66;
+  --bs-gray-700: #383838;
   --bs-gray-800: #343a40;
-  --bs-gray-900: #16181a;
+  --bs-gray-900: rgb(40, 40, 40);
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
@@ -194,6 +194,7 @@ header {
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
   --bs-link-color: #b47363;
+  --bs-link-color-dark: #be8d81;
   --bs-link-hover-color: #b47363;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
@@ -219,7 +220,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color:var(--bs-beige);
+  color: var(--theme-primary-text);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   
@@ -317,7 +318,7 @@ font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
   font-style:normal;
-  color:#7a7a7a;
+  color: var(--theme-muted-text);
   font-size:var(--bs-body-font-size);
   line-height:1.5;
 }
@@ -815,18 +816,18 @@ progress {
 .figure-caption {
   padding-top:10px;
   font-size: 16px;
-  color: #7a7a7a;
+  color: var(--theme-muted-text);
 }
 
 .bigsubtext {
   font-size: 32px;
-  color:#7a7a7a;
+  color: var(--bs-gray);
   line-height:125%;
 }
 
 .bigp {
   font-size: 20px;
-  color:var(--bs-body-color);
+  color:var(--theme-primary-text);
 }
 
 .container,
@@ -845,13 +846,24 @@ progress {
   margin:auto;
 
 }
+
+.container2 {
+  background: var(--theme-white-on-light);
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width:1300px;
+  margin:auto;
+}
+
 .headcontain {
   font-size: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:var(--bs-beige);
-  border-bottom: 1px solid #cecccc;
+  /*background-color:var(--theme-bg-color); */
+  border-bottom: 1px solid var(--theme-border-color);
   height:90px;
   max-width:1300px;
   margin:auto;
@@ -2321,7 +2333,6 @@ progress {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:var(--bs-beige);
     /*border-bottom: 2px solid var(--bs-gray-900);*/
     max-width:1300px;
     margin:auto;
@@ -2384,14 +2395,14 @@ progress {
     font-size: 32px;
     max-width: 700px;
     margin: 50px;
-    color:  var(--bs-body-color);
+    color:  var(--theme-bg-color);
   }
 
 
 
   .menu-item a {
     text-decoration: none;
-    color:  var(--bs-body-color);
+    color:  var(--theme-bg-color);
   }
 
   html.noscroll {
@@ -2419,7 +2430,7 @@ progress {
     right: -100%;
     width: 100%;
     height: 100%;
-    background: white;
+    background: var(--theme-bg-color);
     opacity: 0;
     transition: 0.3s opacity ease-in-out;
   }
@@ -2428,7 +2439,7 @@ progress {
     opacity: 1;
     right: 0;
     transition: 0.3s opacity ease-in-out;
-    background-color: rgba(255, 255, 255, 1);
+    background: var(--theme-page-bg);
   }
 
   .nav__container {
@@ -2441,7 +2452,7 @@ progress {
     /* These 2 below are all the magic: */
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    background-color: var(--bs-beige);
+    background-color: var(--theme-bg-color);
   }
 
 
@@ -4708,9 +4719,9 @@ textarea.form-control-lg {
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-border-width: 1px;
   --bs-card-border-color: var(--bs-border-color-translucent);
-  --bs-card-border-radius: 0.375rem;
+  --bs-card-border-radius: 8px;
   --bs-card-box-shadow: ;
-  --bs-card-inner-border-radius: calc(0.375rem - 1px);
+  --bs-card-inner-border-radius: calc(8px - 1px);
   --bs-card-cap-padding-y: 0.5rem;
   --bs-card-cap-padding-x: 1rem;
   --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
@@ -4759,6 +4770,7 @@ textarea.form-control-lg {
   padding: 32px;
   /*padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);*/
   color: var(--bs-card-color);
+  border-radius:7.5px;
 }
 
 .card-title {

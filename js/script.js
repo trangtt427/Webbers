@@ -44,6 +44,8 @@ $("#nav-icon").click(function () {
 /*start slide in animation here*/
 /*Interactivity to determine when an animated element in in view. In view elements trigger our animation*/
 $(document).ready(function () {
+  initTheme();
+
   //window and animation items
   var animation_elements = $.find(".anim");
   var web_window = $(window);
@@ -134,3 +136,42 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+const LOCAL_STORAGE_THEME_KEY = 'data-theme';
+
+function initTheme() {
+  const rootElem = document.documentElement;
+  let localStorageTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
+
+  if (!['light', 'dark'].includes(localStorageTheme)) {
+    localStorageTheme = 'light';
+  }
+
+  // Set the theme
+  rootElem.setAttribute(LOCAL_STORAGE_THEME_KEY, localStorageTheme);
+}
+
+// Theme switcher function
+function switchTheme() {
+  const rootElem = document.documentElement;
+  const currentTheme = rootElem.getAttribute(LOCAL_STORAGE_THEME_KEY);
+  let newTheme;
+
+  // the new theme will be the opposite of the currentTheme
+  newTheme = (currentTheme === 'light') ? 'dark' : 'light';
+  
+  // Put the new-theme into localStorage
+  localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+
+  // Set the theme
+  rootElem.setAttribute(LOCAL_STORAGE_THEME_KEY, newTheme);
+}
+
+// Add the theme-switcher button to the page
+//const themeSwitcherButton = document.createElement('button');
+//themeSwitcherButton.setAttribute('id', 'theme-switcher');
+//themeSwitcherButton.innerHTML = 'Switch Themes!';
+//document.body.appendChild(themeSwitcherButton);
+
+// Add event listener for the theme switcher
+document.querySelector('#theme-switcher').addEventListener('click', switchTheme);
