@@ -851,15 +851,6 @@ progress {
 
 }
 
-.containernew {
-  background: var(--theme-bg-color);
-  --bs-gutter-x: 0;
-  --bs-gutter-y: 0;
-  padding-left: 30px;
-  padding-right: 30px;
-  max-width:1300px;
-  margin:auto;
-}
 
 .headcontain {
   font-size: 0;
