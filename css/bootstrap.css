@@ -115,11 +115,10 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--theme-bg-color);
-  transition: all 0.3s ease 0s;
+  background-color: var(--theme-page-bg);
+  transition: var(--default-transition);
   padding-right: 30px;
   padding-left: 30px;
-  max-width:1300px;
  
 }
 
@@ -828,7 +827,9 @@ progress {
 .bigp {
   font-size: 20px;
   color:var(--theme-primary-text);
+  transition: var(--default-transition);
 }
+
 
 .container,
 .container-fluid,
@@ -865,7 +866,7 @@ progress {
   /*background-color:var(--theme-bg-color); */
   border-bottom: 1px solid var(--theme-border-color);
   height:90px;
-  max-width:1300px;
+  max-width:1240px;
   margin:auto;
 }
 
@@ -2334,7 +2335,6 @@ progress {
     align-items: center;
     justify-content: space-between;
     /*border-bottom: 2px solid var(--bs-gray-900);*/
-    max-width:1300px;
     margin:auto;
     height: 70px;
   }
@@ -8797,8 +8797,8 @@ textarea.form-control-lg {
 
 .bg-body {
   /*--bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;*/
-  background-color: var(--bs-beige);
+  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: var(--bs-beige);*/
 }
 
 .bg-transparent {

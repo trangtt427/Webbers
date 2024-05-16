@@ -33,11 +33,12 @@
 /**
  * === END: Light/dark theme variables
  */
-* {
+body {
   background-color: var(--theme-page-bg);
   color: var(--theme-primary-text);
   transition: var(--default-transition);
 }
+
 
 #theme-switcher {
   position: fixed;
@@ -46,6 +47,7 @@
   z-index: 1;
   border-radius: var(--default-border-radius);
   border-color: solid var(--theme-border-color);
+  cursor:pointer;
 }
 
 @font-face {
@@ -465,6 +467,7 @@ ul .menu {
 
 .svg-link{
   fill:var(--theme-primary-text);
+  transition: var(--default-transition);
 }
 
 .svg-link:after {
@@ -475,7 +478,6 @@ ul .menu {
   left: 0;
   position: absolute;
   background: var(--bs-body-color);
-  transition: 0.2s all ease-in-out;
   width: 0;
 }
 
@@ -727,7 +729,8 @@ a.cta {
   line-height:1.4;
   padding:8px 0px;
   margin-left:16px;
-  font-family: 'merriweather-regular'
+  font-family: 'merriweather-regular';
+  transition: var(--default-transition);
 }
 
 .awesome {
