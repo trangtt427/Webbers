@@ -2389,14 +2389,14 @@ progress {
     font-size: 32px;
     max-width: 700px;
     margin: 50px;
-    color:  var(--theme-bg-color);
+    color:  var(--theme-primary-text);
   }
 
 
 
   .menu-item a {
     text-decoration: none;
-    color:  var(--theme-bg-color);
+    color:  var(--theme-primary-text);
   }
 
   html.noscroll {
@@ -2446,7 +2446,7 @@ progress {
     /* These 2 below are all the magic: */
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    background-color: var(--theme-bg-color);
+    background-color: var(--theme-page-bg);
   }
 
 
