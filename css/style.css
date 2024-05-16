@@ -2,7 +2,7 @@
  * === START: Light/dark theme variables
  */
 :root {
-  --default-border-radius: 8px;
+  --default-border-radius: 80px;
   --default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
 }
 
@@ -11,6 +11,7 @@
   --theme-white-on-light: var(--bs-white);/*stays white on light mode, but becomes dark greyish on dark mode*/
   --theme-bg-color: var(--bs-white); 
   --theme-accent: var(--bs-accent);
+  --icon-sun: var(--bs-gray-700);
 
   --theme-primary-text: var(--bs-body-color);
   --theme-muted-text: var(--bs-gray);
@@ -25,6 +26,7 @@
   --theme-white-on-light: var(--bs-gray-700);
   --theme-bg-color: var(--bs-gray-700);
   --theme-accent: var(--bs-gray-700);
+  --icon-sun: #EDCB16;
 
   --theme-primary-text: var(--bs-white);
   --theme-muted-text: var(--bs-gray-500);
@@ -51,7 +53,13 @@ body {
   border-radius: var(--default-border-radius);
   border-color: solid var(--theme-border-color);
   cursor:pointer;
+  backdrop-filter: blur(2px);
+} 
+
+#icon-sun {
+  fill: var(--icon-sun);
 }
+
 
 @font-face {
   font-family: "tiempo";
