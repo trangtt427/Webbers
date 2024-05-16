@@ -142,6 +142,7 @@ header {
   --bs-black: #000;
   --bs-white: #fff;
   --bs-beige:#f6f3f1;
+  --bs-accent:#ECE7E4;
   --bs-gray: #7a7a7a;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
@@ -286,6 +287,7 @@ h2, .h2 {
   font-size: 36px;
   font-family: 'merriweather-regular';
 }
+
 
 h3, .h3 {
   font-size:30px;
@@ -816,6 +818,7 @@ progress {
   padding-top:10px;
   font-size: 16px;
   color: var(--theme-muted-text);
+  transition: var(--default-transition);
 }
 
 .bigsubtext {
@@ -4728,7 +4731,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #f6f3f1;
+  --bs-card-bg: var(--theme-page-bg);
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -4741,6 +4744,7 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
+
 }
 .card > hr {
   margin-right: 0;

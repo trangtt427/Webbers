@@ -9,7 +9,7 @@
 :root[data-theme="light"] {
   --theme-page-bg: var(--bs-beige);
   --theme-white-on-light: var(--bs-white); /*stays white on light mode, but becomes dark greyish on dark mode*/
-  
+  --theme-accent: var(--bs-accent);
 
   --theme-primary-text: var(--bs-body-color);
   --theme-muted-text: var(--bs-gray);
@@ -22,6 +22,7 @@
 :root[data-theme="dark"] {
   --theme-page-bg: var(--bs-gray-900);
   --theme-white-on-light: var(--bs-gray-700);
+  --theme-accent: var(--bs-gray-700);
 
   --theme-primary-text: var(--bs-white);
   --theme-muted-text: var(--bs-gray-500);
@@ -315,12 +316,9 @@ margin:auto;
 
 .purewhitebg {
   background-color:var(--theme-white-on-light);
+  transition:inherit;
 }
 
-.whitebg {
-  background: var(--theme-page-bg);
-  /*this is actually for the beige*/
-}
 
 .greybg {
   background-color:#eeeceb;
@@ -373,7 +371,7 @@ a {
 
 .list-point:before {
   align-items: center;
-  background-color: #ECE7E4;
+  background-color: var(--theme-accent);
   box-sizing: border-box;
   color: var(--bs-link-color);
   content: counter(bulletList);
@@ -386,6 +384,7 @@ a {
   text-align: center;
   width: 4rem;
   border-radius:4px;
+  transition:var(--default-transition);
 }
 
 
@@ -796,10 +795,10 @@ a.cta {
   overflow: hidden;
   text-align: left;
   color: var(--theme-primary-text);
-  background: var(--theme-white-on-light);
   line-height:1.4;
   letter-spacing:1.3px;
   text-transform:uppercase;
+  transition:var(--default-transition);
 
 }
 
