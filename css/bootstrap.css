@@ -851,8 +851,8 @@ progress {
 
 }
 
-.container2 {
-  background: var(--theme-white-on-light);
+.containernew {
+  background: var(--theme-bg-color);
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
   padding-left: 30px;

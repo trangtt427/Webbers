@@ -8,7 +8,8 @@
 
 :root[data-theme="light"] {
   --theme-page-bg: var(--bs-beige);
-  --theme-white-on-light: var(--bs-white); /*stays white on light mode, but becomes dark greyish on dark mode*/
+  --theme-white-on-light: var(--bs-white);/*stays white on light mode, but becomes dark greyish on dark mode*/
+  --theme-bg-color: var(--bs-white); 
   --theme-accent: var(--bs-accent);
 
   --theme-primary-text: var(--bs-body-color);
@@ -22,6 +23,7 @@
 :root[data-theme="dark"] {
   --theme-page-bg: var(--bs-gray-900);
   --theme-white-on-light: var(--bs-gray-700);
+  --theme-bg-color: var(--bs-gray-700);
   --theme-accent: var(--bs-gray-700);
 
   --theme-primary-text: var(--bs-white);
@@ -316,7 +318,7 @@ margin:auto;
 
 .purewhitebg {
   background-color:var(--theme-white-on-light);
-  transition:inherit;
+ transition: 0.3s all ease-in-out;
 }
 
 
