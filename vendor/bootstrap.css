@@ -35,22 +35,22 @@
 /*<-----adventures -----> */
 
 .c-yosemite {
-  background: url("../images/yosemite/yosemite.JPG") no-repeat scroll center;
+  background: url("/images/yosemite/yosemite.JPG") no-repeat scroll center;
    background-size: cover;
 }
 
 .c-arizona {
-  background: url("../images/arizona/antelope4.webp") no-repeat scroll center;
+  background: url("/images/arizona/antelope4.webp") no-repeat scroll center;
    background-size: cover;
 }
 
 .c-zion {
-  background: url("../images/zion-national-park/canyonoverlooktrail.webp") no-repeat scroll center;
+  background: url("/images/zion-national-park/canyonoverlooktrail.webp") no-repeat scroll center;
    background-size: cover;
 }
 
 .c-scotland {
-  background: url("../images/the-isle-of-skye/quiraing.webp") no-repeat scroll center;
+  background: url("/images/the-isle-of-skye/quiraing.webp") no-repeat scroll center;
    background-size: cover;
 }
 
@@ -58,7 +58,7 @@
 
 /*<-----real carousel -----> */
 .c1 {
-  background: url("../images/carousel/babyme.jpg") no-repeat scroll center;
+  background: url("/images/carousel/babyme.jpg") no-repeat scroll center;
    background-size: cover;
    height:400px;
 }
@@ -66,14 +66,14 @@
 
 .c2
 {
-  background: url("../images/carousel/fortbragg.jpg") no-repeat scroll center;
+  background: url("/images/carousel/fortbragg.jpg") no-repeat scroll center;
    background-size: cover;
    height:400px;
 }
 
 .c3 
 {
-  background: url("../images/carousel/sf.JPG") no-repeat scroll center;
+  background: url("/images/carousel/sf.JPG") no-repeat scroll center;
    background-size: cover;
    height:400px;
 }
@@ -81,14 +81,14 @@
 
 .c4 
 {
-  background: url("../images/carousel/chaca.webp") no-repeat scroll center;
+  background: url("/images/carousel/chaca.webp") no-repeat scroll center;
    background-size: cover;
    height:400px;
 }
 
 .c5 
 {
-  background: url("../images/carousel/drawing.webp") no-repeat scroll center;
+  background: url("/images/carousel/drawing.webp") no-repeat scroll center;
    background-size: cover;
    height:400px;
 }
@@ -96,17 +96,6 @@
 .project-cover-height {
   height:350px;
 }
-
-
-/*carousel*/
-
- /*custom trang*/
- #bodymovin-ac{
-   margin:0 auto;
-  max-width:55px;
-  margin-top:45px;
-}
-/*end custom trang*/
 
 header {
   margin:0 auto;
@@ -2359,10 +2348,6 @@ progress {
   }
   .col-margin-top {
     margin-top:30px;
-  }
-
-  #bodymovin-ac{
-  margin-top:45px;
   }
 
   .table-responsive-md {
