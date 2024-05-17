@@ -1,1 +1,2 @@
 Options -Indexes 
+ErrorDocument 400 https://trangtran.design/404.html
