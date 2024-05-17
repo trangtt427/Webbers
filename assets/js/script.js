@@ -161,7 +161,7 @@ function switchTheme() {
 class CuteSwitcher extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <div tabindex="0" role="button">
+      <div id="theme-switcher" tabindex="0" role="button">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-sun">
           <g filter="url(#filter0_b_879_51)">
           <circle cx="24" cy="24" r="24" fill="white" fill-opacity="0.4"/>
