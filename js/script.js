@@ -139,19 +139,24 @@ function hasScrolled() {
 
 const LOCAL_STORAGE_THEME_KEY = 'data-theme';
 
+/**
+ * Initializes the theme on load.
+ */
 function initTheme() {
   const rootElem = document.documentElement;
   let localStorageTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
 
   if (!['light', 'dark'].includes(localStorageTheme)) {
-    localStorageTheme = 'light';
+    localStorageTheme = 'light'; // set a default theme if no localStorage value exists
   }
 
   // Set the theme
   rootElem.setAttribute(LOCAL_STORAGE_THEME_KEY, localStorageTheme);
 }
 
-// Theme switcher function
+/**
+ * Switches the theme, typically after clicking a button.
+ */
 function switchTheme() {
   const rootElem = document.documentElement;
   const currentTheme = rootElem.getAttribute(LOCAL_STORAGE_THEME_KEY);

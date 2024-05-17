@@ -4,5 +4,6 @@
       "titleBar.inactiveForeground": "#FFF",
       "titleBar.activeBackground": "#7C4862",
       "titleBar.inactiveBackground": "#7C4862CC"
-    }
+    },
+    "livePreview.defaultPreviewPath": "/index.html"
 }
