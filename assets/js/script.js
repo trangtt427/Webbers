@@ -39,7 +39,7 @@ $("#nav-icon").click(function () {
 /*start slide in animation here*/
 /*Interactivity to determine when an animated element in in view. In view elements trigger our animation*/
 $(document).ready(function () {
-  initTheme();
+  initThemeSwitcher();
 
   //window and animation items
   var animation_elements = $.find(".anim");
@@ -128,9 +128,13 @@ const LOCAL_STORAGE_THEME_KEY = "data-theme";
 /**
  * Initializes the theme on load.
  */
-function initTheme() {
+function initThemeSwitcher() {
+  const cuteSwitcher = document.createElement("cute-switcher");
   const rootElem = document.documentElement;
   let localStorageTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
+
+  // Add the theme-switcher button to the page, as the very first child of <body>
+  document.body.insertBefore(cuteSwitcher, document.body.firstChild);
 
   if (!["light", "dark"].includes(localStorageTheme)) {
     localStorageTheme = "light"; // set a default theme if no localStorage value exists
@@ -141,23 +145,8 @@ function initTheme() {
 }
 
 /**
- * Switches the theme, typically after clicking a button.
+ * <cute-switcher> class :3 :3 :3
  */
-function switchTheme() {
-  const rootElem = document.documentElement;
-  const currentTheme = rootElem.getAttribute(LOCAL_STORAGE_THEME_KEY);
-  let newTheme;
-
-  // the new theme will be the opposite of the currentTheme
-  newTheme = currentTheme === "light" ? "dark" : "light";
-
-  // Put the new-theme into localStorage
-  localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
-
-  // Set the theme
-  rootElem.setAttribute(LOCAL_STORAGE_THEME_KEY, newTheme);
-}
-
 class CuteSwitcher extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -188,17 +177,31 @@ class CuteSwitcher extends HTMLElement {
     `;
 
     // Add event listeners for the theme switcher
-    this.addEventListener("click", switchTheme);
+    this.addEventListener("click", this.switchTheme);
     this.addEventListener("keydown", (event) => {
       if (event.code === "Enter") {
-        switchTheme();
+        this.switchTheme();
       }
     });
+  }
+
+  /**
+   * Function responsible for toggling the themes, and storing the value into localStorage.
+   */
+  switchTheme() {
+    const rootElem = document.documentElement;
+    const currentTheme = rootElem.getAttribute(LOCAL_STORAGE_THEME_KEY);
+    let newTheme;
+
+    // the new theme will be the opposite of the currentTheme
+    newTheme = currentTheme === "light" ? "dark" : "light";
+
+    // Put the new-theme into localStorage
+    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+
+    // Set the theme
+    rootElem.setAttribute(LOCAL_STORAGE_THEME_KEY, newTheme);
   }
 }
 
 customElements.define("cute-switcher", CuteSwitcher);
-
-// Add the theme-switcher button to the page, as the very first child of <body>
-const cuteSwitcher = document.createElement("cute-switcher");
-document.body.insertBefore(cuteSwitcher, document.body.firstChild);
