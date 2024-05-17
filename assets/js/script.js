@@ -158,16 +158,10 @@ function switchTheme() {
   rootElem.setAttribute(LOCAL_STORAGE_THEME_KEY, newTheme);
 }
 
-// Add the theme-switcher button to the page
-//const themeSwitcherButton = document.createElement('button');
-//themeSwitcherButton.setAttribute('id', 'theme-switcher');
-//themeSwitcherButton.innerHTML = 'Switch Themes!';
-//document.body.appendChild(themeSwitcherButton);
-
 class CuteSwitcher extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <a id="theme-switcher">
+      <div tabindex="0" role="button">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-sun">
           <g filter="url(#filter0_b_879_51)">
           <circle cx="24" cy="24" r="24" fill="white" fill-opacity="0.4"/>
@@ -190,14 +184,21 @@ class CuteSwitcher extends HTMLElement {
           </filter>
           </defs>
         </svg>
-      </a>
+      </div>
     `;
+
+    // Add event listeners for the theme switcher
+    this.addEventListener("click", switchTheme);
+    this.addEventListener("keydown", (event) => {
+      if (event.code === "Enter") {
+        switchTheme();
+      }
+    });
   }
 }
 
 customElements.define("cute-switcher", CuteSwitcher);
 
-// Add event listener for the theme switcher
-document
-  .querySelector("#theme-switcher")
-  .addEventListener("click", switchTheme);
+// Add the theme-switcher button to the page, as the very first child of <body>
+const cuteSwitcher = document.createElement("cute-switcher");
+document.body.insertBefore(cuteSwitcher, document.body.firstChild);
