@@ -50,8 +50,8 @@ body {
 
 #theme-switcher {
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 20px;
+  right: 20px;
   z-index: 2;
   border-radius: var(--default-border-radius);
   border-color: solid var(--theme-border-color);
