@@ -17,6 +17,21 @@
   </head>
 
   <body class="animate-in">
+    <script>  switchTheme() {
+      const rootElem = document.documentElement;
+      const currentTheme = rootElem.getAttribute(LOCAL_STORAGE_THEME_KEY);
+      let newTheme;
+  
+      // the new theme will be the opposite of the currentTheme
+      newTheme = currentTheme === "light" ? "dark" : "light";
+  
+      // Put the new-theme into localStorage
+      localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+  
+      // Set the theme
+      rootElem.setAttribute(LOCAL_STORAGE_THEME_KEY, newTheme);
+    }
+  </script>
     <header id="navBar">
       <special-header></special-header>
     </header>
