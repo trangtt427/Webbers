@@ -7,27 +7,29 @@
  */
 
 /*carousel*/
+
+.carousel-text-group {
+  position:relative;
+  position:absolute;
+  background-color:rgba(0, 0, 0, .5);
+  bottom: 12%;
+  display:block;
+  padding:24px;
+}
+
 .carousel-bottom-right-text {
   font-family: "merriweather-regular", serif;
   font-weight: 500;
-  position: absolute;
-  bottom: 12%;
   color: white;
   /*background-color:rgba(255, 255, 255, 1);*/
   font-size: 26px;
-  border-radius: 100px;
-  padding: 24px 32px;
 }
 
 .carousel-bottom-header {
   font-family: "merriweather-regular", serif;
-  position: absolute;
-  bottom: 5%;
   color: white;
   /*background-color:rgba(255, 255, 255, 1);*/
   font-size: 18px;
-  border-radius: 100px;
-  padding: 16px 32px;
 }
 
 /*<-----adventures -----> */
@@ -52,6 +54,12 @@
 
 .c-scotland {
   background: url("/assets/images/the-isle-of-skye/quiraing.webp") no-repeat
+    scroll center;
+  background-size: cover;
+}
+
+.c-japan {
+  background: url("/assets/images/japan/fushimi_inari.webp") no-repeat
     scroll center;
   background-size: cover;
 }
@@ -90,7 +98,7 @@
 }
 
 .project-cover-height {
-  height: 350px;
+  height: 380px;
 }
 
 header {
