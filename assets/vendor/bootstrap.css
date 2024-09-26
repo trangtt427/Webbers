@@ -863,7 +863,7 @@ progress {
   /*background-color:var(--theme-bg-color); */
   border-bottom: 1px solid var(--theme-border-color);
   height: 90px;
-  max-width: 1240px;
+  max-width: 1190px;
   margin: auto;
 }
 
