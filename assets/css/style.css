@@ -9,9 +9,9 @@
 }
 
 :root[data-theme="light"] {
-  --theme-page-bg: var(--bs-beige);
+  --theme-page-bg: var(--bs-offwhite);
   --theme-white-on-light: var(
-    --bs-white
+    --bs-accent
   ); /*stays white on light mode, but becomes dark greyish on dark mode*/
   --theme-bg-color: var(--bs-white);
   --theme-accent: var(--bs-accent);
@@ -100,25 +100,6 @@ body {
 }
 
 @font-face {
-  font-family: "graphik-regular";
-  src: url(/assets/fonts/GraphikRegular.otf);
-}
-
-@font-face {
-  font-family: "graphik-medium";
-  src: url(/assets/fonts/GraphikMedium.otf);
-}
-
-@font-face {
-  font-family: "graphik-semibold";
-  src: url(/assets/fonts/GraphikSemibold.otf);
-}
-@font-face {
-  font-family: "graphik-italics";
-  src: url(/assets/fonts/GraphikSemiboldItalic.otf);
-}
-
-@font-face {
   font-family: "neuemontreal-book";
   src: url(/assets/fonts/ppneuemontreal-book.otf);
 }
@@ -126,6 +107,11 @@ body {
 @font-face {
   font-family: "neuemontreal";
   src: url(/assets/fonts/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+  font-family: "matter";
+  src: url(/assets/fonts/Matter-Regular.ttf);
 }
 
 @font-face {

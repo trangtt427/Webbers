@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"titleBar.activeForeground": "#FFF",
+			"titleBar.inactiveForeground": "#FFF",
+			"titleBar.activeBackground": "#7C4862",
+			"titleBar.inactiveBackground": "#7C4862CC"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "Webbers 2023"
+	}
+}
