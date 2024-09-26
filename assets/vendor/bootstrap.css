@@ -110,8 +110,8 @@ header {
   right: 0;
   background-color: var(--theme-page-bg);
   transition: var(--default-transition);
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .banner {
@@ -849,8 +849,8 @@ progress {
   /*background-color:beige;*/
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   max-width: 1300px;
   margin: auto;
 }
@@ -2207,6 +2207,11 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 
+  header {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
   p,
   li,
   .bigp,
@@ -2284,6 +2289,8 @@ progress {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
     max-width: 1300px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin: auto;
   }
 }
