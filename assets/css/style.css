@@ -376,7 +376,7 @@ a {
 .list-point {
   align-items: flex-start;
   /*border-bottom: 1px solid #cecccc; */
-  column-gap: 2rem;
+  column-gap: 1.5rem;
   display: flex;
   margin-bottom: clamp(1rem, 0.72vw + 0.83rem, 1.5rem);
   margin-top: clamp(1rem, 0.72vw + 0.83rem, 1.5rem);
@@ -393,13 +393,13 @@ a {
   content: counter(bulletList);
   counter-increment: bulletList;
   display: grid;
-  flex: 0 0 4rem;
+  flex: 0 0 3rem;
   font-family: "merriweather-regular";
-  font-size: 3rem;
+  font-size: 2rem;
   justify-content: space-around;
   text-align: center;
-  width: 4rem;
-  border-radius: 4px;
+  width:4rem;
+  border-radius:4px;
   transition: var(--default-transition);
 }
 
