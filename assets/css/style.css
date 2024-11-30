@@ -195,6 +195,15 @@ body {
   border: 1px solid rgba(105, 105, 105, 0.25);
 }
 
+.portlink {
+width:120px;
+color: var(--theme-primary-text);
+border-bottom: 1px solid var(--theme-primary-text);
+padding-bottom:4px;
+}
+
+.porttext {
+}
 /* bullets */
 
 .bullet-item {
