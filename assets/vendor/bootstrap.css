@@ -862,7 +862,7 @@ progress {
   justify-content: space-between;
   /*background-color:var(--theme-bg-color); */
   border-bottom: 1px solid var(--theme-border-color);
-  height: 90px;
+  height: 70px;
   max-width: 1190px;
   margin: auto;
 }
@@ -2316,7 +2316,6 @@ progress {
     justify-content: space-between;
     /*border-bottom: 2px solid var(--bs-gray-900);*/
     margin: auto;
-    height: 70px;
   }
 
   .image-bottom-gap {
