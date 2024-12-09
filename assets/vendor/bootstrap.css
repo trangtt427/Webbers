@@ -296,7 +296,8 @@ h1 {
 
 h3,
 .h3 {
-  font-size: 30px;
+  font-size: 32px;
+  line-height: 40px;
 }
 
 .h4,
