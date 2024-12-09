@@ -110,8 +110,8 @@ body {
 }
 
 @font-face {
-  font-family: "matter";
-  src: url(/assets/fonts/Matter-Regular.ttf);
+  font-family: "neuemontreal";
+  src: url(/assets/fonts/GraphikRegular.otf);
 }
 
 @font-face {
@@ -403,7 +403,7 @@ a {
   counter-increment: bulletList;
   display: grid;
   flex: 0 0 3rem;
-  font-family: "merriweather-regular";
+  font-family: "neuemontreal";
   font-size: 2rem;
   justify-content: space-around;
   text-align: center;
@@ -414,13 +414,13 @@ a {
 
 ul {
   margin: 0px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 ul .navlist {
   margin: 0px;
   list-style: none;
-  font-size: 16px;
+  font-size: 20px;
   padding-inline-start: 0px;
 }
 
@@ -434,19 +434,19 @@ ul .menu {
 
 .navlist li a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   display: inline-block;
   padding: 8px 0px;
   margin: 18px;
   position: relative;
   line-height: 1.4;
-  font-family: "merriweather-regular";
+  font-family: "neuemontreal";
 }
 
 .menu li a {
   display: inline-block;
   position: relative;
-  font-family: "merriweather-regular", serif;
+  font-family: "neuemontreal", serif;
   font-weight: 500;
 }
 
@@ -467,7 +467,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: inline-block;
-  height: 1px;
+  height: 5%;
   left: 0;
   position: absolute;
   background: var(--theme-link-text);
@@ -733,17 +733,6 @@ a.cta {
   text-transform: uppercase;
 }
 
-.home-link {
-  font-size: 18px;
-  font-weight: var(--bs-body-font-weight);
-  overflow: hidden;
-  text-align: left;
-  line-height: 1.4;
-  padding: 8px 0px;
-  margin-left: 16px;
-  font-family: "merriweather-regular";
-  transition: var(--default-transition);
-}
 
 .awesome {
   color: #f35626;

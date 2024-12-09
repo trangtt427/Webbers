@@ -18,7 +18,7 @@
 }
 
 .carousel-bottom-right-text {
-  font-family: "merriweather-regular", serif;
+  font-family: "neuemontreal", serif;
   font-weight: 500;
   color: white;
   /*background-color:rgba(255, 255, 255, 1);*/
@@ -166,7 +166,7 @@ header {
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "matter", sans-serif;
+  --bs-font-sans-serif: "neuemontreal", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(
@@ -190,9 +190,9 @@ header {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #b47363;
+  --bs-link-color: #42AF86;
   --bs-link-color-dark: #efa796;
-  --bs-link-hover-color: #b47363;
+  --bs-link-hover-color: #42AF86;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -259,15 +259,14 @@ h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 1.5;
-  font-family: "merriweather-regular", serif;
+  font-family: "neuemontreal", serif;
   font-weight: 500;
 }
 
 .headline {
-  font-size: 40px;
-  line-height: 1.2;
-  font-family: "merriweather-regular", serif;
+  font-size: 56px;
+  font-family: "neuemontreal", serif;
+  line-height:64px;
 }
 
 .py-7 {
@@ -291,7 +290,6 @@ h1 {
 h2,
 .h2 {
   font-size: 36px;
-  font-family: "merriweather-regular";
 }
 
 h3,
@@ -302,7 +300,6 @@ h3,
 .h4,
 h4 {
   font-size: 26px;
-  line-height: 1.6 !important;
 }
 
 h5,
@@ -834,7 +831,7 @@ progress {
 }
 
 .bigp {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--theme-primary-text);
   transition: var(--default-transition);
 }
@@ -859,9 +856,9 @@ progress {
   font-size: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between; this is what makes the menu items float to the left*/
   /*background-color:var(--theme-bg-color); */
-  border-bottom: 1px solid var(--theme-border-color);
+  /*border-bottom: 1px solid var(--theme-border-color); */
   height: 70px;
   max-width: 1190px;
   margin: auto;
@@ -937,6 +934,7 @@ progress {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
+  align-items:center;
 }
 .row > * {
   flex-shrink: 0;
@@ -2245,7 +2243,6 @@ progress {
   .headline {
     font-size: 32px;
     line-height: 1.2;
-    font-family: "merriweather-regular", serif;
   }
 
   h1,
@@ -2311,7 +2308,6 @@ progress {
 
   .headcontain {
     font-size: 0;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     /*border-bottom: 2px solid var(--bs-gray-900);*/
