@@ -110,7 +110,7 @@ body {
 }
 
 @font-face {
-  font-family: "neuemontreal";
+  font-family: "graphik";
   src: url(/assets/fonts/GraphikRegular.otf);
 }
 
@@ -163,7 +163,7 @@ body {
 }
 
 .smol-line-width {
-  max-width: 450px;
+  max-width: 550px;
 }
 
 .vid {
@@ -403,7 +403,7 @@ a {
   counter-increment: bulletList;
   display: grid;
   flex: 0 0 3rem;
-  font-family: "neuemontreal";
+  font-family: "graphik";
   font-size: 2rem;
   justify-content: space-around;
   text-align: center;
@@ -440,13 +440,13 @@ ul .menu {
   margin: 18px;
   position: relative;
   line-height: 1.4;
-  font-family: "neuemontreal";
+  font-family: "graphik";
 }
 
 .menu li a {
   display: inline-block;
   position: relative;
-  font-family: "neuemontreal", serif;
+  font-family: "graphik", serif;
   font-weight: 500;
 }
 
