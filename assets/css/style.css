@@ -755,14 +755,11 @@ a.cta {
 }
 
 .subject {
-  font-size: 13px;
+  font-size: 20px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
-  color: #7a7a7a;
   line-height: 1.4;
-  letter-spacing: 1.3px;
-  text-transform: uppercase;
 }
 
 .subject:after {
@@ -796,14 +793,11 @@ a.cta {
 }
 
 .subject-white {
-  font-size: 13px;
   font-weight: var(--bs-body-font-weight);
   overflow: hidden;
   text-align: left;
   color: var(--theme-primary-text);
   line-height: 1.4;
-  letter-spacing: 1.3px;
-  text-transform: uppercase;
   transition: var(--default-transition);
 }
 

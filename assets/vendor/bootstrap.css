@@ -175,7 +175,7 @@ header {
     rgba(255, 255, 255, 0)
   );
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 18px;
+  --bs-body-font-size: 20px;
   /*--bs-body-font-weight: 400; */
   --bs-body-line-height: 1.5;
   --bs-body-color: #282625;
@@ -287,10 +287,12 @@ h1 {
   font-size: 48px;
 }
 
-h2,
-.h2 {
-  font-size: 36px;
+.h1,
+h1 {
+  font-size: 40px;
 }
+
+
 
 h3,
 .h3 {
@@ -871,7 +873,7 @@ progress {
 .logothing {
   display: inline-block;
   vertical-align: middle;
-  width:10px;
+  height:48px;
 }
 
 /*
@@ -881,6 +883,9 @@ progress {
   }
 } */
 @media (min-width: 820.98px) {
+
+  
+  
   .image-bottom-gap {
     margin-bottom: auto;
   }
@@ -2215,8 +2220,9 @@ progress {
   li,
   .bigp,
   .bigsubtext,
-  .subtext {
-    font-size: 18px;
+  .subtext,
+  .subject-white {
+    font-size: 16px;
   }
   /*---paragraph---*/
 
@@ -2242,18 +2248,19 @@ progress {
   }
 
   .headline {
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1.2;
   }
 
   h1,
   .h1 {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   h2,
   .h2 {
-    font-size: 28px;
+    font-size: 24px;
+    line-height:32px;
   }
 
   h3,
@@ -2292,7 +2299,15 @@ progress {
     margin: auto;
   }
 }
+
+
+
 @media (max-width: 820.98px) {
+
+
+ 
+
+
   .mt-3-hide-on-desktop {
     margin-top: 1rem;
   }
@@ -9154,7 +9169,16 @@ fieldset:disabled .btn {
   visibility: hidden !important;
 }
 
+
+
+
 @media (min-width: 576px) {
+
+
+  .h2, h2 {
+    font-size:32px;
+    line-height:40px;
+  }
   .float-sm-start {
     float: left !important;
   }
@@ -9651,6 +9675,12 @@ fieldset:disabled .btn {
   }
 }
 @media (min-width: 821px) {
+
+  .h2, h2 {
+    font-size:48px;
+    line-height:56px;
+  }
+
   .float-md-start {
     float: left !important;
   }
