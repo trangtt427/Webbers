@@ -455,7 +455,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: block;
-  height: 1px;
+  height: 4%;
   left: 0;
   position: absolute;
   background: var(--theme-primary-text);
@@ -467,7 +467,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: inline-block;
-  height: 5%;
+  height: 4%;
   left: 0;
   position: absolute;
   background: var(--theme-link-text);
@@ -508,7 +508,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: block;
-  height: 1px;
+  height: 4%;
   left: 0;
   background: var(--theme-primary-text);
   transition: 0.2s all ease-in-out;
@@ -520,7 +520,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: block;
-  height: 1px;
+  height: 4%;
   left: 0;
   position: absolute;
   background: var(--theme-primary-text);
@@ -533,7 +533,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: block;
-  height: 1px;
+  height: 4%;
   left: 0;
   position: absolute;
   background: var(--theme-primary-text);
