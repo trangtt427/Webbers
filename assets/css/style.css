@@ -206,6 +206,17 @@ padding-bottom:4px;
 }
 /* bullets */
 
+ul.results-list li {
+  list-style: none;
+  margin-bottom:10px;
+  padding-left:40px;
+  background-image: url("/assets/icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+}
+
+
 .bullet-item {
   display: flex;
   justify-content: flex-start;
@@ -341,7 +352,7 @@ padding-bottom:4px;
 
 .purewhitebg {
   background-color: var(--theme-white-on-light);
-  transition: 0.3s all ease-in-out;
+  transition: var(--default-transition);
 }
 
 .greybg {
