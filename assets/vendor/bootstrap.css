@@ -275,13 +275,7 @@ h1,
 }
 
 
-.mt-9 {
-  margin-top: 8rem !important;
-}
 
-.mt-10 {
-  margin-top: 12rem !important;
-}
 
 .h1,
 h1 {
@@ -2253,6 +2247,10 @@ progress {
     margin-top: 8rem !important;
   }
 
+  .mb-10 {
+    margin-bottom: 8rem !important;
+  }
+
   .headline {
     font-size: 32px;
     line-height: 1.2;
@@ -2408,6 +2406,7 @@ progress {
     cursor: pointer;
     transition: 0.3s opacity ease-in-out;
     padding: 8px;
+    margin-right: -8px;
   }
 
   .nav {
@@ -4790,7 +4789,7 @@ fieldset:disabled .btn {
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-border-width: 1px;
-  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-color: var(--bs-gray-300);
   --bs-card-border-radius: 8px;
   --bs-card-box-shadow: ;
   --bs-card-inner-border-radius: calc(8px - 1px);
@@ -8460,6 +8459,14 @@ fieldset:disabled .btn {
   margin-top: 7rem !important;
 }
 
+.mt-9 {
+  margin-top: 8rem !important;
+}
+
+.mt-10 {
+  margin-top: 12rem !important;
+}
+
 .mt-auto {
   margin-top: auto !important;
 }
@@ -8525,7 +8532,7 @@ fieldset:disabled .btn {
 }
 
 .mb-10 {
-  margin-bottom: 12rem !important;
+  margin-bottom: 12rem;
 }
 
 .mb-auto {
