@@ -2194,7 +2194,12 @@ progress {
   -webkit-overflow-scrolling: touch;
 }
 
+
+
 @media (max-width: 575.98px) {
+
+
+
   .hide-on-xs {
     display: none !important;
   }
