@@ -856,14 +856,14 @@ ul.social-media-list img {
   height: 36px;
 }
 
-ul.social-media-list svg:hover {
+/*ul.social-media-list svg:hover {
   border: 1px solid red;
   width:40px;
   height:40px;
 
-} 
+} */
 
-.svglist {
+.svglit {
   display: inline;
 }
 
