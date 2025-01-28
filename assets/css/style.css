@@ -9,7 +9,7 @@
 }
 
 :root[data-theme="light"] {
-  --theme-page-bg: var(--bs-offwhite);
+  --theme-page-bg: var(--bs-white);
   --theme-white-on-light: var(
     --bs-accent
   ); /*stays white on light mode, but becomes dark greyish on dark mode*/
