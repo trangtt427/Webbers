@@ -134,7 +134,7 @@ header {
   --bs-black: #000;
   --bs-white: #fff;
   --bs-offwhite: #FBFBF9;
-  --bs-accent: #eeedec;
+  --bs-accent: #F2F4F3;
   --bs-gray: #8e8a86;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
@@ -143,7 +143,7 @@ header {
   --bs-gray-400: #cecccc;
   --bs-gray-500: #adb5bd;
   --bs-gray-600: #716b66;
-  --bs-gray-700: #292929;
+  --bs-gray-700: #2c2f32;
   --bs-gray-800: #343a40;
   --bs-gray-900: rgb(30, 30, 30);
   --bs-primary: #0d6efd;
@@ -274,6 +274,10 @@ h1,
   padding-bottom: 7rem;
 }
 
+.py-10 {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
 
 
 
@@ -846,9 +850,10 @@ progress {
   --bs-gutter-y: 0;
   padding-left: 50px;
   padding-right: 50px;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: auto;
 }
+
 
 .headcontain {
   font-size: 0;
@@ -858,7 +863,7 @@ progress {
   /*background-color:var(--theme-bg-color); */
   /*border-bottom: 1px solid var(--theme-border-color); */
   height: 85px;
-  max-width: 1190px;
+  max-width: 1290px;
   margin: auto;
 }
 
@@ -889,7 +894,7 @@ progress {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1300px;
+    max-width: 1400px;
   }
 
   .hide-on-desktop {
@@ -2237,6 +2242,11 @@ progress {
   .py-7 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .py-10 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .mt-9 {
@@ -8529,6 +8539,10 @@ fieldset:disabled .btn {
 
 .mb-7 {
   margin-bottom: 7rem !important;
+}
+
+.mb-9 {
+  margin-bottom:9rem !important;
 }
 
 .mb-10 {

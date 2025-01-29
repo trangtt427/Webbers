@@ -2,6 +2,9 @@
   "folders": [
     {
       "path": "."
+    },
+    {
+      "path": "../../outlined cards"
     }
   ],
   "settings": {
@@ -11,6 +14,6 @@
       "titleBar.activeBackground": "#7C4862",
       "titleBar.inactiveBackground": "#7C4862CC"
     },
-    "liveServer.settings.multiRootWorkspaceName": "simple"
+    "liveServer.settings.multiRootWorkspaceName": "Webbers"
   }
 }

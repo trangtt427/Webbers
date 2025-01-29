@@ -95,8 +95,13 @@ body {
 }
 
 @font-face {
-  font-family: "tiempo";
+  font-family: "tiempos";
   src: url(/assets/fonts/TiemposHeadline-Medium.otf);
+}
+
+@font-face {
+  font-family: "dmserif";
+  src: url(/assets/fonts/DMSerifDisplay-Regular.ttf);
 }
 
 @font-face {
@@ -154,8 +159,7 @@ body {
 }
 
 .body-section {
-  max-width: 760px;
-  margin: auto;
+  max-width: 900px;
 }
 
 .line-width {
@@ -265,6 +269,11 @@ ul.results-list li {
 
 /* cards */
 
+.myvideo {
+  object-fit:cover !important;
+  height:100%;
+}
+
 .project-preview {
   overflow: hidden;
   position: relative;
@@ -277,19 +286,18 @@ ul.results-list li {
   height: 100%;
 }
 
-.casestudy:hover {
-  transform: translateY(-4px);
-  -webkit-box-shadow: 0 0.125rem 1.25rem rgba(27, 45, 110, 0.15);
+.card-container:hover {
+  transform: translateY(-6px);
+  -webkit-box-shadow: 0 0.125rem 1.25rem rgba(27, 45, 110, 0.25);
   -moz-box-shadow: 0 0.125rem 1.25rem rgba(27, 45, 110, 0.15);
   box-shadow: 0 0.125rem 1.25rem rgba(27, 45, 110, 0.15);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-  border-radius: 16px;
 }
 
-.casestudy:active {
+.card-container:active {
   transform: translateY(0);
   box-shadow: 4px 4px 16px 4px rgba(0, 0, 0, 0.2);
   visibility: hidden;
@@ -299,7 +307,7 @@ ul.results-list li {
   -o-backface-visibility: hidden;
 }
 
-.casestudy:hover .overlay {
+.card-container:hover .overlay {
   opacity: 0.5;
   visibility: hidden;
   backface-visibility: hidden;
@@ -330,34 +338,23 @@ ul.results-list li {
 /* blurred bg */
 
 .card-container {
-  /*border: 2px solid var(--bs-gray-900);*/
   transition: all 0.2s ease-in-out 0s;
-  border-radius: 20px;
-  background-color: white;
+  background-color: var(--theme-page-bg);
 }
 
-.blurb-container {
-  /*border: 2px solid var(--bs-gray-900);*/
-  transition: all 0.2s ease-in-out 0s;
-  border-radius: 20px;
-  background-color: white;
-  max-width: 700px;
-}
 
 .casestudy {
   transition: all 0.2s ease-in-out 0s;
 }
 
-/* start nav*/
+
 
 .purewhitebg {
   background-color: var(--theme-white-on-light);
   transition: var(--default-transition);
 }
 
-.greybg {
-  background-color: #eeeceb;
-}
+
 
 .quote {
   border-left: 3px solid #cd8371;
