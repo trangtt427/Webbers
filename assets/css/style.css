@@ -357,7 +357,7 @@ ul.results-list li {
 
 
 .quote {
-  border-left: 3px solid #cd8371;
+  border-left: 3px solid var(--bs-link-color);
   padding-left: 16px;
   max-width: 500px;
   font-style: italic;
