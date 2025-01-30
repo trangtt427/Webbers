@@ -265,7 +265,7 @@ h1,
 
 .headline {
   font-size: 56px;
-  font-family: "graphik", serif;
+  font-family: "tiempos", serif;
   line-height:64px;
 }
 
@@ -2259,6 +2259,10 @@ progress {
 
   .mb-10 {
     margin-bottom: 8rem !important;
+  }
+
+  .p-7 {
+    padding: 2rem;
   }
 
   .headline {
@@ -8613,6 +8617,13 @@ fieldset:disabled .btn {
   padding: 3rem;
 }
 
+@media (max-width: 575.98px) {
+  .p-7 {
+    padding: 2rem;
+  }
+
+}
+
 .p-8 {
   padding: 3.5rem;
 }
@@ -9208,7 +9219,7 @@ fieldset:disabled .btn {
 @media (min-width: 576px) {
 
   .headline {
-    font-size: 48px;
+    font-size: 44px;
     line-height: 1.3;
   }
 
@@ -9719,8 +9730,9 @@ fieldset:disabled .btn {
   .text-sm-center {
     text-align: center !important;
   }
+
 }
-@media (min-width: 821px) {
+@media (min-width: 900px) {
 
   .headline {
     font-size: 56px;
