@@ -190,9 +190,9 @@ header {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #42AF86;
-  --bs-link-color-dark: #7dd5b4;
-  --bs-link-hover-color: #42AF86;
+  --bs-link-color: #d95688;
+  --bs-link-color-dark: #db769c;
+  --bs-link-hover-color: #D95688;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
