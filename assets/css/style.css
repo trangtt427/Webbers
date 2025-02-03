@@ -210,6 +210,10 @@ padding-bottom:4px;
 }
 /* bullets */
 
+.results-list {
+  padding-left:0px;
+}
+
 ul.results-list li {
   list-style: none;
   margin-bottom:10px;
