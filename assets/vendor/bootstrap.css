@@ -5282,12 +5282,13 @@ fieldset:disabled .btn {
 }
 
 .badge {
-  --bs-badge-padding-x: 0.65em;
-  --bs-badge-padding-y: 0.35em;
+  --bs-badge-padding-x: 0.75em;
+  --bs-badge-padding-y: 0.55em;
   --bs-badge-font-size: 0.75em;
   --bs-badge-font-weight: 700;
   --bs-badge-color: #fff;
-  --bs-badge-border-radius: 0.375rem;
+  /*--bs-badge-border-radius: 0.375rem;*/
+  --bs-badge-border-radius: 100px;
   display: inline-block;
   padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
   font-size: var(--bs-badge-font-size);
@@ -9080,6 +9081,7 @@ fieldset:disabled .btn {
   ) !important;
 }
 
+
 .bg-info {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
@@ -9097,6 +9099,8 @@ fieldset:disabled .btn {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
 }
+
+
 
 .bg-light {
   --bs-bg-opacity: 1;
