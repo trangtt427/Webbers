@@ -2270,6 +2270,10 @@ progress {
     padding-bottom: 6rem;
   }
 
+  .pb-10 {
+    padding-bottom:6rem;
+  }
+
   .mt-9 {
     margin-top: 6rem !important;
   }
@@ -8788,6 +8792,10 @@ fieldset:disabled .btn {
 
 .pb-5 {
   padding-bottom: 3rem !important;
+}
+
+.pb-10 {
+  padding-bottom: 9rem;
 }
 
 .ps-0 {
