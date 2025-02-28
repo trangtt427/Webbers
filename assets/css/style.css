@@ -127,6 +127,12 @@ body {
 @font-face {
   font-family: "merriweather-bold";
   src: url(/assets/fonts/Merriweather-Bold.ttf);
+
+}
+
+  @font-face {
+    font-family: "quincy-bold";
+    src: url(/assets/fonts/QuincyCF-Bold.ttf);
 }
 
 /*box shadow has been commented out with an "f" at the end of it. Remove it to enable it*/
