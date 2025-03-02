@@ -857,7 +857,7 @@ progress {
   --bs-gutter-y: 0;
   padding-left: 50px;
   padding-right: 50px;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: auto;
 }
 
@@ -870,7 +870,7 @@ progress {
   /*background-color:var(--theme-bg-color); */
   /*border-bottom: 1px solid var(--theme-border-color); */
   height: 85px;
-  max-width: 1290px;
+  max-width: 1490px;
   margin: auto;
 }
 
@@ -901,7 +901,7 @@ progress {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1400px;
+    max-width: 1600px;
   }
 
   .hide-on-desktop {
