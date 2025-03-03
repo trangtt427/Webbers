@@ -1164,16 +1164,6 @@ progress {
 }
 
 
-.g-6,
-.gx-6 {
-  --bs-gutter-x: 6rem;
-}
-
-
-.g-6,
-.gy-6 {
-  --bs-gutter-y: 6rem;
-}
 
 
 
@@ -1543,7 +1533,7 @@ progress {
     flex: 0 0 auto;
     width: 20%;
   }
-  .row-cols-lg-6 > * {
+  .row-cols-lgx-5 > * {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
