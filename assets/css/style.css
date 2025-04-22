@@ -96,15 +96,6 @@ body {
   fill: var(--icon-sun);
 }
 
-@font-face {
-  font-family: "tiempos";
-  src: url(/assets/fonts/TiemposHeadline-Regular.otf);
-}
-
-@font-face {
-  font-family: "dmserif";
-  src: url(/assets/fonts/DMSerifDisplay-Regular.ttf);
-}
 
 
 @font-face {
@@ -112,12 +103,15 @@ body {
   src: url(/assets/fonts/NeueMontreal-Regular.otf);
 }
 
-
-
-  @font-face {
-    font-family: "quincy-bold";
-    src: url(/assets/fonts/QuincyCF-Bold.ttf);
+@font-face {
+  font-family: "neuemontrealbook";
+  src: url(/assets/fonts/ppneuemontreal-book.otf);
 }
+
+
+
+
+
 
 /*box shadow has been commented out with an "f" at the end of it. Remove it to enable it*/
 
