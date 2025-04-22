@@ -106,31 +106,13 @@ body {
   src: url(/assets/fonts/DMSerifDisplay-Regular.ttf);
 }
 
-@font-face {
-  font-family: "neuemontreal-book";
-  src: url(/assets/fonts/ppneuemontreal-book.otf);
-}
 
 @font-face {
   font-family: "neuemontreal";
   src: url(/assets/fonts/NeueMontreal-Regular.otf);
 }
 
-@font-face {
-  font-family: "graphik";
-  src: url(/assets/fonts/GraphikRegular.otf);
-}
 
-@font-face {
-  font-family: "merriweather-regular";
-  src: url(/assets/fonts/Merriweather-Regular.ttf);
-}
-
-@font-face {
-  font-family: "merriweather-bold";
-  src: url(/assets/fonts/Merriweather-Bold.ttf);
-
-}
 
   @font-face {
     font-family: "quincy-bold";
@@ -164,6 +146,10 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.hero-section {
+  max-width: 1200px;
 }
 
 .body-section {
@@ -421,7 +407,7 @@ a {
   counter-increment: bulletList;
   display: grid;
   flex: 0 0 3rem;
-  font-family: "graphik";
+  font-family: "neuemontreal";
   font-size: 2rem;
   justify-content: space-around;
   text-align: center;
@@ -458,13 +444,13 @@ ul .menu {
   margin: 18px;
   position: relative;
   line-height: 1.4;
-  font-family: "graphik";
+  font-family: "neuemontreal";
 }
 
 .menu li a {
   display: inline-block;
   position: relative;
-  font-family: "quincy-bold", serif;
+  font-family: "neuemontreal", serif;
   font-weight: 500;
 }
 
@@ -700,7 +686,7 @@ a.cta {
   transition: 0.3s;
   position: relative;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 100px;
 }
 
 .cta {
