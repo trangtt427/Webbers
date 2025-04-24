@@ -99,14 +99,11 @@ body {
 
 
 @font-face {
-  font-family: "neuemontreal";
-  src: url(/assets/fonts/NeueMontreal-Regular.otf);
+  font-family: "graphik";
+  src: url(/assets/fonts/GraphikRegular.otf);
 }
 
-@font-face {
-  font-family: "neuemontrealbook";
-  src: url(/assets/fonts/ppneuemontreal-book.otf);
-}
+
 
 
 
@@ -401,7 +398,7 @@ a {
   counter-increment: bulletList;
   display: grid;
   flex: 0 0 3rem;
-  font-family: "neuemontreal";
+  font-family: "graphik";
   font-size: 2rem;
   justify-content: space-around;
   text-align: center;
@@ -438,13 +435,13 @@ ul .menu {
   margin: 18px;
   position: relative;
   line-height: 1.4;
-  font-family: "neuemontreal";
+  font-family: "graphik";
 }
 
 .menu li a {
   display: inline-block;
   position: relative;
-  font-family: "neuemontreal", serif;
+  font-family: "graphik", serif;
   font-weight: 500;
 }
 
