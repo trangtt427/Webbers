@@ -18,7 +18,7 @@
 }
 
 .carousel-bottom-right-text {
-  font-family: "graphik", serif;
+  font-family: "satoshi", serif;
   font-weight: 500;
   color: white;
   /*background-color:rgba(255, 255, 255, 1);*/
@@ -26,7 +26,7 @@
 }
 
 .carousel-bottom-header {
-  font-family: "graphik", serif;
+  font-family: "satoshi", serif;
   color: white;
   /*background-color:rgba(255, 255, 255, 1);*/
   font-size: 18px;
@@ -166,7 +166,7 @@ header {
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "graphik", sans-serif;
+  --bs-font-sans-serif: "satoshi", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(
@@ -242,7 +242,7 @@ hr {
 */
 
 .p.bold {
-  font-family: "graphik";
+  font-family: "satoshi";
 }
 
 h6,
@@ -259,7 +259,7 @@ h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "graphik", serif;
+  font-family: "satoshi", serif;
   font-weight: 500;
   letter-spacing: -0.0625rem;
 }
@@ -267,20 +267,20 @@ h1,
 
 .headline {
   font-size: 56px;
-  font-family: "graphik", serif;
+  font-family: "satoshi", serif;
   line-height: 1.2;
 }
 
 .bigheadline {
   font-size: 72px;
   line-height:1.2;
-  font-family: "graphik", serif;
+  font-family: "satoshi", serif;
 }
 
 .title {
   font-size: 32px;
-  font-family: "graphik", serif;
-  line-height:1.3;
+  font-family: "satoshi", serif;
+  line-height:1.2;
 }
 
 .py-7 {
@@ -315,13 +315,13 @@ h3,
 .h4,
 h4 {
   font-size: 26px;
-  line-height:1.3;
+  line-height:1.2;
 }
 
 h5,
 .h5 {
   font-size: 22px;
-  font-family: "graphik";
+  font-family: "satoshi";
 }
 
 h6,
@@ -2318,7 +2318,7 @@ progress {
   h2,
   .h2 {
     font-size: 32px;
-    line-height:1.3;
+    line-height:1.2;
   }
 
   h3,
@@ -9276,7 +9276,7 @@ fieldset:disabled .btn {
 
   .h2, h2 {
     font-size:32px;
-    line-height:1.3;
+    line-height:1.2;
   }
 
   h3,
@@ -9792,12 +9792,12 @@ fieldset:disabled .btn {
 
   .title {
     font-size: 40px;
-    line-height: 1.3;
+    line-height: 1.2;
   }
 
   .h2, h2 {
     font-size:48px;
-    line-height:1.3;
+    line-height:1.2;
   }
 
   h3,
