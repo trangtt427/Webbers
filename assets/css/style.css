@@ -404,7 +404,7 @@ a {
   counter-increment: bulletList;
   display: grid;
   flex: 0 0 3rem;
-  font-family: "graphik";
+  font-family: "satoshi";
   font-size: 2rem;
   justify-content: space-around;
   text-align: center;
@@ -441,13 +441,13 @@ ul .menu {
   margin: 18px;
   position: relative;
   line-height: 1.4;
-  font-family: "graphik";
+  font-family: "satoshi";
 }
 
 .menu li a {
   display: inline-block;
   position: relative;
-  font-family: "graphik", serif;
+  font-family: "satoshi", serif;
   font-weight: 500;
 }
 
