@@ -98,15 +98,12 @@ body {
 
 
 
-@font-face {
-  font-family: "graphik";
-  src: url(/assets/fonts/GraphikRegular.otf);
-}
 
 @font-face {
   font-family: "satoshi";
   src: url(/assets/fonts/Satoshi-Regular.otf);
 }
+
 
 
 
