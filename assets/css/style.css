@@ -674,13 +674,12 @@ a.cta {
   font-weight: var(--bs-body-font-weight);
   -webkit-font-smoothing: antialiased;
   color: var(--theme-page-bg);
-  padding: 18px 70px 18px 20px;
+  padding: 16px 70px 16px 20px;
   font-size: 18px;
-  line-height: 3em;
   transition: 0.3s;
   position: relative;
   text-decoration: none;
-  border-radius: 100px;
+  border-radius: 4px;
 }
 
 .cta {
