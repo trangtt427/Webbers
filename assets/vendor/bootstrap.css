@@ -135,7 +135,7 @@ header {
   --bs-white: #fff;
   --bs-offwhite: #FBFBF9;
   --bs-accent: #F2F4F3;
-  --bs-gray: #707177;
+  --bs-gray: #9fa1a3;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
@@ -841,7 +841,7 @@ progress {
 }
 
 .bigsubtext {
-  font-size: 32px;
+  font-size: 24px;
   color: var(--bs-gray);
   line-height: 125%;
 }
@@ -849,9 +849,10 @@ progress {
 
 
 .bigp {
-  font-size: 22px;
+  font-size: 24px;
   color: var(--theme-primary-text);
   transition: var(--default-transition);
+  line-height:normal;
 }
 
 .container,
@@ -2288,6 +2289,10 @@ progress {
 
   .mb-10 {
     margin-bottom: 8rem !important;
+  }
+
+  .mt-20 {
+    margin-top:20rem !important;
   }
 
   .p-7 {
@@ -8521,6 +8526,10 @@ fieldset:disabled .btn {
 
 .mt-10 {
   margin-top: 12rem !important;
+}
+
+.mt-20 {
+  margin-top:16rem !important;
 }
 
 .mt-auto {

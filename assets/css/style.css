@@ -456,7 +456,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: block;
-  height: 4%;
+  height: 2%;
   left: 0;
   position: absolute;
   background: var(--theme-primary-text);
@@ -509,7 +509,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: block;
-  height: 4%;
+  height: 2%;
   left: 0;
   background: var(--theme-primary-text);
   transition: 0.2s all ease-in-out;
@@ -521,7 +521,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: block;
-  height: 4%;
+  height: 2%;
   left: 0;
   position: absolute;
   background: var(--theme-primary-text);
@@ -534,7 +534,7 @@ ul .menu {
   bottom: 0;
   content: "";
   display: block;
-  height: 4%;
+  height: 2%;
   left: 0;
   position: absolute;
   background: var(--theme-primary-text);
