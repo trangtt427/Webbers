@@ -9,7 +9,7 @@
 }
 
 :root[data-theme="light"] {
-  --theme-page-bg: var(--bs-white);
+  --theme-page-bg: var(--bs-offwhite);
   --theme-white-on-light: var(
     --bs-accent
   ); /*stays white on light mode, but becomes dark greyish on dark mode*/
@@ -23,6 +23,8 @@
 
   --theme-border-color: var(--bs-gray-400);
   --theme-white-to-mute-border: var(--bs-white);
+  --theme-badge-color:var(--bs-gray);
+  --theme-subtext-color:var(--bs-gray);
 }
 
 :root[data-theme="dark"] {
@@ -38,6 +40,8 @@
 
   --theme-border-color: var(--bs-gray-400);
   --theme-white-to-mute-border: var(--bs-gray-700);
+  --theme-badge-color:var(--bs-body-color);
+  --theme-subtext-color:var(--bs-gray-500);
 }
 /**
  * === END: Light/dark theme variables
@@ -374,6 +378,7 @@ ul.results-list li {
 a {
   text-decoration: none;
   color: var(--theme-primary-text);
+  transition: var(--default-transition);
 }
 
 .bullet-list {
