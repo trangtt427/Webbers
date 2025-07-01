@@ -1,7 +1,6 @@
 class SpecialHeader extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `
-    <div class="headcontain">
+    this.innerHTML = `<div class="headcontain">
         <a href="http://trangtran.design/">
           <div class="" style="padding-top:8px">
             <div class="logothing">
@@ -10,31 +9,13 @@ class SpecialHeader extends HTMLElement {
      
           </div>
         </a>
-        <nav class="nav">
-          <div class="nav__container">
-            <ul class="navlist hide-on-mobile">
-              <li class="menu-item">
-                <a href="http://trangtran.design/">Home</a>
-              </li>
-              <li class="menu-item"><a href="https://trangtran.design/adventures">Adventures</a></li>
-              <li class="menu-item" style="margin-right:-18px"><a href="https://trangtran.design/about">About</a></li>
-            </ul>
-            <ul class="menu hide-on-desktop">
-              <li class="menu-item">
-                <a href="http://trangtran.design/">Home</a>
-              </li>
-              <li class="menu-item"><a href="https://trangtran.design/adventures">Adventures</a></li>
-              <li class="menu-item"><a href="https://trangtran.design/about">About</a></li>
-            </ul>
-          </div>
-        </nav>
-        <button class="hamburger__container hide-on-desktop">
-          <div class="hamburger">
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
-        </button>
+        <ul class="navlist">
+          <li class="">
+            <a href="http://trangtran.design/">Projects</a>
+          </li>
+          <li class="" style="margin-right:-18px"><a href="https://trangtran.design/about">About</a></li>
+        </ul>
+      
       </div>`
   }
 }

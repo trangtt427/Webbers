@@ -640,16 +640,14 @@ a {
   transition: var(--default-transition);
 }
 
-ul {
-  margin: 0px;
-  font-size: 20px;
-}
+
 
 ul .navlist {
   margin: 0px;
   list-style: none;
   font-size: 20px;
   padding-inline-start: 0px;
+  align-items:flex-start;
 }
 
 ul .menu {
@@ -670,6 +668,7 @@ ul .menu {
   line-height: 1.4;
   font-family: "satoshi";
   -webkit-font-smoothing: antialiased;
+  
 }
 
 
