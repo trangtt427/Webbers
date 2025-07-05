@@ -889,7 +889,9 @@ progress {
   margin: auto;
 }
 
-
+.homelogo {
+  display: inline-block;
+}
 
 .logothing {
   display: inline-block;
@@ -2441,6 +2443,7 @@ progress {
     -webkit-font-smoothing: subpixel-antialiased;
     font-size: 32px;
     max-width: 700px;
+    margin: 50px;
     color: var(--theme-primary-text);
   }
 
