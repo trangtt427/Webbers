@@ -52,15 +52,15 @@ class SpecialHeader extends HTMLElement {
               <li class="menu-item">
                 <a href="http://trangtran.design/">Home</a>
               </li>
-              <li class="menu-item"><a href="https://trangtran.design/adventures">Adventures</a></li>
-              <li class="menu-item" style="margin-right:-18px"><a href="https://trangtran.design/about">About</a></li>
+              <li class="menu-item"><a href="https://trangtran.design/about">About</a></li>
+              <li class="menu-item"><a href="https://trangthings.squarespace.com/">Adventures ↗</a></li>
             </ul>
             <ul class="menu hide-on-desktop">
               <li class="menu-item">
                 <a href="http://trangtran.design/">Home</a>
               </li>
-              <li class="menu-item"><a href="https://trangtran.design/adventures">Adventures</a></li>
               <li class="menu-item"><a href="https://trangtran.design/about">About</a></li>
+              <li class="menu-item"><a href="https://trangthings.squarespace.com/">Adventures ↗</a></li>
             </ul>
           </div>
         </nav>
