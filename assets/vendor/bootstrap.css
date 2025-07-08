@@ -849,6 +849,7 @@ progress {
   font-size: 24px;
   color: var(--theme-subtext-color);
   line-height: 125%;
+  transition: var(--default-transition);
 }
 
 
