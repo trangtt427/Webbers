@@ -108,10 +108,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--theme-page-bg);
+  background-color: var(--theme-nav-bg);
   transition: var(--default-transition);
   padding-right: 50px;
   padding-left: 50px;
+  backdrop-filter: blur(6px);
 }
 
 .banner {
@@ -884,9 +885,9 @@ progress {
   align-items: center;
   justify-content: space-between;
   /*background-color:var(--theme-bg-color); */
-  /*border-bottom: 1px solid var(--theme-border-color); */
+  border-bottom: 1px solid var(--theme-border-color);
   height: 85px;
-  max-width: 1190px;
+  max-width: 1200px;
   margin: auto;
 }
 
