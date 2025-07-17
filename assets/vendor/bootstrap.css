@@ -18,7 +18,7 @@
 }
 
 .carousel-bottom-right-text {
-  font-family: "saans", serif;
+  font-family: "saans-regular", serif;
   font-weight: 500;
   color: white;
   /*background-color:rgba(255, 255, 255, 1);*/
@@ -26,7 +26,7 @@
 }
 
 .carousel-bottom-header {
-  font-family: "saans", serif;
+  font-family: "saans-regular", serif;
   color: white;
   /*background-color:rgba(255, 255, 255, 1);*/
   font-size: 18px;
@@ -166,7 +166,7 @@ header {
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "saans", sans-serif;
+  --bs-font-sans-serif: "saans-regular", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(
@@ -242,7 +242,7 @@ hr {
 */
 
 .p.bold {
-  font-family: "saans";
+  font-family: "saans-regular";
 }
 
 h6,
@@ -259,7 +259,7 @@ h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "saans", serif;
+  font-family: "saans-light", serif;
   font-weight: 500;
   
 }
@@ -267,7 +267,7 @@ h1,
 
 .headline {
   font-size: 56px;
-  font-family: "saans", serif;
+  font-family: "saans-light", serif;
   line-height: 1.2;
   letter-spacing: -0.0625rem;
 }
@@ -275,13 +275,13 @@ h1,
 .bigheadline {
   font-size: 72px;
   line-height:1.2;
-  font-family: "saans", serif;
+  font-family: "saans-light", serif;
   letter-spacing: -0.0625rem;
 }
 
 .title {
   font-size: 32px;
-  font-family: "saans", serif;
+  font-family: "saans-light", serif;
   line-height:1.2;
   letter-spacing: -0.0625rem;
 }
@@ -326,7 +326,7 @@ h4 {
 h5,
 .h5 {
   font-size: 22px;
-  font-family: "saans";
+  font-family: "saans-regular";
 }
 
 h6,
@@ -5315,7 +5315,7 @@ fieldset:disabled .btn {
   color: var(--theme-muted-text);
   display: inline-block;
   padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
-  --bs-font-sans-serif: "saans", sans-serif;
+  --bs-font-sans-serif: "saans-regular", sans-serif;
   font-size: var(--bs-badge-font-size);
   font-weight: var(--bs-badge-font-weight);
   line-height: 1;
@@ -5325,6 +5325,7 @@ fieldset:disabled .btn {
   vertical-align: baseline;
   border-radius: var(--bs-badge-border-radius);
   transition: var(--default-transition);
+  letter-spacing: 0.0225rem;
 }
 .badge:empty {
   display: none;

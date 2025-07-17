@@ -109,10 +109,14 @@ body {
 }
 
 @font-face {
-  font-family: "saans";
-  src: url(/assets/fonts/SaansTRIAL-Light.ttf);
+  font-family: "saans-regular";
+  src: url(/assets/fonts/SaansTRIAL-Regular.ttf);
 }
 
+@font-face {
+  font-family: "saans-light";
+  src: url(/assets/fonts/SaansTRIAL-Light.ttf);
+}
 
 
 
@@ -637,7 +641,7 @@ a {
   counter-increment: bulletList;
   display: grid;
   flex: 0 0 3rem;
-  font-family: "saans";
+  font-family: "saans-regular";
   font-size: 2rem;
   justify-content: space-around;
   text-align: center;
@@ -674,13 +678,13 @@ ul .menu {
   margin: 18px;
   position: relative;
   line-height: 1.4;
-  font-family: "saans";
+  font-family: "saans-regular";
 }
 
 .menu li a {
   display: inline-block;
   position: relative;
-  font-family: "saans", serif;
+  font-family: "saans-regular", serif;
   font-weight: 500;
 }
 
