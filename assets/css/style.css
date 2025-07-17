@@ -108,6 +108,12 @@ body {
   src: url(/assets/fonts/Satoshi-Regular.otf);
 }
 
+@font-face {
+  font-family: "saans";
+  src: url(/assets/fonts/SaansTRIAL-Light.ttf);
+}
+
+
 
 
 
@@ -631,7 +637,7 @@ a {
   counter-increment: bulletList;
   display: grid;
   flex: 0 0 3rem;
-  font-family: "satoshi";
+  font-family: "saans";
   font-size: 2rem;
   justify-content: space-around;
   text-align: center;
@@ -668,13 +674,13 @@ ul .menu {
   margin: 18px;
   position: relative;
   line-height: 1.4;
-  font-family: "satoshi";
+  font-family: "saans";
 }
 
 .menu li a {
   display: inline-block;
   position: relative;
-  font-family: "satoshi", serif;
+  font-family: "saans", serif;
   font-weight: 500;
 }
 
