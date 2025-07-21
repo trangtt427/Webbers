@@ -112,7 +112,7 @@ header {
   transition: var(--default-transition);
   padding-right: 50px;
   padding-left: 50px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
 }
 
 .banner {
