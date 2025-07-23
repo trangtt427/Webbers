@@ -270,21 +270,21 @@ h1,
   font-size: 56px;
   font-family: "saans-light", serif;
   line-height: 1.2;
-  letter-spacing: -0.0625rem;
+  letter-spacing: -0.0325rem;
 }
 
 .bigheadline {
   font-size: 72px;
   line-height:1.2;
   font-family: "saans-light", serif;
-  letter-spacing: -0.0625rem;
+  letter-spacing: -0.0325rem;
 }
 
 .title {
   font-size: 32px;
   font-family: "saans-light", serif;
   line-height:1.2;
-  letter-spacing: -0.0625rem;
+  letter-spacing: -0.0325rem;
 }
 
 
@@ -304,12 +304,12 @@ h1,
 .h1,
 h1 {
   font-size: 48px;
-  letter-spacing: -0.0625rem;
+  letter-spacing: -0.0325rem;
 }
 
 .h2, 
 h2 {
-  letter-spacing: -0.0625rem;
+  letter-spacing: -0.0325rem;
 }
 
 h3,
