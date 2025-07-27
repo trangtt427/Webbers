@@ -39,7 +39,7 @@
   --theme-nav-bg: rgba(26, 20, 13, 0.8);
 
   --theme-primary-text: var(--bs-brown-100);
-  --theme-muted-text: var(--bs-gray-500);
+  --theme-muted-text: var(--bs-brown-100);
   --theme-link-text: var(--bs-link-color-dark);
 
   --theme-border-color: var(--bs-brown-100);
