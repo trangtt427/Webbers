@@ -26,25 +26,27 @@
   --theme-white-to-mute-border: var(--bs-white);
   --theme-badge-color:var(--bs-gray);
   --theme-subtext-color:var(--bs-gray);
+  --theme-badge-bg: var(--bs-offwhite);
 }
 
 :root[data-theme="dark"] {
-  --theme-page-bg: var(--bs-gray-900);
-  --theme-white-on-light: var(--bs-gray-700);
+  --theme-page-bg: var(--bs-brown-900);
+  --theme-white-on-light: var(--bs-brown-800);
 
   --theme-bg-color: var(--bs-gray-700);
   --theme-accent: var(--bs-gray-700);
   --icon-sun: #edcb16;
-  --theme-nav-bg: rgba(24, 24, 24, 0.8);
+  --theme-nav-bg: rgba(26, 20, 13, 0.8);
 
-  --theme-primary-text: var(--bs-white);
+  --theme-primary-text: var(--bs-brown-100);
   --theme-muted-text: var(--bs-gray-500);
   --theme-link-text: var(--bs-link-color-dark);
 
-  --theme-border-color: var(--bs-gray-400);
+  --theme-border-color: var(--bs-brown-100);
   --theme-white-to-mute-border: var(--bs-gray-700);
   --theme-badge-color:var(--bs-body-color);
-  --theme-subtext-color:var(--bs-gray-500);
+  --theme-subtext-color:var(--bs-brown-200);
+  --theme-badge-bg: var(--bs-badge-dark);
 }
 /**
  * === END: Light/dark theme variables
