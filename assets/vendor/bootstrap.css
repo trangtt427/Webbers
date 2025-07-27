@@ -147,8 +147,8 @@ header {
   --bs-gray-700: #2c2f32;
   --bs-gray-800: #343a40;
   --bs-gray-900: #181818;
-  --bs-brown-100:#b0a196;
-  --bs-brown-200:#695f55;
+  --bs-brown-100:#baae87;
+  --bs-brown-200:#716a53;
   --bs-brown-800:#241c13;
   --bs-brown-900: #1a140d;
   --bs-badge-dark:#c9c49e;
@@ -197,7 +197,7 @@ header {
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
   --bs-link-color: #C97464;
-  --bs-link-color-dark: #cc8a7e;
+  --bs-link-color-dark: #e27c6a;
   --bs-link-hover-color: #D95688;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
