@@ -639,7 +639,7 @@ a {
 
 .list-point:before {
   align-items: center;
-  background-color: var(--theme-accent);
+  background-color: var(--theme-white-on-light);
   box-sizing: border-box;
   color: var(--bs-link-color);
   content: counter(bulletList);
@@ -651,6 +651,7 @@ a {
   justify-content: space-around;
   text-align: center;
   width:4rem;
+  height:4rem;
   border-radius:4px;
   transition: var(--default-transition);
 }
