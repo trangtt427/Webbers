@@ -354,6 +354,8 @@ p {
   color: var(--theme-muted-text);
   font-size: var(--bs-body-font-size);
   line-height: 1.5;
+  transition: var(--default-transition)
+
 }
 
 abbr[title] {
@@ -894,6 +896,7 @@ progress {
   height: 85px;
   max-width: 1200px;
   margin: auto;
+  transition: var(--default-transition)
 }
 
 .homelogo {

@@ -1080,6 +1080,8 @@ a.cta {
   border-bottom: 1px solid var(--theme-border-color);
   color: white;
   width: 100%;
+  transition: var(--default-transition)
+
   /*background: var(--bs-gray-900); */
 }
 
