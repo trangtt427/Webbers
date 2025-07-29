@@ -110,9 +110,10 @@ header {
   right: 0;
   background-color: var(--theme-nav-bg);
   transition: var(--default-transition);
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 65px;
+  padding-left: 65px;
   backdrop-filter: blur(4px);
+  max-width: 1200px;
 }
 
 .banner {
@@ -181,7 +182,7 @@ header {
     rgba(255, 255, 255, 0)
   );
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 20px;
+  --bs-body-font-size: 19px;
   /*--bs-body-font-weight: 400; */
   --bs-body-line-height: 1.5;
   --bs-body-color: #282625;
@@ -879,9 +880,9 @@ progress {
   /*background-color:beige;*/
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
-  padding-left: 50px;
-  padding-right: 50px;
-  max-width: 1300px;
+  padding-left: 65px;
+  padding-right: 65px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -926,7 +927,7 @@ progress {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1300px;
+    max-width: 1200px;
   }
 
   .hide-on-desktop {
@@ -2371,7 +2372,7 @@ progress {
     /*background-color:var(--bs-beige);*/
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
-    max-width: 1300px;
+    max-width: 1200px;
     padding-left: 30px;
     padding-right: 30px;
     margin: auto;
