@@ -110,8 +110,8 @@ header {
   right: 0;
   background-color: var(--theme-nav-bg);
   transition: var(--default-transition);
-  padding-right: 65px;
-  padding-left: 65px;
+  padding-right: 30px;
+  padding-left: 30px;
   backdrop-filter: blur(4px);
   max-width: 1200px;
 }
@@ -880,9 +880,9 @@ progress {
   /*background-color:beige;*/
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
-  padding-left: 65px;
-  padding-right: 65px;
-  max-width: 1200px;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -1189,10 +1189,6 @@ progress {
   --bs-gutter-y: 3rem;
 }
 
-.g-6,
-.gx-6 {
-  --bs-gutter-x: 6rem;
-}
 
 
 
