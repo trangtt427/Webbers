@@ -880,8 +880,8 @@ progress {
   /*background-color:beige;*/
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
   max-width: 1100px;
   margin: auto;
 }
