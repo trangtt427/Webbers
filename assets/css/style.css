@@ -596,7 +596,6 @@ ul.results-list li {
   border-left: 3px solid var(--bs-link-color);
   padding-left: 16px;
   max-width: 500px;
-  font-style: italic;
   margin: auto;
 }
 
