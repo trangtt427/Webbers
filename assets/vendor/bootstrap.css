@@ -110,10 +110,9 @@ header {
   right: 0;
   background-color: var(--theme-nav-bg);
   transition: var(--default-transition);
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
   backdrop-filter: blur(4px);
-  max-width: 1200px;
 }
 
 .banner {
@@ -895,7 +894,7 @@ progress {
   /*background-color:var(--theme-bg-color); */
   border-bottom: 1px solid var(--theme-border-color);
   height: 85px;
-  max-width: 1200px;
+  max-width: 1120px;
   margin: auto;
   transition: var(--default-transition)
 }
