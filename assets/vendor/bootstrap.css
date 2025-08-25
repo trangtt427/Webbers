@@ -281,7 +281,7 @@ h1,
 .bigheadline {
   font-size: 72px;
   line-height:1.2;
-  font-family: "saans-light", serif;
+  font-family: "saans-regular", serif;
   letter-spacing: -0.0325rem;
 }
 
@@ -892,7 +892,7 @@ progress {
   align-items: center;
   justify-content: space-between;
   /*background-color:var(--theme-bg-color); */
-  border-bottom: 1px solid var(--theme-border-color);
+  border-bottom: 1px solid var(--theme-primary-text);
   height: 85px;
   max-width: 1120px;
   margin: auto;

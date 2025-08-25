@@ -109,8 +109,8 @@ body {
 
 
 @font-face {
-  font-family: "satoshi";
-  src: url(/assets/fonts/Satoshi-Regular.otf);
+  font-family: "saans-medium";
+  src: url(/assets/fonts/SaansTRIAL-Medium.woff);
 }
 
 @font-face {
@@ -1083,6 +1083,27 @@ a.cta {
 
   /*background: var(--bs-gray-900); */
 }
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider-text {
+  margin-right: 16px;
+  white-space: nowrap;
+font-family:'saans-light';
+}
+
+.divider::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: var(--theme-primary-text);
+  transition: var(--default-transition)
+}
+
 
 /*start footer*/
 
