@@ -1076,7 +1076,8 @@ a.cta {
 .bottom_line {
   display: block;
   margin: auto;
-  border-bottom: 1px solid var(--theme-border-color);
+  /*border-bottom: 1px solid var(--theme-border-color); */
+  border-bottom: 1px solid var(--theme-primary-text);
   color: white;
   width: 100%;
   transition: var(--default-transition)
