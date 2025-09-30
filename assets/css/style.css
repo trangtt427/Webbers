@@ -795,7 +795,7 @@ li a:hover:after {
 }
 
 .home-link:hover:after {
-  background: var(--theme-primary-text);
+  background: var(--theme-link-text);
   width: 100%;
   left: 0;
 }

@@ -135,7 +135,7 @@ header {
   --bs-black: #000;
   --bs-white: #fff;
   --bs-offwhite: #FFF9F5;
-  --bs-accent: #F5EDE7;
+  --bs-accent: #f3f3f3;
   --bs-gray: #938a87;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
@@ -4858,7 +4858,7 @@ fieldset:disabled .btn {
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-border-width: 1px;
-  --bs-card-border-color: var(--theme-border-color);
+  --bs-card-border-color: var(--theme-primary-text);
   --bs-card-border-radius: 8px;
   --bs-card-box-shadow: ;
   --bs-card-inner-border-radius: calc(8px - 1px);
