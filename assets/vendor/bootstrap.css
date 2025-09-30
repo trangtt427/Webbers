@@ -2254,8 +2254,8 @@ progress {
   }
 
   header {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 
   p,
@@ -2368,8 +2368,8 @@ progress {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
     max-width: 1200px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: auto;
   }
 }
