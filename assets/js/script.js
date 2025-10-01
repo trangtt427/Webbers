@@ -137,7 +137,7 @@ function initThemeSwitcher() {
   document.body.insertBefore(cuteSwitcher, document.body.firstChild);
 
   if (!["light", "dark"].includes(localStorageTheme)) {
-    localStorageTheme = "light"; // set a default theme if no localStorage value exists
+    localStorageTheme = "dark"; // set a default theme if no localStorage value exists
   }
 
   // Set the theme
