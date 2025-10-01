@@ -30,16 +30,16 @@
 }
 
 :root[data-theme="dark"] {
-  --theme-page-bg: var(--bs-brown-900);
-  --theme-white-on-light: var(--bs-brown-800);
+  --theme-page-bg: var(--bs-violet-900);
+  --theme-white-on-light: var(--bs-violet-800);
 
   --theme-bg-color: var(--bs-gray-700);
   --theme-accent: var(--bs-gray-700);
   --icon-sun: #edcb16;
-  --theme-nav-bg: rgba(24, 19, 14, 0.9);
+  --theme-nav-bg: rgba(7, 8, 15, 0.9);
 
-  --theme-primary-text: var(--bs-brown-100);
-  --theme-muted-text: var(--bs-brown-100);
+  --theme-primary-text: var(--bs-violet-100);
+  --theme-muted-text: var(--bs-violet-100);
   --theme-link-text: var(--bs-link-color-dark);
 
   --theme-border-color: var(--bs-brown-200);
