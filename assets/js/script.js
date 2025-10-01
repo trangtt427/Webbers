@@ -137,7 +137,7 @@ function initThemeSwitcher() {
   document.body.insertBefore(cuteSwitcher, document.body.firstChild);
 
   if (!["light", "dark"].includes(localStorageTheme)) {
-    localStorageTheme = "light"; // set a default theme if no localStorage value exists
+    localStorageTheme = "dark"; // set a default theme if no localStorage value exists
   }
 
   // Set the theme
@@ -194,7 +194,7 @@ class CuteSwitcher extends HTMLElement {
     let newTheme;
 
     // the new theme will be the opposite of the currentTheme
-    newTheme = currentTheme === "light" ? "dark" : "light";
+    newTheme = currentTheme === "dark" ? "light" : "dark";
 
     // Put the new-theme into localStorage
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
