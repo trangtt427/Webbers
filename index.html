@@ -62,9 +62,10 @@
       <!---testing-->
 
       <div class="container py-7"> 
-        <div class="divider mb-1">
+        <div class="divider">
         </div>
         <p class="mb-6">Projects</p>
+   
             <div class="row mb-6">
              <div class="col col-3">
               <div class="dot-container">
@@ -270,8 +271,9 @@
           return acc;
       }, {});
     
-      // Reorder manually: Weekday, Month Day, Time
-      const customString = `${p.weekday} ${p.month} ${p.day}, ${p.hour}:${p.minute}:${p.second}`;
+ 
+      // Format: Friday San Francisco, CA, 22:21:05
+    const customString = `San Jose, CA ${p.hour}:${p.minute}:${p.second}`;
       
       document.getElementById('live-clock').textContent = customString;
     }
