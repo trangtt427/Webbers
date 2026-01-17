@@ -147,10 +147,10 @@ header {
   --bs-gray-700: #2c2f32;
   --bs-gray-800: #343a40;
   --bs-gray-900: #181818;
-  --bs-violet-100:#ededf3;
+  --bs-violet-100:#d4d4d4;
   --bs-brown-200:#716a53;
   --bs-violet-800:#141823;
-  --bs-violet-900: #07080F;
+  --bs-violet-900: #0d0d0f;
   --bs-badge-dark:#c9c49e;
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
@@ -347,16 +347,7 @@ p {
   -webkit-font-smoothing: antialiased;
 }
 
-.subtext {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-style: normal;
-  color: var(--theme-muted-text);
-  font-size: var(--bs-body-font-size);
-  line-height: 1.5;
-  transition: var(--default-transition)
 
-}
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
@@ -412,7 +403,7 @@ strong {
 
 small,
 .small {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 mark,
@@ -893,8 +884,8 @@ progress {
   justify-content: space-between;
   /*background-color:var(--theme-bg-color); */
   border-bottom: 1px solid var(--theme-primary-text);
-  height: 85px;
-  max-width: 1120px;
+  height: 65px;
+  max-width: 1320px;
   margin: auto;
   transition: var(--default-transition)
 }
@@ -926,7 +917,7 @@ progress {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
   }
 
   .hide-on-desktop {
@@ -2262,7 +2253,6 @@ progress {
   li,
   .bigp,
   .bigsubtext,
-  .subtext,
   .subject-white {
     font-size: 18px;
   }
@@ -2367,7 +2357,7 @@ progress {
     /*background-color:var(--bs-beige);*/
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
-    max-width: 1200px;
+    max-width: 1400px;
     padding-left: 16px;
     padding-right: 16px;
     margin: auto;
@@ -9064,7 +9054,8 @@ fieldset:disabled .btn {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  /*color: #6c757d !important;*/
+  color: var(--bs-gray);
 }
 
 .text-black-50 {

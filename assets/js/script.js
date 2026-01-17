@@ -205,3 +205,4 @@ class CuteSwitcher extends HTMLElement {
 }
 
 customElements.define("cute-switcher", CuteSwitcher);
+
