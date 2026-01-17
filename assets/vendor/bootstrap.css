@@ -883,7 +883,7 @@ progress {
   align-items: center;
   justify-content: space-between;
   /*background-color:var(--theme-bg-color); */
-  border-bottom: 1px solid var(--theme-primary-text);
+  border-bottom: 1px solid var(--bs-gray-dark);
   height: 65px;
   max-width: 1320px;
   margin: auto;
@@ -907,8 +907,10 @@ progress {
   }
 } */
 @media (min-width: 820.98px) {
-
  
+  .logotrang {
+    width:189px;
+  }
   
   .image-bottom-gap {
     margin-bottom: auto;
@@ -2386,6 +2388,11 @@ progress {
     margin-bottom: 3rem;
   }
 
+  .logotrang {
+    width:18px;
+  }
+
+
   .headcontain {
     font-size: 0;
     align-items: center;
@@ -2456,6 +2463,8 @@ progress {
     overflow: visible;
     height: 100%;
   }
+
+
 
   .hamburger__container {
     position: relative;

@@ -641,7 +641,15 @@ ul.results-list li {
   /* Ensure it doesn't wrap to a new line unexpectedly */
   white-space: nowrap; 
   font-size:16px;
+  width: 100%;
 }
+
+.logotrang {
+  width:188px;
+  font-size:17px;
+}
+
+
 
 
 .quote {
@@ -1129,7 +1137,7 @@ a.cta {
   display: block;
   margin: auto;
   /*border-bottom: 1px solid var(--theme-border-color); */
-  border-bottom: 1px solid var(--theme-primary-text);
+  border-bottom: 1px solid var(--bs-gray-dark);
   color: white;
   width: 100%;
   transition: var(--default-transition)
@@ -1153,7 +1161,7 @@ font-family:'saans-light';
   content: "";
   flex-grow: 1;
   height: 1px;
-  background: var(--theme-primary-text);
+  background: var(--bs-gray-dark);
   transition: var(--default-transition)
 }
 
