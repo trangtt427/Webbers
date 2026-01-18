@@ -112,7 +112,7 @@ header {
   transition: var(--default-transition);
   padding-right: 40px;
   padding-left: 40px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
 }
 
 .banner {
@@ -883,7 +883,7 @@ progress {
   align-items: center;
   justify-content: space-between;
   /*background-color:var(--theme-bg-color); */
-  border-bottom: 1px solid var(--bs-gray-dark);
+  /*border-bottom: 1px solid var(--bs-gray-dark);*/
   height: 65px;
   max-width: 1320px;
   margin: auto;

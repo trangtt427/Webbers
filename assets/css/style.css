@@ -14,7 +14,7 @@
   --theme-bg-color: var(--bs-gray-700);
   --theme-accent: var(--bs-gray-700);
   --icon-sun: #edcb16;
-  --theme-nav-bg: rgba(13, 13, 16, 0.9);
+  --theme-nav-bg: rgba(13, 13, 16, 0.5);
 
   --theme-primary-text: var(--bs-violet-100);
   --theme-muted-text: var(--bs-gray);
@@ -35,7 +35,7 @@
   --theme-bg-color: var(--bs-white);
   --theme-accent: var(--bs-accent);
   --icon-sun: var(--bs-gray-700);
-  --theme-nav-bg: rgba(255, 255, 255, 0.8);
+  --theme-nav-bg: rgba(255, 255, 255, 0.5);
 
   --theme-primary-text: var(--bs-body-color);
   --theme-muted-text: var(--bs-gray);
@@ -55,7 +55,7 @@
   --theme-bg-color: var(--bs-gray-700);
   --theme-accent: var(--bs-gray-700);
   --icon-sun: #edcb16;
-  --theme-nav-bg: rgba(13, 13, 16, 0.9);
+  --theme-nav-bg: rgba(13, 13, 16, 0.5);
 
   --theme-primary-text: var(--bs-violet-100);
   --theme-muted-text: var(--bs-violet-100);
