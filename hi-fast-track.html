@@ -21,29 +21,66 @@
       <special-header></special-header>
     </header>
     <div class="page-wrapper">
-      <div class="container mt-10 mb-7">
+      <div class="container mt-10 mb-2">
         <div class="row">
-          <h4 class="">Human Interest</h4>
-          <h2 class="bigheadline">
-    Fast Track
-          </h2>
-          <h2 class="mt-5 mb-5"> I simplified 401(k) onboarding to help businesses start their employees on a path towards financial freedom. We saw a 900% increase in 401(k) signups just one week after launch.
+          <div class="col col-8">
+          <h2 class="mt-5 mb-5"> Human Interest sets a new standard with self-serve onboarding that gives admins the confidence to launch their new 401(k) plans in minutes.
           </h2>
         </div>
-  
-          <div class="row">
-          <video class="mt-5 radii" loop width="100%" autoplay muted>
-            <source src="/assets/videos/hi-fast-track.mp4" type="video/mp4"> Your browser does not support the
-            video tag.
-          </video>
-        </div>
+        <div class="col col-4"></div>
       </div>
+
+      <div class="divider">
+      </div>
+     
+          <div class="row g-4">
+            <div class="col col-2">
+          <p class="small text-muted">Role</p>
+        </div>
+        <div class="col col-10">
+          <p class="small mb-1">Design Lead</p>
+          <p class="small mb-1">User Research</p>
+          <p class="small mb-1">Design Systems</p>
+          <p class="small mb-1">QA Testing</p>
+        </div>
+      
+        </div>
+        <div class="divider">
+        </div>
+        <div class="row g-4">
+          <div class="col col-2">
+        <p class="small text-muted">Timeline</p>
+      </div>
+      <div class="col col-10">
+        <p class="small">6 months</p>
+      </div>
+      </div>
+      <div class="divider">
+      </div>
+      <div class="row g-4">
+        <div class="col col-2">
+      <p class="small text-muted">Key Results</p>
+    </div>
+    <div class="col col-10">
+      <p class="small mb-1">900% increase in 401(k) admin signups in first week of launch</p>
+      <p class="small mb-1">Human Interest stays a Preferred Partner for Gusto</p>
+    </div>
+    </div>
+   </div>
+   <div class="row">
+    <video class="mt-5" loop width="100%" autoplay muted>
+      <source src="/assets/videos/hi-fast-track.mp4" type="video/mp4"> Your browser does not support the
+      video tag.
+    </video>
+  </div>
+
+  
+         
+
 
       <div class="whitebg py-7 mt-5">
         <div class="container">
-          <div class="divider mb-5">
-            <span class="divider-text">Business Problem</span>
-          </div>
+        
           <div class="row align-items-center g-4 mb-10">
             <div class="col-md-5">
               <h2 class="title mb-5">An overly difficult onboarding process put Human Interest on the brink of losing huge margins. </h2>
@@ -211,7 +248,39 @@
     <div class="container mb-4">
       <special-footer></special-footer>
     </div>
-   
+    <script>function updateClock() {
+      const now = new Date();
+      
+      const options = { 
+          weekday: 'short', 
+          month: 'short', 
+          day: 'numeric',
+          hour: '2-digit', 
+          minute: '2-digit', 
+          second: '2-digit', 
+          hour12: false 
+      };
+    
+      // Break the date into parts
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      const parts = formatter.formatToParts(now);
+    
+      // Extract values into a simple object for easy access
+      const p = parts.reduce((acc, part) => {
+          acc[part.type] = part.value;
+          return acc;
+      }, {});
+    
+ 
+      // Format: Friday San Francisco, CA, 22:21:05
+    const customString = `⚲ SJ, CA ${p.hour}:${p.minute}:${p.second}`;
+      
+      document.getElementById('live-clock').textContent = customString;
+    }
+    
+    setInterval(updateClock, 1000);
+    updateClock();
+    </script>
   </body>
 
 
