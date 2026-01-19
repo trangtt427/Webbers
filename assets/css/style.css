@@ -25,6 +25,7 @@
   --theme-badge-color:var(--bs-body-color);
   --theme-subtext-color:var(--bs-brown-200);
   --theme-badge-bg: var(--bs-badge-dark);
+  --theme-divider: var(--bs-gray-dark);
 }
 
 :root[data-theme="light"] {
@@ -46,6 +47,7 @@
   --theme-badge-color:var(--bs-gray);
   --theme-subtext-color:var(--bs-gray);
   --theme-badge-bg: var(--bs-offwhite);
+  --theme-divider: var(--bs-violet-100);
 }
 
 :root[data-theme="dark"] {
@@ -1160,7 +1162,7 @@ font-family:'saans-light';
   content: "";
   flex-grow: 1;
   height: 1px;
-  background: var(--bs-gray-dark);
+  background: var(--theme-divider);
   transition: var(--default-transition)
 }
 
