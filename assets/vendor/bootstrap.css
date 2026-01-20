@@ -909,6 +909,11 @@ progress {
 @media (min-width: 820.98px) {
  
  
+  #live-clock {
+    text-align:center;
+    color: var(--bs-gray);
+  }
+
   
   .image-bottom-gap {
     margin-bottom: auto;
@@ -2369,7 +2374,11 @@ progress {
 @media (max-width: 820.98px) {
 
 
-  
+  #live-clock {
+    text-align:right;
+    padding-right:10px;
+    color: var(--bs-gray);
+  }
 
 
   .mt-3-hide-on-desktop {
@@ -2386,9 +2395,7 @@ progress {
     margin-bottom: 3rem;
   }
 
-  .logotrang {
-    width:18px;
-  }
+  
 
 
   .headcontain {

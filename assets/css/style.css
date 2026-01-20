@@ -635,7 +635,7 @@ ul.results-list li {
 
 #live-clock {
   /* Forces numbers to have a consistent fixed width */
-  /*font-variant-numeric: tabular-nums;*/
+  font-variant-numeric: tabular-nums;
   
   /* Optional: Use a monospaced font for maximum stability */
   font-family:  var(--body-font-family);
@@ -644,7 +644,7 @@ ul.results-list li {
   white-space: nowrap; 
   font-size:16px;
   width: 100%;
-  text-align:center;
+  
 }
 
 .logotrang {
