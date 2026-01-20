@@ -36,8 +36,8 @@ class SpecialHeader extends HTMLElement {
 class SpecialFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-    <p class="small mt-4">© 2026 Trang Tran</p>
-    <p class="small mb-3">Built from scratch with my atrocious code ♥</p>
+    <p class="small text-muted mt-4">© 2026 Trang Tran</p>
+    <p class="small text-muted mb-3">Built from scratch with my atrocious code ♥</p>
 
 
 <!--new social buttons-->
