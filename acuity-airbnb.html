@@ -82,17 +82,15 @@
 
 
               <p class="mb-5 line-width">
-              In what was described as their biggest release of the summer, Airbnb would integrate with Acuity Scheduling (Squarespace's service seller and appointment booking platform) so that users can offer them on Airbnb's vetted marketplace. Acuity would get a cut of the revenue of booked Airbnb services as a result.</p>
+              In what was described as their biggest release of the summer, Airbnb would integrate with Acuity Scheduling (Squarespace's service selling and appointment booking platform) so that users can offer them on Airbnb's vetted marketplace. Acuity would get a cut of the revenue of booked Airbnb services as a result.</p>
               <p class="mb-5 line-width">
                 I led design end to end for this initiative, working closely with the Airbnb product development team and within the constraints of their current services and offerings structure.</p>
   
 
             </div>
-
-            <div class="row mb-10"> <img class=" img-fluid " src="/assets/images/squarespace/airbnbwireframes.png" /></div>
             <div class="row align-items-center g-4 mb-10">
               <div class="col-md-4">
-                <p class="mb-4">The users of this feature are Acuity solopreneurs who sell services in wellness, beauty, food, and photography. We enabled a feature flag to make this available to those users, with additional requirements of not being an Enterprise customer.</p>
+                <p class="mb-4">To be eligible for the integration, Acuity users must sell services in wellness, beauty, food, and photography. There are other requirements as well—the user can't be an Enterprise customer, must be on a paid Acuity subscription, and is the only admin.</p>
               </div>
               <div class="col-md-1"></div>
               <div class="col-md-7">
@@ -100,14 +98,16 @@
                 <img class=" img-fluid wireframe radii mb-3" src="/assets/images/squarespace/modal.png" />
               </div>
             </div>
+            <div class="row mb-10"> <img class=" img-fluid " src="/assets/images/squarespace/airbnbwireframes.png" /></div>
+            
 
         
 
 
           <div class="row line-width mb-10">
-            <h2 class="title mb-5">This was a highly complex feature to build, with lots of dependencies on how Airbnb handles calendar blocking.</h2>
+            <h2 class="title mb-5">This was a highly complex feature to build, with lots of dependencies on Airbnb.</h2>
             <p class="mb-5 line-width">
-          Airbnb has "Services", and under them, is an "Offering". Acuity doesn't have a concept of services, so we had to conform in order to make this work. We also had to figure out how to prevent unqualified Acuity users (those not under the accepted verticals) from seeing the integration.</p>
+          There was a lot of deep technical work to make calendars and availabilities sync across both platforms. Airbnb had very specific requirements related to activity durations, so we had to create validations and enforce certain rules in Acuity. Lastly, we also had to figure out how to prevent unqualified Acuity users (those not under the accepted verticals) from seeing the integration.</p>
 
           </div>
           <div class="row mb-10"> <img class=" img-fluid " src="/assets/images/squarespace/airbnbfinal.png" />
