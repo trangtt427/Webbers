@@ -908,6 +908,10 @@ progress {
   }
 } */
 @media (min-width: 820.98px) {
+
+  .case-study-padding-left {
+    padding-left:50px!important;
+  }
  
  
   #live-clock {
@@ -2517,6 +2521,8 @@ progress {
   .hide-on-mobile {
     display: none !important;
   }
+
+  
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
