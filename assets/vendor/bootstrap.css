@@ -404,6 +404,7 @@ strong {
 small,
 .small {
   font-size: 16px;
+  line-height:1.6;
 }
 
 mark,
