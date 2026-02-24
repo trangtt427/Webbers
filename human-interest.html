@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Human Interest | Trang Tran</title>
+  <meta name="description" content="Human Interest sets a new standard with Fast Track, simplified 401(k) onboarding that gives admins the confidence to launch a plan in minutes." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      var s;
+      try { s = window.localStorage && localStorage.getItem('theme'); } catch (e) {}
+      var el = document.documentElement;
+      if (s === 'dark') el.classList.add('dark');
+      else if (s === 'light') el.classList.remove('dark');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-name"><a href="https://trangtran.design/">Trang Tran <span class="emoji">🌱</span></a></div>
+        <div class="site-time-wrap">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span class="site-location">SJ, CA</span>
+          <div class="site-time" id="clock">00:00:00</div>
+        </div>
+        <div class="site-meta">
+          <nav class="site-nav">
+            <a href="https://trangtran.design/">Home</a>
+            <a href="about">About</a>
+          </nav>
+          <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-dropdown">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
+            <a href="https://trangtran.design/" role="menuitem">Home</a>
+            <a href="about" role="menuitem">About</a>
+          </div>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5" />
+              <line x1="12" y1="2.5" x2="12" y2="5.2" />
+              <line x1="12" y1="18.8" x2="12" y2="21.5" />
+              <line x1="2.5" y1="12" x2="5.2" y2="12" />
+              <line x1="18.8" y1="12" x2="21.5" y2="12" />
+              <line x1="4.4" y1="4.4" x2="6.3" y2="6.3" />
+              <line x1="17.7" y1="17.7" x2="19.6" y2="19.6" />
+              <line x1="17.7" y1="6.3" x2="19.6" y2="4.4" />
+              <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="case-study">
+      <section class="case-study-intro">
+        <h1 class="case-study-headline">
+          Human Interest sets a new standard with Fast Track, simplified onboarding that gives admins the confidence to launch a 401(k) plan in minutes.
+        </h1>
+      </section>
+
+      <section class="case-study-details" aria-label="Project details">
+        <div class="case-study-detail-row">
+          <div class="case-study-detail-label">Role</div>
+          <div class="case-study-detail-value">
+            Design Lead<br />User Research<br />Design Systems<br />QA Testing
+          </div>
+        </div>
+        <div class="case-study-detail-row">
+          <div class="case-study-detail-label">Timeline</div>
+          <div class="case-study-detail-value">6 months</div>
+        </div>
+        <div class="case-study-detail-row">
+          <div class="case-study-detail-label">Key Results</div>
+          <div class="case-study-detail-value">
+            900% increase in signups in first week of Fast Track launch<br />
+            Human Interest stays a Preferred Provider of 401(k)s for Gusto
+          </div>
+        </div>
+      </section>
+
+      <figure class="case-study-image-wrap">
+        <video autoplay loop muted playsinline style="width:100%;height:auto;display:block;">
+          <source src="assets/videos/newfasttrack.mp4" type="video/mp4" />
+        </video>
+      </figure>
+
+      <section class="case-study-two-col case-study-two-col--centered">
+        <div class="case-study-two-col-text">
+          <h2>The process of setting up a company's 401(k) is usually daunting and full of fine print.</h2>
+          <p>SMB 401(k) provider, Human Interest, was also guilty of this. Admins were put through the wringer trying to understand all the parts of designing a 401(k) plan while making choices with the little information they're given. They also couldn't make their plan live without a meeting with an implementation specialist, who then recites all of the admin's choices and tries to upsell.</p>
+        </div>
+        <figure class="case-study-two-col-image">
+          <div class="case-study-image-wrap">
+            <img src="assets/images/hi/plandesign.png" alt="The current onboarding flow" class="case-study-image" />
+          </div>
+          <figcaption class="case-study-caption">The current onboarding flow.</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-study-body">
+        <h2>The poor onboarding experience was papered over with support staff. But Gusto, a partner payroll provider responsible for a lot of our leads, received an overwhelming amount of complaints from customers over the years.</h2>
+        <p>Gusto demanded that we fix the setup experience, or else they would consider removing Human Interest as a Preferred Partner. This put things into motion for the company, as a big chunk of margins come from Gusto's referrals.</p>
+        <p>A timeline of 6 months was given to revamp the setup experience. We dubbed this initiative "Fast Track", and it became the company's highest priority for the year, tapping into Growth, Sales, Integrations, Product, and Legal.</p>
+      </section>
+
+      <section class="case-study-body">
+        <h2>I collaborated with the Chief Experience Officer and Product to land on a "just click next" concept. This was a pivot from an earlier concept which followed a more traditional onboarding pattern.</h2>
+      </section>
+
+      <figure class="case-study-figure-caption">
+        <div class="case-study-image-wrap">
+          <img src="assets/images/hi/hiii.png" alt="Fast Track concept: just click next flow" class="case-study-image" />
+        </div>
+      </figure>
+
+      <section class="case-study-body">
+        <p>Our new direction focused on asking admins to decide on only a few things while deferring nonessential tasks to a later time. You could customize almost everything in a 401(k) plan, but according to our research insights, most companies tend to lean toward a few popular configurations. We led with these common plan defaults.</p>
+      </section>
+
+      <section class="case-study-body">
+        <h2>To make sure qualified admins are taken into the flow, we introduced screening questions at the beginning. Plans deemed too complex would be given an option to talk to a specialist to get a more bespoke 401(k) plan.</h2>
+      </section>
+
+      <figure class="case-study-figure-caption">
+        <div class="case-study-image-wrap">
+          <img src="assets/images/hi/screeningquestions.png" alt="Screening questions at the beginning of Fast Track" class="case-study-image" />
+        </div>
+      </figure>
+
+      <section class="case-study-two-col case-study-two-col--centered">
+        <div class="case-study-two-col-text">
+          <h2>The concepts were a radical shift in how 401(k) setup has traditionally been treated. We tested these ideas with six admin recruits to see if they can complete onboarding.</h2>
+        </div>
+        <div class="case-study-two-col-text">
+          <p>Were terms and concepts easy to understand?</p>
+          <p>Where might admins get stuck in the flow?</p>
+          <p>Would admins feel ready to sign their plan docs?</p>
+        </div>
+      </section>
+
+      <section class="case-study-two-col case-study-two-col--centered">
+        <figure class="case-study-two-col-image case-study-image-wrap">
+          <img src="assets/images/hi/rite.svg" alt="RITE method: revisit designs every two sessions" class="case-study-image" />
+        </figure>
+        <div class="case-study-two-col-text">
+          <p>While users thought that the flow was simple, there were a few threats to our start-to-complete rate.</p>
+          <p>Safe Harbor was a mystery. Is it a company? Is it a feature?</p>
+          <p>Users wanted to see the different pricing plans.</p>
+        </div>
+      </section>
+      <p class="case-study-caption" style="margin-top:0.5em;">We revisited designs every two sessions to make adjustments.</p>
+
+      <figure class="case-study-figure-caption">
+        <div class="case-study-image-wrap">
+          <img src="assets/images/hi/uxrimprovement.png" alt="UX improvements from research" class="case-study-image" />
+        </div>
+      </figure>
+
+      <section class="case-study-body">
+        <p>Designs were reworked to stop headlining with Safe Harbor and in response, people were much more forgiving when it was subtly introduced in body text. We also opted for a side by side comparison of the plans, which resonated well with users. Users said it felt like they had more visibility and control.</p>
+      </section>
+
+      <section class="case-study-body">
+        <h2>When it came to applying HUI, our design system, we realized it didn't cover the use cases of admin workflows.</h2>
+        <p>The design system at the time catered more to the participant experience which boasted large elements and simpler elements. I audited the design system to see what I could get for free, but ended up creating several new components. We'd be able to feed two birds with one scone, because these new components would eventually be used when building out our internal tools.</p>
+      </section>
+
+      <figure class="case-study-figure-caption">
+        <div class="case-study-image-wrap">
+          <img src="assets/images/hi/componentz.png" alt="New additions to HUI design system" class="case-study-image" />
+        </div>
+        <figcaption class="case-study-caption">New additions to HUI and a few easter egg ice cream motifs.</figcaption>
+      </figure>
+
+      <figure class="case-study-image-wrap">
+        <img src="assets/images/hi/fasttrackfinal.png" alt="Fast Track final onboarding experience" class="case-study-image" />
+      </figure>
+
+      <section class="case-study-body">
+        <h2>In the first week of Fast Track's public release, we saw an increase of 900% signups.</h2>
+        <p>Fast Track was first released in beta to customers connected to our partner payroll provider and then to everyone else in September 2023. Human Interest kept its partner status and hit a recordbreaking amount of signups, validating that there is a market of savvy but busy admins who prefer a no-touch setup. Fast Track was so successful that in the coming years, Human Interest started building a whole team to support and evolve this new business line. Read more about the product release <a href="https://401kspecialistmag.com/human-interest-streamlines-retirement-planning-process-with-fast-track-401k/" target="_blank" rel="noopener noreferrer">here<span aria-hidden="true"> ↗</span></a>.</p>
+      </section>
+
+      <section class="case-study-next">
+        <p class="case-study-next-label">Next</p>
+        <h3 class="case-study-next-title"><a href="tactic">Tactic</a></h3>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

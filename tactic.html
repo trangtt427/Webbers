@@ -1,237 +1,185 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Trang Tran | Tactic</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="/assets/vendor/bootstrap.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="/assets/js/headerfooter.js"></script>
-    <script src="/assets/vendor/bootstrap.js"></script>
-    <script src="/assets/js/script.js"></script>
-  </head>
-
-  <body class="animate-in">
-    <header id="navBar">
-      <special-header></special-header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tactic | Trang Tran</title>
+  <meta name="description" content="Companies dealing with business crypto needed saving from exhausting and complicated tax accounting workflows, and Tactic was the lifeline." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      var s;
+      try { s = window.localStorage && localStorage.getItem('theme'); } catch (e) {}
+      var el = document.documentElement;
+      if (s === 'dark') el.classList.add('dark');
+      else if (s === 'light') el.classList.remove('dark');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-name"><a href="https://trangtran.design/">Trang Tran <span class="emoji">🌱</span></a></div>
+        <div class="site-time-wrap">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span class="site-location">SJ, CA</span>
+          <div class="site-time" id="clock">00:00:00</div>
+        </div>
+        <div class="site-meta">
+          <nav class="site-nav">
+            <a href="https://trangtran.design/">Home</a>
+            <a href="about">About</a>
+          </nav>
+          <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-dropdown">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
+            <a href="https://trangtran.design/" role="menuitem">Home</a>
+            <a href="about" role="menuitem">About</a>
+          </div>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5" />
+              <line x1="12" y1="2.5" x2="12" y2="5.2" />
+              <line x1="12" y1="18.8" x2="12" y2="21.5" />
+              <line x1="2.5" y1="12" x2="5.2" y2="12" />
+              <line x1="18.8" y1="12" x2="21.5" y2="12" />
+              <line x1="4.4" y1="4.4" x2="6.3" y2="6.3" />
+              <line x1="17.7" y1="17.7" x2="19.6" y2="19.6" />
+              <line x1="17.7" y1="6.3" x2="19.6" y2="4.4" />
+              <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
-    <div class="page-wrapper">
-      <div class="container mt-10 mb-10">
-        <div class="row">
-          <div class="col col-8">
-          <h2 class="mt-5 mb-5"> Companies dealing with business crypto needed saving from exhausting and complicated tax accounting workflows, and Tactic was the lifeline.
-          </h2>
-        </div>
-        <div class="col col-4"></div>
-      </div>
 
-      <div class="divider">
-      </div>
-     
-          <div class="row g-4">
-            <div class="col col-2">
-          <p class="small text-muted">Role</p>
-        </div>
-        <div class="col col-10">
-          <p class="small mb-1">Design consultant handling all parts of the design lifecycle</p>
-          <p class="small mb-1">User Research</p>
-          <p class="small mb-1">Design Systems</p>
-        </div>
-      
-        </div>
-        <div class="divider">
-        </div>
-        <div class="row g-4">
-          <div class="col col-2">
-        <p class="small text-muted">Timeline</p>
-      </div>
-      <div class="col col-10">
-        <p class="small">2021 - 2022</p>
-      </div>
-      </div>
-      <div class="divider">
-      </div>
-      <div class="row g-4">
-        <div class="col col-2">
-      <p class="small text-muted">Key Results</p>
-    </div>
-    <div class="col col-10">
-      <p class="small mb-1">Businesses saved on average 40+ hours a month on crypto accounting</p>
-      <p class="small mb-1">Series A funding of $11 million in September 2022</p>
-      <p class="small mb-1">Tactic gets acquired by leading crypto tax software TaxBit</p>
-    </div>
-    </div>
-    
-    <div class="divider">
-    </div>
-    <div class="row">
-      <video class="mt-5 radii" loop width="100%" autoplay muted>
-        <source src="/assets/videos/tactic-motion.mp4" type="video/mp4"> Your browser does not support the
-        video tag.
-      </video>
-    </div>
-    </div>
+    <main class="case-study">
+      <section class="case-study-intro">
+        <h1 class="case-study-headline">
+          Companies dealing with business crypto needed saving from exhausting and complicated tax accounting workflows, and Tactic was the lifeline.
+        </h1>
+      </section>
 
-
-
-      
-      <div class="whitebg">
-        <div class="container">
-          <div class="row mb-10 line-width">
-            <h2 class="title mb-4">Crypto started to appear on more balance sheets, but there weren't too many solutions in the market that truly help companies wrangle taxes for thousands of monthly transactions.</h2>
-            <p class=""> Companies dealing with crypto were
-              at risk of IRS audits and huge fines if they weren't confident with their accounting. I joined the team as the first designer and, with my
-              partner-in-crime—the lead product manager, brought automated solutions that helped businesses do their
-              taxes in a clean, compliant way. </p>
-          </div>
-
-
-          <div class="row g-4 mb-10">
-            <div class="col-md-6">
-              <h2 class="title mb-4">I had the chance to learn from various user types about their current workflows.</h2>
-            </div>
-            <div class="col-md-6 case-study-padding-left">
-              <p class="mb-4">A Head of Finance had his engineers pull transactions from different sources to
-                calculate their cost-basis and fees, which takes about 40 hours per month.</p>
-              <p class="mb-4">Not everything was self-serve. Things like mapping a chart of accounts can only be done by contacting Tactic and having the engineering team set this up behind the scenes.</p>
-              <p class="">Customers spent too much time categorizing and labeling their transactions. </p>
-            </div>
-          </div>
-
-        
-      
-        
-          <div class="row g-4 align-items-center mb-10">
-            <div class="col-md-5">
-              <h2 class="title mb-4"> I came up with a design to help users see and take actions on their transactions.</h2>
-              <p> The Transactions page brings together financial activity from the user's various wallets and exchanges
-                and automatically reconciles data, separates fees, handles price conversion, and calculates gains and
-                losses. </p>
-            </div>
-            <div class="col-md-7 case-study-padding-left">
-              <img class="radii border mb-2 img-fluid" src="/assets/images/tactic/transactions.gif" />
-            </div>
-          </div>
-
-
-
-          <div class="row align-items-center g-4 mb-10">
-            <div class="col-md-5 order-md-3 case-study-padding-left">
-              <h2 class="title mb-4">Users would be able to swiftly categorize transactions.</h2>
-              <p class="">  This is a high frequency touchpoint for users, as they're making sure their transactions are properly
-                labeled for when they look at their final numbers.  </p>
-            </div>
-            <div class="col-md-7 order-md-1">
-              <img class="radii border img-fluid" src="/assets/images/tactic/categorizingtransactions.gif" />
-            </div>
-          </div>
-
-
-
-          <div class="row g-4 align-items-center mb-10">
-            <div class="col-md-5">
-              <h2 class="title mb-4"> We came up with a way to automate transactions using rules.
-              </h2>
-              <p> Users can set up logic in the rules engine to automatically categorize transactions as they come in.
-                These rules could be applied retroactively as well, giving users granular control. </p>
-            </div>
-            <div class="col-md-7 case-study-padding-left">
-              <img class="radii border img-fluid" src="/assets/images/tactic/newrules.gif" />
-            </div>
-          </div>
-
-
-          <div class="row align-items-center g-4 mb-10">
-            <div class="col-md-6 order-md-3 case-study-padding-left">
-              <h2 class="title mb-4">With new self-serve capability, customers can do their jobs without pause while unblocking our
-                engineering to focus on higher order tasks.</h2>
-              <p class=""> From getting their exchanges and wallets set up to mapping the chart of accounts, users are now
-                empowered to get their job done without having to jump on a call with someone from Tactic. </p>
-            </div>
-            <div class="col-md-6 order-md-1">
-              <img class="radii border img-fluid" src="/assets/images/tactic/integrations.png" />
-            </div>
-          </div>
-
-
-
-        
-          <div class="row mb-10"> <img class=" img-fluid radii" src="/assets/images/tactic/tactic-header.png" />
-          </div>
-       
-          <div class="row">
-            <h2 class="title line-width mb-10">Tactic raised 11 million in funding in September 2022 and was acquired shortly after by <a
-                href="https://taxbit.com/enterprise-accounting" target="_blank" class="inbodylink">TaxBit.</a></h2>
-            <div class="mb-7">
-            <blockquote class="twitter-tweet">
-              <p lang="en" dir="ltr">Tactic now offers even more flexibility when it comes to syncing to <a
-                  href="https://twitter.com/QuickBooks?ref_src=twsrc%5Etfw">@QuickBooks</a> <br><br>Configure how to map
-                your chart of accounts: using Tactic&#39;s categories or broken down by specific assets.<br><br>Paired
-                with Rules, you can automate your monthly book close process! 🚀 <a
-                  href="https://t.co/uaqGQlvCtj">pic.twitter.com/uaqGQlvCtj</a></p>&mdash; TaxBit | Tactic
-              (@choose_tactic) <a
-                href="https://twitter.com/choose_tactic/status/1587854487917662208?ref_src=twsrc%5Etfw">November 2,
-                2022</a>
-            </blockquote>
-            </div>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <section class="case-study-details" aria-label="Project details">
+        <div class="case-study-detail-row">
+          <div class="case-study-detail-label">Role</div>
+          <div class="case-study-detail-value">
+            Design consultant handling all parts of the design lifecycle<br />User Research<br />Design Systems
           </div>
         </div>
-      </div>
+        <div class="case-study-detail-row">
+          <div class="case-study-detail-label">Timeline</div>
+          <div class="case-study-detail-value">2021 – 2022</div>
+        </div>
+        <div class="case-study-detail-row">
+          <div class="case-study-detail-label">Key Results</div>
+          <div class="case-study-detail-value">
+            Businesses saved on average 40+ hours a month on crypto accounting<br />
+            Series A funding of $11 million in September 2022<br />
+            Tactic acquired by leading crypto tax software TaxBit
+          </div>
+        </div>
+      </section>
 
-    <div class="purewhitebg">
-      <div class="container py-7">
-        <p class="subject-white mb-3">Next</p>
-       <a href="baby-design"> <h2 class="title line-width mb-4">Personal Project: Baby Design UI
-        </h2></a>
-        <p class="home-link"><a href="baby-design">See more →</a></p>
-      </div>
-    </div>
+      <figure class="case-study-image-wrap">
+        <video autoplay loop muted playsinline style="width:100%;height:auto;display:block;">
+          <source src="assets/videos/tactic-motion.mp4" type="video/mp4" />
+        </video>
+      </figure>
+
+      <section class="case-study-body">
+        <h2>Crypto started to appear on more balance sheets, but there weren't too many solutions in the market that truly help companies wrangle taxes for thousands of monthly transactions.</h2>
+        <p>Companies dealing with crypto were at risk of IRS audits and huge fines if they weren't confident with their accounting. I joined the team as the first designer and, with my partner-in-crime—the lead product manager, brought automated solutions that helped businesses do their taxes in a clean, compliant way.</p>
+      </section>
+
+      <section class="case-study-two-col case-study-two-col--centered">
+        <div class="case-study-two-col-text">
+          <h2>I had the chance to learn from various user types about their current workflows.</h2>
+        </div>
+        <div class="case-study-two-col-text">
+          <p>A Head of Finance had his engineers pull transactions from different sources to calculate their cost-basis and fees, which takes about 40 hours per month.</p>
+          <p>Not everything was self-serve. Things like mapping a chart of accounts can only be done by contacting Tactic and having the engineering team set this up behind the scenes.</p>
+          <p>Customers spent too much time categorizing and labeling their transactions.</p>
+        </div>
+      </section>
+
+      <section class="case-study-two-col case-study-two-col--centered case-study-two-col--right-wide">
+        <div class="case-study-two-col-text">
+          <h2>I came up with a design to help users see and take actions on their transactions.</h2>
+          <p>The Transactions page brings together financial activity from the user's various wallets and exchanges and automatically reconciles data, separates fees, handles price conversion, and calculates gains and losses.</p>
+        </div>
+        <figure class="case-study-two-col-image">
+          <div class="case-study-image-wrap">
+            <img src="assets/images/tactic/transactions.gif" alt="Transactions page: financial activity from wallets and exchanges" class="case-study-image" />
+          </div>
+        </figure>
+      </section>
+
+      <section class="case-study-two-col case-study-two-col--centered">
+        <figure class="case-study-two-col-image">
+          <div class="case-study-image-wrap">
+            <img src="assets/images/tactic/categorizingtransactions.gif" alt="Categorizing transactions" class="case-study-image" />
+          </div>
+        </figure>
+        <div class="case-study-two-col-text">
+          <h2>Users would be able to swiftly categorize transactions.</h2>
+          <p>This is a high frequency touchpoint for users, as they're making sure their transactions are properly labeled for when they look at their final numbers.</p>
+        </div>
+      </section>
+
+      <section class="case-study-two-col case-study-two-col--centered case-study-two-col--right-wide">
+        <div class="case-study-two-col-text">
+          <h2>We came up with a way to automate transactions using rules.</h2>
+          <p>Users can set up logic in the rules engine to automatically categorize transactions as they come in. These rules could be applied retroactively as well, giving users granular control.</p>
+        </div>
+        <figure class="case-study-two-col-image">
+          <div class="case-study-image-wrap">
+            <img src="assets/images/tactic/newrules.gif" alt="Rules engine for automating transaction categorization" class="case-study-image" />
+          </div>
+        </figure>
+      </section>
+
+      <section class="case-study-two-col case-study-two-col--centered">
+        <figure class="case-study-two-col-image">
+          <div class="case-study-image-wrap">
+            <img src="assets/images/tactic/integrations.png" alt="Integrations and self-serve setup" class="case-study-image" />
+          </div>
+        </figure>
+        <div class="case-study-two-col-text">
+          <h2>With new self-serve capability, customers can do their jobs without pause while unblocking our engineering to focus on higher order tasks.</h2>
+          <p>From getting their exchanges and wallets set up to mapping the chart of accounts, users are now empowered to get their job done without having to jump on a call with someone from Tactic.</p>
+        </div>
+      </section>
+
+      <figure class="case-study-image-wrap">
+        <img src="assets/images/tactic/tactic-header.png" alt="Tactic product overview" class="case-study-image" />
+      </figure>
+
+      <section class="case-study-body">
+        <h2>Tactic raised $11 million in funding in September 2022 and was acquired shortly after by <a href="https://taxbit.com/enterprise-accounting" target="_blank" rel="noopener noreferrer">TaxBit<span aria-hidden="true"> ↗</span></a>.</h2>
+      </section>
+
+      <section class="case-study-next">
+        <p class="case-study-next-label">Next</p>
+        <h3 class="case-study-next-title"><a href="human-interest">Human Interest</a></h3>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
   </div>
 
-    <div class="container mb-4">
-      <special-footer></special-footer>
-    </div>
-    <script>function updateClock() {
-      const now = new Date();
-      
-      const options = { 
-          weekday: 'short', 
-          month: 'short', 
-          day: 'numeric',
-          hour: '2-digit', 
-          minute: '2-digit', 
-          second: '2-digit', 
-          hour12: false 
-      };
-    
-      // Break the date into parts
-      const formatter = new Intl.DateTimeFormat('en-US', options);
-      const parts = formatter.formatToParts(now);
-    
-      // Extract values into a simple object for easy access
-      const p = parts.reduce((acc, part) => {
-          acc[part.type] = part.value;
-          return acc;
-      }, {});
-    
- 
-      // Format: Friday San Francisco, CA, 22:21:05
-    const customString = `⚲ SJ, CA ${p.hour}:${p.minute}:${p.second}`;
-      
-      document.getElementById('live-clock').textContent = customString;
-    }
-    
-    setInterval(updateClock, 1000);
-    updateClock();
-    </script>
-  </body>
-
-
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

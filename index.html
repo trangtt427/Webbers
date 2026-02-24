@@ -1,232 +1,172 @@
 <!DOCTYPE html>
-<html data-theme="dark">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Trang Tran | Portfolio</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="/assets/vendor/bootstrap.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="/assets/js/script.js"></script>
-    <script src="/assets/js/headerfooter.js"></script>
-    <script src="/assets/vendor/bootstrap.js"></script>
-  </head>
-
-  <body class="animate-in">
-    <header id="navBar">
-      <div class="headcontain">
-        
-        
-          <h6 class="logotrang"><a href="http://trangtran.design/">Trang Tran 🌱</a></h6>
-       
-        <p id="live-clock" class="small">00:00:00</p>
-        <nav class="nav">
-          <div class="nav__container">
-
-           
-
-            <ul class="navlist hide-on-mobile">
-              <li class="menu-item one">
-                <a href="http://trangtran.design/">Home</a>
-              </li>
-              <li class="menu-item"><a href="https://trangtran.design/about">About</a></li>
-            </ul>
-            <ul class="menu hide-on-desktop">
-              <li class="menu-item one">
-                <a href="http://trangtran.design/">Home</a>
-              </li>
-              <li class="menu-item"><a href="https://trangtran.design/about">About</a></li>
-            </ul>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang Tran | Portfolio</title>
+  <meta name="description" content="SF Bay Area-bred designer creating thoughtful products and services that bring business value and make users go “ooh, that's kinda nice.”" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      var s;
+      try { s = window.localStorage && localStorage.getItem('theme'); } catch (e) {}
+      var el = document.documentElement;
+      if (s === 'dark') el.classList.add('dark');
+      else if (s === 'light') el.classList.remove('dark');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-name"><a href="http://trangtran.design/">Trang Tran <span class="emoji">🌱</span></a></div>
+        <div class="site-time-wrap">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span class="site-location">SJ, CA</span>
+          <div class="site-time" id="clock">00:00:00</div>
+        </div>
+        <div class="site-meta">
+          <nav class="site-nav">
+            <a href="http://trangtran.design/" class="nav-active">Home</a>
+            <a href="about">About</a>
+          </nav>
+          <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-dropdown">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
+            <a href="http://trangtran.design/" role="menuitem" class="nav-active">Home</a>
+            <a href="about" role="menuitem">About</a>
           </div>
-        </nav>
-        <button class="hamburger__container hide-on-desktop">
-          <div class="hamburger">
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
-        </button>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5" />
+              <line x1="12" y1="2.5" x2="12" y2="5.2" />
+              <line x1="12" y1="18.8" x2="12" y2="21.5" />
+              <line x1="2.5" y1="12" x2="5.2" y2="12" />
+              <line x1="18.8" y1="12" x2="21.5" y2="12" />
+              <line x1="4.4" y1="4.4" x2="6.3" y2="6.3" />
+              <line x1="17.7" y1="17.7" x2="19.6" y2="19.6" />
+              <line x1="17.7" y1="6.3" x2="19.6" y2="4.4" />
+              <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
-    <div class="page-wrapper">
-      <div class="container mt-10 mb-7">
-        <div class="row">
-          <h2 class="hero-section mt-6 mb-3" style="max-width: 850px">SF Bay Area-bred designer creating thoughtful products and services that bring business value and make users go “ooh, that's kinda nice.” 👌</a></h2>
-      </div>
-      </div>
 
-      <!---testing-->
+    <section class="hero" id="top">
+      <h1>
+        SF Bay Area-bred designer creating thoughtful products and services that bring business value and make users go “ooh, that's kinda nice.” <span class="emoji">👌</span>
+      </h1>
+    </section>
 
-      <div class="container py-7"> 
-        <div class="divider">
+    <h2 class="projects-label">Projects</h2>
+
+    <article class="project" id="squarespace">
+      <div class="project-media">
+        <div class="project-dots">
+          <span class="project-dot project-dot--active"></span>
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
         </div>
-        <p class="mb-6">Projects</p>
-<div class="row"><div class="dot-container mb-3">
-  <div class="dot dot-filled"></div>
-  <div class="dot"></div>
-  <div class="dot"></div>
-  <div class="dot"></div>
-</div></div>
-        <div class="row align-items-center gx-4 mb-6">
-          <div class="col col-6">  
-            
-          <a href="acuity-airbnb">  <div class="case-study-image-container case-study-bg-1 radii">
-              <img src="assets/images/squarespace/Iphone 14 - 1.png" class="overlay-img" alt="overlay">
-         </div></a>
-         
-           </div>
-           <div class="col col-6 case-study-padding-left">
-          
-            <h3 class="mt-3 mb-3">Squarespace</h3>
-            <p class="text-muted small smol-line-width mb-5">Enabling Acuity Scheduling businesses to reach new customers by listing their services on Airbnb. </p>
-         
-           </div>
-        
-         </div>
-      
-         <div class="row"><div class="dot-container mb-3">
-          <div class="dot "></div>
-          <div class="dot dot-filled"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div></div>
-                <div class="row align-items-center gx-4 mb-6">
-                  <div class="col col-6">  
-                    
-                    <a href="hi-fast-track">   <div class="video-background-container radii">
-                      <video autoplay muted loop id="video-bg">
-                          <!-- Replace 'your-video.mp4' with the path to your video file -->
-                          <source src="assets/videos/newfasttrack.mp4" type="video/mp4">
-                          <!-- You can add other formats for compatibility -->
-                          <!-- <source src="your-video.webm" type="video/webm"> -->
-                          Your browser does not support the video tag.
-                      </video>
-                
-                  </div></a>
-                 
-                   </div>
-                   <div class="col col-6 case-study-padding-left">
-                  
-                    <h3 class="mt-3 mb-3">Human Interest</h3>
-                    <p class="text-muted small smol-line-width mb-5">Simplified 401(k) onboarding for admins to help their employees save for retirement. </p>
-                 
-                   </div>
-                
-                 </div>
-
-
-                 <div class="row"><div class="dot-container mb-3">
-                  <div class="dot "></div>
-                  <div class="dot"></div>
-                  <div class="dot dot-filled"></div>
-                  <div class="dot"></div>
-                </div></div>
-                        <div class="row align-items-center gx-4 mb-6">
-                          <div class="col col-6">  
-                            
-                            <a href="tactic">   <div class="video-background-container radii">
-                              <video autoplay muted loop id="video-bg">
-                                  <!-- Replace 'your-video.mp4' with the path to your video file -->
-                                  <source src="assets/videos/tactic-motion.mp4" type="video/mp4">
-                                  <!-- You can add other formats for compatibility -->
-                                  <!-- <source src="your-video.webm" type="video/webm"> -->
-                                  Your browser does not support the video tag.
-                              </video>
-                        
-                          </div></a>
-                         
-                           </div>
-                           <div class="col col-6 case-study-padding-left">
-                          
-                            <h3 class="mt-3 mb-3">Tactic</h3>
-                            <p class="text-muted small smol-line-width mb-5">Modernized accounting that unlocks visibility and compliance for businesses using crypto.</p>
-                         
-                           </div>
-                        
-                         </div>
-
-    
-
-         
-
-             <div class="row"><div class="dot-container mb-3">
-              <div class="dot "></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot dot-filled"></div>
-            </div></div>
-                    <div class="row align-items-center gx-4 mb-6">
-                      <div class="col col-6">  
-                        
-                        <a href="baby-design">  <div class="case-study-image-container case-study-bg-4 radii">
-                     </div></a>
-                     
-                       </div>
-                       <div class="col col-6 case-study-padding-left">
-                      
-                        <h3 class="mt-3 mb-3">Baby Design UI</h3>
-                        <p class="text-muted small smol-line-width mb-5">Passion project turned public resource for the Figma Community.</p>
-                     
-                       </div>
-                    
-                     </div>
-
-
-         
-          
-       
-
-
-          
-        </div>
-        
- 
-
-    </div>
-    <div>
-      <div class="container mb-4">
-        <div class="bottom_line"></div>
-        <special-footer></special-footer>
-        <!--end new social buttons-->
+        <a href="squarespace" class="project-media-link" aria-label="View Squarespace case study">
+          <div class="project-video-wrap project-mockup-wrap">
+            <div class="project-mockup-bg" style="background-image: url('assets/images/squarespace/gradient1.png')">
+              <img src="assets/images/squarespace/Iphone 14 - 1.png" alt="Squarespace and Airbnb integration on iPhone" class="project-mockup-phone" width="280" height="568" />
+            </div>
+          </div>
+        </a>
       </div>
-    </div>
-    <script>function updateClock() {
-      const now = new Date();
-      
-      const options = { 
-          weekday: 'short', 
-          month: 'short', 
-          day: 'numeric',
-          hour: '2-digit', 
-          minute: '2-digit', 
-          second: '2-digit', 
-          hour12: false 
-      };
-    
-      // Break the date into parts
-      const formatter = new Intl.DateTimeFormat('en-US', options);
-      const parts = formatter.formatToParts(now);
-    
-      // Extract values into a simple object for easy access
-      const p = parts.reduce((acc, part) => {
-          acc[part.type] = part.value;
-          return acc;
-      }, {});
-    
- 
-      // Format: Friday San Francisco, CA, 22:21:05
-    const customString = `⚲ SJ, CA ${p.hour}:${p.minute}:${p.second}`;
-      
-      document.getElementById('live-clock').textContent = customString;
-    }
-    
-    setInterval(updateClock, 1000);
-    updateClock();
-    </script>
-  </body>
+      <div class="project-copy">
+        <h3 class="project-title"><a href="squarespace">Squarespace</a></h3>
+        <p class="project-desc">Enabling Acuity Scheduling businesses to reach new customers by listing their services on Airbnb.</p>
+      </div>
+    </article>
 
+    <article class="project" id="human-interest">
+      <div class="project-media">
+        <div class="project-dots">
+          <span class="project-dot"></span>
+          <span class="project-dot project-dot--active"></span>
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
+        </div>
+        <a href="human-interest" class="project-media-link" aria-label="View Human Interest case study">
+          <div class="project-video-wrap">
+            <video autoplay loop muted playsinline>
+              <source src="assets/videos/newfasttrack.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <span class="no-video">Your browser does not support the video tag.</span>
+          </div>
+        </a>
+      </div>
+      <div class="project-copy">
+        <h3 class="project-title"><a href="human-interest">Human Interest</a></h3>
+        <p class="project-desc">Simplified 401(k) onboarding for admins to help their employees save for retirement.</p>
+      </div>
+    </article>
 
+    <article class="project" id="tactic">
+      <div class="project-media">
+        <div class="project-dots">
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
+          <span class="project-dot project-dot--active"></span>
+          <span class="project-dot"></span>
+        </div>
+        <a href="tactic" class="project-media-link" aria-label="View Tactic case study">
+          <div class="project-video-wrap">
+            <video autoplay loop muted playsinline>
+              <source src="assets/videos/tactic-motion.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <span class="no-video">Your browser does not support the video tag.</span>
+          </div>
+        </a>
+      </div>
+      <div class="project-copy">
+        <h3 class="project-title"><a href="tactic">Tactic</a></h3>
+        <p class="project-desc">Modernized accounting that unlocks visibility and compliance for businesses using crypto.</p>
+      </div>
+    </article>
+
+    <article class="project" id="baby-design-ui">
+      <div class="project-media">
+        <div class="project-dots">
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
+          <span class="project-dot project-dot--active"></span>
+        </div>
+        <a href="baby-design" class="project-media-link" aria-label="View Baby Design UI case study">
+          <div class="project-video-wrap project-image-wrap">
+            <img src="assets/images/baby-design-ui/darkmode-ui.png" alt="Baby Design UI dark mode design system" class="project-image" />
+          </div>
+        </a>
+      </div>
+      <div class="project-copy">
+        <h3 class="project-title"><a href="baby-design">Baby Design UI</a></h3>
+        <p class="project-desc">Passion project turned public resource for the Figma Community.</p>
+      </div>
+    </article>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
 </html>

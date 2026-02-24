@@ -1,153 +1,99 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Trang Tran | About</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="/assets/vendor/bootstrap.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="/assets/js/headerfooter.js"></script>
-    <script src="/assets/js/script.js"></script>
-    <script src="/assets/vendor/bootstrap.js"></script>
-  </head>
-
-  <body class="animate-in">
-    <script>  switchTheme() {
-      const rootElem = document.documentElement;
-      const currentTheme = rootElem.getAttribute(LOCAL_STORAGE_THEME_KEY);
-      let newTheme;
-  
-      // the new theme will be the opposite of the currentTheme
-      newTheme = currentTheme === "light" ? "dark" : "light";
-  
-      // Put the new-theme into localStorage
-      localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
-  
-      // Set the theme
-      rootElem.setAttribute(LOCAL_STORAGE_THEME_KEY, newTheme);
-    }
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Trang Tran</title>
+  <meta name="description" content="Product designer in the SF Bay Area. I care about clarity, craft, and the details that make products feel considered." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      var s;
+      try { s = window.localStorage && localStorage.getItem('theme'); } catch (e) {}
+      var el = document.documentElement;
+      if (s === 'dark') el.classList.add('dark');
+      else if (s === 'light') el.classList.remove('dark');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
+    })();
   </script>
-    <header id="navBar">
-      <div class="headcontain">
-        <h6 class="logotrang"><a href="http://trangtran.design/">Trang Tran 🌱 </a></h6>
-       
-        <p id="live-clock">00:00:00</p>
-        <nav class="nav">
-          <div class="nav__container">
-            <ul class="navlist hide-on-mobile">
-              <li class="menu-item">
-                <a href="http://trangtran.design/">Home</a>
-              </li>
-              <li class="menu-item one"><a href="https://trangtran.design/about">About</a></li>
-              <!--<li class="menu-item"><a href="https://trangthings.squarespace.com/" target="_blank">Adventures ↗</a></li> -->
-            </ul>
-            <ul class="menu hide-on-desktop">
-              <li class="menu-item">
-                <a href="http://trangtran.design/">Home</a>
-              </li>
-              <li class="menu-item one"><a href="https://trangtran.design/about">About</a></li>
-              <!--<li class="menu-item"><a href="https://trangthings.squarespace.com/" target="_blank">Adventures ↗</a></li> -->
-            </ul>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-name"><a href="https://trangtran.design/">Trang Tran <span class="emoji">🌱</span></a></div>
+        <div class="site-time-wrap">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span class="site-location">SJ, CA</span>
+          <div class="site-time" id="clock">00:00:00</div>
+        </div>
+        <div class="site-meta">
+          <nav class="site-nav">
+            <a href="https://trangtran.design/">Home</a>
+            <a href="about" class="nav-active">About</a>
+          </nav>
+          <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-dropdown">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
+            <a href="https://trangtran.design/" role="menuitem">Home</a>
+            <a href="about" role="menuitem" class="nav-active">About</a>
           </div>
-        </nav>
-        <button class="hamburger__container hide-on-desktop">
-          <div class="hamburger">
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
-        </button>
-      </div>
-    </header>
-    <div class="page-wrapper">
-      <div class="container mt-10 mb-5">
-  
-        <div class="row">
-        
-          <div class="col-3"></div>
-          <div class="col col-9"><img src="/assets/images/about.jpg" class="img-fluid mb-2 radii"><p class="small text-muted mb-6">Photo by <a href="https://kimception.blog/" target="_blank" class="inbodylink">Kim Nguyen ↗</a></p>
-          <h2 class="hero-section mb-10">Hi, I'm Trang. I've spent the last 9+ years crafting experiences with a keen eye for details, clarity, and purpose. Outside of being a full-time product designer, I help early startups with design strategy and hands-on design execution.</h2>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5" />
+              <line x1="12" y1="2.5" x2="12" y2="5.2" />
+              <line x1="12" y1="18.8" x2="12" y2="21.5" />
+              <line x1="2.5" y1="12" x2="5.2" y2="12" />
+              <line x1="18.8" y1="12" x2="21.5" y2="12" />
+              <line x1="4.4" y1="4.4" x2="6.3" y2="6.3" />
+              <line x1="17.7" y1="17.7" x2="19.6" y2="19.6" />
+              <line x1="17.7" y1="6.3" x2="19.6" y2="4.4" />
+              <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
+            </svg>
+          </button>
         </div>
       </div>
-    
-      <div class="row">
+    </header>
 
-          <div class="col col-3"><img src="/assets/images/carousel/babyme.jpg" class="img-fluid mb-2 radii"><p class="small text-muted mb-4">Photo by Mom?</div>
+    <section class="hero about-page-content" id="about" style="margin-top: 0;">
+        <h1>
+          Hi, I'm Trang. I've spent the last 9+ years crafting experiences with a keen eye for details, clarity, and purpose. Outside of being a full-time product designer, I help early startups with design strategy and hands-on design execution.
+        </h1>
+    </section>
 
-        <div class="col col-1"></div>
-        <div class="col col-8">
-          <p class="mt-5">Growing up a creative in a household of hardworking immigrants who fled from their war-stricken country, "making things look pretty" as a job was a pipe dream. But I got lucky. I lived in what felt like the innovation capital at the time, and learned how far I could stretch into the design world.</p>
-
-
-        <p class="mt-5 mb-10">I became a designer after realizing that I care a lot about how things look, feel, and work. Making cool things that people actually use and enjoy? Design really <i>is</i> my calling. My approach to delivering product excellence is rooted in simplicity, clean and intentional visuals, and with a focus on balancing business goals and user needs.</p>
+    <section class="about-two-col">
+      <div class="about-two-col-image">
+        <img src="assets/babyme.png" alt="Young Trang standing outdoors in a pink sweatsuit and white hat." class="about-photo" />
       </div>
-    </div>
+      <div class="about-two-col-text">
+        <p>Growing up a creative in a household of hardworking immigrants who fled from their war-stricken country, "making things look pretty" as a job was a pipe dream. But I got lucky. I lived in what felt like the innovation capital at the time, and learned how far I could stretch into the design world.</p>
+        <p>I became a designer after realizing that I care a lot about how things look, feel, and work. Making cool things that people actually use and enjoy? Design really is my calling. My approach to delivering product excellence is rooted in simplicity, clean and intentional visuals, and with a focus on balancing business goals and user needs.</p>
+      </div>
+    </section>
 
-    <div class="divider mb-5">
-    </div>
-    <div class="row">
-      <div class="col col-3">
-        <p class="small text-muted mb-5">Currently</p></div>
-      <div class="col col-9">
+    <section class="about-currently" aria-label="Currently">
+      <div class="about-currently-row">
+        <div class="about-currently-label">Currently</div>
+        <div class="about-currently-value">
+          <p>Leading design for Acuity class scheduling at <a href="https://www.squarespace.com" target="_blank" rel="noopener noreferrer">Squarespace<span aria-hidden="true"> ↗</span></a></p>
+          <p>Into making Vietnamese pandan waffles</p>
+        </div>
+      </div>
+    </section>
 
-
-        <p class="mb-4">Leading design for Acuity class scheduling at <a
-          href="https://squarespace.com/" target="_blank" class="inbodylink">Squarespace ↗</a></p>
-          <p class="mb-4">Into making Vietnamese pandan waffles</p>
-    </div>
+    <div id="footer-placeholder"></div>
   </div>
-      
 
-
-          </div>
-   
-
-      
-    </div>
-    <div class="container mt-4 mb-4">
-      <div class="bottom_line"></div>
-      <special-footer></special-footer>
-    </div>
-    <script>function updateClock() {
-      const now = new Date();
-      
-      const options = { 
-          weekday: 'short', 
-          month: 'short', 
-          day: 'numeric',
-          hour: '2-digit', 
-          minute: '2-digit', 
-          second: '2-digit', 
-          hour12: false 
-      };
-    
-      // Break the date into parts
-      const formatter = new Intl.DateTimeFormat('en-US', options);
-      const parts = formatter.formatToParts(now);
-    
-      // Extract values into a simple object for easy access
-      const p = parts.reduce((acc, part) => {
-          acc[part.type] = part.value;
-          return acc;
-      }, {});
-    
- 
-      // Format: Friday San Francisco, CA, 22:21:05
-    const customString = `⚲ SJ,CA ${p.hour}:${p.minute}:${p.second}`;
-      
-      document.getElementById('live-clock').textContent = customString;
-    }
-    
-    setInterval(updateClock, 1000);
-    updateClock();
-    </script>
-  </body>
-
-
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

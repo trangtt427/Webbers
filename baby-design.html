@@ -1,121 +1,116 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Trang Tran | Baby Design UI</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="/assets/vendor/bootstrap.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="/assets/js/headerfooter.js"></script>
-    <script src="/assets/vendor/bootstrap.js"></script>
-    <script src="/assets/js/script.js"></script>
-  </head>
-
-  <body class="animate-in">
-    <header id="navBar">
-      <special-header></special-header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baby Design UI | Trang Tran</title>
+  <meta name="description" content="Rolled up my sleeves to build a design system, Baby Design UI, from scratch." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      var s;
+      try { s = window.localStorage && localStorage.getItem('theme'); } catch (e) {}
+      var el = document.documentElement;
+      if (s === 'dark') el.classList.add('dark');
+      else if (s === 'light') el.classList.remove('dark');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-name"><a href="https://trangtran.design/">Trang Tran <span class="emoji">🌱</span></a></div>
+        <div class="site-time-wrap">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span class="site-location">SJ, CA</span>
+          <div class="site-time" id="clock">00:00:00</div>
+        </div>
+        <div class="site-meta">
+          <nav class="site-nav">
+            <a href="https://trangtran.design/">Home</a>
+            <a href="about">About</a>
+          </nav>
+          <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-dropdown">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
+            <a href="https://trangtran.design/" role="menuitem">Home</a>
+            <a href="about" role="menuitem">About</a>
+          </div>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5" />
+              <line x1="12" y1="2.5" x2="12" y2="5.2" />
+              <line x1="12" y1="18.8" x2="12" y2="21.5" />
+              <line x1="2.5" y1="12" x2="5.2" y2="12" />
+              <line x1="18.8" y1="12" x2="21.5" y2="12" />
+              <line x1="4.4" y1="4.4" x2="6.3" y2="6.3" />
+              <line x1="17.7" y1="17.7" x2="19.6" y2="19.6" />
+              <line x1="17.7" y1="6.3" x2="19.6" y2="4.4" />
+              <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
-    <div class="page-wrapper">
 
-      <div class="container mt-10 mb-10">
-        <div class="row">
-          <div class="col col-8">
-          <h2 class="mt-5 mb-5">Rolled up my sleeves to build a design system, Baby Design UI, from scratch.
-          </h2>
+    <main class="case-study">
+      <section class="case-study-intro">
+        <h1 class="case-study-headline">
+          Rolled up my sleeves to build a design system, Baby Design UI, from scratch.
+        </h1>
+      </section>
+
+      <figure class="case-study-image-wrap">
+        <video autoplay loop muted playsinline style="width:100%;height:auto;display:block;">
+          <source src="assets/videos/baby-design-ui-motion.mp4" type="video/mp4" />
+        </video>
+      </figure>
+
+      <section class="case-study-body">
+        <h2>A Baby Was Born</h2>
+        <p>My company spun up a design system that covered most of our use cases when it came to components. When multiple designers started using it, we found that it wasn't easy to switch variants because you'd have to go into the layers to toggle the visibility. We ended up slowly rebuilding components to be more straightforward and future-proof.</p>
+        <h2>Fueled by the struggle of working out of that design system, I created my own design library. This personal project became lovingly known as Baby Design.</h2>
+      </section>
+
+      <figure class="case-study-figure-caption">
+        <div class="case-study-image-wrap">
+          <img src="assets/images/baby-design/bdinfigma.png" alt="Documentation of all the available components in the kit" class="case-study-image" />
         </div>
-        <div class="col col-4"></div>
-      </div>
-     
-     
-    
-    <div class="row">
-      <video class="mt-5 radii" loop width="100%" autoplay muted>
-        <source src="/assets/videos/baby-design-ui-motion.mp4" type="video/mp4"> Your browser does not support the
-        video tag.
-      </video>
-    </div>
-   </div>
+        <figcaption class="case-study-caption">Documentation of all the available components in the kit.</figcaption>
+      </figure>
 
-
-
-
-      <div class="whitebg">
-        <div class="container">
-     
-          <div class="row mb-6 line-width">
-            <h2 class="title mb-4">A Baby Was Born</h2>
-            <p class="mb-10">My company spun up a design system that covered most of our use cases when it came to components. When multiple designers started using it, we found that it wasn't easy to switch variants because you'd have to go into the layers to toggle the visibility. We ended up slowly rebuilding components to be more straightforward and future-proof. </p>
-            <h2 class="title mb-10">Fueled by the struggle of working out of that design system, I created my own design library. This personal project became lovingly known as Baby Design.</h2>
-          </div>
-          <div class="row mb-10"> <img class="img-fluid mb-2 radii" src="/assets/images/baby design/bdinfigma.png" />
-            <p class="small text-muted">Documentation of all the available components in the kit.</p>
-          </div>
-          <div class="row mb-10"> <img class="radii mb-2 img-fluid" src="/assets/images/baby design/bd-header-old.png" />
-            <p class="small text-muted">Baby Design in Light Mode: Purple.</p>
-          </div>
-          <div class="row mb-7 line-width">
-            <p class="">This is still an ongoing project that I revisit from time to time. I'll be keeping an eye out on Figma's updates to see if
-              there's anything I can apply to Baby Design. Check it out on <a
-                href="https://www.figma.com/community/file/1187301276898864114/baby-design-ui-kit" class="inbodylink"
-                target="_blank">Figma Community!</a></p>
-          </div>
+      <figure class="case-study-figure-caption">
+        <div class="case-study-image-wrap">
+          <img src="assets/images/baby-design/bd-header-old.png" alt="Baby Design in Light Mode: Purple" class="case-study-image" />
         </div>
-      </div>
-    
-    <div class="purewhitebg">
-      <div class="container py-7">
-        <p class="subject-white mb-3">Next</p>
-      <a href="acuity-airbnb">  <h2 class="title line-width mb-4">Squarespace: Acuity x Airbnb
-        </h2></a>
-        </p>
-        <p class="home-link"><a href="acuity-airbnb">See more →</a></p>
-      </div>
-    </div>
+        <figcaption class="case-study-caption">Baby Design in Light Mode: Purple.</figcaption>
+      </figure>
+
+      <section class="case-study-body">
+        <p>This is still an ongoing project that I revisit from time to time. I'll be keeping an eye out on Figma's updates to see if there's anything I can apply to Baby Design. Check it out on <a href="https://www.figma.com/community/file/1187301276898864114/baby-design-ui-kit" target="_blank" rel="noopener noreferrer">Figma Community<span aria-hidden="true"> ↗</span></a>!</p>
+      </section>
+
+      <section class="case-study-next">
+        <p class="case-study-next-label">Next</p>
+        <h3 class="case-study-next-title"><a href="squarespace">Squarespace</a></h3>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
   </div>
-    <div class="container mb-4">
-      <special-footer></special-footer>
-    </div>
-    </div>
-    <script>function updateClock() {
-      const now = new Date();
-      
-      const options = { 
-          weekday: 'short', 
-          month: 'short', 
-          day: 'numeric',
-          hour: '2-digit', 
-          minute: '2-digit', 
-          second: '2-digit', 
-          hour12: false 
-      };
-    
-      // Break the date into parts
-      const formatter = new Intl.DateTimeFormat('en-US', options);
-      const parts = formatter.formatToParts(now);
-    
-      // Extract values into a simple object for easy access
-      const p = parts.reduce((acc, part) => {
-          acc[part.type] = part.value;
-          return acc;
-      }, {});
-    
- 
-      // Format: Friday San Francisco, CA, 22:21:05
-    const customString = `⚲ SJ, CA ${p.hour}:${p.minute}:${p.second}`;
-      
-      document.getElementById('live-clock').textContent = customString;
-    }
-    
-    setInterval(updateClock, 1000);
-    updateClock();
-    </script>
-  </body>
 
-
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
