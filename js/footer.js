@@ -20,7 +20,7 @@
     '<a href="https://www.youtube.com/@trvngwreck" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer-icon">' +
     '<img src="assets/icons/youtuberound.svg" alt="" width="40" height="40" />' +
     '</a>' +
-    '<a href="mailto:trangtt427@gmail.com" aria-label="Email" class="footer-icon">' +
+    '<a href="mailto:004tran@gmail.com" aria-label="Email" class="footer-icon">' +
     '<img src="assets/icons/emailround.svg" alt="" width="40" height="40" />' +
     '</a>' +
     '</div>' +
