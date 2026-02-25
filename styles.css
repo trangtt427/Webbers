@@ -485,13 +485,23 @@ html.dark .theme-toggle .icon-sun {
   transform: translate(-50%, -50%) scale(1);
 }
 
+.theme-toggle:hover .icon-moon,
+.theme-toggle:hover .icon-sun {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+html.dark .theme-toggle:hover .icon-sun {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .theme-toggle,
   .theme-toggle:hover {
     transition: none;
   }
   .theme-toggle .icon-moon,
-  .theme-toggle .icon-sun {
+  .theme-toggle .icon-sun,
+  .theme-toggle:hover .icon-moon,
+  .theme-toggle:hover .icon-sun {
     transition: none;
     transform: translate(-50%, -50%);
   }
