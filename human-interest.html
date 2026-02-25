@@ -97,7 +97,7 @@
           <p>SMB 401(k) provider, Human Interest, was also guilty of this. Admins were put through the wringer trying to understand all the parts of designing a 401(k) plan while making choices with the little information they're given. They also couldn't make their plan live without a meeting with an implementation specialist, who then recites all of the admin's choices and tries to upsell.</p>
         </div>
         <figure class="case-study-two-col-image">
-          <div class="case-study-image-wrap">
+          <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
             <img src="assets/images/hi/plandesign.png" alt="The current onboarding flow" class="case-study-image" />
           </div>
           <figcaption class="case-study-caption">The current onboarding flow.</figcaption>
@@ -115,7 +115,7 @@
       </section>
 
       <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap">
+        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/hi/hiii.png" alt="Fast Track concept: just click next flow" class="case-study-image" />
         </div>
       </figure>
@@ -129,7 +129,7 @@
       </section>
 
       <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap">
+        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/hi/screeningquestions.png" alt="Screening questions at the beginning of Fast Track" class="case-study-image" />
         </div>
       </figure>
@@ -146,7 +146,7 @@
       </section>
 
       <section class="case-study-two-col case-study-two-col--centered">
-        <figure class="case-study-two-col-image case-study-image-wrap">
+        <figure class="case-study-two-col-image case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/hi/rite.svg" alt="RITE method: revisit designs every two sessions" class="case-study-image" />
         </figure>
         <div class="case-study-two-col-text">
@@ -158,7 +158,7 @@
       <p class="case-study-caption" style="margin-top:0.5em;">We revisited designs every two sessions to make adjustments.</p>
 
       <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap">
+        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/hi/uxrimprovement.png" alt="UX improvements from research" class="case-study-image" />
         </div>
       </figure>
@@ -173,13 +173,13 @@
       </section>
 
       <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap">
+        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/hi/componentz.png" alt="New additions to HUI design system" class="case-study-image" />
         </div>
         <figcaption class="case-study-caption">New additions to HUI and a few easter egg ice cream motifs.</figcaption>
       </figure>
 
-      <figure class="case-study-image-wrap">
+      <figure class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
         <img src="assets/images/hi/fasttrackfinal.png" alt="Fast Track final onboarding experience" class="case-study-image" />
       </figure>
 
@@ -195,6 +195,20 @@
     </main>
 
     <div id="footer-placeholder"></div>
+  </div>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <div class="lightbox-overlay"></div>
+    <button type="button" class="lightbox-close" aria-label="Close">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image" />
+      <p class="lightbox-caption" aria-live="polite"></p>
+    </div>
   </div>
 
   <script src="js/footer.js"></script>

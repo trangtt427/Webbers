@@ -78,14 +78,14 @@
       </section>
 
       <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap">
+        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/baby-design/bdinfigma.png" alt="Documentation of all the available components in the kit" class="case-study-image" />
         </div>
         <figcaption class="case-study-caption">Documentation of all the available components in the kit.</figcaption>
       </figure>
 
       <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap">
+        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/baby-design/bd-header-old.png" alt="Baby Design in Light Mode: Purple" class="case-study-image" />
         </div>
         <figcaption class="case-study-caption">Baby Design in Light Mode: Purple.</figcaption>
@@ -102,6 +102,20 @@
     </main>
 
     <div id="footer-placeholder"></div>
+  </div>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <div class="lightbox-overlay"></div>
+    <button type="button" class="lightbox-close" aria-label="Close">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image" />
+      <p class="lightbox-caption" aria-live="polite"></p>
+    </div>
   </div>
 
   <script src="js/footer.js"></script>

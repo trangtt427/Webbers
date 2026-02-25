@@ -85,7 +85,7 @@
         </div>
       </section>
 
-      <figure class="case-study-image-wrap">
+      <figure class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
         <img src="assets/images/squarespace/airbnbpromo.png" alt="Airbnb listing and service page: list appointment type on Airbnb, Anza Massage Therapy in New York with therapeutic, hot stone, and sports massage options" class="case-study-image" />
       </figure>
 
@@ -100,13 +100,13 @@
         <div class="case-study-two-col-text">
           <p>To be eligible for the integration, Acuity users must offer services in wellness, beauty, food, or photography. There are other requirements as well—the user can't be an Enterprise customer, must be on a paid Acuity subscription, and is the sole admin.</p>
         </div>
-        <figure class="case-study-two-col-image case-study-image-wrap">
+        <figure class="case-study-two-col-image case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/squarespace/modal.png" alt="Airbnb is a vetted marketplace modal: eligible verticals Photography, Fitness, Beauty, Wellness; Connect to Airbnb button" class="case-study-image" />
         </figure>
       </section>
 
       <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap">
+        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/squarespace/airbnbwireframes.png" alt="Wireframes: feature discovery modal, connect to Airbnb banner, post-connection empty and populated states, edit appointment type, calendar booking view" class="case-study-image" />
         </div>
         <figcaption class="case-study-caption">Designs across the journey: feature discovery, connect to Airbnb, then create and manage activities.</figcaption>
@@ -118,7 +118,7 @@
       </section>
 
       <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap">
+        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/squarespace/airbnbfinal.png" alt="Wireframes: feature discovery modal, connect to Airbnb banner, post-connection empty and populated states, edit appointment type, calendar booking view" class="case-study-image" />
         </div>
       </figure>
@@ -135,6 +135,20 @@
     </main>
 
     <div id="footer-placeholder"></div>
+  </div>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <div class="lightbox-overlay"></div>
+    <button type="button" class="lightbox-close" aria-label="Close">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image" />
+      <p class="lightbox-caption" aria-live="polite"></p>
+    </div>
   </div>
 
   <script src="js/footer.js"></script>
