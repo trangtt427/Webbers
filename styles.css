@@ -47,6 +47,23 @@ body * {
   transition: color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing), border-color var(--transition-duration) var(--transition-easing), fill var(--transition-duration) var(--transition-easing), stroke var(--transition-duration) var(--transition-easing);
 }
 
+::selection {
+  background: #b3d4fc;
+  color: inherit;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  color: inherit;
+}
+html.dark ::selection {
+  background: #2a4a6f;
+  color: inherit;
+}
+html.dark ::-moz-selection {
+  background: #2a4a6f;
+  color: inherit;
+}
+
 html.dark {
   --bg: #06070c;
   --text: #f9fafb;
