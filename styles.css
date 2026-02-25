@@ -241,10 +241,11 @@ html.dark .site-nav-dropdown a.nav-active {
 .hamburger-btn .line {
   display: block;
   width: 20px;
-  height: 1px;
+  height: 2px;
   background: currentColor;
-  border-radius: 0.5px;
+  border-radius: 1px;
   transition: transform var(--transition-duration) var(--transition-easing), opacity var(--transition-duration) var(--transition-easing);
+  /* 2px avoids subpixel rendering differences on high-DPI mobile (Firefox vs Chrome) */
 }
 .hamburger-btn .line + .line { margin-top: 5px; }
 .hamburger-btn[aria-expanded="true"] .line:nth-child(1) {
@@ -365,7 +366,8 @@ html.dark .site-nav-dropdown a.nav-active {
   display: block;
   width: 20px;
   height: 0;
-  border-top: 1px solid currentColor;
+  border-top: 2px solid currentColor;
+  border-radius: 1px;
   background: none;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
