@@ -403,8 +403,8 @@ html.dark .site-nav-dropdown a.nav-active {
 }
 
 .theme-toggle {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
   border: none;
   display: inline-flex;
@@ -424,8 +424,8 @@ html.dark .site-nav-dropdown a.nav-active {
 }
 
 .theme-toggle svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   position: absolute;
   left: 50%;
   top: 50%;
