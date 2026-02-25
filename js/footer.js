@@ -7,7 +7,8 @@
 
   var footerHTML =
     '<footer class="site-footer">' +
-    '<p class="site-footer-copy">© 2026 Trang Tran</p>' +
+    '<div class="site-footer-main">' +
+    '<p class="site-footer-copy site-footer-copy--first">© 2026 Trang Tran</p>' +
     '<p class="site-footer-copy"><span class="footer-strikethrough">Built from scratch with my atrocious code</span></p>' +
     '<p class="site-footer-tagline">Rebuilt with AI to look like the original ♥</p>' +
     '<div class="site-footer-social" aria-label="Social links">' +
@@ -23,6 +24,14 @@
     '<a href="mailto:004tran@gmail.com" aria-label="Email" class="footer-icon">' +
     '<img src="assets/icons/emailround.svg" alt="" width="40" height="40" />' +
     '</a>' +
+    '</div>' +
+    '</div>' +
+    '<div class="site-footer-clock" aria-label="Local time">' +
+    '<svg class="footer-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />' +
+    '</svg>' +
+    '<span class="site-footer-location">SJ, CA</span>' +
+    '<div class="site-footer-time" id="clock">00:00:00</div>' +
     '</div>' +
     '</footer>';
 
