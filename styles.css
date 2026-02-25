@@ -457,6 +457,18 @@ html.dark .site-nav-dropdown a.nav-active {
   border-radius: 8px;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
 }
+.lightbox-video {
+  display: none;
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+}
+.lightbox-video.is-visible {
+  display: block;
+}
 .lightbox-caption {
   font-size: 16px;
   line-height: 1.5;
@@ -719,9 +731,10 @@ html.dark .theme-toggle:hover .icon-sun {
   font-weight: 400;
   color: var(--text);
   line-height: 1.5;
+  max-width: 56ch;
 }
 .about-currently-value p {
-  margin: 0 0 0.5em;
+  margin: 0 0 1em;
 }
 .about-currently-value p:last-child {
   margin-bottom: 0;

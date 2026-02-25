@@ -309,13 +309,31 @@
   var overlay = lightbox.querySelector('.lightbox-overlay');
   var content = lightbox.querySelector('.lightbox-content');
   var img = lightbox.querySelector('.lightbox-image');
+  var videoEl = lightbox.querySelector('.lightbox-video');
   var closeBtn = lightbox.querySelector('.lightbox-close');
   var captionEl = lightbox.querySelector('.lightbox-caption');
 
+  function isVideoSrc(src) {
+    return /\.(mp4|webm|ogg)(\?|$)/i.test(src || '');
+  }
+
   function openLightbox(src, alt, caption) {
-    if (!img) return;
-    img.src = src;
-    img.alt = alt || '';
+    var showVideo = isVideoSrc(src);
+    if (showVideo && videoEl) {
+      videoEl.innerHTML = '<source src="' + src.replace(/"/g, '&quot;') + '" type="video/mp4" />';
+      videoEl.classList.add('is-visible');
+      if (img) img.style.display = 'none';
+      videoEl.play().catch(function() {});
+    } else if (img) {
+      img.src = src;
+      img.alt = alt || '';
+      img.style.display = '';
+      if (videoEl) {
+        videoEl.innerHTML = '';
+        videoEl.classList.remove('is-visible');
+        videoEl.pause();
+      }
+    }
     if (captionEl) {
       captionEl.textContent = caption || '';
     }
@@ -338,7 +356,15 @@
       lightbox.hidden = true;
       lightbox.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
-      if (img) img.removeAttribute('src');
+      if (img) {
+        img.removeAttribute('src');
+        img.style.display = '';
+      }
+      if (videoEl) {
+        videoEl.pause();
+        videoEl.innerHTML = '';
+        videoEl.classList.remove('is-visible');
+      }
       if (captionEl) captionEl.textContent = '';
     }
     lightbox.addEventListener('transitionend', hideAfterTransition);
@@ -351,17 +377,25 @@
     return cap ? cap.textContent.trim() : '';
   }
 
-  document.querySelectorAll('.case-study-image-wrap.lightbox-openable').forEach(function(wrap) {
+  function getMediaSrcAndAlt(wrap) {
     var im = wrap.querySelector('img');
-    if (!im) return;
+    if (im) return { src: im.src, alt: im.alt };
+    var source = wrap.querySelector('video source');
+    if (source) return { src: source.getAttribute('src') || '', alt: '' };
+    return null;
+  }
+
+  document.querySelectorAll('.case-study-image-wrap.lightbox-openable').forEach(function(wrap) {
     wrap.addEventListener('click', function(e) {
       if (e.target === closeBtn) return;
-      openLightbox(im.src, im.alt, getCaptionForWrap(wrap));
+      var media = getMediaSrcAndAlt(wrap);
+      if (media && media.src) openLightbox(media.src, media.alt, getCaptionForWrap(wrap));
     });
     wrap.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        openLightbox(im.src, im.alt, getCaptionForWrap(wrap));
+        var media = getMediaSrcAndAlt(wrap);
+        if (media && media.src) openLightbox(media.src, media.alt, getCaptionForWrap(wrap));
       }
     });
   });
