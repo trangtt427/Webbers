@@ -699,16 +699,6 @@ html.dark .theme-toggle:hover .icon-sun {
 .about-two-col-text p:last-child {
   margin-bottom: 0;
 }
-@media (max-width: 768px) {
-  .about-two-col {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .about-two-col-text p,
-  .about-currently-value {
-    font-size: 16px;
-  }
-}
 
 .about-currently {
   margin-top: 120px;
@@ -727,13 +717,13 @@ html.dark .theme-toggle:hover .icon-sun {
   color: var(--muted-soft);
 }
 .about-currently-value {
-  font-size: 20px;
   font-weight: 400;
   color: var(--text);
   line-height: 1.5;
   max-width: 56ch;
 }
 .about-currently-value p {
+  font-size: 20px;
   margin: 0 0 1em;
 }
 .about-currently-value p:last-child {
@@ -759,6 +749,18 @@ html.dark .theme-toggle:hover .icon-sun {
 .about-currently-value a:hover::after {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .about-two-col {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .about-two-col-text p,
+  .about-currently-value p {
+    font-size: 17px;
+  }
+}
+
 @media (max-width: 600px) {
   .about-currently-row {
     grid-template-columns: 1fr;
@@ -1053,7 +1055,7 @@ html.dark .case-study-image-wrap--tint {
   .case-study-body p,
   .case-study-section p,
   .case-study-two-col-text p {
-    font-size: 16px;
+    font-size: 17px;
   }
   .case-study-two-col {
     grid-template-columns: 1fr;
