@@ -389,7 +389,10 @@
     wrap.addEventListener('click', function(e) {
       if (e.target === closeBtn) return;
       var media = getMediaSrcAndAlt(wrap);
-      if (media && media.src) openLightbox(media.src, media.alt, getCaptionForWrap(wrap));
+      if (media && media.src) {
+        e.preventDefault();
+        openLightbox(media.src, media.alt, getCaptionForWrap(wrap));
+      }
     });
     wrap.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {

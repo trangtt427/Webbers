@@ -926,6 +926,7 @@ html.dark .case-study-image-wrap--tint {
   overflow: hidden;
   border: 1px solid var(--border);
   background: #0f0f0f;
+  cursor: pointer;
 }
 .case-study-videos-side-by-side .case-study-video-wrap video {
   width: 100%;
