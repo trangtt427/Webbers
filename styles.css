@@ -67,8 +67,8 @@ html.dark ::-moz-selection {
 html.dark {
   --bg: #06070c;
   --text: #f9fafb;
-  --muted: #5a7590;
-  --muted-soft: #5a7590;
+  --muted: #7b8a9a;
+  --muted-soft: #7b8a9a;
   --border: #1f2933;
   --project-text: #d1d5db;
 
@@ -910,6 +910,28 @@ html.dark .theme-toggle:hover .icon-sun {
 }
 html.dark .case-study-image-wrap--tint {
   background: rgba(255, 255, 255, 0.06);
+}
+
+.case-study-videos-side-by-side {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.case-study-videos-side-by-side .case-study-video-wrap {
+  margin: 0;
+}
+.case-study-videos-side-by-side .case-study-video-inner {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0f0f0f;
+}
+.case-study-videos-side-by-side .case-study-video-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
 }
 
 .case-study-body {

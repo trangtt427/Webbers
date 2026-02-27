@@ -92,13 +92,19 @@
       <section class="case-study-body">
         <h2>In 2025, Airbnb reached out to the Acuity Scheduling team with a partnership opportunity.
         </h2>
-        <p>In what was described as their biggest release of the summer, Airbnb would integrate with Acuity Scheduling (Squarespace's booking platform) so that users can offer there services on Airbnb's vetted marketplace. Acuity would get commission from those Airbnb bookings.
+        <p>In what was described as their biggest release of the summer, Airbnb would integrate with Acuity Scheduling (Squarespace's booking platform) so that users in verticals like photography, beauty, and food can offer their services on Airbnb's vetted marketplace. Acuity would get commission from those Airbnb bookings.
+        </p>
+      </section>
+
+      <section class="case-study-body">
+        <h2>I was tasked to lead the design of the full user journey of this integration.</h2>
+        <p>I shaped the entire experience, from feature discovery to post-connection empty and populated states, edit appointment type, and calendar booking view. Aside from working closely with Product and Engineering on the Acuity side, I collaborated with the Airbnb product development team to move in lockstep and make sure our systems were in sync.
         </p>
       </section>
 
       <section class="case-study-two-col case-study-two-col--centered case-study-two-col--right-wide">
         <div class="case-study-two-col-text">
-          <p>To be eligible for the integration, Acuity users must offer services in wellness, beauty, food, or photography. There are other requirements as well—the user can't be an Enterprise customer, must be on a paid Acuity subscription, and is the sole admin.</p>
+          <p>We had to first identify the exact vertical eligibility criteria for the integration and make sure that the right users were able to see the integration. This includes other requirements as well—the user can't be an Enterprise customer, doesn't need HIPAA compliance,must be on a paid Acuity subscription, and is the sole admin.</p>
         </div>
         <figure class="case-study-two-col-image case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
           <img src="assets/images/squarespace/modal.png" alt="Airbnb is a vetted marketplace modal: eligible verticals Photography, Fitness, Beauty, Wellness; Connect to Airbnb button" class="case-study-image" />
@@ -107,15 +113,34 @@
 
       <figure class="case-study-figure-caption">
         <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
-          <img src="assets/images/squarespace/airbnbwireframes.png" alt="Wireframes: feature discovery modal, connect to Airbnb banner, post-connection empty and populated states, edit appointment type, calendar booking view" class="case-study-image" />
+          <img src="assets/images/squarespace/airbnbflows.png" alt="Wireframes: feature discovery modal, connect to Airbnb banner, post-connection empty and populated states, edit appointment type, calendar booking view" class="case-study-image" />
         </div>
         <figcaption class="case-study-caption">Designs across the journey: feature discovery, connect to Airbnb, then create and manage activities.</figcaption>
       </figure>
 
       <section class="case-study-body">
         <h2>The build was highly complex, with many dependencies on Airbnb.</h2>
-        <p>A lot of deep technical work was required to make calendars and availabilities sync across both platforms. Airbnb had strict requirements related to activity durations, so we had to create validations and enforce certain rules in Acuity. We also gated the integration so only users in the accepted verticals could see it.</p>
+        <p>A lot of deep technical work was required to make calendars and availabilities sync across both platforms. Airbnb had strict requirements related to activity durations, so we had to create validations and enforce certain rules in Acuity. Although it would be incredibly rare, I still thought in terms of extreme edge cases such as previously eligible admins becoming HIPAA-compliant.</p>
       </section>
+
+      <div class="case-study-videos-side-by-side">
+        <figure class="case-study-video-wrap">
+          <div class="case-study-video-inner">
+            <video autoplay loop muted playsinline>
+              <source src="assets/videos/squarespace/modalannouncement.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <figcaption class="case-study-caption">Eligible users will see a one time modal appear upon logging in.</figcaption>
+        </figure>
+        <figure class="case-study-video-wrap">
+          <div class="case-study-video-inner">
+            <video autoplay loop muted playsinline>
+              <source src="assets/videos/squarespace/calendarview.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <figcaption class="case-study-caption">Once an appointment gets scheduled on Airbnb's side, details will surface on the calendar view, but can only be edited in Airbnb.</figcaption>
+        </figure>
+      </div>
 
       <figure class="case-study-figure-caption">
         <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
