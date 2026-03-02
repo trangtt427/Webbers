@@ -892,10 +892,6 @@ html.dark .theme-toggle:hover .icon-sun {
   height: auto;
   display: block;
   vertical-align: middle;
-  transition: transform var(--transition-duration) var(--transition-easing);
-}
-.case-study-image-wrap:hover .case-study-image {
-  transform: scale(1.05);
 }
 .case-study-figure-caption {
   margin-top: 200px;
@@ -937,10 +933,6 @@ html.dark .case-study-image-wrap--tint {
   height: auto;
   display: block;
   vertical-align: middle;
-  transition: transform var(--transition-duration) var(--transition-easing);
-}
-.case-study-videos-side-by-side .case-study-video-inner:hover video {
-  transform: scale(1.05);
 }
 
 .case-study-body {
