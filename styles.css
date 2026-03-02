@@ -1319,6 +1319,11 @@ html.dark .project-dot--active {
   text-align: center;
 }
 .project-video-wrap.video-ready .no-video { display: none; }
+.project-video-wrap.video-error .no-video {
+  max-width: 280px;
+  text-align: center;
+  font-size: 0.9rem;
+}
 
 .project-image-wrap .project-image {
   width: 100%;
