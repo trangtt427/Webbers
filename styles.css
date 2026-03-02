@@ -892,6 +892,10 @@ html.dark .theme-toggle:hover .icon-sun {
   height: auto;
   display: block;
   vertical-align: middle;
+  transition: transform var(--transition-duration) var(--transition-easing);
+}
+.case-study-image-wrap:hover .case-study-image {
+  transform: scale(1.05);
 }
 .case-study-figure-caption {
   margin-top: 200px;
@@ -933,6 +937,10 @@ html.dark .case-study-image-wrap--tint {
   height: auto;
   display: block;
   vertical-align: middle;
+  transition: transform var(--transition-duration) var(--transition-easing);
+}
+.case-study-videos-side-by-side .case-study-video-inner:hover video {
+  transform: scale(1.05);
 }
 
 .case-study-body {
@@ -1104,11 +1112,27 @@ html.dark .case-study-image-wrap--tint {
   color: var(--text);
 }
 .case-study-next-title a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.2em;
   color: inherit;
   text-decoration: none;
 }
 .case-study-next-title a:hover {
   text-decoration: none;
+}
+.case-study-next-title a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
+}
+.case-study-next-title a:hover::after {
+  width: 100%;
 }
 
 .case-study-related {
@@ -1123,11 +1147,27 @@ html.dark .case-study-image-wrap--tint {
   color: var(--text);
 }
 .case-study-related-title a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.2em;
   color: inherit;
   text-decoration: none;
 }
 .case-study-related-title a:hover {
   text-decoration: none;
+}
+.case-study-related-title a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
+}
+.case-study-related-title a:hover::after {
+  width: 100%;
 }
 .case-study-related-by {
   font-size: 16px;
@@ -1195,11 +1235,28 @@ html.dark .case-study-image-wrap--tint {
   color: var(--text);
 }
 .project-title a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.2em;
   color: inherit;
   text-decoration: none;
 }
 .project-title a:hover {
   text-decoration: none;
+}
+.project-title a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
+}
+.project:has(.project-media:hover) .project-title a::after,
+.project:has(.project-title a:hover) .project-title a::after {
+  width: 100%;
 }
 .project-media-link {
   display: block;
@@ -1254,6 +1311,11 @@ html.dark .project-dot--active {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform var(--transition-duration) var(--transition-easing);
+}
+.project:has(.project-media:hover) .project-video-wrap video,
+.project:has(.project-title a:hover) .project-video-wrap video {
+  transform: scale(1.05);
 }
 .project-video-wrap .no-video {
   position: absolute;
@@ -1271,6 +1333,11 @@ html.dark .project-dot--active {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform var(--transition-duration) var(--transition-easing);
+}
+.project:has(.project-media:hover) .project-image-wrap .project-image,
+.project:has(.project-title a:hover) .project-image-wrap .project-image {
+  transform: scale(1.05);
 }
 
 /* Project mockup (gradient + phone image) */
@@ -1289,6 +1356,11 @@ html.dark .project-dot--active {
   align-items: center;
   justify-content: center;
   padding: 24px;
+  transition: transform var(--transition-duration) var(--transition-easing);
+}
+.project:has(.project-media:hover) .project-mockup-bg,
+.project:has(.project-title a:hover) .project-mockup-bg {
+  transform: scale(1.05);
 }
 .project-mockup-bg::before {
   content: '';
