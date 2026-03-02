@@ -1246,7 +1246,7 @@ html.dark .case-study-image-wrap--tint {
   background-color: currentColor;
   transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
 }
-.project:has(.project-media:hover) .project-title a::after,
+.project:has(.project-media-link:hover) .project-title a::after,
 .project:has(.project-title a:hover) .project-title a::after {
   width: 100%;
 }
@@ -1305,7 +1305,7 @@ html.dark .project-dot--active {
   display: block;
   transition: transform var(--transition-duration) var(--transition-easing);
 }
-.project:has(.project-media:hover) .project-video-wrap video,
+.project:has(.project-media-link:hover) .project-video-wrap video,
 .project:has(.project-title a:hover) .project-video-wrap video {
   transform: scale(1.05);
 }
@@ -1327,7 +1327,7 @@ html.dark .project-dot--active {
   display: block;
   transition: transform var(--transition-duration) var(--transition-easing);
 }
-.project:has(.project-media:hover) .project-image-wrap .project-image,
+.project:has(.project-media-link:hover) .project-image-wrap .project-image,
 .project:has(.project-title a:hover) .project-image-wrap .project-image {
   transform: scale(1.05);
 }
@@ -1350,7 +1350,7 @@ html.dark .project-dot--active {
   padding: 24px;
   transition: transform var(--transition-duration) var(--transition-easing);
 }
-.project:has(.project-media:hover) .project-mockup-bg,
+.project:has(.project-media-link:hover) .project-mockup-bg,
 .project:has(.project-title a:hover) .project-mockup-bg {
   transform: scale(1.05);
 }
