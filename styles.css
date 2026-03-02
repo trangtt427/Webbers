@@ -1092,6 +1092,12 @@ html.dark .case-study-image-wrap--tint {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+  .case-study-two-col .case-study-two-col-image {
+    order: 1;
+  }
+  .case-study-two-col .case-study-two-col-text {
+    order: 2;
+  }
   .case-study-image-wrap {
     margin-top: 80px;
   }
