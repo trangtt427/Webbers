@@ -1106,7 +1106,7 @@ html.dark .case-study-image-wrap--tint {
 .case-study-next-title a {
   display: inline-block;
   position: relative;
-  padding-bottom: 0.2em;
+  padding-bottom: 1px;
   color: inherit;
   text-decoration: none;
 }
@@ -1116,7 +1116,7 @@ html.dark .case-study-image-wrap--tint {
 .case-study-next-title a::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   left: 0;
   width: 0;
   height: 1px;
@@ -1141,7 +1141,7 @@ html.dark .case-study-image-wrap--tint {
 .case-study-related-title a {
   display: inline-block;
   position: relative;
-  padding-bottom: 0.2em;
+  padding-bottom: 1px;
   color: inherit;
   text-decoration: none;
 }
@@ -1151,7 +1151,7 @@ html.dark .case-study-image-wrap--tint {
 .case-study-related-title a::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   left: 0;
   width: 0;
   height: 1px;
@@ -1229,7 +1229,7 @@ html.dark .case-study-image-wrap--tint {
 .project-title a {
   display: inline-block;
   position: relative;
-  padding-bottom: 0.2em;
+  padding-bottom: 1px;
   color: inherit;
   text-decoration: none;
 }
@@ -1239,7 +1239,7 @@ html.dark .case-study-image-wrap--tint {
 .project-title a::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   left: 0;
   width: 0;
   height: 1px;
