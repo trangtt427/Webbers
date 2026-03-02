@@ -1213,7 +1213,7 @@ html.dark .case-study-image-wrap--tint {
 
 /* Projects section */
 .projects-label {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: normal;
   color: var(--muted-soft);
