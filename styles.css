@@ -645,10 +645,13 @@ html.dark .theme-toggle:hover .icon-sun {
   .hero {
     transition-duration: 0.4s;
   }
+  .hero h1 {
+    font-size: 24px;
+  }
 }
 .hero h1 {
 
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -787,11 +790,16 @@ html.dark .theme-toggle:hover .icon-sun {
   transform: translateX(0);
 }
 .case-study-headline {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--text);
   max-width: 850px;
+}
+@media (max-width: 768px) {
+  .case-study-headline {
+    font-size: 24px;
+  }
 }
 @media (min-width: 768px) {
   .case-study-headline {
@@ -941,7 +949,7 @@ html.dark .case-study-image-wrap--tint {
 }
 .case-study-body h2 {
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--text);
   margin: 48px 0 40px;
   line-height: 1.25;
@@ -1073,7 +1081,7 @@ html.dark .case-study-image-wrap--tint {
 @media (max-width: 768px) {
   .case-study-body h2,
   .case-study-two-col-text h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
   .case-study-body p,
   .case-study-section p,
@@ -1083,6 +1091,42 @@ html.dark .case-study-image-wrap--tint {
   .case-study-two-col {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+  .case-study-image-wrap {
+    margin-top: 80px;
+  }
+  .case-study-details + .case-study-image-wrap {
+    margin-top: 48px;
+  }
+  .case-study-figure-caption {
+    margin-top: 80px;
+  }
+  .case-study-body {
+    margin-top: 80px;
+  }
+  .case-study-body h2:first-child {
+    margin-top: 48px;
+  }
+  .case-study-body h2:not(:first-child) {
+    margin-top: 48px;
+  }
+  .case-study-section {
+    margin-top: 80px;
+  }
+  .case-study-two-col {
+    margin-top: 80px;
+  }
+  .case-study-videos-side-by-side {
+    margin-top: 48px;
+    gap: 48px;
+  }
+  .case-study-next {
+    margin-top: 80px;
+    padding-top: 24px;
+  }
+  .case-study-related {
+    margin-top: 48px;
+    padding-top: 24px;
   }
 }
 
@@ -1225,6 +1269,11 @@ html.dark .case-study-image-wrap--tint {
   font-weight: 400;
   margin-bottom: 8px;
   color: var(--text);
+}
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 24px;
+  }
 }
 .project-title a {
   display: inline-block;
