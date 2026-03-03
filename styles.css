@@ -952,23 +952,14 @@ html.dark .case-study-image-wrap--tint {
   background: rgba(255, 255, 255, 0.06);
 }
 
-.case-study-videos-side-by-side {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-.case-study-videos-side-by-side .case-study-video-wrap {
-  margin: 0;
-}
-.case-study-videos-side-by-side .case-study-video-inner {
+.case-study-figure-caption.case-study-video-wrap .case-study-video-inner {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: #0f0f0f;
   cursor: pointer;
 }
-.case-study-videos-side-by-side .case-study-video-wrap video {
+.case-study-figure-caption.case-study-video-wrap video {
   width: 100%;
   height: auto;
   display: block;
@@ -1153,10 +1144,6 @@ html.dark .case-study-image-wrap--tint {
   }
   .case-study-two-col {
     margin-top: 80px;
-  }
-  .case-study-videos-side-by-side {
-    margin-top: 48px;
-    gap: 48px;
   }
   .case-study-next {
     margin-top: 80px;
