@@ -37,6 +37,18 @@
 })();
 
 (function() {
+  // About page hero: animate from left on load (same as index hero, case study intro)
+  var aboutHeroContent = document.querySelector('.about-hero-content');
+  if (aboutHeroContent) {
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        aboutHeroContent.classList.add('about-hero-content-in');
+      });
+    });
+  }
+})();
+
+(function() {
   // About page: two-col section move-in from left when scrolled into view (same trigger as project cards)
   var aboutTwoCol = document.querySelector('.about-two-col');
   if (!aboutTwoCol || !('IntersectionObserver' in window)) return;

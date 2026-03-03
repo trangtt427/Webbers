@@ -673,6 +673,20 @@ html.dark .theme-toggle:hover .icon-sun {
   border-bottom: 1px solid var(--border);
   align-items: start;
 }
+.about-hero-content {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+}
+.about-hero-content.about-hero-content-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (max-width: 768px) {
+  .about-hero-content {
+    transition-duration: 0.4s;
+  }
+}
 .about-hero-content h1 {
   font-weight: 400;
   line-height: 1.25;
