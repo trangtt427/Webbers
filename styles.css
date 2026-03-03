@@ -646,7 +646,7 @@ html.dark .theme-toggle:hover .icon-sun {
     transition-duration: 0.4s;
   }
   .hero h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 .hero h1 {
@@ -1031,7 +1031,7 @@ html.dark .case-study-image-wrap--tint {
   margin-top: 200px;
 }
 .case-study-section h3 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 400;
   color: var(--text);
   margin: 0 0 12px;
@@ -1310,7 +1310,7 @@ html.dark .case-study-image-wrap--tint {
 }
 @media (max-width: 768px) {
   .project-title {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 .project-title a {
