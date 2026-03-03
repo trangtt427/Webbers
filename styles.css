@@ -664,7 +664,39 @@ html.dark .theme-toggle:hover .icon-sun {
 }
 .hero .emoji { font-size: 1.15em; }
 
-.hero.about-page-content h1 { margin-left: auto; }
+.about-hero-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 200px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.about-hero-content h1 {
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .about-hero-content h1 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .about-hero-content h1 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-hero-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 16px 0;
+  }
+}
 
 .about-two-col {
   margin-top: 120px;
