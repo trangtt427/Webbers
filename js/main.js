@@ -90,6 +90,16 @@
 })();
 
 (function() {
+  // Case study hero media (first image/video after intro): animate on load, same as intro
+  var heroMedia = document.querySelector('.case-study-hero-media');
+  if (heroMedia) {
+    setTimeout(function() {
+      heroMedia.classList.add('case-study-image-in-view');
+    }, 150);
+  }
+})();
+
+(function() {
   // Case study page: images fade in and move up on scroll (like index case studies)
   var images = document.querySelectorAll('.case-study .case-study-image-wrap');
   if (!images.length || !('IntersectionObserver' in window)) return;
