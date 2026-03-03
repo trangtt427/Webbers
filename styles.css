@@ -809,7 +809,7 @@ html.dark .theme-toggle:hover .icon-sun {
   background: var(--bg);
   color: var(--text);
   padding-top: 0;
-  margin-bottom: 160px;
+  margin-bottom: 48px;
 }
 .case-study-intro {
   margin-bottom: 48px;
