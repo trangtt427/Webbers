@@ -863,7 +863,7 @@ html.dark .homepage-toc-link.toc-active {
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 200px;
-  padding: 20px 0;
+  padding: 40px 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   align-items: start;
@@ -896,7 +896,7 @@ html.dark .homepage-toc-link.toc-active {
 }
 @media (min-width: 768px) {
   .about-hero-content h1 {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 @media (max-width: 1024px) {
