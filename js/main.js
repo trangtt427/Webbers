@@ -13,10 +13,13 @@
 (function() {
   // Hero entrance animation on homepage: starts right away, moves up from farther, longer animation
   var hero = document.querySelector('.hero');
-  if (hero) {
+  var homepageIntro = document.querySelector('.homepage-intro');
+  var target = hero || homepageIntro;
+  if (target) {
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
-        hero.classList.add('hero-in');
+        if (hero) hero.classList.add('hero-in');
+        if (homepageIntro) homepageIntro.classList.add('homepage-intro-in');
       });
     });
   }
@@ -69,9 +72,11 @@
 })();
 
 (function() {
-  // Case studies animate 0.1s after scrolling to their positions
+  // Case studies / homepage case studies animate 0.1s after scrolling to their positions
   var projects = document.querySelectorAll('.project');
-  if (!projects.length || !('IntersectionObserver' in window)) return;
+  var homepageCaseStudies = document.querySelectorAll('.homepage-case-study');
+  var targets = projects.length ? projects : homepageCaseStudies;
+  if (!targets.length || !('IntersectionObserver' in window)) return;
 
   var observer = new IntersectionObserver(
     function(entries) {
@@ -79,14 +84,88 @@
         if (entry.isIntersecting) {
           var el = entry.target;
           setTimeout(function() {
-            el.classList.add('project-in-view');
+            el.classList.add(projects.length ? 'project-in-view' : 'homepage-case-study-in-view');
           }, 100);
         }
       });
     },
     { rootMargin: '0px 0px 20px 0px', threshold: 0 }
   );
-  projects.forEach(function(project) { observer.observe(project); });
+  for (var i = 0; i < targets.length; i++) observer.observe(targets[i]);
+})();
+
+(function() {
+  // Homepage TOC scroll-spy: highlight active section as user scrolls
+  var toc = document.querySelector('.homepage-toc');
+  if (!toc || !('IntersectionObserver' in window)) return;
+
+  var sectionIds = ['intro', 'squarespace', 'human-interest', 'tactic', 'baby-design-ui'];
+  var sections = [];
+  for (var i = 0; i < sectionIds.length; i++) {
+    var el = document.getElementById(sectionIds[i]);
+    if (el) sections.push(el);
+  }
+  var tocLinks = toc.querySelectorAll('.homepage-toc-link');
+
+  function setActive(id) {
+    for (var j = 0; j < tocLinks.length; j++) {
+      var link = tocLinks[j];
+      if ((link.getAttribute('href') || '').replace('#', '') === id) {
+        link.classList.add('toc-active');
+      } else {
+        link.classList.remove('toc-active');
+      }
+    }
+  }
+
+  function updateActive() {
+    var vh = window.innerHeight;
+    var activeId = null;
+    var minTop = Infinity;
+
+    for (var k = 0; k < sections.length; k++) {
+      var rect = sections[k].getBoundingClientRect();
+      if (rect.top <= vh * 0.35 && rect.bottom > 0) {
+        if (rect.top < minTop) {
+          minTop = rect.top;
+          activeId = sections[k].id;
+        }
+      }
+    }
+    if (!activeId && sections.length) {
+      var topmost = null;
+      var topmostTop = Infinity;
+      for (var n = 0; n < sections.length; n++) {
+        var r = sections[n].getBoundingClientRect();
+        if (r.top >= 0 && r.top < topmostTop) {
+          topmostTop = r.top;
+          topmost = sections[n].id;
+        } else if (r.top < 0 && r.bottom > 0) {
+          topmost = sections[n].id;
+          break;
+        }
+      }
+      activeId = topmost || sections[0].id;
+    }
+    if (activeId) setActive(activeId);
+  }
+
+  var observer = new IntersectionObserver(
+    function() { updateActive(); },
+    { rootMargin: '-20% 0px -50% 0px', threshold: 0 }
+  );
+  for (var m = 0; m < sections.length; m++) observer.observe(sections[m]);
+  updateActive();
+
+  var scrollTicking = false;
+  window.addEventListener('scroll', function() {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(function() {
+      updateActive();
+      scrollTicking = false;
+    });
+  }, { passive: true });
 })();
 
 (function() {
