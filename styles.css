@@ -826,6 +826,13 @@ html.dark .homepage-toc-link.toc-active {
 .homepage-case-study-cta:hover::after {
   width: 100%;
 }
+.homepage-case-study-cta--coming-soon {
+  color: var(--muted-soft);
+  cursor: default;
+}
+.homepage-case-study-cta--coming-soon::after {
+  display: none;
+}
 
 @media (max-width: 1000px) {
   .homepage-toc {
