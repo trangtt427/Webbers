@@ -690,7 +690,7 @@ html.dark .theme-toggle:hover .icon-sun {
 }
 .homepage-toc-link {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1rem;
   padding: 0;
   margin: 0;
   color: var(--muted-soft);
@@ -730,11 +730,11 @@ html.dark .homepage-toc-link.toc-active {
   transform: translateX(0);
 }
 .homepage-intro h1 {
-  font-size: 1rem;
+  font-size: 28px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.25;
   color: var(--text);
-  max-width: 400px;
+  max-width: 600px;
 }
 @media (max-width: 768px) {
   .homepage-intro {
@@ -742,7 +742,7 @@ html.dark .homepage-toc-link.toc-active {
     transition-duration: 0.4s;
   }
 }
-.homepage-intro .emoji { font-size: 1.15em; }
+.homepage-intro .emoji { font-size: 0.85em; vertical-align: baseline; }
 
 .homepage-case-study {
   padding: 80px 0;
@@ -852,6 +852,9 @@ html.dark .homepage-toc-link.toc-active {
     order: 2;
   }
   .homepage-case-study-title {
+    font-size: 24px;
+  }
+  .homepage-intro h1 {
     font-size: 24px;
   }
 }
