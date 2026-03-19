@@ -200,6 +200,7 @@ a:hover { text-decoration: underline; }
   font-weight: 400;
   margin-left: 12px;
   color: inherit;
+  transition: none;
 }
 .site-name .emoji { font-size: 1.1em; }
 .site-time-wrap {
@@ -873,9 +874,6 @@ html.dark .homepage-toc-link.toc-active {
 }
 .homepage-case-study--last {
   border-bottom: none;
-}
-.homepage-case-study + .homepage-case-study {
-  padding-top: 0;
 }
 .homepage-case-study-inner {
   display: grid;
