@@ -830,14 +830,17 @@ html.dark .homepage-toc-link.toc-active {
 
 .homepage-intro {
   margin-top: 0;
-  margin-bottom: 160px;
+  margin-bottom: 32px;
+  padding-bottom: 160px;
+  border-bottom: 1px solid var(--border);
   opacity: 0;
   transform: translateX(-32px);
   transition: opacity 0.65s ease-out, transform 0.65s ease-out;
 }
 @media (min-width: 769px) {
   .homepage-intro {
-    margin-bottom: 240px;
+    margin-bottom: 48px;
+    padding-bottom: 240px;
   }
 }
 .homepage-intro.homepage-intro-in {
@@ -863,7 +866,8 @@ html.dark .homepage-toc-link.toc-active {
 @media (max-width: 768px) {
   .homepage-intro {
     margin-top: 48px;
-    margin-bottom: 80px;
+    margin-bottom: 24px;
+    padding-bottom: 80px;
     transition-duration: 0.4s;
   }
 }
