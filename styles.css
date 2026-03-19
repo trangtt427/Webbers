@@ -131,7 +131,10 @@ a:hover { text-decoration: underline; }
   }
 }
 
-/* Floating logo – all pages */
+/* Floating logo – case study and about pages only (homepage has logo in TOC) */
+body:has(.homepage-layout) .floating-logo {
+  display: none;
+}
 .floating-logo {
   display: block;
   position: fixed;
