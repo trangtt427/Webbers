@@ -98,18 +98,19 @@ a:hover { text-decoration: underline; }
 .wrap:has(.homepage-layout) {
   padding-top: 120px;
 }
+.site-header {
+  display: none;
+}
 @media (min-width: 769px) {
-  .wrap:has(.homepage-layout) .site-header {
-    display: none;
-  }
   .wrap:has(.homepage-layout) {
     padding-top: 48px;
   }
+  .wrap:has(.case-study),
+  .wrap:has(.about-hero) {
+    padding-top: 120px;
+  }
 }
 @media (max-width: 768px) {
-  .site-header {
-    display: none;
-  }
   .theme-toggle-footer {
     display: flex;
   }
@@ -119,14 +120,20 @@ a:hover { text-decoration: underline; }
   .wrap:has(.homepage-layout) {
     padding-top: 100px;
   }
-  .wrap:has(.case-study) {
+  .wrap:has(.case-study),
+  .wrap:has(.about-hero) {
     padding-top: 120px;
   }
 }
+@media (min-width: 769px) {
+  .wrap:not(:has(.homepage-layout)) .theme-toggle-footer {
+    display: flex !important;
+  }
+}
 
-/* Floating logo for mobile */
+/* Floating logo – all pages */
 .floating-logo {
-  display: none;
+  display: block;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -139,22 +146,21 @@ a:hover { text-decoration: underline; }
 .floating-logo img {
   width: 48px;
   height: auto;
-}
-@media (max-width: 768px) {
-  .floating-logo {
-    display: block;
-  }
-  .floating-logo img {
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
-  }
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
 }
 html.dark .floating-logo img {
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
 }
-.wrap:has(.case-study) {
-  padding-top: 200px;
+@media (min-width: 769px) {
+  .floating-logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border: 1px solid var(--text);
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
 }
-
 /* Header: full-width bar, content max 1100px centered */
 .site-header {
   position: fixed;
