@@ -29,7 +29,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html {
   scroll-behavior: smooth;
-  overscroll-behavior: none;
+}
+@media (min-width: 769px) {
+  html {
+    overscroll-behavior: none;
+  }
 }
 
 :root {
@@ -57,8 +61,12 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior: none;
   transition: background-color var(--transition-duration) var(--transition-easing), color var(--transition-duration) var(--transition-easing);
+}
+@media (min-width: 769px) {
+  body {
+    overscroll-behavior: none;
+  }
 }
 body * {
   transition: color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing), border-color var(--transition-duration) var(--transition-easing), fill var(--transition-duration) var(--transition-easing), stroke var(--transition-duration) var(--transition-easing);
