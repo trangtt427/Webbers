@@ -835,7 +835,7 @@ html.dark .homepage-toc-link.toc-active {
   border-bottom: 1px solid var(--border);
   opacity: 0;
   transform: translateX(-32px);
-  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out, border-color var(--transition-duration) var(--transition-easing);
 }
 @media (min-width: 769px) {
   .homepage-intro {
@@ -878,7 +878,7 @@ html.dark .homepage-toc-link.toc-active {
   border-bottom: 1px solid var(--border);
   opacity: 0;
   transform: translateX(-32px);
-  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out, border-color var(--transition-duration) var(--transition-easing);
 }
 .homepage-case-study.homepage-case-study-in-view {
   opacity: 1;
@@ -997,6 +997,7 @@ html.dark .homepage-case-study-dot--active {
 .homepage-about {
   padding-top: 80px;
   border-top: 1px solid var(--border);
+  transition: border-color var(--transition-duration) var(--transition-easing);
 }
 
 @media (max-width: 768px) {
@@ -1826,7 +1827,7 @@ html.dark .project-dot--active {
   padding-top: 24px;
   font-size: 16px;
   color: var(--muted-soft);
-  transition: margin-top var(--transition-duration) var(--transition-easing), padding-top var(--transition-duration) var(--transition-easing);
+  transition: margin-top var(--transition-duration) var(--transition-easing), padding-top var(--transition-duration) var(--transition-easing), border-color var(--transition-duration) var(--transition-easing);
 }
 .site-footer-inner {
   display: flex;
