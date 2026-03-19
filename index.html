@@ -22,9 +22,9 @@
   <div class="wrap">
     <header class="site-header">
       <div class="site-header-inner">
-        <div class="site-name"><a href="http://trangtran.design/">Trang Tran <span class="emoji">🌱</span></a></div>
+        <div class="site-name"><a href="https://www.trangtran.design/" aria-label="Trang Tran"><img src="simple.svg" alt="" class="site-name-logo" width="36" height="34" /></a></div>
         <div class="site-header-center">
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+          <button class="theme-toggle theme-toggle-header" type="button" aria-label="Toggle theme" aria-pressed="false">
             <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
             </svg>
@@ -44,7 +44,7 @@
         <div class="site-meta">
           <nav class="site-nav">
             <a href="http://trangtran.design/" class="nav-active">Home</a>
-            <a href="about">About</a>
+            <a href="index.html#about">About</a>
           </nav>
           <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-dropdown">
             <span class="line"></span>
@@ -53,7 +53,7 @@
           </button>
           <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
             <a href="http://trangtran.design/" role="menuitem" class="nav-active">Home</a>
-            <a href="about" role="menuitem">About</a>
+            <a href="index.html#about" role="menuitem">About</a>
           </div>
         </div>
       </div>
@@ -61,19 +61,42 @@
 
     <div class="homepage-layout">
       <nav class="homepage-toc" aria-label="Page sections">
+        <a href="https://www.trangtran.design/" class="homepage-toc-logo" aria-label="Trang Tran">
+          <img src="simple.svg" alt="" width="36" height="34" />
+        </a>
         <a href="#intro" class="homepage-toc-link toc-active">Intro</a>
+        <span class="homepage-toc-divider" aria-hidden="true"></span>
         <a href="#acuity-enterprise" class="homepage-toc-link">Acuity Enterprise</a>
         <a href="#squarespace" class="homepage-toc-link">Squarespace</a>
         <a href="#human-interest" class="homepage-toc-link">Human Interest</a>
         <a href="#tactic" class="homepage-toc-link">Tactic</a>
         <a href="#baby-design-ui" class="homepage-toc-link">Baby Design UI</a>
+        <span class="homepage-toc-divider" aria-hidden="true"></span>
+        <a href="#about" class="homepage-toc-link">About</a>
+        <div class="homepage-toc-theme">
+          <button class="theme-toggle theme-toggle-toc" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5" />
+              <line x1="12" y1="2.5" x2="12" y2="5.2" />
+              <line x1="12" y1="18.8" x2="12" y2="21.5" />
+              <line x1="2.5" y1="12" x2="5.2" y2="12" />
+              <line x1="18.8" y1="12" x2="21.5" y2="12" />
+              <line x1="4.4" y1="4.4" x2="6.3" y2="6.3" />
+              <line x1="17.7" y1="17.7" x2="19.6" y2="19.6" />
+              <line x1="17.7" y1="6.3" x2="19.6" y2="4.4" />
+              <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
+            </svg>
+          </button>
+        </div>
       </nav>
 
       <main class="homepage-content">
         <section id="intro" class="homepage-intro">
-          <h1>
-            SF Bay Area-bred designer creating thoughtful products and services that bring business value and make users go "ooh, that's kinda nice." <span class="emoji">👌</span>
-          </h1>
+          <h1>Designing through 10 years of paradigm shifts.</h1>
+          <p class="homepage-intro-sub">But still creating thoughtful products and services that bring business value and make users go &quot;ooh, that's kinda nice.&quot; <span class="emoji">👌</span></p>
         </section>
 
         <section id="acuity-enterprise" class="homepage-case-study">
@@ -84,8 +107,14 @@
               </div>
             </div>
             <div class="homepage-case-study-copy">
+              <div class="homepage-case-study-dots" aria-hidden="true">
+                <span class="homepage-case-study-dot homepage-case-study-dot--active"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+              </div>
               <h3 class="homepage-case-study-title">Acuity Enterprise</h3>
-              <p class="homepage-case-study-category">Enterprise | Squarespace</p>
               <p class="homepage-case-study-desc">Shaping the evolution of Acuity Enterprise, Squarespace's scheduling platform for customers who have complex security, multi-location, and multi-staff needs.</p>
               <span class="homepage-case-study-cta homepage-case-study-cta--coming-soon">Coming soon</span>
             </div>
@@ -104,8 +133,14 @@
               </a>
             </div>
             <div class="homepage-case-study-copy">
+              <div class="homepage-case-study-dots" aria-hidden="true">
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot homepage-case-study-dot--active"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+              </div>
               <h3 class="homepage-case-study-title">Squarespace</h3>
-              <p class="homepage-case-study-category">B2C</p>
               <p class="homepage-case-study-desc">Enabling Acuity Scheduling businesses to reach new customers by listing their services on Airbnb.</p>
               <a href="squarespace" class="homepage-case-study-cta">See project →</a>
             </div>
@@ -125,8 +160,14 @@
               </a>
             </div>
             <div class="homepage-case-study-copy">
+              <div class="homepage-case-study-dots" aria-hidden="true">
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot homepage-case-study-dot--active"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+              </div>
               <h3 class="homepage-case-study-title">Human Interest</h3>
-              <p class="homepage-case-study-category">FinTech | Startup</p>
               <p class="homepage-case-study-desc">Simplified 401(k) onboarding for admins to help their employees save for retirement.</p>
               <a href="human-interest" class="homepage-case-study-cta">See project →</a>
             </div>
@@ -146,8 +187,14 @@
               </a>
             </div>
             <div class="homepage-case-study-copy">
+              <div class="homepage-case-study-dots" aria-hidden="true">
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot homepage-case-study-dot--active"></span>
+                <span class="homepage-case-study-dot"></span>
+              </div>
               <h3 class="homepage-case-study-title">Tactic</h3>
-              <p class="homepage-case-study-category">FinTech | Crypto | Startup</p>
               <p class="homepage-case-study-desc">Modernized accounting that unlocks visibility and compliance for businesses using crypto.</p>
               <a href="tactic" class="homepage-case-study-cta">See project →</a>
             </div>
@@ -164,12 +211,46 @@
               </a>
             </div>
             <div class="homepage-case-study-copy">
+              <div class="homepage-case-study-dots" aria-hidden="true">
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot homepage-case-study-dot--active"></span>
+              </div>
               <h3 class="homepage-case-study-title">Baby Design UI</h3>
-              <p class="homepage-case-study-category">Design System</p>
               <p class="homepage-case-study-desc">Passion project turned public resource for the Figma Community.</p>
               <a href="baby-design" class="homepage-case-study-cta">See project →</a>
             </div>
           </div>
+        </section>
+
+        <section id="about" class="homepage-about" aria-label="About">
+          <div class="about-hero-row">
+            <div class="about-hero-content">
+              <h1>
+                Hi, I'm Trang. I'm an SF Bay Area-bred designer crafting experiences with a keen eye for details, clarity, and purpose. Outside of being a full-time product designer, I help early startups with design strategy and hands-on design execution.
+              </h1>
+            </div>
+          </div>
+
+          <section class="about-two-col">
+            <div class="about-two-col-image">
+              <img src="assets/babyme.png" alt="Young Trang standing outdoors in a pink sweatsuit and white hat." class="about-photo" />
+            </div>
+            <div class="about-two-col-text">
+              <p>Growing up a creative in a household of hardworking immigrants who fled from their war-stricken country, "making things look pretty" as a job was a pipe dream. But I got lucky. I lived in what felt like the innovation capital at the time, and learned how far I could stretch into the design world.</p>
+              <p>I became a designer after realizing that I care a lot about how things look, feel, and work. Making cool things that people actually use and enjoy? Design really is my calling. My approach to delivering product excellence is rooted in simplicity, clean and intentional visuals, and with a focus on balancing business goals and user needs.</p>
+            </div>
+          </section>
+
+          <section class="about-currently" aria-label="Currently">
+            <h2 class="about-currently-title">Currently</h2>
+            <div class="about-currently-value">
+              <p>Leading design for Acuity class scheduling at <a href="https://www.squarespace.com" target="_blank" rel="noopener noreferrer">Squarespace<span aria-hidden="true"> ↗</span></a></p>
+              <p>Into making Vietnamese pandan waffles</p>
+            </div>
+          </section>
         </section>
       </main>
     </div>

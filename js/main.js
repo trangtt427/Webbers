@@ -99,13 +99,34 @@
   var toc = document.querySelector('.homepage-toc');
   if (!toc || !('IntersectionObserver' in window)) return;
 
-  var sectionIds = ['intro', 'acuity-enterprise', 'squarespace', 'human-interest', 'tactic', 'baby-design-ui'];
+  var sectionIds = ['intro', 'acuity-enterprise', 'squarespace', 'human-interest', 'tactic', 'baby-design-ui', 'about'];
   var sections = [];
   for (var i = 0; i < sectionIds.length; i++) {
     var el = document.getElementById(sectionIds[i]);
     if (el) sections.push(el);
   }
   var tocLinks = toc.querySelectorAll('.homepage-toc-link');
+  var dividers = toc.querySelectorAll('.homepage-toc-divider');
+
+  function setDividerWidths() {
+    if (dividers.length === 0) return;
+    var maxW = 0;
+    for (var d = 0; d < tocLinks.length; d++) {
+      var link = tocLinks[d];
+      var range = document.createRange();
+      range.selectNodeContents(link);
+      var w = range.getBoundingClientRect().width;
+      range.detach();
+      if (w > maxW) maxW = w;
+    }
+    if (maxW > 0) {
+      for (var i = 0; i < dividers.length; i++) {
+        dividers[i].style.width = maxW + 'px';
+      }
+    }
+  }
+  setDividerWidths();
+  window.addEventListener('resize', setDividerWidths);
 
   function setActive(id) {
     for (var j = 0; j < tocLinks.length; j++) {
@@ -219,18 +240,22 @@
 (function() {
   // Theme switcher (light / dark) – class on html so head script can run before first paint
   var root = document.documentElement;
-  var toggle = document.getElementById('theme-toggle');
-  if (!toggle) return;
+  var toggles = document.querySelectorAll('.theme-toggle');
+  if (!toggles.length) return;
 
   function applyTheme(theme) {
     if (theme === 'dark') {
       root.classList.add('dark');
-      toggle.setAttribute('aria-pressed', 'true');
-      toggle.setAttribute('aria-label', 'Switch to light mode');
+      toggles.forEach(function(t) {
+        t.setAttribute('aria-pressed', 'true');
+        t.setAttribute('aria-label', 'Switch to light mode');
+      });
     } else {
       root.classList.remove('dark');
-      toggle.setAttribute('aria-pressed', 'false');
-      toggle.setAttribute('aria-label', 'Switch to dark mode');
+      toggles.forEach(function(t) {
+        t.setAttribute('aria-pressed', 'false');
+        t.setAttribute('aria-label', 'Switch to dark mode');
+      });
     }
   }
 
@@ -245,12 +270,14 @@
     applyTheme('dark');
   }
 
-  toggle.addEventListener('click', function() {
-    var next = root.classList.contains('dark') ? 'light' : 'dark';
-    applyTheme(next);
-    try {
-      window.localStorage && localStorage.setItem('theme', next);
-    } catch (e) {}
+  toggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      var next = root.classList.contains('dark') ? 'light' : 'dark';
+      applyTheme(next);
+      try {
+        window.localStorage && localStorage.setItem('theme', next);
+      } catch (e) {}
+    });
   });
 })();
 
