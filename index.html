@@ -22,8 +22,12 @@
   <div class="wrap">
     <header class="site-header">
       <div class="site-header-inner">
-        <div class="site-name"><a href="https://www.trangtran.design/" aria-label="Trang Tran"><img src="simple.svg" alt="" class="site-name-logo" width="36" height="34" /></a></div>
-        <div class="site-header-center">
+        <div class="site-name"><a href="https://www.trangtran.design/" aria-label="Trang Tran"><svg class="site-name-logo" viewBox="0 0 477 478" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="site-logo-face" d="M240.502 130C277.194 130 310.804 153.337 335.416 183.184C360.057 213.066 375.002 248.659 375.002 272C375.002 294.927 360.477 316.105 336.113 331.698C311.782 347.27 277.986 357 240.502 357C203.019 357 169.223 347.27 144.892 331.698C120.528 316.105 106.002 294.927 106.002 272C106.002 248.659 120.948 213.066 145.589 183.184C170.201 153.337 203.811 130 240.502 130Z"/><path class="site-logo-hair" fill-rule="evenodd" clip-rule="evenodd" d="M240.186 81C314.807 81 377.92 136.2 387.858 210.156L403.031 323.071C408.462 363.485 375.713 398.834 335.003 396.5C335.02 396.477 345.003 383.473 345.003 353C345.003 322.5 339.646 288.064 334.66 240.5C334.66 218 306.449 196.324 291.003 187.5C287.568 185.538 284.283 182.878 281.206 179.846C274.677 188.967 244.012 229.543 202.003 249C179.038 259.637 155.503 264 138.955 264C134.502 309.226 131.003 323 131.003 353C131.003 383 141.003 396.5 141.003 396.5C100.293 398.834 67.544 363.485 72.9746 323.071L88.1474 210.156C98.0854 136.2 161.199 81 235.82 81H240.186Z"/><circle class="site-logo-eye" cx="189.002" cy="305" r="14.5"/><circle class="site-logo-eye" cx="286.002" cy="305" r="15"/><path class="site-logo-mouth" d="M223.002 314V315.5C223.002 324.06 229.942 331 238.502 331C247.063 331 254.002 324.06 254.002 315.5V314" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="site-name-text">Trangwreck</span></a></div>
+        <div class="site-meta">
+          <nav class="site-nav">
+            <a href="http://trangtran.design/" class="nav-active">Home</a>
+            <a href="#" class="nav-coming-soon" aria-disabled="true">Writing (coming soon)</a>
+          </nav>
           <button class="theme-toggle theme-toggle-header" type="button" aria-label="Toggle theme" aria-pressed="false">
             <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
@@ -40,12 +44,6 @@
               <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
             </svg>
           </button>
-        </div>
-        <div class="site-meta">
-          <nav class="site-nav">
-            <a href="http://trangtran.design/" class="nav-active">Home</a>
-            <a href="index.html#about">About</a>
-          </nav>
           <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-dropdown">
             <span class="line"></span>
             <span class="line"></span>
@@ -53,7 +51,7 @@
           </button>
           <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
             <a href="http://trangtran.design/" role="menuitem" class="nav-active">Home</a>
-            <a href="index.html#about" role="menuitem">About</a>
+            <span role="menuitem" class="nav-coming-soon">Writing (coming soon)</span>
           </div>
         </div>
       </div>
@@ -61,9 +59,6 @@
 
     <div class="homepage-layout">
       <nav class="homepage-toc" aria-label="Page sections">
-        <a href="https://www.trangtran.design/" class="homepage-toc-logo" aria-label="Trang Tran">
-          <img src="simple.svg" alt="" width="36" height="34" />
-        </a>
         <a href="#intro" class="homepage-toc-link toc-active">Intro</a>
         <span class="homepage-toc-divider" aria-hidden="true"></span>
         <a href="#acuity-enterprise" class="homepage-toc-link">Acuity Enterprise</a>
@@ -73,24 +68,6 @@
         <a href="#baby-design-ui" class="homepage-toc-link">Baby Design UI</a>
         <span class="homepage-toc-divider" aria-hidden="true"></span>
         <a href="#about" class="homepage-toc-link">About</a>
-        <div class="homepage-toc-theme">
-          <button class="theme-toggle theme-toggle-toc" type="button" aria-label="Toggle theme" aria-pressed="false">
-            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
-            </svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="3.5" />
-              <line x1="12" y1="2.5" x2="12" y2="5.2" />
-              <line x1="12" y1="18.8" x2="12" y2="21.5" />
-              <line x1="2.5" y1="12" x2="5.2" y2="12" />
-              <line x1="18.8" y1="12" x2="21.5" y2="12" />
-              <line x1="4.4" y1="4.4" x2="6.3" y2="6.3" />
-              <line x1="17.7" y1="17.7" x2="19.6" y2="19.6" />
-              <line x1="17.7" y1="6.3" x2="19.6" y2="4.4" />
-              <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
-            </svg>
-          </button>
-        </div>
       </nav>
 
       <main class="homepage-content">
