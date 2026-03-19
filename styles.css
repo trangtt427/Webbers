@@ -131,9 +131,11 @@ a:hover { text-decoration: underline; }
   }
 }
 
-/* Floating logo – case study and about pages only (homepage has logo in TOC) */
-body:has(.homepage-layout) .floating-logo {
-  display: none;
+/* Floating logo – on homepage only show on mobile (TOC has logo on desktop) */
+@media (min-width: 769px) {
+  body:has(.homepage-layout) .floating-logo {
+    display: none;
+  }
 }
 .floating-logo {
   display: block;
@@ -756,7 +758,7 @@ html.dark .theme-toggle:hover .icon-sun {
 .homepage-layout {
   display: grid;
   grid-template-columns: 180px 1fr;
-  gap: clamp(24px, 4vw, 48px);
+  gap: clamp(40px, 6vw, 72px);
   align-items: start;
 }
 .homepage-toc {
