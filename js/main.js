@@ -40,6 +40,30 @@
 })();
 
 (function() {
+  // Blog index: each post row uses the same fade + slide-in as case-study-intro, staggered
+  var blogItems = document.querySelectorAll('.blog-index .blog-index-item');
+  if (!blogItems.length) return;
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reducedMotion) {
+    for (var r = 0; r < blogItems.length; r++) {
+      blogItems[r].classList.add('blog-index-item-in');
+    }
+    return;
+  }
+  requestAnimationFrame(function() {
+    requestAnimationFrame(function() {
+      for (var i = 0; i < blogItems.length; i++) {
+        (function(index) {
+          setTimeout(function() {
+            blogItems[index].classList.add('blog-index-item-in');
+          }, index * 90);
+        })(i);
+      }
+    });
+  });
+})();
+
+(function() {
   // About page hero: animate from left on load (same as index hero, case study intro)
   var aboutHeroContent = document.querySelector('.about-hero-content');
   if (aboutHeroContent) {
@@ -69,6 +93,26 @@
     { rootMargin: '0px 0px 20px 0px', threshold: 0 }
   );
   observer.observe(aboutTwoCol);
+})();
+
+(function() {
+  // About "Currently" block (homepage + about page): same fade + slide as about-two-col
+  var aboutCurrently = document.querySelector('.about-currently');
+  if (!aboutCurrently || !('IntersectionObserver' in window)) return;
+  var observerCurrently = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          setTimeout(function() {
+            el.classList.add('about-currently-in');
+          }, 100);
+        }
+      });
+    },
+    { rootMargin: '0px 0px 20px 0px', threshold: 0 }
+  );
+  observerCurrently.observe(aboutCurrently);
 })();
 
 (function() {
