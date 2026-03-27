@@ -1,2 +1,14 @@
-Options -Indexes 
+Options -Indexes
+
 ErrorDocument 400 https://trangtran.design/404.html
+
+# Extensionless URLs: /about serves about.html, /blog/post serves blog/post.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
