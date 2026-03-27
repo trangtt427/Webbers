@@ -146,14 +146,20 @@ a:hover { text-decoration: underline; }
   isolation: isolate;
   outline: none;
 
-  background: var(--header-bg);
+  /* background-color (not shorthand) so it interpolates cleanly with transition */
+  background-color: var(--header-bg);
   backdrop-filter: blur(6px) saturate(120%);
   -webkit-backdrop-filter: blur(6px) saturate(120%);
 
-  transition: background-color var(--transition-duration) var(--transition-easing), color var(--transition-duration) var(--transition-easing), transform var(--transition-duration) var(--transition-easing);
+  transition:
+    background-color var(--transition-duration) var(--transition-easing),
+    color var(--transition-duration) var(--transition-easing),
+    transform var(--transition-duration) var(--transition-easing);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 .site-header.header-hidden {
-  transform: translateY(-100%);
+  transform: translate3d(0, -100%, 0);
   pointer-events: none;
 }
 .site-header-inner {
@@ -1997,6 +2003,9 @@ html.dark .project-dot--active {
   display: block;
   width: 32px;
   height: 32px;
+  /* Match filter structure in both themes so the browser can interpolate (not none → filter) */
+  filter: brightness(1) invert(0);
+  transition: filter var(--transition-duration) var(--transition-easing);
 }
 html.dark .site-footer-social .footer-icon img {
   filter: brightness(0) invert(1);
