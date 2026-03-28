@@ -403,7 +403,10 @@
 })();
 
 (function() {
-  // Header hides on scroll down, reappears on scroll up (desktop only; on mobile it causes jumpiness)
+  // Hide on scroll down only after this offset; show on scroll up or near top (desktop only)
+  var NAV_HIDE_AFTER_PX = 96;
+  var TOP_ALWAYS_SHOW_PX = 24;
+
   var header = document.querySelector('.site-header');
   if (!header) return;
 
@@ -426,7 +429,7 @@
     var y = window.scrollY || 0;
     var dy = y - lastY;
 
-    if (y <= 24) {
+    if (y <= TOP_ALWAYS_SHOW_PX) {
       if (hidden) header.classList.remove('header-hidden');
       hidden = false;
       lastY = y;
@@ -440,12 +443,7 @@
       return;
     }
 
-    if (Math.abs(dy) < 8) {
-      lastY = y;
-      return;
-    }
-
-    if (dy > 0 && y > 96 && !hidden) {
+    if (dy > 0 && y > NAV_HIDE_AFTER_PX && !hidden) {
       header.classList.add('header-hidden');
       hidden = true;
     }
@@ -462,15 +460,15 @@
     });
   }, { passive: true });
 
-  // When resizing from mobile to desktop, ensure header state is correct
   window.addEventListener('resize', function() {
-    if (!isMobile() && hidden) return;
     if (isMobile() && hidden) {
       header.classList.remove('header-hidden');
       hidden = false;
     }
     lastY = window.scrollY || 0;
   });
+
+  update();
 })();
 
 (function() {
