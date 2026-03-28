@@ -1247,6 +1247,15 @@ html.dark .homepage-case-study-dot--active {
   border-bottom: 1px solid var(--border);
   transition: opacity 0.65s ease-out, transform 0.65s ease-out, border-color var(--transition-duration) var(--transition-easing);
 }
+.blog-post .case-study-headline {
+  max-width: none;
+}
+.blog-post .case-study-body h2 {
+  max-width: 28ch;
+}
+.blog-post .case-study-body h3 {
+  max-width: 40ch;
+}
 .blog-index .blog-index-list {
   margin-top: 0;
   max-width: none;
@@ -1651,6 +1660,10 @@ html.dark .case-study-image-wrap--tint {
   }
   .case-study-body h3:first-child {
     margin-top: 0;
+  }
+  .blog-post .case-study-body h2,
+  .blog-post .case-study-body h3 {
+    max-width: 40ch;
   }
   .case-study-section {
     margin-top: 80px;
