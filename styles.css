@@ -1549,7 +1549,7 @@ html.dark .blog-index-thumb-placeholder::before {
   font-size: 16px;
   line-height: 1.5;
   color: var(--muted-soft);
-  margin: 12px 0 0;
+  margin: 12px 0 32px;
   width: 100%;
 }
 .case-study-image-wrap--tint {
@@ -1718,7 +1718,7 @@ html.dark .case-study-image-wrap--tint {
   transform: none;
 }
 .case-study-two-col-image .case-study-caption {
-  margin-top: 12px;
+  margin: 12px 0 32px;
 }
 .case-study-two-col-image .case-study-image {
   width: 100%;
