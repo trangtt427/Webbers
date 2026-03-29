@@ -1250,6 +1250,47 @@ html.dark .homepage-case-study-dot--active {
 .blog-post .case-study-headline {
   max-width: none;
 }
+.blog-post-intro-image {
+  margin-top: 32px;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+}
+.blog-post-intro-image .case-study-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+.blog-post-intro-caption {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted-soft);
+  margin: 12px 0 0;
+  max-width: 1100px;
+}
+.blog-post-intro-caption a {
+  display: inline-block;
+  padding-bottom: 0.15em;
+  color: var(--text);
+  text-decoration: none;
+  position: relative;
+}
+.blog-post-intro-caption a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
+}
+.blog-post-intro-caption a:hover::after {
+  width: 100%;
+}
 .blog-post .case-study-body h2 {
   max-width: 28ch;
 }
@@ -1284,32 +1325,91 @@ html.dark .homepage-case-study-dot--active {
 .blog-index-item:first-child {
   padding-top: 0;
 }
+.blog-index-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  border-radius: 4px;
+}
+.blog-index-card:hover {
+  text-decoration: none;
+}
+.blog-index-card:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 4px;
+}
+.blog-index-thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 220px;
+  aspect-ratio: 4 / 3;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.blog-index-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1);
+  transition: transform var(--transition-duration) var(--transition-easing);
+}
+.blog-index-card:hover .blog-index-thumb img {
+  transform: scale(1.12);
+}
+/* Stronger zoom than homepage project images; pattern layer scales inside overflow clip */
+.blog-index-thumb-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: var(--border);
+  background-image: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.12) 40%,
+    rgba(255, 255, 255, 0.12) 60%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 12px 12px;
+  transform: scale(1);
+  transition: transform var(--transition-duration) var(--transition-easing);
+}
+.blog-index-card:hover .blog-index-thumb-placeholder::before {
+  transform: scale(1.12);
+}
+html.dark .blog-index-thumb-placeholder::before {
+  background-image: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.06) 40%,
+    rgba(255, 255, 255, 0.06) 60%,
+    transparent 60%,
+    transparent 100%
+  );
+}
+.blog-index-card-body {
+  flex: 1;
+  min-width: 0;
+}
 .blog-index-title {
   font-size: 28px;
   font-weight: 400;
   line-height: 1.25;
   margin: 0;
   color: var(--text);
-}
-.blog-index-title a {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 2px;
-  color: inherit;
-  text-decoration: none;
-}
-.blog-index-title a::after {
-  content: '';
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: currentColor;
-  transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
-}
-.blog-index-title a:hover::after {
-  width: 100%;
 }
 .blog-index-meta {
   font-size: 14px;
@@ -1330,6 +1430,15 @@ html.dark .homepage-case-study-dot--active {
   margin: 40px 0 0;
 }
 @media (max-width: 768px) {
+  .blog-index-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .blog-index-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
   .blog-index-title {
     font-size: 24px;
   }
@@ -1700,15 +1809,18 @@ html.dark .case-study-image-wrap--tint {
 }
 .case-study-next-title a {
   display: inline-block;
-  position: relative;
-  padding-bottom: 1px;
   color: inherit;
   text-decoration: none;
 }
-.case-study-next-title a:hover {
+/* Animated underline on “Next” links — case studies only (blog titles are often long) */
+.case-study:not(.blog-post) .case-study-next-title a {
+  position: relative;
+  padding-bottom: 1px;
+}
+.case-study:not(.blog-post) .case-study-next-title a:hover {
   text-decoration: none;
 }
-.case-study-next-title a::after {
+.case-study:not(.blog-post) .case-study-next-title a::after {
   content: '';
   position: absolute;
   bottom: 1px;
@@ -1718,7 +1830,7 @@ html.dark .case-study-image-wrap--tint {
   background-color: currentColor;
   transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
 }
-.case-study-next-title a:hover::after {
+.case-study:not(.blog-post) .case-study-next-title a:hover::after {
   width: 100%;
 }
 
