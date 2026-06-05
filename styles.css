@@ -2475,9 +2475,11 @@ html.hi-panel-restoring .about-currently {
     padding: 24px 20px 40px;
     gap: 32px;
   }
+  .hi-panel-summary,
   .hi-panel-detail-label,
-  .hi-panel-detail-value {
-    font-size: 18px;
+  .hi-panel-detail-value,
+  .hi-panel-back {
+    font-size: 17px;
   }
 }
 
