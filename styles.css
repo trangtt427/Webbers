@@ -2161,7 +2161,6 @@ html.dark .project-dot--active {
 html.hi-panel-restoring .hi-fade {
   opacity: 1;
   transition: none;
-  background: var(--bg);
 }
 html.hi-panel-restoring body {
   overflow: hidden;
@@ -2217,6 +2216,11 @@ html.hi-panel-restoring body {
   gap: 32px;
   padding: 40px;
   box-sizing: border-box;
+}
+.hi-panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .hi-panel-back {
   display: inline-flex;
@@ -2306,16 +2310,30 @@ html.hi-panel-restoring body {
 
 @media (max-width: 1024px) {
   .hi-panel {
-    grid-template-columns: 1fr;
+    /* Switch to block so .hi-panel-left's display:contents children
+       become direct block children of the scroll container. */
+    display: block;
   }
   .hi-panel-left {
-    position: static;
-    height: auto;
-    overflow: visible;
-    padding: 24px 20px;
+    /* Dissolve the left column's box — its children (.hi-panel-header
+       and .hi-panel-meta) flow directly into .hi-panel (the scroll
+       container), which lets position:sticky on the header work. */
+    display: contents;
+  }
+  .hi-panel-header {
+    /* Now a direct child of the scroll container: sticky works correctly. */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    padding: 20px 20px 16px;
+    gap: 4px;
+  }
+  .hi-panel-meta {
+    padding: 20px 20px 0;
   }
   .hi-panel-right {
-    padding: 24px 20px;
+    padding: 24px 20px 40px;
     gap: 32px;
   }
 }
