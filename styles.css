@@ -1233,14 +1233,16 @@ html.dark .homepage-case-study-dot--active {
 .about-currently-value p:last-child {
   margin-bottom: 0;
 }
-.about-currently-value a {
+.about-currently-value a,
+.hi-panel-summary a {
   display: inline-block;
   padding-bottom: 0.2em;
   color: var(--muted-soft);
   text-decoration: none;
   position: relative;
 }
-.about-currently-value a::after {
+.about-currently-value a::after,
+.hi-panel-summary a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1250,7 +1252,8 @@ html.dark .homepage-case-study-dot--active {
   background-color: currentColor;
   transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
 }
-.about-currently-value a:hover::after {
+.about-currently-value a:hover::after,
+.hi-panel-summary a:hover::after {
   width: 100%;
 }
 
@@ -2381,26 +2384,6 @@ html.hi-panel-restoring .about-currently {
 }
 .hi-panel-detail-value > p + p {
   margin-top: 10px;
-}
-.hi-panel-summary a {
-  display: inline-block;
-  padding-bottom: 0.2em;
-  color: var(--text);
-  text-decoration: none;
-  position: relative;
-}
-.hi-panel-summary a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: currentColor;
-  transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
-}
-.hi-panel-summary a:hover::after {
-  width: 100%;
 }
 @media (max-width: 768px) {
   .hi-panel-name {
