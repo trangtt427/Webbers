@@ -2331,7 +2331,7 @@ html.hi-panel-restoring .about-currently {
 .hi-panel-name {
   font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 32px;
   color: var(--text);
   margin: 0;
 }
@@ -2351,7 +2351,7 @@ html.hi-panel-restoring .about-currently {
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 32px;
-  padding: 20px 0;
+  padding: 16px 0;
   border-top: 1px solid var(--border);
   align-items: start;
 }
