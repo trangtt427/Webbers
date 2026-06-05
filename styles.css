@@ -2379,7 +2379,9 @@ html.hi-panel-restoring .about-currently {
   .hi-panel-name {
     font-size: 32px;
   }
-  .hi-panel-summary {
+  .hi-panel-summary,
+  .hi-panel-detail-label,
+  .hi-panel-detail-value {
     font-size: 17px;
   }
 }
@@ -2472,6 +2474,10 @@ html.hi-panel-restoring .about-currently {
   .hi-panel-right {
     padding: 24px 20px 40px;
     gap: 32px;
+  }
+  .hi-panel-detail-label,
+  .hi-panel-detail-value {
+    font-size: 18px;
   }
 }
 
