@@ -57,6 +57,13 @@ html {
   --header-bg: rgba(255, 255, 255, 0.82);
   --header-border: rgba(17, 24, 39, 0.08);
   --header-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
+
+  --media-radius: 24px;
+}
+@media (max-width: 1024px) {
+  :root {
+    --media-radius: 12px;
+  }
 }
 
 body {
@@ -1168,7 +1175,7 @@ html.dark .homepage-case-study-dot--active {
 }
 .about-two-col-image {
   margin: 0;
-  border-radius: 12px;
+  border-radius: var(--media-radius);
   overflow: hidden;
   border: 1px solid var(--border);
 }
@@ -1325,7 +1332,7 @@ html.dark .homepage-case-study-dot--active {
   margin-top: 32px;
   width: 100%;
   max-width: 1440px;
-  border-radius: 12px;
+  border-radius: var(--media-radius);
   overflow: hidden;
   line-height: 0;
 }
@@ -1419,7 +1426,7 @@ html.dark .homepage-case-study-dot--active {
   aspect-ratio: 4 / 3;
   box-sizing: border-box;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--media-radius);
   overflow: hidden;
   background: var(--bg);
 }
@@ -2074,7 +2081,7 @@ html.dark .project-dot--active {
   position: relative;
   width: 100%;
   max-width: 100%;
-  border-radius: 12px;
+  border-radius: var(--media-radius);
   overflow: hidden;
   background: #0f0f0f;
   height: 500px;
@@ -2336,7 +2343,7 @@ html.hi-panel-restoring .about-currently {
   margin: 0;
 }
 .hi-panel-summary {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1.5;
   color: var(--text);
@@ -2375,11 +2382,30 @@ html.hi-panel-restoring .about-currently {
 .hi-panel-detail-value > p + p {
   margin-top: 10px;
 }
+.hi-panel-summary a {
+  display: inline-block;
+  padding-bottom: 0.2em;
+  color: var(--text);
+  text-decoration: none;
+  position: relative;
+}
+.hi-panel-summary a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
+}
+.hi-panel-summary a:hover::after {
+  width: 100%;
+}
 @media (max-width: 768px) {
   .hi-panel-name {
     font-size: 32px;
   }
-  .hi-panel-summary,
   .hi-panel-detail-label,
   .hi-panel-detail-value {
     font-size: 17px;
@@ -2403,7 +2429,7 @@ html.hi-panel-restoring .about-currently {
 .hi-panel-media-wrap {
   width: 100%;
   flex-shrink: 0;
-  border-radius: 24px;
+  border-radius: var(--media-radius);
   overflow: hidden;
 }
 .hi-panel-media-wrap img,
@@ -2475,7 +2501,6 @@ html.hi-panel-restoring .about-currently {
     padding: 24px 20px 40px;
     gap: 32px;
   }
-  .hi-panel-summary,
   .hi-panel-detail-label,
   .hi-panel-detail-value,
   .hi-panel-back {

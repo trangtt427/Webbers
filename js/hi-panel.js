@@ -1,10 +1,11 @@
 /**
  * Homepage case study panel overlays.
- * Intercepts clicks on Human Interest and Tactic links and opens full-screen
- * panels that slide up from the bottom instead of navigating away.
+ * Intercepts clicks on case study links and opens full-screen panels that slide
+ * up from the bottom instead of navigating away.
  * Only active when matching panel elements exist (homepage only).
  *
- * URL strategy: hash routes (#/human-interest, #/tactic) on the homepage path.
+ * URL strategy: hash routes (#/human-interest, #/tactic, #/baby-design) on the
+ * homepage path.
  * The hash is never sent to the server, so refreshing reloads index.html and
  * the panel auto-reopens with a fade — no redirect, no blank screen.
  */
@@ -22,6 +23,12 @@
       hash: '#/tactic',
       sectionId: 'tactic',
       href: 'tactic'
+    },
+    {
+      el: document.getElementById('baby-design-panel'),
+      hash: '#/baby-design',
+      sectionId: 'baby-design-ui',
+      href: 'baby-design'
     }
   ].filter(function(p) { return p.el; });
 

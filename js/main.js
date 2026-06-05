@@ -12,7 +12,7 @@
   }
   // Start at the top on a plain homepage load, and also when restoring the
   // Case study panels (their hashes aren't scroll targets).
-  if (isHomepage && (!window.location.hash || window.location.hash === '#/human-interest' || window.location.hash === '#/tactic')) {
+  if (isHomepage && (!window.location.hash || window.location.hash === '#/human-interest' || window.location.hash === '#/tactic' || window.location.hash === '#/baby-design')) {
     window.scrollTo(0, 0);
   }
 })();
