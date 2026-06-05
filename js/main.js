@@ -4,18 +4,26 @@
  */
 
 (function() {
-  // Preserve scroll position on refresh
+  // On the homepage, always start at the top on refresh so the entrance animation plays from
+  // the top. Other pages keep the browser's default scroll restoration.
+  var isHomepage = !!document.querySelector('.homepage-layout');
   if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'auto';
+    history.scrollRestoration = isHomepage ? 'manual' : 'auto';
+  }
+  if (isHomepage && !window.location.hash) {
+    window.scrollTo(0, 0);
   }
 })();
 
 (function() {
-  // Hero entrance animation on homepage: starts right away, moves up from farther, longer animation
+  // Hero entrance animation on homepage: starts right away, moves up from farther, longer animation.
+  // On the homepage, the wordmark and the nav/theme/TOC group then animate in as staged follow-ups.
+  var homepageLayout = document.querySelector('.homepage-layout');
   var hero = document.querySelector('.hero');
   var homepageIntro = document.querySelector('.homepage-intro');
-  var target = hero || homepageIntro;
-  if (target) {
+
+  // Stage 1: hero in immediately (all pages with a hero/intro)
+  if (hero || homepageIntro) {
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
         if (hero) hero.classList.add('hero-in');
@@ -23,6 +31,53 @@
       });
     });
   }
+
+  if (!homepageLayout) return; // header/TOC staging is homepage-only
+
+  var siteName = document.querySelector('.site-header .site-name');
+  var siteMeta = document.querySelector('.site-header .site-meta');
+  var toc = document.querySelector('.homepage-toc');
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Reveals everything below the hero together: case studies, the about section (divider,
+  // intro, baby picture + second body of text, and the "Currently" block), and the footer.
+  function revealBelowHero() {
+    if (homepageIntro) homepageIntro.classList.add('homepage-intro-divider-in');
+    var caseStudies = document.querySelectorAll('.homepage-case-study');
+    for (var i = 0; i < caseStudies.length; i++) {
+      caseStudies[i].classList.add('homepage-case-study-in-view');
+    }
+    var aboutSection = document.querySelector('.homepage-about');
+    if (aboutSection) aboutSection.classList.add('homepage-about-divider-in');
+    var aboutHero = document.querySelector('.about-hero-content');
+    if (aboutHero) aboutHero.classList.add('about-hero-content-in');
+    var aboutTwoCol = document.querySelector('.about-two-col');
+    if (aboutTwoCol) aboutTwoCol.classList.add('about-two-col-in');
+    var aboutCurrently = document.querySelector('.about-currently');
+    if (aboutCurrently) aboutCurrently.classList.add('about-currently-in');
+    var footer = document.querySelector('.site-footer');
+    if (footer) footer.classList.add('site-footer-in');
+  }
+
+  if (reduced) {
+    if (siteName) siteName.classList.add('site-name-in');
+    if (siteMeta) siteMeta.classList.add('site-meta-in');
+    if (toc) toc.classList.add('homepage-toc-in');
+    revealBelowHero();
+    return;
+  }
+
+  // Stage 2: wordmark after hero
+  setTimeout(function() {
+    if (siteName) siteName.classList.add('site-name-in');
+  }, 1000);
+
+  // Stage 3: nav links + theme switcher + TOC + everything below the hero
+  setTimeout(function() {
+    if (siteMeta) siteMeta.classList.add('site-meta-in');
+    if (toc) toc.classList.add('homepage-toc-in');
+    revealBelowHero();
+  }, 2000);
 })();
 
 (function() {
@@ -64,7 +119,9 @@
 })();
 
 (function() {
-  // About page hero: animate from left on load (same as index hero, case study intro)
+  // About page hero: fade up on load. (On the homepage, the about section is part of the
+  // Stage 3 entrance instead, so skip it here.)
+  if (document.querySelector('.homepage-layout')) return;
   var aboutHeroContent = document.querySelector('.about-hero-content');
   if (aboutHeroContent) {
     requestAnimationFrame(function() {
@@ -76,7 +133,9 @@
 })();
 
 (function() {
-  // About page: two-col section move-in from left when scrolled into view (same trigger as project cards)
+  // About page: two-col section fades up when scrolled into view (same trigger as project cards).
+  // On the homepage it's revealed together in Stage 3, so skip the scroll trigger there.
+  if (document.querySelector('.homepage-layout')) return;
   var aboutTwoCol = document.querySelector('.about-two-col');
   if (!aboutTwoCol || !('IntersectionObserver' in window)) return;
   var observer = new IntersectionObserver(
@@ -96,7 +155,9 @@
 })();
 
 (function() {
-  // About "Currently" block (homepage + about page): same fade + slide as about-two-col
+  // About "Currently" block (about page): same fade up as about-two-col.
+  // On the homepage it's revealed together in Stage 3, so skip the scroll trigger there.
+  if (document.querySelector('.homepage-layout')) return;
   var aboutCurrently = document.querySelector('.about-currently');
   if (!aboutCurrently || !('IntersectionObserver' in window)) return;
   var observerCurrently = new IntersectionObserver(
@@ -116,11 +177,10 @@
 })();
 
 (function() {
-  // Case studies / homepage case studies animate 0.1s after scrolling to their positions
+  // Case study pages: projects animate 0.1s after scrolling to their positions.
+  // (Homepage case studies are revealed together in the Stage 3 entrance, not on scroll.)
   var projects = document.querySelectorAll('.project');
-  var homepageCaseStudies = document.querySelectorAll('.homepage-case-study');
-  var targets = projects.length ? projects : homepageCaseStudies;
-  if (!targets.length || !('IntersectionObserver' in window)) return;
+  if (!projects.length || !('IntersectionObserver' in window)) return;
 
   var observer = new IntersectionObserver(
     function(entries) {
@@ -128,14 +188,14 @@
         if (entry.isIntersecting) {
           var el = entry.target;
           setTimeout(function() {
-            el.classList.add(projects.length ? 'project-in-view' : 'homepage-case-study-in-view');
+            el.classList.add('project-in-view');
           }, 100);
         }
       });
     },
     { rootMargin: '0px 0px 20px 0px', threshold: 0 }
   );
-  for (var i = 0; i < targets.length; i++) observer.observe(targets[i]);
+  for (var i = 0; i < projects.length; i++) observer.observe(projects[i]);
 })();
 
 (function() {
@@ -143,7 +203,7 @@
   var toc = document.querySelector('.homepage-toc');
   if (!toc || !('IntersectionObserver' in window)) return;
 
-  var sectionIds = ['intro', 'acuity-enterprise', 'squarespace', 'human-interest', 'tactic', 'baby-design-ui', 'about'];
+  var sectionIds = ['intro', 'acuity-enterprise', 'human-interest', 'tactic', 'baby-design-ui', 'about'];
   var sections = [];
   for (var i = 0; i < sectionIds.length; i++) {
     var el = document.getElementById(sectionIds[i]);
