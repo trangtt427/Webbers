@@ -2157,6 +2157,16 @@ html.dark .project-dot--active {
   pointer-events: none;
 }
 
+/* Suppress homepage flash when panel is being restored after a refresh */
+html.hi-panel-restoring .hi-fade {
+  opacity: 1;
+  transition: none;
+  background: var(--bg);
+}
+html.hi-panel-restoring body {
+  overflow: hidden;
+}
+
 /* Human Interest panel overlay */
 .hi-fade {
   position: fixed;
@@ -2185,6 +2195,17 @@ html.dark .project-dot--active {
 }
 .hi-panel[hidden] { display: none !important; }
 .hi-panel.is-open { transform: translateY(0); }
+
+/* Restore variant: used on refresh — panel is already in position, fade in only */
+.hi-panel.hi-panel--restore {
+  transform: translateY(0);
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.hi-panel.hi-panel--restore.is-open {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .hi-panel-left {
   position: sticky;

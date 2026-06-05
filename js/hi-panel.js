@@ -4,9 +4,9 @@
  * full-screen panel that slides up from the bottom instead of navigating away.
  * Only active when #hi-panel exists (homepage only).
  *
- * URL strategy: uses ?panel=human-interest on the homepage path so that
- * refreshing the page reloads index.html (not human-interest.html) and
- * the panel auto-reopens.
+ * URL strategy: pushState to /human-interest when the panel opens (clean path,
+ * no query param). human-interest.html sets a sessionStorage flag and redirects
+ * to the homepage so refreshing /human-interest still loads the panel here.
  */
 (function() {
   var panel = document.getElementById('hi-panel');
@@ -17,13 +17,16 @@
   var video = panel.querySelector('video');
   var isOpen = false;
 
-  var PANEL_PARAM = 'panel=human-interest';
+  // Capture the homepage path before any pushState calls.
   var basePath = window.location.pathname;
+  // Resolve the panel path relative to the current directory.
+  var panelPath = basePath.replace(/\/[^\/]*$/, '') + '/human-interest';
 
   function openPanel(e) {
     if (e) e.preventDefault();
     if (isOpen) return;
     isOpen = true;
+    try { sessionStorage.setItem('hiPanel', '1'); } catch (err) {}
     panel.hidden = false;
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
@@ -33,12 +36,12 @@
     });
     // Lock the page scroll only after the slide-up finishes so the
     // browser scrollbar stays visible throughout the opening animation.
-    panel.addEventListener('transitionend', function onOpen(e) {
-      if (e.propertyName !== 'transform') return;
+    panel.addEventListener('transitionend', function onOpen(ev) {
+      if (ev.propertyName !== 'transform') return;
       panel.removeEventListener('transitionend', onOpen);
       document.body.style.overflow = 'hidden';
     });
-    history.pushState({ hiPanel: true }, '', basePath + '?' + PANEL_PARAM);
+    history.pushState({ hiPanel: true }, '', panelPath);
     if (video) video.play().catch(function() {});
     if (backBtn) backBtn.focus();
   }
@@ -46,31 +49,47 @@
   function closePanel() {
     if (!isOpen) return;
     isOpen = false;
+    try { sessionStorage.removeItem('hiPanel'); } catch (err) {}
     // Restore the page scrollbar immediately so it's visible during the slide-down.
     document.body.style.overflow = '';
     panel.classList.remove('is-open');
     if (fade) fade.classList.remove('is-visible');
     if (video) video.pause();
     panel.scrollTop = 0;
-    panel.addEventListener('transitionend', function onEnd(e) {
-      if (e.propertyName !== 'transform') return;
+    panel.addEventListener('transitionend', function onEnd(ev) {
+      if (ev.propertyName !== 'transform') return;
       panel.removeEventListener('transitionend', onEnd);
       panel.hidden = true;
     });
   }
 
-  // Auto-open when the page is loaded/refreshed with ?panel=human-interest in the URL.
-  if (window.location.search.indexOf('panel=human-interest') !== -1) {
-    // Normalise history so the browser back button returns cleanly to the homepage root.
+  // Auto-open when human-interest.html redirected here with the sessionStorage flag.
+  // Uses a fade-only entrance (no slide) since the panel is conceptually already open.
+  var shouldRestore = false;
+  try { shouldRestore = sessionStorage.getItem('hiPanel') === '1'; } catch (err) {}
+  if (shouldRestore) {
+    try { sessionStorage.removeItem('hiPanel'); } catch (err) {}
+    // Normalise history so the browser back button returns cleanly to the homepage.
     history.replaceState(null, '', basePath);
-    history.pushState({ hiPanel: true }, '', basePath + '?' + PANEL_PARAM);
-    // Open immediately without animation (this is a refresh, not a user click).
+    history.pushState({ hiPanel: true }, '', panelPath);
     isOpen = true;
     panel.hidden = false;
-    panel.classList.add('is-open');
+    panel.classList.add('hi-panel--restore'); // opacity-only transition, no slide
     if (fade) fade.classList.add('is-visible');
-    document.body.style.overflow = 'hidden';
     if (video) video.play().catch(function() {});
+    // Double rAF paints the opacity:0 panel state before is-open triggers the fade.
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        panel.classList.add('is-open');
+      });
+    });
+    panel.addEventListener('transitionend', function onRefreshOpen(ev) {
+      if (ev.propertyName !== 'opacity') return;
+      panel.removeEventListener('transitionend', onRefreshOpen);
+      panel.classList.remove('hi-panel--restore');
+      document.documentElement.classList.remove('hi-panel-restoring');
+      document.body.style.overflow = 'hidden';
+    });
   }
 
   // Intercept both Human Interest links on the homepage.
@@ -82,9 +101,7 @@
     }
   }
 
-  // Back button: strip the query param from the URL and close the panel.
-  // Using replaceState here (not history.back()) so it works correctly
-  // whether the panel was opened normally or restored after a refresh.
+  // Back button: navigate back to the homepage URL and close the panel.
   if (backBtn) {
     backBtn.addEventListener('click', function() {
       history.replaceState(null, '', basePath);

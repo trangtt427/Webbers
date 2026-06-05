@@ -17,6 +17,14 @@
       else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
     })();
   </script>
+  <script>
+    // Signal the homepage to open the panel, then redirect there.
+    // This makes /human-interest always show the overlay panel.
+    (function() {
+      try { sessionStorage.setItem('hiPanel', '1'); } catch (e) {}
+      window.location.replace('./');
+    })();
+  </script>
 </head>
 <body>
   <div class="wrap">
