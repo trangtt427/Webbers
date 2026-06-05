@@ -21,23 +21,43 @@
   var PANEL_HASH = '#/human-interest';
   var basePath = window.location.pathname;
 
+  // Width of the classic scrollbar, measured with an offscreen probe so it works
+  // regardless of the current overflow state (returns 0 for overlay scrollbars).
+  var scrollbarWidth = (function() {
+    var probe = document.createElement('div');
+    probe.style.cssText = 'position:absolute;top:-9999px;width:100px;height:100px;overflow:scroll;';
+    document.body.appendChild(probe);
+    var w = probe.offsetWidth - probe.clientWidth;
+    document.body.removeChild(probe);
+    return w;
+  })();
+
+  // Lock the page scroll and remove the homepage scrollbar. The removed scrollbar
+  // width is exposed as --hi-sbw so CSS can compensate BOTH the in-flow body
+  // content and the fixed header by that amount — keeping everything in place so
+  // there's no jump when the panel opens or closes. (The homepage scrollbar is
+  // truly gone, not just hidden behind the panel, so it can't paint on top.)
+  function lockScroll() {
+    document.documentElement.style.setProperty('--hi-sbw', scrollbarWidth + 'px');
+    document.body.classList.add('hi-scroll-locked');
+  }
+  function unlockScroll() {
+    document.body.classList.remove('hi-scroll-locked');
+    document.documentElement.style.removeProperty('--hi-sbw');
+  }
+
   function openPanel(e) {
     if (e) e.preventDefault();
     if (isOpen) return;
     isOpen = true;
+    // Lock immediately so the homepage scrollbar is gone before the panel rises.
+    lockScroll();
     panel.hidden = false;
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
         panel.classList.add('is-open');
         if (fade) fade.classList.add('is-visible');
       });
-    });
-    // Lock the page scroll only after the slide-up finishes so the
-    // browser scrollbar stays visible throughout the opening animation.
-    panel.addEventListener('transitionend', function onOpen(ev) {
-      if (ev.propertyName !== 'transform') return;
-      panel.removeEventListener('transitionend', onOpen);
-      document.body.style.overflow = 'hidden';
     });
     history.pushState({ hiPanel: true }, '', basePath + PANEL_HASH);
     if (video) video.play().catch(function() {});
@@ -47,16 +67,17 @@
   function closePanel() {
     if (!isOpen) return;
     isOpen = false;
-    // Restore the page scrollbar immediately so it's visible during the slide-down.
-    document.body.style.overflow = '';
     panel.classList.remove('is-open');
     if (fade) fade.classList.remove('is-visible');
     if (video) video.pause();
     panel.scrollTop = 0;
+    // Keep the page locked through the slide-down so the panel covers the page
+    // the whole way; restore the homepage scrollbar once it's fully closed.
     panel.addEventListener('transitionend', function onEnd(ev) {
       if (ev.propertyName !== 'transform') return;
       panel.removeEventListener('transitionend', onEnd);
       panel.hidden = true;
+      unlockScroll();
     });
   }
 
@@ -67,6 +88,7 @@
     history.replaceState(null, '', basePath);
     history.pushState({ hiPanel: true }, '', basePath + PANEL_HASH);
     isOpen = true;
+    lockScroll();
     panel.hidden = false;
     panel.classList.add('hi-panel--restore'); // opacity-only fade, no slide
     if (fade) fade.classList.add('is-visible');
@@ -88,7 +110,6 @@
         window._revealHomepage = null;
       }
       document.documentElement.classList.remove('hi-panel-restoring');
-      document.body.style.overflow = 'hidden';
     });
   }
 

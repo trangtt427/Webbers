@@ -36,7 +36,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html {
   scroll-behavior: smooth;
-  scrollbar-gutter: stable;
 }
 @media (min-width: 769px) {
   html {
@@ -119,7 +118,11 @@ a:hover { text-decoration: underline; }
   padding: 280px 32px 80px;
 }
 .wrap:has(.homepage-layout) {
+  max-width: 1440px;
   padding-top: 120px;
+}
+.wrap:has(.homepage-layout) .site-header-inner {
+  max-width: 1440px;
 }
 @media (min-width: 769px) {
   .wrap:has(.homepage-layout) {
@@ -795,7 +798,7 @@ html.dark .theme-toggle:hover .icon-sun {
 .homepage-layout {
   display: grid;
   grid-template-columns: 180px 1fr;
-  gap: clamp(56px, 8vw, 104px);
+  gap: 156px;
   align-items: stretch;
 }
 .homepage-toc-column {
@@ -881,11 +884,6 @@ html.dark .homepage-toc-link.toc-active {
   grid-column: 2;
   padding-top: 82px;
 }
-@media (min-width: 769px) {
-  .homepage-content {
-    max-width: 700px;
-  }
-}
 
 @media (max-width: 768px) {
   .homepage-content {
@@ -900,7 +898,7 @@ html.dark .homepage-toc-link.toc-active {
   border-bottom: 1px solid var(--border);
   opacity: 0;
   transform: translateY(48px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out, border-color 0.7s ease-out;
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out, border-color var(--transition-duration) var(--transition-easing);
 }
 @media (min-width: 769px) {
   .homepage-intro {
@@ -924,7 +922,7 @@ html.dark .homepage-toc-link.toc-active {
   font-size: 40px;
   line-height: 1.25;
   color: var(--text);
-  max-width: 700px;
+  max-width: 900px;
 }
 .homepage-intro-sub {
   font-size: 20px;
@@ -932,14 +930,14 @@ html.dark .homepage-toc-link.toc-active {
   line-height: 1.5;
   color: var(--muted-soft);
   margin: 24px 0 0;
-  max-width: 700px;
+  max-width: 900px;
 }
 @media (max-width: 768px) {
-  .homepage-intro {
-    margin-top: 48px;
+  .wrap:has(.homepage-layout) .homepage-intro {
+    /* Extra breathing room above the hero on phones — kept modest so it doesn't sit too low. */
+    margin-top: clamp(72px, 18dvh, 140px);
     margin-bottom: 24px;
     padding-bottom: 80px;
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out, border-color 0.7s ease-out;
   }
 }
 .homepage-intro .emoji { font-size: 0.85em; vertical-align: baseline; }
@@ -2167,6 +2165,18 @@ html.hi-panel-restoring .hi-fade {
 html.hi-panel-restoring body {
   overflow: hidden;
 }
+
+/* Scroll lock for the Human Interest panel. Removing the page scrollbar would
+   widen the viewport and shift content; compensating both the body (in-flow
+   content) and the fixed header by the scrollbar width keeps everything in
+   place, so there's no jump when the panel opens or closes. */
+body.hi-scroll-locked {
+  overflow: hidden;
+  padding-right: var(--hi-sbw, 0px);
+}
+body.hi-scroll-locked .site-header {
+  padding-right: var(--hi-sbw, 0px);
+}
 /* Freeze all homepage animated elements in place while the panel restore fade
    runs — they stay invisible so nothing bleeds through the scrim. Once the
    panel finishes opening, JS snaps them to their final state before removing
@@ -2202,13 +2212,22 @@ html.hi-panel-restoring .about-currently {
   inset: 0;
   z-index: 200;
   background: var(--bg);
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition:
+    transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color var(--transition-duration) var(--transition-easing),
+    color var(--transition-duration) var(--transition-easing),
+    border-color var(--transition-duration) var(--transition-easing);
+  will-change: transform;
+}
+.hi-panel-inner {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: 420px 1fr;
   align-items: start;
-  overflow-y: auto;
-  transform: translateY(100%);
-  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
 }
 .hi-panel[hidden] { display: none !important; }
 .hi-panel.is-open { transform: translateY(0); }
@@ -2218,7 +2237,11 @@ html.hi-panel-restoring .about-currently {
 .hi-panel.hi-panel--restore {
   transform: translateY(0);
   opacity: 0;
-  transition: opacity 0.4s ease-out;
+  transition:
+    opacity 0.4s ease-out,
+    background-color var(--transition-duration) var(--transition-easing),
+    color var(--transition-duration) var(--transition-easing),
+    border-color var(--transition-duration) var(--transition-easing);
 }
 .hi-panel.hi-panel--restore.is-open {
   opacity: 1;
@@ -2236,14 +2259,45 @@ html.hi-panel-restoring .about-currently {
   padding: 40px;
   box-sizing: border-box;
 }
+/* Theme transitions on panel content — match homepage body * */
+.hi-panel-header,
+.hi-panel-meta,
+.hi-panel-name,
+.hi-panel-summary,
+.hi-panel-details,
+.hi-panel-detail-row,
+.hi-panel-detail-label,
+.hi-panel-detail-value,
+.hi-panel-back,
+.hi-panel-media-wrap {
+  transition:
+    color var(--transition-duration) var(--transition-easing),
+    background-color var(--transition-duration) var(--transition-easing),
+    border-color var(--transition-duration) var(--transition-easing),
+    fill var(--transition-duration) var(--transition-easing),
+    stroke var(--transition-duration) var(--transition-easing);
+}
 .hi-panel-header {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+.hi-panel-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 40px;
+  gap: 16px;
+}
+.theme-toggle-panel {
+  flex-shrink: 0;
+  transform: translateY(-1px);
+}
 .hi-panel-back {
   display: inline-flex;
   align-items: center;
+  width: fit-content;
   gap: 8px;
   background: none;
   border: none;
@@ -2253,7 +2307,6 @@ html.hi-panel-restoring .about-currently {
   padding: 0;
   font-family: inherit;
   text-align: left;
-  transition: color var(--transition-duration) var(--transition-easing);
 }
 .hi-panel-back:hover { color: var(--text); }
 .hi-panel-meta {
@@ -2328,15 +2381,15 @@ html.hi-panel-restoring .about-currently {
 }
 
 @media (max-width: 1024px) {
-  .hi-panel {
+  .hi-panel-inner {
     /* Switch to block so .hi-panel-left's display:contents children
-       become direct block children of the scroll container. */
+       become direct block children of the inner scroll content. */
     display: block;
   }
   .hi-panel-left {
     /* Dissolve the left column's box — its children (.hi-panel-header
-       and .hi-panel-meta) flow directly into .hi-panel (the scroll
-       container), which lets position:sticky on the header work. */
+       and .hi-panel-meta) flow into .hi-panel-inner, which lets
+       position:sticky on the header work within .hi-panel. */
     display: contents;
   }
   .hi-panel-header {
