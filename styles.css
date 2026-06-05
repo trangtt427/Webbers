@@ -885,7 +885,7 @@ html.dark .homepage-toc-link.toc-active {
   padding-top: 82px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .homepage-content {
     padding-top: 0;
   }
@@ -900,7 +900,7 @@ html.dark .homepage-toc-link.toc-active {
   transform: translateY(48px);
   transition: opacity 0.9s ease-out, transform 0.9s ease-out, border-color var(--transition-duration) var(--transition-easing);
 }
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .homepage-intro {
     margin-bottom: 48px;
     padding-bottom: 240px;
@@ -932,7 +932,7 @@ html.dark .homepage-toc-link.toc-active {
   margin: 24px 0 0;
   max-width: 900px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .wrap:has(.homepage-layout) .homepage-intro {
     /* Extra breathing room above the hero on phones — kept modest so it doesn't sit too low. */
     margin-top: clamp(72px, 18dvh, 140px);
@@ -960,7 +960,7 @@ html.dark .homepage-toc-link.toc-active {
   display: grid;
   grid-template-columns: 1fr;
   gap: 28px;
-  min-width: 500px;
+  min-width: 0;
 }
 .homepage-case-study-copy {
   order: 1;
@@ -986,6 +986,7 @@ html.dark .homepage-toc-link.toc-active {
 .homepage-case-study-visual .project-mockup-wrap,
 .homepage-case-study-visual .project-image-wrap {
   margin-top: 0;
+  max-width: 100%;
 }
 .homepage-case-study-dots {
   display: flex;
@@ -1075,7 +1076,7 @@ html.dark .homepage-case-study-dot--active {
   border-top-color: var(--border);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .homepage-toc-column {
     display: none;
   }
@@ -1088,9 +1089,6 @@ html.dark .homepage-case-study-dot--active {
   }
   .homepage-case-study {
     padding: 48px 0;
-  }
-  .homepage-case-study-inner {
-    min-width: 0;
   }
   .homepage-case-study-title {
     font-size: 24px;
@@ -2069,6 +2067,7 @@ html.dark .project-dot--active {
 .project-video-wrap {
   position: relative;
   width: 100%;
+  max-width: 100%;
   border-radius: 12px;
   overflow: hidden;
   background: #0f0f0f;
@@ -2076,6 +2075,13 @@ html.dark .project-dot--active {
   margin-top: 8px;
   color: var(--muted);
   font-size: 0.9rem;
+}
+@media (max-width: 1024px) {
+  .homepage-case-study .project-video-wrap,
+  .homepage-case-study .project-image-wrap {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 }
 .project-video-wrap video {
   width: 100%;
