@@ -46,6 +46,26 @@
     document.documentElement.style.removeProperty('--hi-sbw');
   }
 
+  // Run the media scale-in once per open. Using a dedicated class (not .is-open)
+  // prevents the animation from restarting when other panel classes change.
+  function animatePanelMedia() {
+    var wraps = panel.querySelectorAll('.hi-panel-media-wrap');
+    for (var i = 0; i < wraps.length; i++) {
+      wraps[i].classList.remove('hi-panel-media-in');
+    }
+    void panel.offsetWidth;
+    for (var j = 0; j < wraps.length; j++) {
+      wraps[j].classList.add('hi-panel-media-in');
+    }
+  }
+
+  function clearPanelMediaAnimation() {
+    var wraps = panel.querySelectorAll('.hi-panel-media-wrap');
+    for (var i = 0; i < wraps.length; i++) {
+      wraps[i].classList.remove('hi-panel-media-in');
+    }
+  }
+
   function openPanel(e) {
     if (e) e.preventDefault();
     if (isOpen) return;
@@ -57,6 +77,7 @@
       requestAnimationFrame(function() {
         panel.classList.add('is-open');
         if (fade) fade.classList.add('is-visible');
+        animatePanelMedia();
       });
     });
     history.pushState({ hiPanel: true }, '', basePath + PANEL_HASH);
@@ -68,6 +89,7 @@
     if (!isOpen) return;
     isOpen = false;
     panel.classList.remove('is-open');
+    clearPanelMediaAnimation();
     if (fade) fade.classList.remove('is-visible');
     if (video) video.pause();
     panel.scrollTop = 0;
@@ -97,6 +119,7 @@
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
         panel.classList.add('is-open');
+        animatePanelMedia();
       });
     });
     panel.addEventListener('transitionend', function onRestore(ev) {
