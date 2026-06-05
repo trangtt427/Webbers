@@ -1244,11 +1244,17 @@ html.dark .homepage-case-study-dot--active {
 .about-currently-value p:last-child {
   margin-bottom: 0;
 }
-.about-currently-value a,
-.hi-panel-summary a {
+.about-currently-value a {
   display: inline-block;
   padding-bottom: 0.2em;
   color: var(--muted-soft);
+  text-decoration: none;
+  position: relative;
+}
+.hi-panel-summary a {
+  display: inline-block;
+  padding-bottom: 0.2em;
+  color: var(--text);
   text-decoration: none;
   position: relative;
 }
@@ -2397,9 +2403,6 @@ html.hi-panel-restoring .about-currently {
   margin-top: 10px;
 }
 @media (max-width: 768px) {
-  .hi-panel-name {
-    font-size: 32px;
-  }
   .hi-panel-detail-label,
   .hi-panel-detail-value {
     font-size: 17px;
@@ -2494,6 +2497,9 @@ html.hi-panel-restoring .about-currently {
   .hi-panel-right {
     padding: 24px 20px 40px;
     gap: 32px;
+  }
+  .hi-panel-name {
+    font-size: 28px;
   }
   .hi-panel-detail-label,
   .hi-panel-detail-value,
