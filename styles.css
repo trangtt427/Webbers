@@ -1073,7 +1073,7 @@ html.dark .homepage-case-study-dot--active {
 .homepage-about {
   padding-top: 80px;
   border-top: 1px solid var(--border);
-  transition: border-color 0.7s ease-out;
+  transition: border-color var(--transition-duration) var(--transition-easing);
 }
 .wrap:has(.homepage-layout) .homepage-about {
   border-top-color: transparent;
