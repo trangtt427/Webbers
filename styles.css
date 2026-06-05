@@ -2161,9 +2161,27 @@ html.dark .project-dot--active {
 html.hi-panel-restoring .hi-fade {
   opacity: 1;
   transition: none;
+  /* Solid screen that masks the redirect blank; the panel fades in over it. */
+  background: var(--bg);
 }
 html.hi-panel-restoring body {
   overflow: hidden;
+}
+/* Freeze all homepage animated elements in place while the panel restore fade
+   runs — they stay invisible so nothing bleeds through the scrim. Once the
+   panel finishes opening, JS snaps them to their final state before removing
+   this class, so the homepage is ready when the user eventually closes the panel. */
+html.hi-panel-restoring .homepage-intro,
+html.hi-panel-restoring .homepage-case-study,
+html.hi-panel-restoring .homepage-about,
+html.hi-panel-restoring .wrap:has(.homepage-layout) .site-name,
+html.hi-panel-restoring .wrap:has(.homepage-layout) .site-meta,
+html.hi-panel-restoring .wrap:has(.homepage-layout) .site-footer,
+html.hi-panel-restoring .homepage-toc,
+html.hi-panel-restoring .about-hero-content,
+html.hi-panel-restoring .about-two-col,
+html.hi-panel-restoring .about-currently {
+  transition: none !important;
 }
 
 /* Human Interest panel overlay */
@@ -2195,11 +2213,12 @@ html.hi-panel-restoring body {
 .hi-panel[hidden] { display: none !important; }
 .hi-panel.is-open { transform: translateY(0); }
 
-/* Restore variant: used on refresh — panel is already in position, fade in only */
+/* Restore variant: used on refresh — solid screen shows first, then the panel
+   content fades in over it (no slide). */
 .hi-panel.hi-panel--restore {
   transform: translateY(0);
   opacity: 0;
-  transition: opacity 0.5s ease-out;
+  transition: opacity 0.4s ease-out;
 }
 .hi-panel.hi-panel--restore.is-open {
   opacity: 1;

@@ -64,7 +64,8 @@
   }
 
   // Auto-open when human-interest.html redirected here with the sessionStorage flag.
-  // Uses a fade-only entrance (no slide) since the panel is conceptually already open.
+  // A solid screen (the scrim filled with var(--bg)) masks the redirect blank,
+  // then the panel content fades in over it — no slide.
   var shouldRestore = false;
   try { shouldRestore = sessionStorage.getItem('hiPanel') === '1'; } catch (err) {}
   if (shouldRestore) {
@@ -74,19 +75,26 @@
     history.pushState({ hiPanel: true }, '', panelPath);
     isOpen = true;
     panel.hidden = false;
-    panel.classList.add('hi-panel--restore'); // opacity-only transition, no slide
+    panel.classList.add('hi-panel--restore'); // opacity-only fade, no slide
     if (fade) fade.classList.add('is-visible');
     if (video) video.play().catch(function() {});
-    // Double rAF paints the opacity:0 panel state before is-open triggers the fade.
+    // Double rAF paints the opacity:0 panel over the solid screen before the
+    // fade begins.
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
         panel.classList.add('is-open');
       });
     });
-    panel.addEventListener('transitionend', function onRefreshOpen(ev) {
+    panel.addEventListener('transitionend', function onRestore(ev) {
       if (ev.propertyName !== 'opacity') return;
-      panel.removeEventListener('transitionend', onRefreshOpen);
+      panel.removeEventListener('transitionend', onRestore);
       panel.classList.remove('hi-panel--restore');
+      // Snap the homepage to its final visible state while hi-panel-restoring
+      // still suppresses transitions, then remove the class.
+      if (typeof window._revealHomepage === 'function') {
+        window._revealHomepage();
+        window._revealHomepage = null;
+      }
       document.documentElement.classList.remove('hi-panel-restoring');
       document.body.style.overflow = 'hidden';
     });

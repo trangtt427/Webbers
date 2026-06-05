@@ -22,10 +22,13 @@
   var hero = document.querySelector('.hero');
   var homepageIntro = document.querySelector('.homepage-intro');
 
-  // Stage 1: hero in immediately (all pages with a hero/intro)
+  // Stage 1: hero in immediately (all pages with a hero/intro).
+  // Skip during panel restore — homepage elements must stay invisible until
+  // the panel finishes its fade-in (see _revealHomepage below).
   if (hero || homepageIntro) {
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
+        if (document.documentElement.classList.contains('hi-panel-restoring')) return;
         if (hero) hero.classList.add('hero-in');
         if (homepageIntro) homepageIntro.classList.add('homepage-intro-in');
       });
@@ -64,6 +67,21 @@
     if (siteMeta) siteMeta.classList.add('site-meta-in');
     if (toc) toc.classList.add('homepage-toc-in');
     revealBelowHero();
+    return;
+  }
+
+  // Panel restore: expose a function that hi-panel.js calls once the panel
+  // finishes its fade-in. All classes are applied while hi-panel-restoring is
+  // still on <html> (transition: none), so everything snaps instantly with no
+  // visible flash. The homepage is then ready for when the user closes the panel.
+  if (document.documentElement.classList.contains('hi-panel-restoring')) {
+    window._revealHomepage = function() {
+      if (homepageIntro) homepageIntro.classList.add('homepage-intro-in');
+      if (siteName) siteName.classList.add('site-name-in');
+      if (siteMeta) siteMeta.classList.add('site-meta-in');
+      if (toc) toc.classList.add('homepage-toc-in');
+      revealBelowHero();
+    };
     return;
   }
 
