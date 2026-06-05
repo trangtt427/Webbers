@@ -15,10 +15,11 @@
       if (s === 'dark') el.classList.add('dark');
       else if (s === 'light') el.classList.remove('dark');
       else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
-      // If the panel was open when the page was refreshed (human-interest.html
-      // sets this flag then redirects here), hide the homepage immediately
-      // before the first paint so there's no visible flash.
-      try { if (sessionStorage.getItem('hiPanel') === '1') el.classList.add('hi-panel-restoring'); } catch (e) {}
+      // If the panel was open when the page was refreshed, hide the homepage
+      // immediately before the first paint so there's no visible flash.
+      if (window.location.search.indexOf('panel=human-interest') !== -1) {
+        el.classList.add('hi-panel-restoring');
+      }
     })();
   </script>
 </head>
