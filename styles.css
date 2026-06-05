@@ -2239,6 +2239,7 @@ html.hi-panel-restoring .about-currently {
   margin-right: auto;
   display: grid;
   grid-template-columns: 420px 1fr;
+  column-gap: 30px;
   align-items: start;
 }
 .hi-panel[hidden] { display: none !important; }
@@ -2402,7 +2403,6 @@ html.hi-panel-restoring .about-currently {
   flex-shrink: 0;
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid var(--border);
 }
 .hi-panel-media-wrap img,
 .hi-panel-media-wrap video {
