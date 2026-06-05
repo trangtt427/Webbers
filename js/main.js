@@ -11,8 +11,8 @@
     history.scrollRestoration = isHomepage ? 'manual' : 'auto';
   }
   // Start at the top on a plain homepage load, and also when restoring the
-  // Human Interest panel (its #/human-interest hash isn't a scroll target).
-  if (isHomepage && (!window.location.hash || window.location.hash === '#/human-interest')) {
+  // Case study panels (their hashes aren't scroll targets).
+  if (isHomepage && (!window.location.hash || window.location.hash === '#/human-interest' || window.location.hash === '#/tactic')) {
     window.scrollTo(0, 0);
   }
 })();

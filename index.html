@@ -17,7 +17,7 @@
       else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
       // If the panel was open when the page was refreshed, hide the homepage
       // immediately before the first paint so there's no visible flash.
-      if (window.location.hash === '#/human-interest') {
+      if (window.location.hash === '#/human-interest' || window.location.hash === '#/tactic') {
         el.classList.add('hi-panel-restoring');
       }
     })();
@@ -271,6 +271,76 @@
       </div>
       <div class="hi-panel-media-wrap">
         <img src="assets/images/hi/fasttrackfinal.png" alt="New additions to HUI design system" />
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="tactic-panel" class="hi-panel" role="dialog" aria-modal="true" aria-label="Tactic case study" hidden>
+    <div class="hi-panel-inner">
+    <div class="hi-panel-left">
+      <div class="hi-panel-header">
+        <div class="hi-panel-header-row">
+          <button type="button" class="hi-panel-back" aria-label="Close panel">← Back</button>
+          <button class="theme-toggle theme-toggle-panel" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5" />
+              <line x1="12" y1="2.5" x2="12" y2="5.2" />
+              <line x1="12" y1="18.8" x2="12" y2="21.5" />
+              <line x1="2.5" y1="12" x2="5.2" y2="12" />
+              <line x1="18.8" y1="12" x2="21.5" y2="12" />
+              <line x1="4.4" y1="4.4" x2="6.3" y2="6.3" />
+              <line x1="17.7" y1="17.7" x2="19.6" y2="19.6" />
+              <line x1="17.7" y1="6.3" x2="19.6" y2="4.4" />
+              <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
+            </svg>
+          </button>
+        </div>
+        <p class="hi-panel-name">Tactic</p>
+      </div>
+      <div class="hi-panel-meta">
+        <p class="hi-panel-summary">Joined Tactic to build from scratch a complete and automated accounting platform for SMBs dealing with business crypto.</p>
+        <div class="hi-panel-details">
+          <div class="hi-panel-detail-row">
+            <span class="hi-panel-detail-label">Role</span>
+            <span class="hi-panel-detail-value">Design Consultant</span>
+          </div>
+          <div class="hi-panel-detail-row">
+            <span class="hi-panel-detail-label">Key Results</span>
+            <div class="hi-panel-detail-value">
+              <p>Businesses saved on average 40+ hours a month on crypto accounting</p>
+              <p>Tactic acquired by leading crypto tax software TaxBit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hi-panel-right">
+      <div class="hi-panel-media-wrap">
+        <video autoplay loop muted playsinline>
+          <source src="assets/videos/tactic-motion.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/tactic/palette.png" alt="Color palette" />
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/tactic/ds.png" alt="Tactic Design System" />
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/tactic/newrules.gif" alt="Rules engine for automating transaction categorization" />
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/tactic/integrations.png" alt="Integrations and self-serve setup" />
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/tactic/tactic-header.png" alt="Tactic product overview" />
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/tactic/pressrelease.png" alt="Press release image" />
       </div>
     </div>
     </div>

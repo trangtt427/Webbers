@@ -1,28 +1,36 @@
 /**
- * Human Interest case study panel overlay.
- * Intercepts clicks on the Human Interest links on the homepage and opens a
- * full-screen panel that slides up from the bottom instead of navigating away.
- * Only active when #hi-panel exists (homepage only).
+ * Homepage case study panel overlays.
+ * Intercepts clicks on Human Interest and Tactic links and opens full-screen
+ * panels that slide up from the bottom instead of navigating away.
+ * Only active when matching panel elements exist (homepage only).
  *
- * URL strategy: uses the hash route #/human-interest on the homepage path.
- * The hash is never sent to the server, so refreshing reloads index.html
- * (not human-interest.html) and the panel auto-reopens with a fade —
- * no redirect, no blank screen, and no "?" query string.
+ * URL strategy: hash routes (#/human-interest, #/tactic) on the homepage path.
+ * The hash is never sent to the server, so refreshing reloads index.html and
+ * the panel auto-reopens with a fade — no redirect, no blank screen.
  */
 (function() {
-  var panel = document.getElementById('hi-panel');
-  if (!panel) return;
-
   var fade = document.getElementById('hi-fade');
-  var backBtn = panel.querySelector('.hi-panel-back');
-  var video = panel.querySelector('video');
-  var isOpen = false;
+  var panels = [
+    {
+      el: document.getElementById('hi-panel'),
+      hash: '#/human-interest',
+      sectionId: 'human-interest',
+      href: 'human-interest'
+    },
+    {
+      el: document.getElementById('tactic-panel'),
+      hash: '#/tactic',
+      sectionId: 'tactic',
+      href: 'tactic'
+    }
+  ].filter(function(p) { return p.el; });
 
-  var PANEL_HASH = '#/human-interest';
+  if (!panels.length) return;
+
+  var activePanel = null;
+  var isOpen = false;
   var basePath = window.location.pathname;
 
-  // Width of the classic scrollbar, measured with an offscreen probe so it works
-  // regardless of the current overflow state (returns 0 for overlay scrollbars).
   var scrollbarWidth = (function() {
     var probe = document.createElement('div');
     probe.style.cssText = 'position:absolute;top:-9999px;width:100px;height:100px;overflow:scroll;';
@@ -32,102 +40,129 @@
     return w;
   })();
 
-  // Lock the page scroll and remove the homepage scrollbar. The removed scrollbar
-  // width is exposed as --hi-sbw so CSS can compensate BOTH the in-flow body
-  // content and the fixed header by that amount — keeping everything in place so
-  // there's no jump when the panel opens or closes. (The homepage scrollbar is
-  // truly gone, not just hidden behind the panel, so it can't paint on top.)
   function lockScroll() {
     document.documentElement.style.setProperty('--hi-sbw', scrollbarWidth + 'px');
     document.body.classList.add('hi-scroll-locked');
   }
+
   function unlockScroll() {
     document.body.classList.remove('hi-scroll-locked');
     document.documentElement.style.removeProperty('--hi-sbw');
   }
 
-  // Run the media scale-in once per open. Using a dedicated class (not .is-open)
-  // prevents the animation from restarting when other panel classes change.
-  function animatePanelMedia() {
-    var wraps = panel.querySelectorAll('.hi-panel-media-wrap');
+  function getPanelByHash(hash) {
+    for (var i = 0; i < panels.length; i++) {
+      if (panels[i].hash === hash) return panels[i];
+    }
+    return null;
+  }
+
+  function animatePanelMedia(panel) {
+    var wraps = panel.el.querySelectorAll('.hi-panel-media-wrap');
     for (var i = 0; i < wraps.length; i++) {
       wraps[i].classList.remove('hi-panel-media-in');
     }
-    void panel.offsetWidth;
+    void panel.el.offsetWidth;
     for (var j = 0; j < wraps.length; j++) {
       wraps[j].classList.add('hi-panel-media-in');
     }
   }
 
-  function clearPanelMediaAnimation() {
-    var wraps = panel.querySelectorAll('.hi-panel-media-wrap');
+  function clearPanelMediaAnimation(panel) {
+    var wraps = panel.el.querySelectorAll('.hi-panel-media-wrap');
     for (var i = 0; i < wraps.length; i++) {
       wraps[i].classList.remove('hi-panel-media-in');
     }
   }
 
-  function openPanel(e) {
+  function pausePanelVideos(panel) {
+    var videos = panel.el.querySelectorAll('video');
+    for (var i = 0; i < videos.length; i++) videos[i].pause();
+  }
+
+  function playPanelVideos(panel) {
+    var videos = panel.el.querySelectorAll('video');
+    for (var i = 0; i < videos.length; i++) {
+      videos[i].play().catch(function() {});
+    }
+  }
+
+  function hideOtherPanels(panel) {
+    for (var i = 0; i < panels.length; i++) {
+      if (panels[i] !== panel) {
+        panels[i].el.hidden = true;
+        panels[i].el.classList.remove('is-open', 'hi-panel--restore');
+        pausePanelVideos(panels[i]);
+        clearPanelMediaAnimation(panels[i]);
+      }
+    }
+  }
+
+  function openPanel(panel, e) {
     if (e) e.preventDefault();
-    if (isOpen) return;
+    if (isOpen && activePanel === panel) return;
+    if (isOpen) {
+      activePanel.el.classList.remove('is-open');
+      clearPanelMediaAnimation(activePanel);
+      pausePanelVideos(activePanel);
+    }
+    hideOtherPanels(panel);
     isOpen = true;
-    // Lock immediately so the homepage scrollbar is gone before the panel rises.
+    activePanel = panel;
     lockScroll();
-    panel.hidden = false;
+    panel.el.hidden = false;
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
-        panel.classList.add('is-open');
+        panel.el.classList.add('is-open');
         if (fade) fade.classList.add('is-visible');
-        animatePanelMedia();
+        animatePanelMedia(panel);
       });
     });
-    history.pushState({ hiPanel: true }, '', basePath + PANEL_HASH);
-    if (video) video.play().catch(function() {});
+    history.pushState({ caseStudyPanel: panel.hash }, '', basePath + panel.hash);
+    playPanelVideos(panel);
+    var backBtn = panel.el.querySelector('.hi-panel-back');
     if (backBtn) backBtn.focus();
   }
 
   function closePanel() {
-    if (!isOpen) return;
+    if (!isOpen || !activePanel) return;
+    var panel = activePanel;
     isOpen = false;
-    panel.classList.remove('is-open');
-    clearPanelMediaAnimation();
+    activePanel = null;
+    panel.el.classList.remove('is-open');
+    clearPanelMediaAnimation(panel);
     if (fade) fade.classList.remove('is-visible');
-    if (video) video.pause();
-    panel.scrollTop = 0;
-    // Keep the page locked through the slide-down so the panel covers the page
-    // the whole way; restore the homepage scrollbar once it's fully closed.
-    panel.addEventListener('transitionend', function onEnd(ev) {
+    pausePanelVideos(panel);
+    panel.el.scrollTop = 0;
+    panel.el.addEventListener('transitionend', function onEnd(ev) {
       if (ev.propertyName !== 'transform') return;
-      panel.removeEventListener('transitionend', onEnd);
-      panel.hidden = true;
+      panel.el.removeEventListener('transitionend', onEnd);
+      panel.el.hidden = true;
       unlockScroll();
     });
   }
 
-  // Auto-open when the page is loaded/refreshed with the #/human-interest hash.
-  // The solid restore scrim covers the homepage, then the panel fades in over it.
-  if (window.location.hash === PANEL_HASH) {
-    // Normalise history so the browser back button returns cleanly to the homepage root.
+  function restorePanel(panel) {
     history.replaceState(null, '', basePath);
-    history.pushState({ hiPanel: true }, '', basePath + PANEL_HASH);
+    history.pushState({ caseStudyPanel: panel.hash }, '', basePath + panel.hash);
     isOpen = true;
+    activePanel = panel;
+    hideOtherPanels(panel);
     lockScroll();
-    panel.hidden = false;
-    panel.classList.add('hi-panel--restore'); // opacity-only fade, no slide
+    panel.el.hidden = false;
+    panel.el.classList.add('hi-panel--restore');
     if (fade) fade.classList.add('is-visible');
-    if (video) video.play().catch(function() {});
-    // Double rAF paints the opacity:0 panel over the solid screen before the fade.
+    playPanelVideos(panel);
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
-        panel.classList.add('is-open');
-        animatePanelMedia();
+        panel.el.classList.add('is-open');
+        animatePanelMedia(panel);
       });
     });
-    panel.addEventListener('transitionend', function onRestore(ev) {
+    panel.el.addEventListener('transitionend', function onRestore(ev) {
       if (ev.propertyName !== 'opacity') return;
-      panel.removeEventListener('transitionend', onRestore);
-      panel.classList.remove('hi-panel--restore');
-      // Snap the homepage to its final visible state while hi-panel-restoring
-      // still suppresses transitions, then remove the class.
+      panel.el.removeEventListener('transitionend', onRestore);
+      panel.el.classList.remove('hi-panel--restore');
       if (typeof window._revealHomepage === 'function') {
         window._revealHomepage();
         window._revealHomepage = null;
@@ -136,29 +171,31 @@
     });
   }
 
-  // Intercept both Human Interest links on the homepage.
-  var hiSection = document.getElementById('human-interest');
-  if (hiSection) {
-    var triggers = hiSection.querySelectorAll('a[href="human-interest"]');
-    for (var i = 0; i < triggers.length; i++) {
-      triggers[i].addEventListener('click', openPanel);
-    }
+  var restorePanelMatch = getPanelByHash(window.location.hash);
+  if (restorePanelMatch) restorePanel(restorePanelMatch);
+
+  for (var i = 0; i < panels.length; i++) {
+    (function(panel) {
+      var section = document.getElementById(panel.sectionId);
+      if (!section) return;
+      var triggers = section.querySelectorAll('a[href="' + panel.href + '"]');
+      for (var j = 0; j < triggers.length; j++) {
+        triggers[j].addEventListener('click', function(e) { openPanel(panel, e); });
+      }
+      var backBtn = panel.el.querySelector('.hi-panel-back');
+      if (backBtn) {
+        backBtn.addEventListener('click', function() {
+          history.replaceState(null, '', basePath);
+          closePanel();
+        });
+      }
+    })(panels[i]);
   }
 
-  // Back button: strip the hash from the URL and close the panel.
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      history.replaceState(null, '', basePath);
-      closePanel();
-    });
-  }
-
-  // Browser back button fires popstate — close the panel.
   window.addEventListener('popstate', function() {
     if (isOpen) closePanel();
   });
 
-  // Escape key.
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && isOpen) {
       history.replaceState(null, '', basePath);
