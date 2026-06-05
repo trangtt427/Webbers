@@ -121,7 +121,13 @@ a:hover { text-decoration: underline; }
   max-width: 1440px;
   padding-top: 120px;
 }
-.wrap:has(.homepage-layout) .site-header-inner {
+.wrap:has(.homepage-layout) .site-header-inner,
+.wrap:has(.blog-index) .site-header-inner,
+.wrap:has(.blog-post) .site-header-inner {
+  max-width: 1440px;
+}
+.wrap:has(.blog-index),
+.wrap:has(.blog-post) {
   max-width: 1440px;
 }
 @media (min-width: 769px) {
@@ -1318,7 +1324,7 @@ html.dark .homepage-case-study-dot--active {
 .blog-post-intro-image {
   margin-top: 32px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1440px;
   border-radius: 12px;
   overflow: hidden;
   line-height: 0;
@@ -1334,7 +1340,7 @@ html.dark .homepage-case-study-dot--active {
   line-height: 1.5;
   color: var(--muted-soft);
   margin: 12px 0 0;
-  max-width: 1100px;
+  max-width: 1440px;
 }
 .blog-post-intro-caption a {
   display: inline-block;
