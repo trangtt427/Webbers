@@ -4,9 +4,10 @@
  * full-screen panel that slides up from the bottom instead of navigating away.
  * Only active when #hi-panel exists (homepage only).
  *
- * URL strategy: uses ?panel=human-interest on the homepage path so that
- * refreshing the page reloads index.html (not human-interest.html) and
- * the panel auto-reopens with a fade — no redirect, no blank screen.
+ * URL strategy: uses the hash route #/human-interest on the homepage path.
+ * The hash is never sent to the server, so refreshing reloads index.html
+ * (not human-interest.html) and the panel auto-reopens with a fade —
+ * no redirect, no blank screen, and no "?" query string.
  */
 (function() {
   var panel = document.getElementById('hi-panel');
@@ -17,7 +18,7 @@
   var video = panel.querySelector('video');
   var isOpen = false;
 
-  var PANEL_PARAM = 'panel=human-interest';
+  var PANEL_HASH = '#/human-interest';
   var basePath = window.location.pathname;
 
   function openPanel(e) {
@@ -38,7 +39,7 @@
       panel.removeEventListener('transitionend', onOpen);
       document.body.style.overflow = 'hidden';
     });
-    history.pushState({ hiPanel: true }, '', basePath + '?' + PANEL_PARAM);
+    history.pushState({ hiPanel: true }, '', basePath + PANEL_HASH);
     if (video) video.play().catch(function() {});
     if (backBtn) backBtn.focus();
   }
@@ -59,12 +60,12 @@
     });
   }
 
-  // Auto-open when the page is loaded/refreshed with ?panel=human-interest.
+  // Auto-open when the page is loaded/refreshed with the #/human-interest hash.
   // The solid restore scrim covers the homepage, then the panel fades in over it.
-  if (window.location.search.indexOf('panel=human-interest') !== -1) {
+  if (window.location.hash === PANEL_HASH) {
     // Normalise history so the browser back button returns cleanly to the homepage root.
     history.replaceState(null, '', basePath);
-    history.pushState({ hiPanel: true }, '', basePath + '?' + PANEL_PARAM);
+    history.pushState({ hiPanel: true }, '', basePath + PANEL_HASH);
     isOpen = true;
     panel.hidden = false;
     panel.classList.add('hi-panel--restore'); // opacity-only fade, no slide
@@ -100,7 +101,7 @@
     }
   }
 
-  // Back button: strip the query param from the URL and close the panel.
+  // Back button: strip the hash from the URL and close the panel.
   if (backBtn) {
     backBtn.addEventListener('click', function() {
       history.replaceState(null, '', basePath);

@@ -10,7 +10,9 @@
   if ('scrollRestoration' in history) {
     history.scrollRestoration = isHomepage ? 'manual' : 'auto';
   }
-  if (isHomepage && !window.location.hash) {
+  // Start at the top on a plain homepage load, and also when restoring the
+  // Human Interest panel (its #/human-interest hash isn't a scroll target).
+  if (isHomepage && (!window.location.hash || window.location.hash === '#/human-interest')) {
     window.scrollTo(0, 0);
   }
 })();

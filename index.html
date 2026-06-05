@@ -17,7 +17,7 @@
       else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
       // If the panel was open when the page was refreshed, hide the homepage
       // immediately before the first paint so there's no visible flash.
-      if (window.location.search.indexOf('panel=human-interest') !== -1) {
+      if (window.location.hash === '#/human-interest') {
         el.classList.add('hi-panel-restoring');
       }
     })();
