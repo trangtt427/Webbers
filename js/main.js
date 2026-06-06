@@ -97,7 +97,7 @@
     if (siteMeta) siteMeta.classList.add('site-meta-in');
     if (toc) toc.classList.add('homepage-toc-in');
     revealBelowHero();
-  }, 2000);
+  }, 2300);
 })();
 
 (function() {
