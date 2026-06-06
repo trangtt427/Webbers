@@ -907,7 +907,7 @@ html.dark .homepage-toc-link.toc-active {
 .homepage-intro {
   margin-top: 0;
   margin-bottom: 32px;
-  padding-bottom: 160px;
+  padding-bottom: 200px;
   border-bottom: 1px solid var(--border);
   opacity: 0;
   transform: translateY(48px);
@@ -916,7 +916,7 @@ html.dark .homepage-toc-link.toc-active {
 @media (min-width: 1025px) {
   .homepage-intro {
     margin-bottom: 48px;
-    padding-bottom: 240px;
+    padding-bottom: 280px;
   }
 }
 .homepage-intro.homepage-intro-in {
@@ -950,7 +950,7 @@ html.dark .homepage-toc-link.toc-active {
     /* Extra breathing room above the hero on phones — kept modest so it doesn't sit too low. */
     margin-top: clamp(72px, 18dvh, 140px);
     margin-bottom: 24px;
-    padding-bottom: 80px;
+    padding-bottom: 240px;
   }
 }
 .homepage-intro .emoji { font-size: 0.85em; vertical-align: baseline; }
@@ -1078,7 +1078,7 @@ html.dark .homepage-case-study-dot--active {
 }
 
 .homepage-about {
-  padding-top: 80px;
+  padding-top: 120px;
   border-top: 1px solid var(--border);
   transition: border-color var(--transition-duration) var(--transition-easing);
 }
@@ -1092,12 +1092,29 @@ html.dark .homepage-case-study-dot--active {
   margin-top: 0;
 }
 .homepage-about .about-hero-row {
-  margin-top: 120px;
+  margin-top: 0;
   padding: 0;
 }
 .homepage-about .about-hero-content {
   max-width: 56ch;
   font-size: 20px;
+}
+.homepage-about .about-hero-duplicate {
+  margin: 96px 0 0;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+@media (max-width: 768px) {
+  .homepage-about .about-hero-duplicate {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .homepage-about .about-hero-duplicate {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1110,6 +1127,9 @@ html.dark .homepage-case-study-dot--active {
   }
   .homepage-content {
     grid-column: 1;
+  }
+  .homepage-about {
+    padding-top: 200px;
   }
   .homepage-case-study {
     padding: 48px 0;
