@@ -44,6 +44,13 @@
   var toc = document.querySelector('.homepage-toc');
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  function unlockHomepageEntranceScroll() {
+    document.documentElement.classList.remove('homepage-entrance-locked');
+    if (!document.body.classList.contains('hi-scroll-locked')) {
+      document.documentElement.style.removeProperty('--hi-sbw');
+    }
+  }
+
   // Reveals everything below the hero together: case studies, the about section (divider,
   // intro, baby picture + second body of text, and the "Currently" block), and the footer.
   function revealBelowHero() {
@@ -71,6 +78,7 @@
     if (siteMeta) siteMeta.classList.add('site-meta-in');
     if (toc) toc.classList.add('homepage-toc-in');
     revealBelowHero();
+    unlockHomepageEntranceScroll();
     return;
   }
 
@@ -99,6 +107,7 @@
     if (siteMeta) siteMeta.classList.add('site-meta-in');
     if (toc) toc.classList.add('homepage-toc-in');
     revealBelowHero();
+    unlockHomepageEntranceScroll();
   }, 2300);
 })();
 

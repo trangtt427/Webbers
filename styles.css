@@ -129,15 +129,28 @@ a:hover { text-decoration: underline; }
 .wrap:has(.homepage-layout) {
   max-width: 1440px;
   padding-top: 120px;
+  padding-bottom: 0;
+  background-color: var(--bg);
+  transition: background-color var(--transition-duration) var(--transition-easing);
 }
 .wrap:has(.homepage-layout) .site-header-inner,
 .wrap:has(.blog-index) .site-header-inner,
-.wrap:has(.blog-post) .site-header-inner {
+.wrap:has(.blog-post) .site-header-inner,
+.wrap:has(.case-study) .site-header-inner {
   max-width: 1440px;
 }
 .wrap:has(.blog-index),
-.wrap:has(.blog-post) {
+.wrap:has(.blog-post),
+.wrap:has(.case-study) {
   max-width: 1440px;
+}
+.wrap:has(.case-study),
+.wrap:has(.blog-index),
+.wrap:has(.blog-post),
+.wrap:has(.about-hero) {
+  padding-bottom: 0;
+  background-color: var(--bg);
+  transition: background-color var(--transition-duration) var(--transition-easing);
 }
 @media (min-width: 769px) {
   .wrap:has(.homepage-layout) {
@@ -815,12 +828,16 @@ html.dark .theme-toggle:hover .icon-sun {
   grid-template-columns: 180px 1fr;
   gap: 156px;
   align-items: stretch;
+  background-color: var(--bg);
+  transition: background-color var(--transition-duration) var(--transition-easing);
 }
 .homepage-toc-column {
   width: 180px;
   min-width: 180px;
   min-height: 0;
   align-self: stretch;
+  background-color: var(--bg);
+  transition: background-color var(--transition-duration) var(--transition-easing);
 }
 .homepage-toc {
   position: sticky;
@@ -899,8 +916,12 @@ html.dark .homepage-toc-link.toc-active {
   min-width: 0;
   grid-column: 2;
   padding-top: 82px;
+  padding-bottom: 80px;
   background-color: var(--bg);
   transition: background-color var(--transition-duration) var(--transition-easing);
+}
+#footer-placeholder {
+  display: contents;
 }
 
 @media (max-width: 1024px) {
@@ -2389,6 +2410,20 @@ html.hi-panel-restoring body {
   overflow: hidden;
 }
 
+/* Homepage entrance: keep users on the hero until Stage 3 content appears */
+html.homepage-entrance-locked {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+html.homepage-entrance-locked body {
+  overflow: hidden;
+  overscroll-behavior: none;
+  padding-right: var(--hi-sbw, 0px);
+}
+html.homepage-entrance-locked .site-header {
+  padding-right: var(--hi-sbw, 0px);
+}
+
 /* Scroll lock for the Human Interest panel. Removing the page scrollbar would
    widen the viewport and shift content; compensating both the body (in-flow
    content) and the fixed header by the scrollbar width keeps everything in
@@ -2757,6 +2792,16 @@ html.dark .site-footer-social .footer-icon img {
 .site-footer-time {
   font-variant-numeric: tabular-nums;
 }
+.wrap:has(.case-study) .site-footer,
+.wrap:has(.blog-index) .site-footer,
+.wrap:has(.blog-post) .site-footer,
+.wrap:has(.about-hero) .site-footer {
+  padding-bottom: 80px;
+  background-color: var(--bg);
+  isolation: isolate;
+  overflow: hidden;
+  transition: border-color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
+}
 .wrap:has(.case-study) .site-footer {
   border-top: 1px solid var(--border);
   margin-top: 80px;
@@ -2764,11 +2809,9 @@ html.dark .site-footer-social .footer-icon img {
 .wrap:has(.homepage-layout) .site-footer {
   border-top: 1px solid var(--border);
   background-color: var(--bg);
-  opacity: 0;
-  transition: opacity 0.7s ease-out, border-color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
-}
-.wrap:has(.homepage-layout) .site-footer.site-footer-in {
-  opacity: 1;
+  isolation: isolate;
+  overflow: hidden;
+  transition: border-color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
 }
 .homepage-content .site-footer {
   width: 100%;
@@ -2786,6 +2829,8 @@ html.dark .site-footer-social .footer-icon img {
 .wrap:has(.homepage-layout) .about-currently.about-currently-in,
 .wrap:has(.homepage-layout) .about-timeline,
 .wrap:has(.homepage-layout) .about-timeline.about-timeline-in,
+.wrap:has(.homepage-layout) .homepage-toc,
+.wrap:has(.homepage-layout) .homepage-toc.homepage-toc-in,
 .wrap:has(.homepage-layout) .site-footer,
 .wrap:has(.homepage-layout) .site-footer.site-footer-in {
   transform: none;

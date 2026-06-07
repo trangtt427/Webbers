@@ -19,11 +19,24 @@
       // immediately before the first paint so there's no visible flash.
       if (window.location.hash === '#/tactic' || window.location.hash === '#/baby-design') {
         el.classList.add('hi-panel-restoring');
+      } else {
+        el.classList.add('homepage-entrance-locked');
       }
     })();
   </script>
 </head>
 <body>
+  <script>
+    (function() {
+      if (!document.documentElement.classList.contains('homepage-entrance-locked')) return;
+      var probe = document.createElement('div');
+      probe.style.cssText = 'position:absolute;top:-9999px;width:100px;height:100px;overflow:scroll;';
+      document.body.appendChild(probe);
+      var w = probe.offsetWidth - probe.clientWidth;
+      document.body.removeChild(probe);
+      if (w) document.documentElement.style.setProperty('--hi-sbw', w + 'px');
+    })();
+  </script>
   <div class="wrap">
     <header class="site-header">
       <div class="site-header-inner">
