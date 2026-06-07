@@ -1042,6 +1042,7 @@ html.dark .homepage-toc-link.toc-active {
   display: block;
   text-decoration: none;
   color: inherit;
+  touch-action: manipulation;
 }
 .homepage-case-study-visual-link:hover {
   text-decoration: none;
@@ -2476,6 +2477,10 @@ html.hi-panel-restoring .about-currently {
 .hi-fade.is-visible {
   opacity: 1;
   pointer-events: auto;
+  cursor: default;
+}
+body.hi-panel-active .homepage-layout {
+  pointer-events: none;
 }
 .hi-panel {
   position: fixed;

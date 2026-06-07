@@ -33,7 +33,9 @@
   var isOpen = false;
   var isOpening = false;
   var openGeneration = 0;
+  var lastOpenAt = 0;
   var basePath = window.location.pathname;
+  var OPEN_GUARD_MS = 450;
 
   var scrollbarWidth = (function() {
     var probe = document.createElement('div');
@@ -54,11 +56,19 @@
     document.documentElement.style.removeProperty('--hi-sbw');
   }
 
+  function setOverlayActive(active) {
+    document.body.classList.toggle('hi-panel-active', active);
+  }
+
   function getPanelByHash(hash) {
     for (var i = 0; i < panels.length; i++) {
       if (panels[i].hash === hash) return panels[i];
     }
     return null;
+  }
+
+  function isOverlayVisible() {
+    return !!(fade && fade.classList.contains('is-visible'));
   }
 
   function animatePanelMedia(panel) {
@@ -109,7 +119,6 @@
 
   function syncCloseOverlay() {
     cancelPendingOpen();
-    var panel = activePanel;
     isOpen = false;
     activePanel = null;
     for (var i = 0; i < panels.length; i++) {
@@ -120,15 +129,41 @@
       panels[i].el.scrollTop = 0;
     }
     if (fade) fade.classList.remove('is-visible');
+    setOverlayActive(false);
     unlockScroll();
   }
 
+  function pushPanelHistory(panel) {
+    var state = window.history.state;
+    if (state && state.caseStudyPanel === panel.hash && window.location.hash === panel.hash) return;
+    history.pushState({ caseStudyPanel: panel.hash }, '', basePath + panel.hash);
+  }
+
+  function revealPanel(panel) {
+    if (fade) fade.classList.add('is-visible');
+    setOverlayActive(true);
+    panel.el.hidden = false;
+    void panel.el.offsetWidth;
+    panel.el.classList.add('is-open');
+    isOpening = false;
+    animatePanelMedia(panel);
+  }
+
   function openPanel(panel, e) {
-    if (e) e.preventDefault();
-    if ((isOpen || isOpening) && activePanel === panel) return;
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    var now = Date.now();
+    if ((isOpen || isOpening || isOverlayVisible()) && activePanel === panel) {
+      return;
+    }
+    if (now - lastOpenAt < OPEN_GUARD_MS && activePanel === panel) {
+      return;
+    }
 
     cancelPendingOpen();
-    var gen = openGeneration;
     isOpening = true;
 
     if (isOpen && activePanel && activePanel !== panel) {
@@ -136,48 +171,23 @@
       clearPanelMediaAnimation(activePanel);
       pausePanelVideos(activePanel);
     }
+
     hideOtherPanels(panel);
     isOpen = true;
     activePanel = panel;
+    lastOpenAt = now;
     lockScroll();
-    panel.el.hidden = false;
-    requestAnimationFrame(function() {
-      requestAnimationFrame(function() {
-        if (gen !== openGeneration) return;
-        if (!isOpen || activePanel !== panel) return;
-        isOpening = false;
-        panel.el.classList.add('is-open');
-        if (fade) fade.classList.add('is-visible');
-        animatePanelMedia(panel);
-      });
-    });
-    history.pushState({ caseStudyPanel: panel.hash }, '', basePath + panel.hash);
+    revealPanel(panel);
+    pushPanelHistory(panel);
     playPanelVideos(panel);
+
     var backBtn = panel.el.querySelector('.hi-panel-back');
     if (backBtn) backBtn.focus();
   }
 
   function closePanel() {
-    if (!isOpen && !isOpening && !(fade && fade.classList.contains('is-visible'))) return;
-    var panel = activePanel;
-    cancelPendingOpen();
-    isOpen = false;
-    activePanel = null;
-    if (fade) fade.classList.remove('is-visible');
-    if (!panel) {
-      syncCloseOverlay();
-      return;
-    }
-    panel.el.classList.remove('is-open');
-    clearPanelMediaAnimation(panel);
-    pausePanelVideos(panel);
-    panel.el.scrollTop = 0;
-    panel.el.addEventListener('transitionend', function onEnd(ev) {
-      if (ev.propertyName !== 'transform') return;
-      panel.el.removeEventListener('transitionend', onEnd);
-      panel.el.hidden = true;
-      unlockScroll();
-    });
+    if (!isOpen && !isOpening && !isOverlayVisible()) return;
+    syncCloseOverlay();
   }
 
   function restorePanel(panel) {
@@ -190,6 +200,7 @@
     panel.el.hidden = false;
     panel.el.classList.add('hi-panel--restore');
     if (fade) fade.classList.add('is-visible');
+    setOverlayActive(true);
     playPanelVideos(panel);
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
@@ -212,12 +223,19 @@
   var restorePanelMatch = getPanelByHash(window.location.hash);
   if (restorePanelMatch) restorePanel(restorePanelMatch);
 
+  function blockTriggerWhileOverlay(e) {
+    if (!isOpen && !isOpening && !isOverlayVisible()) return;
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
   for (var i = 0; i < panels.length; i++) {
     (function(panel) {
       var section = document.getElementById(panel.sectionId);
       if (!section) return;
       var triggers = section.querySelectorAll('a[href="' + panel.href + '"]');
       for (var j = 0; j < triggers.length; j++) {
+        triggers[j].addEventListener('pointerdown', blockTriggerWhileOverlay, true);
         triggers[j].addEventListener('click', function(e) { openPanel(panel, e); });
       }
       var backBtn = panel.el.querySelector('.hi-panel-back');
@@ -230,13 +248,23 @@
     })(panels[i]);
   }
 
+  if (fade) {
+    fade.addEventListener('click', function() {
+      if (!isOverlayVisible()) return;
+      history.replaceState(null, '', basePath);
+      syncCloseOverlay();
+    });
+  }
+
   window.addEventListener('popstate', function() {
-    if (!isOpen && !isOpening && !(fade && fade.classList.contains('is-visible'))) return;
-    syncCloseOverlay();
+    if (window.history.state && window.history.state.caseStudyPanel) return;
+    if (isOpen || isOpening || isOverlayVisible()) {
+      syncCloseOverlay();
+    }
   });
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && isOpen) {
+    if (e.key === 'Escape' && (isOpen || isOverlayVisible())) {
       history.replaceState(null, '', basePath);
       closePanel();
     }
