@@ -1111,6 +1111,7 @@ html.dark .homepage-case-study-dot--active {
 }
 
 .homepage-about {
+  scroll-margin-top: 120px;
   padding-top: 120px;
   border-top: 1px solid var(--border);
   transition: border-color var(--transition-duration) var(--transition-easing);
@@ -2024,6 +2025,10 @@ html.dark .case-study-image-wrap--tint {
     margin-top: 80px;
     padding-top: 24px;
   }
+  .case-study-back {
+    margin-top: 80px;
+    padding-top: 24px;
+  }
   .case-study-related {
     margin-top: 48px;
     padding-top: 24px;
@@ -2072,6 +2077,25 @@ html.dark .case-study-image-wrap--tint {
 }
 .case-study:not(.blog-post) .case-study-next-title a:hover::after {
   width: 100%;
+}
+
+.case-study-back {
+  margin-top: 200px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+.case-study-back-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  font-size: 1rem;
+  color: var(--muted-soft);
+  text-decoration: none;
+  font-family: inherit;
+}
+.case-study-back-link:hover {
+  color: var(--text);
 }
 
 .case-study-related {

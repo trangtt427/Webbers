@@ -267,34 +267,33 @@
 
   function updateActive() {
     var vh = window.innerHeight;
-    var activeId = null;
-    var minTop = Infinity;
+    var trigger = vh * 0.35;
+    var activeId = sections[0].id;
+    var babySection = document.getElementById('baby-design-ui');
+    var babyRect = babySection ? babySection.getBoundingClientRect() : null;
 
+    // Last section whose top has crossed the trigger line wins
     for (var k = 0; k < sections.length; k++) {
-      var rect = sections[k].getBoundingClientRect();
-      if (rect.top <= vh * 0.35 && rect.bottom > 0) {
-        if (rect.top < minTop) {
-          minTop = rect.top;
-          activeId = sections[k].id;
-        }
+      var section = sections[k];
+      var rect = section.getBoundingClientRect();
+
+      if (section.id === 'about' && babyRect && babyRect.bottom > vh * 0.2) {
+        // Keep Baby Design highlighted while it still occupies the lower viewport
+        continue;
+      }
+
+      if (rect.top <= trigger) {
+        activeId = section.id;
       }
     }
-    if (!activeId && sections.length) {
-      var topmost = null;
-      var topmostTop = Infinity;
-      for (var n = 0; n < sections.length; n++) {
-        var r = sections[n].getBoundingClientRect();
-        if (r.top >= 0 && r.top < topmostTop) {
-          topmostTop = r.top;
-          topmost = sections[n].id;
-        } else if (r.top < 0 && r.bottom > 0) {
-          topmost = sections[n].id;
-          break;
-        }
-      }
-      activeId = topmost || sections[0].id;
-    }
-    if (activeId) setActive(activeId);
+    setActive(activeId);
+  }
+
+  for (var t = 0; t < tocLinks.length; t++) {
+    tocLinks[t].addEventListener('click', function() {
+      var href = this.getAttribute('href') || '';
+      if (href.charAt(0) === '#') setActive(href.slice(1));
+    });
   }
 
   var observer = new IntersectionObserver(
