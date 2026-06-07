@@ -234,7 +234,7 @@
   var toc = document.querySelector('.homepage-toc');
   if (!toc || !('IntersectionObserver' in window)) return;
 
-  var sectionIds = ['intro', 'squarespace', 'human-interest', 'tactic', 'baby-design-ui', 'about'];
+  var sectionIds = ['intro', 'human-interest', 'squarespace', 'tactic', 'baby-design-ui', 'about'];
   var sections = [];
   for (var i = 0; i < sectionIds.length; i++) {
     var el = document.getElementById(sectionIds[i]);

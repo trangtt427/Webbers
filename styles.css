@@ -1810,6 +1810,16 @@ html.dark .blog-index-thumb-placeholder::before {
   display: block;
   vertical-align: middle;
 }
+.case-study-image-wrap--crop {
+  aspect-ratio: 16 / 9;
+}
+.case-study-image-wrap--crop video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 .case-study-figure-caption {
   margin-top: 200px;
 }
