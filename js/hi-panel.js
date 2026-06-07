@@ -31,8 +31,12 @@
 
   var activePanel = null;
   var isOpen = false;
+  var isAnimatingOpen = false;
   var triggersLocked = false;
   var basePath = window.location.pathname;
+  var SLIDE_MS = 580;
+  var triggerBindings = [];
+  var panelHrefs = panels.map(function(p) { return p.href; });
 
   var scrollbarWidth = (function() {
     var probe = document.createElement('div');
@@ -66,6 +70,28 @@
 
   function isOverlayVisible() {
     return !!(fade && fade.classList.contains('is-visible'));
+  }
+
+  function isPanelInteractionBlocked() {
+    return triggersLocked || isOpen || isAnimatingOpen || isOverlayVisible();
+  }
+
+  function isPanelTrigger(el) {
+    if (!el || !el.closest) return false;
+    var link = el.closest('a');
+    if (!link) return false;
+    var href = link.getAttribute('href') || '';
+    for (var i = 0; i < panelHrefs.length; i++) {
+      if (href === panelHrefs[i]) return true;
+    }
+    return false;
+  }
+
+  function blockPanelTriggerEvent(e) {
+    if (!isPanelInteractionBlocked()) return;
+    if (!isPanelTrigger(e.target)) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
   }
 
   function animatePanelMedia(panel) {
@@ -109,11 +135,32 @@
     }
   }
 
+  function clearSlideListener(panel) {
+    if (panel._slideEndHandler) {
+      panel.el.removeEventListener('transitionend', panel._slideEndHandler);
+      panel._slideEndHandler = null;
+    }
+    if (panel._slideFallbackTimer) {
+      clearTimeout(panel._slideFallbackTimer);
+      panel._slideFallbackTimer = null;
+    }
+  }
+
+  function finishSlideOpen(panel) {
+    if (!isAnimatingOpen) return;
+    isAnimatingOpen = false;
+    clearSlideListener(panel);
+    if (!isOpen || activePanel !== panel) return;
+    pushPanelHistory(panel);
+  }
+
   function syncCloseOverlay() {
+    isAnimatingOpen = false;
     isOpen = false;
     activePanel = null;
     triggersLocked = false;
     for (var i = 0; i < panels.length; i++) {
+      clearSlideListener(panels[i]);
       panels[i].el.classList.remove('is-open', 'hi-panel--restore');
       panels[i].el.hidden = true;
       pausePanelVideos(panels[i]);
@@ -123,6 +170,7 @@
     if (fade) fade.classList.remove('is-visible');
     setOverlayActive(false);
     unlockScroll();
+    bindTriggers();
   }
 
   function pushPanelHistory(panel) {
@@ -136,6 +184,18 @@
     setOverlayActive(true);
     panel.el.hidden = false;
     panel.el.classList.remove('is-open');
+    isAnimatingOpen = true;
+    clearSlideListener(panel);
+
+    panel._slideEndHandler = function(ev) {
+      if (ev.propertyName !== 'transform') return;
+      finishSlideOpen(panel);
+    };
+    panel.el.addEventListener('transitionend', panel._slideEndHandler);
+    panel._slideFallbackTimer = setTimeout(function() {
+      finishSlideOpen(panel);
+    }, SLIDE_MS);
+
     void panel.el.offsetWidth;
     requestAnimationFrame(function() {
       if (!isOpen || activePanel !== panel) return;
@@ -149,11 +209,13 @@
       e.preventDefault();
       e.stopPropagation();
     }
-    if (triggersLocked) return;
+    if (triggersLocked || isAnimatingOpen) return;
 
     triggersLocked = true;
+    unbindAllTriggers();
 
     if (isOpen && activePanel && activePanel !== panel) {
+      clearSlideListener(activePanel);
       activePanel.el.classList.remove('is-open');
       clearPanelMediaAnimation(activePanel);
       pausePanelVideos(activePanel);
@@ -164,17 +226,44 @@
     activePanel = panel;
     lockScroll();
     revealPanel(panel);
-    pushPanelHistory(panel);
     playPanelVideos(panel);
   }
 
   function closePanel() {
-    if (!isOpen && !isOverlayVisible()) return;
+    if (!isOpen && !isAnimatingOpen && !isOverlayVisible()) return;
     syncCloseOverlay();
+  }
+
+  function unbindAllTriggers() {
+    for (var i = 0; i < triggerBindings.length; i++) {
+      var binding = triggerBindings[i];
+      binding.link.removeEventListener('click', binding.handler);
+    }
+    triggerBindings = [];
+  }
+
+  function bindTriggers() {
+    unbindAllTriggers();
+    for (var i = 0; i < panels.length; i++) {
+      (function(panel) {
+        var section = document.getElementById(panel.sectionId);
+        if (!section) return;
+        var triggers = section.querySelectorAll('a[href="' + panel.href + '"]');
+        for (var j = 0; j < triggers.length; j++) {
+          var link = triggers[j];
+          var handler = function(e) {
+            openPanel(panel, e);
+          };
+          link.addEventListener('click', handler);
+          triggerBindings.push({ link: link, handler: handler });
+        }
+      })(panels[i]);
+    }
   }
 
   function restorePanel(panel) {
     triggersLocked = true;
+    unbindAllTriggers();
     history.replaceState(null, '', basePath);
     history.pushState({ caseStudyPanel: panel.hash }, '', basePath + panel.hash);
     isOpen = true;
@@ -204,25 +293,18 @@
     });
   }
 
-  var restorePanelMatch = getPanelByHash(window.location.hash);
-  if (restorePanelMatch) restorePanel(restorePanelMatch);
+  document.addEventListener('pointerdown', blockPanelTriggerEvent, true);
+  document.addEventListener('click', blockPanelTriggerEvent, true);
 
-  function blockTriggerEvent(e) {
-    if (!triggersLocked) return;
-    e.preventDefault();
-    e.stopPropagation();
+  var restorePanelMatch = getPanelByHash(window.location.hash);
+  if (restorePanelMatch) {
+    restorePanel(restorePanelMatch);
+  } else {
+    bindTriggers();
   }
 
   for (var i = 0; i < panels.length; i++) {
     (function(panel) {
-      var section = document.getElementById(panel.sectionId);
-      if (!section) return;
-      var triggers = section.querySelectorAll('a[href="' + panel.href + '"]');
-      for (var j = 0; j < triggers.length; j++) {
-        triggers[j].addEventListener('pointerdown', blockTriggerEvent, true);
-        triggers[j].addEventListener('click', blockTriggerEvent, true);
-        triggers[j].addEventListener('click', function(e) { openPanel(panel, e); });
-      }
       var backBtn = panel.el.querySelector('.hi-panel-back');
       if (backBtn) {
         backBtn.addEventListener('click', function() {
@@ -242,6 +324,7 @@
   }
 
   window.addEventListener('popstate', function() {
+    if (isAnimatingOpen) return;
     if (window.history.state && window.history.state.caseStudyPanel) return;
     if (isOpen || isOverlayVisible()) {
       syncCloseOverlay();
