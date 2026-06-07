@@ -959,13 +959,22 @@ html.dark .homepage-toc-link.toc-active {
 .homepage-case-study {
   padding: 80px 0;
   border-bottom: 1px solid var(--border);
+  background-color: var(--bg);
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out, border-color var(--transition-duration) var(--transition-easing);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out, border-color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
 }
 .homepage-case-study.homepage-case-study-in-view {
   opacity: 1;
   transform: translateY(0);
+}
+/* Fade-only entrance on the homepage — transform layers cause a scroll seam
+   between the last case study and the about section. */
+.wrap:has(.homepage-layout) .homepage-case-study {
+  transform: none;
+}
+.wrap:has(.homepage-layout) .homepage-case-study.homepage-case-study-in-view {
+  transform: none;
 }
 .homepage-case-study--last {
   border-bottom: none;
@@ -1114,7 +1123,8 @@ html.dark .homepage-case-study-dot--active {
   scroll-margin-top: 120px;
   padding-top: 120px;
   border-top: 1px solid var(--border);
-  transition: border-color var(--transition-duration) var(--transition-easing);
+  background-color: var(--bg);
+  transition: border-color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
 }
 .wrap:has(.homepage-layout) .homepage-about {
   border-top-color: transparent;
@@ -1282,6 +1292,10 @@ html.dark .homepage-case-study-dot--active {
 .about-hero-content.about-hero-content-in {
   opacity: 1;
   transform: translateY(0);
+}
+.wrap:has(.homepage-layout) .about-hero-content,
+.wrap:has(.homepage-layout) .about-hero-content.about-hero-content-in {
+  transform: none;
 }
 @media (max-width: 768px) {
   .about-hero-content {
@@ -2027,7 +2041,9 @@ html.dark .case-study-image-wrap--tint {
   }
   .case-study-back {
     margin-top: 80px;
-    padding-top: 24px;
+  }
+  .case-study-back-link {
+    font-size: 17px;
   }
   .case-study-related {
     margin-top: 48px;
@@ -2081,21 +2097,31 @@ html.dark .case-study-image-wrap--tint {
 
 .case-study-back {
   margin-top: 200px;
-  padding-top: 48px;
-  border-top: 1px solid var(--border);
 }
 .case-study-back-link {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  gap: 8px;
-  font-size: 1rem;
-  color: var(--muted-soft);
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.2em;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text);
   text-decoration: none;
-  font-family: inherit;
 }
 .case-study-back-link:hover {
-  color: var(--text);
+  text-decoration: none;
+}
+.case-study-back-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
+}
+.case-study-back-link:hover::after {
+  width: 100%;
 }
 
 .case-study-related {
