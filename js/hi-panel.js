@@ -31,6 +31,8 @@
 
   var activePanel = null;
   var isOpen = false;
+  var isOpening = false;
+  var openGeneration = 0;
   var basePath = window.location.pathname;
 
   var scrollbarWidth = (function() {
@@ -100,10 +102,36 @@
     }
   }
 
+  function cancelPendingOpen() {
+    openGeneration++;
+    isOpening = false;
+  }
+
+  function syncCloseOverlay() {
+    cancelPendingOpen();
+    var panel = activePanel;
+    isOpen = false;
+    activePanel = null;
+    for (var i = 0; i < panels.length; i++) {
+      panels[i].el.classList.remove('is-open', 'hi-panel--restore');
+      panels[i].el.hidden = true;
+      pausePanelVideos(panels[i]);
+      clearPanelMediaAnimation(panels[i]);
+      panels[i].el.scrollTop = 0;
+    }
+    if (fade) fade.classList.remove('is-visible');
+    unlockScroll();
+  }
+
   function openPanel(panel, e) {
     if (e) e.preventDefault();
-    if (isOpen && activePanel === panel) return;
-    if (isOpen) {
+    if ((isOpen || isOpening) && activePanel === panel) return;
+
+    cancelPendingOpen();
+    var gen = openGeneration;
+    isOpening = true;
+
+    if (isOpen && activePanel && activePanel !== panel) {
       activePanel.el.classList.remove('is-open');
       clearPanelMediaAnimation(activePanel);
       pausePanelVideos(activePanel);
@@ -115,6 +143,9 @@
     panel.el.hidden = false;
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
+        if (gen !== openGeneration) return;
+        if (!isOpen || activePanel !== panel) return;
+        isOpening = false;
         panel.el.classList.add('is-open');
         if (fade) fade.classList.add('is-visible');
         animatePanelMedia(panel);
@@ -127,13 +158,18 @@
   }
 
   function closePanel() {
-    if (!isOpen || !activePanel) return;
+    if (!isOpen && !isOpening && !(fade && fade.classList.contains('is-visible'))) return;
     var panel = activePanel;
+    cancelPendingOpen();
     isOpen = false;
     activePanel = null;
+    if (fade) fade.classList.remove('is-visible');
+    if (!panel) {
+      syncCloseOverlay();
+      return;
+    }
     panel.el.classList.remove('is-open');
     clearPanelMediaAnimation(panel);
-    if (fade) fade.classList.remove('is-visible');
     pausePanelVideos(panel);
     panel.el.scrollTop = 0;
     panel.el.addEventListener('transitionend', function onEnd(ev) {
@@ -195,7 +231,8 @@
   }
 
   window.addEventListener('popstate', function() {
-    if (isOpen) closePanel();
+    if (!isOpen && !isOpening && !(fade && fade.classList.contains('is-visible'))) return;
+    syncCloseOverlay();
   });
 
   document.addEventListener('keydown', function(e) {

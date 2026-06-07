@@ -2475,6 +2475,7 @@ html.hi-panel-restoring .about-currently {
 }
 .hi-fade.is-visible {
   opacity: 1;
+  pointer-events: auto;
 }
 .hi-panel {
   position: fixed;
