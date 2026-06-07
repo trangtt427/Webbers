@@ -36,6 +36,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg);
+  transition: background-color var(--transition-duration) var(--transition-easing);
 }
 @media (min-width: 769px) {
   html {
@@ -897,6 +899,8 @@ html.dark .homepage-toc-link.toc-active {
   min-width: 0;
   grid-column: 2;
   padding-top: 82px;
+  background-color: var(--bg);
+  transition: background-color var(--transition-duration) var(--transition-easing);
 }
 
 @media (max-width: 1024px) {
@@ -968,14 +972,6 @@ html.dark .homepage-toc-link.toc-active {
   opacity: 1;
   transform: translateY(0);
 }
-/* Fade-only entrance on the homepage — transform layers cause a scroll seam
-   between the last case study and the about section. */
-.wrap:has(.homepage-layout) .homepage-case-study {
-  transform: none;
-}
-.wrap:has(.homepage-layout) .homepage-case-study.homepage-case-study-in-view {
-  transform: none;
-}
 .homepage-case-study--last {
   border-bottom: none;
 }
@@ -995,9 +991,9 @@ html.dark .homepage-toc-link.toc-active {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--muted-soft);
+  color: var(--text);
   background: transparent;
-  border: 1px solid var(--muted-soft);
+  border: 1px solid var(--text);
   border-radius: 999px;
   transition: color var(--transition-duration) var(--transition-easing), border-color var(--transition-duration) var(--transition-easing);
 }
@@ -1292,10 +1288,6 @@ html.dark .homepage-case-study-dot--active {
 .about-hero-content.about-hero-content-in {
   opacity: 1;
   transform: translateY(0);
-}
-.wrap:has(.homepage-layout) .about-hero-content,
-.wrap:has(.homepage-layout) .about-hero-content.about-hero-content-in {
-  transform: none;
 }
 @media (max-width: 768px) {
   .about-hero-content {
@@ -2771,17 +2763,32 @@ html.dark .site-footer-social .footer-icon img {
 }
 .wrap:has(.homepage-layout) .site-footer {
   border-top: 1px solid var(--border);
+  background-color: var(--bg);
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out, border-color var(--transition-duration) var(--transition-easing);
+  transition: opacity 0.7s ease-out, border-color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
 }
 .wrap:has(.homepage-layout) .site-footer.site-footer-in {
   opacity: 1;
-  transform: translateY(0);
 }
 .homepage-content .site-footer {
   width: 100%;
   min-width: 0;
+}
+/* Homepage: fade-only entrances — transform layers cause dark-mode scroll seams
+   at section boundaries (e.g. above the footer). Must follow base animation rules. */
+.wrap:has(.homepage-layout) .homepage-case-study,
+.wrap:has(.homepage-layout) .homepage-case-study.homepage-case-study-in-view,
+.wrap:has(.homepage-layout) .about-hero-content,
+.wrap:has(.homepage-layout) .about-hero-content.about-hero-content-in,
+.wrap:has(.homepage-layout) .about-two-col,
+.wrap:has(.homepage-layout) .about-two-col.about-two-col-in,
+.wrap:has(.homepage-layout) .about-currently,
+.wrap:has(.homepage-layout) .about-currently.about-currently-in,
+.wrap:has(.homepage-layout) .about-timeline,
+.wrap:has(.homepage-layout) .about-timeline.about-timeline-in,
+.wrap:has(.homepage-layout) .site-footer,
+.wrap:has(.homepage-layout) .site-footer.site-footer-in {
+  transform: none;
 }
 @media (max-width: 768px) {
   .site-footer {
