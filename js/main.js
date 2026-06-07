@@ -299,9 +299,15 @@
   }
 
   for (var t = 0; t < tocLinks.length; t++) {
-    tocLinks[t].addEventListener('click', function() {
+    tocLinks[t].addEventListener('click', function(e) {
       var href = this.getAttribute('href') || '';
-      if (href.charAt(0) === '#') setActive(href.slice(1));
+      if (href.charAt(0) !== '#') return;
+      e.preventDefault();
+      var id = href.slice(1);
+      var target = document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActive(id);
+      history.replaceState(null, '', window.location.pathname + window.location.search);
     });
   }
 

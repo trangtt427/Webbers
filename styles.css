@@ -1484,7 +1484,7 @@ html.dark .homepage-case-study-dot--active {
   font-weight: 400;
   line-height: 1.5;
   color: var(--text);
-  max-width: 500px;
+  max-width: 700px;
   margin: 0;
 }
 .case-study-intro .case-study-date {
@@ -1492,7 +1492,7 @@ html.dark .homepage-case-study-dot--active {
   font-weight: 400;
   color: var(--muted-soft);
   margin: 16px 0 0;
-  max-width: 500px;
+  max-width: 700px;
 }
 @media (max-width: 768px) {
   .case-study-name {
