@@ -976,6 +976,35 @@ html.dark .homepage-toc-link.toc-active {
   gap: 28px;
   min-width: 0;
 }
+.homepage-case-study--featured {
+  padding-top: 48px;
+}
+.homepage-case-study-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted-soft);
+  background: transparent;
+  border: 1px solid var(--muted-soft);
+  border-radius: 999px;
+  transition: color var(--transition-duration) var(--transition-easing), border-color var(--transition-duration) var(--transition-easing);
+}
+@media (min-width: 1025px) {
+  .homepage-case-study-inner--two-col {
+    grid-template-columns: 5fr 6fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .homepage-case-study-inner--two-col .homepage-case-study-copy {
+    order: 1;
+  }
+  .homepage-case-study-inner--two-col .homepage-case-study-visual {
+    order: 2;
+  }
+}
 .homepage-case-study-copy {
   order: 1;
 }
@@ -1076,6 +1105,9 @@ html.dark .homepage-case-study-dot--active {
 }
 .homepage-case-study-cta--coming-soon::after {
   display: none;
+}
+.homepage-case-study--featured .homepage-case-study-cta {
+  font-size: 20px;
 }
 
 .homepage-about {
@@ -1225,6 +1257,9 @@ html.dark .homepage-case-study-dot--active {
     font-size: 24px;
   }
   .homepage-case-study-desc {
+    font-size: 17px;
+  }
+  .homepage-case-study--featured .homepage-case-study-cta {
     font-size: 17px;
   }
   .homepage-intro h1 {

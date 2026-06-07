@@ -17,7 +17,7 @@
       else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
       // If the panel was open when the page was refreshed, hide the homepage
       // immediately before the first paint so there's no visible flash.
-      if (window.location.hash === '#/human-interest' || window.location.hash === '#/tactic' || window.location.hash === '#/baby-design') {
+      if (window.location.hash === '#/tactic' || window.location.hash === '#/baby-design') {
         el.classList.add('hi-panel-restoring');
       }
     })();
@@ -67,8 +67,8 @@
         <nav class="homepage-toc" aria-label="Page sections">
           <a href="#intro" class="homepage-toc-link toc-active">Intro</a>
           <span class="homepage-toc-divider" aria-hidden="true"></span>
-          <a href="#squarespace" class="homepage-toc-link">Squarespace</a>
           <a href="#human-interest" class="homepage-toc-link">Human Interest</a>
+          <a href="#squarespace" class="homepage-toc-link">Squarespace</a>
           <a href="#tactic" class="homepage-toc-link">Tactic</a>
           <a href="#baby-design-ui" class="homepage-toc-link">Baby Design System</a>
           <span class="homepage-toc-divider" aria-hidden="true"></span>
@@ -78,7 +78,34 @@
 
       <main class="homepage-content">
         <section id="intro" class="homepage-intro">
-          <h1>I'm Trang, a San Jose CA-based designer who solves hard problems to create products that make you go "ooh,&nbsp;that's kinda nice". <span class="emoji">👌</span></h1>
+          <h1>I'm Trang, a San Jose CA-based designer with 10+ years of experience solving hard problems to create products that make you go "ooh,&nbsp;that's kinda nice". <span class="emoji">👌</span></h1>
+        </section>
+
+        <section id="human-interest" class="homepage-case-study homepage-case-study--featured">
+          <div class="homepage-case-study-inner homepage-case-study-inner--two-col">
+            <div class="homepage-case-study-copy">
+              <span class="homepage-case-study-pill">Featured</span>
+              <div class="homepage-case-study-dots" aria-hidden="true">
+                <span class="homepage-case-study-dot homepage-case-study-dot--active"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot"></span>
+              </div>
+              <h3 class="homepage-case-study-title">Human Interest</h3>
+              <p class="homepage-case-study-desc">Human Interests set a new industry standard with Fast Track, a simplified 401(k) setup experience to unlock retirement benefits for small business employees. I crafted and executed on a design vision to make a longstanding, problematic onboarding flow intuitive and modern for new admins.</p>
+              <a href="human-interest" class="homepage-case-study-cta">Dive in →</a>
+            </div>
+            <div class="homepage-case-study-visual">
+              <a href="human-interest" class="homepage-case-study-visual-link" aria-label="View Human Interest case study">
+                <div class="project-video-wrap">
+                  <video autoplay loop muted playsinline preload="auto">
+                    <source src="assets/videos/newfasttrack.mp4" type="video/mp4" />
+                  </video>
+                  <span class="no-video">Your browser does not support the video tag.</span>
+                </div>
+              </a>
+            </div>
+          </div>
         </section>
 
         <section id="squarespace" class="homepage-case-study">
@@ -90,8 +117,8 @@
             </div>
             <div class="homepage-case-study-copy">
               <div class="homepage-case-study-dots" aria-hidden="true">
-                <span class="homepage-case-study-dot homepage-case-study-dot--active"></span>
                 <span class="homepage-case-study-dot"></span>
+                <span class="homepage-case-study-dot homepage-case-study-dot--active"></span>
                 <span class="homepage-case-study-dot"></span>
                 <span class="homepage-case-study-dot"></span>
               </div>
@@ -102,32 +129,6 @@
           </div>
         </section>
 
-
-        <section id="human-interest" class="homepage-case-study">
-          <div class="homepage-case-study-inner">
-            <div class="homepage-case-study-visual">
-              <a href="human-interest" class="homepage-case-study-visual-link" aria-label="View Human Interest case study">
-                <div class="project-video-wrap">
-                  <video autoplay loop muted playsinline preload="auto">
-                    <source src="assets/videos/newfasttrack.mp4" type="video/mp4" />
-                  </video>
-                  <span class="no-video">Your browser does not support the video tag.</span>
-                </div>
-              </a>
-            </div>
-            <div class="homepage-case-study-copy">
-              <div class="homepage-case-study-dots" aria-hidden="true">
-                <span class="homepage-case-study-dot"></span>
-                <span class="homepage-case-study-dot homepage-case-study-dot--active"></span>
-                <span class="homepage-case-study-dot"></span>
-                <span class="homepage-case-study-dot"></span>
-              </div>
-              <h3 class="homepage-case-study-title">Human Interest</h3>
-              <p class="homepage-case-study-desc">Simplified 401(k) onboarding for admins to help their employees save for retirement.</p>
-
-            </div>
-          </div>
-        </section>
 
         <section id="tactic" class="homepage-case-study">
           <div class="homepage-case-study-inner">

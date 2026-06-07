@@ -4,20 +4,15 @@
  * up from the bottom instead of navigating away.
  * Only active when matching panel elements exist (homepage only).
  *
- * URL strategy: hash routes (#/human-interest, #/tactic, #/baby-design) on the
- * homepage path.
+ * URL strategy: hash routes (#/tactic, #/baby-design) on the homepage path.
+ * Human Interest panel is dormant — featured HI links to human-interest.html.
  * The hash is never sent to the server, so refreshing reloads index.html and
  * the panel auto-reopens with a fade — no redirect, no blank screen.
  */
 (function() {
   var fade = document.getElementById('hi-fade');
   var panels = [
-    {
-      el: document.getElementById('hi-panel'),
-      hash: '#/human-interest',
-      sectionId: 'human-interest',
-      href: 'human-interest'
-    },
+    // Human Interest panel dormant — #hi-panel markup kept in index.html for future use
     {
       el: document.getElementById('tactic-panel'),
       hash: '#/tactic',
