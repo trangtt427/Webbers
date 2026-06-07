@@ -35,8 +35,10 @@
   var triggersLocked = false;
   var basePath = window.location.pathname;
   var SLIDE_MS = 580;
+  var FADE_DISMISS_DELAY_MS = 120;
   var triggerBindings = [];
   var panelHrefs = panels.map(function(p) { return p.href; });
+  var fadeDismissTimer = null;
 
   var scrollbarWidth = (function() {
     var probe = document.createElement('div');
@@ -146,11 +148,29 @@
     }
   }
 
+  function disableFadeDismiss() {
+    if (fadeDismissTimer) {
+      clearTimeout(fadeDismissTimer);
+      fadeDismissTimer = null;
+    }
+    if (fade) fade.classList.remove('hi-fade--dismissable');
+  }
+
+  function scheduleFadeDismiss() {
+    disableFadeDismiss();
+    if (!fade || !isOpen) return;
+    fadeDismissTimer = setTimeout(function() {
+      fadeDismissTimer = null;
+      if (isOpen && fade) fade.classList.add('hi-fade--dismissable');
+    }, FADE_DISMISS_DELAY_MS);
+  }
+
   function finishSlideOpen(panel) {
     if (!isAnimatingOpen) return;
     isAnimatingOpen = false;
     clearSlideListener(panel);
     if (!isOpen || activePanel !== panel) return;
+    scheduleFadeDismiss();
     pushPanelHistory(panel);
   }
 
@@ -167,6 +187,7 @@
       clearPanelMediaAnimation(panels[i]);
       panels[i].el.scrollTop = 0;
     }
+    disableFadeDismiss();
     if (fade) fade.classList.remove('is-visible');
     setOverlayActive(false);
     unlockScroll();
@@ -180,6 +201,7 @@
   }
 
   function revealPanel(panel) {
+    disableFadeDismiss();
     if (fade) fade.classList.add('is-visible');
     setOverlayActive(true);
     panel.el.hidden = false;
@@ -238,6 +260,7 @@
     for (var i = 0; i < triggerBindings.length; i++) {
       var binding = triggerBindings[i];
       binding.link.removeEventListener('click', binding.handler);
+      binding.link.removeEventListener('touchend', binding.touchend || binding.handler);
     }
     triggerBindings = [];
   }
@@ -251,11 +274,23 @@
         var triggers = section.querySelectorAll('a[href="' + panel.href + '"]');
         for (var j = 0; j < triggers.length; j++) {
           var link = triggers[j];
+          var touchHandled = false;
           var handler = function(e) {
+            if (e.type === 'click' && touchHandled) {
+              e.preventDefault();
+              e.stopPropagation();
+              touchHandled = false;
+              return;
+            }
+            if (e.type === 'touchend') {
+              touchHandled = true;
+              e.preventDefault();
+            }
             openPanel(panel, e);
           };
+          link.addEventListener('touchend', handler, { passive: false });
           link.addEventListener('click', handler);
-          triggerBindings.push({ link: link, handler: handler });
+          triggerBindings.push({ link: link, handler: handler, touchend: handler });
         }
       })(panels[i]);
     }
@@ -272,6 +307,7 @@
     lockScroll();
     panel.el.hidden = false;
     panel.el.classList.add('hi-panel--restore');
+    disableFadeDismiss();
     if (fade) fade.classList.add('is-visible');
     setOverlayActive(true);
     playPanelVideos(panel);
@@ -279,6 +315,7 @@
       requestAnimationFrame(function() {
         panel.el.classList.add('is-open');
         animatePanelMedia(panel);
+        scheduleFadeDismiss();
       });
     });
     panel.el.addEventListener('transitionend', function onRestore(ev) {
@@ -294,6 +331,7 @@
   }
 
   document.addEventListener('pointerdown', blockPanelTriggerEvent, true);
+  document.addEventListener('touchend', blockPanelTriggerEvent, true);
   document.addEventListener('click', blockPanelTriggerEvent, true);
 
   var restorePanelMatch = getPanelByHash(window.location.hash);
@@ -316,8 +354,13 @@
   }
 
   if (fade) {
-    fade.addEventListener('click', function() {
+    fade.addEventListener('click', function(e) {
       if (!isOverlayVisible()) return;
+      if (isAnimatingOpen || !fade.classList.contains('hi-fade--dismissable')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
       history.replaceState(null, '', basePath);
       syncCloseOverlay();
     });
