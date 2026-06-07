@@ -31,11 +31,8 @@
 
   var activePanel = null;
   var isOpen = false;
-  var isOpening = false;
-  var openGeneration = 0;
-  var lastOpenAt = 0;
+  var triggersLocked = false;
   var basePath = window.location.pathname;
-  var OPEN_GUARD_MS = 450;
 
   var scrollbarWidth = (function() {
     var probe = document.createElement('div');
@@ -112,15 +109,10 @@
     }
   }
 
-  function cancelPendingOpen() {
-    openGeneration++;
-    isOpening = false;
-  }
-
   function syncCloseOverlay() {
-    cancelPendingOpen();
     isOpen = false;
     activePanel = null;
+    triggersLocked = false;
     for (var i = 0; i < panels.length; i++) {
       panels[i].el.classList.remove('is-open', 'hi-panel--restore');
       panels[i].el.hidden = true;
@@ -143,10 +135,13 @@
     if (fade) fade.classList.add('is-visible');
     setOverlayActive(true);
     panel.el.hidden = false;
+    panel.el.classList.remove('is-open');
     void panel.el.offsetWidth;
-    panel.el.classList.add('is-open');
-    isOpening = false;
-    animatePanelMedia(panel);
+    requestAnimationFrame(function() {
+      if (!isOpen || activePanel !== panel) return;
+      panel.el.classList.add('is-open');
+      animatePanelMedia(panel);
+    });
   }
 
   function openPanel(panel, e) {
@@ -154,17 +149,9 @@
       e.preventDefault();
       e.stopPropagation();
     }
+    if (triggersLocked) return;
 
-    var now = Date.now();
-    if ((isOpen || isOpening || isOverlayVisible()) && activePanel === panel) {
-      return;
-    }
-    if (now - lastOpenAt < OPEN_GUARD_MS && activePanel === panel) {
-      return;
-    }
-
-    cancelPendingOpen();
-    isOpening = true;
+    triggersLocked = true;
 
     if (isOpen && activePanel && activePanel !== panel) {
       activePanel.el.classList.remove('is-open');
@@ -175,22 +162,19 @@
     hideOtherPanels(panel);
     isOpen = true;
     activePanel = panel;
-    lastOpenAt = now;
     lockScroll();
     revealPanel(panel);
     pushPanelHistory(panel);
     playPanelVideos(panel);
-
-    var backBtn = panel.el.querySelector('.hi-panel-back');
-    if (backBtn) backBtn.focus();
   }
 
   function closePanel() {
-    if (!isOpen && !isOpening && !isOverlayVisible()) return;
+    if (!isOpen && !isOverlayVisible()) return;
     syncCloseOverlay();
   }
 
   function restorePanel(panel) {
+    triggersLocked = true;
     history.replaceState(null, '', basePath);
     history.pushState({ caseStudyPanel: panel.hash }, '', basePath + panel.hash);
     isOpen = true;
@@ -223,8 +207,8 @@
   var restorePanelMatch = getPanelByHash(window.location.hash);
   if (restorePanelMatch) restorePanel(restorePanelMatch);
 
-  function blockTriggerWhileOverlay(e) {
-    if (!isOpen && !isOpening && !isOverlayVisible()) return;
+  function blockTriggerEvent(e) {
+    if (!triggersLocked) return;
     e.preventDefault();
     e.stopPropagation();
   }
@@ -235,7 +219,8 @@
       if (!section) return;
       var triggers = section.querySelectorAll('a[href="' + panel.href + '"]');
       for (var j = 0; j < triggers.length; j++) {
-        triggers[j].addEventListener('pointerdown', blockTriggerWhileOverlay, true);
+        triggers[j].addEventListener('pointerdown', blockTriggerEvent, true);
+        triggers[j].addEventListener('click', blockTriggerEvent, true);
         triggers[j].addEventListener('click', function(e) { openPanel(panel, e); });
       }
       var backBtn = panel.el.querySelector('.hi-panel-back');
@@ -258,7 +243,7 @@
 
   window.addEventListener('popstate', function() {
     if (window.history.state && window.history.state.caseStudyPanel) return;
-    if (isOpen || isOpening || isOverlayVisible()) {
+    if (isOpen || isOverlayVisible()) {
       syncCloseOverlay();
     }
   });
