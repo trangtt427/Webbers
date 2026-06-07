@@ -56,6 +56,8 @@
     if (aboutSection) aboutSection.classList.add('homepage-about-divider-in');
     var aboutHero = document.querySelector('.about-hero-content');
     if (aboutHero) aboutHero.classList.add('about-hero-content-in');
+    var aboutTimeline = document.querySelector('.about-timeline');
+    if (aboutTimeline) aboutTimeline.classList.add('about-timeline-in');
     var aboutTwoCol = document.querySelector('.about-two-col');
     if (aboutTwoCol) aboutTwoCol.classList.add('about-two-col-in');
     var aboutCurrently = document.querySelector('.about-currently');
