@@ -2605,10 +2605,6 @@ body.hi-panel-active .homepage-layout {
   min-height: 40px;
   gap: 16px;
 }
-.theme-toggle-panel {
-  flex-shrink: 0;
-  transform: translateY(-1px);
-}
 .hi-panel-back {
   display: inline-flex;
   align-items: center;
@@ -2703,6 +2699,9 @@ body.hi-panel-active .homepage-layout {
   flex-shrink: 0;
   border-radius: var(--media-radius);
   overflow: hidden;
+}
+.hi-panel-media-wrap--bordered {
+  border: 1px solid var(--border);
 }
 .hi-panel-media-wrap img,
 .hi-panel-media-wrap video {
