@@ -40,10 +40,6 @@ html {
   background-color: var(--bg);
   transition: background-color var(--transition-duration) var(--transition-easing);
 }
-html.theme-changing,
-html.theme-changing * {
-  transition: none !important;
-}
 @media (min-width: 769px) {
   html {
     overscroll-behavior: none;
@@ -331,25 +327,10 @@ a:hover { text-decoration: underline; }
 .site-nav-dropdown a:hover {
   color: var(--text);
 }
-html.dark .site-nav a,
-html.dark .site-nav-dropdown a {
-  color: #fff;
-}
-html.dark .site-nav:has(a:hover) a:not(:hover),
-html.dark .site-nav-dropdown:has(a:hover) a:not(:hover) {
-  color: var(--muted-soft);
-}
-html.dark .site-nav a:hover,
-html.dark .site-nav-dropdown a:hover {
-  color: #fff;
-}
 .site-nav a.nav-active,
 .site-nav-dropdown a.nav-active {
   text-decoration: none;
-}
-html.dark .site-nav a.nav-active,
-html.dark .site-nav-dropdown a.nav-active {
-  color: #ffffff;
+  color: var(--text);
 }
 .site-nav a::after,
 .site-nav-dropdown a::after {
@@ -906,13 +887,6 @@ html.dark .theme-toggle:hover .icon-sun {
   height: 1px;
   background: var(--border);
   margin: 8px 0 4px;
-}
-html.dark .homepage-toc-link {
-  color: var(--muted-soft);
-}
-html.dark .homepage-toc-link:hover,
-html.dark .homepage-toc-link.toc-active {
-  color: #fff;
 }
 .theme-toggle-header {
   display: flex;

@@ -384,7 +384,6 @@
   if (!toggles.length) return;
 
   function applyTheme(theme) {
-    root.classList.add('theme-changing');
     if (theme === 'dark') {
       root.classList.add('dark');
       toggles.forEach(function(t) {
@@ -398,11 +397,6 @@
         t.setAttribute('aria-label', 'Switch to dark mode');
       });
     }
-    requestAnimationFrame(function() {
-      requestAnimationFrame(function() {
-        root.classList.remove('theme-changing');
-      });
-    });
   }
 
   var stored = null;
