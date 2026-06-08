@@ -350,7 +350,7 @@
           var el = entry.target;
           var figure = el.closest && el.closest('figure');
           var hasCaption = figure && (figure.querySelector('figcaption') || figure.querySelector('.case-study-caption'));
-          var animateFigure = figure && (hasCaption || figure.classList.contains('case-study-figure-caption') || figure.classList.contains('case-study-two-col-image'));
+          var animateFigure = figure && (hasCaption || figure.classList.contains('case-study-figure-caption') || figure.classList.contains('case-study-two-col-image') || figure.classList.contains('case-study-image-duo'));
           var target = animateFigure ? figure : el;
           setTimeout(function() {
             target.classList.add('case-study-image-in-view');
