@@ -849,7 +849,7 @@ html.dark .theme-toggle:hover .icon-sun {
   flex-direction: column;
   gap: 4px;
   opacity: 0;
-  transform: translateX(-28px);
+  transform: translateX(-32px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 .homepage-toc.homepage-toc-in {
@@ -2595,7 +2595,7 @@ body.hi-panel-active .homepage-layout {
 .hi-panel-header {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
 .hi-panel-header-row {
   display: flex;
@@ -2884,8 +2884,6 @@ html.dark .site-footer-social .footer-icon img {
 .wrap:has(.homepage-layout) .about-currently.about-currently-in,
 .wrap:has(.homepage-layout) .about-timeline,
 .wrap:has(.homepage-layout) .about-timeline.about-timeline-in,
-.wrap:has(.homepage-layout) .homepage-toc,
-.wrap:has(.homepage-layout) .homepage-toc.homepage-toc-in,
 .wrap:has(.homepage-layout) .site-footer,
 .wrap:has(.homepage-layout) .site-footer.site-footer-in {
   transform: none;
