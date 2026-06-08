@@ -1954,7 +1954,12 @@ html.dark .case-study-image-wrap--tint {
 .case-study-two-col--right-wide {
   grid-template-columns: 2fr 3fr;
 }
-.case-study-two-col-text h2 {
+.case-study-two-col-text .case-study-detail-label,
+.case-study-body > .case-study-detail-label {
+  margin-bottom: 12px;
+}
+.case-study-two-col-text h2,
+.case-study-body > .case-study-detail-label + h2 {
   font-size: 40px;
   font-weight: 400;
   color: var(--text);
