@@ -1042,6 +1042,7 @@ html.dark .homepage-toc-link.toc-active {
   display: block;
   text-decoration: none;
   color: inherit;
+  touch-action: pan-y;
 }
 .homepage-case-study-visual-link:hover {
   text-decoration: none;

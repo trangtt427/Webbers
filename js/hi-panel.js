@@ -36,6 +36,7 @@
   var basePath = window.location.pathname;
   var SLIDE_MS = 580;
   var FADE_DISMISS_DELAY_MS = 120;
+  var TAP_SLOP = 12;
   var triggerBindings = [];
   var panelHrefs = panels.map(function(p) { return p.href; });
   var fadeDismissTimer = null;
@@ -256,10 +257,87 @@
     syncCloseOverlay();
   }
 
+  function attachPanelTrigger(panel, link) {
+    var gesture = null;
+
+    function endGestureTracking() {
+      gesture = null;
+    }
+
+    function onPointerDown(e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      gesture = {
+        pointerId: e.pointerId,
+        startX: e.clientX,
+        startY: e.clientY,
+        scrollY: window.scrollY,
+        moved: false
+      };
+    }
+
+    function onPointerMove(e) {
+      if (!gesture || e.pointerId !== gesture.pointerId || gesture.moved) return;
+      var dx = e.clientX - gesture.startX;
+      var dy = e.clientY - gesture.startY;
+      if (Math.abs(dx) > TAP_SLOP || Math.abs(dy) > TAP_SLOP) {
+        gesture.moved = true;
+      }
+    }
+
+    function onPointerUp(e) {
+      if (!gesture || e.pointerId !== gesture.pointerId) return;
+      var scrolled = Math.abs(window.scrollY - gesture.scrollY) > 1;
+      var shouldOpen = !gesture.moved && !scrolled;
+      gesture = null;
+      if (!shouldOpen) return;
+      openPanel(panel, e);
+    }
+
+    function onPointerCancel(e) {
+      if (!gesture || e.pointerId !== gesture.pointerId) return;
+      endGestureTracking();
+    }
+
+    function onClick(e) {
+      if (e.detail === 0) {
+        openPanel(panel, e);
+        return;
+      }
+      if (window.PointerEvent) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
+      openPanel(panel, e);
+    }
+
+    link.addEventListener('pointerdown', onPointerDown, { passive: true });
+    link.addEventListener('pointermove', onPointerMove, { passive: true });
+    link.addEventListener('pointerup', onPointerUp);
+    link.addEventListener('pointercancel', onPointerCancel);
+    link.addEventListener('click', onClick);
+
+    return {
+      link: link,
+      endGestureTracking: endGestureTracking,
+      handlers: [
+        { type: 'pointerdown', fn: onPointerDown },
+        { type: 'pointermove', fn: onPointerMove },
+        { type: 'pointerup', fn: onPointerUp },
+        { type: 'pointercancel', fn: onPointerCancel },
+        { type: 'click', fn: onClick }
+      ]
+    };
+  }
+
   function unbindAllTriggers() {
     for (var i = 0; i < triggerBindings.length; i++) {
       var binding = triggerBindings[i];
-      binding.link.removeEventListener('click', binding.handler);
+      binding.endGestureTracking();
+      for (var j = 0; j < binding.handlers.length; j++) {
+        var entry = binding.handlers[j];
+        binding.link.removeEventListener(entry.type, entry.fn);
+      }
     }
     triggerBindings = [];
   }
@@ -272,12 +350,7 @@
         if (!section) return;
         var triggers = section.querySelectorAll('a[href="' + panel.href + '"]');
         for (var j = 0; j < triggers.length; j++) {
-          var link = triggers[j];
-          var handler = function(e) {
-            openPanel(panel, e);
-          };
-          link.addEventListener('click', handler);
-          triggerBindings.push({ link: link, handler: handler });
+          triggerBindings.push(attachPanelTrigger(panel, triggers[j]));
         }
       })(panels[i]);
     }
