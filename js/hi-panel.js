@@ -260,7 +260,6 @@
     for (var i = 0; i < triggerBindings.length; i++) {
       var binding = triggerBindings[i];
       binding.link.removeEventListener('click', binding.handler);
-      binding.link.removeEventListener('touchend', binding.touchend || binding.handler);
     }
     triggerBindings = [];
   }
@@ -274,23 +273,11 @@
         var triggers = section.querySelectorAll('a[href="' + panel.href + '"]');
         for (var j = 0; j < triggers.length; j++) {
           var link = triggers[j];
-          var touchHandled = false;
           var handler = function(e) {
-            if (e.type === 'click' && touchHandled) {
-              e.preventDefault();
-              e.stopPropagation();
-              touchHandled = false;
-              return;
-            }
-            if (e.type === 'touchend') {
-              touchHandled = true;
-              e.preventDefault();
-            }
             openPanel(panel, e);
           };
-          link.addEventListener('touchend', handler, { passive: false });
           link.addEventListener('click', handler);
-          triggerBindings.push({ link: link, handler: handler, touchend: handler });
+          triggerBindings.push({ link: link, handler: handler });
         }
       })(panels[i]);
     }
@@ -331,7 +318,6 @@
   }
 
   document.addEventListener('pointerdown', blockPanelTriggerEvent, true);
-  document.addEventListener('touchend', blockPanelTriggerEvent, true);
   document.addEventListener('click', blockPanelTriggerEvent, true);
 
   var restorePanelMatch = getPanelByHash(window.location.hash);
