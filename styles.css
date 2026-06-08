@@ -36,8 +36,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
   background-color: var(--bg);
   transition: background-color var(--transition-duration) var(--transition-easing);
+}
+html.theme-changing,
+html.theme-changing * {
+  transition: none !important;
 }
 @media (min-width: 769px) {
   html {
@@ -106,6 +111,7 @@ html.dark ::-moz-selection {
 }
 
 html.dark {
+  color-scheme: dark;
   --bg: #06070c;
   --text: #f9fafb;
   --muted: #7b8a9a;
