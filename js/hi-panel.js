@@ -127,9 +127,15 @@
     }
   }
 
+  function resetPanelScroll(panel) {
+    panel.el.scrollTop = 0;
+    panel.el.scrollLeft = 0;
+  }
+
   function hideOtherPanels(panel) {
     for (var i = 0; i < panels.length; i++) {
       if (panels[i] !== panel) {
+        resetPanelScroll(panels[i]);
         panels[i].el.hidden = true;
         panels[i].el.classList.remove('is-open', 'hi-panel--restore');
         pausePanelVideos(panels[i]);
@@ -182,11 +188,11 @@
     triggersLocked = false;
     for (var i = 0; i < panels.length; i++) {
       clearSlideListener(panels[i]);
+      resetPanelScroll(panels[i]);
       panels[i].el.classList.remove('is-open', 'hi-panel--restore');
       panels[i].el.hidden = true;
       pausePanelVideos(panels[i]);
       clearPanelMediaAnimation(panels[i]);
-      panels[i].el.scrollTop = 0;
     }
     disableFadeDismiss();
     if (fade) fade.classList.remove('is-visible');
@@ -203,6 +209,7 @@
 
   function revealPanel(panel) {
     disableFadeDismiss();
+    resetPanelScroll(panel);
     if (fade) fade.classList.add('is-visible');
     setOverlayActive(true);
     panel.el.hidden = false;
@@ -365,6 +372,7 @@
     activePanel = panel;
     hideOtherPanels(panel);
     lockScroll();
+    resetPanelScroll(panel);
     panel.el.hidden = false;
     panel.el.classList.add('hi-panel--restore');
     disableFadeDismiss();

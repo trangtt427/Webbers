@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="actrang.png" />
+  <title>Acuity Classes | Trang Tran</title>
+  <meta name="description" content="Redesigning how fitness studios and instructors set up and manage their services on Acuity Scheduling — one catalog, in-context editing, and a live dual-track prototype." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      var s;
+      try { s = window.localStorage && localStorage.getItem('theme'); } catch (e) {}
+      var el = document.documentElement;
+      if (s === 'dark') el.classList.add('dark');
+      else if (s === 'light') el.classList.remove('dark');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-name"><a href="https://www.trangtran.design/" aria-label="Trang Tran"><span class="site-name-wordmark"><span class="site-name-wordmark-text">trangwreck</span><span class="site-name-wordmark-dot" aria-hidden="true"></span></span></a></div>
+        <div class="site-meta">
+          <nav class="site-nav">
+            <a href="https://trangtran.design/">Home</a>
+            <a href="/blog/">Writing</a>
+          </nav>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 13.2A8.4 8.4 0 1 1 10.8 3a6.8 6.8 0 0 0 10.2 10.2Z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5" />
+              <line x1="12" y1="2.5" x2="12" y2="5.2" />
+              <line x1="12" y1="18.8" x2="12" y2="21.5" />
+              <line x1="2.5" y1="12" x2="5.2" y2="12" />
+              <line x1="18.8" y1="12" x2="21.5" y2="12" />
+              <line x1="4.4" y1="4.4" x2="6.3" y2="6.3" />
+              <line x1="17.7" y1="17.7" x2="19.6" y2="19.6" />
+              <line x1="17.7" y1="6.3" x2="19.6" y2="4.4" />
+              <line x1="4.4" y1="19.6" x2="6.3" y2="17.7" />
+            </svg>
+          </button>
+          <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-dropdown">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
+            <a href="https://trangtran.design/" role="menuitem">Home</a>
+            <a href="/blog/" role="menuitem">Writing</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="case-study">
+      <section class="case-study-intro">
+        <p class="case-study-name">Acuity Classes</p>
+        <h1 class="case-study-headline">
+          Acuity Scheduling was built for 1:1 appointments. Group classes existed in the product but were underserved. I led the initiative to make them a first-class offering, from early generative research through a deployed, dual-track prototype.
+        </h1>
+      </section>
+
+      <section class="case-study-details" aria-label="Project details">
+        <div class="case-study-detail-row">
+          <div class="case-study-detail-label">Role</div>
+          <div class="case-study-detail-value">
+            Senior Product Designer II<br />End-to-end Design<br />De facto PM
+          </div>
+        </div>
+        <div class="case-study-detail-row">
+          <div class="case-study-detail-label">Company</div>
+          <div class="case-study-detail-value">Squarespace · Acuity Scheduling</div>
+        </div>
+        <div class="case-study-detail-row">
+          <div class="case-study-detail-label">Key Results</div>
+          <div class="case-study-detail-value">
+            Series &amp; Standalone class model introduced as a new product primitive<br />
+            Contested IA decision resolved through a working prototype<br />
+            Engineering handoff shortened by building on the production design system
+          </div>
+        </div>
+      </section>
+
+      <figure class="case-study-image-wrap case-study-image-wrap--crop lightbox-openable" role="button" tabindex="0" aria-label="View full size">
+        <img src="assets/images/squarespace/acuityfromsqsp.png" alt="Acuity Classes scheduling redesign" class="case-study-image" />
+      </figure>
+
+      <section class="case-study-two-col case-study-two-col--centered">
+        <div class="case-study-two-col-text">
+          <div class="case-study-detail-label">Problem Statement</div>
+          <h2>Acuity built its reputation on 1:1 appointments. Group classes were an afterthought, and operators who ran them could feel it.</h2>
+          <p>Hair stylists, massage therapists, personal coaches: Acuity's original audience had single-client sessions. Classes were added to the product later but never received the same design investment. The experience for fitness studios, yoga instructors, and wellness educators running group sessions was cobbled together rather than built with their workflows in mind.</p>
+          <p>As class-based businesses made up a growing share of Acuity's customer base, the gap became harder to ignore. The classes feature existed, but it wasn't good enough to be a reason someone would choose Acuity over a competitor.</p>
+        </div>
+        <figure class="case-study-two-col-image">
+          <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
+            <img src="assets/images/squarespace/acuityfromsqsp.png" alt="Current Acuity Scheduling experience" class="case-study-image" />
+          </div>
+          <figcaption class="case-study-caption">The existing Acuity experience, built around appointments.</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-study-body">
+        <h2>My focus was on making classes a core Acuity offering. Not an add-on, but a reason to choose the product in the first place.</h2>
+        <p>That meant treating it with the same depth and intentionality that appointments had always received: its own mental model, its own creation flow, its own place in the product's information architecture.</p>
+      </section>
+
+      <section class="case-study-body">
+        <div class="case-study-detail-label">Research</div>
+        <h2>Before any designs, I ran generative research with customer lookalikes to understand what class-based businesses actually needed.</h2>
+          <p>Rather than designing for existing Acuity users who had already worked around its limitations, I recruited businesses that matched the profile of an ideal classes customer but weren't yet on the platform: fitness studios, dance schools, instructors running multi-week workshops. What did they use today? What frustrated them? What would make them switch?</p>
+          <p>A recurring theme emerged: the way they thought about classes didn't match the way most scheduling tools modeled them. A recurring pilates course and a drop-in Saturday session were fundamentally different things operationally. Different pricing, different roster management, different client communication. But products treated them as the same.</p>
+      </section>
+
+      <section class="case-study-body">
+        <div class="case-study-detail-label">Series &amp; Standalone</div>
+        <h2>I introduced a model that gave operators the distinction they were already making in their heads: Series and Standalone.</h2>
+          <p>A Series is a multi-session class scheduled as a set: a 6-week pilates course, a monthly workshop that repeats every Saturday morning. Clients enroll in the series; operators manage it as a single entity. Sessions are created all at once and appear on the calendar immediately, so the full schedule is visible from day one rather than generated one session at a time.</p>
+          <p>A Standalone is a one-off session anyone can join. No commitment, no enrollment. You show up, you book. These are the drop-in classes that fill gaps in the schedule and attract new clients who aren't ready to commit to a full course.</p>
+        <p>The distinction changed how operators configured classes, how clients discovered and booked them, and how the calendar represented them. It gave the product a language that matched how class-based businesses actually run.</p>
+      </section>
+
+      <section class="case-study-body">
+        <div class="case-study-detail-label">Design</div>
+        <h2>Appointments and Classes came together into a single Services catalog, with all editing anchored to the calendar rather than a separate page.</h2>
+        <p>The top-level navigation no longer asked operators to sort their mental model before they could find anything. A single "New service" button opens a picker that asks the natural first question (1:1 or group?) and branches from there. A class with no upcoming sessions is surfaced as inactive, not misleadingly labeled active. Status reflects operational reality.</p>
+        <p>Every creation, editing, and session management interaction happens in panels that layer over the calendar. When an operator is looking at a Thursday 9am slot, that slot stays visible while they make changes to it. Panels can be dragged from a floating overlay into a sidebar, so the full grid opens up behind the form. Context is never lost.</p>
+      </section>
+
+      <section class="case-study-body">
+        <div class="case-study-detail-label">Prototype</div>
+        <h2>Rather than replacing the current Acuity UI outright, I built both versions and made them directly comparable in a single deployed prototype.</h2>
+        <p>The prototype has two tracks: Vision (the redesign) and Interim (a faithful recreation of the current product), accessible from the same hub with a one-click switch. Reviews of a redesign tend to produce reactions like "the old way felt more familiar." With both versions live and interactive, the conversation becomes concrete: here's how you create a series in the current product, here's how you do it in the redesign. You can try both, point at specific moments, and compare them in real time.</p>
+        <p>The prototype also included a Figma-style annotation layer where reviewers could pin comments directly on the screen they were evaluating, tied to the exact spot they were reacting to. Because it was built on Squarespace's internal design system, engineers could run it directly and use it as a working spec rather than translating from static mocks.</p>
+      </section>
+
+      <section class="case-study-body">
+        <div class="case-study-detail-label">Outcome</div>
+        <h2>The prototype turned a contested IA question into a decision, and the Series &amp; Standalone model became the foundation for everything built after it.</h2>
+        <p>Letting stakeholders navigate a working prototype, try creating a service, and experience the unified catalog firsthand moved the conversation from "I'm not sure" to alignment. The Series and Standalone distinction gave the product a shared vocabulary that operators recognized immediately and that the rest of the design could be built around.</p>
+        <p>Because the prototype ran on the production design system, engineers could interact with it directly. Questions about hover states, transition timing, and edge case behavior had answers in the prototype rather than in a comment thread. The dual-track setup and annotation layer became a repeatable model for how the Acuity team evaluates future work.</p>
+      </section>
+
+      <section class="case-study-back">
+        <a href="/" class="case-study-back-link">← Back to all projects</a>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <div class="lightbox-overlay"></div>
+    <button type="button" class="lightbox-close" aria-label="Close">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image" />
+      <video class="lightbox-video" controls loop playsinline></video>
+      <p class="lightbox-caption" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
