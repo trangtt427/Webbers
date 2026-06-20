@@ -415,7 +415,7 @@ html.dark .site-nav-dropdown .nav-coming-soon {
   background: var(--header-bg);
   backdrop-filter: blur(12px) saturate(150%) brightness(102%);
   -webkit-backdrop-filter: blur(12px) saturate(150%) brightness(102%);
-  border-radius: 12px;
+  border-radius: 4px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
   z-index: 60;
 }
@@ -1744,7 +1744,7 @@ html.dark .blog-index-thumb-placeholder::before {
   margin-top: 200px;
   margin-bottom: 0;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
 }
 .case-study-details + .case-study-image-wrap {
@@ -1847,7 +1847,7 @@ html.dark .case-study-image-wrap--tint {
 }
 
 .case-study-figure-caption.case-study-video-wrap .case-study-video-inner {
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: #0f0f0f;
@@ -1999,14 +1999,14 @@ html.dark .case-study-image-wrap--tint {
   transform: translateX(0);
 }
 .case-study-two-col-image.case-study-image-wrap {
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--border);
 }
 .case-study-two-col-image .case-study-image-wrap {
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--border);
   opacity: 1;
