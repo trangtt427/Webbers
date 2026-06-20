@@ -1978,6 +1978,13 @@ html.dark .case-study-image-wrap--tint {
   font-size: 32px;
   max-width: 56ch;
 }
+@media (max-width: 768px) {
+  .case-study--human-interest .case-study-two-col-text h2,
+  .case-study--human-interest .case-study-body > .case-study-detail-label + h2,
+  .case-study--human-interest .case-study-body h2 {
+    font-size: 28px;
+  }
+}
 .case-study-two-col-text p {
   font-size: 18px;
   line-height: 1.5;
@@ -2041,7 +2048,7 @@ html.dark .case-study-image-wrap--tint {
   .case-study-body h2,
   .case-study-two-col-text h2,
   .case-study-body > .case-study-detail-label + h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
   .case-study-body p,
   .case-study-section p,
