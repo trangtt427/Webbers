@@ -61,11 +61,11 @@ html {
   --header-border: rgba(17, 24, 39, 0.08);
   --header-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
 
-  --media-radius: 4px;
+  --media-radius: 8px;
 }
 @media (max-width: 1024px) {
   :root {
-    --media-radius: 4px;
+    --media-radius: 8px;
   }
 }
 
@@ -419,7 +419,7 @@ html.dark .site-nav-dropdown .nav-coming-soon {
   background: var(--header-bg);
   backdrop-filter: blur(12px) saturate(150%) brightness(102%);
   -webkit-backdrop-filter: blur(12px) saturate(150%) brightness(102%);
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
   z-index: 60;
 }
@@ -1599,7 +1599,7 @@ html.dark .theme-toggle:hover .icon-sun {
   text-decoration: none;
   color: inherit;
   outline: none;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .blog-index-card:hover {
   text-decoration: none;
@@ -1761,7 +1761,7 @@ html.dark .blog-index-thumb-placeholder::before {
   margin-top: 200px;
   margin-bottom: 0;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
 }
 .case-study-details + .case-study-image-wrap {
@@ -1816,7 +1816,7 @@ html.dark .blog-index-thumb-placeholder::before {
   vertical-align: middle;
 }
 .case-study-image-wrap--crop {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
 }
 .case-study-image-wrap--crop video {
   width: 100%;
@@ -1866,7 +1866,7 @@ html.dark .case-study-image-wrap--tint {
 }
 
 .case-study-figure-caption.case-study-video-wrap .case-study-video-inner {
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: #0f0f0f;
@@ -2052,14 +2052,14 @@ html.dark .case-study-image-wrap--tint {
   transform: translateX(0);
 }
 .case-study-two-col-image.case-study-image-wrap {
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
 }
 .case-study-two-col-image .case-study-image-wrap {
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
   opacity: 1;
