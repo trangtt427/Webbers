@@ -1550,6 +1550,16 @@ html.dark .theme-toggle:hover .icon-sun {
 }
 .blog-post .case-study-body h3 {
 }
+.blog-post .case-study-intro,
+.blog-post .case-study-body,
+.blog-post .case-study-figure-caption,
+.blog-post .case-study-image-duo,
+.blog-index .case-study-intro,
+.blog-index .case-study-body,
+.blog-index .case-study-figure-caption,
+.blog-index .case-study-image-duo {
+  padding-left: 0;
+}
 .blog-index .blog-index-list {
   margin-top: 0;
   max-width: none;
