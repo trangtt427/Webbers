@@ -2770,7 +2770,8 @@ body.hi-panel-active .homepage-layout {
   border-radius: var(--media-radius);
   overflow: hidden;
 }
-.hi-panel-media-wrap--bordered {
+.hi-panel-media-wrap--bordered,
+.case-study-image-wrap--bordered {
   border: 1px solid var(--border);
 }
 .hi-panel-media-wrap img,
