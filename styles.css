@@ -1560,6 +1560,10 @@ html.dark .theme-toggle:hover .icon-sun {
 .blog-index .case-study-image-duo {
   padding-left: 0;
 }
+.blog-post .case-study-intro,
+.blog-post .case-study-body {
+  max-width: 750px;
+}
 .blog-index .blog-index-list {
   margin-top: 0;
   max-width: none;
@@ -2888,12 +2892,11 @@ body.hi-panel-active .homepage-layout {
   display: block;
   width: 32px;
   height: 32px;
-  /* Match filter structure in both themes so the browser can interpolate (not none → filter) */
-  filter: brightness(0) invert(0.53);
-  transition: filter var(--transition-duration) var(--transition-easing);
+  filter: brightness(0);
+  transition: filter var(--transition-duration) var(--transition-easing), opacity var(--transition-duration) var(--transition-easing);
 }
 html.dark .site-footer-social .footer-icon img {
-  filter: brightness(0) invert(0.65);
+  filter: brightness(0) invert(1);
 }
 .site-footer-clock {
   display: flex;
