@@ -918,7 +918,7 @@ html.dark .theme-toggle:hover .icon-sun {
 
 .homepage-intro {
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 0;
   padding-bottom: 200px;
   border-bottom: 1px solid var(--border);
   opacity: 0;
@@ -927,7 +927,7 @@ html.dark .theme-toggle:hover .icon-sun {
 }
 @media (min-width: 1025px) {
   .homepage-intro {
-    margin-bottom: 48px;
+    margin-bottom: 0;
     padding-bottom: 280px;
   }
 }
@@ -995,6 +995,18 @@ html.dark .theme-toggle:hover .icon-sun {
 }
 .homepage-case-study--featured {
   padding-top: 48px;
+}
+.homepage-section-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted-soft);
+  margin: 20px 0 64px;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease-out;
+}
+.homepage-section-label.homepage-section-label-in {
+  opacity: 1;
 }
 .homepage-case-study-pill {
   display: inline-block;

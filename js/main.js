@@ -55,6 +55,8 @@
   // intro, baby picture + second body of text, and the "Currently" block), and the footer.
   function revealBelowHero() {
     if (homepageIntro) homepageIntro.classList.add('homepage-intro-divider-in');
+    var sectionLabel = document.querySelector('.homepage-section-label');
+    if (sectionLabel) sectionLabel.classList.add('homepage-section-label-in');
     var caseStudies = document.querySelectorAll('.homepage-case-study');
     for (var i = 0; i < caseStudies.length; i++) {
       caseStudies[i].classList.add('homepage-case-study-in-view');
