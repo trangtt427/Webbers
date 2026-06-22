@@ -2039,6 +2039,9 @@ html.dark .case-study-image-wrap--tint {
   margin-bottom: 36px;
 }
 @media (max-width: 768px) {
+  .case-study--human-interest .case-study-name {
+    font-size: 28px;
+  }
   .case-study--human-interest .case-study-two-col-text h2,
   .case-study--human-interest .case-study-body > .case-study-detail-label + h2,
   .case-study--human-interest .case-study-body h2 {
