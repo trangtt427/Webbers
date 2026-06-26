@@ -391,11 +391,10 @@ html.dark .site-nav-dropdown .nav-coming-soon {
 .hamburger-btn .line {
   display: block;
   width: 20px;
-  height: 2px;
+  height: 1px;
   background: currentColor;
-  border-radius: 1px;
+  border-radius: 0.5px;
   transition: transform var(--transition-duration) var(--transition-easing), opacity var(--transition-duration) var(--transition-easing);
-  /* 2px avoids subpixel rendering differences on high-DPI mobile (Firefox vs Chrome) */
 }
 .hamburger-btn .line + .line { margin-top: 5px; }
 .hamburger-btn[aria-expanded="true"] .line:nth-child(1) {
@@ -516,8 +515,8 @@ html.dark .site-nav-dropdown .nav-coming-soon {
   display: block;
   width: 20px;
   height: 0;
-  border-top: 2px solid currentColor;
-  border-radius: 1px;
+  border-top: 1px solid currentColor;
+  border-radius: 0.5px;
   background: none;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -709,26 +708,26 @@ html.dark .site-nav-dropdown .nav-coming-soon {
 .icon-moon {
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.2;
+  stroke-width: 1;
   stroke-linecap: round;
   stroke-linejoin: round;
   width: 20px;
   height: 20px;
 }
 .theme-toggle:hover .icon-moon {
-  stroke-width: 1.043;
+  stroke-width: 0.87;
 }
 
 .icon-sun {
   stroke: currentColor;
   fill: none;
-  stroke-width: 1.5;
+  stroke-width: 1;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 .icon-sun circle {
-  fill: currentColor;
-  stroke: none;
+  fill: none;
+  stroke: currentColor;
 }
 
 /* Icon animation: crossfade + rotate/scale */

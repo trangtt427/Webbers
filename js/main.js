@@ -105,12 +105,13 @@
   }, 1000);
 
   // Stage 3: nav links + theme switcher + TOC + everything below the hero
+  // Fires at 1350ms — halfway through the logo's 0.7s transition (1000ms + 350ms)
   setTimeout(function() {
     if (siteMeta) siteMeta.classList.add('site-meta-in');
     if (toc) toc.classList.add('homepage-toc-in');
     revealBelowHero();
     unlockHomepageEntranceScroll();
-  }, 2300);
+  }, 1350);
 })();
 
 (function() {
