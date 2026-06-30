@@ -153,6 +153,53 @@
 })();
 
 (function() {
+  // About page: intro fades up on load; work section fades up on scroll.
+  var aboutIntro = document.querySelector('.about-page-section-row--intro');
+  var aboutWork = document.querySelector('.about-page-section-row--work');
+  if (!aboutIntro && !aboutWork) return;
+
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function revealAboutSection(el) {
+    if (el) el.classList.add('about-page-section-row-in');
+  }
+
+  if (reducedMotion) {
+    revealAboutSection(aboutIntro);
+    revealAboutSection(aboutWork);
+    return;
+  }
+
+  if (aboutIntro) {
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        revealAboutSection(aboutIntro);
+      });
+    });
+  }
+
+  if (!aboutWork) return;
+  if (!('IntersectionObserver' in window)) {
+    revealAboutSection(aboutWork);
+    return;
+  }
+
+  var workObserver = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          setTimeout(function() {
+            revealAboutSection(entry.target);
+          }, 100);
+        }
+      });
+    },
+    { rootMargin: '0px 0px 20px 0px', threshold: 0 }
+  );
+  workObserver.observe(aboutWork);
+})();
+
+(function() {
   // About page hero: fade up on load. (On the homepage, the about section is part of the
   // Stage 3 entrance instead, so skip it here.)
   if (document.querySelector('.homepage-layout')) return;
@@ -463,6 +510,7 @@
       linksWrap.className = 'mobile-menu-links';
       var links = dropdown.querySelectorAll('a');
       links.forEach(function(a) {
+        if (a.style.display === 'none') return;
         var link = document.createElement('a');
         link.href = a.getAttribute('href');
         link.textContent = a.textContent;
