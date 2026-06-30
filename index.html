@@ -44,7 +44,8 @@
         <div class="site-meta">
           <nav class="site-nav">
             <a href="http://trangtran.design/" class="nav-active">Home</a>
-            <a href="/blog/">Writing</a>
+            <a href="/blog/" style="display:none">Writing</a>
+            <a href="/about">About</a>
           </nav>
           <button class="theme-toggle theme-toggle-header" type="button" aria-label="Toggle theme" aria-pressed="false">
             <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
@@ -69,164 +70,111 @@
           </button>
           <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
             <a href="http://trangtran.design/" role="menuitem" class="nav-active">Home</a>
-            <a href="/blog/" role="menuitem">Writing</a>
+            <a href="/blog/" role="menuitem" style="display:none">Writing</a>
+            <a href="/about" role="menuitem">About</a>
           </div>
         </div>
       </div>
     </header>
 
     <div class="homepage-layout">
-      <div class="homepage-toc-column">
-        <nav class="homepage-toc" aria-label="Page sections">
-          <a href="#intro" class="homepage-toc-link toc-active">Intro</a>
-          <span class="homepage-toc-divider" aria-hidden="true"></span>
-          <a href="#human-interest" class="homepage-toc-link">Human Interest</a>
-          <a href="#squarespace" class="homepage-toc-link">Squarespace</a>
-          <a href="#tactic" class="homepage-toc-link">Tactic</a>
-          <a href="#baby-design-ui" class="homepage-toc-link">Baby Design System</a>
-          <span class="homepage-toc-divider" aria-hidden="true"></span>
-          <a href="#about" class="homepage-toc-link">About</a>
-        </nav>
-      </div>
-
       <main class="homepage-content">
-        <section id="intro" class="homepage-intro">
-          <h1>I'm Trang, a San Jose CA-based designer with 10+ years of experience solving hard problems to create products that make you go "ooh,&nbsp;that's kinda nice".</h1>
-          <p class="homepage-intro-lead">Currently designing at Squarespace.</p>
-        </section>
+        <div class="homepage-section-row homepage-section-row--intro">
+          <section id="intro" class="homepage-intro">
+            <h1>Human-centered design that connects systems, people, and experiences.</h1>
+            <p class="homepage-intro-lead">I'm Trang, a principled designer who brings order to messy spaces and cares deeply about crafting wickedly intuitive digital products, without taking the easy way out. Currently designing for solopreneurs and consumers at Squarespace.</p>
+          </section>
+        </div>
 
-        <p class="homepage-section-label">Selected Work</p>
-
-        <section id="human-interest" class="homepage-case-study homepage-case-study--featured">
-          <div class="homepage-case-study-inner">
-            <div class="homepage-case-study-visual">
-              <a href="human-interest" class="homepage-case-study-visual-link" aria-label="View Human Interest case study">
-                <div class="project-video-wrap">
-                  <video autoplay loop muted playsinline preload="auto">
-                    <source src="assets/videos/newfasttrack.mp4" type="video/mp4" />
-                  </video>
-                  <span class="no-video">Your browser does not support the video tag.</span>
-                </div>
-              </a>
-            </div>
-            <div class="homepage-case-study-copy">
-              <span class="homepage-case-study-pill">Featured</span>
-              <div class="homepage-case-study-title-row">
-                <h3 class="homepage-case-study-title"><a href="human-interest" class="homepage-case-study-text-link">Human Interest</a></h3>
-                <a href="human-interest" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(01)</a>
-              </div>
-              <p class="homepage-case-study-desc"><a href="human-interest" class="homepage-case-study-text-link">Introducing Fast Track, a simplified 401(k) setup experience to help employers unlock retirement benefits faster.</a></p>
-              <a href="human-interest" class="homepage-case-study-cta">Dive in →</a>
-            </div>
+        <div class="homepage-section-row homepage-section-row--work">
+          <div class="homepage-section-row-label-col">
+            <span class="homepage-section-row-label">Selected Work</span>
           </div>
-        </section>
-
-        <section id="squarespace" class="homepage-case-study">
-          <div class="homepage-case-study-inner">
-            <div class="homepage-case-study-visual">
-              <div class="project-video-wrap project-image-wrap">
-                <img src="assets/images/squarespace/acuityfromsqsp.png" alt="Acuity Scheduling is Squarespace's scheduling product" class="project-image" />
-              </div>
-            </div>
-            <div class="homepage-case-study-copy">
-              <div class="homepage-case-study-title-row">
-                <h3 class="homepage-case-study-title">Squarespace</h3>
-                <span class="homepage-case-study-num" aria-hidden="true">(02)</span>
-              </div>
-              <p class="homepage-case-study-desc">Enabling class-based businesses to scale with confidence through Acuity Scheduling, while leading the adoption of AI-forward product development.</p>
-              <span class="homepage-case-study-cta homepage-case-study-cta--coming-soon">Coming soon</span>
-            </div>
-          </div>
-        </section>
-
-
-        <section id="tactic" class="homepage-case-study">
-          <div class="homepage-case-study-inner">
-            <div class="homepage-case-study-visual">
-              <a href="tactic" class="homepage-case-study-visual-link" aria-label="View Tactic case study">
-                <div class="project-video-wrap">
-                  <video autoplay loop muted playsinline preload="auto">
-                    <source src="assets/videos/tactic-motion.mp4" type="video/mp4" />
-                  </video>
-                  <span class="no-video">Your browser does not support the video tag.</span>
-                </div>
-              </a>
-            </div>
-            <div class="homepage-case-study-copy">
-              <div class="homepage-case-study-title-row">
-                <h3 class="homepage-case-study-title"><a href="tactic" class="homepage-case-study-text-link">Tactic</a></h3>
-                <a href="tactic" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(03)</a>
-              </div>
-              <p class="homepage-case-study-desc"><a href="tactic" class="homepage-case-study-text-link">Modernized accounting that unlocks visibility and compliance for businesses using crypto.</a></p>
-            </div>
-          </div>
-        </section>
-
-        <section id="baby-design-ui" class="homepage-case-study homepage-case-study--last">
-          <div class="homepage-case-study-inner">
-            <div class="homepage-case-study-visual">
-              <a href="baby-design" class="homepage-case-study-visual-link" aria-label="View Baby Design UI case study">
-                <div class="project-video-wrap project-image-wrap">
-                  <img src="assets/images/baby-design-ui/darkmode-ui.png" alt="Baby Design UI dark mode design system" class="project-image" />
-                </div>
-              </a>
-            </div>
-            <div class="homepage-case-study-copy">
-              <div class="homepage-case-study-title-row">
-                <h3 class="homepage-case-study-title"><a href="baby-design" class="homepage-case-study-text-link">Baby Design System</a></h3>
-                <a href="baby-design" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(04)</a>
-              </div>
-              <p class="homepage-case-study-desc"><a href="baby-design" class="homepage-case-study-text-link">Personal design library turned public resource for the Figma Community.</a></p>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" class="homepage-about" aria-label="About">
-
-          <div class="about-hero-row">
-            <div class="about-hero-content">
-              <h1>
-                I've designed through a decade of paradigm shifts, adapting to big changes in technology and human needs. I stick by real user insights. I bring order to messy spaces. I sweat the details. I think in systems, and translate behind-the-scenes complexity into elegantly crafted solutions.
-              </h1>
-
-            <!--  <section class="about-timeline" aria-label="Work history">
-                <ol class="about-timeline-list">
-                  <li class="about-timeline-item">
-                    <div class="about-timeline-marker" aria-hidden="true"></div>
-                    <div class="about-timeline-body">
-                      <p class="about-timeline-company">Squarespace</p>
-                      <p class="about-timeline-year">2023 – Present</p>
-                      <p class="about-timeline-blurb">Leading design to help solopreneurs and small business owners manage their classes. I'm also spearheading a new way of working in an AI-forward product development process. Previously, I led the design direction and execution of our Enterprise scheduling business.</p>
+          <div class="homepage-section-row-content">
+            <section id="human-interest" class="homepage-case-study homepage-case-study--featured">
+              <div class="homepage-case-study-inner">
+                <div class="homepage-case-study-visual">
+                  <a href="human-interest" class="homepage-case-study-visual-link" aria-label="View Human Interest case study">
+                    <div class="project-video-wrap">
+                      <video autoplay loop muted playsinline preload="auto">
+                        <source src="assets/videos/newfasttrack.mp4" type="video/mp4" />
+                      </video>
+                      <span class="no-video">Your browser does not support the video tag.</span>
                     </div>
-                  </li>
-                  <li class="about-timeline-item">
-                    <div class="about-timeline-marker" aria-hidden="true"></div>
-                    <div class="about-timeline-body">
-                      <p class="about-timeline-company">Human Interest</p>
-                      <p class="about-timeline-year">2020 – 2023</p>
-                      <p class="about-timeline-blurb">I elevated the craft and design literacy of our Org while working on complex financial tools for customers and internal teams.</p>
-                    </div>
-                  </li>
-                  <li class="about-timeline-item">
-                    <div class="about-timeline-marker" aria-hidden="true"></div>
-                    <div class="about-timeline-body">
-                      <p class="about-timeline-company">Tactic</p>
-                      <p class="about-timeline-year">2021 – 2022</p>
-                      <p class="about-timeline-blurb">First designer on the team; built automated crypto accounting workflows that saved businesses 40+ hours a month on bookkeeping.</p>
-                    </div>
-                  </li>
-                </ol>
-              </section>-->
+                  </a>
+                </div>
+                <div class="homepage-case-study-copy">
+                  <span class="homepage-case-study-pill">Featured</span>
+                  <div class="homepage-case-study-title-row">
+                    <h3 class="homepage-case-study-title"><a href="human-interest" class="homepage-case-study-text-link">Human Interest</a></h3>
+                    <a href="human-interest" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(01)</a>
+                  </div>
+                  <p class="homepage-case-study-desc"><a href="human-interest" class="homepage-case-study-text-link">Introducing Fast Track, a simplified 401(k) setup experience to help employers unlock retirement benefits faster.</a></p>
+                  <a href="human-interest" class="homepage-case-study-cta">Dive in →</a>
+                </div>
+              </div>
+            </section>
 
-              <p class="about-hero-duplicate">
-               Currently designing at Squarespace, helping solopreneurs and small businesses manage class scheduling. Previously designed fintech solutions at Human Interest, built a B2B crypto accounting platform later acquired by Taxbit, and created business intelligence tools for startups.
-              </p>
-              <p class="about-hero-duplicate">
-              Outside of design, I try to make the most out of the amazing weather and nature in California. Usually with my camera too.
-              </p>
-            </div>
+            <section id="squarespace" class="homepage-case-study">
+              <div class="homepage-case-study-inner">
+                <div class="homepage-case-study-visual">
+                  <div class="project-video-wrap project-image-wrap">
+                    <img src="assets/images/squarespace/acuityfromsqsp.png" alt="Acuity Scheduling is Squarespace's scheduling product" class="project-image" />
+                  </div>
+                </div>
+                <div class="homepage-case-study-copy">
+                  <div class="homepage-case-study-title-row">
+                    <h3 class="homepage-case-study-title">Squarespace</h3>
+                    <span class="homepage-case-study-num" aria-hidden="true">(02)</span>
+                  </div>
+                  <p class="homepage-case-study-desc">Enabling class-based businesses to scale with confidence through Acuity Scheduling, while leading the adoption of AI-forward product development.</p>
+                  <span class="homepage-case-study-cta homepage-case-study-cta--coming-soon">Coming soon</span>
+                </div>
+              </div>
+            </section>
+
+            <section id="tactic" class="homepage-case-study">
+              <div class="homepage-case-study-inner">
+                <div class="homepage-case-study-visual">
+                  <a href="tactic" class="homepage-case-study-visual-link" aria-label="View Tactic case study">
+                    <div class="project-video-wrap">
+                      <video autoplay loop muted playsinline preload="auto">
+                        <source src="assets/videos/tactic-motion.mp4" type="video/mp4" />
+                      </video>
+                      <span class="no-video">Your browser does not support the video tag.</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="homepage-case-study-copy">
+                  <div class="homepage-case-study-title-row">
+                    <h3 class="homepage-case-study-title"><a href="tactic" class="homepage-case-study-text-link">Tactic</a></h3>
+                    <a href="tactic" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(03)</a>
+                  </div>
+                  <p class="homepage-case-study-desc"><a href="tactic" class="homepage-case-study-text-link">Modernized accounting that unlocks visibility and compliance for businesses using crypto.</a></p>
+                </div>
+              </div>
+            </section>
+
+            <section id="baby-design-ui" class="homepage-case-study homepage-case-study--last">
+              <div class="homepage-case-study-inner">
+                <div class="homepage-case-study-visual">
+                  <a href="baby-design" class="homepage-case-study-visual-link" aria-label="View Baby Design UI case study">
+                    <div class="project-video-wrap project-image-wrap">
+                      <img src="assets/images/baby-design-ui/darkmode-ui.png" alt="Baby Design UI dark mode design system" class="project-image" />
+                    </div>
+                  </a>
+                </div>
+                <div class="homepage-case-study-copy">
+                  <div class="homepage-case-study-title-row">
+                    <h3 class="homepage-case-study-title"><a href="baby-design" class="homepage-case-study-text-link">Baby Design System</a></h3>
+                    <a href="baby-design" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(04)</a>
+                  </div>
+                  <p class="homepage-case-study-desc"><a href="baby-design" class="homepage-case-study-text-link">Personal design library turned public resource for the Figma Community.</a></p>
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
+        </div>
 
         <div id="footer-placeholder"></div>
       </main>

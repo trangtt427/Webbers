@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="actrang.png" />
+  <title>About | Trang Tran</title>
+  <meta name="description" content="Trang Tran is a product designer with 10+ years of experience based in San Jose, CA." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      var s;
+      try { s = window.localStorage && localStorage.getItem('theme'); } catch (e) {}
+      var el = document.documentElement;
+      if (s === 'dark') el.classList.add('dark');
+      else if (s === 'light') el.classList.remove('dark');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-name"><a href="/" aria-label="Trang Tran"><span class="site-name-wordmark"><span class="site-name-wordmark-text">trangwreck</span><span class="site-name-wordmark-dot" aria-hidden="true"></span></span></a></div>
+        <div class="site-meta">
+          <nav class="site-nav">
+            <a href="/">Home</a>
+            <a href="/blog/" style="display:none">Writing</a>
+            <a href="/about" class="nav-active">About</a>
+          </nav>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.5" />
+              <line x1="12" y1="3.2" x2="12" y2="5.0" />
+              <line x1="12" y1="19.0" x2="12" y2="20.8" />
+              <line x1="3.2" y1="12" x2="5.0" y2="12" />
+              <line x1="19.0" y1="12" x2="20.8" y2="12" />
+              <line x1="5.0" y1="5.0" x2="6.4" y2="6.4" />
+              <line x1="17.6" y1="17.6" x2="19.0" y2="19.0" />
+              <line x1="17.6" y1="6.4" x2="19.0" y2="5.0" />
+              <line x1="5.0" y1="19.0" x2="6.4" y2="17.6" />
+            </svg>
+          </button>
+          <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-dropdown">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <div class="site-nav-dropdown" id="site-nav-dropdown" role="menu">
+            <a href="/" role="menuitem">Home</a>
+            <a href="/blog/" role="menuitem" style="display:none">Writing</a>
+            <a href="/about" role="menuitem" class="nav-active">About</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="about-hero">
+      <div class="about-page-section-row about-page-section-row--intro">
+        <div class="about-page-section-label-col">
+          <span class="about-page-section-label">Intro</span>
+        </div>
+        <div class="about-page-section-content">
+          <h1 class="about-page-headline">I've designed through a decade of paradigm shifts, adapting to big changes in technology and human needs. I stick by real user insights. I bring order to messy spaces. I sweat the details. I think in systems, and translate behind-the-scenes complexity into elegantly crafted solutions.</h1>
+          <p class="about-page-body">Currently designing at Squarespace, helping solopreneurs and small businesses manage class scheduling. Previously designed fintech solutions at Human Interest, built a B2B crypto accounting platform later acquired by TaxBit, and created business intelligence tools for startups.</p>
+          <p class="about-page-body">Outside of design, I try to make the most out of the amazing weather and nature in California. Usually with my camera too.</p>
+        </div>
+      </div>
+
+      <div class="about-page-section-row about-page-section-row--work">
+        <div class="about-page-section-label-col">
+          <span class="about-page-section-label">The Last 5 Years</span>
+        </div>
+        <div class="about-page-section-content">
+          <div class="about-work-item">
+            <div class="about-work-meta">
+              <p class="about-work-company">Squarespace</p>
+              <p class="about-work-year">2023 – Present</p>
+            </div>
+            <p class="about-work-blurb">Leading design for Acuity Scheduling, helping solopreneurs and small business owners manage class-based scheduling. Spearheading AI-forward product development practices, and previously led the design direction for our Enterprise scheduling business.</p>
+          </div>
+          <div class="about-work-item">
+            <div class="about-work-meta">
+              <p class="about-work-company"><a href="/human-interest.html" class="about-work-link">Human Interest ↗</a></p>
+              <p class="about-work-year">2020 – 2023</p>
+            </div>
+            <p class="about-work-blurb">Elevated craft and design literacy across the org while working on complex financial tools for customers and internal teams. Shipped Fast Track, a simplified 401(k) setup experience that drove a 900% increase in signups in its first week.</p>
+          </div>
+          <div class="about-work-item">
+            <div class="about-work-meta">
+              <p class="about-work-company"><a href="/tactic.html" class="about-work-link">Tactic ↗</a></p>
+              <p class="about-work-year">2021 – 2022</p>
+            </div>
+            <p class="about-work-blurb">First designer on the team. Built automated crypto accounting workflows that saved businesses 40+ hours a month on bookkeeping. The product was later acquired by TaxBit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-page-section-row about-page-section-row--connect">
+        <div class="about-page-section-label-col">
+          <span class="about-page-section-label">Connect</span>
+        </div>
+        <div class="about-page-section-content">
+          <p class="about-page-body"><a href="mailto:hello@trangtran.design">hello@trangtran.design</a></p>
+          <p class="about-page-body"><a href="https://www.linkedin.com/in/trangtrandesign/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p>
+        </div>
+      </div>
+
+      <div id="footer-placeholder"></div>
+    </main>
+  </div>
+
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+    <nav class="mobile-menu-links">
+      <a href="/">Home</a>
+      <a href="/blog/" style="display:none">Writing</a>
+      <a href="/about" class="nav-active">About</a>
+    </nav>
+  </div>
+
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

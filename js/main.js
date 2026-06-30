@@ -32,7 +32,8 @@
       requestAnimationFrame(function() {
         if (document.documentElement.classList.contains('hi-panel-restoring')) return;
         if (hero) hero.classList.add('hero-in');
-        if (homepageIntro) homepageIntro.classList.add('homepage-intro-in');
+        var introRow = document.querySelector('.homepage-section-row--intro');
+        if (introRow) introRow.classList.add('homepage-section-row-in');
       });
     });
   }
@@ -54,9 +55,8 @@
   // Reveals everything below the hero together: case studies, the about section (divider,
   // intro, baby picture + second body of text, and the "Currently" block), and the footer.
   function revealBelowHero() {
-    if (homepageIntro) homepageIntro.classList.add('homepage-intro-divider-in');
-    var sectionLabel = document.querySelector('.homepage-section-label');
-    if (sectionLabel) sectionLabel.classList.add('homepage-section-label-in');
+    var workRow = document.querySelector('.homepage-section-row--work');
+    if (workRow) workRow.classList.add('homepage-section-row-in');
     var caseStudies = document.querySelectorAll('.homepage-case-study');
     for (var i = 0; i < caseStudies.length; i++) {
       caseStudies[i].classList.add('homepage-case-study-in-view');
@@ -90,10 +90,10 @@
   // visible flash. The homepage is then ready for when the user closes the panel.
   if (document.documentElement.classList.contains('hi-panel-restoring')) {
     window._revealHomepage = function() {
-      if (homepageIntro) homepageIntro.classList.add('homepage-intro-in');
+      var introRow = document.querySelector('.homepage-section-row--intro');
+      if (introRow) introRow.classList.add('homepage-section-row-in');
       if (siteName) siteName.classList.add('site-name-in');
       if (siteMeta) siteMeta.classList.add('site-meta-in');
-      if (toc) toc.classList.add('homepage-toc-in');
       revealBelowHero();
     };
     return;
