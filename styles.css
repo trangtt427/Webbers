@@ -89,6 +89,27 @@ body * {
   transition: color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing), border-color var(--transition-duration) var(--transition-easing), fill var(--transition-duration) var(--transition-easing), stroke var(--transition-duration) var(--transition-easing);
 }
 
+/* Snap theme toggle instantly — body * color/bg transitions otherwise desync and flicker */
+html.theme-switching,
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+  transition: none !important;
+}
+
+/* View Transitions API: crossfade the whole page on theme toggle (avoids per-element flicker) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--transition-duration);
+  animation-timing-function: var(--transition-easing);
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
 ::selection {
   background: #b3d4fc;
   color: inherit;
@@ -465,9 +486,23 @@ html.dark .site-nav-dropdown .nav-coming-soon {
     padding: 16px 32px;
     font-size: 1.5rem;
     color: var(--text);
+    opacity: 0;
+    transform: translateY(14px);
+    animation: mobile-menu-link-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
+  .site-nav-dropdown.is-open a:nth-child(1) { animation-delay: 0.1s; }
+  .site-nav-dropdown.is-open a:nth-child(2) { animation-delay: 0.22s; }
+  .site-nav-dropdown.is-open a:nth-child(3) { animation-delay: 0.34s; }
+  .site-nav-dropdown.is-open a:nth-child(4) { animation-delay: 0.46s; }
   .site-nav-dropdown.is-open a:hover {
     color: var(--text);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .site-nav-dropdown.is-open a {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
   }
 }
 
@@ -537,6 +572,36 @@ html.dark .site-nav-dropdown .nav-coming-soon {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.25em;
+}
+.mobile-menu-overlay .mobile-menu-links a {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.mobile-menu-overlay.is-visible .mobile-menu-links a {
+  animation: mobile-menu-link-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.mobile-menu-overlay.is-visible .mobile-menu-links a:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu-overlay.is-visible .mobile-menu-links a:nth-child(2) { animation-delay: 0.22s; }
+.mobile-menu-overlay.is-visible .mobile-menu-links a:nth-child(3) { animation-delay: 0.34s; }
+.mobile-menu-overlay.is-visible .mobile-menu-links a:nth-child(4) { animation-delay: 0.46s; }
+@keyframes mobile-menu-link-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-overlay .mobile-menu-links a {
+    opacity: 1;
+    transform: none;
+  }
+  .mobile-menu-overlay.is-visible .mobile-menu-links a {
+    animation: none;
+  }
 }
 .mobile-menu-overlay a {
   display: inline-block;

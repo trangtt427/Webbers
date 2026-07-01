@@ -433,7 +433,7 @@
   var toggles = document.querySelectorAll('.theme-toggle');
   if (!toggles.length) return;
 
-  function applyTheme(theme) {
+  function setThemeClass(theme) {
     if (theme === 'dark') {
       root.classList.add('dark');
       toggles.forEach(function(t) {
@@ -449,15 +449,48 @@
     }
   }
 
+  function applyTheme(theme, options) {
+    var instant = options && options.instant;
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (instant || reduced) {
+      setThemeClass(theme);
+      return;
+    }
+
+    if (document.startViewTransition) {
+      root.classList.add('theme-switching');
+      var transition = document.startViewTransition(function() {
+        setThemeClass(theme);
+      });
+      transition.finished.finally(function() {
+        root.classList.remove('theme-switching');
+      });
+      return;
+    }
+
+    // Fallback: instant swap without per-element transitions (older browsers)
+    root.classList.add('theme-switching');
+    setThemeClass(theme);
+    void root.offsetWidth;
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        root.classList.remove('theme-switching');
+      });
+    });
+  }
+
   var stored = null;
   try {
     stored = window.localStorage && localStorage.getItem('theme');
   } catch (e) {}
 
   if (stored === 'dark' || stored === 'light') {
-    applyTheme(stored);
+    applyTheme(stored, { instant: true });
   } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    applyTheme('dark');
+    applyTheme('dark', { instant: true });
+  } else if (root.classList.contains('dark')) {
+    applyTheme('dark', { instant: true });
   }
 
   toggles.forEach(function(toggle) {
