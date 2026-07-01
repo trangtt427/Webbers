@@ -515,7 +515,6 @@
         link.href = a.getAttribute('href');
         link.textContent = a.textContent;
         if (a.classList.contains('nav-active')) link.classList.add('nav-active');
-        link.addEventListener('click', function() { closeMenu(); });
         linksWrap.appendChild(link);
       });
       overlay.appendChild(linksWrap);
