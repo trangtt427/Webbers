@@ -2311,6 +2311,11 @@ html.dark .case-study-image-wrap--tint {
 .case-study:not(.blog-post):not(.blog-index) .case-study-body:has(> .case-study-detail-label) > .case-study-two-col {
   margin-top: var(--case-study-nested-two-col-gap);
 }
+@media (min-width: 1051px) {
+  .case-study:not(.blog-post):not(.blog-index) .case-study-body:has(> .case-study-detail-label) > .case-study-two-col {
+    margin-top: var(--case-study-media-text-gap);
+  }
+}
 .case-study:not(.blog-post):not(.blog-index) .case-study-image-duo {
   margin-top: 64px;
 }
