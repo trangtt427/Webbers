@@ -1919,6 +1919,12 @@ html.dark .blog-index-thumb-placeholder::before {
   display: block;
   vertical-align: middle;
 }
+.case-study-image-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
 .case-study-image-wrap--crop {
   aspect-ratio: 4 / 3;
 }
@@ -1957,7 +1963,7 @@ html.dark .blog-index-thumb-placeholder::before {
   font-size: 16px;
   line-height: 1.5;
   color: var(--muted-soft);
-  margin: 12px 0 32px;
+  margin: 12px 0 0px;
   width: 100%;
 }
 .case-study-image-wrap--tint {
