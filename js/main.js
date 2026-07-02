@@ -505,7 +505,7 @@
 })();
 
 (function() {
-  // Hamburger menu: at 768px use full-screen overlay; desktop uses dropdown
+  // Hamburger menu: at 900px use full-screen overlay; desktop uses dropdown
   var btn = document.getElementById('hamburger-btn');
   var dropdown = document.getElementById('site-nav-dropdown');
   if (!btn || !dropdown) return;
@@ -525,7 +525,7 @@
   function openMenu() {
     btn.setAttribute('aria-expanded', 'true');
     document.body.classList.add('mobile-menu-open');
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 900) {
       overlay = document.createElement('div');
       overlay.id = 'mobile-menu-overlay';
       overlay.className = 'mobile-menu-overlay';
@@ -594,7 +594,7 @@
   var ticking = false;
 
   function isMobile() {
-    return window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    return window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
   }
 
   function update() {
