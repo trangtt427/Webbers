@@ -1960,7 +1960,7 @@ html.dark .blog-index-thumb-placeholder::before {
   border: 1px solid var(--border);
 }
 .case-study-caption {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   color: var(--muted-soft);
   margin: 12px 0 0px;
