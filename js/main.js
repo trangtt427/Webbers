@@ -551,9 +551,6 @@
         linksWrap.appendChild(link);
       });
       overlay.appendChild(linksWrap);
-      overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) closeMenu();
-      });
       document.body.appendChild(overlay);
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
@@ -576,8 +573,9 @@
 
   document.addEventListener('click', function(e) {
     if (btn.getAttribute('aria-expanded') !== 'true') return;
-    if (overlay && !btn.contains(e.target) && !overlay.contains(e.target)) closeMenu();
-    if (!overlay && !btn.contains(e.target) && !dropdown.contains(e.target)) closeMenu();
+    // Mobile overlay: close only via the X button (not backdrop or outside clicks)
+    if (overlay) return;
+    if (!btn.contains(e.target) && !dropdown.contains(e.target)) closeMenu();
   });
 })();
 
