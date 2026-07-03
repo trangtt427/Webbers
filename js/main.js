@@ -153,10 +153,10 @@
 })();
 
 (function() {
-  // About page: intro fades up on load; work section fades up on scroll.
+  // About page: intro fades up on load; work and press sections fade up on scroll.
   var aboutIntro = document.querySelector('.about-page-section-row--intro');
-  var aboutWork = document.querySelector('.about-page-section-row--work');
-  if (!aboutIntro && !aboutWork) return;
+  var aboutScrollSections = document.querySelectorAll('.about-page-section-row--work, .about-page-section-row--press');
+  if (!aboutIntro && !aboutScrollSections.length) return;
 
   var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -166,7 +166,7 @@
 
   if (reducedMotion) {
     revealAboutSection(aboutIntro);
-    revealAboutSection(aboutWork);
+    aboutScrollSections.forEach(revealAboutSection);
     return;
   }
 
@@ -178,9 +178,9 @@
     });
   }
 
-  if (!aboutWork) return;
+  if (!aboutScrollSections.length) return;
   if (!('IntersectionObserver' in window)) {
-    revealAboutSection(aboutWork);
+    aboutScrollSections.forEach(revealAboutSection);
     return;
   }
 
@@ -196,7 +196,9 @@
     },
     { rootMargin: '0px 0px 20px 0px', threshold: 0 }
   );
-  workObserver.observe(aboutWork);
+  aboutScrollSections.forEach(function(section) {
+    workObserver.observe(section);
+  });
 })();
 
 (function() {

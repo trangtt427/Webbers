@@ -3302,13 +3302,15 @@ html.dark .site-footer-social .footer-icon img {
   transform: translateX(-48px);
   transition: opacity 0.9s ease-out, transform 0.9s ease-out, border-color var(--transition-duration) var(--transition-easing);
 }
-.about-page-section-row--work {
+.about-page-section-row--work,
+.about-page-section-row--press {
   opacity: 0;
   transform: translateX(-48px);
   transition: opacity 0.9s ease-out, transform 0.9s ease-out, border-color var(--transition-duration) var(--transition-easing);
 }
 .about-page-section-row--intro.about-page-section-row-in,
-.about-page-section-row--work.about-page-section-row-in {
+.about-page-section-row--work.about-page-section-row-in,
+.about-page-section-row--press.about-page-section-row-in {
   opacity: 1;
   transform: translateX(0);
 }
@@ -3428,6 +3430,48 @@ html.dark .site-footer-social .footer-icon img {
 .about-work-link:hover::after {
   width: 100%;
 }
+.about-page-section-row--press .about-page-section-label-col,
+.about-page-section-row--press .about-page-section-content {
+  padding-top: 0;
+}
+.about-press-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  transition: border-color var(--transition-duration) var(--transition-easing);
+}
+.about-page-section-row--press .about-press-item:first-child {
+  padding-top: 0;
+}
+.about-press-item:last-child {
+  border-bottom: none;
+}
+.about-press-title {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text);
+  margin: 0;
+}
+.about-press-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted-soft);
+  margin: 8px 0 0;
+}
+.about-press-desc-link {
+  color: inherit;
+  text-decoration: none;
+}
+.about-press-desc-link:hover {
+  text-decoration: none;
+}
+.about-press-link {
+  display: inline;
+  color: var(--text);
+  text-decoration: none;
+}
+.about-press-link:hover {
+  text-decoration: none;
+}
 @media (max-width: 900px) {
   .about-page-section-row {
     grid-template-columns: 1fr;
@@ -3449,7 +3493,8 @@ html.dark .site-footer-social .footer-icon img {
 }
 @media (prefers-reduced-motion: reduce) {
   .about-page-section-row--intro,
-  .about-page-section-row--work {
+  .about-page-section-row--work,
+  .about-page-section-row--press {
     opacity: 1;
     transform: none;
     transition: none;
