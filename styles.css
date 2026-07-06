@@ -3542,6 +3542,9 @@ html.dark .site-footer-social .footer-icon img {
   .about-page-hero-photo {
     max-width: 200px;
   }
+  .about-page-section-row--intro .about-page-hero-photo {
+    margin-bottom: 24px;
+  }
   .about-work-item {
     grid-template-columns: 1fr;
     gap: 16px;
