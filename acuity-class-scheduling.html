@@ -72,7 +72,7 @@
           Acuity offers class scheduling in addition to 1:1 appointments, but it was haphazardly built, and customers who run classes could feel it. I spearheaded the launch of the new classes product and tapped into a new market of users.
       </p>
         <h1 class="case-study-headline">
-        Suddenly down a PM earlier in the year, I stepped up to pitch the concept of redeveloping our classes product to broaden our customer base beyond appointments. This was during widespread uncertainty as AI usage was mandated across the company, but I leveraged new tools and processes to share a vision that was bought in by Leadership and delivered in 2026.
+        Suddenly down a PM earlier in the year, I stepped up to pitch the concept of redeveloping our classes product to broaden our customer base beyond appointments. This was during widespread uncertainty as AI was mandated across the company, but I leveraged new tools and processes to share a vision that was bought in by Leadership and delivered in 2026.
       
         </h1>
       </section>
@@ -104,7 +104,7 @@
 
       <section class="case-study-body">
         <div class="case-study-detail-label">Problem Context</div>
-        <h2>The current class offering was not built to help customers scale sessions, and forced them to create classes through a form and without visualizing the rest of their calendar.</h2>
+        <h2>The current class offering was not built to help customers scale sessions, and forced them to create classes without visibility into the rest of their schedule.</h2>
         <p>Acuity was originally built for 1:1 appointments, with classes added later as an afterthought. As a result, fitness studios, yoga instructors, and educators were left with an experience that was cobbled together and not designed around their workflows. Creating classes lacked calendar context, and editing recurring classes required updating each session individually.</p>
         <figure>
           <div class="case-study-image-wrap case-study-image-wrap--bordered lightbox-openable" role="button" tabindex="0" aria-label="View full size">
@@ -143,10 +143,10 @@
         <div class="case-study-detail-label">Strategy</div>
         <h2>Building out the class vision would be a massive multi-quarter effort, so I had to show that we could deliver incremental value by breaking it into smaller milestones.</h2>
         <p>With support from my ETM, I proposed 3 tracks of work that would mirror the lifecycle of how class-based businesses use our product and how they should be sequenced:</p>
-        <p>Class creation experience &#8212; allow admins to create classes where it makes sense for them and scale classes intuitively.</p>
-        <p>Class management experience &#8212; give admins a centralized workflow to manage class sessions and attendees.</p>
-        <p>Client booking experience &#8212; improve the client scheduling page for classes and help admins get more bookings.</p>
-        <p>The class creation and management experiences received a lot complaints and requests for improvements over the years. We knew we needed to address these foundational issues in order to build more features on top of this. The client booking experience also received little attention and some of this work we could pull in while working on the first two tracks.</p>
+        <p>Class creation experience.</p>
+        <p>Class management experience.</p>
+        <p>Client booking experience.</p>
+        <p>The class creation involves introducing a parent-child inheritance model where sessions adopt changes at the class level. The management work would give users the ability to view all sessions and attendees associated to a class, in one place. Lastly, the client booking experience work entails improvements at the booking level, making the booking page easy to navigate for classes.</p>
         <figure>
           <div class="case-study-image-wrap case-study-image-wrap--bordered lightbox-openable" role="button" tabindex="0" aria-label="View full size">
             <img src="assets/images/squarespace/roadmap.png" alt="Roadmap" class="case-study-image" />
@@ -157,8 +157,8 @@
 
       <section class="case-study-body">
         <div class="case-study-detail-label">Concepting</div>
-        <h2>Since I kickstarted the project with a fully interactive prototype built by AI, the concepting step was all about refinement&mdash;using the exact design system components, detailed mobile screens, and careful planning of delivery phases.</h2>
-        <p>I hosted my Claude-built prototype on Vercel to be the source of truth. However, stakeholders found it difficult to give feedback and see the various states without having to go through the flows. I ended up building an annotation system within the prototype to allow stakeholders to leave comments, a way to switch between concepts for each milestone, and a "canvas mode" to see all screens.</p>
+        <h2>Since I kickstarted the project with a fully interactive prototype built by AI, the concepting step was all about refinement&mdash;using the exact design system components, creating detailed mobile screens, and carefully planning the delivery phases.</h2>
+        <p>I hosted my Claude-built prototype on Vercel to be the source of truth. However, stakeholders found it difficult to give feedback and see the various states without having to go through the flows. I ended up building an annotation UI on top of the prototype to allow people to leave comments, a way to switch between concepts for each milestone, and a "canvas mode" to see all screens.</p>
         <figure>
           <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
             <video autoplay loop muted playsinline>
@@ -210,8 +210,8 @@
       </section>
 
       <section class="case-study-body">
-        <h2>We learned from user research sessions that people wanted to see what the rest of their schedule looked like before setting up times for their classes.</h2>
-        <p>Our response to that was allowing class creation to happen in the Calendar UI, the most natural place for users. Users can edit class sessions directly from here, or they can go to the Services page where they can make class level changes.</p>
+        <h2>Our research sessions taught us that people wanted to see what the rest of their schedule looked like before committing to times during class setup.</h2>
+        <p>We responded with making class creation to happen in the Calendar UI, the most natural place for users. Users can edit class sessions directly from here, or they can go to the Services page where they can make class level changes.</p>
         <figure>
           <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
             <video autoplay loop muted playsinline>
@@ -223,8 +223,7 @@
       </section>
 
       <section class="case-study-body">
-        <h2>We introduced new pages where users can dive into a class, view past and upcoming sessions, and check in clients.</h2>
-        <p>This experience completed the core workflows of class management, and seamlessly connected to the calendar.</p>
+        <h2>We introduced a new experience where users can dive into a class, view past and upcoming sessions, and check in clients.</h2>
         <figure>
           <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
             <video autoplay loop muted playsinline>
@@ -236,7 +235,7 @@
       </section>
       <section class="case-study-body">
         <h2>For months, we relied on the Claude prototype to build off of. After concerns from engineers about its tradeoffs, I made the decision to jump back into Figma for sake of better collaboration and progress.</h2>
-        <p>The team had missed the clear boundaries of what's MVP vs. Vision, and the screens associated to them. They especially missed the type of engagement we would have when flowing through artboards together and riffing in Figma. My proprietary comment tools and markdown files couldn't replace that.</p>
+        <p>The development team had trouble figuring out from the prototypes what were MVP and was Vision. With Figma, you'd have explicit documentation calling out which artboards are associated with each, which would lead to more engagement from engineers. My proprietary comment tools and markdown files couldn't replace that.</p>
         <figure>
           <div class="case-study-image-wrap case-study-image-wrap--bordered lightbox-openable" role="button" tabindex="0" aria-label="View full size">
             <img src="assets/images/squarespace/figma.png" alt="Figma" class="case-study-image" />
@@ -247,16 +246,10 @@
 
       <section class="case-study-body">
         <div class="case-study-detail-label">Implementation</div>
-        <h2>When it came to applying HUI, our design system, we realized it didn't cover the use cases of admin workflows.</h2>
+        <h2>We launched the new class creation experience as the the first milestone, along with some improvements to the client booking page since the latter were small lifts. Class management came later.</h2>
         <p>The design system at the time catered more to the participant experience which boasted large elements and simpler elements. I audited the design system to see what I could get for free, but ended up creating several new components. We'd be able to feed two birds with one scone, because these new components would eventually be used when building out our internal tools.</p>
       </section>
 
-      <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
-          <img src="assets/images/hi/fasttrackfinal.png" alt="New additions to HUI design system" class="case-study-image" />
-        </div>
-        <figcaption class="case-study-caption">New additions to HUI and a few easter egg ice cream motifs.</figcaption>
-      </figure>
 
       <figure class="case-study-figure-caption">
         <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
@@ -264,11 +257,11 @@
         </div>
       </figure>
 
-      <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
-          <img src="assets/images/hi/signplandocs.png" alt="Signing plan documents in Fast Track" class="case-study-image" />
-        </div>
-      </figure>
+      <section class="case-study-body">
+        <div class="case-study-detail-label">Implementation</div>
+        <h2>We launched the new class creation experience as the the first milestone, along with some improvements to the client booking page since the latter were small lifts. Class management came later.</h2>
+        <p>The design system at the time catered more to the participant experience which boasted large elements and simpler elements. I audited the design system to see what I could get for free, but ended up creating several new components. We'd be able to feed two birds with one scone, because these new components would eventually be used when building out our internal tools.</p>
+      </section>
 
       <section class="case-study-body">
         <div class="case-study-detail-label">Outcome</div>

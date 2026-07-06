@@ -1195,24 +1195,19 @@ html.dark .theme-toggle:hover .icon-sun {
   flex-shrink: 0;
   margin: -24px 0 16px;
 }
-.homepage-case-study-title {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  margin: 0 0 8px;
-  color: var(--text);
-}
-.homepage-case-study-category {
-  font-size: 0.85rem;
-  color: var(--muted-soft);
-  margin: 0 0 12px;
-}
 .homepage-case-study-desc {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
   color: var(--muted-soft);
+  margin: 0 0 8px;
+}
+.homepage-case-study-title {
+  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
   margin: 0 0 16px;
+  color: var(--text);
 }
 .homepage-case-study-cta {
   display: inline-block;
