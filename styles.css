@@ -1006,7 +1006,7 @@ html.dark .theme-toggle:hover .icon-sun {
 }
 .homepage-intro .homepage-intro-lead {
   font-size: 24px;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 .homepage-intro .homepage-intro-lead {
   margin-top: 56px;
@@ -1206,6 +1206,7 @@ html.dark .theme-toggle:hover .icon-sun {
   font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 400;
   font-size: 24px;
+  line-height: 1.3;
   margin: 0 0 16px;
   color: var(--text);
 }
