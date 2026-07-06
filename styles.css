@@ -3361,6 +3361,12 @@ html.dark .site-footer-social .footer-icon img {
   display: block;
   vertical-align: middle;
 }
+.about-page-hero-photo-caption {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted-soft);
+  margin: 12px 0 0;
+}
 .about-page-section-row--work,
 .about-page-section-row--press {
   opacity: 0;
