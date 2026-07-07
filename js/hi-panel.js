@@ -17,7 +17,7 @@
       el: document.getElementById('squarespace-qr-panel'),
       hash: '#/squarespace-qr-codes',
       sectionId: 'squarespace-qr-codes',
-      href: 'squarespace-qr-codes'
+      href: '#/squarespace-qr-codes'
     },
     {
       el: document.getElementById('tactic-panel'),
@@ -184,7 +184,6 @@
     clearSlideListener(panel);
     if (!isOpen || activePanel !== panel) return;
     scheduleFadeDismiss();
-    pushPanelHistory(panel);
   }
 
   function syncCloseOverlay() {
@@ -261,6 +260,7 @@
     isOpen = true;
     activePanel = panel;
     lockScroll();
+    pushPanelHistory(panel);
     revealPanel(panel);
     playPanelVideos(panel);
   }
@@ -445,6 +445,12 @@
     if (isOpen || isOverlayVisible()) {
       syncCloseOverlay();
     }
+  });
+
+  window.addEventListener('hashchange', function() {
+    if (isOpen || isAnimatingOpen) return;
+    var panel = getPanelByHash(window.location.hash);
+    if (panel) openPanel(panel);
   });
 
   document.addEventListener('keydown', function(e) {
