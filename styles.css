@@ -2118,6 +2118,12 @@ html.dark .case-study-image-wrap--tint {
   width: 340px;
   max-width: 340px;
 }
+.case-study-two-col--flush-heading .case-study-two-col-text > h2 {
+  margin-bottom: 0;
+}
+.case-study:not(.blog-post):not(.blog-index) .case-study-two-col--flush-heading .case-study-two-col-text > h2 {
+  margin-bottom: 0;
+}
 .case-study-two-col-text .case-study-detail-label {
   margin-bottom: 12px;
 }
@@ -2142,7 +2148,7 @@ html.dark .case-study-image-wrap--tint {
   grid-column: 2;
 }
 .case-study-body:has(> .case-study-detail-label) > .case-study-two-col {
-  margin-top: var(--case-study-nested-two-col-gap, 64px);
+  margin-top: var(--case-study-media-text-gap, 112px);
   width: 100%;
 }
 .case-study-two-col-text h2,
@@ -2310,12 +2316,16 @@ html.dark .case-study-image-wrap--tint {
 .case-study:not(.blog-post):not(.blog-index) .case-study-body figure + p,
 .case-study:not(.blog-post):not(.blog-index) .case-study-body figure + h2,
 .case-study:not(.blog-post):not(.blog-index) .case-study-body figure + h3,
+.case-study:not(.blog-post):not(.blog-index) .case-study-body figure + .case-study-two-col,
+.case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-two-col + p,
+.case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-two-col + h2,
+.case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-two-col + h3,
 .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-image-wrap + p,
 .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-image-wrap + h2,
 .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-image-wrap + h3 {
   margin-top: var(--case-study-media-text-gap);
 }
-.case-study:not(.blog-post):not(.blog-index) .case-study-body figure:has(+ p, + h2, + h3) .case-study-caption {
+.case-study:not(.blog-post):not(.blog-index) .case-study-body figure:has(+ p, + h2, + h3, + .case-study-two-col) .case-study-caption {
   margin-bottom: 0;
 }
 .case-study:not(.blog-post):not(.blog-index) .case-study-figure-caption .case-study-image-wrap {
@@ -2326,12 +2336,7 @@ html.dark .case-study-image-wrap--tint {
   margin-top: 0;
 }
 .case-study:not(.blog-post):not(.blog-index) .case-study-body:has(> .case-study-detail-label) > .case-study-two-col {
-  margin-top: var(--case-study-nested-two-col-gap);
-}
-@media (min-width: 1051px) {
-  .case-study:not(.blog-post):not(.blog-index) .case-study-body:has(> .case-study-detail-label) > .case-study-two-col {
-    margin-top: var(--case-study-media-text-gap);
-  }
+  margin-top: var(--case-study-media-text-gap);
 }
 .case-study:not(.blog-post):not(.blog-index) .case-study-image-duo {
   margin-top: 64px;
@@ -2464,6 +2469,9 @@ html.dark .case-study-image-wrap--tint {
     margin-top: 0;
     margin-bottom: 40px;
   }
+  .case-study:not(.blog-post):not(.blog-index) .case-study-two-col--flush-heading .case-study-two-col-text > h2 {
+    margin-bottom: 0;
+  }
   .case-study:not(.blog-post):not(.blog-index) {
     --case-study-media-text-gap: 64px;
     --case-study-nested-two-col-gap: 40px;
@@ -2513,6 +2521,10 @@ html.dark .case-study-image-wrap--tint {
   .case-study:not(.blog-post):not(.blog-index) .case-study-body figure + p,
   .case-study:not(.blog-post):not(.blog-index) .case-study-body figure + h2,
   .case-study:not(.blog-post):not(.blog-index) .case-study-body figure + h3,
+  .case-study:not(.blog-post):not(.blog-index) .case-study-body figure + .case-study-two-col,
+  .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-two-col + p,
+  .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-two-col + h2,
+  .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-two-col + h3,
   .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-image-wrap + p,
   .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-image-wrap + h2,
   .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-image-wrap + h3 {
@@ -2529,7 +2541,7 @@ html.dark .case-study-image-wrap--tint {
     margin-top: 32px;
   }
   .case-study:not(.blog-post):not(.blog-index) .case-study-body:has(> .case-study-detail-label) > .case-study-two-col {
-    margin-top: var(--case-study-nested-two-col-gap);
+    margin-top: var(--case-study-media-text-gap);
   }
   .case-study:not(.blog-post):not(.blog-index) .case-study-image-duo {
     margin-top: 48px;
@@ -3546,7 +3558,8 @@ html.dark .site-footer-social .footer-icon img {
     gap: 24px;
   }
   .about-page-hero-photo {
-    max-width: 200px;
+    width: 300px;
+    max-width: min(300px, 100%);
   }
   .about-page-section-row--intro .about-page-hero-photo {
     margin-bottom: 24px;

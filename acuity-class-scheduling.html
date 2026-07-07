@@ -108,23 +108,26 @@
         <p>Acuity was originally built for 1:1 appointments, with classes added later as an afterthought. As a result, fitness studios, yoga instructors, and educators were left with an experience that was cobbled together and not designed around their workflows. Creating classes lacked calendar context, and editing recurring classes required updating each session individually.</p>
         <figure>
           <div class="case-study-image-wrap case-study-image-wrap--bordered lightbox-openable" role="button" tabindex="0" aria-label="View full size">
-            <img src="assets/images/hi/plandesign.png" alt="The current class creation experience." class="case-study-image" />
+            <img src="assets/images/squarespace/oldui.png" alt="The current class creation experience." class="case-study-image" />
           </div>
           <figcaption class="case-study-caption">The current class creation experience.</figcaption>
         </figure>
-      </section>
 
-      <section class="case-study-body">
-        <h2>Once a class gets created, managing sessions and attendees was cumbersome, with no centralized workflow to view all sessions or track attendees.</h2>
-        <figure>
-          <div class="case-study-image-wrap case-study-image-wrap--bordered lightbox-openable" role="button" tabindex="0" aria-label="View full size">
-            <img src="assets/images/hi/plandesign.png" alt="Viewing upcoming classes and managing attendees happen in different places in the current product" class="case-study-image" />
+        <section class="case-study-two-col case-study-two-col--centered case-study-two-col--narrow-image case-study-two-col--flush-heading">
+          <div class="case-study-two-col-text">
+            <h2>Multiple recurring sessions can be created at once, but can't be updated in bulk afterwards; each would have to be edited individually. This was also the only UI to see attendees for each session, which is a little hard to maneuver.</h2>
           </div>
-          <figcaption class="case-study-caption">Viewing upcoming classes and managing attendees happen in different places in the current product.</figcaption>
-        </figure>
+          <figure class="case-study-two-col-image">
+            <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
+              <img src="assets/images/squarespace/offerings.png" alt="Class types" class="case-study-image" />
+            </div>
+          </figure>
+        </section>
       </section>
 
+      
       <section class="case-study-body">
+        <div class="case-study-detail-label">Strategy</div>
         <h2>At the time, traditional processes were being challenged by AI. I used the opportunity to build an elaborate prototype with Claude Code, showing where we can go with classes. This vision was presented to Leadership and greenlit to become our focus for the year.</h2>
         <p>Bringing just one Figma screen I designed into Claude, this vision prototype was spun up in just a week and tested well in user research sessions. Using AI tools accelerated the discovery process, exposed edge cases early, and made it easier for me to share the narrative of the ideal state and the path needed to get there.</p>
         <figure>
@@ -136,11 +139,8 @@
           <figcaption class="case-study-caption">I used Claude Code to build out a completely interactive and feature rich prototype of the new class experience.</figcaption>
         </figure>
       </section>
-      
-      
 
       <section class="case-study-body">
-        <div class="case-study-detail-label">Strategy</div>
         <h2>Building out the class vision would be a massive multi-quarter effort, so I had to show that we could deliver incremental value by breaking it into smaller milestones.</h2>
         <p>With support from my ETM, I proposed 3 tracks of work that would mirror the lifecycle of how class-based businesses use our product and how they should be sequenced:</p>
         <p>Class creation experience.</p>
@@ -246,27 +246,34 @@
 
       <section class="case-study-body">
         <div class="case-study-detail-label">Implementation</div>
-        <h2>We launched the new class creation experience as the the first milestone, along with some improvements to the client booking page since the latter were small lifts. Class management came later.</h2>
-        <p>The design system at the time catered more to the participant experience which boasted large elements and simpler elements. I audited the design system to see what I could get for free, but ended up creating several new components. We'd be able to feed two birds with one scone, because these new components would eventually be used when building out our internal tools.</p>
+        <h2>During development, we ended up foregoing a lot of the niceties that I included in the vision prototype.</h2>
+        <p>We were already behind on schedule so I made some prioritization calls to drop some of the extra interactions I initially included. None of these things took away from the jobs to be done, so everyone was in agreement.</p>
       </section>
+
+      <section class="case-study-body">
+
+        <h2>The idea was to launch the new class creation experience first, then class management later. But not without having an open bug bash with the CustOps team.</h2>
+        <p>Since this is a huge change to the product, we assembled a team of CustOps members to test out the new experience for about a week. With their help, we able to document about two dozen bugs, which our entire team of engineers swarmed on for the next week. I also made a few design changes based on some of that feedback (mainly around messaging).</p>
+      </section>
+
+      
 
 
       <figure class="case-study-figure-caption">
         <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
-          <img src="assets/images/hi/planmatch.png" alt="Side by side plan comparison in Fast Track" class="case-study-image" />
+          <img src="assets/images/squarespace/bugbash.png" alt="Bug Bash Plan" class="case-study-image" />
         </div>
       </figure>
 
       <section class="case-study-body">
-        <div class="case-study-detail-label">Implementation</div>
-        <h2>We launched the new class creation experience as the the first milestone, along with some improvements to the client booking page since the latter were small lifts. Class management came later.</h2>
-        <p>The design system at the time catered more to the participant experience which boasted large elements and simpler elements. I audited the design system to see what I could get for free, but ended up creating several new components. We'd be able to feed two birds with one scone, because these new components would eventually be used when building out our internal tools.</p>
+        <p>Once we were comfortable for the product to be out in the wild, we put it into production for 5% of our users. No issues cropped up for a week, so we ramped up to 10%. At this time, we were putting the finishing touches on the management experience.</p>
       </section>
+
 
       <section class="case-study-body">
         <div class="case-study-detail-label">Outcome</div>
-        <h2>In the first week of Fast Track's public release, we saw an increase of 900% signups.</h2>
-        <p>Fast Track was first released in beta to customers connected to our partner payroll provider and then to everyone else in September 2023. Human Interest kept its partner status and hit a recordbreaking amount of signups, validating that there is a market of savvy but busy admins who prefer a no-touch setup. Fast Track was so successful that in the coming years, Human Interest started building a whole team to support and evolve this new business line. Read more about the product release <a href="https://401kspecialistmag.com/human-interest-streamlines-retirement-planning-process-with-fast-track-401k/" target="_blank" rel="noopener noreferrer">here<span aria-hidden="true"> ↗</span></a>.</p>
+        <h2>After one month of delivering the new class experience, we saw remarkable numbers: 33% increase in class creation with an outpour of positive feedback delivered to us via CustOps support tickets.</h2>
+        <p>talk about success metrics and aftermath here!</p>
       </section>
 
       <section class="case-study-back">
