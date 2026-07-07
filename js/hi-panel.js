@@ -14,6 +14,12 @@
   var panels = [
     // Human Interest panel dormant — #hi-panel markup kept in index.html for future use
     {
+      el: document.getElementById('squarespace-qr-panel'),
+      hash: '#/squarespace-qr-codes',
+      sectionId: 'squarespace-qr-codes',
+      href: 'squarespace-qr-codes'
+    },
+    {
       el: document.getElementById('tactic-panel'),
       hash: '#/tactic',
       sectionId: 'tactic',

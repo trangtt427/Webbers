@@ -1174,10 +1174,21 @@ html.dark .theme-toggle:hover .icon-sun {
   margin-top: 0;
   max-width: 100%;
   height: auto;
+  aspect-ratio: 3 / 2;
 }
-.homepage-case-study-visual .project-video-wrap video {
-  height: auto;
-  object-fit: unset;
+.homepage-case-study-placeholder {
+  background: #d1d5db;
+  min-height: 0;
+}
+html.dark .homepage-case-study-placeholder {
+  background: #3a4550;
+}
+.homepage-case-study-visual .project-video-wrap video,
+.homepage-case-study-visual .project-image-wrap .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .homepage-case-study-text-link {
   color: inherit;
@@ -2812,11 +2823,17 @@ html.dark .project-dot--active {
   .homepage-case-study .project-video-wrap,
   .homepage-case-study .project-image-wrap {
     height: auto;
-    aspect-ratio: unset;
+    aspect-ratio: 3 / 2;
   }
-  .homepage-case-study .project-video-wrap video {
-    height: auto;
-    object-fit: unset;
+  .homepage-case-study-placeholder {
+    aspect-ratio: 3 / 2;
+    min-height: 0;
+  }
+  .homepage-case-study .project-video-wrap video,
+  .homepage-case-study .project-image-wrap .project-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 .project-video-wrap video {
@@ -3079,7 +3096,8 @@ body.hi-panel-active .homepage-layout {
 .hi-panel-name {
   font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 24px;
+  line-height: 1.3;
   color: var(--text);
   margin: 0;
 }
@@ -3124,7 +3142,9 @@ body.hi-panel-active .homepage-layout {
   margin-top: 10px;
 }
 @media (max-width: 900px) {
-  .hi-panel-detail-label,
+  .hi-panel-detail-label {
+    font-size: 16px;
+  }
   .hi-panel-detail-value {
     font-size: 17px;
   }
@@ -3164,6 +3184,13 @@ body.hi-panel-active .homepage-layout {
 .hi-panel-media-wrap video {
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+.hi-panel-media-wrap--placeholder {
+  aspect-ratio: 16 / 9;
+  background: #d1d5db;
+}
+html.dark .hi-panel-media-wrap--placeholder {
+  background: #3a4550;
 }
 
 /* Panel media scales up gently once per open (class toggled in JS) */
@@ -3224,9 +3251,11 @@ body.hi-panel-active .homepage-layout {
     gap: 32px;
   }
   .hi-panel-name {
-    font-size: 28px;
+    font-size: 24px;
   }
-  .hi-panel-detail-label,
+  .hi-panel-detail-label {
+    font-size: 16px;
+  }
   .hi-panel-detail-value,
   .hi-panel-back {
     font-size: 17px;

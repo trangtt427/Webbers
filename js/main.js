@@ -12,7 +12,7 @@
   }
   // Start at the top on a plain homepage load, and also when restoring the
   // Case study panels (their hashes aren't scroll targets).
-  if (isHomepage && (!window.location.hash || window.location.hash === '#/tactic' || window.location.hash === '#/baby-design')) {
+  if (isHomepage && (!window.location.hash || window.location.hash === '#/tactic' || window.location.hash === '#/baby-design' || window.location.hash === '#/squarespace-qr-codes')) {
     window.scrollTo(0, 0);
   }
 })();
@@ -289,7 +289,7 @@
   var toc = document.querySelector('.homepage-toc');
   if (!toc || !('IntersectionObserver' in window)) return;
 
-  var sectionIds = ['intro', 'human-interest', 'squarespace', 'tactic', 'baby-design-ui', 'about'];
+  var sectionIds = ['intro', 'human-interest', 'squarespace', 'squarespace-qr-codes', 'tactic', 'baby-design-ui', 'about'];
   var sections = [];
   for (var i = 0; i < sectionIds.length; i++) {
     var el = document.getElementById(sectionIds[i]);
