@@ -3185,6 +3185,11 @@ body.hi-panel-active .homepage-layout {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+.hi-panel-media-wrap--uncropped video {
+  aspect-ratio: auto;
+  object-fit: contain;
+  height: auto;
+}
 .hi-panel-media-wrap--placeholder {
   aspect-ratio: 16 / 9;
   background: #d1d5db;
