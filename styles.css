@@ -276,7 +276,7 @@ a:hover { text-decoration: underline; }
   align-items: baseline;
   font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
-  font-size: calc(10.4px * 2.5);
+  font-size: calc(10.4px * 2.25);
   line-height: 1;
   letter-spacing: -0.03em;
   color: inherit;
@@ -285,7 +285,7 @@ a:hover { text-decoration: underline; }
 }
 @media (max-width: 900px) {
   .site-name-wordmark {
-    font-size: calc(10.4px * 2);
+    font-size: calc(10.4px * 1.8);
   }
 }
 .site-name-wordmark-text {
@@ -1002,7 +1002,7 @@ html.dark .theme-toggle:hover .icon-sun {
   margin: 0;
 }
 .homepage-intro h1 {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1;
 }
 .homepage-intro .homepage-intro-lead {
@@ -1451,19 +1451,19 @@ html.dark .homepage-case-study-placeholder {
     padding: 48px 0;
   }
   .homepage-case-study-title {
-    font-size: 24px;
+    font-size: 20px;
   }
   .homepage-case-study-desc {
-    font-size: 17px;
+    font-size: 16px;
   }
   .homepage-case-study--featured .homepage-case-study-cta {
-    font-size: 17px;
+    font-size: 16px;
   }
   .homepage-intro h1 {
-    font-size: 40px;
+    font-size: 32px;
   }
   .homepage-intro .homepage-intro-lead {
-    font-size: 24px;
+    font-size: 20px;
   }
   .homepage-intro-sub {
     font-size: 17px;
