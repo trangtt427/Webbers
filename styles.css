@@ -1052,8 +1052,20 @@ html.dark .theme-toggle:hover .icon-sun {
   opacity: 1;
   transform: translateX(0);
 }
+.homepage-case-study-num {
+  justify-self: end;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted-soft);
+  letter-spacing: 0.01em;
+  margin: 0 0 -12px;
+  text-decoration: none;
+}
+.homepage-case-study-num.homepage-case-study-text-link,
+.homepage-case-study-num.homepage-case-study-text-link:hover {
+  color: var(--muted-soft);
+}
 .homepage-case-study-copy {
-  order: 1;
   display: flex;
   flex-direction: column;
 }
@@ -1100,10 +1112,7 @@ html.dark .theme-toggle:hover .icon-sun {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 48px 0;
-}
-.homepage-intro-icon-col + .homepage-intro-lead {
-  margin-top: 0;
+  margin: 0 0 48px;
 }
 .homepage-hero-icon-pattern {
   display: flex;
@@ -1167,7 +1176,7 @@ html.dark .homepage-hero-icon {
     grid-column: 1;
   }
   .homepage-intro-icon-col {
-    margin: 32px 0;
+    margin: 0 0 32px;
   }
 }
 .homepage-case-study-pill {
@@ -1212,7 +1221,6 @@ html.dark .homepage-hero-icon {
   }
 }
 .homepage-case-study-visual {
-  order: 2;
   min-width: 0;
 }
 .homepage-case-study-visual-link {
@@ -1257,15 +1265,6 @@ html.dark .homepage-case-study-placeholder {
 }
 .homepage-case-study-text-link:hover {
   text-decoration: none;
-}
-.homepage-case-study-num {
-  align-self: flex-end;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--muted-soft);
-  letter-spacing: 0.01em;
-  flex-shrink: 0;
-  margin: -24px 0 16px;
 }
 .homepage-case-study-desc {
   font-size: 18px;
