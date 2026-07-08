@@ -1089,6 +1089,70 @@ html.dark .theme-toggle:hover .icon-sun {
 .homepage-section-row--intro > .homepage-intro {
   grid-column: 2;
 }
+.homepage-intro-icon-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 48px 0;
+}
+.homepage-intro-icon-col + .homepage-intro-lead {
+  margin-top: 0;
+}
+.homepage-hero-icon-pattern {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+.homepage-hero-icon-slot {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.homepage-hero-icon-slot .homepage-hero-icon {
+  position: absolute;
+  inset: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  transform: scale(0.55);
+  filter: blur(3px);
+  transition:
+    opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+.homepage-hero-icon-slot .homepage-hero-icon.is-active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+.homepage-hero-icon {
+  display: block;
+  flex-shrink: 0;
+}
+.homepage-hero-icon--sep {
+  width: 7px;
+  height: 7px;
+}
+html.dark .homepage-hero-icon {
+  filter: brightness(0) invert(0.82);
+}
+html.dark .homepage-hero-icon-slot .homepage-hero-icon.is-active {
+  filter: brightness(0) invert(0.82) blur(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .homepage-hero-icon-slot .homepage-hero-icon {
+    transition: none;
+    filter: none;
+    transform: none;
+  }
+  html.dark .homepage-hero-icon-slot .homepage-hero-icon.is-active {
+    filter: brightness(0) invert(0.82);
+  }
+}
 .homepage-section-row--work {
   margin-top: 80px;
 }
@@ -1102,6 +1166,9 @@ html.dark .theme-toggle:hover .icon-sun {
   }
   .homepage-section-row--intro > .homepage-intro {
     grid-column: 1;
+  }
+  .homepage-intro-icon-col {
+    margin: 32px 0;
   }
 }
 .homepage-case-study-pill {
