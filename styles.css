@@ -1267,7 +1267,7 @@ html.dark .homepage-case-study-placeholder {
   text-decoration: none;
 }
 .homepage-case-study-desc {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   color: var(--muted-soft);
@@ -1314,7 +1314,7 @@ html.dark .homepage-case-study-placeholder {
   display: none;
 }
 .homepage-case-study--featured .homepage-case-study-cta {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .homepage-about {
