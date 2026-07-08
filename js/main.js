@@ -52,15 +52,11 @@
     }
   }
 
-  // Reveals everything below the hero together: case studies, the about section (divider,
-  // intro, baby picture + second body of text, and the "Currently" block), and the footer.
+  // Reveals everything below the hero together: the work section label, about block,
+  // and footer. Case studies reveal on scroll (see homepage case study observer).
   function revealBelowHero() {
     var workRow = document.querySelector('.homepage-section-row--work');
     if (workRow) workRow.classList.add('homepage-section-row-in');
-    var caseStudies = document.querySelectorAll('.homepage-case-study');
-    for (var i = 0; i < caseStudies.length; i++) {
-      caseStudies[i].classList.add('homepage-case-study-in-view');
-    }
     var aboutSection = document.querySelector('.homepage-about');
     if (aboutSection) aboutSection.classList.add('homepage-about-divider-in');
     var aboutHero = document.querySelector('.about-hero-content');
@@ -95,6 +91,9 @@
       if (siteName) siteName.classList.add('site-name-in');
       if (siteMeta) siteMeta.classList.add('site-meta-in');
       revealBelowHero();
+      if (typeof window._revealHomepageCaseStudies === 'function') {
+        window._revealHomepageCaseStudies();
+      }
     };
     return;
   }
@@ -112,6 +111,52 @@
     revealBelowHero();
     unlockHomepageEntranceScroll();
   }, 1350);
+})();
+
+(function() {
+  // Homepage case studies: title + media animate together as one block on scroll.
+  var homepageLayout = document.querySelector('.homepage-layout');
+  if (!homepageLayout) return;
+
+  var caseStudies = document.querySelectorAll('.homepage-case-study');
+  if (!caseStudies.length) return;
+
+  function revealHomepageCaseStudy(section) {
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        section.classList.add('homepage-case-study-in-view');
+      });
+    });
+  }
+
+  function revealAllHomepageCaseStudies() {
+    for (var i = 0; i < caseStudies.length; i++) {
+      revealHomepageCaseStudy(caseStudies[i]);
+    }
+  }
+
+  window._revealHomepageCaseStudies = revealAllHomepageCaseStudies;
+
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !('IntersectionObserver' in window)) {
+    revealAllHomepageCaseStudies();
+    return;
+  }
+
+  var observer = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) return;
+        revealHomepageCaseStudy(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: '0px 0px 20px 0px', threshold: 0 }
+  );
+
+  for (var j = 0; j < caseStudies.length; j++) {
+    observer.observe(caseStudies[j]);
+  }
 })();
 
 (function() {
