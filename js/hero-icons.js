@@ -1,11 +1,6 @@
 /**
  * Homepage hero icon pattern: settings, smile, and confetti morph-cycle
  * through three slots. Vector separators stay static.
- *
- * Each cycle (staggered):
- *   1. smile transplaces settings
- *   2. settings transplaces confetti
- *   3. confetti transplaces smile
  */
 (function() {
   var pattern = document.querySelector('.homepage-hero-icon-pattern');
@@ -17,7 +12,6 @@
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced) return;
 
-  var STAGGER_MS = 140;
   var CYCLE_MS = 2400;
   var step = 0;
   var timer = null;
@@ -39,13 +33,8 @@
   }
 
   function applyStep(cycleStep) {
-    var order = [0, 2, 1];
-    for (var i = 0; i < order.length; i++) {
-      (function(slotIndex, delay) {
-        setTimeout(function() {
-          setSlotIcon(slots[slotIndex], iconForSlot(slotIndex, cycleStep));
-        }, delay);
-      })(order[i], i * STAGGER_MS);
+    for (var i = 0; i < slots.length; i++) {
+      setSlotIcon(slots[i], iconForSlot(i, cycleStep));
     }
   }
 
