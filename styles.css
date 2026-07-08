@@ -235,7 +235,7 @@ a:hover { text-decoration: underline; }
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--page-gutter);
-  min-height: 70px;
+  min-height: 60px;
 
   display: grid;
   grid-template-columns: 1fr auto;
@@ -968,7 +968,7 @@ html.dark .theme-toggle:hover .icon-sun {
 
 .homepage-content {
   min-width: 0;
-  padding-top: 82px;
+  padding-top: 72px;
   padding-bottom: 80px;
 }
 #footer-placeholder {
@@ -980,7 +980,7 @@ html.dark .theme-toggle:hover .icon-sun {
     padding-top: 0;
   }
   .homepage-section-row--intro {
-    margin-top: 82px;
+    margin-top: 72px;
   }
 }
 
