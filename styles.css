@@ -61,12 +61,12 @@ html {
   --header-border: rgba(17, 24, 39, 0.08);
   --header-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
 
-  --media-radius: 8px;
+  --media-radius: 0;
   --page-gutter: 80px;
 }
 @media (max-width: 900px) {
   :root {
-    --media-radius: 8px;
+    --media-radius: 0;
     --page-gutter: 20px;
   }
 }
@@ -670,7 +670,7 @@ html.dark .site-nav-dropdown .nav-coming-soon {
   width: auto;
   height: auto;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
 }
 .lightbox-video {
@@ -679,7 +679,7 @@ html.dark .site-nav-dropdown .nav-coming-soon {
   max-height: 85vh;
   width: auto;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
 }
 .lightbox-video.is-visible {
@@ -969,7 +969,7 @@ html.dark .theme-toggle:hover .icon-sun {
 .homepage-content {
   min-width: 0;
   padding-top: 72px;
-  padding-bottom: 80px;
+  padding-bottom: 0;
 }
 #footer-placeholder {
   display: contents;
@@ -1947,7 +1947,7 @@ html.dark .blog-index-thumb-placeholder::before {
   margin-top: 200px;
   margin-bottom: 0;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
 }
 .case-study-details + .case-study-image-wrap {
@@ -2058,7 +2058,7 @@ html.dark .case-study-image-wrap--tint {
 }
 
 .case-study-figure-caption.case-study-video-wrap .case-study-video-inner {
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   border: 1px solid var(--border);
   background: #0f0f0f;
@@ -2269,14 +2269,14 @@ html.dark .case-study-image-wrap--tint {
   transform: translateX(0);
 }
 .case-study-two-col-image.case-study-image-wrap {
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   border: 1px solid var(--border);
 }
 .case-study-two-col-image .case-study-image-wrap {
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   border: 1px solid var(--border);
   opacity: 1;
@@ -3329,8 +3329,9 @@ html.dark .hi-panel-media-wrap--placeholder {
 
 /* Footer (injected partial) */
 .site-footer {
-  margin-top: 180px;
+  margin-top: 48px;
   padding-top: 24px;
+  padding-bottom: 48px;
   font-size: 14px;
   color: var(--muted-soft);
   transition: margin-top var(--transition-duration) var(--transition-easing), padding-top var(--transition-duration) var(--transition-easing), border-color var(--transition-duration) var(--transition-easing);
@@ -3394,7 +3395,6 @@ html.dark .site-footer-social .footer-icon img {
 .wrap:has(.blog-index) .site-footer,
 .wrap:has(.blog-post) .site-footer,
 .wrap:has(.about-hero) .site-footer {
-  padding-bottom: 80px;
   isolation: isolate;
   overflow: hidden;
 }
@@ -3680,7 +3680,6 @@ html.dark .site-footer-social .footer-icon img {
 }
 .wrap:has(.case-study) .site-footer {
   border-top: 1px solid var(--border);
-  margin-top: 80px;
 }
 .wrap:has(.homepage-layout) .site-footer {
   border-top: 1px solid var(--border);
