@@ -200,9 +200,10 @@
 (function() {
   // About page: hero photo + intro fade up on load; work and press sections fade up on scroll.
   var aboutHeroPhoto = document.querySelector('.about-page-hero-photo');
+  var aboutHeadline = document.querySelector('.about-page-headline-wrap');
   var aboutIntro = document.querySelector('.about-page-section-row--intro');
   var aboutScrollSections = document.querySelectorAll('.about-page-section-row--work, .about-page-section-row--press');
-  if (!aboutHeroPhoto && !aboutIntro && !aboutScrollSections.length) return;
+  if (!aboutHeroPhoto && !aboutHeadline && !aboutIntro && !aboutScrollSections.length) return;
 
   var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -212,15 +213,17 @@
 
   if (reducedMotion) {
     revealAboutSection(aboutHeroPhoto);
+    revealAboutSection(aboutHeadline);
     revealAboutSection(aboutIntro);
     aboutScrollSections.forEach(revealAboutSection);
     return;
   }
 
-  if (aboutHeroPhoto || aboutIntro) {
+  if (aboutHeroPhoto || aboutHeadline || aboutIntro) {
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
         revealAboutSection(aboutHeroPhoto);
+        revealAboutSection(aboutHeadline);
         revealAboutSection(aboutIntro);
       });
     });
