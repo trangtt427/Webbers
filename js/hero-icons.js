@@ -12,7 +12,7 @@
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced) return;
 
-  var CYCLE_MS = 2400;
+  var CYCLE_MS = 1800;
   var step = 0;
   var timer = null;
 
