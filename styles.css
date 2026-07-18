@@ -940,10 +940,12 @@ html.dark .theme-toggle:hover .icon-sun {
   .homepage-section-row,
   .homepage-intro,
   .homepage-case-study-inner,
-  .homepage-case-study.homepage-case-study-in-view .homepage-case-study-inner {
+  .homepage-case-study.homepage-case-study-in-view .homepage-case-study-inner,
+  .homepage-case-study-visual,
+  .homepage-case-study.homepage-case-study-in-view .homepage-case-study-visual {
     opacity: 1;
     transform: none;
-    transition: none;
+    animation: none;
   }
   .homepage-section-row {
     border-top-color: var(--border);
@@ -1019,7 +1021,7 @@ html.dark .theme-toggle:hover .icon-sun {
   margin: 0;
 }
 .homepage-intro h1 {
-  font-size: 40px;
+  font-size: 48px;
   line-height: 1;
 }
 .homepage-intro .homepage-intro-lead {
@@ -1062,12 +1064,13 @@ html.dark .theme-toggle:hover .icon-sun {
   gap: 28px;
   min-width: 0;
   opacity: 0;
-  transform: translateX(-48px);
-  transition: opacity 0.9s ease-out, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .homepage-case-study.homepage-case-study-in-view .homepage-case-study-inner {
-  opacity: 1;
-  transform: translateX(0);
+  animation: homepage-case-study-fade-in 0.9s ease-out forwards;
+}
+@keyframes homepage-case-study-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 .homepage-case-study-num {
   justify-self: end;
@@ -1247,6 +1250,22 @@ html.dark .homepage-hero-icon {
 }
 .homepage-case-study-visual {
   min-width: 0;
+  opacity: 0;
+  transform: scale(0.4);
+  transform-origin: center center;
+}
+.homepage-case-study.homepage-case-study-in-view .homepage-case-study-visual {
+  animation: homepage-case-study-scale-in 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes homepage-case-study-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .homepage-case-study-visual-link {
   display: block;
@@ -1485,7 +1504,7 @@ html.dark .homepage-case-study-placeholder {
     font-size: 16px;
   }
   .homepage-intro h1 {
-    font-size: 32px;
+    font-size: 40px;
   }
   .homepage-intro .homepage-intro-lead {
     font-size: 20px;
