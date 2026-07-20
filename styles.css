@@ -172,24 +172,24 @@ a:hover { text-decoration: underline; }
   background-color: var(--bg);
   transition: background-color var(--transition-duration) var(--transition-easing);
 }
-.case-study--acuity-class-scheduling .case-study-intro,
-.case-study--acuity-class-scheduling .case-study-body,
-.case-study--acuity-class-scheduling .case-study-figure-caption,
-.case-study--acuity-class-scheduling .case-study-image-duo {
+.case-study--stacked-labels .case-study-intro,
+.case-study--stacked-labels .case-study-body,
+.case-study--stacked-labels .case-study-figure-caption,
+.case-study--stacked-labels .case-study-image-duo {
   padding-left: 0;
 }
-.case-study--acuity-class-scheduling .case-study-body:has(> .case-study-detail-label) {
+.case-study--stacked-labels .case-study-body:has(> .case-study-detail-label) {
   grid-template-columns: 1fr;
   column-gap: 0;
   row-gap: 24px;
 }
-.case-study--acuity-class-scheduling .case-study-body > .case-study-detail-label {
+.case-study--stacked-labels .case-study-body > .case-study-detail-label {
   grid-column: 1;
   grid-row: auto;
   padding-top: 6px;
   font-size: 14px;
 }
-.case-study--acuity-class-scheduling .case-study-body:has(> .case-study-detail-label) > *:not(.case-study-detail-label) {
+.case-study--stacked-labels .case-study-body:has(> .case-study-detail-label) > *:not(.case-study-detail-label) {
   grid-column: 1;
 }
 @media (min-width: 901px) {
