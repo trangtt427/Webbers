@@ -1121,11 +1121,11 @@ html.dark .theme-toggle:hover .icon-sun {
   border-top: none;
   grid-template-columns: 1fr;
   column-gap: 0;
-  transform: translateX(-48px);
+  transform: translateY(32px);
   transition: opacity 0.9s ease-out, transform 0.9s ease-out, border-color var(--transition-duration) var(--transition-easing);
 }
 .homepage-section-row--intro.homepage-section-row-in {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 .homepage-section-row--intro > .homepage-intro {
   grid-column: 1;
