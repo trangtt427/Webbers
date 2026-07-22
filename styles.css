@@ -2282,6 +2282,17 @@ html.dark .case-study-image-wrap--tint {
 }
 .case-study--human-interest .case-study-name {
   margin-bottom: 36px;
+  padding-top: 0;
+}
+.case-study--human-interest .case-study-intro {
+  padding-top: 120px;
+}
+.case-study--human-interest .case-study-intro-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--muted-soft);
+  margin-bottom: 24px;
 }
 @media (max-width: 900px) {
   .case-study--human-interest .case-study-name {
