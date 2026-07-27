@@ -1047,8 +1047,8 @@ html.dark .theme-toggle:hover .icon-sun {
   margin: 0;
 }
 .homepage-intro h1 {
-  font-size: 40px;
-  line-height: 1;
+  font-size: 32px;
+  line-height: 1.3;
 }
 .homepage-intro .homepage-intro-lead {
   font-size: 20px;
@@ -1566,9 +1566,6 @@ html.dark .homepage-case-study-placeholder {
   }
   .homepage-case-study--featured .homepage-case-study-cta {
     font-size: 16px;
-  }
-  .homepage-intro h1 {
-    font-size: 40px;
   }
   .homepage-intro .homepage-intro-lead {
     font-size: 20px;
@@ -3162,7 +3159,7 @@ html.home-intro-active.home-intro-progress-in .home-intro-progress {
 }
 @media (max-width: 900px) {
   .home-intro-wordmark {
-    font-size: clamp(40px, 14vw, 60px);
+    font-size: clamp(28px, 6vw, 48px);
   }
 }
 .home-intro-letter {
@@ -3948,8 +3945,10 @@ html.dark .site-footer-social .footer-icon img {
   }
 }
 @media (max-width: 900px) {
-  .about-page-headline {
+  .about-page-headline,
+  .homepage-layout:not(.homepage-layout--work) .homepage-intro h1 {
     font-size: 24px;
+    line-height: 1.3;
   }
   .about-page-body {
     font-size: 17px;
