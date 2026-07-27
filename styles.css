@@ -299,7 +299,7 @@ a:hover { text-decoration: underline; }
 }
 @media (max-width: 900px) {
   .site-name-wordmark {
-    font-size: calc(10.4px * 1.8);
+    font-size: calc(10.4px * 2.25);
   }
 }
 .site-name-wordmark-text {
@@ -3129,9 +3129,14 @@ html.home-intro-active.home-intro-exit .home-intro {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   pointer-events: none;
   opacity: 0;
+}
+@media (max-width: 900px) {
+  .home-intro-progress {
+    height: 6px;
+  }
 }
 html.home-intro-active.home-intro-progress-in .home-intro-progress {
   opacity: 1;
