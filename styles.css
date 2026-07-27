@@ -3129,7 +3129,7 @@ html.home-intro-active.home-intro-progress-in .home-intro-progress {
   display: block;
   height: 100%;
   width: 100%;
-  background: #fff;
+  background: #e446a8;
   transform: scaleX(0);
   transform-origin: left center;
   will-change: transform;
@@ -3143,6 +3143,11 @@ html.home-intro-active.home-intro-progress-in .home-intro-progress {
   line-height: 1;
   letter-spacing: -0.03em;
   color: var(--text);
+}
+@media (max-width: 900px) {
+  .home-intro-wordmark {
+    font-size: clamp(40px, 14vw, 60px);
+  }
 }
 .home-intro-letter {
   display: inline-block;
@@ -3713,6 +3718,11 @@ html.dark .site-footer-social .footer-icon img {
 .homepage-layout .about-page-section-row--now + .about-page-section-row--previous {
   margin-top: 0;
   padding-top: 16px;
+}
+.homepage-layout .about-page-section-row--previous {
+  opacity: 1;
+  transform: none;
+  transition: border-color var(--transition-duration) var(--transition-easing);
 }
 .about-page-section-label-col {
   padding-top: 6px;

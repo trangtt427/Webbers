@@ -664,7 +664,6 @@
         link.href = a.getAttribute('href');
         link.textContent = a.textContent;
         if (a.classList.contains('nav-active')) link.classList.add('nav-active');
-        link.addEventListener('click', closeMenu);
         linksWrap.appendChild(link);
       });
       overlay.appendChild(linksWrap);
@@ -688,9 +687,7 @@
     link.addEventListener('click', function() { closeMenu(); });
   });
 
-  // Leaving via a mobile overlay link (or back/forward) can restore the page
-  // from bfcache with the menu still open — always reset on hide and restore.
-  window.addEventListener('pagehide', closeMenu);
+  // Back/forward cache can restore a page with the menu still open.
   window.addEventListener('pageshow', function(e) {
     if (e.persisted) closeMenu();
   });
