@@ -628,13 +628,20 @@
 
   var overlay = null;
 
-  function closeMenu() {
+  function closeMenu(instant) {
+    if (instant) document.documentElement.classList.add('mobile-menu-instant');
     btn.setAttribute('aria-expanded', 'false');
     dropdown.classList.remove('is-open');
     document.body.classList.remove('mobile-menu-open');
-    if (overlay && overlay.parentNode) {
-      overlay.parentNode.removeChild(overlay);
-      overlay = null;
+    var menuOverlay = overlay || document.getElementById('mobile-menu-overlay');
+    if (menuOverlay && menuOverlay.parentNode) {
+      menuOverlay.parentNode.removeChild(menuOverlay);
+    }
+    overlay = null;
+    if (instant) {
+      requestAnimationFrame(function() {
+        document.documentElement.classList.remove('mobile-menu-instant');
+      });
     }
   }
 
@@ -687,9 +694,9 @@
     link.addEventListener('click', function() { closeMenu(); });
   });
 
-  // Back/forward cache can restore a page with the menu still open.
+  // Back/forward cache restores the page with the menu still open — reset instantly.
   window.addEventListener('pageshow', function(e) {
-    if (e.persisted) closeMenu();
+    if (e.persisted) closeMenu(true);
   });
 
   document.addEventListener('click', function(e) {

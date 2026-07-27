@@ -443,6 +443,17 @@ html.dark .site-nav-dropdown .nav-coming-soon {
 .hamburger-btn[aria-expanded="true"] .line:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+html.mobile-menu-instant .hamburger-btn .line {
+  transition: none !important;
+}
+html.mobile-menu-instant .mobile-menu-overlay {
+  transition: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+html.mobile-menu-instant .mobile-menu-overlay .mobile-menu-links a {
+  animation: none !important;
+}
 
 .site-nav-dropdown {
   display: none;
