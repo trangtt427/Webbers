@@ -1,10 +1,10 @@
 /**
- * Homepage case study panel overlays.
+ * Work page case study panel overlays.
  * Intercepts clicks on case study links and opens full-screen panels that slide
  * up from the bottom instead of navigating away.
- * Only active when matching panel elements exist (homepage only).
+ * Only active when matching panel elements exist (work page).
  *
- * URL strategy: hash routes (#/tactic, #/baby-design) on the homepage path.
+ * URL strategy: hash routes (#/tactic, #/baby-design) on the work page path.
  * Human Interest panel is dormant — featured HI links to human-interest.html.
  * The hash is never sent to the server, so refreshing reloads index.html and
  * the panel auto-reopens with a fade — no redirect, no blank screen.

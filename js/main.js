@@ -23,26 +23,10 @@
   var homepageLayout = document.querySelector('.homepage-layout');
   var hero = document.querySelector('.hero');
   var homepageIntro = document.querySelector('.homepage-intro');
-
-  // Stage 1: hero in immediately (all pages with a hero/intro).
-  // Skip during panel restore — homepage elements must stay invisible until
-  // the panel finishes its fade-in (see _revealHomepage below).
-  if (hero || homepageIntro) {
-    requestAnimationFrame(function() {
-      requestAnimationFrame(function() {
-        if (document.documentElement.classList.contains('hi-panel-restoring')) return;
-        if (hero) hero.classList.add('hero-in');
-        var introRow = document.querySelector('.homepage-section-row--intro');
-        if (introRow) introRow.classList.add('homepage-section-row-in');
-      });
-    });
-  }
-
-  if (!homepageLayout) return; // header/TOC staging is homepage-only
-
   var siteName = document.querySelector('.site-header .site-name');
   var siteMeta = document.querySelector('.site-header .site-meta');
   var toc = document.querySelector('.homepage-toc');
+  var isWorkPage = homepageLayout && homepageLayout.classList.contains('homepage-layout--work');
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function unlockHomepageEntranceScroll() {
@@ -52,11 +36,12 @@
     }
   }
 
-  // Reveals everything below the hero together: the work section label, about block,
-  // and footer. Case studies reveal on scroll (see homepage case study observer).
-  function revealBelowHero() {
+  // Reveals everything below the hero together: the work section label and footer.
+  // Case studies reveal on scroll (see homepage case study observer).
+  function revealBelowHero(options) {
+    var skipWorkRow = options && options.skipWorkRow;
     var workRow = document.querySelector('.homepage-section-row--work');
-    if (workRow) workRow.classList.add('homepage-section-row-in');
+    if (workRow && !skipWorkRow) workRow.classList.add('homepage-section-row-in');
     var aboutSection = document.querySelector('.homepage-about');
     if (aboutSection) aboutSection.classList.add('homepage-about-divider-in');
     var aboutHero = document.querySelector('.about-hero-content');
@@ -71,46 +56,90 @@
     if (footer) footer.classList.add('site-footer-in');
   }
 
-  if (reduced) {
-    if (siteName) siteName.classList.add('site-name-in');
-    if (siteMeta) siteMeta.classList.add('site-meta-in');
-    if (toc) toc.classList.add('homepage-toc-in');
-    revealBelowHero();
-    unlockHomepageEntranceScroll();
-    return;
-  }
+  function startEntrance(options) {
+    // The index intro already showed the wordmark full-screen, so the header is
+    // composed up front instead of animating in as staged follow-ups.
+    var immediate = options && options.immediate;
 
-  // Panel restore: expose a function that hi-panel.js calls once the panel
-  // finishes its fade-in. All classes are applied while hi-panel-restoring is
-  // still on <html> (transition: none), so everything snaps instantly with no
-  // visible flash. The homepage is then ready for when the user closes the panel.
-  if (document.documentElement.classList.contains('hi-panel-restoring')) {
-    window._revealHomepage = function() {
-      var introRow = document.querySelector('.homepage-section-row--intro');
-      if (introRow) introRow.classList.add('homepage-section-row-in');
+    // Stage 1: hero in immediately (all pages with a hero/intro).
+    // Skip during panel restore — homepage elements must stay invisible until
+    // the panel finishes its fade-in (see _revealHomepage below).
+    // Skip when the index intro already revealed the hero (see home-intro.js).
+    if ((hero || homepageIntro) && !(options && options.skipIntroReveal)) {
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          if (document.documentElement.classList.contains('hi-panel-restoring')) return;
+          if (hero) hero.classList.add('hero-in');
+          var introRow = document.querySelector('.homepage-section-row--intro');
+          if (introRow) introRow.classList.add('homepage-section-row-in');
+        });
+      });
+    }
+
+    if (!homepageLayout) return; // header/TOC staging is homepage-only
+
+    if (reduced || immediate) {
       if (siteName) siteName.classList.add('site-name-in');
       if (siteMeta) siteMeta.classList.add('site-meta-in');
-      revealBelowHero();
-      if (typeof window._revealHomepageCaseStudies === 'function') {
-        window._revealHomepageCaseStudies();
+      if (toc) toc.classList.add('homepage-toc-in');
+      revealBelowHero({ skipWorkRow: isWorkPage });
+      if (!(options && options.skipUnlock)) {
+        unlockHomepageEntranceScroll();
       }
+      return;
+    }
+
+    // Panel restore: expose a function that hi-panel.js calls once the panel
+    // finishes its fade-in. All classes are applied while hi-panel-restoring is
+    // still on <html> (transition: none), so everything snaps instantly with no
+    // visible flash. The homepage is then ready for when the user closes the panel.
+    if (document.documentElement.classList.contains('hi-panel-restoring')) {
+      window._revealHomepage = function() {
+        var introRow = document.querySelector('.homepage-section-row--intro');
+        if (introRow) introRow.classList.add('homepage-section-row-in');
+        if (siteName) siteName.classList.add('site-name-in');
+        if (siteMeta) siteMeta.classList.add('site-meta-in');
+        revealBelowHero();
+        if (typeof window._revealHomepageCaseStudies === 'function') {
+          window._revealHomepageCaseStudies();
+        }
+      };
+      return;
+    }
+
+    if (isWorkPage) {
+      if (siteName) siteName.classList.add('site-name-in');
+      if (siteMeta) siteMeta.classList.add('site-meta-in');
+      revealBelowHero({ skipWorkRow: true });
+      unlockHomepageEntranceScroll();
+      return;
+    }
+
+    // Stage 2: wordmark after hero
+    setTimeout(function() {
+      if (siteName) siteName.classList.add('site-name-in');
+    }, 1000);
+
+    // Stage 3: nav links + theme switcher + TOC + everything below the hero
+    // Fires at 1350ms — halfway through the logo's 0.7s transition (1000ms + 350ms)
+    setTimeout(function() {
+      if (siteMeta) siteMeta.classList.add('site-meta-in');
+      if (toc) toc.classList.add('homepage-toc-in');
+      revealBelowHero();
+      unlockHomepageEntranceScroll();
+    }, 1350);
+  }
+
+  // On the index intro, js/home-intro.js calls this as the panel slides away.
+  if (document.documentElement.classList.contains('home-intro-active')) {
+    window._startHomepageEntrance = function() {
+      startEntrance({ immediate: true, skipUnlock: true, skipIntroReveal: true });
     };
+    window._unlockHomepageEntranceScroll = unlockHomepageEntranceScroll;
     return;
   }
 
-  // Stage 2: wordmark after hero
-  setTimeout(function() {
-    if (siteName) siteName.classList.add('site-name-in');
-  }, 1000);
-
-  // Stage 3: nav links + theme switcher + TOC + everything below the hero
-  // Fires at 1350ms — halfway through the logo's 0.7s transition (1000ms + 350ms)
-  setTimeout(function() {
-    if (siteMeta) siteMeta.classList.add('site-meta-in');
-    if (toc) toc.classList.add('homepage-toc-in');
-    revealBelowHero();
-    unlockHomepageEntranceScroll();
-  }, 1350);
+  startEntrance();
 })();
 
 (function() {
@@ -202,7 +231,7 @@
   var aboutHeroPhoto = document.querySelector('.about-page-hero-photo');
   var aboutHeadline = document.querySelector('.about-page-headline-wrap');
   var aboutIntro = document.querySelector('.about-page-section-row--intro');
-  var aboutScrollSections = document.querySelectorAll('.about-page-section-row--work, .about-page-section-row--press');
+  var aboutScrollSections = document.querySelectorAll('.about-page-section-row--work, .about-page-section-row--press, .about-page-section-row--now, .about-page-section-row--previous');
   if (!aboutHeroPhoto && !aboutHeadline && !aboutIntro && !aboutScrollSections.length) return;
 
   var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -250,6 +279,40 @@
   aboutScrollSections.forEach(function(section) {
     workObserver.observe(section);
   });
+})();
+
+(function() {
+  // Work page: Selected Work section fades in from the left on scroll (like About intro rows).
+  var workPageRow = document.querySelector('.homepage-layout--work .homepage-section-row--work');
+  if (!workPageRow) return;
+
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function revealWorkPageRow() {
+    workPageRow.classList.add('homepage-section-row-in');
+  }
+
+  if (reducedMotion) {
+    revealWorkPageRow();
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    revealWorkPageRow();
+    return;
+  }
+
+  var observer = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          setTimeout(revealWorkPageRow, 100);
+        }
+      });
+    },
+    { rootMargin: '0px 0px 20px 0px', threshold: 0 }
+  );
+  observer.observe(workPageRow);
 })();
 
 (function() {
@@ -601,6 +664,7 @@
         link.href = a.getAttribute('href');
         link.textContent = a.textContent;
         if (a.classList.contains('nav-active')) link.classList.add('nav-active');
+        link.addEventListener('click', closeMenu);
         linksWrap.appendChild(link);
       });
       overlay.appendChild(linksWrap);
@@ -622,6 +686,13 @@
 
   dropdown.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() { closeMenu(); });
+  });
+
+  // Leaving via a mobile overlay link (or back/forward) can restore the page
+  // from bfcache with the menu still open — always reset on hide and restore.
+  window.addEventListener('pagehide', closeMenu);
+  window.addEventListener('pageshow', function(e) {
+    if (e.persisted) closeMenu();
   });
 
   document.addEventListener('click', function(e) {
