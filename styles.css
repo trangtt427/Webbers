@@ -1231,13 +1231,10 @@ html.dark .homepage-hero-icon {
   transform: translateX(0);
 }
 .homepage-layout--work .homepage-section-row--work {
-  transform: translateX(-48px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out, border-color var(--transition-duration) var(--transition-easing);
   border-top: none;
   padding-top: 0;
 }
 .homepage-layout--work .homepage-section-row--work.homepage-section-row-in {
-  transform: translateX(0);
   border-top-color: transparent;
 }
 .homepage-layout--work .homepage-intro {

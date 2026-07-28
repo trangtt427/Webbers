@@ -282,7 +282,7 @@
 })();
 
 (function() {
-  // Work page: Selected Work section fades in from the left on scroll (like About intro rows).
+  // Work page: case studies section fades in on scroll.
   var workPageRow = document.querySelector('.homepage-layout--work .homepage-section-row--work');
   if (!workPageRow) return;
 
