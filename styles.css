@@ -3755,6 +3755,11 @@ html.dark .site-footer-social .footer-icon img {
   column-gap: 80px;
   transition: border-color var(--transition-duration) var(--transition-easing);
 }
+.about-hero .about-page-section-row--press {
+  opacity: 1;
+  transform: none;
+  transition: border-color var(--transition-duration) var(--transition-easing);
+}
 .about-page-section-label-col {
   padding-top: 6px;
 }
