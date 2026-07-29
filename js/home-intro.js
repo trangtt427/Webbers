@@ -12,7 +12,7 @@
   if (!overlay || !root.classList.contains('home-intro-active')) return;
 
   var BLANK_MS = 700; // solid blank screen before the first letter animates in
-  var WORDMARK_MS = 1120; // last letter + dot finish (~0.77s delay + 0.35s animation)
+  var WORDMARK_MS = 1500; // last letter + dot finish (~0.77s delay + 0.7s elastic)
   var BAR_BUDGET_MS = 550; // target duration for the loading bar after the logo
   var SLIDE_MS = 1000; // must match the transition on .home-intro
   var CONTENT_LEAD_MS = 250; // page starts composing while the panel is still moving
