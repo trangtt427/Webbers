@@ -3752,6 +3752,7 @@ html.dark .site-footer-social .footer-icon img {
 .homepage-layout .about-page-section-row--previous {
   opacity: 1;
   transform: none;
+  column-gap: 80px;
   transition: border-color var(--transition-duration) var(--transition-easing);
 }
 .about-page-section-label-col {
