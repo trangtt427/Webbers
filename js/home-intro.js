@@ -13,7 +13,7 @@
 
   var BLANK_MS = 700; // solid blank screen before the first letter animates in
   var WORDMARK_MS = 1120; // last letter + dot finish (~0.77s delay + 0.35s animation)
-  var BAR_BUDGET_MS = 1000; // target duration for the loading bar after the logo
+  var BAR_BUDGET_MS = 550; // target duration for the loading bar after the logo
   var SLIDE_MS = 1000; // must match the transition on .home-intro
   var CONTENT_LEAD_MS = 250; // page starts composing while the panel is still moving
 
@@ -92,7 +92,7 @@
   }
 
   function buildPausePlan(chunkCount) {
-    var pauseCount = Math.random() < 0.5 ? 1 : 2;
+    var pauseCount = Math.random() < 0.65 ? 1 : 2;
     var slots = [];
     var candidates = [];
     for (var i = 0; i < chunkCount - 1; i++) candidates.push(i);
@@ -111,8 +111,8 @@
 
   function pauseDuration(plan, chunkIndex) {
     return chunkIndex === plan.longSlot
-      ? randomBetween(520, 850)
-      : randomBetween(180, 450);
+      ? randomBetween(320, 520)
+      : randomBetween(100, 260);
   }
 
   function runBufferedProgress(bar, onComplete) {
