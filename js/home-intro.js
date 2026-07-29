@@ -19,7 +19,9 @@
 
   var progressRaf = 0;
 
-  function revealHero() {
+  function revealContent() {
+    var block = document.querySelector('.homepage-entrance-content');
+    if (block) block.classList.add('homepage-entrance-content-in');
     var introRow = document.querySelector('.homepage-section-row--intro');
     if (introRow) introRow.classList.add('homepage-section-row-in');
   }
@@ -32,7 +34,7 @@
   }
 
   function slideUp() {
-    revealHero();
+    revealContent();
     root.classList.add('home-intro-exit');
     setTimeout(startPage, CONTENT_LEAD_MS);
     setTimeout(teardown, SLIDE_MS);
@@ -160,7 +162,7 @@
 
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced) {
-    revealHero();
+    revealContent();
     teardown();
     startPage();
     return;

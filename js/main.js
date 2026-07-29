@@ -277,6 +277,7 @@
     { rootMargin: '0px 0px 20px 0px', threshold: 0 }
   );
   aboutScrollSections.forEach(function(section) {
+    if (section.closest('.homepage-layout') && section.classList.contains('about-page-section-row--previous')) return;
     workObserver.observe(section);
   });
 })();

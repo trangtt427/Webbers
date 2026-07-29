@@ -1153,11 +1153,19 @@ html.dark .theme-toggle:hover .icon-sun {
 .homepage-section-row--intro.homepage-section-row-in {
   transform: translateY(0);
 }
-/* Index intro: hero is static underneath when the overlay slides up */
-html.home-intro-active .homepage-section-row--intro.homepage-section-row-in {
-  opacity: 1;
-  transform: translateY(0);
+/* Index intro: hero + previous slide up together as the overlay exits */
+html.home-intro-active .homepage-entrance-content:not(.homepage-entrance-content-in) {
+  transform: translateY(24px);
   transition: none;
+}
+html.home-intro-active .homepage-entrance-content .homepage-section-row--intro {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+html.home-intro-exit .homepage-entrance-content.homepage-entrance-content-in {
+  transform: translateY(0);
+  transition: transform 1s cubic-bezier(0.76, 0, 0.24, 1);
 }
 .homepage-section-row--intro > .homepage-intro {
   grid-column: 1;
@@ -3216,6 +3224,9 @@ html.home-intro-active.home-intro-letters-in .home-intro-letter:nth-child(10) { 
 @media (prefers-reduced-motion: reduce) {
   html.home-intro-active .home-intro {
     display: none;
+  }
+  html.home-intro-exit .homepage-entrance-content.homepage-entrance-content-in {
+    transition: none;
   }
 }
 
