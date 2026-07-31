@@ -832,7 +832,11 @@ html.dark .theme-switcher-trigger .theme-switcher-preview {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 html.blue .theme-switcher-trigger .theme-switcher-preview {
-  background: linear-gradient(90deg, #0a0a18 50%, #506d8b 50%);
+  background: linear-gradient(90deg, #0a0a18 50%, #73B0E5 50%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+html.dark .theme-switcher-menu .theme-switcher-preview,
+html.blue .theme-switcher-menu .theme-switcher-preview {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 .theme-switcher-preview--light {
@@ -842,7 +846,7 @@ html.blue .theme-switcher-trigger .theme-switcher-preview {
   background: linear-gradient(90deg, #06070c 50%, #7b8a9a 50%);
 }
 .theme-switcher-preview--blue {
-  background: linear-gradient(90deg, #0a0a18 50%, #506d8b 50%);
+  background: linear-gradient(90deg, #0a0a18 50%, #73B0E5 50%);
 }
 .theme-switcher-caret {
   width: 12px;
