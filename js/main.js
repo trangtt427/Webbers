@@ -614,6 +614,13 @@
 
   var MENU_ANIM_MS = 220;
 
+  function blurSwitcherFocus(switcher) {
+    var active = document.activeElement;
+    if (active && switcher.contains(active) && typeof active.blur === 'function') {
+      active.blur();
+    }
+  }
+
   function closeMenu(switcher) {
     var menu = switcher.querySelector('.theme-switcher-menu');
     var trigger = switcher.querySelector('.theme-switcher-trigger');
@@ -621,6 +628,7 @@
 
     menu.classList.remove('is-open');
     trigger.setAttribute('aria-expanded', 'false');
+    blurSwitcherFocus(switcher);
 
     var finishHide = function() {
       if (!menu.classList.contains('is-open')) menu.hidden = true;
@@ -704,6 +712,7 @@
           window.localStorage && localStorage.setItem('theme', theme);
         } catch (err) {}
         setMenuOpen(switcher, false);
+        blurSwitcherFocus(switcher);
       });
     });
   });

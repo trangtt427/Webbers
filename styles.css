@@ -807,6 +807,11 @@ html.mobile-menu-instant .mobile-menu-overlay .mobile-menu-links a {
   background: transparent;
   color: var(--text);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+.theme-switcher-trigger:focus {
+  outline: none;
 }
 .theme-switcher-trigger:focus-visible {
   outline: none;
@@ -895,13 +900,25 @@ html.blue .theme-switcher-trigger .theme-switcher-preview {
   line-height: 1.2;
   text-align: left;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
-.theme-switcher-option:hover {
-  background: rgba(127, 127, 127, 0.08);
+.theme-switcher-option:focus {
+  outline: none;
 }
-html.dark .theme-switcher-option:hover,
-html.blue .theme-switcher-option:hover {
-  background: rgba(255, 255, 255, 0.06);
+.theme-switcher-option:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.5);
+  outline-offset: 1px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .theme-switcher-option:hover {
+    background: rgba(127, 127, 127, 0.08);
+  }
+  html.dark .theme-switcher-option:hover,
+  html.blue .theme-switcher-option:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
 }
 .theme-switcher-option[aria-selected="true"] {
   background: rgba(127, 127, 127, 0.12);
