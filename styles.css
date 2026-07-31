@@ -858,7 +858,8 @@ html.blue .theme-switcher-trigger .theme-switcher-preview {
 .theme-switcher-menu {
   position: absolute;
   top: calc(100% + 8px);
-  right: 0;
+  left: 50%;
+  right: auto;
   min-width: 148px;
   padding: 6px;
   margin: 0;
@@ -868,7 +869,7 @@ html.blue .theme-switcher-trigger .theme-switcher-preview {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
   z-index: 70;
   opacity: 0;
-  transform: translateY(-8px);
+  transform: translate(-50%, -8px);
   visibility: hidden;
   pointer-events: none;
   transition:
@@ -878,7 +879,7 @@ html.blue .theme-switcher-trigger .theme-switcher-preview {
 }
 .theme-switcher-menu.is-open {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
   visibility: visible;
   pointer-events: auto;
 }
@@ -941,10 +942,10 @@ html.blue .theme-switcher-option[aria-selected="true"] {
   }
   .theme-switcher-menu {
     transition: none;
-    transform: none;
+    transform: translate(-50%, 0);
   }
   .theme-switcher-menu.is-open {
-    transform: none;
+    transform: translate(-50%, 0);
   }
 }
 
