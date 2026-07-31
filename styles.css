@@ -3500,7 +3500,7 @@ body.hi-panel-active .homepage-layout {
   font-size: 17px;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--muted-soft);
   margin: 0;
 }
 .hi-panel-details {
