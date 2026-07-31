@@ -13,8 +13,11 @@
       try { s = window.localStorage && localStorage.getItem('theme'); } catch (e) {}
       var el = document.documentElement;
       if (s === 'dark') el.classList.add('dark');
-      else if (s === 'light') el.classList.remove('dark');
-      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
+      else if (s === 'blue') el.classList.add('blue');
+      else if (s === 'light') {
+        el.classList.remove('dark');
+        el.classList.remove('blue');
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
     })();
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEHB3NES2Q"></script>
@@ -31,22 +34,28 @@
       <div class="site-header-inner">
         <div class="site-name"><a href="https://www.trangtran.design/" aria-label="Trang Tran"><span class="site-name-wordmark"><span class="site-name-wordmark-text">trangwreck</span><span class="site-name-wordmark-dot" aria-hidden="true"></span></span></a></div>
         <div class="site-meta">
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
-            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="3.5" />
-              <line x1="12" y1="3.2" x2="12" y2="5.0" />
-              <line x1="12" y1="19.0" x2="12" y2="20.8" />
-              <line x1="3.2" y1="12" x2="5.0" y2="12" />
-              <line x1="19.0" y1="12" x2="20.8" y2="12" />
-              <line x1="5.0" y1="5.0" x2="6.4" y2="6.4" />
-              <line x1="17.6" y1="17.6" x2="19.0" y2="19.0" />
-              <line x1="17.6" y1="6.4" x2="19.0" y2="5.0" />
-              <line x1="5.0" y1="19.0" x2="6.4" y2="17.6" />
-            </svg>
-          </button>
+          <div class="theme-switcher">
+            <button class="theme-switcher-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Choose theme">
+              <span class="theme-switcher-preview" aria-hidden="true"></span>
+              <svg class="theme-switcher-caret" viewBox="0 0 12 12" aria-hidden="true">
+                <path d="M2.5 4.5 6 8 9.5 4.5" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="theme-switcher-menu" role="listbox" aria-label="Theme" hidden>
+              <button type="button" class="theme-switcher-option" role="option" data-theme="light">
+                <span class="theme-switcher-preview theme-switcher-preview--light" aria-hidden="true"></span>
+                <span class="theme-switcher-option-label">Light</span>
+              </button>
+              <button type="button" class="theme-switcher-option" role="option" data-theme="dark">
+                <span class="theme-switcher-preview theme-switcher-preview--dark" aria-hidden="true"></span>
+                <span class="theme-switcher-option-label">Dark</span>
+              </button>
+              <button type="button" class="theme-switcher-option" role="option" data-theme="blue">
+                <span class="theme-switcher-preview theme-switcher-preview--blue" aria-hidden="true"></span>
+                <span class="theme-switcher-option-label">Blue</span>
+              </button>
+            </div>
+          </div>
           <nav class="site-nav">
             <a href="/">Home</a>
             <a href="/work">Work</a>
