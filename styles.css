@@ -2298,6 +2298,12 @@ html.blue .case-study-image-wrap--tint {
   margin: 0 0 1em;
 
 }
+.case-study:not(.blog-post):not(.blog-index) .case-study-headline,
+.case-study:not(.blog-post):not(.blog-index) .case-study-body p,
+.case-study:not(.blog-post):not(.blog-index) .case-study-section p,
+.case-study:not(.blog-post):not(.blog-index) .case-study-two-col-text p {
+  color: var(--muted-soft);
+}
 .case-study-body p + p {
   margin-top: 32px;
 }
