@@ -3166,8 +3166,13 @@ html.dark .case-study-image-wrap--tint {
 
 .case-study-back {
   margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
 }
-.case-study-back-link {
+.case-study-back-link,
+.case-study-next-link {
   display: inline-block;
   position: relative;
   padding-bottom: 0.2em;
@@ -3175,11 +3180,14 @@ html.dark .case-study-image-wrap--tint {
   line-height: 1.5;
   color: var(--text);
   text-decoration: none;
+  flex-shrink: 0;
 }
-.case-study-back-link:hover {
+.case-study-back-link:hover,
+.case-study-next-link:hover {
   text-decoration: none;
 }
-.case-study-back-link::after {
+.case-study-back-link::after,
+.case-study-next-link::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -3189,11 +3197,13 @@ html.dark .case-study-image-wrap--tint {
   background-color: currentColor;
   transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
 }
-.case-study-back-link:hover::after {
+.case-study-back-link:hover::after,
+.case-study-next-link:hover::after {
   width: 100%;
 }
 @media (max-width: 900px) {
-  .case-study-back-link {
+  .case-study-back-link,
+  .case-study-next-link {
     font-size: 17px;
   }
 }
@@ -3979,6 +3989,12 @@ html.dark .hi-panel-media-wrap--placeholder {
   margin: 0;
   font-size: 14px;
   color: var(--muted-soft);
+}
+.site-footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
 }
 .site-footer-social {
   display: flex;
