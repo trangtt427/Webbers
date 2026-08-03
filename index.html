@@ -9,13 +9,25 @@
   <link rel="stylesheet" href="styles.css" />
   <script>
     (function() {
-      var s;
+      var s, introSeen, isHomepageReload;
       try { s = window.localStorage && localStorage.getItem('theme'); } catch (e) {}
+      try { introSeen = window.sessionStorage && sessionStorage.getItem('home-intro-seen'); } catch (e) {}
+      try {
+        var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+        isHomepageReload = nav && nav.type === 'reload';
+      } catch (e) {}
       var el = document.documentElement;
       if (s === 'dark' || s === 'blue') el.classList.add('dark');
-      else if (s === 'light') el.classList.remove('dark'); else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
-      el.classList.add('homepage-entrance-locked');
-      el.classList.add('home-intro-active');
+      else if (s === 'light') el.classList.remove('dark');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
+      if (isHomepageReload) {
+        try { window.sessionStorage && sessionStorage.removeItem('home-intro-seen'); } catch (e) {}
+        introSeen = null;
+      }
+      if (!introSeen) {
+        el.classList.add('homepage-entrance-locked');
+        el.classList.add('home-intro-active');
+      }
     })();
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEHB3NES2Q"></script>

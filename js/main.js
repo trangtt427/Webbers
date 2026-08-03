@@ -28,6 +28,10 @@
   var toc = document.querySelector('.homepage-toc');
   var isWorkPage = homepageLayout && homepageLayout.classList.contains('homepage-layout--work');
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var introSeen = false;
+  try {
+    introSeen = !!(window.sessionStorage && sessionStorage.getItem('home-intro-seen'));
+  } catch (e) {}
 
   function unlockHomepageEntranceScroll() {
     document.documentElement.classList.remove('homepage-entrance-locked');
@@ -136,6 +140,11 @@
       startEntrance({ immediate: true, skipUnlock: true, skipIntroReveal: true });
     };
     window._unlockHomepageEntranceScroll = unlockHomepageEntranceScroll;
+    return;
+  }
+
+  if (homepageLayout && introSeen) {
+    startEntrance({ immediate: true });
     return;
   }
 

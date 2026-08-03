@@ -40,7 +40,14 @@
     setTimeout(teardown, SLIDE_MS);
   }
 
+  function markIntroSeen() {
+    try {
+      window.sessionStorage && sessionStorage.setItem('home-intro-seen', '1');
+    } catch (e) {}
+  }
+
   function teardown() {
+    markIntroSeen();
     if (progressRaf) cancelAnimationFrame(progressRaf);
     root.classList.remove('home-intro-active', 'home-intro-exit', 'home-intro-letters-in', 'home-intro-progress-in');
     if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
