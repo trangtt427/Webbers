@@ -1322,7 +1322,7 @@ html.dark .homepage-hero-icon {
     display: grid;
     /* The rail track's floor is the 470px media minimum plus the rail's own
        32px left padding; the hero column gives up width before the media does. */
-    grid-template-columns: minmax(0, 320px) minmax(502px, 1fr) auto;
+    grid-template-columns: minmax(0, 420px) minmax(502px, 1fr) auto;
     /* Floor for both gaps. The rail adds its own left padding so the hero side
        always stays wider than the TOC side. Tapers below ~1500px so the hero
        column keeps some width once the rail stops shrinking. */
