@@ -12,7 +12,7 @@
   }
   // Start at the top on a plain homepage load, and also when restoring the
   // Case study panels (their hashes aren't scroll targets).
-  if (isHomepage && (!window.location.hash || window.location.hash === '#/tactic' || window.location.hash === '#/baby-design' || window.location.hash === '#/squarespace-qr-codes')) {
+  if (isHomepage && (!window.location.hash || window.location.hash === '#/tactic' || window.location.hash === '#/baby-design')) {
     window.scrollTo(0, 0);
   }
 })();
@@ -39,6 +39,12 @@
     if (!document.body.classList.contains('hi-scroll-locked')) {
       document.documentElement.style.removeProperty('--hi-sbw');
     }
+  }
+
+  function revealAfterPaint(fn) {
+    requestAnimationFrame(function() {
+      requestAnimationFrame(fn);
+    });
   }
 
   // Reveals everything below the hero together: the work section label and footer.
@@ -71,6 +77,26 @@
     // The index intro already showed the wordmark full-screen, so the header is
     // composed up front instead of animating in as staged follow-ups.
     var immediate = options && options.immediate;
+    var returnVisit = options && options.returnVisit;
+
+    // Return visit (in-site nav / back): skip the logo overlay but fade the
+    // hero, carousel, and TOC together like the first-load intro slide-up.
+    if (returnVisit) {
+      revealAfterPaint(function() {
+        if (hero) hero.classList.add('hero-in');
+        var introRow = document.querySelector('.homepage-section-row--intro');
+        if (introRow) introRow.classList.add('homepage-section-row-in');
+        if (siteName) siteName.classList.add('site-name-in');
+        if (siteMeta) siteMeta.classList.add('site-meta-in');
+        if (toc) toc.classList.add('homepage-toc-in');
+        if (mediaRail) mediaRail.classList.add('homepage-media-rail-in');
+        revealBelowHero({ skipWorkRow: isWorkPage });
+        if (!(options && options.skipUnlock)) {
+          unlockHomepageEntranceScroll();
+        }
+      });
+      return;
+    }
 
     // Stage 1: hero in immediately (all pages with a hero/intro).
     // Skip during panel restore — homepage elements must stay invisible until
@@ -152,7 +178,7 @@
   }
 
   if (homepageLayout && introSeen) {
-    startEntrance({ immediate: true });
+    startEntrance({ returnVisit: true });
     return;
   }
 
@@ -421,8 +447,8 @@
   var hasMediaRail = document.querySelector('.homepage-media-rail');
   var homepageLayout = document.querySelector('.homepage-layout:not(.homepage-layout--work)');
   var DESKTOP_MQ = window.matchMedia('(min-width: 1001px)');
-  var sectionIds = ['intro', 'human-interest', 'squarespace', 'squarespace-qr-codes', 'tactic', 'baby-design-ui'];
-  var caseStudyIds = ['human-interest', 'squarespace', 'squarespace-qr-codes', 'tactic', 'baby-design-ui'];
+  var sectionIds = ['intro', 'human-interest', 'squarespace', 'tactic', 'baby-design-ui'];
+  var caseStudyIds = ['human-interest', 'squarespace', 'tactic', 'baby-design-ui'];
   var sections = [];
   for (var i = 0; i < sectionIds.length; i++) {
     var el = document.getElementById(sectionIds[i]);

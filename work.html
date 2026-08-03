@@ -14,7 +14,7 @@
       var el = document.documentElement;
       if (s === 'dark' || s === 'blue') el.classList.add('dark');
       else if (s === 'light') el.classList.remove('dark'); else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) el.classList.add('dark');
-      if (window.location.hash === '#/tactic' || window.location.hash === '#/baby-design' || window.location.hash === '#/squarespace-qr-codes') {
+      if (window.location.hash === '#/tactic' || window.location.hash === '#/baby-design') {
         el.classList.add('hi-panel-restoring');
       }
     })();
@@ -129,29 +129,9 @@
               </div>
             </section>
 
-            <section id="squarespace-qr-codes" class="homepage-case-study">
-              <div class="homepage-case-study-inner">
-                <a href="#/squarespace-qr-codes" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(03)</a>
-                <div class="homepage-case-study-visual">
-                  <a href="#/squarespace-qr-codes" class="homepage-case-study-visual-link" aria-label="View Squarespace QR codes case study">
-                    <div class="project-video-wrap">
-                      <video autoplay loop muted playsinline preload="auto" src="assets/videos/newqranim.mov">
-                        <source src="assets/videos/newqranim.mov" type="video/quicktime" />
-                      </video>
-                      <span class="no-video">Your browser does not support the video tag.</span>
-                    </div>
-                  </a>
-                </div>
-                <div class="homepage-case-study-copy">
-                  <p class="homepage-case-study-desc"><a href="#/squarespace-qr-codes" class="homepage-case-study-text-link">Squarespace</a></p>
-                  <h3 class="homepage-case-study-title"><a href="#/squarespace-qr-codes" class="homepage-case-study-text-link">Driving more bookings by giving Acuity Scheduling businesses a direct, scannable path to scheduling with QR codes.</a></h3>
-                </div>
-              </div>
-            </section>
-
             <section id="tactic" class="homepage-case-study">
               <div class="homepage-case-study-inner">
-                <a href="tactic" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(04)</a>
+                <a href="tactic" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(03)</a>
                 <div class="homepage-case-study-visual">
                   <a href="tactic" class="homepage-case-study-visual-link" aria-label="View Tactic case study">
                     <div class="project-video-wrap">
@@ -172,7 +152,7 @@
 
             <section id="baby-design-ui" class="homepage-case-study homepage-case-study--last">
               <div class="homepage-case-study-inner">
-                <a href="baby-design" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(05)</a>
+                <a href="baby-design" class="homepage-case-study-num homepage-case-study-text-link" aria-hidden="true">(04)</a>
                 <div class="homepage-case-study-visual">
                   <a href="baby-design" class="homepage-case-study-visual-link" aria-label="View Baby Design UI case study">
                     <div class="project-video-wrap project-image-wrap">
@@ -290,50 +270,6 @@
       </div>
       <div class="hi-panel-media-wrap">
         <img src="assets/images/baby-design-ui/darkmode-ui.png" alt="Baby Design - dark mode design system" />
-      </div>
-    </div>
-    </div>
-  </div>
-
-  <div id="squarespace-qr-panel" class="hi-panel" role="dialog" aria-modal="true" aria-label="Squarespace QR codes case study" hidden>
-    <div class="hi-panel-inner">
-    <div class="hi-panel-left">
-      <div class="hi-panel-header">
-        <div class="hi-panel-header-row">
-          <button type="button" class="hi-panel-back" aria-label="Close panel">← Back</button>
-        </div>
-      </div>
-      <div class="hi-panel-meta">
-        <div class="hi-panel-intro">
-          <p class="hi-panel-name">Squarespace</p>
-          <h1 class="hi-panel-headline">Driving more bookings by giving Acuity Scheduling businesses a direct, scannable path to scheduling with QR codes.</h1>
-        </div>
-        <div class="hi-panel-details">
-          <div class="hi-panel-detail-row">
-            <span class="hi-panel-detail-label">Role</span>
-            <span class="hi-panel-detail-value">Sr. Product Designer</span>
-          </div>
-          <div class="hi-panel-detail-row">
-            <span class="hi-panel-detail-label">Key Results</span>
-            <div class="hi-panel-detail-value">
-              <p>10% of clients who scanned QR codes booked appointments or classes, without Acuity marketing this feature.</p>
-              <p>Unlocked a new way for clients to book class sessions directly.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hi-panel-right">
-      <div class="hi-panel-media-wrap hi-panel-media-wrap--uncropped">
-        <video autoplay loop muted playsinline preload="auto" src="assets/videos/qrcode.mov">
-          <source src="assets/videos/qrcode.mov" type="video/quicktime" />
-        </video>
-      </div>
-      <div class="hi-panel-media-wrap hi-panel-media-wrap--bordered">
-        <img src="assets/images/qr-codes/qrmain.png" alt="Acuity Scheduling QR code booking flow" />
-      </div>
-      <div class="hi-panel-media-wrap hi-panel-media-wrap--bordered">
-        <img src="assets/images/qr-codes/linkpage.png" alt="Acuity Scheduling QR code booking flow" />
       </div>
     </div>
     </div>

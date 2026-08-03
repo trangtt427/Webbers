@@ -13,12 +13,7 @@
   var fade = document.getElementById('hi-fade');
   var panels = [
     // Human Interest panel dormant — #hi-panel markup kept in index.html for future use
-    {
-      el: document.getElementById('squarespace-qr-panel'),
-      hash: '#/squarespace-qr-codes',
-      sectionId: 'squarespace-qr-codes',
-      href: '#/squarespace-qr-codes'
-    },
+    // Squarespace QR panel hidden for now — squarespace-qr-codes.html kept for future use
     {
       el: document.getElementById('tactic-panel'),
       hash: '#/tactic',
