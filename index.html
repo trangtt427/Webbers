@@ -28,6 +28,14 @@
         el.classList.add('homepage-entrance-locked');
         el.classList.add('home-intro-active');
       }
+      if (window.location.hash === '#/tactic' || window.location.hash === '#/baby-design' || window.location.hash === '#/squarespace-qr-codes') {
+        el.classList.add('hi-panel-restoring');
+      }
+      /* Lock document scroll on desktop before first paint so the rail script
+         doesn't remove a visible scrollbar and shift the layout on refresh. */
+      if (window.matchMedia && window.matchMedia('(min-width: 1001px)').matches) {
+        el.classList.add('homepage-rail-scroll');
+      }
     })();
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEHB3NES2Q"></script>
@@ -39,17 +47,6 @@
   </script>
 </head>
 <body>
-  <script>
-    (function() {
-      if (!document.documentElement.classList.contains('homepage-entrance-locked')) return;
-      var probe = document.createElement('div');
-      probe.style.cssText = 'position:absolute;top:-9999px;width:100px;height:100px;overflow:scroll;';
-      document.body.appendChild(probe);
-      var w = probe.offsetWidth - probe.clientWidth;
-      document.body.removeChild(probe);
-      if (w) document.documentElement.style.setProperty('--hi-sbw', w + 'px');
-    })();
-  </script>
   <div class="home-intro" id="home-intro" aria-hidden="true">
     <div class="home-intro-progress" aria-hidden="true">
       <div class="home-intro-progress-bar"></div>
@@ -110,67 +107,238 @@
     </header>
 
     <div class="homepage-layout">
-      <main class="homepage-content">
-        <div class="homepage-entrance-content">
-        <div class="homepage-section-row homepage-section-row--intro">
-          <section id="intro" class="homepage-intro">
-            <h1>I'm Trang, a principled product designer who strives to craft wickedly smooth and intuitive experiences.</h1>
-            <p class="homepage-intro-lead">Designing, solving juicy hard problems, and still forming thoughts about AI. Currently building products for solopreneurs and consumers at <a href="https://www.squarespace.com/" target="_blank" rel="noopener noreferrer" class="about-work-link">Squarespace ↗</a>. Based in SJ,&nbsp;CA.</p>
-          </section>
-        </div>
-
-
-        <div class="about-page-section-row about-page-section-row--previous">
-          <div class="about-page-section-label-col">
-            <span class="about-page-section-label">Previous</span>
-          </div>
-          <div class="about-page-section-content">
-            <div class="about-work-item">
-              <div class="about-work-meta">
-                <div class="about-work-company-row">
-                  <p class="about-work-company"><a href="https://www.petual.ai/" target="_blank" rel="noopener noreferrer" class="about-work-link">Petual ↗</a></p>
-                  <p class="about-work-year">2025 – 2026</p>
-                </div>
-              </div>
-              <div class="about-work-body">
-                <p class="about-work-blurb">Automate internal audits and compliance workflows with AI.</p>
-              </div>
-            </div>
-            <div class="about-work-item">
-              <div class="about-work-meta">
-                <div class="about-work-company-row">
-                  <p class="about-work-company"><a href="https://humaninterest.com/" target="_blank" rel="noopener noreferrer" class="about-work-link">Human Interest ↗</a></p>
-                  <p class="about-work-year">2020 – 2023</p>
-                </div>
-              </div>
-              <div class="about-work-body">
-                <p class="about-work-blurb">401(k)s for small to midsized businesses.</p>
-              </div>
-            </div>
-            <div class="about-work-item">
-              <div class="about-work-meta">
-                <div class="about-work-company-row">
-                  <p class="about-work-company"><a href="https://www.taxbit.com/products/enterprise-tax" target="_blank" rel="noopener noreferrer" class="about-work-link">Tactic ↗</a></p>
-                  <p class="about-work-year">2021 – 2022</p>
-                </div>
-              </div>
-              <div class="about-work-body">
-                <p class="about-work-blurb">B2B crypto accounting platform.</p>
-              </div>
-            </div>
-            <p class="about-page-body--history">View the rest of my work history on <a href="https://www.linkedin.com/in/trangwreck/" target="_blank" rel="noopener noreferrer" class="about-work-link">LinkedIn ↗</a>.</p>
+      <div class="homepage-shell">
+        <main class="homepage-content homepage-main">
+          <div class="homepage-entrance-content">
+          <div class="homepage-section-row homepage-section-row--intro">
+            <section id="intro" class="homepage-intro">
+              <h1>I'm Trang, a principled product designer.</h1>
+              <p class="homepage-intro-lead">Crafting wickedly smooth and intuitive experiences, and still forming thoughts about AI. Currently designing at <a href="https://www.squarespace.com/" target="_blank" rel="noopener noreferrer" class="about-work-link">Squarespace ↗</a>. Based in SJ,&nbsp;CA.</p>
+            </section>
           </div>
         </div>
-        </div>
+        </main>
 
-        <div id="footer-placeholder"></div>
-      </main>
+        <aside class="homepage-media-rail" aria-label="Project previews">
+          <div class="homepage-media-item" data-work-id="human-interest">
+            <div class="homepage-case-study-visual">
+              <a href="human-interest" class="homepage-case-study-visual-link" aria-label="View Human Interest case study">
+                <div class="project-video-wrap">
+                  <video autoplay loop muted playsinline preload="auto">
+                    <source src="assets/videos/newfasttrack.mp4" type="video/mp4" />
+                  </video>
+                  <span class="no-video">Your browser does not support the video tag.</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="homepage-media-item" data-work-id="squarespace">
+            <div class="homepage-case-study-visual">
+              <div class="project-video-wrap project-image-wrap">
+                <img src="assets/images/squarespace/acuityfromsqsp.png" alt="Acuity Scheduling is Squarespace's scheduling product" class="project-image" />
+              </div>
+            </div>
+          </div>
+          <div class="homepage-media-item" data-work-id="squarespace-qr-codes">
+            <div class="homepage-case-study-visual">
+              <a href="#/squarespace-qr-codes" class="homepage-case-study-visual-link" aria-label="View Squarespace QR codes case study">
+                <div class="project-video-wrap">
+                  <video autoplay loop muted playsinline preload="auto" src="assets/videos/newqranim.mov">
+                    <source src="assets/videos/newqranim.mov" type="video/quicktime" />
+                  </video>
+                  <span class="no-video">Your browser does not support the video tag.</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="homepage-media-item" data-work-id="tactic">
+            <div class="homepage-case-study-visual">
+              <a href="tactic" class="homepage-case-study-visual-link" aria-label="View Tactic case study">
+                <div class="project-video-wrap">
+                  <video autoplay loop muted playsinline preload="auto">
+                    <source src="assets/videos/tactic-motion.mp4" type="video/mp4" />
+                  </video>
+                  <span class="no-video">Your browser does not support the video tag.</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="homepage-media-item" data-work-id="baby-design-ui">
+            <div class="homepage-case-study-visual">
+              <a href="baby-design" class="homepage-case-study-visual-link" aria-label="View Baby Design UI case study">
+                <div class="project-video-wrap project-image-wrap">
+                  <img src="assets/images/baby-design-ui/darkmode-ui.png" alt="Baby Design UI dark mode design system" class="project-image" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <aside class="homepage-toc-column">
+          <nav class="homepage-toc" aria-label="Work">
+            <span class="homepage-toc-heading about-page-section-label">Work</span>
+            <a href="#human-interest" class="homepage-toc-link">Human Interest</a>
+            <a href="#squarespace" class="homepage-toc-link">Squarespace</a>
+            <a href="#squarespace-qr-codes" class="homepage-toc-link">Squarespace QR</a>
+            <a href="#tactic" class="homepage-toc-link">Tactic</a>
+            <a href="#baby-design-ui" class="homepage-toc-link">Baby Design System</a>
+          </nav>
+          <div class="homepage-footer-col">
+            <div id="footer-social-placeholder"></div>
+            <div id="footer-meta-placeholder"></div>
+          </div>
+        </aside>
+      </div>
+
+      <div id="footer-placeholder" data-footer-layout="stacked"></div>
+    </div>
+  </div>
+
+  <div id="hi-fade" class="hi-fade"></div>
+
+  <div id="tactic-panel" class="hi-panel" role="dialog" aria-modal="true" aria-label="Tactic case study" hidden>
+    <div class="hi-panel-inner">
+    <div class="hi-panel-left">
+      <div class="hi-panel-header">
+        <div class="hi-panel-header-row">
+          <button type="button" class="hi-panel-back" aria-label="Close panel">← Back</button>
+        </div>
+        <p class="hi-panel-name">Tactic</p>
+      </div>
+      <div class="hi-panel-meta">
+        <p class="hi-panel-summary">Tactic is a digital asset accounting platform. I designed it from the ground up, shaped the product identity, brought forth visibility into crypto transactions, enabled self-serve workflows, and give accountants peace of mind when tax season comes around. </p>
+        <div class="hi-panel-details">
+          <div class="hi-panel-detail-row">
+            <span class="hi-panel-detail-label">Role</span>
+            <span class="hi-panel-detail-value">Design Consultant</span>
+          </div>
+          <div class="hi-panel-detail-row">
+            <span class="hi-panel-detail-label">Key Results</span>
+            <div class="hi-panel-detail-value">
+              <p>Businesses saved an average of 40+ hrs/month on crypto accounting</p>
+              <p>Acquired by leading crypto tax software TaxBit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hi-panel-right">
+      <div class="hi-panel-media-wrap hi-panel-media-wrap--uncropped">
+        <video autoplay loop muted playsinline>
+          <source src="assets/videos/tactic-motion.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/tactic/palette.png" alt="Color palette" />
+      </div>
+      <div class="hi-panel-media-wrap hi-panel-media-wrap--bordered">
+        <img src="assets/images/tactic/ds.png" alt="Tactic Design System" />
+      </div>
+      <div class="hi-panel-media-wrap hi-panel-media-wrap--bordered">
+        <img src="assets/images/tactic/newrules.gif" alt="Rules engine for automating transaction categorization" />
+      </div>
+      <div class="hi-panel-media-wrap hi-panel-media-wrap--bordered">
+        <img src="assets/images/tactic/integrations.png" alt="Integrations and self-serve setup" />
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/tactic/tactic-header.png" alt="Tactic product overview" />
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="baby-design-panel" class="hi-panel" role="dialog" aria-modal="true" aria-label="Baby Design System case study" hidden>
+    <div class="hi-panel-inner">
+    <div class="hi-panel-left">
+      <div class="hi-panel-header">
+        <div class="hi-panel-header-row">
+          <button type="button" class="hi-panel-back" aria-label="Close panel">← Back</button>
+        </div>
+        <p class="hi-panel-name">Baby Design System</p>
+      </div>
+      <div class="hi-panel-meta">
+        <p class="hi-panel-summary">Rolled up my sleeves to build a personal design library called Baby Design System. Check it out on <a href="https://www.figma.com/community/file/1187301276898864114/baby-design-ui-kit" target="_blank" rel="noopener noreferrer">Figma Community<span aria-hidden="true">↗</span></a>.</p>
+        <div class="hi-panel-details">
+          <div class="hi-panel-detail-row">
+            <span class="hi-panel-detail-label">Role</span>
+            <span class="hi-panel-detail-value">Creator</span>
+          </div>
+          <div class="hi-panel-detail-row">
+            <span class="hi-panel-detail-label">Key Results</span>
+            <div class="hi-panel-detail-value">
+              <p>Personal design library turned public resource for the Figma Community</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hi-panel-right">
+      <div class="hi-panel-media-wrap">
+        <video autoplay loop muted playsinline>
+          <source src="assets/videos/baby-design-ui-motion.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/baby-design/bdinfigma.png" alt="Documentation of all the available components in the kit" />
+      </div>
+      <div class="hi-panel-media-wrap hi-panel-media-wrap--bordered">
+        <img src="assets/images/baby-design/bd-header-old.png" alt="Baby Design in Light Mode: Purple" />
+      </div>
+      <div class="hi-panel-media-wrap">
+        <img src="assets/images/baby-design-ui/darkmode-ui.png" alt="Baby Design - dark mode design system" />
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="squarespace-qr-panel" class="hi-panel" role="dialog" aria-modal="true" aria-label="Squarespace QR codes case study" hidden>
+    <div class="hi-panel-inner">
+    <div class="hi-panel-left">
+      <div class="hi-panel-header">
+        <div class="hi-panel-header-row">
+          <button type="button" class="hi-panel-back" aria-label="Close panel">← Back</button>
+        </div>
+        <p class="hi-panel-name">Squarespace</p>
+      </div>
+      <div class="hi-panel-meta">
+        <p class="hi-panel-summary">With QR codes, Acuity businesses can connect offline touchpoints to their booking pages and make it easier for new clients to discover and schedule appointments from their phones.
+        </p>
+        <div class="hi-panel-details">
+          <div class="hi-panel-detail-row">
+            <span class="hi-panel-detail-label">Role</span>
+            <span class="hi-panel-detail-value">Sr. Product Designer</span>
+          </div>
+          <div class="hi-panel-detail-row">
+            <span class="hi-panel-detail-label">Key Results</span>
+            <div class="hi-panel-detail-value">
+              <p>10% of clients who scanned QR codes booked appointments or classes, without Acuity marketing this feature.</p>
+              <p>Unlocked a new way for clients to book class sessions directly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hi-panel-right">
+      <div class="hi-panel-media-wrap hi-panel-media-wrap--uncropped">
+        <video autoplay loop muted playsinline preload="auto" src="assets/videos/qrcode.mov">
+          <source src="assets/videos/qrcode.mov" type="video/quicktime" />
+        </video>
+      </div>
+      <div class="hi-panel-media-wrap hi-panel-media-wrap--bordered">
+        <img src="assets/images/qr-codes/qrmain.png" alt="Acuity Scheduling QR code booking flow" />
+      </div>
+      <div class="hi-panel-media-wrap hi-panel-media-wrap--bordered">
+        <img src="assets/images/qr-codes/linkpage.png" alt="Acuity Scheduling QR code booking flow" />
+      </div>
+    </div>
     </div>
   </div>
 
   <script src="js/footer.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/homepage-media-rail.js"></script>
   <script src="js/projects.js"></script>
+  <script src="js/hi-panel.js"></script>
   <script src="js/home-intro.js"></script>
 </body>
 </html>

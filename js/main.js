@@ -26,6 +26,7 @@
   var siteName = document.querySelector('.site-header .site-name');
   var siteMeta = document.querySelector('.site-header .site-meta');
   var toc = document.querySelector('.homepage-toc');
+  var mediaRail = document.querySelector('.homepage-layout:not(.homepage-layout--work) .homepage-media-rail');
   var isWorkPage = homepageLayout && homepageLayout.classList.contains('homepage-layout--work');
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var introSeen = false;
@@ -58,6 +59,12 @@
     if (aboutCurrently) aboutCurrently.classList.add('about-currently-in');
     var footer = document.querySelector('.site-footer');
     if (footer) footer.classList.add('site-footer-in');
+    var footerCol = document.querySelector('.homepage-footer-col');
+    if (footerCol) footerCol.classList.add('homepage-footer-col-in');
+    if (typeof window._updateHomepageFooterFit === 'function') {
+      window._updateHomepageFooterFit();
+    }
+    if (mediaRail) mediaRail.classList.add('homepage-media-rail-in');
   }
 
   function startEntrance(options) {
@@ -86,6 +93,7 @@
       if (siteName) siteName.classList.add('site-name-in');
       if (siteMeta) siteMeta.classList.add('site-meta-in');
       if (toc) toc.classList.add('homepage-toc-in');
+      if (mediaRail) mediaRail.classList.add('homepage-media-rail-in');
       revealBelowHero({ skipWorkRow: isWorkPage });
       if (!(options && options.skipUnlock)) {
         unlockHomepageEntranceScroll();
@@ -409,11 +417,15 @@
 })();
 
 (function() {
-  // Homepage TOC scroll-spy: highlight active section as user scrolls
+  // Homepage TOC: rail-driven on desktop, page scroll-spy elsewhere
   var toc = document.querySelector('.homepage-toc');
-  if (!toc || !('IntersectionObserver' in window)) return;
+  if (!toc) return;
 
-  var sectionIds = ['intro', 'human-interest', 'squarespace', 'squarespace-qr-codes', 'tactic', 'baby-design-ui', 'about'];
+  var hasMediaRail = document.querySelector('.homepage-media-rail');
+  var homepageLayout = document.querySelector('.homepage-layout:not(.homepage-layout--work)');
+  var DESKTOP_MQ = window.matchMedia('(min-width: 1001px)');
+  var sectionIds = ['intro', 'human-interest', 'squarespace', 'squarespace-qr-codes', 'tactic', 'baby-design-ui'];
+  var caseStudyIds = ['human-interest', 'squarespace', 'squarespace-qr-codes', 'tactic', 'baby-design-ui'];
   var sections = [];
   for (var i = 0; i < sectionIds.length; i++) {
     var el = document.getElementById(sectionIds[i]);
@@ -421,6 +433,15 @@
   }
   var tocLinks = toc.querySelectorAll('.homepage-toc-link');
   var dividers = toc.querySelectorAll('.homepage-toc-divider');
+  var lastMediaId = '';
+
+  function isRailScrollMode() {
+    return !!(homepageLayout && hasMediaRail && DESKTOP_MQ.matches);
+  }
+
+  function isCaseStudyId(id) {
+    return caseStudyIds.indexOf(id) !== -1;
+  }
 
   function setDividerWidths() {
     if (dividers.length === 0) return;
@@ -453,20 +474,50 @@
     }
   }
 
+  function onTocClick(e) {
+    var href = this.getAttribute('href') || '';
+    if (href.charAt(0) !== '#') return;
+    e.preventDefault();
+    var id = href.slice(1);
+    setActive(id);
+    if (hasMediaRail && isCaseStudyId(id)) {
+      lastMediaId = id;
+      window.dispatchEvent(new CustomEvent('homepage-media-active', { detail: { id: id } }));
+    }
+    if (!isRailScrollMode()) {
+      var target = document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+
+  for (var t = 0; t < tocLinks.length; t++) {
+    tocLinks[t].addEventListener('click', onTocClick);
+  }
+
+  if (homepageLayout && hasMediaRail) {
+    window.addEventListener('homepage-rail-active', function(e) {
+      if (!isRailScrollMode()) return;
+      var id = e.detail && e.detail.id;
+      if (id) setActive(id);
+    });
+  }
+
+  if (!('IntersectionObserver' in window)) return;
+
   function updateActive() {
+    if (isRailScrollMode()) return;
     var vh = window.innerHeight;
     var trigger = vh * 0.35;
-    var activeId = sections[0].id;
+    var activeId = '';
     var babySection = document.getElementById('baby-design-ui');
     var babyRect = babySection ? babySection.getBoundingClientRect() : null;
 
-    // Last section whose top has crossed the trigger line wins
     for (var k = 0; k < sections.length; k++) {
       var section = sections[k];
       var rect = section.getBoundingClientRect();
 
       if (section.id === 'about' && babyRect && babyRect.bottom > vh * 0.2) {
-        // Keep Baby Design highlighted while it still occupies the lower viewport
         continue;
       }
 
@@ -475,19 +526,13 @@
       }
     }
     setActive(activeId);
-  }
-
-  for (var t = 0; t < tocLinks.length; t++) {
-    tocLinks[t].addEventListener('click', function(e) {
-      var href = this.getAttribute('href') || '';
-      if (href.charAt(0) !== '#') return;
-      e.preventDefault();
-      var id = href.slice(1);
-      var target = document.getElementById(id);
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setActive(id);
-      history.replaceState(null, '', window.location.pathname + window.location.search);
-    });
+    if (hasMediaRail && isCaseStudyId(activeId) && activeId !== lastMediaId) {
+      lastMediaId = activeId;
+      window.dispatchEvent(new CustomEvent('homepage-media-active', { detail: { id: activeId } }));
+    } else if (hasMediaRail && !isCaseStudyId(activeId) && lastMediaId) {
+      lastMediaId = '';
+      window.dispatchEvent(new CustomEvent('homepage-media-active', { detail: { id: '' } }));
+    }
   }
 
   var observer = new IntersectionObserver(
@@ -549,11 +594,64 @@
     var h = String(now.getHours()).padStart(2, '0');
     var m = String(now.getMinutes()).padStart(2, '0');
     var s = String(now.getSeconds()).padStart(2, '0');
-    var el = document.getElementById('clock');
-    if (el) el.textContent = h + ':' + m + ':' + s;
+    var nodes = document.querySelectorAll('.site-footer-time');
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].textContent = h + ':' + m + ':' + s;
+    }
   }
   updateClock();
   setInterval(updateClock, 1000);
+})();
+
+(function() {
+  // Hide the right-column footer before it collides with the ToC as the viewport shrinks.
+  var layout = document.querySelector('.homepage-layout:not(.homepage-layout--work)');
+  if (!layout) return;
+
+  var DESKTOP_MQ = window.matchMedia('(min-width: 1001px)');
+  var FOOTER_GAP = 16;
+
+  function updateHomepageFooterFit() {
+    var col = layout.querySelector('.homepage-toc-column');
+    if (!col) return;
+    var toc = col.querySelector('.homepage-toc');
+    var footer = col.querySelector('.homepage-footer-col');
+    if (!footer) return;
+
+    if (!DESKTOP_MQ.matches || !toc) {
+      footer.classList.remove('homepage-footer-col--hidden');
+      return;
+    }
+
+    var colRect = col.getBoundingClientRect();
+    var tocRect = toc.getBoundingClientRect();
+    var footerHeight = footer.offsetHeight || 120;
+    var spaceBelowToc = colRect.bottom - tocRect.bottom - 24;
+    var fits = spaceBelowToc >= footerHeight + FOOTER_GAP;
+    footer.classList.toggle('homepage-footer-col--hidden', !fits);
+  }
+
+  function scheduleFooterFitCheck() {
+    requestAnimationFrame(updateHomepageFooterFit);
+  }
+
+  window._updateHomepageFooterFit = updateHomepageFooterFit;
+  window.addEventListener('resize', scheduleFooterFitCheck);
+  if (typeof DESKTOP_MQ.addEventListener === 'function') {
+    DESKTOP_MQ.addEventListener('change', scheduleFooterFitCheck);
+  } else if (typeof DESKTOP_MQ.addListener === 'function') {
+    DESKTOP_MQ.addListener(scheduleFooterFitCheck);
+  }
+  window.addEventListener('load', scheduleFooterFitCheck);
+  var footerCol = layout.querySelector('.homepage-footer-col');
+  if (footerCol) {
+    footerCol.addEventListener('transitionend', function(e) {
+      if (e.propertyName === 'transform' || e.propertyName === 'opacity') {
+        scheduleFooterFitCheck();
+      }
+    });
+  }
+  scheduleFooterFitCheck();
 })();
 
 (function() {

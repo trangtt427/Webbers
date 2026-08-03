@@ -39,6 +39,7 @@ html {
   color-scheme: light;
   background-color: var(--bg);
   transition: background-color var(--transition-duration) var(--transition-easing);
+  scrollbar-gutter: stable;
 }
 @media (min-width: 901px) {
   html {
@@ -62,8 +63,8 @@ html {
   --header-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
 
   --media-radius: 0;
-  --page-gutter: 80px;
-  --content-max-width: 1000px;
+  --page-gutter: 20px;
+  --content-max-width: 1800px;
   --logo-dot: #e446a8;
 }
 @media (max-width: 900px) {
@@ -378,6 +379,10 @@ html.dark .site-name-wordmark {
 .site-nav-dropdown a.nav-active {
   text-decoration: none;
   color: var(--text);
+}
+.site-nav a[href="/work"],
+.site-nav-dropdown a[href="/work"] {
+  display: none;
 }
 .site-nav a::after,
 .site-nav-dropdown a::after {
@@ -936,14 +941,14 @@ html.dark .theme-toggle:hover .icon-sun {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   opacity: 0;
-  transform: translateX(-32px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 .homepage-toc.homepage-toc-in {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 @media (prefers-reduced-motion: reduce) {
   .wrap:has(.homepage-layout) .site-name,
@@ -955,10 +960,14 @@ html.dark .theme-toggle:hover .icon-sun {
   .wrap:has(.homepage-layout) .about-currently,
   .homepage-section-row,
   .homepage-intro,
+  .homepage-toc,
+  .homepage-footer-col,
+  .homepage-media-rail,
   .homepage-case-study-inner,
   .homepage-case-study.homepage-case-study-in-view .homepage-case-study-inner,
   .homepage-case-study-visual,
-  .homepage-case-study.homepage-case-study-in-view .homepage-case-study-visual {
+  .homepage-case-study.homepage-case-study-in-view .homepage-case-study-visual,
+  .homepage-media-item {
     opacity: 1;
     transform: none;
     animation: none;
@@ -999,7 +1008,7 @@ html.dark .theme-toggle:hover .icon-sun {
   max-width: var(--content-max-width);
   margin: 0 auto;
   width: 100%;
-  padding-top: 120px;
+  padding-top: 64px;
   padding-bottom: 0;
 }
 #footer-placeholder {
@@ -1011,7 +1020,7 @@ html.dark .theme-toggle:hover .icon-sun {
     padding-top: 0;
   }
   .homepage-section-row--intro {
-    margin-top: 120px;
+    margin-top: 64px;
   }
   .homepage-layout--work .homepage-section-row--work {
     margin-top: 120px;
@@ -1049,7 +1058,7 @@ html.dark .theme-toggle:hover .icon-sun {
   line-height: 1.3;
 }
 .homepage-layout:not(.homepage-layout--work) .homepage-intro h1 {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1.05;
 }
 .homepage-intro .homepage-intro-lead {
@@ -1057,7 +1066,7 @@ html.dark .theme-toggle:hover .icon-sun {
   font-weight: 400;
   color: var(--muted-soft);
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.3;
   margin-top: 32px;
 }
@@ -1258,6 +1267,293 @@ html.dark .homepage-hero-icon {
     padding-bottom: 80px;
   }
 }
+
+/* Homepage footer: hide stacked mobile footer on very short viewports. */
+@media (max-height: 600px) {
+  .homepage-layout:not(.homepage-layout--work) > #footer-placeholder[data-footer-layout="stacked"] {
+    display: none;
+  }
+}
+
+.homepage-footer-col--hidden {
+  display: none !important;
+}
+
+.wrap:has(.homepage-layout:not(.homepage-layout--work)) .homepage-footer-col {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+.wrap:has(.homepage-layout:not(.homepage-layout--work)) .homepage-footer-col.homepage-footer-col-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.wrap:has(.homepage-layout:not(.homepage-layout--work)) .site-footer--stacked {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+.wrap:has(.homepage-layout:not(.homepage-layout--work)) .site-footer--stacked.site-footer-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.wrap:has(.homepage-layout:not(.homepage-layout--work)) .homepage-media-rail {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+.wrap:has(.homepage-layout:not(.homepage-layout--work)) .homepage-media-rail.homepage-media-rail-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Homepage: fixed hero column, scrollable media rail, index TOC */
+@media (min-width: 1001px) {
+  html.homepage-rail-scroll,
+  html.homepage-rail-scroll body {
+    overflow: hidden;
+    height: 100%;
+  }
+  html.homepage-rail-scroll .wrap:has(.homepage-layout:not(.homepage-layout--work)) {
+    height: 100%;
+    overflow: hidden;
+    /* No top offset: the rail runs the full viewport height and passes under
+       the fixed header, which blurs it. The hero and TOC columns re-add it. */
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  html.homepage-rail-scroll .homepage-layout:not(.homepage-layout--work) {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-content {
+    max-width: none;
+  }
+  .homepage-shell {
+    display: grid;
+    /* The rail track's floor is the 470px media minimum plus the rail's own
+       32px left padding; the hero column gives up width before the media does. */
+    grid-template-columns: minmax(0, 320px) minmax(502px, 1fr) auto;
+    /* Floor for both gaps. The rail adds its own left padding so the hero side
+       always stays wider than the TOC side. Tapers below ~1500px so the hero
+       column keeps some width once the rail stops shrinking. */
+    column-gap: clamp(40px, calc(8vw - 40px), 80px);
+    align-items: start;
+  }
+  html.homepage-rail-scroll .homepage-shell {
+    height: 100%;
+    align-items: stretch;
+    overflow: hidden;
+  }
+  .homepage-main {
+    grid-column: 1;
+    min-width: 0;
+    max-width: 320px;
+  }
+  html.homepage-rail-scroll .homepage-main {
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 154px;
+  }
+  .homepage-media-rail {
+    grid-column: 2;
+    position: sticky;
+    top: 90px;
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 48px;
+  }
+  html.homepage-rail-scroll .homepage-media-rail {
+    position: relative;
+    top: auto;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 32px;
+    box-sizing: border-box;
+  }
+  html.homepage-rail-scroll .homepage-layout:not(.homepage-layout--work) > #footer-placeholder[data-footer-layout="stacked"] {
+    display: none;
+  }
+  html.homepage-rail-scroll .homepage-toc-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 154px;
+    box-sizing: border-box;
+  }
+  html.homepage-rail-scroll .homepage-toc-column .homepage-toc {
+    flex: 0 0 auto;
+  }
+  html.homepage-rail-scroll .homepage-toc-column .homepage-footer-col {
+    flex: 0 0 auto;
+    margin-top: auto;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+  html.homepage-rail-scroll .homepage-toc-column .site-footer-social {
+    justify-content: flex-end;
+  }
+  html.homepage-rail-scroll .homepage-toc-column .site-footer-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  html.homepage-rail-scroll .homepage-shell .homepage-toc {
+    top: 0;
+  }
+  .homepage-media-rail::-webkit-scrollbar {
+    display: none;
+  }
+  .homepage-shell .homepage-toc-column {
+    grid-column: 3;
+    width: auto;
+    min-width: 0;
+  }
+  .homepage-shell .homepage-toc {
+    top: 90px;
+    /* Hug the longest label so the fixed 180px track doesn't leave dead space
+       between the rail and the right-aligned links. */
+    width: max-content;
+    text-align: right;
+    align-items: flex-end;
+  }
+  .homepage-toc-heading {
+    display: block;
+    margin: 0 0 40px;
+  }
+  .homepage-work-anchor {
+    min-height: 100vh;
+    scroll-margin-top: 100px;
+  }
+  .homepage-work-anchors {
+    margin: 0;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-toc-link {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--muted-soft);
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-toc-link.toc-active {
+    color: var(--text);
+    font-weight: 400;
+  }
+  /* Every item must be identically sized: the rail loops by shifting scroll by
+     one set, which only lands on matching content if the list is periodic. */
+  .homepage-media-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+  }
+  .homepage-media-item .homepage-case-study-visual {
+    width: 100%;
+    max-width: 640px;
+    /* Sit toward the TOC rather than centered in the column: the leftover
+       space collects on the hero side instead of splitting evenly. */
+    margin-left: auto;
+    margin-right: 0;
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .homepage-media-item .homepage-case-study-visual .project-video-wrap,
+  .homepage-media-item .homepage-case-study-visual .project-image-wrap {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-case-study {
+    padding: 72px 0;
+    scroll-margin-top: 100px;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-case-study-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-case-study-num {
+    margin: 0 0 16px;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-case-study--featured {
+    padding-top: 0;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-work-anchors {
+    display: block;
+  }
+}
+@media (max-width: 1000px) {
+  .homepage-shell .homepage-toc-column {
+    display: none;
+  }
+  .homepage-work-anchors {
+    display: none;
+  }
+  .homepage-shell {
+    display: block;
+  }
+  .homepage-media-rail {
+    display: block;
+    position: static;
+    height: auto;
+    overflow: visible;
+    padding: 0;
+  }
+  .homepage-media-item {
+    min-height: 0;
+    padding: 0 0 48px;
+    opacity: 1;
+    transform: none;
+  }
+  .homepage-media-item--clone {
+    display: none;
+  }
+  .homepage-media-item .homepage-case-study-visual {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    max-width: none;
+    margin: 0;
+  }
+  .homepage-media-item .homepage-case-study-visual .project-video-wrap,
+  .homepage-media-item .homepage-case-study-visual .project-image-wrap {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+  .homepage-footer-col {
+    display: none;
+  }
+  .homepage-layout:not(.homepage-layout--work) > #footer-placeholder[data-footer-layout="stacked"] {
+    display: block;
+  }
+  .site-footer--stacked {
+    margin-top: 48px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+    border-top: 1px solid var(--border);
+  }
+  .site-footer--stacked .site-footer-inner {
+    align-items: center;
+    text-align: center;
+  }
+  .site-footer--stacked .site-footer-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
 @media (max-width: 900px) {
   .homepage-layout--work:has(.homepage-section-row--intro) .homepage-section-row--work {
     margin-top: 0;
@@ -1372,10 +1668,16 @@ html.dark .homepage-case-study-placeholder {
 }
 .homepage-case-study-visual .project-video-wrap video,
 .homepage-case-study-visual .project-image-wrap .project-image {
-  width: 100%;
-  height: 100%;
+  width: calc(100% + 1px);
+  /* The wrap's height is fractional (aspect-ratio), so rounding can leave a
+     sliver of its dark background along the bottom. Overhang, then clip it. */
+  height: calc(100% + 1px);
   object-fit: cover;
   object-position: center;
+}
+.homepage-media-item:has(.homepage-case-study-visual-link:hover) .project-video-wrap video,
+.homepage-media-item:has(.homepage-case-study-visual-link:hover) .project-image-wrap .project-image {
+  transform: scale(1.05);
 }
 .homepage-case-study-text-link {
   color: inherit;
@@ -3024,15 +3326,17 @@ html.dark .project-dot--active {
   }
   .homepage-case-study .project-video-wrap video,
   .homepage-case-study .project-image-wrap .project-image {
-    height: 100%;
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
     object-fit: cover;
     object-position: center;
   }
 }
 .project-video-wrap video {
-  width: 100%;
-  height: 100%;
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform var(--transition-duration) var(--transition-easing);
 }
@@ -3057,9 +3361,10 @@ html.dark .project-dot--active {
 }
 
 .project-image-wrap .project-image {
-  width: 100%;
-  height: 100%;
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform var(--transition-duration) var(--transition-easing);
 }
@@ -3256,10 +3561,9 @@ html.homepage-entrance-locked {
 html.homepage-entrance-locked body {
   overflow: hidden;
   overscroll-behavior: none;
-  padding-right: var(--hi-sbw, 0px);
 }
 html.homepage-entrance-locked .site-header {
-  padding-right: var(--hi-sbw, 0px);
+  padding-right: 0;
 }
 
 /* Scroll lock for the Human Interest panel. Removing the page scrollbar would
@@ -3284,6 +3588,8 @@ html.hi-panel-restoring .wrap:has(.homepage-layout) .site-name,
 html.hi-panel-restoring .wrap:has(.homepage-layout) .site-meta,
 html.hi-panel-restoring .wrap:has(.homepage-layout) .site-footer,
 html.hi-panel-restoring .homepage-toc,
+html.hi-panel-restoring .homepage-footer-col,
+html.hi-panel-restoring .homepage-media-rail,
 html.hi-panel-restoring .about-hero-content,
 html.hi-panel-restoring .about-timeline,
 html.hi-panel-restoring .about-two-col,
@@ -3996,10 +4302,6 @@ html.dark .site-footer-social .footer-icon img {
     font-size: 24px;
     line-height: 1.3;
   }
-  .homepage-layout:not(.homepage-layout--work) .homepage-intro h1 {
-    font-size: 32px;
-    line-height: 1.05;
-  }
   .about-page-body {
     font-size: 17px;
   }
@@ -4020,7 +4322,7 @@ html.dark .site-footer-social .footer-icon img {
 .wrap:has(.case-study) .site-footer {
   border-top: 1px solid var(--border);
 }
-.wrap:has(.homepage-layout) .site-footer {
+.wrap:has(.homepage-layout) .site-footer:not(.site-footer--stacked) {
   border-top: 1px solid var(--border);
   isolation: isolate;
   overflow: hidden;
@@ -4040,9 +4342,7 @@ html.dark .site-footer-social .footer-icon img {
 .wrap:has(.homepage-layout) .about-currently,
 .wrap:has(.homepage-layout) .about-currently.about-currently-in,
 .wrap:has(.homepage-layout) .about-timeline,
-.wrap:has(.homepage-layout) .about-timeline.about-timeline-in,
-.wrap:has(.homepage-layout) .site-footer,
-.wrap:has(.homepage-layout) .site-footer.site-footer-in {
+.wrap:has(.homepage-layout) .about-timeline.about-timeline-in {
   transform: none;
 }
 @media (max-width: 900px) {
@@ -4052,6 +4352,12 @@ html.dark .site-footer-social .footer-icon img {
   .site-footer-inner {
     align-items: center;
     text-align: center;
+  }
+  .site-footer-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 }
 
