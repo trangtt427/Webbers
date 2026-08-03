@@ -49,6 +49,27 @@
     return next - first;
   }
 
+  function headerClearance() {
+    var header = document.querySelector('.site-header');
+    var height = header ? header.getBoundingClientRect().height : 0;
+    return height > 0 ? height : 60;
+  }
+
+  // Land on the first case study with its top edge just below the header. The
+  // item before it stays in flow above, blurred under the header rather than
+  // cropped out, so the loop reads as continuous in both directions.
+  function resetInitialScroll() {
+    if (!DESKTOP_MQ.matches) return;
+    var landing = mediaItems[sets > 1 ? originalItems.length : 0];
+    if (!landing) return;
+    currentTop = targetTop = landing.offsetTop - headerClearance();
+    rail.scrollTop = currentTop;
+    var id = landing.getAttribute('data-work-id');
+    lastActiveId = id;
+    setActiveMedia(id);
+    window.dispatchEvent(new CustomEvent('homepage-rail-active', { detail: { id: id } }));
+  }
+
   function buildLoop() {
     if (sets > 1) return;
     appendSet();
@@ -57,8 +78,7 @@
     while (sets < 4 && baseHeight > 0 && baseHeight * sets - rail.clientHeight < baseHeight * 1.5) {
       appendSet();
     }
-    currentTop = targetTop = baseHeight > 0 ? baseHeight : 0;
-    rail.scrollTop = currentTop;
+    resetInitialScroll();
   }
 
   function anchor() {
@@ -189,9 +209,15 @@
 
   function updateMode() {
     var on = DESKTOP_MQ.matches;
+    var wasOn = document.documentElement.classList.contains('homepage-rail-scroll');
     setRailScrollMode(on);
     if (on) {
       buildLoop();
+      if (!wasOn) {
+        window.scrollTo(0, 0);
+        baseHeight = measureBase();
+        resetInitialScroll();
+      }
       requestAnimationFrame(syncFromRail);
     } else {
       animating = false;

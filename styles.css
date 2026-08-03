@@ -1403,8 +1403,11 @@ html.dark .homepage-hero-icon {
   .homepage-shell .homepage-toc {
     top: 90px;
     /* Hug the longest label so the fixed 180px track doesn't leave dead space
-       between the rail and the right-aligned links. */
+       between the rail and the right-aligned links. Hugging leaves the box
+       narrower than the column, so push it onto the column's right edge to
+       line the links up with the footer below. */
     width: max-content;
+    margin-left: auto;
     text-align: right;
     align-items: flex-end;
   }
@@ -1440,7 +1443,9 @@ html.dark .homepage-hero-icon {
   }
   .homepage-media-item-visual-wrap {
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
+    /* Fixed numeral column: an auto track would size to each label, and the
+       narrower "(01)" would let the featured media stretch further left. */
+    grid-template-columns: 40px minmax(0, 1fr);
     align-items: start;
     gap: 24px;
     width: 100%;
@@ -1628,6 +1633,30 @@ html.dark .homepage-hero-icon {
 }
 .homepage-case-study-pill:hover {
   text-decoration: none;
+}
+.homepage-case-study-pill--overlay {
+  display: none;
+}
+@media (min-width: 1001px) {
+  .homepage-layout:not(.homepage-layout--work) .homepage-media-item .homepage-case-study-visual:has(.homepage-case-study-pill--overlay) {
+    position: relative;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-case-study-pill--overlay {
+    display: inline-flex;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    margin-bottom: 0;
+    color: #1a1a1a;
+    background: #fff;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-case-study-pill--overlay-dark {
+    color: #fff;
+    background: #1a1a1a;
+  }
 }
 @media (min-width: 901px) {
   .homepage-case-study-inner--two-col {
