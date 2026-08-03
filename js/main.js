@@ -244,13 +244,12 @@
 })();
 
 (function() {
-  // About page: hero photo + intro + press fade up on load; work sections fade up on scroll.
+  // About page: hero photo + intro fade up on load; work/press sections fade up on scroll.
   var aboutHeroPhoto = document.querySelector('.about-page-hero-photo');
   var aboutHeadline = document.querySelector('.about-page-headline-wrap');
   var aboutIntro = document.querySelector('.about-page-section-row--intro');
-  var aboutPress = document.querySelector('.about-page-section-row--press');
-  var aboutScrollSections = document.querySelectorAll('.about-page-section-row--work, .about-page-section-row--now, .about-page-section-row--previous');
-  if (!aboutHeroPhoto && !aboutHeadline && !aboutIntro && !aboutPress && !aboutScrollSections.length) return;
+  var aboutScrollSections = document.querySelectorAll('.about-page-section-row--work, .about-page-section-row--now, .about-page-section-row--previous, .about-page-section-row--press');
+  if (!aboutHeroPhoto && !aboutHeadline && !aboutIntro && !aboutScrollSections.length) return;
 
   var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -262,18 +261,16 @@
     revealAboutSection(aboutHeroPhoto);
     revealAboutSection(aboutHeadline);
     revealAboutSection(aboutIntro);
-    revealAboutSection(aboutPress);
     aboutScrollSections.forEach(revealAboutSection);
     return;
   }
 
-  if (aboutHeroPhoto || aboutHeadline || aboutIntro || aboutPress) {
+  if (aboutHeroPhoto || aboutHeadline || aboutIntro) {
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
         revealAboutSection(aboutHeroPhoto);
         revealAboutSection(aboutHeadline);
         revealAboutSection(aboutIntro);
-        revealAboutSection(aboutPress);
       });
     });
   }
@@ -778,7 +775,7 @@
       linksWrap.className = 'mobile-menu-links';
       var links = dropdown.querySelectorAll('a');
       links.forEach(function(a) {
-        if (a.style.display === 'none') return;
+        if (a.style.display === 'none' || window.getComputedStyle(a).display === 'none') return;
         var link = document.createElement('a');
         link.href = a.getAttribute('href');
         link.textContent = a.textContent;
