@@ -1293,6 +1293,13 @@ html.dark .homepage-hero-icon {
     overflow: hidden;
     height: 100%;
   }
+  /* overflow: hidden is still a scroll container, so the global stable gutter
+     keeps reserving scrollbar width the document can never use — dead space
+     that makes the right gutter wider than the left. The rail owns scrolling
+     here and hides its own scrollbar, so nothing can shift by reclaiming it. */
+  html.homepage-rail-scroll {
+    scrollbar-gutter: auto;
+  }
   html.homepage-rail-scroll .wrap:has(.homepage-layout:not(.homepage-layout--work)) {
     height: 100%;
     overflow: hidden;
@@ -1380,9 +1387,6 @@ html.dark .homepage-hero-icon {
     align-items: flex-end;
     gap: 12px;
   }
-  html.homepage-rail-scroll .homepage-toc-column .site-footer-social {
-    justify-content: flex-end;
-  }
   html.homepage-rail-scroll .homepage-toc-column .site-footer-meta {
     display: flex;
     flex-direction: column;
@@ -1398,7 +1402,10 @@ html.dark .homepage-hero-icon {
   .homepage-shell .homepage-toc-column {
     grid-column: 3;
     width: auto;
-    min-width: 0;
+    /* The auto track used to be floored by the footer's row of three 32px
+       social icons. They're gone from the homepage, so hold that width or the
+       rail's 1fr track absorbs it and the media crowds the links. */
+    min-width: 120px;
   }
   .homepage-shell .homepage-toc {
     top: 90px;
@@ -2099,7 +2106,10 @@ html.dark .homepage-case-study-placeholder {
 
 /* Case study page – colors match index (var(--bg), var(--text), var(--muted-soft), var(--border)) */
 .case-study:not(.blog-post):not(.blog-index) {
-  --case-study-label-col: 140px;
+  /* Reaches 300px at the 1800px content cap and tapers with the viewport so the
+     body column keeps its width on smaller screens. Below 900px the label stops
+     being a column at all, so the floor is only a safety net. */
+  --case-study-label-col: clamp(140px, 16.7vw, 300px);
   --case-study-section-gap: 160px;
   --case-study-content-offset: calc(var(--case-study-label-col) + var(--case-study-section-gap));
   --case-study-media-text-gap: 112px;
@@ -3196,11 +3206,9 @@ html.dark .case-study-image-wrap--tint {
 .case-study-back {
   margin-top: 80px;
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
   gap: 24px;
 }
-.case-study-back-link,
 .case-study-next-link {
   display: inline-block;
   position: relative;
@@ -3211,11 +3219,9 @@ html.dark .case-study-image-wrap--tint {
   text-decoration: none;
   flex-shrink: 0;
 }
-.case-study-back-link:hover,
 .case-study-next-link:hover {
   text-decoration: none;
 }
-.case-study-back-link::after,
 .case-study-next-link::after {
   content: '';
   position: absolute;
@@ -3226,12 +3232,10 @@ html.dark .case-study-image-wrap--tint {
   background-color: currentColor;
   transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
 }
-.case-study-back-link:hover::after,
 .case-study-next-link:hover::after {
   width: 100%;
 }
 @media (max-width: 900px) {
-  .case-study-back-link,
   .case-study-next-link {
     font-size: 17px;
   }
@@ -4060,12 +4064,6 @@ html.dark .site-footer-social .footer-icon img {
   color: var(--muted-soft);
   flex-shrink: 0;
 }
-.site-footer-clock .footer-pin-icon {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-  color: var(--muted-soft);
-}
 .site-footer-time {
   font-variant-numeric: tabular-nums;
 }
@@ -4082,7 +4080,9 @@ html.dark .site-footer-social .footer-icon img {
 
 /* ── About page ─────────────────────────────────────────────────────────── */
 .about-hero {
-  --about-label-col: 140px;
+  /* Matches the case study label column: 300px at the 1800px content cap,
+     tapering with the viewport until the row stacks below 900px. */
+  --about-label-col: clamp(140px, 16.7vw, 300px);
   --about-section-gap: 160px;
 }
 .about-page-section-row {

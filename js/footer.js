@@ -1,6 +1,6 @@
 /**
  * Inject shared footer into #footer-placeholder. Edit this file to change footer content across all pages.
- * Index homepage uses column placeholders (social left, meta right) plus a stacked mobile footer.
+ * Index homepage uses a meta column placeholder plus a stacked mobile footer, and omits the social links.
  */
 (function() {
   var socialHTML =
@@ -18,27 +18,21 @@
 
   var clockHTML =
     '<div class="site-footer-clock" aria-label="Local time">' +
-    '<svg class="footer-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-    '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />' +
-    '</svg>' +
     '<span class="site-footer-location">SJ, CA</span>' +
     '<div class="site-footer-time">00:00:00</div>' +
     '</div>';
 
-  var socialPh = document.getElementById('footer-social-placeholder');
   var metaPh = document.getElementById('footer-meta-placeholder');
   var stackedPh = document.getElementById('footer-placeholder');
 
-  if (socialPh && metaPh) {
-    socialPh.innerHTML =
-      '<div class="site-footer-social" aria-label="Social links">' + socialHTML + '</div>';
+  // Homepage: meta only, in the right-hand column and in the stacked mobile footer.
+  if (metaPh) {
     metaPh.innerHTML =
       '<div class="site-footer-meta">' + copyHTML + clockHTML + '</div>';
     if (stackedPh && stackedPh.getAttribute('data-footer-layout') === 'stacked') {
       stackedPh.innerHTML =
         '<footer class="site-footer site-footer--stacked">' +
         '<div class="site-footer-inner">' +
-        '<div class="site-footer-social" aria-label="Social links">' + socialHTML + '</div>' +
         '<div class="site-footer-meta">' + copyHTML + clockHTML + '</div>' +
         '</div>' +
         '</footer>';
