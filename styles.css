@@ -1436,7 +1436,7 @@ html.dark .homepage-hero-icon {
   }
   .homepage-layout:not(.homepage-layout--work) .homepage-toc-link.toc-active {
     color: var(--text);
-    font-weight: 400;
+    font-weight: 500;
   }
   /* Every item must be identically sized: the rail loops by shifting scroll by
      one set, which only lands on matching content if the list is periodic. */
