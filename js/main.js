@@ -702,7 +702,48 @@
   var pending = 0;
   var pausedVideos = [];
 
-  function getSpreadOrigin(el, event) {
+  function getViewportSize() {
+    var vv = window.visualViewport;
+    if (vv) {
+      return {
+        width: vv.width,
+        height: vv.height,
+        offsetX: vv.offsetLeft,
+        offsetY: vv.offsetTop
+      };
+    }
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+      offsetX: 0,
+      offsetY: 0
+    };
+  }
+
+  function getPointerCoords(event) {
+    if (!event) return null;
+    if (typeof event.clientX === 'number' && typeof event.clientY === 'number') {
+      return { x: event.clientX, y: event.clientY };
+    }
+    if (event.changedTouches && event.changedTouches[0]) {
+      return {
+        x: event.changedTouches[0].clientX,
+        y: event.changedTouches[0].clientY
+      };
+    }
+    if (event.touches && event.touches[0]) {
+      return {
+        x: event.touches[0].clientX,
+        y: event.touches[0].clientY
+      };
+    }
+    return null;
+  }
+
+  // Percentage clip-path tracks the VT snapshot box on mobile Chrome, where px
+  // coords from getBoundingClientRect often don't match the pseudo-element space.
+  function getSpreadClip(el, event) {
+    var vp = getViewportSize();
     var x = null;
     var y = null;
 
@@ -714,19 +755,56 @@
       }
     }
 
-    // Fallback to the tap point if the toggle has no box (e.g. display:none)
-    if ((x === null || y === null) && event &&
-        typeof event.clientX === 'number' && typeof event.clientY === 'number') {
-      x = event.clientX;
-      y = event.clientY;
+    // Fallback if the toggle has no box (display:none duplicate, etc.)
+    if ((x === null || y === null) && event) {
+      var pointer = getPointerCoords(event);
+      if (pointer) {
+        x = pointer.x;
+        y = pointer.y;
+      }
     }
 
-    if (x === null || y === null) return null;
+    if (x === null || y === null || !vp.width || !vp.height) return null;
 
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-    var radius = Math.hypot(Math.max(x, w - x), Math.max(y, h - y));
-    return { x: x, y: y, radius: radius };
+    var xPct = ((x - vp.offsetX) / vp.width) * 100;
+    var yPct = ((y - vp.offsetY) / vp.height) * 100;
+
+    return {
+      from: 'circle(0% at ' + xPct + '% ' + yPct + '%)',
+      to: 'circle(150% at ' + xPct + '% ' + yPct + '%)'
+    };
+  }
+
+  function runSpreadAnimation(origin, event) {
+    var clip = getSpreadClip(origin, event);
+    if (!clip) return;
+
+    try {
+      var prior = [];
+      if (root.getAnimations) {
+        try {
+          prior = root.getAnimations({ subtree: true });
+        } catch (err) {
+          try { prior = root.getAnimations(); } catch (err2) {}
+        }
+      }
+      for (var i = 0; i < prior.length; i++) {
+        var a = prior[i];
+        if (a.effect && a.effect.pseudoElement === '::view-transition-new(root)') {
+          try { a.cancel(); } catch (err) {}
+        }
+      }
+
+      root.animate(
+        [{ clipPath: clip.from }, { clipPath: clip.to }],
+        {
+          duration: readSpreadDurationMs(),
+          easing: readSpreadEasing(),
+          fill: 'forwards',
+          pseudoElement: '::view-transition-new(root)'
+        }
+      );
+    } catch (err) {}
   }
 
   // Snapshotting playing <video> on mobile is expensive and stalls the VT capture.
@@ -757,15 +835,15 @@
 
   function readSpreadDurationMs() {
     var raw = getComputedStyle(root).getPropertyValue('--theme-spread-duration').trim();
-    if (!raw) return 500;
-    if (raw.slice(-2) === 'ms') return parseFloat(raw) || 500;
-    if (raw.slice(-1) === 's') return (parseFloat(raw) || 0.5) * 1000;
-    return 500;
+    if (!raw) return 420;
+    if (raw.slice(-2) === 'ms') return parseFloat(raw) || 420;
+    if (raw.slice(-1) === 's') return (parseFloat(raw) || 0.42) * 1000;
+    return 420;
   }
 
   function readSpreadEasing() {
     var raw = getComputedStyle(root).getPropertyValue('--theme-spread-easing').trim();
-    return raw || 'cubic-bezier(0.33, 1, 0.68, 1)';
+    return raw || 'cubic-bezier(0.8, 0, 1, 0.15)';
   }
 
   function applyTheme(theme, options) {
@@ -782,9 +860,8 @@
     if (document.startViewTransition) {
       // Rapid clicks overlap: only the last transition standing clears the classes
       pending++;
-      var spread = getSpreadOrigin(origin, event);
       root.classList.add('theme-switching');
-      if (spread) root.classList.add('theme-spread');
+      if (origin) root.classList.add('theme-spread');
 
       pauseVideosForTransition();
 
@@ -792,40 +869,11 @@
         setThemeClass(theme);
       });
 
-      // Bake coordinates into WAAPI keyframes. CSS var() inside VT keyframes
-      // does not resolve reliably on mobile Safari, so the circle would start at 0,0.
-      if (spread) {
+      // Re-measure at ready — mobile Chrome can shift layout during capture
+      // (URL bar, video pause). Percentage clip-path matches the VT snapshot box.
+      if (origin) {
         transition.ready.then(function() {
-          try {
-            // Drop any lingering WAAPI animations on this pseudo from a prior toggle
-            var prior = [];
-            if (root.getAnimations) {
-              try {
-                prior = root.getAnimations({ subtree: true });
-              } catch (err) {
-                try { prior = root.getAnimations(); } catch (err2) {}
-              }
-            }
-            for (var i = 0; i < prior.length; i++) {
-              var a = prior[i];
-              if (a.effect && a.effect.pseudoElement === '::view-transition-new(root)') {
-                try { a.cancel(); } catch (err) {}
-              }
-            }
-
-            root.animate(
-              [
-                { clipPath: 'circle(0px at ' + spread.x + 'px ' + spread.y + 'px)' },
-                { clipPath: 'circle(' + spread.radius + 'px at ' + spread.x + 'px ' + spread.y + 'px)' }
-              ],
-              {
-                duration: readSpreadDurationMs(),
-                easing: readSpreadEasing(),
-                fill: 'forwards',
-                pseudoElement: '::view-transition-new(root)'
-              }
-            );
-          } catch (err) {}
+          runSpreadAnimation(origin, event);
         }).catch(function() {});
       }
 
@@ -865,9 +913,23 @@
   }
 
   toggles.forEach(function(toggle) {
+    var lastPointer = null;
+
+    toggle.addEventListener('pointerdown', function(event) {
+      lastPointer = getPointerCoords(event);
+    }, { passive: true });
+
     toggle.addEventListener('click', function(event) {
       var next = root.classList.contains('dark') ? 'light' : 'dark';
-      applyTheme(next, { origin: toggle, event: event });
+      var pointerEvent = event;
+      if (lastPointer) {
+        pointerEvent = {
+          clientX: lastPointer.x,
+          clientY: lastPointer.y
+        };
+      }
+      applyTheme(next, { origin: toggle, event: pointerEvent });
+      lastPointer = null;
       try {
         window.localStorage && localStorage.setItem('theme', next);
       } catch (err) {}

@@ -58,8 +58,8 @@ html {
   --transition-duration: 0.25s;
   --transition-easing: ease-out;
 
-  --theme-spread-duration: 0.5s;
-  --theme-spread-easing: cubic-bezier(0.33, 1, 0.68, 1);
+  --theme-spread-duration: 0.42s;
+  --theme-spread-easing: cubic-bezier(0.8, 0, 1, 0.15);
 
   --header-bg: rgba(255, 255, 255, 0.60);
   --header-border: rgba(17, 24, 39, 0.08);
@@ -123,6 +123,11 @@ html.theme-switching *::after {
    Kill the UA crossfade/blend so the new snapshot just wipes over the old one. */
 html.theme-spread::view-transition-group(root) {
   animation: none;
+  /* Chrome mobile can offset the group; keep snapshots aligned to the viewport */
+  transform: none !important;
+}
+html.theme-spread::view-transition-image-pair(root) {
+  isolation: isolate;
 }
 html.theme-spread::view-transition-old(root),
 html.theme-spread::view-transition-new(root) {
