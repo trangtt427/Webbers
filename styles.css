@@ -62,6 +62,9 @@ html {
   --theme-spread-easing: cubic-bezier(0.8, 0, 1, 0.15);
 
   --header-bg: rgba(255, 255, 255, 0.60);
+  /* Solid stand-in for frost while VT snapshots sit under the live header
+     (backdrop-filter can't blur those layers on Firefox / mobile Chrome). */
+  --header-bg-frosted: rgba(255, 255, 255, 0.92);
   --header-border: rgba(17, 24, 39, 0.08);
   --header-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
 
@@ -148,11 +151,10 @@ html.theme-spread::view-transition-new(root) {
   z-index: 1;
 }
 
-/* Live fixed header paints above the VT overlay; backdrop-filter can't blur
-   snapshot layers (Firefox, iPad Chrome), so hide it and rely on the capture. */
+/* Keep the live header visible during the spread. Backdrop-filter can't sample
+   the VT overlay, so bump opacity to approximate frost instead of going clear. */
 html.theme-switching .site-header {
-  visibility: hidden;
-  pointer-events: none;
+  background-color: var(--header-bg-frosted);
 }
 
 ::selection {
@@ -182,6 +184,7 @@ html.dark {
   --project-text: #d1d5db;
 
   --header-bg: rgba(6, 7, 12, 0.60);
+  --header-bg-frosted: rgba(6, 7, 12, 0.92);
   --header-border: rgba(255, 255, 255, 0.10);
   --header-shadow: 0 18px 46px rgba(0, 0, 0, 0.38);
 }
@@ -804,9 +807,15 @@ html.mobile-menu-instant .mobile-menu-overlay .mobile-menu-links a {
   align-items: center;
   justify-content: center;
   background: transparent;
+  /* Chrome (esp. with color-scheme) paints button/SVG controls in system blue
+     unless color is forced to the theme text. */
+  color: var(--text);
+  -webkit-appearance: none;
+  appearance: none;
+  accent-color: var(--text);
   cursor: pointer;
   padding: 0;
-  transition: background-color var(--transition-duration) var(--transition-easing);
+  transition: background-color var(--transition-duration) var(--transition-easing), color var(--transition-duration) var(--transition-easing);
 }
 .theme-toggle:focus-visible {
   outline: none;
@@ -824,6 +833,9 @@ html.mobile-menu-instant .mobile-menu-overlay .mobile-menu-links a {
   top: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
+  color: var(--text);
+  fill: none;
+  stroke: currentColor;
 }
 
 .icon-moon {
@@ -834,6 +846,7 @@ html.mobile-menu-instant .mobile-menu-overlay .mobile-menu-links a {
   stroke-linejoin: round;
   width: 20px;
   height: 20px;
+  color: var(--text);
 }
 .theme-toggle:hover .icon-moon {
   stroke-width: 0.87;
@@ -845,6 +858,7 @@ html.mobile-menu-instant .mobile-menu-overlay .mobile-menu-links a {
   stroke-width: 1;
   stroke-linecap: round;
   stroke-linejoin: round;
+  color: var(--text);
 }
 .icon-sun circle {
   fill: none;
