@@ -58,6 +58,12 @@ html {
   --transition-duration: 0.25s;
   --transition-easing: ease-out;
 
+  --theme-spread-duration: 0.5s;
+  --theme-spread-easing: cubic-bezier(0.33, 1, 0.68, 1);
+  --spread-x: 50%;
+  --spread-y: 50%;
+  --spread-radius: 150%;
+
   --header-bg: rgba(255, 255, 255, 0.60);
   --header-border: rgba(17, 24, 39, 0.08);
   --header-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
@@ -102,7 +108,7 @@ html.theme-switching *::after {
   transition: none !important;
 }
 
-/* View Transitions API: crossfade the whole page on theme toggle (avoids per-element flicker) */
+/* View Transitions API: animate the whole page on theme toggle (avoids per-element flicker) */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: var(--transition-duration);
@@ -112,6 +118,30 @@ html.theme-switching *::after {
   ::view-transition-old(root),
   ::view-transition-new(root) {
     animation: none;
+  }
+}
+
+/* Circular reveal: the new theme grows out of the toggle over the old one.
+   --spread-* are set on <html> by the toggle handler; the pseudo tree inherits them. */
+html.theme-spread::view-transition-old(root),
+html.theme-spread::view-transition-new(root) {
+  /* UA default is plus-lighter, which washes out the clipped edge */
+  mix-blend-mode: normal;
+}
+html.theme-spread::view-transition-old(root) {
+  animation: none;
+  z-index: 0;
+}
+html.theme-spread::view-transition-new(root) {
+  animation: theme-spread var(--theme-spread-duration) var(--theme-spread-easing) forwards;
+  z-index: 1;
+}
+@keyframes theme-spread {
+  from {
+    clip-path: circle(0px at var(--spread-x) var(--spread-y));
+  }
+  to {
+    clip-path: circle(var(--spread-radius) at var(--spread-x) var(--spread-y));
   }
 }
 

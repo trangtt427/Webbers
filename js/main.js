@@ -699,8 +699,28 @@
     }
   }
 
+  var pending = 0;
+
+  // Circle centred on the toggle, grown until it reaches the farthest viewport corner
+  function setSpreadOrigin(el) {
+    var rect = el.getBoundingClientRect();
+    if (!rect.width && !rect.height) return false;
+
+    var x = rect.left + rect.width / 2;
+    var y = rect.top + rect.height / 2;
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var radius = Math.hypot(Math.max(x, w - x), Math.max(y, h - y));
+
+    root.style.setProperty('--spread-x', x + 'px');
+    root.style.setProperty('--spread-y', y + 'px');
+    root.style.setProperty('--spread-radius', radius + 'px');
+    return true;
+  }
+
   function applyTheme(theme, options) {
     var instant = options && options.instant;
+    var origin = options && options.origin;
     var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (instant || reduced) {
@@ -709,12 +729,18 @@
     }
 
     if (document.startViewTransition) {
+      // Rapid clicks overlap: only the last transition standing clears the classes
+      pending++;
       root.classList.add('theme-switching');
+      if (origin && setSpreadOrigin(origin)) root.classList.add('theme-spread');
       var transition = document.startViewTransition(function() {
         setThemeClass(theme);
       });
       transition.finished.finally(function() {
+        pending--;
+        if (pending > 0) return;
         root.classList.remove('theme-switching');
+        root.classList.remove('theme-spread');
       });
       return;
     }
@@ -747,7 +773,7 @@
   toggles.forEach(function(toggle) {
     toggle.addEventListener('click', function() {
       var next = root.classList.contains('dark') ? 'light' : 'dark';
-      applyTheme(next);
+      applyTheme(next, { origin: toggle });
       try {
         window.localStorage && localStorage.setItem('theme', next);
       } catch (e) {}
