@@ -121,9 +121,14 @@ html.theme-switching *::after {
 /* Circular reveal: clip-path is driven by WAAPI in main.js (baked coordinates).
    CSS variables inside VT keyframes fail on mobile Safari (circle jumps to 0,0).
    Kill the UA crossfade/blend so the new snapshot just wipes over the old one. */
+@keyframes theme-spread-hold {
+  from { opacity: 1; }
+  to { opacity: 1; }
+}
 html.theme-spread::view-transition-group(root) {
-  animation: none;
-  /* Chrome mobile can offset the group; keep snapshots aligned to the viewport */
+  /* Chrome ends the VT when the group animation finishes — a no-op hold keeps
+     the transition alive for the full spread duration (animation:none = instant). */
+  animation: theme-spread-hold var(--theme-spread-duration) linear both !important;
   transform: none !important;
 }
 html.theme-spread::view-transition-image-pair(root) {
@@ -131,7 +136,7 @@ html.theme-spread::view-transition-image-pair(root) {
 }
 html.theme-spread::view-transition-old(root),
 html.theme-spread::view-transition-new(root) {
-  animation: none;
+  animation: none !important;
   mix-blend-mode: normal;
   /* Isolation keeps the clipped new layer from blending with the old snapshot */
   isolation: isolate;
@@ -141,6 +146,13 @@ html.theme-spread::view-transition-old(root) {
 }
 html.theme-spread::view-transition-new(root) {
   z-index: 1;
+}
+
+/* Live fixed header paints above the VT overlay; backdrop-filter can't blur
+   snapshot layers (Firefox, iPad Chrome), so hide it and rely on the capture. */
+html.theme-switching .site-header {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 ::selection {

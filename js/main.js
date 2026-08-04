@@ -701,6 +701,19 @@
 
   var pending = 0;
   var pausedVideos = [];
+  var THEME_SPREAD_MS = 420;
+  var THEME_SPREAD_EASING = 'cubic-bezier(0.8, 0, 1, 0.15)';
+
+  function syncSpreadTimingFromCss() {
+    var raw = getComputedStyle(root).getPropertyValue('--theme-spread-duration').trim();
+    if (raw.slice(-2) === 'ms') THEME_SPREAD_MS = parseFloat(raw) || THEME_SPREAD_MS;
+    else if (raw.slice(-1) === 's') THEME_SPREAD_MS = (parseFloat(raw) || 0.42) * 1000;
+
+    var easing = getComputedStyle(root).getPropertyValue('--theme-spread-easing').trim();
+    if (easing) THEME_SPREAD_EASING = easing;
+  }
+
+  syncSpreadTimingFromCss();
 
   function getViewportSize() {
     var vv = window.visualViewport;
@@ -768,11 +781,37 @@
 
     var xPct = ((x - vp.offsetX) / vp.width) * 100;
     var yPct = ((y - vp.offsetY) / vp.height) * 100;
+    var radiusPx = Math.ceil(Math.hypot(
+      Math.max(x, vp.width - x),
+      Math.max(y, vp.height - y)
+    )) + 2;
 
     return {
-      from: 'circle(0% at ' + xPct + '% ' + yPct + '%)',
-      to: 'circle(150% at ' + xPct + '% ' + yPct + '%)'
+      from: 'circle(0px at ' + xPct + '% ' + yPct + '%)',
+      to: 'circle(' + radiusPx + 'px at ' + xPct + '% ' + yPct + '%)'
     };
+  }
+
+  var SPREAD_PSEUDOS = {
+    '::view-transition-group(root)': true,
+    '::view-transition-old(root)': true,
+    '::view-transition-new(root)': true
+  };
+
+  function cancelSpreadPseudoAnimations() {
+    if (!root.getAnimations) return;
+    var prior = [];
+    try {
+      prior = root.getAnimations({ subtree: true });
+    } catch (err) {
+      try { prior = root.getAnimations(); } catch (err2) {}
+    }
+    for (var i = 0; i < prior.length; i++) {
+      var a = prior[i];
+      if (a.effect && SPREAD_PSEUDOS[a.effect.pseudoElement]) {
+        try { a.cancel(); } catch (err) {}
+      }
+    }
   }
 
   function runSpreadAnimation(origin, event) {
@@ -780,26 +819,13 @@
     if (!clip) return;
 
     try {
-      var prior = [];
-      if (root.getAnimations) {
-        try {
-          prior = root.getAnimations({ subtree: true });
-        } catch (err) {
-          try { prior = root.getAnimations(); } catch (err2) {}
-        }
-      }
-      for (var i = 0; i < prior.length; i++) {
-        var a = prior[i];
-        if (a.effect && a.effect.pseudoElement === '::view-transition-new(root)') {
-          try { a.cancel(); } catch (err) {}
-        }
-      }
+      cancelSpreadPseudoAnimations();
 
       root.animate(
         [{ clipPath: clip.from }, { clipPath: clip.to }],
         {
-          duration: readSpreadDurationMs(),
-          easing: readSpreadEasing(),
+          duration: THEME_SPREAD_MS,
+          easing: THEME_SPREAD_EASING,
           fill: 'forwards',
           pseudoElement: '::view-transition-new(root)'
         }
@@ -834,16 +860,11 @@
   }
 
   function readSpreadDurationMs() {
-    var raw = getComputedStyle(root).getPropertyValue('--theme-spread-duration').trim();
-    if (!raw) return 420;
-    if (raw.slice(-2) === 'ms') return parseFloat(raw) || 420;
-    if (raw.slice(-1) === 's') return (parseFloat(raw) || 0.42) * 1000;
-    return 420;
+    return THEME_SPREAD_MS;
   }
 
   function readSpreadEasing() {
-    var raw = getComputedStyle(root).getPropertyValue('--theme-spread-easing').trim();
-    return raw || 'cubic-bezier(0.8, 0, 1, 0.15)';
+    return THEME_SPREAD_EASING;
   }
 
   function applyTheme(theme, options) {
@@ -858,6 +879,7 @@
     }
 
     if (document.startViewTransition) {
+      syncSpreadTimingFromCss();
       // Rapid clicks overlap: only the last transition standing clears the classes
       pending++;
       root.classList.add('theme-switching');
