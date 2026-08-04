@@ -62,9 +62,6 @@ html {
   --theme-spread-easing: cubic-bezier(0.8, 0, 1, 0.15);
 
   --header-bg: rgba(255, 255, 255, 0.60);
-  /* Solid stand-in for frost while VT snapshots sit under the live header
-     (backdrop-filter can't blur those layers on Firefox / mobile Chrome). */
-  --header-bg-frosted: rgba(255, 255, 255, 0.92);
   --header-border: rgba(17, 24, 39, 0.08);
   --header-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
 
@@ -151,12 +148,6 @@ html.theme-spread::view-transition-new(root) {
   z-index: 1;
 }
 
-/* Keep the live header visible during the spread. Backdrop-filter can't sample
-   the VT overlay, so bump opacity to approximate frost instead of going clear. */
-html.theme-switching .site-header {
-  background-color: var(--header-bg-frosted);
-}
-
 ::selection {
   background: #b3d4fc;
   color: inherit;
@@ -184,7 +175,6 @@ html.dark {
   --project-text: #d1d5db;
 
   --header-bg: rgba(6, 7, 12, 0.60);
-  --header-bg-frosted: rgba(6, 7, 12, 0.92);
   --header-border: rgba(255, 255, 255, 0.10);
   --header-shadow: 0 18px 46px rgba(0, 0, 0, 0.38);
 }
