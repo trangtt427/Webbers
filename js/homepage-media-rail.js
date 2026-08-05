@@ -55,12 +55,14 @@
     return height > 0 ? height : 60;
   }
 
-  // Land on the first case study with its top edge just below the header. The
-  // item before it stays in flow above, blurred under the header rather than
-  // cropped out, so the loop reads as continuous in both directions.
+  // Land on Human Interest with its top edge just below the header. Prefer a
+  // middle loop set so there's a full period of travel in both directions
+  // before re-anchoring — otherwise the wrap fires mid-carousel (around
+  // Squarespace → Tactic) and any subpixel period drift reads as a jump.
   function resetInitialScroll() {
     if (!DESKTOP_MQ.matches) return;
-    var landing = mediaItems[sets > 1 ? originalItems.length : 0];
+    var setIndex = sets >= 3 ? 2 : (sets > 1 ? 1 : 0);
+    var landing = mediaItems[setIndex * originalItems.length];
     if (!landing) return;
     currentTop = targetTop = landing.offsetTop - headerClearance();
     rail.scrollTop = currentTop;
@@ -74,18 +76,25 @@
     if (sets > 1) return;
     appendSet();
     baseHeight = measureBase();
-    // Keep the re-anchor window clear of the native scroll limits.
-    while (sets < 4 && baseHeight > 0 && baseHeight * sets - rail.clientHeight < baseHeight * 1.5) {
+    // Need ≥4 sets so the safe window can span a full period of travel
+    // without running into the native scroll limits.
+    while (sets < 4 && baseHeight > 0) {
       appendSet();
     }
     resetInitialScroll();
   }
 
   function anchor() {
-    if (sets < 2 || baseHeight <= 0) return;
+    if (sets < 3 || baseHeight <= 0) return;
+    // Keep scroll in [baseHeight, (sets - 1) * baseHeight): one full set of
+    // headroom above and below the starting middle set. The old [0.5, 1.5)
+    // window re-anchored after ~2 items — right as Squarespace slipped behind
+    // the header — so any subpixel period drift read as a visible jump.
+    var low = baseHeight;
+    var high = baseHeight * (sets - 1);
     var shift = 0;
-    while (currentTop + shift >= baseHeight * 1.5) shift -= baseHeight;
-    while (currentTop + shift < baseHeight * 0.5) shift += baseHeight;
+    while (currentTop + shift >= high) shift -= baseHeight;
+    while (currentTop + shift < low) shift += baseHeight;
     if (shift === 0) return;
     // The list repeats, so this lands on visually identical content. Shifting
     // both ends keeps the in-flight animation intact.
