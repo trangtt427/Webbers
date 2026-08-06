@@ -66,14 +66,14 @@ html {
   --header-shadow: 0 18px 46px rgba(15, 23, 42, 0.10);
 
   --media-radius: 0;
-  --page-gutter: 20px;
+  --page-gutter: 40px;
   --content-max-width: 1800px;
   --logo-dot: #e446a8;
 }
 @media (max-width: 900px) {
   :root {
     --media-radius: 0;
-    --page-gutter: 20px;
+    --page-gutter: 40px;
   }
 }
 
