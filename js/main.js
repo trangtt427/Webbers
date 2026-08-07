@@ -702,7 +702,7 @@
   var pending = 0;
   var pausedVideos = [];
   var THEME_SPREAD_MS = 420;
-  var THEME_SPREAD_EASING = 'cubic-bezier(0.8, 0, 1, 0.15)';
+  var THEME_SPREAD_EASING = 'cubic-bezier(0.4, 0, 0.8, 0.5)';
 
   function syncSpreadTimingFromCss() {
     var raw = getComputedStyle(root).getPropertyValue('--theme-spread-duration').trim();
@@ -792,13 +792,10 @@
     };
   }
 
-  var SPREAD_PSEUDOS = {
-    '::view-transition-group(root)': true,
-    '::view-transition-old(root)': true,
-    '::view-transition-new(root)': true
-  };
-
-  function cancelSpreadPseudoAnimations() {
+  function cancelLingeringNewRootAnimations() {
+    // Only clear prior WAAPI on the new snapshot. Do NOT cancel
+    // ::view-transition-group(root) — that hold keeps Chrome from ending the
+    // transition early (which reads as a mid-spread "stop").
     if (!root.getAnimations) return;
     var prior = [];
     try {
@@ -808,7 +805,7 @@
     }
     for (var i = 0; i < prior.length; i++) {
       var a = prior[i];
-      if (a.effect && SPREAD_PSEUDOS[a.effect.pseudoElement]) {
+      if (a.effect && a.effect.pseudoElement === '::view-transition-new(root)') {
         try { a.cancel(); } catch (err) {}
       }
     }
@@ -819,14 +816,31 @@
     if (!clip) return;
 
     try {
-      cancelSpreadPseudoAnimations();
+      cancelLingeringNewRootAnimations();
+
+      var toMatch = clip.to.match(/circle\(([0-9.]+)px/);
+      var toR = toMatch ? parseFloat(toMatch[1]) : 0;
+      var atMatch = clip.from.match(/at\s+(.+)\)$/);
+      var at = atMatch ? atMatch[1] : null;
+
+      // Native cubic-bezier between two radii is continuous (no piecewise kinks).
+      // Start slightly above 0 so the first painted frame isn't a zero-size pop.
+      var fromPath = clip.from;
+      var toPath = clip.to;
+      if (toR && at) {
+        var startR = Math.min(14, toR * 0.03);
+        fromPath = 'circle(' + Math.round(startR) + 'px at ' + at + ')';
+        toPath = 'circle(' + Math.round(toR) + 'px at ' + at + ')';
+      }
 
       root.animate(
-        [{ clipPath: clip.from }, { clipPath: clip.to }],
+        [{ clipPath: fromPath }, { clipPath: toPath }],
         {
           duration: THEME_SPREAD_MS,
           easing: THEME_SPREAD_EASING,
-          fill: 'forwards',
+          // both: apply the start clip immediately — avoids a 1-frame flash of the
+          // full new snapshot before the WAAPI clip takes effect
+          fill: 'both',
           pseudoElement: '::view-transition-new(root)'
         }
       );

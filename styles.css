@@ -59,7 +59,8 @@ html {
   --transition-easing: ease-out;
 
   --theme-spread-duration: 0.42s;
-  --theme-spread-easing: cubic-bezier(0.8, 0, 1, 0.15);
+  /* Ease-in with early motion (x1=0.4) so it never sits still, then accelerates. */
+  --theme-spread-easing: cubic-bezier(0.4, 0, 0.8, 0.5);
 
   --header-bg: rgba(255, 255, 255, 0.60);
   --header-border: rgba(17, 24, 39, 0.08);
