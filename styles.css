@@ -73,7 +73,7 @@ html {
 @media (max-width: 900px) {
   :root {
     --media-radius: 0;
-    --page-gutter: 40px;
+    --page-gutter: 20px;
   }
 }
 
