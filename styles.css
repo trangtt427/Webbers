@@ -2571,6 +2571,10 @@ html.dark .blog-index-thumb-placeholder::before {
 .case-study-image-wrap--crop {
   aspect-ratio: 4 / 3;
 }
+/* Match homepage HI featured media (3 / 2) — a bit more rectangular than 4 / 3 */
+.case-study--human-interest > .case-study-image-wrap--crop {
+  aspect-ratio: 3 / 2;
+}
 .case-study-image-wrap--crop video {
   width: 100%;
   height: 100%;
@@ -3208,6 +3212,18 @@ html.dark .case-study-image-wrap--tint {
   margin-top: 200px;
   padding-top: 48px;
   border-top: 1px solid var(--border);
+  text-align: left;
+}
+/* Full-width section (keeps the top rule). Label + title share a max-content
+   column on the right so their left edges line up. */
+.case-study:not(.blog-post):not(.blog-index) > .case-study-next {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+.case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-label,
+.case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-title {
+  grid-column: 2;
+  text-align: left;
 }
 .case-study-next-label {
   font-size: 16px;
