@@ -447,8 +447,8 @@
   var hasMediaRail = document.querySelector('.homepage-media-rail');
   var homepageLayout = document.querySelector('.homepage-layout:not(.homepage-layout--work)');
   var DESKTOP_MQ = window.matchMedia('(min-width: 1001px)');
-  var sectionIds = ['intro', 'human-interest', 'squarespace', 'tactic', 'baby-design-ui'];
-  var caseStudyIds = ['human-interest', 'squarespace', 'tactic', 'baby-design-ui'];
+  var sectionIds = ['intro', 'squarespace', 'human-interest', 'tactic', 'baby-design-ui'];
+  var caseStudyIds = ['squarespace', 'human-interest', 'tactic', 'baby-design-ui'];
   var sections = [];
   for (var i = 0; i < sectionIds.length; i++) {
     var el = document.getElementById(sectionIds[i]);

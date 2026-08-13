@@ -70,7 +70,7 @@
       <section class="case-study-intro">
         <span class="case-study-intro-label">Squarespace</span>
         <p class="case-study-name">
-          I led the evolution of Acuity Scheduling beyond 1:1 appointments, bringing in a new era of class scheduling and tapping into an underserved market.
+          Leveraging an AI-forward development process, I led the evolution of Acuity Scheduling beyond 1:1 appointments, bringing in a new era of class scheduling and tapping into an underserved market.
         </p>
       </section>
 
@@ -95,7 +95,9 @@
       </section>
 
       <figure class="case-study-image-wrap case-study-image-wrap--crop lightbox-openable" role="button" tabindex="0" aria-label="View full size">
-        <img src="assets/images/squarespace/acuityfromsqsp.png" alt="Acuity Classes scheduling redesign" class="case-study-image" />
+        <video autoplay loop muted playsinline>
+          <source src="assets/videos/squarespace/calendar.mp4" type="video/mp4" />
+        </video>
       </figure>
 
       <section class="case-study-body">
@@ -121,7 +123,7 @@
               <source src="assets/videos/squarespace/claudeprototype.mp4" type="video/mp4" />
             </video>
           </div>
-          <figcaption class="case-study-caption">Prototype built by Claude Code.</figcaption>
+          <figcaption class="case-study-caption">Prototype built in Claude Code.</figcaption>
         </figure>
       </section>
 
@@ -143,8 +145,8 @@
 
       <section class="case-study-body">
         <div class="case-study-detail-label">Concepting</div>
-        <h2>The project already kicked off with a feature-rich prototype resembling Squarespace's design language, so the concepting phase was all about refinement&mdash;using the exact system components, tackling complex scheduling edge cases, and carefully planning the rollout to new and existing users.</h2>
-        <p>There was a lot of experimentation during this phase. However, stakeholders found it difficult to give feedback and see the various states without having to go through the flows. I ended up building an annotation UI on top of the prototype to allow people to leave comments, a way to switch between concepts for each milestone, and a "canvas mode" to see all screens.</p>
+        <h2>The project already kicked off with a feature-rich prototype using most of Squarespace's design language, so the concepting phase was all about refinement&mdash;using exact components, tackling complex scheduling edge cases, and planning the rollout to new and existing users.</h2>
+        <p>There was a lot of experimentation during this phase. It was the first time engineers worked outside of Figma to understand the flows, which had its issues. I tried to close the gaps as best I could with proprietary tools for annotating and viewing "all artboards"&mdash;quality of life things that we're used to in Figma. </p>
         <figure>
           <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
             <video autoplay loop muted playsinline>
@@ -208,17 +210,7 @@
         </figure>
       </section>
 
-      <section class="case-study-body">
-        <h2>We dedicated a whole surface to see all past and upcoming sessions for a class, and the attendees for each. This high altitude view gave admins the visibility that they've always wanted while managing their classes.</h2>
-        <figure>
-          <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
-            <video autoplay loop muted playsinline>
-              <source src="assets/videos/squarespace/management.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <figcaption class="case-study-caption">The Class Details and Session Details screens.</figcaption>
-        </figure>
-      </section>
+   
       <section class="case-study-body">
         <h2>For months, we relied on the Claude prototype to build off of. After concerns from engineers about its tradeoffs, I made the decision to jump back into Figma for sake of better collaboration and progress.</h2>
         <p>The development team had trouble figuring out from the prototypes what were MVP and was Vision. With Figma, you'd have explicit documentation calling out which artboards are associated with each, which would lead to more engagement from engineers. My proprietary comment tools and markdown files couldn't replace that.</p>
@@ -232,8 +224,9 @@
 
       <section class="case-study-body">
         <div class="case-study-detail-label">Implementation</div>
-        <h2>During development, we ended up omitting a lot of the niceties that I included in the vision prototype.</h2>
+        <h2>During development, we ended up omitting a lot of the niceties that I included in the vision prototype, while making some drastic reprioritization decisions.</h2>
         <p>We were already behind on schedule so I made some prioritization calls to drop some of the features I initially scoped out. While these extra functionalities really impressed early stakeholders, they weren't necessary to the jobs to be done. Everyone was in agreement and we moved them to post-MVP items.</p>
+        <p>Because the project took longer than expected, Leadership wanted us to shift our focus to smaller projects of high value right after delivering the MVP, which meant putting the class management experience aside for now.</p>
         <figure>
           <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
             <video autoplay loop muted playsinline>
@@ -246,23 +239,12 @@
 
       <section class="case-study-body">
 
-        <h2>The idea was to launch the new class creation experience first, then class management later. But not without initiating a bug bash with the CustOps team.</h2>
-        <p>Since this is a huge change to the product, we assembled a team of CustOps members to test out the new experience for about a week. With their help, we able to document about two dozen bugs, which our entire team of engineers swarmed on for the next week. I also made a few design changes based on some of that feedback (mainly around messaging).</p>
+        <h2>We put what we had ready into production, and opened it to just the internal team and CustOps to initiate a bug bash.</h2>
+        <p>With all hands on deck, we identified about two dozen bugs, which our entire team of engineers swarmed on for the next week. I also made a few design changes based on some of that feedback (mainly around messaging).</p>
+        <p>Once we were comfortable for the product to be out in the wild, we put it into production for 1% of new users. No issues cropped up, so we immediately ramped up to 100%.</p>
       </section>
 
-      
-
-
-      <figure class="case-study-figure-caption">
-        <div class="case-study-image-wrap lightbox-openable" role="button" tabindex="0" aria-label="View full size">
-          <img src="assets/images/squarespace/bugbash.png" alt="Bug Bash Plan" class="case-study-image" />
-        </div>
-      </figure>
-
-      <section class="case-study-body">
-        <p>Once we were comfortable for the product to be out in the wild, we put it into production for 5% of our users. No issues cropped up for a week, so we ramped up to 10%. At this time, we were putting the finishing touches on the management experience.</p>
-      </section>
-
+     
 
       <section class="case-study-body">
         <div class="case-study-detail-label">Outcome</div>
@@ -272,7 +254,7 @@
 
       <section class="case-study-next">
         <p class="case-study-next-label">Next</p>
-        <h3 class="case-study-next-title"><a href="tactic">Tactic →</a></h3>
+        <h3 class="case-study-next-title"><a href="tactic">Tactic: B2B Accounting for Crypto →</a></h3>
       </section>
     </main>
 

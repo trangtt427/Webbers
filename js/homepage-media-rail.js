@@ -55,7 +55,7 @@
     return height > 0 ? height : 60;
   }
 
-  // Land on Human Interest with its top edge just below the header. Prefer a
+  // Land on the first case study with its top edge just below the header. Prefer a
   // middle loop set so there's a full period of travel in both directions
   // before re-anchoring — otherwise the wrap fires mid-carousel (around
   // Squarespace → Tactic) and any subpixel period drift reads as a jump.

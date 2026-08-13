@@ -1710,6 +1710,21 @@ html.dark .homepage-hero-icon {
     background: #1a1a1a;
   }
 }
+.homepage-layout--work .homepage-case-study--featured .homepage-case-study-visual {
+  position: relative;
+}
+.homepage-layout--work .homepage-case-study--featured .homepage-case-study-pill--overlay {
+  display: inline-flex;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  margin-bottom: 0;
+  color: #fff;
+  background: #1a1a1a;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
 @media (min-width: 901px) {
   .homepage-case-study-inner--two-col {
     grid-template-columns: 5fr 6fr;
@@ -3214,26 +3229,6 @@ html.dark .case-study-image-wrap--tint {
   border-top: 1px solid var(--border);
   text-align: left;
 }
-/* Full-width section (keeps the top rule). Title shrink-wraps on the right; label
-   stretches to the same width so both left edges line up. Long titles wrap. */
-.case-study:not(.blog-post):not(.blog-index) > .case-study-next {
-  display: grid;
-  grid-template-columns: 1fr auto;
-}
-.case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-label,
-.case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-title {
-  grid-column: 2;
-  text-align: left;
-  max-width: min(28rem, 100%);
-  min-width: 0;
-}
-.case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-label {
-  justify-self: stretch;
-}
-.case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-title {
-  justify-self: end;
-  width: fit-content;
-}
 .case-study-next-label {
   font-size: 16px;
   font-weight: 400;
@@ -3245,7 +3240,7 @@ html.dark .case-study-image-wrap--tint {
   font-weight: 400;
   margin: 0;
   color: var(--text);
-  max-width: 100%;
+  max-width: min(28rem, 100%);
 }
 .case-study-next-title a {
   display: inline;
