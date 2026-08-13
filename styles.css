@@ -1479,7 +1479,7 @@ html.dark .homepage-hero-icon {
     display: block;
     width: 1px;
     height: 48px;
-    background: var(--muted-soft);
+    background: var(--border);
     margin: 8px 0 4px;
     align-self: flex-end;
     flex-shrink: 0;
