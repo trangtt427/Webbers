@@ -1689,41 +1689,41 @@ html.dark .homepage-hero-icon {
 .homepage-case-study-pill--overlay {
   display: none;
 }
+.homepage-case-study-pill--copy {
+  display: none;
+}
+.homepage-case-study-pill--overlay.homepage-case-study-pill--overlay-dark {
+  color: #fff;
+  background: #1a1a1a;
+  border: none;
+}
 @media (min-width: 1001px) {
   .homepage-layout:not(.homepage-layout--work) .homepage-media-item .homepage-case-study-visual:has(.homepage-case-study-pill--overlay) {
     position: relative;
   }
-  .homepage-layout:not(.homepage-layout--work) .homepage-case-study-pill--overlay {
+  .homepage-layout--work .homepage-case-study-visual:has(.homepage-case-study-pill--overlay) {
+    position: relative;
+  }
+  .homepage-case-study-pill--overlay {
     display: inline-flex;
     position: absolute;
     top: 12px;
     left: 12px;
     z-index: 2;
     margin-bottom: 0;
-    color: #1a1a1a;
-    background: #fff;
-    border: none;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
   }
-  .homepage-layout:not(.homepage-layout--work) .homepage-case-study-pill--overlay-dark {
-    color: #fff;
-    background: #1a1a1a;
+}
+@media (max-width: 1000px) {
+  .homepage-case-study-pill--overlay {
+    display: none !important;
   }
-}
-.homepage-layout--work .homepage-case-study--featured .homepage-case-study-visual {
-  position: relative;
-}
-.homepage-layout--work .homepage-case-study--featured .homepage-case-study-pill--overlay {
-  display: inline-flex;
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 2;
-  margin-bottom: 0;
-  color: #fff;
-  background: #1a1a1a;
-  border: none;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  .homepage-case-study-pill--copy {
+    display: inline-flex;
+  }
+  .homepage-case-study-pill-dot {
+    display: none;
+  }
 }
 @media (min-width: 901px) {
   .homepage-case-study-inner--two-col {
