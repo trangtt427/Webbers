@@ -4228,8 +4228,9 @@ html.dark .site-footer-social .footer-icon img {
   padding-top: 6px;
 }
 .about-page-section-label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
+  line-height: 1.5;
   color: var(--muted-soft);
 }
 .about-page-headline {
