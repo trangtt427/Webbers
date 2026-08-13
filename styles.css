@@ -3214,16 +3214,25 @@ html.dark .case-study-image-wrap--tint {
   border-top: 1px solid var(--border);
   text-align: left;
 }
-/* Full-width section (keeps the top rule). Label + title share a max-content
-   column on the right so their left edges line up. */
+/* Full-width section (keeps the top rule). Title shrink-wraps on the right; label
+   stretches to the same width so both left edges line up. Long titles wrap. */
 .case-study:not(.blog-post):not(.blog-index) > .case-study-next {
   display: grid;
-  grid-template-columns: 1fr max-content;
+  grid-template-columns: 1fr auto;
 }
 .case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-label,
 .case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-title {
   grid-column: 2;
   text-align: left;
+  max-width: min(28rem, 100%);
+  min-width: 0;
+}
+.case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-label {
+  justify-self: stretch;
+}
+.case-study:not(.blog-post):not(.blog-index) > .case-study-next .case-study-next-title {
+  justify-self: end;
+  width: fit-content;
 }
 .case-study-next-label {
   font-size: 16px;
@@ -3236,32 +3245,15 @@ html.dark .case-study-image-wrap--tint {
   font-weight: 400;
   margin: 0;
   color: var(--text);
+  max-width: 100%;
 }
 .case-study-next-title a {
-  display: inline-block;
+  display: inline;
   color: inherit;
   text-decoration: none;
 }
-/* Animated underline on “Next” links — case studies only (blog titles are often long) */
-.case-study:not(.blog-post) .case-study-next-title a {
-  position: relative;
-  padding-bottom: 1px;
-}
-.case-study:not(.blog-post) .case-study-next-title a:hover {
+.case-study-next-title a:hover {
   text-decoration: none;
-}
-.case-study:not(.blog-post) .case-study-next-title a::after {
-  content: '';
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: currentColor;
-  transition: width var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
-}
-.case-study:not(.blog-post) .case-study-next-title a:hover::after {
-  width: 100%;
 }
 
 .case-study-back {
@@ -3298,6 +3290,9 @@ html.dark .case-study-image-wrap--tint {
 }
 @media (max-width: 900px) {
   .case-study-next-link {
+    font-size: 17px;
+  }
+  .case-study-next-title {
     font-size: 17px;
   }
 }
