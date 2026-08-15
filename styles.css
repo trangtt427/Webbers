@@ -59,8 +59,9 @@ html {
   --transition-easing: ease-out;
 
   --theme-spread-duration: 0.42s;
-  /* Ease-in with early motion (x1=0.4) so it never sits still, then accelerates. */
-  --theme-spread-easing: cubic-bezier(0.4, 0, 0.8, 0.5);
+  --theme-spread-hold-duration: 0.48s;
+  /* Linear so the radius reaches 100% exactly when the animation ends. */
+  --theme-spread-easing: linear;
 
   --header-bg: rgba(255, 255, 255, 0.60);
   --header-border: rgba(17, 24, 39, 0.08);
@@ -129,7 +130,7 @@ html.theme-switching *::after {
 html.theme-spread::view-transition-group(root) {
   /* Chrome ends the VT when the group animation finishes — a no-op hold keeps
      the transition alive for the full spread duration (animation:none = instant). */
-  animation: theme-spread-hold var(--theme-spread-duration) linear both !important;
+  animation: theme-spread-hold var(--theme-spread-hold-duration, var(--theme-spread-duration)) linear both !important;
   transform: none !important;
 }
 html.theme-spread::view-transition-image-pair(root) {

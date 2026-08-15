@@ -55,6 +55,10 @@
     return height > 0 ? height : 60;
   }
 
+  function scrollTopForItem(item) {
+    return item.offsetTop - headerClearance();
+  }
+
   // Land on the first case study with its top edge just below the header. Prefer a
   // middle loop set so there's a full period of travel in both directions
   // before re-anchoring — otherwise the wrap fires mid-carousel (around
@@ -64,7 +68,7 @@
     var setIndex = sets >= 3 ? 2 : (sets > 1 ? 1 : 0);
     var landing = mediaItems[setIndex * originalItems.length];
     if (!landing) return;
-    currentTop = targetTop = landing.offsetTop - headerClearance();
+    currentTop = targetTop = scrollTopForItem(landing);
     rail.scrollTop = currentTop;
     var id = landing.getAttribute('data-work-id');
     lastActiveId = id;
@@ -150,7 +154,7 @@
     for (var i = 0; i < mediaItems.length; i++) {
       var item = mediaItems[i];
       if (item.getAttribute('data-work-id') !== id) continue;
-      var top = item.offsetTop + item.offsetHeight / 2 - rail.clientHeight * FOCUS_RATIO;
+      var top = scrollTopForItem(item);
       var distance = Math.abs(top - currentTop);
       if (distance < best) {
         best = distance;

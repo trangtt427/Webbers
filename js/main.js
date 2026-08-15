@@ -702,7 +702,8 @@
   var pending = 0;
   var pausedVideos = [];
   var THEME_SPREAD_MS = 420;
-  var THEME_SPREAD_EASING = 'cubic-bezier(0.4, 0, 0.8, 0.5)';
+  var THEME_SPREAD_EASING = 'linear';
+  var THEME_SPREAD_HOLD_MS = 480;
 
   function syncSpreadTimingFromCss() {
     var raw = getComputedStyle(root).getPropertyValue('--theme-spread-duration').trim();
@@ -711,6 +712,11 @@
 
     var easing = getComputedStyle(root).getPropertyValue('--theme-spread-easing').trim();
     if (easing) THEME_SPREAD_EASING = easing;
+
+    var holdRaw = getComputedStyle(root).getPropertyValue('--theme-spread-hold-duration').trim();
+    if (holdRaw.slice(-2) === 'ms') THEME_SPREAD_HOLD_MS = parseFloat(holdRaw) || THEME_SPREAD_HOLD_MS;
+    else if (holdRaw.slice(-1) === 's') THEME_SPREAD_HOLD_MS = (parseFloat(holdRaw) || 0.48) * 1000;
+    else THEME_SPREAD_HOLD_MS = THEME_SPREAD_MS + 60;
   }
 
   syncSpreadTimingFromCss();
@@ -753,10 +759,41 @@
     return null;
   }
 
-  // Percentage clip-path tracks the VT snapshot box on mobile Chrome, where px
-  // coords from getBoundingClientRect often don't match the pseudo-element space.
+  function isInFixedLayer(el) {
+    if (!el) return false;
+    var node = el;
+    while (node && node !== document.documentElement) {
+      if (getComputedStyle(node).position === 'fixed') return true;
+      node = node.parentElement;
+    }
+    return false;
+  }
+
+  function getReferenceBox() {
+    var vp = getViewportSize();
+    return {
+      width: Math.max(
+        document.documentElement.scrollWidth,
+        document.documentElement.clientWidth,
+        vp.width
+      ),
+      height: Math.max(
+        document.documentElement.scrollHeight,
+        document.documentElement.clientHeight,
+        vp.height
+      )
+    };
+  }
+
+  // Clip-path percentages map to the VT root snapshot (full document), not the
+  // viewport. A viewport-sized px radius stops expanding once it hits the screen
+  // edge while content below the fold is still uncovered — then the transition
+  // ends and the remainder snaps to the new theme.
   function getSpreadClip(el, event) {
     var vp = getViewportSize();
+    var ref = getReferenceBox();
+    var scrollX = window.scrollX || window.pageXOffset || 0;
+    var scrollY = window.scrollY || window.pageYOffset || 0;
     var x = null;
     var y = null;
 
@@ -777,18 +814,28 @@
       }
     }
 
-    if (x === null || y === null || !vp.width || !vp.height) return null;
+    if (x === null || y === null || !ref.width || !ref.height) return null;
 
-    var xPct = ((x - vp.offsetX) / vp.width) * 100;
-    var yPct = ((y - vp.offsetY) / vp.height) * 100;
-    var radiusPx = Math.ceil(Math.hypot(
-      Math.max(x, vp.width - x),
-      Math.max(y, vp.height - y)
-    )) + 2;
+    // Fixed header toggle: viewport coords, not document scroll coords.
+    var fixedOrigin = isInFixedLayer(el);
+    var docX = fixedOrigin ? x : x + scrollX;
+    var docY = fixedOrigin ? y : y + scrollY;
+    var xPct = (docX / ref.width) * 100;
+    var yPct = (docY / ref.height) * 100;
+
+    var maxDist = Math.max(
+      Math.hypot(docX, docY),
+      Math.hypot(ref.width - docX, docY),
+      Math.hypot(docX, ref.height - docY),
+      Math.hypot(ref.width - docX, ref.height - docY)
+    );
+    var diagonal = Math.hypot(ref.width, ref.height);
+    // Generous buffer so the final frame fully covers the snapshot before VT ends.
+    var radiusPct = Math.max(150, Math.ceil((maxDist / diagonal) * 100) + 15);
 
     return {
-      from: 'circle(0px at ' + xPct + '% ' + yPct + '%)',
-      to: 'circle(' + radiusPx + 'px at ' + xPct + '% ' + yPct + '%)'
+      from: 'circle(0% at ' + xPct + '% ' + yPct + '%)',
+      to: 'circle(' + radiusPct + '% at ' + xPct + '% ' + yPct + '%)'
     };
   }
 
@@ -813,38 +860,42 @@
 
   function runSpreadAnimation(origin, event) {
     var clip = getSpreadClip(origin, event);
-    if (!clip) return;
+    if (!clip) return Promise.resolve();
 
     try {
       cancelLingeringNewRootAnimations();
 
-      var toMatch = clip.to.match(/circle\(([0-9.]+)px/);
+      var toMatch = clip.to.match(/circle\(([0-9.]+)(px|%)/);
       var toR = toMatch ? parseFloat(toMatch[1]) : 0;
+      var unit = toMatch ? toMatch[2] : 'px';
       var atMatch = clip.from.match(/at\s+(.+)\)$/);
       var at = atMatch ? atMatch[1] : null;
 
-      // Native cubic-bezier between two radii is continuous (no piecewise kinks).
-      // Start slightly above 0 so the first painted frame isn't a zero-size pop.
       var fromPath = clip.from;
       var toPath = clip.to;
       if (toR && at) {
-        var startR = Math.min(14, toR * 0.03);
-        fromPath = 'circle(' + Math.round(startR) + 'px at ' + at + ')';
-        toPath = 'circle(' + Math.round(toR) + 'px at ' + at + ')';
+        var startR = unit === '%'
+          ? Math.max(0.5, toR * 0.02)
+          : Math.min(14, toR * 0.02);
+        var startStr = unit === '%' ? startR.toFixed(2) : String(Math.round(startR));
+        var endStr = unit === '%' ? toR.toFixed(2) : String(Math.round(toR));
+        fromPath = 'circle(' + startStr + unit + ' at ' + at + ')';
+        toPath = 'circle(' + endStr + unit + ' at ' + at + ')';
       }
 
-      root.animate(
+      var anim = root.animate(
         [{ clipPath: fromPath }, { clipPath: toPath }],
         {
           duration: THEME_SPREAD_MS,
           easing: THEME_SPREAD_EASING,
-          // both: apply the start clip immediately — avoids a 1-frame flash of the
-          // full new snapshot before the WAAPI clip takes effect
           fill: 'both',
           pseudoElement: '::view-transition-new(root)'
         }
       );
-    } catch (err) {}
+      return anim.finished.catch(function() {});
+    } catch (err) {
+      return Promise.resolve();
+    }
   }
 
   // Snapshotting playing <video> on mobile is expensive and stalls the VT capture.
@@ -899,25 +950,29 @@
       root.classList.add('theme-switching');
       if (origin) root.classList.add('theme-spread');
 
+      if (origin) {
+        root.style.setProperty('--theme-spread-hold-duration', THEME_SPREAD_HOLD_MS + 'ms');
+      }
+
       pauseVideosForTransition();
 
       var transition = document.startViewTransition(function() {
         setThemeClass(theme);
       });
 
-      // Re-measure at ready — mobile Chrome can shift layout during capture
-      // (URL bar, video pause). Percentage clip-path matches the VT snapshot box.
+      var spreadPromise = Promise.resolve();
       if (origin) {
-        transition.ready.then(function() {
-          runSpreadAnimation(origin, event);
+        spreadPromise = transition.ready.then(function() {
+          return runSpreadAnimation(origin, event);
         }).catch(function() {});
       }
 
-      transition.finished.finally(function() {
+      Promise.all([transition.finished, spreadPromise]).finally(function() {
         pending--;
         if (pending > 0) return;
         root.classList.remove('theme-switching');
         root.classList.remove('theme-spread');
+        root.style.removeProperty('--theme-spread-hold-duration');
         resumeVideosAfterTransition();
       });
       return;
