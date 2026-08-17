@@ -3101,8 +3101,8 @@ html.dark .case-study-image-wrap--tint {
     margin-top: 0;
   }
   .case-study-next {
-    margin-top: 80px;
-    padding-top: 24px;
+    margin-top: 48px;
+    padding-top: 16px;
   }
   .case-study-back {
     margin-top: 80px;
@@ -3235,8 +3235,8 @@ html.dark .case-study-image-wrap--tint {
 }
 
 .case-study-next {
-  margin-top: 200px;
-  padding-top: 48px;
+  margin-top: 96px;
+  padding-top: 24px;
   border-top: 1px solid var(--border);
   text-align: left;
 }
