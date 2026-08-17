@@ -2213,9 +2213,9 @@ html.dark .homepage-case-study-placeholder {
 }
 .case-study:not(.blog-post):not(.blog-index) .case-study-intro-label + .case-study-name {
   font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.2;
   color: var(--text);
   margin: 0;
   padding-top: 0;
@@ -2227,8 +2227,8 @@ html.dark .homepage-case-study-placeholder {
 .case-study-name {
   font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 400;
-  font-size: 32px;
-  line-height: 1.3;
+  font-size: 40px;
+  line-height: 1.2;
   color: var(--text);
   margin: 0 0 24px;
   padding-top: 120px;
@@ -2251,7 +2251,7 @@ html.dark .homepage-case-study-placeholder {
 }
 @media (max-width: 900px) {
   .case-study-name {
-    font-size: 32px;
+    font-size: 40px;
   }
   .case-study:not(.blog-post):not(.blog-index) .case-study-intro-label + .case-study-name {
     font-size: 28px;
@@ -2667,7 +2667,7 @@ html.dark .case-study-image-wrap--tint {
   font-weight: 400;
   color: var(--text);
   margin: 48px 0 40px;
-  line-height: 1.3;
+  line-height: 1.2;
 
 }
 .case-study-body > h2 {
@@ -2686,12 +2686,6 @@ html.dark .case-study-image-wrap--tint {
   color: var(--text);
   margin: 0 0 1em;
 
-}
-.case-study:not(.blog-post):not(.blog-index) .case-study-headline,
-.case-study:not(.blog-post):not(.blog-index) .case-study-body p,
-.case-study:not(.blog-post):not(.blog-index) .case-study-section p,
-.case-study:not(.blog-post):not(.blog-index) .case-study-two-col-text p {
-  color: var(--muted-soft);
 }
 .case-study-body p + p {
   margin-top: 32px;
@@ -2787,13 +2781,40 @@ html.dark .case-study-image-wrap--tint {
   margin-top: var(--case-study-media-text-gap, 112px);
   width: 100%;
 }
+.case-study-body:has(> .case-study-detail-label) > .case-study-subsections {
+  grid-column: 2;
+  width: 100%;
+  margin-top: var(--case-study-media-text-gap, 112px);
+}
+.case-study-subsection {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  transition: border-color var(--transition-duration) var(--transition-easing);
+}
+.case-study-subsection:last-child {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.case-study-subsection-two-col {
+  margin-top: 0;
+}
+.case-study-subsection-two-col.case-study-two-col {
+  align-items: start;
+}
+.case-study-subsection-two-col .case-study-two-col-text p {
+  margin: 0;
+}
+.case-study-subsection-two-col .case-study-two-col-text:last-child p {
+  font-size: 15px;
+  line-height: 1.5;
+}
 .case-study-two-col-text h2,
 .case-study-body > .case-study-detail-label + h2 {
   font-size: 32px;
   font-weight: 400;
   color: var(--text);
   margin: 0 0 40px;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 .case-study--human-interest .case-study-two-col-text h2,
 .case-study--human-interest .case-study-body > .case-study-detail-label + h2,
@@ -2978,6 +2999,9 @@ html.dark .case-study-image-wrap--tint {
     grid-template-columns: 1fr;
     gap: var(--case-study-media-text-gap, 112px);
   }
+  .case-study-subsection-two-col {
+    gap: 32px;
+  }
   .case-study-two-col .case-study-two-col-image {
     order: 2;
   }
@@ -3115,6 +3139,9 @@ html.dark .case-study-image-wrap--tint {
   .case-study:not(.blog-post):not(.blog-index) {
     --case-study-media-text-gap: 64px;
     --case-study-nested-two-col-gap: 40px;
+  }
+  .case-study-subsection-two-col {
+    gap: 24px;
   }
   .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-image-wrap,
   .case-study:not(.blog-post):not(.blog-index) .case-study-body figure .case-study-image-wrap {
@@ -4192,9 +4219,9 @@ html.dark .site-footer-social .footer-icon img {
   color: var(--muted-soft);
 }
 .about-page-headline {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.2;
   color: var(--text);
   margin: 0;
 }
@@ -4398,7 +4425,7 @@ html.dark .site-footer-social .footer-icon img {
 @media (max-width: 900px) {
   .about-page-headline {
     font-size: 24px;
-    line-height: 1.3;
+    line-height: 1.2;
   }
   .about-page-body {
     font-size: 17px;
