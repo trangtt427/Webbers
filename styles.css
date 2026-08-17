@@ -3220,6 +3220,20 @@ html.dark .case-study-image-wrap--tint {
   }
 }
 
+@media (max-width: 600px) {
+  .case-study:not(.blog-post):not(.blog-index) .case-study-intro-label + .case-study-name,
+  .case-study-headline,
+  .case-study-body h2,
+  .case-study-two-col-text h2,
+  .case-study-body > .case-study-detail-label + h2,
+  .case-study--human-interest .case-study-two-col-text h2,
+  .case-study--human-interest .case-study-body > .case-study-detail-label + h2,
+  .case-study--human-interest .case-study-body h2,
+  .case-study:not(.blog-post):not(.blog-index) .case-study-body h2:has(+ figure) {
+    font-size: 22px;
+  }
+}
+
 .case-study-next {
   margin-top: 200px;
   padding-top: 48px;
