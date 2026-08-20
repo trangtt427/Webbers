@@ -1090,13 +1090,14 @@ html.dark .theme-toggle:hover .icon-sun {
   to { opacity: 1; }
 }
 .homepage-case-study-num {
-  justify-self: end;
+  flex-shrink: 0;
   font-size: 14px;
   font-weight: 400;
   color: var(--muted-soft);
   letter-spacing: 0.01em;
-  margin: 0 0 -12px;
+  margin: 0;
   text-decoration: none;
+  white-space: nowrap;
 }
 .homepage-case-study-num.homepage-case-study-text-link,
 .homepage-case-study-num.homepage-case-study-text-link:hover {
@@ -1408,7 +1409,7 @@ html.dark .homepage-hero-icon {
     width: 100%;
     max-width: 100%;
     margin: 12px 0 0 auto;
-    padding-left: 64px;
+    padding-left: 0;
     box-sizing: border-box;
     gap: 0;
   }
@@ -1416,21 +1417,11 @@ html.dark .homepage-hero-icon {
     font-size: 14px;
   }
   .homepage-media-item-visual-wrap {
-    display: grid;
-    /* Fixed numeral column: an auto track would size to each label, and the
-       narrower "(01)" would let the featured media stretch further left. */
-    grid-template-columns: 40px minmax(0, 1fr);
-    align-items: start;
-    gap: 24px;
+    display: block;
     width: 100%;
     max-width: 100%;
     margin-left: auto;
     margin-right: 0;
-  }
-  .homepage-media-item-visual-wrap .homepage-case-study-num {
-    position: static;
-    margin: 0;
-    white-space: nowrap;
   }
   .homepage-media-item .homepage-case-study-visual {
     width: 100%;
@@ -1495,12 +1486,7 @@ html.dark .homepage-hero-icon {
     padding-top: 0;
   }
   .homepage-media-item-visual-wrap {
-    display: contents;
-  }
-  .homepage-media-item .homepage-case-study-num {
-    position: static;
-    justify-self: start;
-    margin: 0 0 -12px;
+    display: block;
   }
   .homepage-media-item .homepage-case-study-copy {
     display: flex;
@@ -1624,13 +1610,28 @@ html.dark .homepage-hero-icon {
 }
 
 /* Homepage media rail: case study copy block (all viewports) */
+.homepage-case-study-desc-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
 .homepage-media-item .homepage-case-study-desc {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
   color: var(--text);
   margin: 0;
+  min-width: 0;
 }
+.homepage-media-item .homepage-case-study-copy > .homepage-case-study-desc-row:first-child {
+  margin-top: -2px;
+}
+.homepage-media-item .homepage-case-study-desc-row + .homepage-case-study-copy-divider {
+  margin-top: 10px;
+}
+
 .homepage-media-item .homepage-case-study-desc + .homepage-case-study-copy-divider {
   margin-top: 12px;
   margin-bottom: 12px;
