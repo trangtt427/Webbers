@@ -60,6 +60,7 @@ html {
   --logo-dot: #e446a8;
   --logo-dot-dark: color-mix(in srgb, var(--logo-dot) 75%, #1a1a1a);
   --body-link-color: var(--logo-dot-dark);
+  --body-text: #5c5c5c;
   --font-sans: 'Neue Montreal', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 @media (max-width: 900px) {
@@ -176,6 +177,7 @@ html.dark {
   --header-border: rgba(255, 255, 255, 0.10);
   --header-shadow: 0 18px 46px rgba(0, 0, 0, 0.38);
   --body-link-color: #ee70be;
+  --body-text: #a8b4be;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -2634,7 +2636,7 @@ html.dark .case-study-image-wrap--tint {
 .case-study-body p {
   font-size: 18px;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--body-text);
   margin: 0 0 1em;
 
 }
@@ -2668,7 +2670,7 @@ html.dark .case-study-image-wrap--tint {
 .case-study-section p {
   font-size: 18px;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--body-text);
   margin: 0 0 1em;
 
 }
@@ -2755,6 +2757,9 @@ html.dark .case-study-image-wrap--tint {
 .case-study-subsection-two-col .case-study-two-col-text p {
   margin: 0;
 }
+.case-study-subsection-two-col .case-study-two-col-text:first-child p {
+  color: var(--text);
+}
 .case-study-subsection-two-col .case-study-two-col-text:last-child p {
   font-size: 15px;
   line-height: 1.5;
@@ -2782,7 +2787,7 @@ html.dark .case-study-image-wrap--tint {
 .case-study-two-col-text p {
   font-size: 18px;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--body-text);
   margin: 0;
 
 }
