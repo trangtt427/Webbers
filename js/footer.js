@@ -25,7 +25,7 @@
   var metaPh = document.getElementById('footer-meta-placeholder');
   var stackedPh = document.getElementById('footer-placeholder');
 
-  // Homepage: meta only, in the right-hand column and in the stacked mobile footer.
+  // Homepage: meta only, in the left-hand column and in the stacked mobile footer.
   if (metaPh) {
     metaPh.innerHTML =
       '<div class="site-footer-meta">' + copyHTML + clockHTML + '</div>';

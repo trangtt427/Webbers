@@ -1,35 +1,21 @@
 @font-face {
-  font-family: 'Tiempos Text';
-  src: url('fonts/TiemposText-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Saans';
-  src: url('fonts/SaansTRIAL-Light.ttf') format('truetype');
+  font-family: 'Neue Montreal';
+  src: url('fonts/Neue Montreal/NeueMontreal-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Saans';
-  src: url('fonts/SaansTRIAL-Regular.ttf') format('truetype');
+  font-family: 'Neue Montreal';
+  src: url('fonts/Neue Montreal/NeueMontreal-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Saans';
-  src: url('fonts/Saans-TRIAL-Medium.otf') format('opentype');
+  font-family: 'Neue Montreal';
+  src: url('fonts/Neue Montreal/NeueMontreal-Medium.otf') format('opentype');
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Source Serif Pro';
-  src: url('fonts/SourceSerifPro-Regular.otf') format('opentype');
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -38,6 +24,7 @@ html {
   scroll-behavior: smooth;
   color-scheme: light;
   background-color: var(--bg);
+  font-family: var(--font-sans);
   transition: background-color var(--transition-duration) var(--transition-easing);
   scrollbar-gutter: stable;
 }
@@ -73,6 +60,7 @@ html {
   --logo-dot: #e446a8;
   --logo-dot-dark: color-mix(in srgb, var(--logo-dot) 75%, #1a1a1a);
   --body-link-color: var(--logo-dot-dark);
+  --font-sans: 'Neue Montreal', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 @media (max-width: 900px) {
   :root {
@@ -82,7 +70,7 @@ html {
 }
 
 body {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 400;
   color: var(--text);
@@ -99,6 +87,12 @@ body {
 }
 body * {
   transition: color var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing), border-color var(--transition-duration) var(--transition-easing), fill var(--transition-duration) var(--transition-easing), stroke var(--transition-duration) var(--transition-easing);
+}
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 /* Snap theme toggle instantly — body * color/bg transitions otherwise desync and flicker */
@@ -305,7 +299,7 @@ a:hover { text-decoration: underline; }
   display: inline-flex;
   flex-direction: row;
   align-items: baseline;
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: calc(10.4px * 2.25);
   line-height: 1;
@@ -938,7 +932,7 @@ html.dark .theme-toggle:hover .icon-sun {
   }
 }
 .hero h1 {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   line-height: 1.3;
   letter-spacing: -0.02em;
@@ -952,31 +946,8 @@ html.dark .theme-toggle:hover .icon-sun {
 }
 .hero .emoji { font-size: 1.15em; }
 
-/* Homepage layout: TOC + content */
+/* Homepage layout */
 .homepage-layout {
-}
-.homepage-toc-column {
-  width: 180px;
-  min-width: 180px;
-  min-height: 0;
-  align-self: stretch;
-}
-.homepage-toc {
-  position: sticky;
-  top: 160px;
-  width: 180px;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
-.homepage-toc.homepage-toc-in {
-  opacity: 1;
-  transform: translateY(0);
 }
 @media (prefers-reduced-motion: reduce) {
   .wrap:has(.homepage-layout) .site-name,
@@ -988,7 +959,6 @@ html.dark .theme-toggle:hover .icon-sun {
   .wrap:has(.homepage-layout) .about-currently,
   .homepage-section-row,
   .homepage-intro,
-  .homepage-toc,
   .homepage-footer-col,
   .homepage-media-rail,
   .homepage-case-study-inner,
@@ -1006,37 +976,6 @@ html.dark .theme-toggle:hover .icon-sun {
   .wrap:has(.homepage-layout) .homepage-about {
     border-top-color: var(--border);
   }
-}
-.homepage-toc-link {
-  display: block;
-  font-size: 15px;
-  line-height: 1.5;
-  padding: 0;
-  margin: 0;
-  color: var(--muted-soft);
-  text-decoration: none;
-  transition: color var(--transition-duration) var(--transition-easing);
-}
-.homepage-toc-link:hover {
-  color: var(--text);
-  text-decoration: none;
-}
-.homepage-toc-link.toc-active {
-  color: var(--text);
-  font-weight: 400;
-}
-.homepage-toc .homepage-toc-heading.about-page-section-label {
-  font-size: 15px;
-  line-height: 1.5;
-}
-.homepage-toc-divider {
-  display: block;
-  height: 1px;
-  background: var(--border);
-  margin: 8px 0 4px;
-}
-.homepage-toc-vrule {
-  display: none;
 }
 .homepage-content {
   min-width: 0;
@@ -1085,7 +1024,7 @@ html.dark .theme-toggle:hover .icon-sun {
   }
 }
 .homepage-intro h1 {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   color: var(--text);
   margin: 0;
@@ -1097,9 +1036,9 @@ html.dark .theme-toggle:hover .icon-sun {
   line-height: 1.05;
 }
 .homepage-intro .homepage-intro-lead {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
-  color: var(--muted-soft);
+  color: var(--text);
   margin: 0;
   font-size: 16px;
   line-height: 1.3;
@@ -1310,9 +1249,6 @@ html.dark .homepage-hero-icon {
   }
 }
 
-.homepage-footer-col--hidden {
-  display: none !important;
-}
 
 .wrap:has(.homepage-layout:not(.homepage-layout--work)) .homepage-footer-col {
   opacity: 0;
@@ -1342,7 +1278,7 @@ html.dark .homepage-hero-icon {
   transform: translateY(0);
 }
 
-/* Homepage: fixed hero column, scrollable media rail, index TOC */
+/* Homepage: fixed hero column, scrollable media rail */
 @media (min-width: 1001px) {
   html.homepage-rail-scroll,
   html.homepage-rail-scroll body {
@@ -1376,12 +1312,8 @@ html.dark .homepage-hero-icon {
   }
   .homepage-shell {
     display: grid;
-    /* The rail track's floor is the 470px media minimum plus the rail's own
-       32px left padding; the hero column gives up width before the media does. */
-    grid-template-columns: minmax(0, 420px) minmax(502px, 1fr) auto;
-    /* Floor for both gaps. The rail adds its own left padding so the hero side
-       always stays wider than the TOC side. Tapers below ~1500px so the hero
-       column keeps some width once the rail stops shrinking. */
+    /* Left column hugs intro (max 420px); rail takes the rest down to 600px. */
+    grid-template-columns: minmax(0, 420px) minmax(600px, 1fr);
     column-gap: clamp(40px, calc(8vw - 40px), 80px);
     align-items: start;
   }
@@ -1393,16 +1325,40 @@ html.dark .homepage-hero-icon {
   .homepage-main {
     grid-column: 1;
     min-width: 0;
-    max-width: 320px;
+    max-width: 420px;
+  }
+  .homepage-main .homepage-intro {
+    max-width: 100%;
   }
   html.homepage-rail-scroll .homepage-main {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     height: 100%;
     box-sizing: border-box;
     padding-top: 154px;
   }
+  html.homepage-rail-scroll .homepage-main .homepage-footer-col {
+    flex: 0 0 auto;
+    margin-top: auto;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  html.homepage-rail-scroll .homepage-main .site-footer-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
   .homepage-media-rail {
     grid-column: 2;
+    width: 100%;
+    max-width: 992px;
+    min-width: 0;
+    justify-self: end;
     position: sticky;
     top: 90px;
     height: calc(100vh - 110px);
@@ -1424,69 +1380,8 @@ html.dark .homepage-hero-icon {
   html.homepage-rail-scroll .homepage-layout:not(.homepage-layout--work) > #footer-placeholder[data-footer-layout="stacked"] {
     display: none;
   }
-  html.homepage-rail-scroll .homepage-toc-column {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding-top: 154px;
-    box-sizing: border-box;
-  }
-  html.homepage-rail-scroll .homepage-toc-column .homepage-toc {
-    flex: 0 0 auto;
-  }
-  html.homepage-rail-scroll .homepage-toc-column .homepage-footer-col {
-    flex: 0 0 auto;
-    margin-top: auto;
-    padding-bottom: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-  }
-  html.homepage-rail-scroll .homepage-toc-column .site-footer-meta {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-  }
-  html.homepage-rail-scroll .homepage-shell .homepage-toc {
-    top: 0;
-  }
   .homepage-media-rail::-webkit-scrollbar {
     display: none;
-  }
-  .homepage-shell .homepage-toc-column {
-    grid-column: 3;
-    width: auto;
-    /* The auto track used to be floored by the footer's row of three 32px
-       social icons. They're gone from the homepage, so hold that width or the
-       rail's 1fr track absorbs it and the media crowds the links. */
-    min-width: 120px;
-  }
-  .homepage-shell .homepage-toc {
-    top: 90px;
-    /* Hug the longest label so the fixed 180px track doesn't leave dead space
-       between the rail and the right-aligned links. Hugging leaves the box
-       narrower than the column, so push it onto the column's right edge to
-       line the links up with the footer below. */
-    width: max-content;
-    margin-left: auto;
-    text-align: right;
-    align-items: flex-end;
-  }
-  .homepage-toc-heading {
-    display: block;
-    margin: 0;
-    font-size: 15px;
-  }
-  .homepage-toc-vrule {
-    display: block;
-    width: 1px;
-    height: 48px;
-    background: var(--border);
-    margin: 8px 0 4px;
-    align-self: flex-end;
-    flex-shrink: 0;
   }
   .homepage-work-anchor {
     min-height: 100vh;
@@ -1494,14 +1389,6 @@ html.dark .homepage-hero-icon {
   }
   .homepage-work-anchors {
     margin: 0;
-  }
-  .homepage-layout:not(.homepage-layout--work) .homepage-toc-link {
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--muted-soft);
-  }
-  .homepage-layout:not(.homepage-layout--work) .homepage-toc-link.toc-active {
-    color: var(--text);
   }
   /* Every item in a set must repeat identically: the rail loops by shifting scroll
      by one set, which only lands on matching content if the list is periodic. */
@@ -1515,19 +1402,11 @@ html.dark .homepage-hero-icon {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 704px;
+    max-width: 100%;
     margin: 12px 0 0 auto;
     padding-left: 64px;
     box-sizing: border-box;
-  }
-  .homepage-media-item .homepage-case-study-desc {
-    font-size: 14px;
-    margin-bottom: 4px;
-  }
-  .homepage-media-item .homepage-case-study-title {
-    font-size: 16px;
-    line-height: 1.3;
-    margin-bottom: 8px;
+    gap: 0;
   }
   .homepage-media-item .homepage-case-study-cta {
     font-size: 14px;
@@ -1540,7 +1419,7 @@ html.dark .homepage-hero-icon {
     align-items: start;
     gap: 24px;
     width: 100%;
-    max-width: 704px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: 0;
   }
@@ -1551,7 +1430,7 @@ html.dark .homepage-hero-icon {
   }
   .homepage-media-item .homepage-case-study-visual {
     width: 100%;
-    max-width: 640px;
+    max-width: 100%;
     justify-self: end;
     margin-left: 0;
     margin-right: 0;
@@ -1584,9 +1463,6 @@ html.dark .homepage-hero-icon {
   }
 }
 @media (max-width: 1000px) {
-  .homepage-shell .homepage-toc-column {
-    display: none;
-  }
   .homepage-work-anchors {
     display: none;
   }
@@ -1606,17 +1482,13 @@ html.dark .homepage-hero-icon {
     gap: 28px;
     align-items: stretch;
     min-height: 0;
-    padding: 48px 0;
-    border-bottom: 1px solid var(--border);
+    padding: 48px 0 0;
     opacity: 1;
     transform: none;
     transition: border-color var(--transition-duration) var(--transition-easing);
   }
   .homepage-media-item--featured {
     padding-top: 0;
-  }
-  .homepage-media-item--last {
-    border-bottom: none;
   }
   .homepage-media-item-visual-wrap {
     display: contents;
@@ -1726,7 +1598,13 @@ html.dark .homepage-hero-icon {
   text-decoration: none;
 }
 .homepage-case-study-pill--overlay {
-  display: none;
+  display: inline-flex;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  margin-bottom: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 .homepage-case-study-pill--copy {
   display: none;
@@ -1736,34 +1614,107 @@ html.dark .homepage-hero-icon {
   background: #1a1a1a;
   border: none;
 }
-@media (min-width: 1001px) {
-  .homepage-layout:not(.homepage-layout--work) .homepage-media-item .homepage-case-study-visual:has(.homepage-case-study-pill--overlay) {
-    position: relative;
-  }
-  .homepage-layout--work .homepage-case-study-visual:has(.homepage-case-study-pill--overlay) {
-    position: relative;
-  }
-  .homepage-case-study-pill--overlay {
-    display: inline-flex;
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    z-index: 2;
-    margin-bottom: 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
-  }
+.homepage-layout:not(.homepage-layout--work) .homepage-media-item .homepage-case-study-visual:has(.homepage-case-study-pill--overlay),
+.homepage-layout--work .homepage-case-study-visual:has(.homepage-case-study-pill--overlay) {
+  position: relative;
 }
-@media (max-width: 1000px) {
-  .homepage-case-study-pill--overlay {
-    display: none !important;
-  }
-  .homepage-case-study-pill--copy {
-    display: inline-flex;
-  }
-  .homepage-case-study-pill-dot {
-    display: none;
-  }
+
+/* Homepage media rail: case study copy block (all viewports) */
+.homepage-media-item .homepage-case-study-desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text);
+  margin: 0;
 }
+.homepage-media-item .homepage-case-study-copy > .homepage-case-study-desc:first-child {
+  margin-top: -2px;
+}
+.homepage-media-item .homepage-case-study-desc + .homepage-case-study-copy-divider {
+  margin-top: 10px;
+}
+.homepage-media-item .homepage-case-study-title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--muted-soft);
+  margin: 0;
+}
+.homepage-media-item .homepage-case-study-copy-divider {
+  width: 100%;
+  height: 0;
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 12px 0;
+}
+.homepage-media-item .homepage-case-study-tags + .homepage-case-study-copy-divider {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+.homepage-media-item .homepage-case-study-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+.homepage-media-item .homepage-case-study-tag {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text);
+  border-radius: 4px;
+}
+.homepage-media-item .homepage-case-study-tag--b2c {
+  background: #e8dff5;
+}
+.homepage-media-item .homepage-case-study-tag--b2b {
+  background: #d4f0f0;
+}
+.homepage-media-item .homepage-case-study-tag--scheduling {
+  background: #dce8f5;
+}
+.homepage-media-item .homepage-case-study-tag--fintech {
+  background: #f5e8dc;
+}
+.homepage-media-item .homepage-case-study-tag--onboarding {
+  background: #dff0e0;
+}
+.homepage-media-item .homepage-case-study-tag--crypto {
+  background: #f5eed4;
+}
+.homepage-media-item .homepage-case-study-tag--design-systems {
+  background: #f0e0f5;
+}
+.homepage-media-item .homepage-case-study-tag--figma {
+  background: #e0ecf5;
+}
+html.dark .homepage-media-item .homepage-case-study-tag--b2c {
+  background: rgba(168, 130, 220, 0.22);
+}
+html.dark .homepage-media-item .homepage-case-study-tag--b2b {
+  background: rgba(72, 201, 201, 0.18);
+}
+html.dark .homepage-media-item .homepage-case-study-tag--scheduling {
+  background: rgba(100, 150, 210, 0.2);
+}
+html.dark .homepage-media-item .homepage-case-study-tag--fintech {
+  background: rgba(210, 160, 110, 0.2);
+}
+html.dark .homepage-media-item .homepage-case-study-tag--onboarding {
+  background: rgba(90, 180, 110, 0.18);
+}
+html.dark .homepage-media-item .homepage-case-study-tag--crypto {
+  background: rgba(210, 180, 90, 0.2);
+}
+html.dark .homepage-media-item .homepage-case-study-tag--design-systems {
+  background: rgba(180, 120, 200, 0.2);
+}
+html.dark .homepage-media-item .homepage-case-study-tag--figma {
+  background: rgba(110, 150, 210, 0.2);
+}
+
 @media (min-width: 901px) {
   .homepage-case-study-inner--two-col {
     grid-template-columns: 5fr 6fr;
@@ -1853,7 +1804,7 @@ html.dark .homepage-case-study-placeholder {
   margin: 0 0 8px;
 }
 .homepage-case-study-title {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   font-size: 24px;
   line-height: 1.3;
@@ -1975,7 +1926,7 @@ html.dark .homepage-case-study-placeholder {
   margin: 0;
 }
 .about-timeline-company {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-size: 28px;
   font-weight: 400;
   color: var(--text);
@@ -2136,7 +2087,7 @@ html.dark .homepage-case-study-placeholder {
   transform: translateY(0);
 }
 .about-currently-title {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   font-size: 28px;
   line-height: 1.3;
@@ -2212,7 +2163,7 @@ html.dark .homepage-case-study-placeholder {
   color: var(--muted-soft);
 }
 .case-study:not(.blog-post):not(.blog-index) .case-study-intro-label + .case-study-name {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-size: 40px;
   font-weight: 400;
   line-height: 1.2;
@@ -2225,7 +2176,7 @@ html.dark .homepage-case-study-placeholder {
   transform: translateX(0);
 }
 .case-study-name {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   font-size: 40px;
   line-height: 1.2;
@@ -2481,12 +2432,12 @@ html.dark .blog-index-thumb-placeholder::before {
   display: grid;
   grid-template-columns: var(--case-study-label-col, 140px) 1fr;
   gap: var(--case-study-section-gap, 80px);
-  padding: 20px 0;
+  padding: 40px 0;
   border-top: 1px solid var(--border);
   align-items: start;
 }
 .case-study-detail-row:first-child {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 .case-study-detail-row:last-child {
   border-bottom: 1px solid var(--border);
@@ -2663,7 +2614,7 @@ html.dark .case-study-image-wrap--tint {
   max-width: none;
 }
 .case-study-body h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 400;
   color: var(--text);
   margin: 48px 0 40px;
@@ -2760,7 +2711,7 @@ html.dark .case-study-image-wrap--tint {
 .case-study-body:has(> .case-study-detail-label),
 .case-study-two-col:has(.case-study-detail-label) {
   border-top: 1px solid var(--border);
-  padding-top: 20px;
+  padding-top: 40px;
 }
 .case-study-body:has(> .case-study-detail-label) {
   display: grid;
@@ -2810,7 +2761,7 @@ html.dark .case-study-image-wrap--tint {
 }
 .case-study-two-col-text h2,
 .case-study-body > .case-study-detail-label + h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 400;
   color: var(--text);
   margin: 0 0 40px;
@@ -2819,7 +2770,7 @@ html.dark .case-study-image-wrap--tint {
 .case-study--human-interest .case-study-two-col-text h2,
 .case-study--human-interest .case-study-body > .case-study-detail-label + h2,
 .case-study--human-interest .case-study-body h2 {
-  font-size: 32px;
+  font-size: 36px;
 }
 @media (max-width: 900px) {
   .case-study--human-interest .case-study-two-col-text h2,
@@ -2872,7 +2823,7 @@ html.dark .case-study-image-wrap--tint {
 }
 @media (max-width: 1200px) {
   .case-study-two-col-text h2 {
-    font-size: 30px;
+    font-size: 34px;
   }
 }
 
@@ -3638,7 +3589,7 @@ html.home-intro-active.home-intro-progress-in .home-intro-progress {
 .home-intro-wordmark {
   display: inline-flex;
   align-items: baseline;
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 500;
   font-size: clamp(28px, 6vw, 60px);
   line-height: 1;
@@ -3753,7 +3704,6 @@ html.hi-panel-restoring .homepage-about,
 html.hi-panel-restoring .wrap:has(.homepage-layout) .site-name,
 html.hi-panel-restoring .wrap:has(.homepage-layout) .site-meta,
 html.hi-panel-restoring .wrap:has(.homepage-layout) .site-footer,
-html.hi-panel-restoring .homepage-toc,
 html.hi-panel-restoring .homepage-footer-col,
 html.hi-panel-restoring .homepage-media-rail,
 html.hi-panel-restoring .about-hero-content,
@@ -3902,7 +3852,7 @@ body.hi-panel-active .homepage-layout {
   color: var(--muted-soft);
 }
 .hi-panel-headline {
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-size: 32px;
   font-weight: 400;
   line-height: 1.3;
@@ -4334,7 +4284,7 @@ html.dark .site-footer-social .footer-icon img {
   display: inline-block;
   position: relative;
   padding-bottom: 0.08em;
-  font-family: 'Saans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   color: var(--body-link-color);
   text-decoration: none;
