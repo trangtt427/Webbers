@@ -61,6 +61,7 @@ html {
   --logo-dot-dark: color-mix(in srgb, var(--logo-dot) 75%, #1a1a1a);
   --body-link-color: var(--logo-dot-dark);
   --body-text: #5c5c5c;
+  --footer-icon-filter: brightness(0) saturate(100%) invert(36%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(92%);
   --font-sans: 'Neue Montreal', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 @media (max-width: 900px) {
@@ -178,6 +179,7 @@ html.dark {
   --header-shadow: 0 18px 46px rgba(0, 0, 0, 0.38);
   --body-link-color: #ee70be;
   --body-text: #a8b4be;
+  --footer-icon-filter: brightness(0) saturate(100%) invert(73%) sepia(11%) saturate(401%) hue-rotate(169deg) brightness(93%) contrast(89%);
 }
 
 a { color: inherit; text-decoration: none; }
@@ -1537,13 +1539,13 @@ html.dark .homepage-hero-icon {
     border-top: 1px solid var(--border);
   }
   .site-footer--stacked .site-footer-inner {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
   .site-footer--stacked .site-footer-meta {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
   }
 }
@@ -4032,7 +4034,7 @@ html.dark .hi-panel-media-wrap--placeholder {
 .site-footer-inner {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 12px;
 }
 .site-footer-copy {
@@ -4043,7 +4045,7 @@ html.dark .hi-panel-media-wrap--placeholder {
 .site-footer-meta {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 8px;
 }
 .site-footer-social {
@@ -4067,11 +4069,8 @@ html.dark .hi-panel-media-wrap--placeholder {
   display: block;
   width: 32px;
   height: 32px;
-  filter: brightness(0);
+  filter: var(--footer-icon-filter);
   transition: filter var(--transition-duration) var(--transition-easing), opacity var(--transition-duration) var(--transition-easing);
-}
-html.dark .site-footer-social .footer-icon img {
-  filter: brightness(0) invert(1);
 }
 .site-footer-clock {
   display: flex;
@@ -4443,13 +4442,13 @@ html.dark .site-footer-social .footer-icon img {
     border-top: 1px solid var(--border);
   }
   .site-footer-inner {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
   .site-footer-meta {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
   }
 }
