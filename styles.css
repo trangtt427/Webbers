@@ -2159,7 +2159,7 @@ html.dark .homepage-case-study-placeholder {
 .case-study:not(.blog-post):not(.blog-index) .case-study-name:has(+ .case-study-headline) {
   display: block;
   margin: 0 0 24px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   color: var(--muted-soft);
@@ -2445,7 +2445,7 @@ html.dark .blog-index-thumb-placeholder::before {
   border-bottom: 1px solid var(--border);
 }
 .case-study-detail-label {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--muted-soft);
 }
@@ -2458,7 +2458,7 @@ html.dark .blog-index-thumb-placeholder::before {
 @media (max-width: 900px) {
   .case-study-detail-row {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 16px;
     padding: 16px 0;
   }
 }
@@ -3001,7 +3001,7 @@ html.dark .case-study-image-wrap--tint {
   }
   .case-study-body > .case-study-detail-label {
     grid-row: auto;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
   .case-study-body:has(> .case-study-detail-label) > *:not(.case-study-detail-label) {
     grid-column: 1;
