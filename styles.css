@@ -56,7 +56,7 @@ html {
 
   --media-radius: 0;
   --page-gutter: 40px;
-  --content-max-width: 1800px;
+  --content-max-width: 1400px;
   --logo-dot: #e446a8;
   --logo-dot-dark: color-mix(in srgb, var(--logo-dot) 75%, #1a1a1a);
   --body-link-color: var(--logo-dot-dark);
@@ -2135,13 +2135,14 @@ html.dark .homepage-case-study-placeholder {
 
 /* Case study page – colors match index (var(--bg), var(--text), var(--muted-soft), var(--border)) */
 .case-study:not(.blog-post):not(.blog-index) {
-  /* Reaches 300px at the 1800px content cap and tapers with the viewport so the
+  /* Reaches 300px at wider viewports and tapers with the viewport so the
      body column keeps its width on smaller screens. Below 900px the label stops
      being a column at all, so the floor is only a safety net. */
   --case-study-label-col: clamp(140px, 16.7vw, 300px);
   --case-study-section-gap: 80px;
   --case-study-content-offset: calc(var(--case-study-label-col) + var(--case-study-section-gap));
   --case-study-media-text-gap: 112px;
+  --case-study-image-subsection-gap: 32px;
   --case-study-nested-two-col-gap: 64px;
 }
 .case-study {
@@ -2717,7 +2718,7 @@ html.dark .case-study-image-wrap--tint {
   margin-bottom: 12px;
 }
 .case-study-body:has(> .case-study-detail-label),
-.case-study-two-col:has(.case-study-detail-label) {
+.case-study-two-col:has(.case-study-detail-label):not(.case-study-subsection-two-col):not(.case-study-dividerless-two-col) {
   border-top: 1px solid var(--border);
   padding-top: 40px;
 }
@@ -2754,6 +2755,37 @@ html.dark .case-study-image-wrap--tint {
   padding-bottom: 24px;
   border-bottom: 1px solid var(--border);
 }
+
+/* Dividerless subsection — image-attached two-column block without horizontal rules.
+   Distinct from .case-study-subsection / .case-study-subsections. */
+.case-study:not(.blog-post):not(.blog-index) .case-study-body:has(> .case-study-dividerless-subsections) {
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.case-study-dividerless-subsections,
+.case-study-dividerless-subsection,
+.case-study-dividerless-two-col,
+.case-study-dividerless-two-col.case-study-two-col:has(.case-study-detail-label) {
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.case-study-dividerless-two-col {
+  margin-top: 0;
+  align-items: start;
+}
+.case-study-dividerless-two-col .case-study-two-col-text p {
+  margin: 0;
+}
+.case-study-dividerless-two-col .case-study-two-col-text:first-child p {
+  color: var(--text);
+}
+.case-study-dividerless-two-col .case-study-two-col-text:last-child p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
 .case-study-subsection-two-col {
   margin-top: 0;
 }
@@ -2941,6 +2973,12 @@ html.dark .case-study-image-wrap--tint {
   margin-top: 0;
 }
 
+/* Dividerless subsections following an image stay visually tied to that image */
+.case-study:not(.blog-post):not(.blog-index) .case-study-figure-caption + .case-study-body:has(> .case-study-dividerless-subsections),
+.case-study:not(.blog-post):not(.blog-index) .case-study-image-wrap + .case-study-body:has(> .case-study-dividerless-subsections) {
+  margin-top: var(--case-study-image-subsection-gap);
+}
+
 .case-study:not(.blog-post):not(.blog-index) .case-study-two-col {
   margin-top: 0;
 }
@@ -2962,6 +3000,9 @@ html.dark .case-study-image-wrap--tint {
     gap: var(--case-study-media-text-gap, 112px);
   }
   .case-study-subsection-two-col {
+    gap: 32px;
+  }
+  .case-study-dividerless-two-col {
     gap: 32px;
   }
   .case-study-two-col .case-study-two-col-image {
@@ -3100,9 +3141,13 @@ html.dark .case-study-image-wrap--tint {
   }
   .case-study:not(.blog-post):not(.blog-index) {
     --case-study-media-text-gap: 64px;
+    --case-study-image-subsection-gap: 24px;
     --case-study-nested-two-col-gap: 40px;
   }
   .case-study-subsection-two-col {
+    gap: 24px;
+  }
+  .case-study-dividerless-two-col {
     gap: 24px;
   }
   .case-study:not(.blog-post):not(.blog-index) .case-study-body .case-study-image-wrap,
@@ -4100,7 +4145,7 @@ html.dark .hi-panel-media-wrap--placeholder {
 
 /* ── About page ─────────────────────────────────────────────────────────── */
 .about-hero {
-  /* Matches the case study label column: 300px at the 1800px content cap,
+  /* Matches the case study label column: up to 300px on wide screens,
      tapering with the viewport until the row stacks below 900px. */
   --about-label-col: clamp(140px, 16.7vw, 300px);
   --about-section-gap: 80px;
