@@ -1401,6 +1401,7 @@ html.dark .homepage-hero-icon {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    gap: var(--case-study-company-gap, 12px);
     padding: 8px 0 36px;
   }
   .homepage-media-item .homepage-case-study-copy {
@@ -1408,7 +1409,7 @@ html.dark .homepage-hero-icon {
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-    margin: 12px 0 0 auto;
+    margin: 0;
     padding-left: 0;
     box-sizing: border-box;
     gap: 0;
@@ -1447,7 +1448,7 @@ html.dark .homepage-hero-icon {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .homepage-layout:not(.homepage-layout--work) .homepage-case-study-num {
+  .homepage-layout:not(.homepage-layout--work) .homepage-case-study-inner > .homepage-case-study-num {
     margin: 0 0 16px;
   }
   .homepage-layout:not(.homepage-layout--work) .homepage-case-study--featured {
@@ -1474,7 +1475,7 @@ html.dark .homepage-hero-icon {
   .homepage-media-item {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: var(--case-study-company-gap, 12px);
     align-items: stretch;
     min-height: 0;
     padding: 48px 0 0;
@@ -1610,12 +1611,16 @@ html.dark .homepage-hero-icon {
 }
 
 /* Homepage media rail: case study copy block (all viewports) */
+.homepage-media-item {
+  --case-study-company-gap: 12px;
+}
 .homepage-case-study-desc-row {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 16px;
   width: 100%;
+  padding-bottom: var(--case-study-company-gap);
 }
 .homepage-media-item .homepage-case-study-desc {
   font-size: 16px;
@@ -1625,11 +1630,11 @@ html.dark .homepage-hero-icon {
   margin: 0;
   min-width: 0;
 }
-.homepage-media-item .homepage-case-study-copy > .homepage-case-study-desc-row:first-child {
-  margin-top: -2px;
-}
 .homepage-media-item .homepage-case-study-desc-row + .homepage-case-study-copy-divider {
-  margin-top: 10px;
+  margin-top: 0;
+}
+.homepage-layout:not(.homepage-layout--work) .homepage-media-item .homepage-case-study-num {
+  margin: 0;
 }
 
 .homepage-media-item .homepage-case-study-desc + .homepage-case-study-copy-divider {
