@@ -2441,12 +2441,12 @@ html.dark .blog-index-thumb-placeholder::before {
   display: grid;
   grid-template-columns: var(--case-study-label-col, 140px) 1fr;
   gap: var(--case-study-section-gap, 80px);
-  padding: 40px 0;
+  padding: 30px 0;
   border-top: 1px solid var(--border);
   align-items: start;
 }
 .case-study-detail-row:first-child {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 .case-study-detail-row:last-child {
   border-bottom: 1px solid var(--border);
