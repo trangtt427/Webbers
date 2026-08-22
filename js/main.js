@@ -1100,3 +1100,115 @@
     if (e.key === 'Escape' && lightbox && !lightbox.hidden) closeLightbox();
   });
 })();
+
+(function() {
+  // Standalone case studies: same eased wheel scrolling as the homepage media rail.
+  var caseStudy = document.querySelector('.case-study:not(.blog-post):not(.blog-index)');
+  if (!caseStudy) return;
+
+  var DESKTOP_MQ = window.matchMedia('(min-width: 1001px)');
+  var REDUCED_MQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var EASE = 0.075;
+
+  var currentTop = window.scrollY || 0;
+  var targetTop = currentTop;
+  var animating = false;
+  var wheelBound = false;
+
+  function maxScrollTop() {
+    return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  }
+
+  function clampTarget() {
+    if (targetTop < 0) targetTop = 0;
+    var max = maxScrollTop();
+    if (targetTop > max) targetTop = max;
+  }
+
+  function shouldIgnoreWheel(e) {
+    if (!DESKTOP_MQ.matches || REDUCED_MQ.matches) return true;
+    if (document.body.classList.contains('hi-scroll-locked')) return true;
+    var lightbox = document.getElementById('lightbox');
+    if (lightbox && lightbox.classList.contains('is-visible')) return true;
+    if (e.target.closest('.hi-panel')) return true;
+
+    var node = e.target;
+    while (node && node !== document.body) {
+      if (node.scrollHeight > node.clientHeight + 1) {
+        var style = window.getComputedStyle(node);
+        if (/(auto|scroll)/.test(style.overflowY)) return true;
+      }
+      node = node.parentElement;
+    }
+    return false;
+  }
+
+  function step() {
+    var distance = targetTop - currentTop;
+    currentTop += distance * EASE;
+
+    var settled = Math.abs(distance) < 0.12;
+    if (settled) currentTop = targetTop;
+
+    window.scrollTo(0, currentTop);
+
+    if (settled) {
+      animating = false;
+      return;
+    }
+    requestAnimationFrame(step);
+  }
+
+  function startAnimation() {
+    if (animating) return;
+    animating = true;
+    requestAnimationFrame(step);
+  }
+
+  function onWheel(e) {
+    if (shouldIgnoreWheel(e)) return;
+    e.preventDefault();
+    targetTop += e.deltaY;
+    clampTarget();
+    startAnimation();
+  }
+
+  function onScroll() {
+    if (!DESKTOP_MQ.matches || animating) return;
+    currentTop = targetTop = window.scrollY || 0;
+  }
+
+  function setEnabled(on) {
+    document.documentElement.classList.toggle('case-study-smooth-scroll', on);
+    if (on && !wheelBound) {
+      window.addEventListener('wheel', onWheel, { passive: false });
+      window.addEventListener('scroll', onScroll, { passive: true });
+      wheelBound = true;
+      currentTop = targetTop = window.scrollY || 0;
+    } else if (!on && wheelBound) {
+      window.removeEventListener('wheel', onWheel);
+      window.removeEventListener('scroll', onScroll);
+      wheelBound = false;
+      animating = false;
+      currentTop = targetTop = window.scrollY || 0;
+    }
+  }
+
+  function updateMode() {
+    setEnabled(DESKTOP_MQ.matches && !REDUCED_MQ.matches);
+  }
+
+  if (typeof DESKTOP_MQ.addEventListener === 'function') {
+    DESKTOP_MQ.addEventListener('change', updateMode);
+  } else if (typeof DESKTOP_MQ.addListener === 'function') {
+    DESKTOP_MQ.addListener(updateMode);
+  }
+
+  if (typeof REDUCED_MQ.addEventListener === 'function') {
+    REDUCED_MQ.addEventListener('change', updateMode);
+  } else if (typeof REDUCED_MQ.addListener === 'function') {
+    REDUCED_MQ.addListener(updateMode);
+  }
+
+  updateMode();
+})();

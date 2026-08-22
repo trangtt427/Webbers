@@ -28,6 +28,9 @@ html {
   transition: background-color var(--transition-duration) var(--transition-easing);
   scrollbar-gutter: stable;
 }
+html.case-study-smooth-scroll {
+  scroll-behavior: auto;
+}
 @media (min-width: 901px) {
   html {
     overscroll-behavior: none;
