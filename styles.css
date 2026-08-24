@@ -4426,8 +4426,9 @@ html.dark .hi-panel-media-wrap--placeholder {
   border-bottom: none;
 }
 .about-press-title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
+  line-height: 1.5;
   color: var(--text);
   margin: 0;
 }
@@ -4477,6 +4478,9 @@ html.dark .hi-panel-media-wrap--placeholder {
     line-height: 1.2;
   }
   .about-page-body {
+    font-size: 17px;
+  }
+  .about-press-title {
     font-size: 17px;
   }
 }
