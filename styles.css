@@ -1004,7 +1004,7 @@ html.dark .theme-toggle:hover .icon-sun {
     margin-top: 64px;
   }
   .homepage-layout:not(.homepage-layout--work) .homepage-section-row--intro {
-    margin-top: 32px;
+    margin-top: 0;
   }
   .homepage-layout--work .homepage-section-row--work {
     margin-top: 120px;
@@ -2035,7 +2035,7 @@ html.dark .homepage-case-study-placeholder {
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    padding-top: 76px;
+    padding-top: 32px;
     padding-bottom: 160px;
     overflow-anchor: none;
   }
