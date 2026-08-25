@@ -2024,6 +2024,29 @@ html.dark .homepage-case-study-placeholder {
   }
 }
 
+@media (max-width: 600px) {
+  .homepage-layout:not(.homepage-layout--work) .homepage-entrance-content {
+    min-height: calc(100dvh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 96px;
+    padding-bottom: 160px;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-section-row--intro {
+    margin-top: 0;
+    width: 100%;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-intro {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-media-rail {
+    padding-top: 48px;
+  }
+}
+
 .about-hero-row {
   padding: 40px 0;
 }
