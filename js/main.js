@@ -1102,9 +1102,10 @@
 })();
 
 (function() {
-  // Standalone case studies: same eased wheel scrolling as the homepage media rail.
+  // Standalone case studies and about page: same eased wheel scrolling as the homepage media rail.
   var caseStudy = document.querySelector('.case-study:not(.blog-post):not(.blog-index)');
-  if (!caseStudy) return;
+  var aboutPage = document.querySelector('.about-hero');
+  if (!caseStudy && !aboutPage) return;
 
   var DESKTOP_MQ = window.matchMedia('(min-width: 1001px)');
   var REDUCED_MQ = window.matchMedia('(prefers-reduced-motion: reduce)');
