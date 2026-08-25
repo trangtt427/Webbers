@@ -1477,7 +1477,7 @@ html.dark .homepage-hero-icon {
     gap: var(--case-study-company-gap, 12px);
     align-items: stretch;
     min-height: 0;
-    padding: 48px 0 0;
+    padding: 72px 0 0;
     opacity: 1;
     transform: none;
     transition: border-color var(--transition-duration) var(--transition-easing);
@@ -2014,6 +2014,10 @@ html.dark .homepage-case-study-placeholder {
   }
   .homepage-intro .homepage-intro-lead {
     font-size: 17px;
+  }
+  .homepage-layout:not(.homepage-layout--work) .homepage-intro .homepage-intro-lead {
+    font-size: 24px;
+    line-height: 1.2;
   }
   .homepage-intro-sub {
     font-size: 17px;
