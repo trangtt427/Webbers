@@ -4281,6 +4281,9 @@ html.dark .hi-panel-media-wrap--placeholder {
   margin: 0 0 20px;
 }
 .about-page-body:last-child { margin-bottom: 0; }
+.about-text-nowrap {
+  white-space: nowrap;
+}
 .about-page-body--history {
   margin-top: 32px;
 }
