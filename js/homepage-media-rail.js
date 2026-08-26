@@ -8,7 +8,7 @@
   var rail = document.querySelector('.homepage-media-rail');
   if (!layout || !rail) return;
 
-  var DESKTOP_MQ = window.matchMedia('(min-width: 1001px)');
+  var DESKTOP_MQ = window.matchMedia('(min-width: 1001px) and (pointer: fine)');
   var originalItems = Array.prototype.slice.call(rail.querySelectorAll('.homepage-media-item'));
   if (!originalItems.length) return;
 
@@ -21,6 +21,9 @@
   var sets = 1;
   var baseHeight = 0;
   var wheelBound = false;
+  var touchBound = false;
+  var touchLastY = 0;
+  var touchForwarding = false;
   var lastActiveId = '';
 
   var currentTop = 0;
@@ -209,6 +212,33 @@
     startAnimation();
   }
 
+  function shouldForwardTouch(target) {
+    return !!target.closest('.homepage-main') && !target.closest('.homepage-media-rail');
+  }
+
+  function onTouchStart(e) {
+    if (!DESKTOP_MQ.matches || !e.touches.length) return;
+    if (e.target.closest('.hi-panel')) return;
+    touchForwarding = shouldForwardTouch(e.target);
+    touchLastY = e.touches[0].clientY;
+  }
+
+  function onTouchMove(e) {
+    if (!DESKTOP_MQ.matches || !touchForwarding || !e.touches.length) return;
+    var y = e.touches[0].clientY;
+    var delta = touchLastY - y;
+    touchLastY = y;
+    if (Math.abs(delta) < 1) return;
+    e.preventDefault();
+    targetTop += delta;
+    clampTarget();
+    startAnimation();
+  }
+
+  function onTouchEnd() {
+    touchForwarding = false;
+  }
+
   function setRailScrollMode(on) {
     document.documentElement.classList.toggle('homepage-rail-scroll', on);
     if (on && !wheelBound) {
@@ -217,6 +247,20 @@
     } else if (!on && wheelBound) {
       window.removeEventListener('wheel', onWheel);
       wheelBound = false;
+    }
+    if (on && !touchBound) {
+      window.addEventListener('touchstart', onTouchStart, { passive: true });
+      window.addEventListener('touchmove', onTouchMove, { passive: false });
+      window.addEventListener('touchend', onTouchEnd, { passive: true });
+      window.addEventListener('touchcancel', onTouchEnd, { passive: true });
+      touchBound = true;
+    } else if (!on && touchBound) {
+      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchmove', onTouchMove);
+      window.removeEventListener('touchend', onTouchEnd);
+      window.removeEventListener('touchcancel', onTouchEnd);
+      touchBound = false;
+      touchForwarding = false;
     }
   }
 

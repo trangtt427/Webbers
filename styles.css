@@ -1812,6 +1812,14 @@ html.dark .homepage-case-study-placeholder {
 .homepage-media-item:has(.homepage-case-study-visual-link:hover) .project-image-wrap .project-image {
   transform: scale(1.05);
 }
+.homepage-media-item .homepage-case-study-visual .project-video-wrap video,
+.homepage-media-item .homepage-case-study-visual .project-image-wrap .project-image {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .homepage-case-study-text-link {
   color: inherit;
   text-decoration: none;

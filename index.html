@@ -31,9 +31,8 @@
       if (window.location.hash === '#/tactic' || window.location.hash === '#/baby-design') {
         el.classList.add('hi-panel-restoring');
       }
-      /* Lock document scroll on desktop before first paint so the rail script
-         doesn't remove a visible scrollbar and shift the layout on refresh. */
-      if (window.matchMedia && window.matchMedia('(min-width: 1001px)').matches) {
+      /* Lock document scroll on desktop (fine pointer) before first paint. */
+      if (window.matchMedia && window.matchMedia('(min-width: 1001px) and (pointer: fine)').matches) {
         el.classList.add('homepage-rail-scroll');
       }
     })();
