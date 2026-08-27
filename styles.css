@@ -1529,7 +1529,6 @@ html.dark .homepage-hero-icon {
     display: block;
   }
   .site-footer--stacked {
-    margin-top: 48px;
     padding-top: 24px;
     padding-bottom: 48px;
     border-top: 1px solid var(--border);
@@ -4112,6 +4111,11 @@ html.dark .hi-panel-media-wrap--placeholder {
   font-size: 14px;
   color: var(--muted-soft);
   transition: margin-top var(--transition-duration) var(--transition-easing), padding-top var(--transition-duration) var(--transition-easing), border-color var(--transition-duration) var(--transition-easing);
+}
+@media (max-width: 1000px), ((min-width: 1001px) and (pointer: coarse)) {
+  .homepage-layout:not(.homepage-layout--work) .site-footer--stacked {
+    margin-top: 96px;
+  }
 }
 .site-footer-inner {
   display: flex;
