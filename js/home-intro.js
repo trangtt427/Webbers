@@ -55,6 +55,9 @@
       window._unlockHomepageEntranceScroll();
       window._unlockHomepageEntranceScroll = null;
     }
+    if (typeof window.playHomepageMediaRailVideos === 'function') {
+      window.playHomepageMediaRailVideos();
+    }
   }
 
   function randomBetween(min, max) {

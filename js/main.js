@@ -4,6 +4,16 @@
  */
 
 (function() {
+  window.playHomepageMediaRailVideos = function() {
+    if (document.documentElement.classList.contains('home-intro-active')) return;
+    var videos = document.querySelectorAll('.homepage-layout:not(.homepage-layout--work) .homepage-media-rail video');
+    for (var i = 0; i < videos.length; i++) {
+      videos[i].play().catch(function() {});
+    }
+  };
+})();
+
+(function() {
   // On the homepage, always start at the top on refresh so the entrance animation plays from
   // the top. Other pages keep the browser's default scroll restoration.
   var isHomepage = !!document.querySelector('.homepage-layout');
@@ -86,6 +96,9 @@
         if (siteMeta) siteMeta.classList.add('site-meta-in');
         if (mediaRail) mediaRail.classList.add('homepage-media-rail-in');
         revealBelowHero({ skipWorkRow: isWorkPage });
+        if (typeof window.playHomepageMediaRailVideos === 'function') {
+          window.playHomepageMediaRailVideos();
+        }
         if (!(options && options.skipUnlock)) {
           unlockHomepageEntranceScroll();
         }
