@@ -1457,7 +1457,7 @@ html.dark .homepage-hero-icon {
     display: block;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1000px), ((min-width: 1001px) and (pointer: coarse)) {
   .homepage-work-anchors {
     display: none;
   }
