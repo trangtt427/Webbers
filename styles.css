@@ -1464,12 +1464,18 @@ html.dark .homepage-hero-icon {
   .homepage-shell {
     display: block;
   }
+  .homepage-main {
+    max-width: none;
+  }
   .homepage-media-rail {
     display: block;
     position: static;
     height: auto;
     overflow: visible;
     padding: 0;
+    max-width: none;
+    width: 100%;
+    justify-self: stretch;
   }
   .homepage-media-item {
     display: grid;
@@ -1487,6 +1493,10 @@ html.dark .homepage-hero-icon {
   }
   .homepage-media-item-visual-wrap {
     display: block;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
   }
   .homepage-media-item .homepage-case-study-copy {
     display: flex;
