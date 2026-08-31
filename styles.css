@@ -2754,6 +2754,15 @@ html.dark .case-study-image-wrap--tint {
   border-top: 1px solid var(--border);
   padding-top: 40px;
 }
+.case-study-details + .case-study-body:has(> .case-study-detail-label) {
+  border-top: none;
+}
+.case-study:not(.blog-post):not(.blog-index) .case-study-details + .case-study-body:has(> .case-study-detail-label) {
+  margin-top: 0;
+}
+.case-study:not(.blog-post):not(.blog-index) .case-study-details + .case-study-body:not(:has(> .case-study-detail-label)) {
+  margin-top: 48px;
+}
 .case-study-body:has(> .case-study-detail-label) {
   display: grid;
   grid-template-columns: var(--case-study-label-col, 140px) 1fr;
@@ -2912,6 +2921,15 @@ html.dark .case-study-image-wrap--tint {
 }
 .case-study:not(.blog-post):not(.blog-index) .case-study-details + .case-study-image-wrap {
   margin-top: 56px;
+}
+.case-study:not(.blog-post):not(.blog-index) .case-study-intro + .case-study-image-wrap {
+  margin-top: 64px;
+}
+.case-study:not(.blog-post):not(.blog-index) .case-study-image-wrap + .case-study-details {
+  margin-top: 48px;
+}
+.case-study:not(.blog-post):not(.blog-index) .case-study-intro + .case-study-image-wrap + .case-study-details {
+  margin-top: 48px;
 }
 .case-study:not(.blog-post):not(.blog-index) .case-study-figure-caption {
   margin-top: 100px;
@@ -3152,6 +3170,15 @@ html.dark .case-study-image-wrap--tint {
   .case-study:not(.blog-post):not(.blog-index) .case-study-details + .case-study-image-wrap {
     margin-top: 40px;
   }
+  .case-study:not(.blog-post):not(.blog-index) .case-study-intro + .case-study-image-wrap {
+    margin-top: 48px;
+  }
+  .case-study:not(.blog-post):not(.blog-index) .case-study-image-wrap + .case-study-details {
+    margin-top: 40px;
+  }
+  .case-study:not(.blog-post):not(.blog-index) .case-study-intro + .case-study-image-wrap + .case-study-details {
+    margin-top: 40px;
+  }
   .case-study:not(.blog-post):not(.blog-index) .case-study-figure-caption {
     margin-top: 48px;
   }
@@ -3160,6 +3187,12 @@ html.dark .case-study-image-wrap--tint {
   }
   .case-study:not(.blog-post):not(.blog-index) .case-study-body:has(> .case-study-detail-label) {
     margin-top: 96px;
+  }
+  .case-study:not(.blog-post):not(.blog-index) .case-study-details + .case-study-body:has(> .case-study-detail-label) {
+    margin-top: 0;
+  }
+  .case-study:not(.blog-post):not(.blog-index) .case-study-details + .case-study-body:not(:has(> .case-study-detail-label)) {
+    margin-top: 32px;
   }
   .case-study:not(.blog-post):not(.blog-index) .case-study-body > h2 {
     margin-top: 32px;
