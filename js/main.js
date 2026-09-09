@@ -238,17 +238,21 @@
 })();
 
 (function() {
-  // Case study page hero + details: same fade-in + move-up as index hero, both at once
+  // Case study page hero (headline, media, labels) moves as one group.
+  var caseStudyHero = document.querySelector('.case-study-hero');
   var caseStudyIntro = document.querySelector('.case-study-intro');
   var caseStudyDetails = document.querySelector('.case-study-details');
-  if (caseStudyIntro || caseStudyDetails) {
+  if (!caseStudyHero && !caseStudyIntro && !caseStudyDetails) return;
+  requestAnimationFrame(function() {
     requestAnimationFrame(function() {
-      requestAnimationFrame(function() {
-        if (caseStudyIntro) caseStudyIntro.classList.add('case-study-intro-in');
-        if (caseStudyDetails) caseStudyDetails.classList.add('case-study-details-in');
-      });
+      if (caseStudyHero) {
+        caseStudyHero.classList.add('case-study-hero-in');
+        return;
+      }
+      if (caseStudyIntro) caseStudyIntro.classList.add('case-study-intro-in');
+      if (caseStudyDetails) caseStudyDetails.classList.add('case-study-details-in');
     });
-  }
+  });
 })();
 
 (function() {
@@ -445,16 +449,6 @@
 })();
 
 (function() {
-  // Case study hero media (first image/video after intro): animate on load, same as intro
-  var heroMedia = document.querySelector('.case-study-hero-media');
-  if (heroMedia) {
-    setTimeout(function() {
-      heroMedia.classList.add('case-study-image-in-view');
-    }, 150);
-  }
-})();
-
-(function() {
   // Case study page: images fade in and move up on scroll (like index case studies)
   var images = document.querySelectorAll('.case-study .case-study-image-wrap');
   if (!images.length || !('IntersectionObserver' in window)) return;
@@ -463,6 +457,7 @@
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           var el = entry.target;
+          if (el.closest && el.closest('.case-study-hero')) return;
           var figure = el.closest && el.closest('figure');
           var hasCaption = figure && (figure.querySelector('figcaption') || figure.querySelector('.case-study-caption'));
           var animateFigure = figure && (hasCaption || figure.classList.contains('case-study-figure-caption') || figure.classList.contains('case-study-two-col-image') || figure.classList.contains('case-study-image-duo'));
@@ -475,7 +470,10 @@
     },
     { rootMargin: '0px 0px 20px 0px', threshold: 0 }
   );
-  images.forEach(function(img) { observer.observe(img); });
+  images.forEach(function(img) {
+    if (img.closest && img.closest('.case-study-hero')) return;
+    observer.observe(img);
+  });
 })();
 
 (function() {
