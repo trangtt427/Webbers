@@ -4272,7 +4272,7 @@ html.dark .hi-panel-media-wrap--placeholder {
   line-height: 0;
   width: 32px;
   height: 32px;
-  background-color: var(--footer-icon-color);
+  background-color: var(--text);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
