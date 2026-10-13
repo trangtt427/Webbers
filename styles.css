@@ -3646,6 +3646,7 @@ html.dark .project-dot--active {
   margin-top: 8px;
   color: var(--muted);
   font-size: 0.9rem;
+  border-radius: 8px;
 }
 @media (max-width: 900px) {
   .homepage-case-study .project-video-wrap,
