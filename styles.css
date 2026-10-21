@@ -1729,7 +1729,9 @@ html.dark .homepage-hero-icon {
   background: #e8dff5;
 }
 .homepage-media-item .homepage-case-study-tag--enterprise,
-.case-study-intro .homepage-case-study-tag--enterprise,
+.case-study-intro .homepage-case-study-tag--enterprise {
+  background: #f2dfe5;
+}
 .homepage-media-item .homepage-case-study-tag--b2b,
 .case-study-intro .homepage-case-study-tag--b2b {
   background: #e2e6f0;
@@ -1768,7 +1770,10 @@ html.dark .case-study-intro .homepage-case-study-tag--b2c {
   border-color: rgba(168, 130, 220, 0.34);
 }
 html.dark .homepage-media-item .homepage-case-study-tag--enterprise,
-html.dark .case-study-intro .homepage-case-study-tag--enterprise,
+html.dark .case-study-intro .homepage-case-study-tag--enterprise {
+  background: rgba(210, 130, 155, 0.2);
+  border-color: rgba(210, 130, 155, 0.34);
+}
 html.dark .homepage-media-item .homepage-case-study-tag--b2b,
 html.dark .case-study-intro .homepage-case-study-tag--b2b {
   background: rgba(130, 145, 195, 0.2);
