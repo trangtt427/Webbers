@@ -93,7 +93,8 @@
     return item.offsetTop - headerClearance();
   }
 
-  // Land on the first case study with its top edge just below the header. Prefer a
+  // Land with the first media just below the header and its preceding divider
+  // tucked behind the header. Prefer a
   // middle loop set so there's a full period of travel in both directions
   // before re-anchoring — otherwise the wrap fires mid-carousel (around
   // Squarespace → Tactic) and any subpixel period drift reads as a jump.
@@ -102,7 +103,9 @@
     var setIndex = sets >= 3 ? 2 : (sets > 1 ? 1 : 0);
     var landing = mediaItems[setIndex * originalItems.length];
     if (!landing) return;
-    currentTop = targetTop = scrollTopForItem(landing);
+    var media = landing.querySelector('.homepage-media-item-visual-wrap');
+    var mediaInset = media ? media.getBoundingClientRect().top - landing.getBoundingClientRect().top : 0;
+    currentTop = targetTop = scrollTopForItem(landing) + Math.max(0, mediaInset - 16);
     rail.scrollTop = currentTop;
     var id = landing.getAttribute('data-work-id');
     lastActiveId = id;
