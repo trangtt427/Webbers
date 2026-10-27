@@ -12,6 +12,37 @@
   var originalItems = Array.prototype.slice.call(rail.querySelectorAll('.homepage-media-item'));
   if (!originalItems.length) return;
 
+  // Each dot group shows this project's position and links to every project.
+  originalItems.forEach(function(item, index) {
+    var nav = document.createElement('nav');
+    nav.className = 'homepage-order-nav';
+    nav.setAttribute('aria-label', 'Case study navigation, project ' + (index + 1) + ' of ' + originalItems.length);
+    originalItems.forEach(function(target, targetIndex) {
+      var button = document.createElement('button');
+      var title = target.querySelector('.homepage-case-study-title').textContent.trim();
+      button.type = 'button';
+      button.setAttribute('data-project-target', target.getAttribute('data-work-id'));
+      button.setAttribute('aria-label', 'Go to case study ' + (targetIndex + 1) + ': ' + title);
+      button.title = 'Case study ' + (targetIndex + 1) + ': ' + title;
+      if (index === targetIndex) button.setAttribute('aria-current', 'true');
+      nav.appendChild(button);
+    });
+    item.querySelector('.homepage-media-item-visual-wrap').appendChild(nav);
+  });
+
+  rail.addEventListener('click', function(event) {
+    var button = event.target.closest('[data-project-target]');
+    if (!button) return;
+    var id = button.getAttribute('data-project-target');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (DESKTOP_MQ.matches) {
+      scrollRailTo(id, reducedMotion);
+    } else {
+      var target = originalItems.find(function(item) { return item.getAttribute('data-work-id') === id; });
+      if (target) target.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth', block: 'start' });
+    }
+  });
+
   var FOCUS_RATIO = 0.35;
   // Fraction of the remaining distance covered each frame. Decelerating toward
   // the target eases out smoothly and never overshoots it.
@@ -35,7 +66,7 @@
       var clone = originalItems[i].cloneNode(true);
       clone.classList.add('homepage-media-item--clone');
       clone.setAttribute('aria-hidden', 'true');
-      var links = clone.querySelectorAll('a');
+      var links = clone.querySelectorAll('a, button');
       for (var l = 0; l < links.length; l++) links[l].setAttribute('tabindex', '-1');
       rail.appendChild(clone);
     }
